@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18BFFF561F53B863002144D5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18BFFF551F53B863002144D5 /* Info.plist */; };
 		4018F5AD1F500B4000D6C42D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4018F5A51F500B4000D6C42D /* Assets.xcassets */; };
 		4018F5AE1F500B4000D6C42D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4018F5A61F500B4000D6C42D /* LaunchScreen.storyboard */; };
 		4018F5AF1F500B4000D6C42D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4018F5A81F500B4000D6C42D /* Main.storyboard */; };
-		4018F5B01F500B4000D6C42D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4018F5AA1F500B4000D6C42D /* Info.plist */; };
 		4018F5B11F500B4000D6C42D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4018F5AC1F500B4000D6C42D /* ViewController.m */; };
 		409E6D861F5003DA00E3BE49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 409E6D851F5003DA00E3BE49 /* main.m */; };
 		409E6D891F5003DA00E3BE49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 409E6D881F5003DA00E3BE49 /* AppDelegate.m */; };
@@ -39,10 +39,10 @@
 /* Begin PBXFileReference section */
 		01FD494EE7C5F40277EC06F8 /* libPods-UEHTML.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UEHTML.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		142FBB3363225B85BA8CC82E /* Pods-UEHTML.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UEHTML.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UEHTML/Pods-UEHTML.debug.xcconfig"; sourceTree = "<group>"; };
+		18BFFF551F53B863002144D5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4018F5A51F500B4000D6C42D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4018F5A71F500B4000D6C42D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4018F5A91F500B4000D6C42D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4018F5AA1F500B4000D6C42D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4018F5AB1F500B4000D6C42D /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		4018F5AC1F500B4000D6C42D /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		409E6D811F5003DA00E3BE49 /* UEHTML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UEHTML.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,7 +90,6 @@
 				4018F5A51F500B4000D6C42D /* Assets.xcassets */,
 				4018F5A61F500B4000D6C42D /* LaunchScreen.storyboard */,
 				4018F5A81F500B4000D6C42D /* Main.storyboard */,
-				4018F5AA1F500B4000D6C42D /* Info.plist */,
 				4018F5AB1F500B4000D6C42D /* ViewController.h */,
 				4018F5AC1F500B4000D6C42D /* ViewController.m */,
 			);
@@ -140,6 +139,7 @@
 		409E6D841F5003DA00E3BE49 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				18BFFF551F53B863002144D5 /* Info.plist */,
 				409E6D851F5003DA00E3BE49 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -461,9 +461,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4018F5B01F500B4000D6C42D /* Info.plist in Resources */,
 				4018F5AF1F500B4000D6C42D /* Main.storyboard in Resources */,
 				4018F5AD1F500B4000D6C42D /* Assets.xcassets in Resources */,
+				18BFFF561F53B863002144D5 /* Info.plist in Resources */,
 				4018F5AE1F500B4000D6C42D /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

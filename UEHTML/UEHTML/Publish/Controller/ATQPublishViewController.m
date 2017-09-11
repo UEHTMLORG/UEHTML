@@ -16,10 +16,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor colorWithWhite:0 alpha:0.6];
+    if ([[[UIDevice currentDevice] systemVersion] floatValue]>=8.0) {
+        
+        self.modalPresentationStyle=UIModalPresentationOverCurrentContext;
+        
+    }else{
+        
+        self.modalPresentationStyle=UIModalPresentationCurrentContext;
+        
+    }
+    
     UIButton *cancel = [[UIButton alloc] initWithFrame:CGRectMake(20, 20, 40, 20)];
     [cancel setTitle:@"返回" forState:UIControlStateNormal];
-    [cancel setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [cancel setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [cancel addTarget:self action:@selector(cancel) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:cancel];
     

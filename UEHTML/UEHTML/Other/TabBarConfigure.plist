@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>class</key>
+		<string>ATQVicintyViewController</string>
+		<key>title</key>
+		<string>附近</string>
+		<key>image</key>
+		<string>tab4-more</string>
+		<key>selectedImage</key>
+		<string>tab4-moreshow</string>
+		<key>badgeValue</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>class</key>
+		<string>ATQMessageViewController</string>
+		<key>title</key>
+		<string>消息</string>
+		<key>image</key>
+		<string>tab1-heart</string>
+		<key>selectedImage</key>
+		<string>tab1-heartshow</string>
+		<key>badgeValue</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>class</key>
+		<string>ATQViewController</string>
+		<key>title</key>
+		<string>凹凸圈</string>
+		<key>image</key>
+		<string>tab5-file</string>
+		<key>selectedImage</key>
+		<string>tab5-fileshow</string>
+		<key>badgeValue</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>class</key>
+		<string>ATQMeViewController</string>
+		<key>title</key>
+		<string>我的</string>
+		<key>image</key>
+		<string>tab2-doctor</string>
+		<key>selectedImage</key>
+		<string>tab2-doctorshow</string>
+		<key>badgeValue</key>
+		<string>0</string>
+	</dict>
+</array>
+</plist>

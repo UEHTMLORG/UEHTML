@@ -9,7 +9,10 @@
 #import "ATQRegisterViewController.h"
 
 @interface ATQRegisterViewController ()
-
+{
+    NSTimer *mTimer;
+    int time;
+}
 @end
 
 @implementation ATQRegisterViewController
@@ -54,6 +57,7 @@
 //获取验证码
 - (IBAction)getCode:(id)sender {
     NSLog(@"getCode");
+    [self startTimer];
 }
 //获取语音验证码
 - (IBAction)getAudio:(id)sender {
@@ -80,6 +84,38 @@
 //微信
 - (IBAction)wechat:(id)sender {
     NSLog(@"wechat");
+}
+
+// 开始定时器
+- (void) startTimer{
+    // 定义一个NSTimer
+    time = 60;
+    mTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                              target:self
+                                            selector:@selector(doTimer:)  userInfo:nil
+                                             repeats:YES];
+}
+
+// 定时器执行的方法
+- (void)doTimer:(NSTimer *)timer{
+    time--;
+    if (time > 0) {
+        NSString *title = [NSString stringWithFormat:@"%ds重新获取",time];
+        self.codeLab.text = title;
+        self.codeLab.textAlignment = NSTextAlignmentCenter;
+        [self.codeBtn setEnabled:false];
+    }else{
+        [self.codeBtn setEnabled:true];
+        self.codeLab.text = @"重新获取";
+        [self stopTimer];
+    }
+}
+
+// 停止定时器
+- (void) stopTimer{
+    if (mTimer != nil){
+        [mTimer invalidate];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

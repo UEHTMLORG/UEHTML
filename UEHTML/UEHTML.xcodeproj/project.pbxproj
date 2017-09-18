@@ -25,6 +25,10 @@
 		407F9BE31F6636BF0043A87A /* ATQMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 407F9BE21F6636BF0043A87A /* ATQMeViewController.m */; };
 		407F9BE61F663A230043A87A /* LhkhTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 407F9BE51F663A230043A87A /* LhkhTabBar.m */; };
 		407F9BE81F6647020043A87A /* TabBarConfigure.plist in Resources */ = {isa = PBXBuildFile; fileRef = 407F9BE71F6647020043A87A /* TabBarConfigure.plist */; };
+		40875D681F6F9AE300B58609 /* ATQLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40875D661F6F9AE300B58609 /* ATQLoginViewController.m */; };
+		40875D691F6F9AE300B58609 /* ATQLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40875D671F6F9AE300B58609 /* ATQLoginViewController.xib */; };
+		40875D6D1F6F9B4500B58609 /* ATQRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40875D6B1F6F9B4500B58609 /* ATQRegisterViewController.m */; };
+		40875D6E1F6F9B4500B58609 /* ATQRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40875D6C1F6F9B4500B58609 /* ATQRegisterViewController.xib */; };
 		409E6D861F5003DA00E3BE49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 409E6D851F5003DA00E3BE49 /* main.m */; };
 		409E6D891F5003DA00E3BE49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 409E6D881F5003DA00E3BE49 /* AppDelegate.m */; };
 		409E6D9F1F5003DA00E3BE49 /* UEHTMLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 409E6D9E1F5003DA00E3BE49 /* UEHTMLTests.m */; };
@@ -85,6 +89,12 @@
 		407F9BE71F6647020043A87A /* TabBarConfigure.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TabBarConfigure.plist; sourceTree = "<group>"; };
 		407F9BE91F664AF50043A87A /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		407F9BEA1F664B0F0043A87A /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		40875D651F6F9AE300B58609 /* ATQLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQLoginViewController.h; sourceTree = "<group>"; };
+		40875D661F6F9AE300B58609 /* ATQLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQLoginViewController.m; sourceTree = "<group>"; };
+		40875D671F6F9AE300B58609 /* ATQLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATQLoginViewController.xib; sourceTree = "<group>"; };
+		40875D6A1F6F9B4500B58609 /* ATQRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQRegisterViewController.h; sourceTree = "<group>"; };
+		40875D6B1F6F9B4500B58609 /* ATQRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQRegisterViewController.m; sourceTree = "<group>"; };
+		40875D6C1F6F9B4500B58609 /* ATQRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATQRegisterViewController.xib; sourceTree = "<group>"; };
 		409E6D811F5003DA00E3BE49 /* UEHTML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UEHTML.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		409E6D851F5003DA00E3BE49 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		409E6D871F5003DA00E3BE49 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -150,6 +160,12 @@
 		40875D621F6F9A5B00B58609 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				40875D651F6F9AE300B58609 /* ATQLoginViewController.h */,
+				40875D661F6F9AE300B58609 /* ATQLoginViewController.m */,
+				40875D671F6F9AE300B58609 /* ATQLoginViewController.xib */,
+				40875D6A1F6F9B4500B58609 /* ATQRegisterViewController.h */,
+				40875D6B1F6F9B4500B58609 /* ATQRegisterViewController.m */,
+				40875D6C1F6F9B4500B58609 /* ATQRegisterViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -561,11 +577,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40875D6E1F6F9B4500B58609 /* ATQRegisterViewController.xib in Resources */,
 				4018F5AF1F500B4000D6C42D /* Main.storyboard in Resources */,
 				407F9BE81F6647020043A87A /* TabBarConfigure.plist in Resources */,
 				4018F5AD1F500B4000D6C42D /* Assets.xcassets in Resources */,
 				18BFFF561F53B863002144D5 /* Info.plist in Resources */,
 				4018F5AE1F500B4000D6C42D /* LaunchScreen.storyboard in Resources */,
+				40875D691F6F9AE300B58609 /* ATQLoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -639,6 +657,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4018F5B11F500B4000D6C42D /* ViewController.m in Sources */,
+				40875D681F6F9AE300B58609 /* ATQLoginViewController.m in Sources */,
 				407F9BCB1F6633870043A87A /* UIView+LhkhExtension.m in Sources */,
 				407F9BDA1F6636630043A87A /* ATQMessageViewController.m in Sources */,
 				409E6D891F5003DA00E3BE49 /* AppDelegate.m in Sources */,
@@ -651,6 +670,7 @@
 				407F9BE61F663A230043A87A /* LhkhTabBar.m in Sources */,
 				407F9BC91F6633870043A87A /* UIColor+LhkhColor.m in Sources */,
 				407F9BE31F6636BF0043A87A /* ATQMeViewController.m in Sources */,
+				40875D6D1F6F9B4500B58609 /* ATQRegisterViewController.m in Sources */,
 				407F9BCE1F6634360043A87A /* ATQBaseViewController.m in Sources */,
 				409E6D861F5003DA00E3BE49 /* main.m in Sources */,
 			);

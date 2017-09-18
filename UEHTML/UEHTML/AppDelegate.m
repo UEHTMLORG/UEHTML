@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "ATQLoginViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,14 +17,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    [self openTabHomeCtrl];
+    [self openLoginCtrl];
+    
+//    [self openTabHomeCtrl];
     
     return YES;
 }
 
 -(void)openLoginCtrl
 {
-    
+    ATQLoginViewController *vc = [[ATQLoginViewController alloc]init];
+    self.window.rootViewController = vc;
+    [self.window makeKeyAndVisible];
 }
 
 - (void)openTabHomeCtrl

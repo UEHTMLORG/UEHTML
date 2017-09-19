@@ -7,7 +7,7 @@
 //
 
 #import "ATQRegisterViewController.h"
-
+#import "Masonry.h"
 @interface ATQRegisterViewController ()
 {
     NSTimer *mTimer;
@@ -22,6 +22,12 @@
     [self buildView];
 }
 -(void)buildView{
+    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectZero];
+    [self.view addSubview:scrollView];
+    scrollView.contentSize = CGSizeMake(ScreenWidth, 1000);
+    UIView *headView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 210/375*ScreenWidth)];
+    [scrollView addSubview:headView];
+    
     self.userView.layer.masksToBounds = YES;
     self.userView.layer.cornerRadius = 4.f;
     self.userView.layer.borderWidth = 1.f;

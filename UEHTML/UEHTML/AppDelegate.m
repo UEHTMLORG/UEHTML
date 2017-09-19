@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ATQLoginViewController.h"
+#import "IQKeyboardManager.h"
 @interface AppDelegate ()
 
 @end
@@ -20,7 +21,11 @@
     [self openLoginCtrl];
     
 //    [self openTabHomeCtrl];
-    
+    IQKeyboardManager *manager = [IQKeyboardManager sharedManager];
+    manager.enable = YES;
+    manager.shouldResignOnTouchOutside = YES;
+    manager.shouldToolbarUsesTextFieldTintColor = YES;
+    manager.enableAutoToolbar = NO;
     return YES;
 }
 

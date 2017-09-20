@@ -12,6 +12,8 @@
 		4018F5AE1F500B4000D6C42D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4018F5A61F500B4000D6C42D /* LaunchScreen.storyboard */; };
 		4018F5AF1F500B4000D6C42D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4018F5A81F500B4000D6C42D /* Main.storyboard */; };
 		4018F5B11F500B4000D6C42D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4018F5AC1F500B4000D6C42D /* ViewController.m */; };
+		40260D1F1F71FEF400ED8CF1 /* ATQPerfectInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260D1D1F71FEF400ED8CF1 /* ATQPerfectInfoViewController.m */; };
+		40260D201F71FEF400ED8CF1 /* ATQPerfectInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40260D1E1F71FEF400ED8CF1 /* ATQPerfectInfoViewController.xib */; };
 		407F9BC91F6633870043A87A /* UIColor+LhkhColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 407F9BC41F6633870043A87A /* UIColor+LhkhColor.m */; };
 		407F9BCA1F6633870043A87A /* UIImage+LhkhExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 407F9BC61F6633870043A87A /* UIImage+LhkhExtension.m */; };
 		407F9BCB1F6633870043A87A /* UIView+LhkhExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 407F9BC81F6633870043A87A /* UIView+LhkhExtension.m */; };
@@ -62,6 +64,9 @@
 		4018F5A91F500B4000D6C42D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4018F5AB1F500B4000D6C42D /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		4018F5AC1F500B4000D6C42D /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		40260D1C1F71FEF400ED8CF1 /* ATQPerfectInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQPerfectInfoViewController.h; sourceTree = "<group>"; };
+		40260D1D1F71FEF400ED8CF1 /* ATQPerfectInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQPerfectInfoViewController.m; sourceTree = "<group>"; };
+		40260D1E1F71FEF400ED8CF1 /* ATQPerfectInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATQPerfectInfoViewController.xib; sourceTree = "<group>"; };
 		407F9BC31F6633870043A87A /* UIColor+LhkhColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+LhkhColor.h"; sourceTree = "<group>"; };
 		407F9BC41F6633870043A87A /* UIColor+LhkhColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+LhkhColor.m"; sourceTree = "<group>"; };
 		407F9BC51F6633870043A87A /* UIImage+LhkhExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LhkhExtension.h"; sourceTree = "<group>"; };
@@ -166,6 +171,9 @@
 				40875D6A1F6F9B4500B58609 /* ATQRegisterViewController.h */,
 				40875D6B1F6F9B4500B58609 /* ATQRegisterViewController.m */,
 				40875D6C1F6F9B4500B58609 /* ATQRegisterViewController.xib */,
+				40260D1C1F71FEF400ED8CF1 /* ATQPerfectInfoViewController.h */,
+				40260D1D1F71FEF400ED8CF1 /* ATQPerfectInfoViewController.m */,
+				40260D1E1F71FEF400ED8CF1 /* ATQPerfectInfoViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -583,6 +591,7 @@
 				4018F5AD1F500B4000D6C42D /* Assets.xcassets in Resources */,
 				18BFFF561F53B863002144D5 /* Info.plist in Resources */,
 				4018F5AE1F500B4000D6C42D /* LaunchScreen.storyboard in Resources */,
+				40260D201F71FEF400ED8CF1 /* ATQPerfectInfoViewController.xib in Resources */,
 				40875D691F6F9AE300B58609 /* ATQLoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -667,6 +676,7 @@
 				407F9BD71F66364C0043A87A /* ATQVicintyViewController.m in Sources */,
 				407F9BD41F6634D30043A87A /* ATQBaseTabBarViewController.m in Sources */,
 				407F9BD11F6634A70043A87A /* ATQBaseNavigationViewController.m in Sources */,
+				40260D1F1F71FEF400ED8CF1 /* ATQPerfectInfoViewController.m in Sources */,
 				407F9BE61F663A230043A87A /* LhkhTabBar.m in Sources */,
 				407F9BC91F6633870043A87A /* UIColor+LhkhColor.m in Sources */,
 				407F9BE31F6636BF0043A87A /* ATQMeViewController.m in Sources */,

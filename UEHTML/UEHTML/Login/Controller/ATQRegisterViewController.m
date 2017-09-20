@@ -7,7 +7,7 @@
 //
 
 #import "ATQRegisterViewController.h"
-#import "Masonry.h"
+#import "ATQPerfectInfoViewController.h"
 @interface ATQRegisterViewController ()
 {
     NSTimer *mTimer;
@@ -78,6 +78,8 @@
 //注册
 - (IBAction)registerClick:(id)sender {
     NSLog(@"registerClick");
+    ATQPerfectInfoViewController  *vc = [[ATQPerfectInfoViewController alloc] init];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 //微博
 - (IBAction)sina:(id)sender {

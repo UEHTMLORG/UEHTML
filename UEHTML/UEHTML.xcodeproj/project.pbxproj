@@ -843,7 +843,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = K7B37N4V6S;
-				GCC_PREFIX_HEADER = "/Users/Lhkh/Desktop/凹凸圈UEHTML/UEHTML/UEHTML/Commons/PrefixHeader.pch";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/UEHTML/Commons/PrefixHeader.pch";
 				INFOPLIST_FILE = UEHTML/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -858,7 +859,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = K7B37N4V6S;
-				GCC_PREFIX_HEADER = "/Users/Lhkh/Desktop/凹凸圈UEHTML/UEHTML/UEHTML/Commons/PrefixHeader.pch";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/UEHTML/Commons/PrefixHeader.pch";
 				INFOPLIST_FILE = UEHTML/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

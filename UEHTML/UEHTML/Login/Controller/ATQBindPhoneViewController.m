@@ -25,19 +25,25 @@
     self.navigationItem.title = @"关联手机号";
     UIBarButtonItem *right = [[UIBarButtonItem alloc ]initWithTitle:@"注册" style:UIBarButtonItemStylePlain target:self action:@selector(RegisterClick:)];
     self.navigationItem.rightBarButtonItem = right;
-    
-    self.loginBtn.layer.masksToBounds = YES;
+    [self buildView];
+}
+
+-(void)buildView{
+    self.headImg.layer.cornerRadius = 50.f;
+    self.headImg.layer.masksToBounds = YES;
     self.loginBtn.layer.cornerRadius = 4.f;
-    self.img1.layer.masksToBounds = YES;
-    self.img1.layer.cornerRadius = 25.f;
-    self.img2.layer.masksToBounds = YES;
-    self.img2.layer.cornerRadius = 25.f;
-    self.img3.layer.masksToBounds = YES;
-    self.img3.layer.cornerRadius = 25.f;
+    self.loginBtn.layer.masksToBounds = YES;
     self.codeLab.layer.cornerRadius = 4.f;
     self.codeLab.layer.masksToBounds = YES;
-    self.codeLab.layer.borderColor = [UIColor colorWithHexString:UIToneTextColorStr].CGColor;
     self.codeLab.layer.borderWidth = 1.f;
+    self.codeLab.layer.borderColor = [UIColor colorWithHexString:UIToneTextColorStr].CGColor;
+    
+    self.img1.layer.cornerRadius = 25.f;
+    self.img1.layer.masksToBounds = YES;
+    self.img2.layer.cornerRadius = 25.f;
+    self.img2.layer.masksToBounds = YES;
+    self.img3.layer.cornerRadius = 25.f;
+    self.img3.layer.masksToBounds = YES;
 }
 
 //注册

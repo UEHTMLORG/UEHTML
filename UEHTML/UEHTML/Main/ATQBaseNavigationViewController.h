@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ATQBaseNavigationViewController : UINavigationController
-
+@property (nonatomic,strong) NSMutableArray *rootVcAry;
 @end

@@ -8,6 +8,8 @@
 
 #import "ATQRegisterViewController.h"
 #import "ATQPerfectInfoViewController.h"
+#import "UIColor+LhkhColor.h"
+#import "ATQBindPhoneViewController.h"
 @interface ATQRegisterViewController ()
 {
     NSTimer *mTimer;
@@ -19,29 +21,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = @"注册凹凸圈";
+    UIBarButtonItem *right = [[UIBarButtonItem alloc ]initWithTitle:@"登录" style:UIBarButtonItemStylePlain target:self action:@selector(back:)];
+    self.navigationItem.rightBarButtonItem = right;
+    if (ScreenWidth == 320) {
+        self.TextTop.constant = 10;
+        self.registerTop.constant = 10;
+        self.bottomH.constant = 120;
+    }else{
+        self.TextTop.constant = 20;
+        self.registerTop.constant = 30;
+        self.bottomH.constant = 150;
+    }
+    
     [self buildView];
 }
 -(void)buildView{
-    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectZero];
-    [self.view addSubview:scrollView];
-    scrollView.contentSize = CGSizeMake(ScreenWidth, 1000);
-    UIView *headView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 210/375*ScreenWidth)];
-    [scrollView addSubview:headView];
     
-    self.userView.layer.masksToBounds = YES;
-    self.userView.layer.cornerRadius = 4.f;
-    self.userView.layer.borderWidth = 1.f;
-    self.userView.layer.borderColor = [UIColor grayColor].CGColor;
-    
-    self.verCodeView.layer.masksToBounds = YES;
-    self.verCodeView.layer.cornerRadius = 4.f;
-    self.verCodeView.layer.borderWidth = 1.f;
-    self.verCodeView.layer.borderColor = [UIColor grayColor].CGColor;
-    
-    self.pwdView.layer.masksToBounds = YES;
-    self.pwdView.layer.cornerRadius = 4.f;
-    self.pwdView.layer.borderWidth = 1.f;
-    self.pwdView.layer.borderColor = [UIColor grayColor].CGColor;
+    self.codeLab.layer.masksToBounds = YES;
+    self.codeLab.layer.cornerRadius = 4.f;
+    self.codeLab.layer.borderWidth = 1.f;
+    self.codeLab.layer.borderColor = [UIColor colorWithHexString:UIToneTextColorStr].CGColor;
     
     self.registerBtn.layer.masksToBounds = YES;
     self.registerBtn.layer.cornerRadius = 4.f;
@@ -57,24 +57,20 @@
     
 }
 //返回
-- (IBAction)back:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+- (void)back:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 //获取验证码
 - (IBAction)getCode:(id)sender {
     NSLog(@"getCode");
     [self startTimer];
 }
-//获取语音验证码
-- (IBAction)getAudio:(id)sender {
-    NSLog(@"getAudio");
-    
-}
-//隐藏密码
-- (IBAction)hide:(id)sender {
-    NSLog(@"hide");
-    
-}
+////获取语音验证码
+//- (IBAction)getAudio:(id)sender {
+//    NSLog(@"getAudio");
+//    
+//}
+
 //注册
 - (IBAction)registerClick:(id)sender {
     NSLog(@"registerClick");
@@ -84,14 +80,20 @@
 //微博
 - (IBAction)sina:(id)sender {
     NSLog(@"sina");
+    ATQBindPhoneViewController *vc = [[ATQBindPhoneViewController  alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 //qq
 - (IBAction)qq:(id)sender {
     NSLog(@"qq");
+    ATQBindPhoneViewController *vc = [[ATQBindPhoneViewController  alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 //微信
 - (IBAction)wechat:(id)sender {
     NSLog(@"wechat");
+    ATQBindPhoneViewController *vc = [[ATQBindPhoneViewController  alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 // 开始定时器

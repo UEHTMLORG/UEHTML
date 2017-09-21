@@ -9,14 +9,14 @@
 #import "ATQBaseViewController.h"
 
 @interface ATQRegisterViewController : ATQBaseViewController
-@property (weak, nonatomic) IBOutlet UIView *userView;
-@property (weak, nonatomic) IBOutlet UIView *verCodeView;
-@property (weak, nonatomic) IBOutlet UIView *pwdView;
 @property (weak, nonatomic) IBOutlet UIImageView *img1;
 @property (weak, nonatomic) IBOutlet UIImageView *img2;
 @property (weak, nonatomic) IBOutlet UIImageView *img3;
 @property (weak, nonatomic) IBOutlet UIButton *registerBtn;
 @property (weak, nonatomic) IBOutlet UILabel *codeLab;
 @property (weak, nonatomic) IBOutlet UIButton *codeBtn;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *registerTop;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *TextTop;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomH;
 
 @end

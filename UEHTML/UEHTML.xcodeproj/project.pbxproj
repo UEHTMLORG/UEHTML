@@ -35,6 +35,8 @@
 		409E6D891F5003DA00E3BE49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 409E6D881F5003DA00E3BE49 /* AppDelegate.m */; };
 		409E6D9F1F5003DA00E3BE49 /* UEHTMLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 409E6D9E1F5003DA00E3BE49 /* UEHTMLTests.m */; };
 		409E6DAA1F5003DA00E3BE49 /* UEHTMLUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 409E6DA91F5003DA00E3BE49 /* UEHTMLUITests.m */; };
+		40FEA5BC1F735BC900D6EB89 /* ATQBindPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FEA5BA1F735BC900D6EB89 /* ATQBindPhoneViewController.m */; };
+		40FEA5BD1F735BC900D6EB89 /* ATQBindPhoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40FEA5BB1F735BC900D6EB89 /* ATQBindPhoneViewController.xib */; };
 		92FB59049DF9E3548E8B4B00 /* libPods-UEHTML.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FD494EE7C5F40277EC06F8 /* libPods-UEHTML.a */; };
 /* End PBXBuildFile section */
 
@@ -110,6 +112,9 @@
 		409E6DA51F5003DA00E3BE49 /* UEHTMLUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UEHTMLUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		409E6DA91F5003DA00E3BE49 /* UEHTMLUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UEHTMLUITests.m; sourceTree = "<group>"; };
 		409E6DAB1F5003DA00E3BE49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40FEA5B91F735BC900D6EB89 /* ATQBindPhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQBindPhoneViewController.h; sourceTree = "<group>"; };
+		40FEA5BA1F735BC900D6EB89 /* ATQBindPhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQBindPhoneViewController.m; sourceTree = "<group>"; };
+		40FEA5BB1F735BC900D6EB89 /* ATQBindPhoneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATQBindPhoneViewController.xib; sourceTree = "<group>"; };
 		83709B79F12E723B72656CC7 /* Pods-UEHTML.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UEHTML.release.xcconfig"; path = "Pods/Target Support Files/Pods-UEHTML/Pods-UEHTML.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,6 +179,9 @@
 				40260D1C1F71FEF400ED8CF1 /* ATQPerfectInfoViewController.h */,
 				40260D1D1F71FEF400ED8CF1 /* ATQPerfectInfoViewController.m */,
 				40260D1E1F71FEF400ED8CF1 /* ATQPerfectInfoViewController.xib */,
+				40FEA5B91F735BC900D6EB89 /* ATQBindPhoneViewController.h */,
+				40FEA5BA1F735BC900D6EB89 /* ATQBindPhoneViewController.m */,
+				40FEA5BB1F735BC900D6EB89 /* ATQBindPhoneViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -590,6 +598,7 @@
 				407F9BE81F6647020043A87A /* TabBarConfigure.plist in Resources */,
 				4018F5AD1F500B4000D6C42D /* Assets.xcassets in Resources */,
 				18BFFF561F53B863002144D5 /* Info.plist in Resources */,
+				40FEA5BD1F735BC900D6EB89 /* ATQBindPhoneViewController.xib in Resources */,
 				4018F5AE1F500B4000D6C42D /* LaunchScreen.storyboard in Resources */,
 				40260D201F71FEF400ED8CF1 /* ATQPerfectInfoViewController.xib in Resources */,
 				40875D691F6F9AE300B58609 /* ATQLoginViewController.xib in Resources */,
@@ -669,6 +678,7 @@
 				40875D681F6F9AE300B58609 /* ATQLoginViewController.m in Sources */,
 				407F9BCB1F6633870043A87A /* UIView+LhkhExtension.m in Sources */,
 				407F9BDA1F6636630043A87A /* ATQMessageViewController.m in Sources */,
+				40FEA5BC1F735BC900D6EB89 /* ATQBindPhoneViewController.m in Sources */,
 				409E6D891F5003DA00E3BE49 /* AppDelegate.m in Sources */,
 				407F9BE01F6636A90043A87A /* ATQViewController.m in Sources */,
 				407F9BCA1F6633870043A87A /* UIImage+LhkhExtension.m in Sources */,

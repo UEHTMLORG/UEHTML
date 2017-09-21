@@ -1,36 +1,30 @@
 //
-//  ATQLoginViewController.m
+//  ATQBindPhoneViewController.m
 //  UEHTML
 //
-//  Created by LHKH on 2017/9/18.
+//  Created by LHKH on 2017/9/21.
 //  Copyright © 2017年 LHKH. All rights reserved.
 //
 
-#import "ATQLoginViewController.h"
-#import "AppDelegate.h"
-#import "ATQRegisterViewController.h"
-#import "UIColor+LhkhColor.h"
 #import "ATQBindPhoneViewController.h"
-@interface ATQLoginViewController (){
+#import "UIColor+LhkhColor.h"
+#import "ATQRegisterViewController.h"
+#import "AppDelegate.h"
+@interface ATQBindPhoneViewController (){
     NSTimer *mTimer;
     int time;
 }
 
 @end
 
-@implementation ATQLoginViewController
+@implementation ATQBindPhoneViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"登录";
-    UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithImage: [UIImage imageNamed:@"back_more"] style:UIBarButtonItemStylePlain target:self action:@selector(back:)];
+    
+    self.navigationItem.title = @"关联手机号";
     UIBarButtonItem *right = [[UIBarButtonItem alloc ]initWithTitle:@"注册" style:UIBarButtonItemStylePlain target:self action:@selector(RegisterClick:)];
-    self.navigationItem.leftBarButtonItem = left;
     self.navigationItem.rightBarButtonItem = right;
-    [self buildView];
-}
-
--(void)buildView{
     
     self.loginBtn.layer.masksToBounds = YES;
     self.loginBtn.layer.cornerRadius = 4.f;
@@ -44,57 +38,34 @@
     self.codeLab.layer.masksToBounds = YES;
     self.codeLab.layer.borderColor = [UIColor colorWithHexString:UIToneTextColorStr].CGColor;
     self.codeLab.layer.borderWidth = 1.f;
-    
 }
-//返回
-- (void)back:(id)sender {
-    NSLog(@"back");
-    [(AppDelegate *)[UIApplication sharedApplication].delegate openTabHomeCtrl];
-}
+
 //注册
 - (void)RegisterClick:(id)sender {
     NSLog(@"RegisterClick");
     ATQRegisterViewController *vc = [[ATQRegisterViewController  alloc]init];
     [self.navigationController pushViewController:vc animated:YES];
 }
-////隐藏密码
-//- (IBAction)hide:(id)sender {
-//    NSLog(@"hide");
-//}
-////忘记密码
-//- (IBAction)forgetPwd:(id)sender {
-//    NSLog(@"forgetPwd");
-//}
-//获取验证码
-- (IBAction)getCode:(id)sender {
-    NSLog(@"getCode");
-    [self startTimer];
-}
 
 //登录
-- (IBAction)login:(id)sender {
-    NSLog(@"login");
+- (IBAction)loginClick:(id)sender {
     [(AppDelegate *)[UIApplication sharedApplication].delegate openTabHomeCtrl];
 }
 
-//微博登录
+//获取验证码
+- (IBAction)getCodeClick:(id)sender {
+    [self startTimer];
+}
+
+
 - (IBAction)sina:(id)sender {
-    NSLog(@"sina");
-    ATQBindPhoneViewController *vc = [[ATQBindPhoneViewController  alloc]init];
-    [self.navigationController pushViewController:vc animated:YES];
 }
-//qq登录
 - (IBAction)qq:(id)sender {
-    NSLog(@"qq");
-    ATQBindPhoneViewController *vc = [[ATQBindPhoneViewController  alloc]init];
-    [self.navigationController pushViewController:vc animated:YES];
 }
-//微信登录
 - (IBAction)wechat:(id)sender {
-    NSLog(@"wechat");
-    ATQBindPhoneViewController *vc = [[ATQBindPhoneViewController  alloc]init];
-    [self.navigationController pushViewController:vc animated:YES];
 }
+
+
 
 // 开始定时器
 - (void) startTimer{

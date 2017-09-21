@@ -32,7 +32,10 @@
 -(void)openLoginCtrl
 {
     ATQLoginViewController *vc = [[ATQLoginViewController alloc]init];
-    self.window.rootViewController = vc;
+    self.BaseNavigationViewController = [[ATQBaseNavigationViewController alloc] initWithRootViewController:vc];
+    
+    self.window.rootViewController = self.BaseNavigationViewController;
+    [self.window addSubview:self.BaseNavigationViewController    .view];
     [self.window makeKeyAndVisible];
 }
 

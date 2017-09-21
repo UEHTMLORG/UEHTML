@@ -9,14 +9,15 @@
 #import "ATQBaseViewController.h"
 
 @interface ATQLoginViewController : ATQBaseViewController
-@property (weak, nonatomic) IBOutlet UIView *userView;
+
 @property (weak, nonatomic) IBOutlet UITextField *userText;
-@property (weak, nonatomic) IBOutlet UIView *pwdView;
 @property (weak, nonatomic) IBOutlet UITextField *pwdText;
 @property (weak, nonatomic) IBOutlet UIButton *loginBtn;
 @property (weak, nonatomic) IBOutlet UIImageView *img1;
 @property (weak, nonatomic) IBOutlet UIImageView *img2;
 @property (weak, nonatomic) IBOutlet UIImageView *img3;
+@property (weak, nonatomic) IBOutlet UILabel *codeLab;
+@property (weak, nonatomic) IBOutlet UIButton *codeBtn;
 
 
 @end

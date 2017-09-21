@@ -10,7 +10,7 @@
 #import "AppDelegate.h"
 #import "UIColor+LhkhColor.h"
 #import "Masonry.h"
-
+#import "ATQRenzhengViewController.h"
 @interface ATQPerfectInfoViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIActionSheetDelegate>{
     UIControl *_blackView;
     NSString *dateStr;
@@ -23,8 +23,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.headBtn.layer.cornerRadius = 30.f;
-    self.headBtn.layer.masksToBounds = YES;
+    self.navigationItem.title = @"完善资料";
+    [self buildView];
+    [self setblackView];
+    [self setDatePickerView];
+}
+
+-(void)buildView{
+    self.headImg.layer.cornerRadius = 50.f;
+    self.headImg.layer.masksToBounds = YES;
     
     self.nickView.layer.masksToBounds = YES;
     self.nickView.layer.cornerRadius = 4.f;
@@ -43,22 +50,14 @@
     
     self.nextBtn.layer.masksToBounds = YES;
     self.nextBtn.layer.cornerRadius = 4.f;
-    [self setblackView];
-    [self setDatePickerView];
 }
-//返回
-- (IBAction)back:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
+
 //头像
 - (IBAction)headClick:(id)sender {
     NSLog(@"点击了图像");
     [self selectImage];
 }
-//换一个
-- (IBAction)changeClick:(id)sender {
-    
-}
+
 //男
 - (IBAction)manClick:(id)sender {
     
@@ -75,12 +74,8 @@
 }
 //下一步
 - (IBAction)nextClick:(id)sender {
-    
-}
-//进入主页
-- (IBAction)tranHomeClick:(id)sender {
-
-    [(AppDelegate *)[UIApplication sharedApplication].delegate openTabHomeCtrl];
+    ATQRenzhengViewController *vc = [[ATQRenzhengViewController alloc]init];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 -(void)setblackView{
@@ -232,7 +227,7 @@
     
     UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
     
-    [self.headBtn setImage:image forState:UIControlStateNormal];
+    self.headImg.image = image;
 //    NSData *data = UIImageJPEGRepresentation(image, 0.3);
 //    NSString *picStr = [data base64EncodedStringWithOptions:0];
     

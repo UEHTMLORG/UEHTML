@@ -37,6 +37,8 @@
 		409E6DAA1F5003DA00E3BE49 /* UEHTMLUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 409E6DA91F5003DA00E3BE49 /* UEHTMLUITests.m */; };
 		40FEA5BC1F735BC900D6EB89 /* ATQBindPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FEA5BA1F735BC900D6EB89 /* ATQBindPhoneViewController.m */; };
 		40FEA5BD1F735BC900D6EB89 /* ATQBindPhoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40FEA5BB1F735BC900D6EB89 /* ATQBindPhoneViewController.xib */; };
+		40FEA5C61F73AB4E00D6EB89 /* ATQRenzhengViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FEA5C41F73AB4E00D6EB89 /* ATQRenzhengViewController.m */; };
+		40FEA5C71F73AB4E00D6EB89 /* ATQRenzhengViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40FEA5C51F73AB4E00D6EB89 /* ATQRenzhengViewController.xib */; };
 		92FB59049DF9E3548E8B4B00 /* libPods-UEHTML.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FD494EE7C5F40277EC06F8 /* libPods-UEHTML.a */; };
 /* End PBXBuildFile section */
 
@@ -115,6 +117,9 @@
 		40FEA5B91F735BC900D6EB89 /* ATQBindPhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQBindPhoneViewController.h; sourceTree = "<group>"; };
 		40FEA5BA1F735BC900D6EB89 /* ATQBindPhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQBindPhoneViewController.m; sourceTree = "<group>"; };
 		40FEA5BB1F735BC900D6EB89 /* ATQBindPhoneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATQBindPhoneViewController.xib; sourceTree = "<group>"; };
+		40FEA5C31F73AB4E00D6EB89 /* ATQRenzhengViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQRenzhengViewController.h; sourceTree = "<group>"; };
+		40FEA5C41F73AB4E00D6EB89 /* ATQRenzhengViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQRenzhengViewController.m; sourceTree = "<group>"; };
+		40FEA5C51F73AB4E00D6EB89 /* ATQRenzhengViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATQRenzhengViewController.xib; sourceTree = "<group>"; };
 		83709B79F12E723B72656CC7 /* Pods-UEHTML.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UEHTML.release.xcconfig"; path = "Pods/Target Support Files/Pods-UEHTML/Pods-UEHTML.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -182,6 +187,9 @@
 				40FEA5B91F735BC900D6EB89 /* ATQBindPhoneViewController.h */,
 				40FEA5BA1F735BC900D6EB89 /* ATQBindPhoneViewController.m */,
 				40FEA5BB1F735BC900D6EB89 /* ATQBindPhoneViewController.xib */,
+				40FEA5C31F73AB4E00D6EB89 /* ATQRenzhengViewController.h */,
+				40FEA5C41F73AB4E00D6EB89 /* ATQRenzhengViewController.m */,
+				40FEA5C51F73AB4E00D6EB89 /* ATQRenzhengViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -593,6 +601,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40FEA5C71F73AB4E00D6EB89 /* ATQRenzhengViewController.xib in Resources */,
 				40875D6E1F6F9B4500B58609 /* ATQRegisterViewController.xib in Resources */,
 				4018F5AF1F500B4000D6C42D /* Main.storyboard in Resources */,
 				407F9BE81F6647020043A87A /* TabBarConfigure.plist in Resources */,
@@ -686,6 +695,7 @@
 				407F9BD71F66364C0043A87A /* ATQVicintyViewController.m in Sources */,
 				407F9BD41F6634D30043A87A /* ATQBaseTabBarViewController.m in Sources */,
 				407F9BD11F6634A70043A87A /* ATQBaseNavigationViewController.m in Sources */,
+				40FEA5C61F73AB4E00D6EB89 /* ATQRenzhengViewController.m in Sources */,
 				40260D1F1F71FEF400ED8CF1 /* ATQPerfectInfoViewController.m in Sources */,
 				407F9BE61F663A230043A87A /* LhkhTabBar.m in Sources */,
 				407F9BC91F6633870043A87A /* UIColor+LhkhColor.m in Sources */,

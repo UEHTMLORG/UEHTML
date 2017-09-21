@@ -24,7 +24,7 @@
     self.navigationItem.title = @"注册凹凸圈";
     UIBarButtonItem *right = [[UIBarButtonItem alloc ]initWithTitle:@"登录" style:UIBarButtonItemStylePlain target:self action:@selector(back:)];
     self.navigationItem.rightBarButtonItem = right;
-    if (ScreenWidth == 320) {
+    if (ScreenWidth <= 320) {
         self.TextTop.constant = 10;
         self.registerTop.constant = 10;
         self.bottomH.constant = 120;
@@ -75,7 +75,7 @@
 - (IBAction)registerClick:(id)sender {
     NSLog(@"registerClick");
     ATQPerfectInfoViewController  *vc = [[ATQPerfectInfoViewController alloc] init];
-    [self presentViewController:vc animated:YES completion:nil];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 //微博
 - (IBAction)sina:(id)sender {

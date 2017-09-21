@@ -9,6 +9,7 @@
 #import "ATQBaseViewController.h"
 
 @interface ATQPerfectInfoViewController : ATQBaseViewController
+@property (weak, nonatomic) IBOutlet UIImageView *headImg;
 @property (weak, nonatomic) IBOutlet UIButton *headBtn;
 @property (weak, nonatomic) IBOutlet UIView *nickView;
 @property (weak, nonatomic) IBOutlet UIView *sexView;

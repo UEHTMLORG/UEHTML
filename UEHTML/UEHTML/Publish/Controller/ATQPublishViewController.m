@@ -17,6 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor yellowColor];
+    
+}
+
+//-(void)buildView{
 //    self.view.backgroundColor = [UIColor colorWithWhite:0 alpha:0.6];
 //    if ([[[UIDevice currentDevice] systemVersion] floatValue]>=8.0) {
 //        
@@ -33,9 +37,8 @@
 //    [cancel setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 //    [cancel addTarget:self action:@selector(cancel) forControlEvents:UIControlEventTouchUpInside];
 //    [self.view addSubview:cancel];
-    
-}
-
+//
+//}
 //-(void)cancel{
 //    [self.parentViewController.view removeFromSuperview];
 //    [self.parentViewController removeFromParentViewController];

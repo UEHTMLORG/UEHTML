@@ -39,6 +39,10 @@
 		40FEA5BD1F735BC900D6EB89 /* ATQBindPhoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40FEA5BB1F735BC900D6EB89 /* ATQBindPhoneViewController.xib */; };
 		40FEA5C61F73AB4E00D6EB89 /* ATQRenzhengViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FEA5C41F73AB4E00D6EB89 /* ATQRenzhengViewController.m */; };
 		40FEA5C71F73AB4E00D6EB89 /* ATQRenzhengViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40FEA5C51F73AB4E00D6EB89 /* ATQRenzhengViewController.xib */; };
+		40FEA5CA1F73B40000D6EB89 /* ATQNearbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FEA5C91F73B40000D6EB89 /* ATQNearbyViewController.m */; };
+		40FEA5CD1F73B41E00D6EB89 /* ATQRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FEA5CC1F73B41E00D6EB89 /* ATQRecommendViewController.m */; };
+		40FEA5D01F73B46700D6EB89 /* ATQVideoChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FEA5CF1F73B46700D6EB89 /* ATQVideoChatViewController.m */; };
+		40FEA5D31F73B53A00D6EB89 /* LhkhButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FEA5D21F73B53A00D6EB89 /* LhkhButton.m */; };
 		92FB59049DF9E3548E8B4B00 /* libPods-UEHTML.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FD494EE7C5F40277EC06F8 /* libPods-UEHTML.a */; };
 /* End PBXBuildFile section */
 
@@ -120,6 +124,14 @@
 		40FEA5C31F73AB4E00D6EB89 /* ATQRenzhengViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQRenzhengViewController.h; sourceTree = "<group>"; };
 		40FEA5C41F73AB4E00D6EB89 /* ATQRenzhengViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQRenzhengViewController.m; sourceTree = "<group>"; };
 		40FEA5C51F73AB4E00D6EB89 /* ATQRenzhengViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATQRenzhengViewController.xib; sourceTree = "<group>"; };
+		40FEA5C81F73B40000D6EB89 /* ATQNearbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQNearbyViewController.h; sourceTree = "<group>"; };
+		40FEA5C91F73B40000D6EB89 /* ATQNearbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQNearbyViewController.m; sourceTree = "<group>"; };
+		40FEA5CB1F73B41E00D6EB89 /* ATQRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQRecommendViewController.h; sourceTree = "<group>"; };
+		40FEA5CC1F73B41E00D6EB89 /* ATQRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQRecommendViewController.m; sourceTree = "<group>"; };
+		40FEA5CE1F73B46700D6EB89 /* ATQVideoChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQVideoChatViewController.h; sourceTree = "<group>"; };
+		40FEA5CF1F73B46700D6EB89 /* ATQVideoChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQVideoChatViewController.m; sourceTree = "<group>"; };
+		40FEA5D11F73B53A00D6EB89 /* LhkhButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LhkhButton.h; sourceTree = "<group>"; };
+		40FEA5D21F73B53A00D6EB89 /* LhkhButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LhkhButton.m; sourceTree = "<group>"; };
 		83709B79F12E723B72656CC7 /* Pods-UEHTML.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UEHTML.release.xcconfig"; path = "Pods/Target Support Files/Pods-UEHTML/Pods-UEHTML.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -312,6 +324,8 @@
 		409E6DBB1F50081200E3BE49 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				40FEA5D11F73B53A00D6EB89 /* LhkhButton.h */,
+				40FEA5D21F73B53A00D6EB89 /* LhkhButton.m */,
 				407F9BE41F663A230043A87A /* LhkhTabBar.h */,
 				407F9BE51F663A230043A87A /* LhkhTabBar.m */,
 				407F9BC31F6633870043A87A /* UIColor+LhkhColor.h */,
@@ -453,6 +467,12 @@
 			children = (
 				407F9BD51F66364C0043A87A /* ATQVicintyViewController.h */,
 				407F9BD61F66364C0043A87A /* ATQVicintyViewController.m */,
+				40FEA5C81F73B40000D6EB89 /* ATQNearbyViewController.h */,
+				40FEA5C91F73B40000D6EB89 /* ATQNearbyViewController.m */,
+				40FEA5CB1F73B41E00D6EB89 /* ATQRecommendViewController.h */,
+				40FEA5CC1F73B41E00D6EB89 /* ATQRecommendViewController.m */,
+				40FEA5CE1F73B46700D6EB89 /* ATQVideoChatViewController.h */,
+				40FEA5CF1F73B46700D6EB89 /* ATQVideoChatViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -692,14 +712,18 @@
 				407F9BE01F6636A90043A87A /* ATQViewController.m in Sources */,
 				407F9BCA1F6633870043A87A /* UIImage+LhkhExtension.m in Sources */,
 				407F9BDD1F66367F0043A87A /* ATQPublishViewController.m in Sources */,
+				40FEA5CA1F73B40000D6EB89 /* ATQNearbyViewController.m in Sources */,
 				407F9BD71F66364C0043A87A /* ATQVicintyViewController.m in Sources */,
 				407F9BD41F6634D30043A87A /* ATQBaseTabBarViewController.m in Sources */,
 				407F9BD11F6634A70043A87A /* ATQBaseNavigationViewController.m in Sources */,
 				40FEA5C61F73AB4E00D6EB89 /* ATQRenzhengViewController.m in Sources */,
+				40FEA5CD1F73B41E00D6EB89 /* ATQRecommendViewController.m in Sources */,
 				40260D1F1F71FEF400ED8CF1 /* ATQPerfectInfoViewController.m in Sources */,
 				407F9BE61F663A230043A87A /* LhkhTabBar.m in Sources */,
 				407F9BC91F6633870043A87A /* UIColor+LhkhColor.m in Sources */,
+				40FEA5D31F73B53A00D6EB89 /* LhkhButton.m in Sources */,
 				407F9BE31F6636BF0043A87A /* ATQMeViewController.m in Sources */,
+				40FEA5D01F73B46700D6EB89 /* ATQVideoChatViewController.m in Sources */,
 				40875D6D1F6F9B4500B58609 /* ATQRegisterViewController.m in Sources */,
 				407F9BCE1F6634360043A87A /* ATQBaseViewController.m in Sources */,
 				409E6D861F5003DA00E3BE49 /* main.m in Sources */,

@@ -36,17 +36,17 @@
     self.nickView.layer.masksToBounds = YES;
     self.nickView.layer.cornerRadius = 4.f;
     self.nickView.layer.borderWidth = 1.f;
-    self.nickView.layer.borderColor = [UIColor grayColor].CGColor;
+    self.nickView.layer.borderColor = [UIColor colorWithHexString:UIToneTextColorStr].CGColor;
     
     self.sexView.layer.masksToBounds = YES;
     self.sexView.layer.cornerRadius = 4.f;
     self.sexView.layer.borderWidth = 1.f;
-    self.sexView.layer.borderColor = [UIColor grayColor].CGColor;
+    self.sexView.layer.borderColor = [UIColor colorWithHexString:UIToneTextColorStr].CGColor;
     
     self.ageView.layer.masksToBounds = YES;
     self.ageView.layer.cornerRadius = 4.f;
     self.ageView.layer.borderWidth = 1.f;
-    self.ageView.layer.borderColor = [UIColor grayColor].CGColor;
+    self.ageView.layer.borderColor = [UIColor colorWithHexString:UIToneTextColorStr].CGColor;
     
     self.nextBtn.layer.masksToBounds = YES;
     self.nextBtn.layer.cornerRadius = 4.f;

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ATQTagCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="70"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="70"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8yp-u7-k6h">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <color key="backgroundColor" red="1" green="0.87105861350000002" blue="0.25673982020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="8yp-u7-k6h" secondAttribute="height" multiplier="1:1" id="hlD-Bc-rek"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="看电影" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmJ-UV-lC4">
+                        <rect key="frame" x="0.0" y="50" width="50" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="5Ym-Ef-lnk"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="8yp-u7-k6h" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="RSg-PQ-3zC"/>
+                <constraint firstAttribute="trailing" secondItem="8yp-u7-k6h" secondAttribute="trailing" id="RxA-4p-LMT"/>
+                <constraint firstItem="gmJ-UV-lC4" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ZQf-kv-PzU"/>
+                <constraint firstAttribute="trailing" secondItem="gmJ-UV-lC4" secondAttribute="trailing" id="fPq-xQ-JEp"/>
+                <constraint firstAttribute="bottom" secondItem="gmJ-UV-lC4" secondAttribute="bottom" constant="5" id="kLq-SX-9qD"/>
+                <constraint firstItem="8yp-u7-k6h" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="nkT-k0-IQO"/>
+            </constraints>
+            <connections>
+                <outlet property="tagImg" destination="8yp-u7-k6h" id="y8m-d3-1t8"/>
+                <outlet property="tagLab" destination="gmJ-UV-lC4" id="M1N-Sg-LYU"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>

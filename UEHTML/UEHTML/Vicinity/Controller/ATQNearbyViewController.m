@@ -8,12 +8,15 @@
 
 #import "ATQNearbyViewController.h"
 #import "ATQTagTableViewCell.h"
+#import "ATQRecPerTableViewCell.h"
 #import "ATQTagCollectionViewCell.h"
+#import "ATQRecPerCollectionViewCell.h"
 #import "Masonry.h"
 #import "MJExtension.h"
 #import "MJRefresh.h"
 #import "UIImageView+WebCache.h"
 #import "XHHPageControl.h"
+#import "UIColor+LhkhColor.h"
 @interface ATQNearbyViewController ()<UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource,UIScrollViewDelegate>{
     UIView *headView;
     NSMutableArray *_imageArray;//滚动图数组
@@ -41,6 +44,7 @@
         UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectZero];
         [tableView registerNib:[UINib nibWithNibName:@"ATQTagTableViewCell" bundle:nil] forCellReuseIdentifier:@"ATQTagTableViewCell"];
         
+        [tableView registerNib:[UINib nibWithNibName:@"ATQRecPerTableViewCell" bundle:nil] forCellReuseIdentifier:@"ATQRecPerTableViewCell"];
         tableView.backgroundColor = RGBA(236, 236, 236, 1);
         tableView.delegate = self;
         tableView.dataSource = self;
@@ -88,7 +92,7 @@
 
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 2;
+    return 3;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 1;
@@ -119,7 +123,27 @@
         cell.tagCollectionView.tag = 0;
         [cell.tagCollectionView registerNib:[UINib  nibWithNibName:@"ATQTagCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"ATQTagCollectionViewCell"];
         return cell;
-        
+    }else{
+        static NSString *CellIdentifier = @"ATQRecPerTableViewCell" ;
+        ATQRecPerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        if (cell == nil) {
+            NSArray *array = [[NSBundle mainBundle]loadNibNamed: CellIdentifier owner:self options:nil];
+            cell = [array objectAtIndex:0];
+        }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.leftCollectionView.delegate = self;
+        cell.leftCollectionView.dataSource = self;
+        cell.leftCollectionView.tag = 1;
+        [cell.leftCollectionView registerNib:[UINib  nibWithNibName:@"ATQRecPerCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"ATQRecPerCollectionViewCell"];
+        cell.midCollectionView.delegate = self;
+        cell.midCollectionView.dataSource = self;
+        cell.midCollectionView.tag = 2;
+        [cell.midCollectionView registerNib:[UINib  nibWithNibName:@"ATQRecPerCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"ATQRecPerCollectionViewCell"];
+        cell.rightCollectionView.delegate = self;
+        cell.rightCollectionView.dataSource = self;
+        cell.rightCollectionView.tag = 3;
+        [cell.rightCollectionView registerNib:[UINib  nibWithNibName:@"ATQRecPerCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"ATQRecPerCollectionViewCell"];
+        return cell;
     }
     return cell;
 }
@@ -128,11 +152,31 @@
 {
     if (indexPath.section == 0) {
         return ScreenWidth*170/375;
-    }else{
+    }else if(indexPath.section == 1){
         float width = (ScreenWidth-60)/5;
         return 2*(7*width/5+5);
+    }else{
+        float width = (ScreenWidth-40)/3;
+        return 10*(width+10);
     }
-    
+}
+
+-(UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    if (section == 2) {
+        UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 5)];
+        view.backgroundColor = [UIColor colorWithHexString:UIBgColorStr];
+        return view;
+    }else{
+        return nil;
+    }
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    if (section == 2) {
+        return 5;
+    }else{
+        return 0;
+    }
 }
 
 #pragma mark- 图片相关
@@ -220,20 +264,21 @@
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-   
-    ATQTagCollectionViewCell *cell = (ATQTagCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"ATQTagCollectionViewCell" forIndexPath:indexPath];
-    cell.tagImg.layer.cornerRadius = (ScreenWidth-60)/10;
-    cell.tagImg.layer.masksToBounds = YES;
-    return cell;
-//    else{
-//        ATQHomeCollectionViewCell *cell = (ATQHomeCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"ATQHomeCollectionViewCell" forIndexPath:indexPath];
-//        collectionView.scrollEnabled = NO;
-//        cell.chatClick = ^(){
-//            
-//            NSLog(@"点击了立即聊天");
-//        };
-//        return cell;
-//    }
+    if (collectionView.tag == 0) {
+        ATQTagCollectionViewCell *cell = (ATQTagCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"ATQTagCollectionViewCell" forIndexPath:indexPath];
+        cell.tagImg.layer.cornerRadius = (ScreenWidth-60)/10;
+        cell.tagImg.layer.masksToBounds = YES;
+        collectionView.scrollEnabled = NO;
+        return cell;
+    }else{
+        ATQRecPerCollectionViewCell *cell = (ATQRecPerCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"ATQRecPerCollectionViewCell" forIndexPath:indexPath];
+        collectionView.scrollEnabled = NO;
+        CGSize size = cell.frame.size;
+        cell.recpImg.layer.cornerRadius = size.width/2;
+        cell.recpImg.layer.masksToBounds = YES;
+//        NSLog(@"%@",NSStringFromCGSize(size));
+        return cell;
+    }
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -244,13 +289,23 @@
 #pragma mark - UICollectionViewDelegateFlowLayout
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    float width = (ScreenWidth-60)/5;
-    return CGSizeMake(width, 7*width/5);
+    if (collectionView.tag == 0) {
+        float width = (ScreenWidth-60)/5;
+        return CGSizeMake(width, 7*width/5);
+    }else{
+        float width = (ScreenWidth-40)/3;
+        return CGSizeMake(width, 13*width/8);
+    }
+    
 }
 
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-
-    return UIEdgeInsetsMake(5, 10, 5, 10);
+    if (collectionView.tag == 0) {
+         return UIEdgeInsetsMake(5, 10, 5, 10);
+    }else{
+         return UIEdgeInsetsMake(10, 0, 0, 0);
+    }
+    
 }
 
 
@@ -258,7 +313,10 @@
                     layout:(UICollectionViewLayout *)collectionViewLayout
 minimumLineSpacingForSectionAtIndex:(NSInteger)section
 {
-    return 5.f;
+    if (collectionView.tag == 0) {
+        return 5.f;
+    }
+    return 10.f;
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section

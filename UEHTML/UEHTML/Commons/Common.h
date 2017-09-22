@@ -14,5 +14,5 @@
 #define UIColorStr @"E273B6"//UI整体颜色
 #define UIToneTextColorStr @"C9C9C9"//灰色
 #define UISelTextColorStr @"FFE010"//黄色
-
+#define UIBgColorStr @"F2F3F4"
 #endif /* Common_h */

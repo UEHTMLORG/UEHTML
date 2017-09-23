@@ -7,7 +7,7 @@
 //
 
 #import "ATQRecommendViewController.h"
-#import "ATQHomeCollectionViewCell.h"
+#import "ATQHomeRecCollectionViewCell.h"
 #import "ATQNewPCollectionViewCell.h"
 #import "ATQTitleTableViewCell.h"
 #import "ATQItemTableViewCell.h"
@@ -100,7 +100,7 @@
         cell.itemCollectionView.delegate = self;
         cell.itemCollectionView.dataSource = self;
         cell.itemCollectionView.tag = 1;
-        [cell.itemCollectionView registerNib:[UINib  nibWithNibName:@"ATQHomeCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"ATQHomeCollectionViewCell"];
+        [cell.itemCollectionView registerNib:[UINib  nibWithNibName:@"ATQHomeRecCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"ATQHomeRecCollectionViewCell"];
         return cell;
     }
     
@@ -135,12 +135,9 @@
         ATQNewPCollectionViewCell *cell = (ATQNewPCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"ATQNewPCollectionViewCell" forIndexPath:indexPath];
         return cell;
     }else{
-        ATQHomeCollectionViewCell *cell = (ATQHomeCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"ATQHomeCollectionViewCell" forIndexPath:indexPath];
+        ATQHomeRecCollectionViewCell *cell = (ATQHomeRecCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"ATQHomeRecCollectionViewCell" forIndexPath:indexPath];
         collectionView.scrollEnabled = NO;
-        cell.chatClick = ^(){
-            
-            NSLog(@"点击了立即聊天");
-        };
+        
         return cell;
     }
 }

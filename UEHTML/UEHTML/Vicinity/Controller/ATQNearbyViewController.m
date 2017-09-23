@@ -156,8 +156,8 @@
         float width = (ScreenWidth-60)/5;
         return 2*(7*width/5+5);
     }else{
-        float width = (ScreenWidth-40)/3;
-        return 10*(width+10);
+        float width = (ScreenWidth-80)/3;
+        return 10*(14*width/8+20);
     }
 }
 
@@ -276,7 +276,7 @@
         CGSize size = cell.frame.size;
         cell.recpImg.layer.cornerRadius = size.width/2;
         cell.recpImg.layer.masksToBounds = YES;
-//        NSLog(@"%@",NSStringFromCGSize(size));
+        NSLog(@"%@",NSStringFromCGSize(size));
         return cell;
     }
 }
@@ -293,8 +293,8 @@
         float width = (ScreenWidth-60)/5;
         return CGSizeMake(width, 7*width/5);
     }else{
-        float width = (ScreenWidth-40)/3;
-        return CGSizeMake(width, 13*width/8);
+        float width = (ScreenWidth-80)/3;
+        return CGSizeMake(width, 14*width/8);
     }
     
 }

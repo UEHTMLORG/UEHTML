@@ -13,10 +13,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ATQRecPerCollectionViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="80" height="130"/>
+            <rect key="frame" x="0.0" y="0.0" width="80" height="140"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="80" height="130"/>
+                <rect key="frame" x="0.0" y="0.0" width="80" height="140"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eBC-vs-vPL">
@@ -27,7 +27,7 @@
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IIZ-LL-xma">
-                        <rect key="frame" x="50" y="50" width="20" height="20"/>
+                        <rect key="frame" x="55" y="55" width="20" height="20"/>
                         <color key="backgroundColor" red="0.37026213079999998" green="0.75408679249999999" blue="0.25761969699999998" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="20" id="0zT-lY-vuo"/>
@@ -41,7 +41,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ihj-6q-ARj">
-                        <rect key="frame" x="0.0" y="100" width="80" height="15"/>
+                        <rect key="frame" x="0.0" y="105" width="80" height="15"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="陪聊天" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSM-CG-Oh2">
                                 <rect key="frame" x="5" y="0.0" width="25" height="15"/>
@@ -69,7 +69,7 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="36分钟前" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Xn-tR-BVV">
-                        <rect key="frame" x="0.0" y="115" width="80" height="12"/>
+                        <rect key="frame" x="0.0" y="125" width="80" height="12"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -78,15 +78,15 @@
             </view>
             <constraints>
                 <constraint firstItem="Ihj-6q-ARj" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="2DC-1h-Cuu"/>
-                <constraint firstItem="IIZ-LL-xma" firstAttribute="bottom" secondItem="eBC-vs-vPL" secondAttribute="bottom" constant="-10" id="3ZF-Pd-P2j"/>
-                <constraint firstItem="8Xn-tR-BVV" firstAttribute="top" secondItem="Ihj-6q-ARj" secondAttribute="bottom" id="6m6-oI-NHa"/>
+                <constraint firstItem="IIZ-LL-xma" firstAttribute="bottom" secondItem="eBC-vs-vPL" secondAttribute="bottom" constant="-5" id="3ZF-Pd-P2j"/>
+                <constraint firstItem="8Xn-tR-BVV" firstAttribute="top" secondItem="Ihj-6q-ARj" secondAttribute="bottom" constant="5" id="6m6-oI-NHa"/>
                 <constraint firstItem="MzA-hE-pyU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="C8j-AB-9mT"/>
                 <constraint firstAttribute="trailing" secondItem="Ihj-6q-ARj" secondAttribute="trailing" id="URk-va-UuU"/>
                 <constraint firstAttribute="trailing" secondItem="8Xn-tR-BVV" secondAttribute="trailing" id="eLd-Mr-RK4"/>
                 <constraint firstAttribute="trailing" secondItem="eBC-vs-vPL" secondAttribute="trailing" id="fph-O1-0Hy"/>
-                <constraint firstItem="Ihj-6q-ARj" firstAttribute="top" secondItem="MzA-hE-pyU" secondAttribute="bottom" id="j7g-cB-nhP"/>
+                <constraint firstItem="Ihj-6q-ARj" firstAttribute="top" secondItem="MzA-hE-pyU" secondAttribute="bottom" constant="5" id="j7g-cB-nhP"/>
                 <constraint firstItem="eBC-vs-vPL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="kbQ-FY-y2x"/>
-                <constraint firstItem="IIZ-LL-xma" firstAttribute="trailing" secondItem="eBC-vs-vPL" secondAttribute="trailing" constant="-10" id="kmT-IP-RuE"/>
+                <constraint firstItem="IIZ-LL-xma" firstAttribute="trailing" secondItem="eBC-vs-vPL" secondAttribute="trailing" constant="-5" id="kmT-IP-RuE"/>
                 <constraint firstItem="eBC-vs-vPL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="md7-NU-SwG"/>
                 <constraint firstAttribute="trailing" secondItem="MzA-hE-pyU" secondAttribute="trailing" id="wkO-5y-Uhs"/>
                 <constraint firstItem="8Xn-tR-BVV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="xc8-n1-lZH"/>

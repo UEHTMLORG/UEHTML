@@ -7,6 +7,7 @@
 //
 
 #import "ATQBaseViewController.h"
+#import "ComplainViewController.h"
 
 @interface ATQPublishViewController : ATQBaseViewController
 

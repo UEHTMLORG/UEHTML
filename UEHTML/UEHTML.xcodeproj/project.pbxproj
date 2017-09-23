@@ -37,6 +37,7 @@
 		409E6D891F5003DA00E3BE49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 409E6D881F5003DA00E3BE49 /* AppDelegate.m */; };
 		409E6D9F1F5003DA00E3BE49 /* UEHTMLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 409E6D9E1F5003DA00E3BE49 /* UEHTMLTests.m */; };
 		409E6DAA1F5003DA00E3BE49 /* UEHTMLUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 409E6DA91F5003DA00E3BE49 /* UEHTMLUITests.m */; };
+		40E061C01F7689100072596D /* ATQItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FA89F81F74A61E0059A208 /* ATQItemTableViewCell.m */; };
 		40F085A41F74FA1400C5986C /* ATQRecPerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F085A21F74FA1400C5986C /* ATQRecPerTableViewCell.m */; };
 		40F085A51F74FA1500C5986C /* ATQRecPerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40F085A31F74FA1400C5986C /* ATQRecPerTableViewCell.xib */; };
 		40F085A91F74FE7200C5986C /* ATQRecPerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F085A71F74FE7200C5986C /* ATQRecPerCollectionViewCell.m */; };
@@ -45,7 +46,6 @@
 		40FA89F11F749F7D0059A208 /* ATQHomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40FA89EF1F749F7D0059A208 /* ATQHomeCollectionViewCell.xib */; };
 		40FA89F51F74A41C0059A208 /* ATQTitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FA89F31F74A41C0059A208 /* ATQTitleTableViewCell.m */; };
 		40FA89F61F74A41C0059A208 /* ATQTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40FA89F41F74A41C0059A208 /* ATQTitleTableViewCell.xib */; };
-		40FA89FA1F74A61E0059A208 /* ATQItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FA89F81F74A61E0059A208 /* ATQItemTableViewCell.m */; };
 		40FA89FB1F74A61E0059A208 /* ATQItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40FA89F91F74A61E0059A208 /* ATQItemTableViewCell.xib */; };
 		40FA89FF1F74B1A80059A208 /* LhkhHttpsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FA89FE1F74B1A80059A208 /* LhkhHttpsManager.m */; };
 		40FA8A031F74CD7E0059A208 /* ATQNewPCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FA8A011F74CD7E0059A208 /* ATQNewPCollectionViewCell.m */; };
@@ -802,6 +802,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40E061C01F7689100072596D /* ATQItemTableViewCell.m in Sources */,
 				4018F5B11F500B4000D6C42D /* ViewController.m in Sources */,
 				40875D681F6F9AE300B58609 /* ATQLoginViewController.m in Sources */,
 				40FA89FF1F74B1A80059A208 /* LhkhHttpsManager.m in Sources */,

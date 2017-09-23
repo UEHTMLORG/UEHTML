@@ -217,6 +217,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		186623271F76A47E00E42290 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		186623281F76A47E00E42290 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		186623291F76A49A00E42290 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1866232A1F76A49A00E42290 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1866232B1F76A4AB00E42290 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1866232C1F76A4AB00E42290 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		4018F5A41F500B4000D6C42D /* Other */ = {
 			isa = PBXGroup;
 			children = (
@@ -347,9 +389,9 @@
 		409E6DB71F50081200E3BE49 /* ATQ */ = {
 			isa = PBXGroup;
 			children = (
+				186623271F76A47E00E42290 /* Model */,
+				186623281F76A47E00E42290 /* View */,
 				409E6DB81F50081200E3BE49 /* Controller */,
-				409E6DB91F50081200E3BE49 /* Model */,
-				409E6DBA1F50081200E3BE49 /* View */,
 			);
 			path = ATQ;
 			sourceTree = "<group>";
@@ -361,20 +403,6 @@
 				407F9BDF1F6636A90043A87A /* ATQViewController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		409E6DB91F50081200E3BE49 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		409E6DBA1F50081200E3BE49 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		409E6DBB1F50081200E3BE49 /* Commons */ = {
@@ -448,9 +476,9 @@
 		409E6DC11F50081200E3BE49 /* Message */ = {
 			isa = PBXGroup;
 			children = (
+				1866232B1F76A4AB00E42290 /* Model */,
+				1866232C1F76A4AB00E42290 /* View */,
 				409E6DC21F50081200E3BE49 /* Controller */,
-				409E6DC31F50081200E3BE49 /* Model */,
-				409E6DC41F50081200E3BE49 /* View */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -464,26 +492,12 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		409E6DC31F50081200E3BE49 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		409E6DC41F50081200E3BE49 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		409E6DC61F50081200E3BE49 /* Publish */ = {
 			isa = PBXGroup;
 			children = (
+				186623291F76A49A00E42290 /* Model */,
+				1866232A1F76A49A00E42290 /* View */,
 				409E6DC71F50081200E3BE49 /* Controller */,
-				409E6DC81F50081200E3BE49 /* Model */,
-				409E6DC91F50081200E3BE49 /* View */,
 			);
 			path = Publish;
 			sourceTree = "<group>";
@@ -498,20 +512,6 @@
 				188F84391F739BD30037213D /* ComplainViewController.xib */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		409E6DC81F50081200E3BE49 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		409E6DC91F50081200E3BE49 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		409E6DCA1F50081200E3BE49 /* Vicinity */ = {

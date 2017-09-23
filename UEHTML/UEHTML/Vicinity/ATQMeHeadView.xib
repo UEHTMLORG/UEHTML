@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12121"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="zyo-4r-CQ6">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="165"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xSn-GQ-tYr" customClass="ATQMeHeadView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="165"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="xSn-GQ-tYr" secondAttribute="height" multiplier="25:11" id="Sfe-Jg-u86"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="xSn-GQ-tYr" secondAttribute="trailing" id="BLs-he-Vmv"/>
+                <constraint firstItem="xSn-GQ-tYr" firstAttribute="leading" secondItem="zyo-4r-CQ6" secondAttribute="leading" id="KRI-ac-fd9"/>
+                <constraint firstAttribute="bottom" secondItem="xSn-GQ-tYr" secondAttribute="bottom" id="KUi-nQ-BC9"/>
+                <constraint firstItem="xSn-GQ-tYr" firstAttribute="top" secondItem="zyo-4r-CQ6" secondAttribute="top" id="x5n-mK-YCp"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="26.5" y="-264.5"/>
+        </view>
+    </objects>
+</document>

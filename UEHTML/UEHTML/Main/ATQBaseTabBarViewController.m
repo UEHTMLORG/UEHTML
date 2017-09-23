@@ -65,12 +65,32 @@
     [vc.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName :[UIColor grayColor],NSFontAttributeName:[UIFont systemFontOfSize:10]} forState:UIControlStateNormal];
     [vc.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName :[UIColor colorWithHexString:UIColorStr],NSFontAttributeName:[UIFont systemFontOfSize:10]} forState:UIControlStateSelected];
     vc.tabBarItem.title = title;
-    [_vcsArray addObject:vc];
+    
+    /*==========ZL注释start===========
+     *1.添加 NavigationController
+     *2.兼职中心VC
+     *3.消息VC
+     *4.
+     ===========ZL注释end==========*/
     ATQBaseNavigationViewController *navc = nil;
-//    ATQBaseNavigationViewController *navc = [[ATQBaseNavigationViewController alloc]initWithRootViewController:vc];
-//    [self addChildViewController:navc];
-//    navc.navigationItem.title = title;
-//    [navc.rootVcAry addObject:class];
+    if (class == [ATQPublishViewController class]) {
+        ATQBaseNavigationViewController *navc = [[ATQBaseNavigationViewController alloc]initWithRootViewController:vc];
+        //    [self addChildViewController:navc];
+        navc.navigationItem.title = title;
+        [navc.rootVcAry addObject:class];
+        [_vcsArray addObject:navc];
+    }
+    else if (class == [ATQMessageViewController class]) {
+        ATQBaseNavigationViewController *navc = [[ATQBaseNavigationViewController alloc]initWithRootViewController:vc];
+        //    [self addChildViewController:navc];
+        navc.navigationItem.title = title;
+        [navc.rootVcAry addObject:class];
+        [_vcsArray addObject:navc];
+    }
+    else{
+        [_vcsArray addObject:vc];
+    }
+    
     return navc;
 }
 

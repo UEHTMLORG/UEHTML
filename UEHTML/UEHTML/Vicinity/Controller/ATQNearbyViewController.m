@@ -276,7 +276,7 @@
         CGSize size = cell.frame.size;
         cell.recpImg.layer.cornerRadius = size.width/2;
         cell.recpImg.layer.masksToBounds = YES;
-        NSLog(@"%@",NSStringFromCGSize(size));
+//        NSLog(@"%@",NSStringFromCGSize(size));
         return cell;
     }
 }

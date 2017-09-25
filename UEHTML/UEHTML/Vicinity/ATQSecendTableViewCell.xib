@@ -31,7 +31,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="096-pi-sha">
-                                <rect key="frame" x="251" y="5" width="51" height="31"/>
+                                <rect key="frame" x="261" y="5" width="51" height="31"/>
                                 <connections>
                                     <action selector="switchClick:" destination="KGk-i7-Jjw" eventType="valueChanged" id="Fft-AY-Id4"/>
                                 </connections>
@@ -54,7 +54,7 @@
                             <constraint firstAttribute="height" constant="40" id="xZM-54-4dG"/>
                             <constraint firstAttribute="trailing" secondItem="q0u-Py-hXE" secondAttribute="trailing" id="xeX-AE-Ba5"/>
                             <constraint firstItem="q0u-Py-hXE" firstAttribute="leading" secondItem="rGv-sO-sMT" secondAttribute="leading" id="yPV-AX-G52"/>
-                            <constraint firstAttribute="trailing" secondItem="096-pi-sha" secondAttribute="trailing" constant="20" id="zCF-aR-IiE"/>
+                            <constraint firstAttribute="trailing" secondItem="096-pi-sha" secondAttribute="trailing" constant="10" id="zCF-aR-IiE"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sIN-NT-TyG">

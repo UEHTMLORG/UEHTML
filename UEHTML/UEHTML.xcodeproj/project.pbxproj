@@ -59,6 +59,13 @@
 		40E0F25D1F78D0DD0074B064 /* ATQSZFourTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40E0F25B1F78D0DD0074B064 /* ATQSZFourTableViewCell.xib */; };
 		40E0F2611F78DC480074B064 /* ATQSZLoginOutTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E0F25F1F78DC480074B064 /* ATQSZLoginOutTableViewCell.m */; };
 		40E0F2621F78DC480074B064 /* ATQSZLoginOutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40E0F2601F78DC480074B064 /* ATQSZLoginOutTableViewCell.xib */; };
+		40E0F2661F78E5A40074B064 /* ATQCollectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E0F2641F78E5A40074B064 /* ATQCollectTableViewCell.m */; };
+		40E0F2671F78E5A40074B064 /* ATQCollectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40E0F2651F78E5A40074B064 /* ATQCollectTableViewCell.xib */; };
+		40E0F26A1F78FB290074B064 /* ATQMyAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E0F2691F78FB290074B064 /* ATQMyAlbumViewController.m */; };
+		40E0F26E1F78FE2B0074B064 /* ATQPhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E0F26C1F78FE2B0074B064 /* ATQPhotoTableViewCell.m */; };
+		40E0F26F1F78FE2B0074B064 /* ATQPhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40E0F26D1F78FE2B0074B064 /* ATQPhotoTableViewCell.xib */; };
+		40E0F2731F78FE480074B064 /* ATQPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E0F2711F78FE480074B064 /* ATQPhotoCollectionViewCell.m */; };
+		40E0F2741F78FE480074B064 /* ATQPhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40E0F2721F78FE480074B064 /* ATQPhotoCollectionViewCell.xib */; };
 		40E93DDA1F7768570018C3F5 /* ATQBFristTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E93DD81F7768570018C3F5 /* ATQBFristTableViewCell.m */; };
 		40E93DDB1F7768570018C3F5 /* ATQBFristTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40E93DD91F7768570018C3F5 /* ATQBFristTableViewCell.xib */; };
 		40E93DDF1F7775310018C3F5 /* ATQSecendTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E93DDD1F7775310018C3F5 /* ATQSecendTableViewCell.m */; };
@@ -207,6 +214,17 @@
 		40E0F25E1F78DC480074B064 /* ATQSZLoginOutTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQSZLoginOutTableViewCell.h; path = UEHTML/Me/Controller/ATQSZLoginOutTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		40E0F25F1F78DC480074B064 /* ATQSZLoginOutTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQSZLoginOutTableViewCell.m; path = UEHTML/Me/Controller/ATQSZLoginOutTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		40E0F2601F78DC480074B064 /* ATQSZLoginOutTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQSZLoginOutTableViewCell.xib; path = UEHTML/Me/Controller/ATQSZLoginOutTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40E0F2631F78E5A40074B064 /* ATQCollectTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQCollectTableViewCell.h; path = UEHTML/Me/Controller/ATQCollectTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40E0F2641F78E5A40074B064 /* ATQCollectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQCollectTableViewCell.m; path = UEHTML/Me/Controller/ATQCollectTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40E0F2651F78E5A40074B064 /* ATQCollectTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQCollectTableViewCell.xib; path = UEHTML/Me/Controller/ATQCollectTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40E0F2681F78FB290074B064 /* ATQMyAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQMyAlbumViewController.h; sourceTree = "<group>"; };
+		40E0F2691F78FB290074B064 /* ATQMyAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQMyAlbumViewController.m; sourceTree = "<group>"; };
+		40E0F26B1F78FE2B0074B064 /* ATQPhotoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQPhotoTableViewCell.h; path = UEHTML/Me/Controller/ATQPhotoTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40E0F26C1F78FE2B0074B064 /* ATQPhotoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQPhotoTableViewCell.m; path = UEHTML/Me/Controller/ATQPhotoTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40E0F26D1F78FE2B0074B064 /* ATQPhotoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQPhotoTableViewCell.xib; path = UEHTML/Me/Controller/ATQPhotoTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40E0F2701F78FE480074B064 /* ATQPhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQPhotoCollectionViewCell.h; path = UEHTML/Me/Controller/ATQPhotoCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
+		40E0F2711F78FE480074B064 /* ATQPhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQPhotoCollectionViewCell.m; path = UEHTML/Me/Controller/ATQPhotoCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
+		40E0F2721F78FE480074B064 /* ATQPhotoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQPhotoCollectionViewCell.xib; path = UEHTML/Me/Controller/ATQPhotoCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
 		40E93DD71F7768570018C3F5 /* ATQBFristTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQBFristTableViewCell.h; path = UEHTML/Vicinity/ATQBFristTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		40E93DD81F7768570018C3F5 /* ATQBFristTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQBFristTableViewCell.m; path = UEHTML/Vicinity/ATQBFristTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		40E93DD91F7768570018C3F5 /* ATQBFristTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQBFristTableViewCell.xib; path = UEHTML/Vicinity/ATQBFristTableViewCell.xib; sourceTree = SOURCE_ROOT; };
@@ -542,6 +560,8 @@
 				40E0F23E1F78AE9F0074B064 /* ATQVisitorViewController.m */,
 				40E0F2471F78C8F60074B064 /* ATQMyWechatViewController.h */,
 				40E0F2481F78C8F60074B064 /* ATQMyWechatViewController.m */,
+				40E0F2681F78FB290074B064 /* ATQMyAlbumViewController.h */,
+				40E0F2691F78FB290074B064 /* ATQMyAlbumViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -589,6 +609,15 @@
 				40E0F25E1F78DC480074B064 /* ATQSZLoginOutTableViewCell.h */,
 				40E0F25F1F78DC480074B064 /* ATQSZLoginOutTableViewCell.m */,
 				40E0F2601F78DC480074B064 /* ATQSZLoginOutTableViewCell.xib */,
+				40E0F2631F78E5A40074B064 /* ATQCollectTableViewCell.h */,
+				40E0F2641F78E5A40074B064 /* ATQCollectTableViewCell.m */,
+				40E0F2651F78E5A40074B064 /* ATQCollectTableViewCell.xib */,
+				40E0F26B1F78FE2B0074B064 /* ATQPhotoTableViewCell.h */,
+				40E0F26C1F78FE2B0074B064 /* ATQPhotoTableViewCell.m */,
+				40E0F26D1F78FE2B0074B064 /* ATQPhotoTableViewCell.xib */,
+				40E0F2701F78FE480074B064 /* ATQPhotoCollectionViewCell.h */,
+				40E0F2711F78FE480074B064 /* ATQPhotoCollectionViewCell.m */,
+				40E0F2721F78FE480074B064 /* ATQPhotoCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -868,6 +897,7 @@
 				4018F5AE1F500B4000D6C42D /* LaunchScreen.storyboard in Resources */,
 				40FA89F61F74A41C0059A208 /* ATQTitleTableViewCell.xib in Resources */,
 				40FA8A091F74E6E70059A208 /* ATQTagCollectionViewCell.xib in Resources */,
+				40E0F26F1F78FE2B0074B064 /* ATQPhotoTableViewCell.xib in Resources */,
 				40E061D41F76A6090072596D /* ATQMeHeadView.xib in Resources */,
 				40E93DEF1F77946E0018C3F5 /* ATQFristTableViewCell.xib in Resources */,
 				40F085AA1F74FE7200C5986C /* ATQRecPerCollectionViewCell.xib in Resources */,
@@ -875,8 +905,10 @@
 				40FA89FB1F74A61E0059A208 /* ATQItemTableViewCell.xib in Resources */,
 				40E93DDB1F7768570018C3F5 /* ATQBFristTableViewCell.xib in Resources */,
 				40E0F24E1F78D0400074B064 /* ATQSZFirTableViewCell.xib in Resources */,
+				40E0F2741F78FE480074B064 /* ATQPhotoCollectionViewCell.xib in Resources */,
 				40260D201F71FEF400ED8CF1 /* ATQPerfectInfoViewController.xib in Resources */,
 				40E93DE01F7775310018C3F5 /* ATQSecendTableViewCell.xib in Resources */,
+				40E0F2671F78E5A40074B064 /* ATQCollectTableViewCell.xib in Resources */,
 				40FA8A0E1F74E81E0059A208 /* ATQTagTableViewCell.xib in Resources */,
 				40875D691F6F9AE300B58609 /* ATQLoginViewController.xib in Resources */,
 				40E061C51F7695DF0072596D /* ATQHomeRecCollectionViewCell.xib in Resources */,
@@ -963,6 +995,7 @@
 				40E061D21F76A5EB0072596D /* ATQMeHeadView.m in Sources */,
 				40FA8A031F74CD7E0059A208 /* ATQNewPCollectionViewCell.m in Sources */,
 				40FA8A0D1F74E81E0059A208 /* ATQTagTableViewCell.m in Sources */,
+				40E0F2731F78FE480074B064 /* ATQPhotoCollectionViewCell.m in Sources */,
 				40E93DE91F7775630018C3F5 /* ATQFourTableViewCell.m in Sources */,
 				407F9BCB1F6633870043A87A /* UIView+LhkhExtension.m in Sources */,
 				407F9BDA1F6636630043A87A /* ATQMessageViewController.m in Sources */,
@@ -970,9 +1003,11 @@
 				188F843A1F739BD30037213D /* ComplainViewController.m in Sources */,
 				409E6D891F5003DA00E3BE49 /* AppDelegate.m in Sources */,
 				40E93DE41F7775490018C3F5 /* ATQThirdTableViewCell.m in Sources */,
+				40E0F26A1F78FB290074B064 /* ATQMyAlbumViewController.m in Sources */,
 				407F9BE01F6636A90043A87A /* ATQViewController.m in Sources */,
 				407F9BCA1F6633870043A87A /* UIImage+LhkhExtension.m in Sources */,
 				40E061C41F7695DF0072596D /* ATQHomeRecCollectionViewCell.m in Sources */,
+				40E0F2661F78E5A40074B064 /* ATQCollectTableViewCell.m in Sources */,
 				407F9BDD1F66367F0043A87A /* ATQPublishViewController.m in Sources */,
 				40E0F2361F78A1FA0074B064 /* ATQYajinRZViewController.m in Sources */,
 				40FEA5CA1F73B40000D6EB89 /* ATQNearbyViewController.m in Sources */,
@@ -983,6 +1018,7 @@
 				40FA8A111F74EB6A0059A208 /* XHHPageControl.m in Sources */,
 				40E93DEE1F77946E0018C3F5 /* ATQFristTableViewCell.m in Sources */,
 				40FA8A081F74E6E70059A208 /* ATQTagCollectionViewCell.m in Sources */,
+				40E0F26E1F78FE2B0074B064 /* ATQPhotoTableViewCell.m in Sources */,
 				40FEA5C61F73AB4E00D6EB89 /* ATQRenzhengViewController.m in Sources */,
 				40E0F24D1F78D0400074B064 /* ATQSZFirTableViewCell.m in Sources */,
 				40FA89F01F749F7D0059A208 /* ATQHomeCollectionViewCell.m in Sources */,

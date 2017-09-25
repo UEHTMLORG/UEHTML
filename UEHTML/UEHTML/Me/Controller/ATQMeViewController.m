@@ -23,6 +23,7 @@
 #import "ATQCollectViewController.h"
 #import "ATQVisitorViewController.h"
 #import "ATQMyWechatViewController.h"
+#import "ATQMyAlbumViewController.h"
 @interface ATQMeViewController ()<UITableViewDelegate,UITableViewDataSource>{
     BOOL isBusiness;
 }
@@ -95,7 +96,7 @@
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.mas_equalTo(self.view);
         make.top.mas_equalTo(self.view).offset(-20);
-        make.bottom.mas_equalTo(self.view).offset(-54);
+        make.bottom.mas_equalTo(self.view).offset(0);
     }];
     
 }
@@ -115,6 +116,7 @@
     }
 }
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    __weak typeof(self) weakself = self;
     static NSString * cellID = @"tableviewCellID";
     UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
     if (!cell) {
@@ -136,6 +138,8 @@
             };
             cell.vipmyalbumblock = ^{
                 NSLog(@"点击了我的相册");
+                ATQMyAlbumViewController *vc = [[ATQMyAlbumViewController alloc] init];
+                [weakself.navigationController pushViewController:vc animated:YES];
             };
             cell.vipspreadblock = ^{
                 NSLog(@"点击了推荐赚钱");

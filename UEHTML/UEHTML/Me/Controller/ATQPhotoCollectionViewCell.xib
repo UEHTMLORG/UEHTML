@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ATQPhotoCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nGI-oP-UFa">
+                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                        <color key="backgroundColor" red="0.92950195069999997" green="0.527502358" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="nGI-oP-UFa" secondAttribute="height" multiplier="1:1" id="cll-U0-wvX"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="nGI-oP-UFa" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="HJ2-IF-sTB"/>
+                <constraint firstAttribute="trailing" secondItem="nGI-oP-UFa" secondAttribute="trailing" id="PbX-mS-wsk"/>
+                <constraint firstItem="nGI-oP-UFa" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="WNU-5l-doC"/>
+                <constraint firstAttribute="bottom" secondItem="nGI-oP-UFa" secondAttribute="bottom" id="x4k-8U-AGo"/>
+            </constraints>
+        </collectionViewCell>
+    </objects>
+</document>

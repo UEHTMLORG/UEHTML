@@ -18,12 +18,16 @@
 #import "MJRefresh.h"
 #import "UIImageView+WebCache.h"
 #import "UIColor+LhkhColor.h"
-
-
+#import "ATQSetupViewController.h"
+#import "ATQYajinRZViewController.h"
+#import "ATQCollectViewController.h"
+#import "ATQVisitorViewController.h"
+#import "ATQMyWechatViewController.h"
 @interface ATQMeViewController ()<UITableViewDelegate,UITableViewDataSource>{
     BOOL isBusiness;
 }
 @property (nonatomic,strong)UITableView *tableView;
+@property (nonatomic,strong)ATQMeHeadView *headView;
 
 @end
 
@@ -31,14 +35,51 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    isBusiness = YES;
+    [self buildHeadView];
     [self setTableView];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
+
+-(void)buildHeadView{
+    _headView = ({
+        ATQMeHeadView *headView =[ATQMeHeadView meHeadView];
+        headView.frame = CGRectMake(0, 0, ScreenWidth, 185);
+        if (isBusiness == YES) {
+            headView.cView.hidden = YES;
+            headView.VIPView1.hidden = NO;
+            headView.VIPView2.hidden = NO;
+        }else{
+            headView.cView.hidden = NO;
+            headView.VIPView1.hidden = YES;
+            headView.VIPView2.hidden = YES;
+        }
+        __weak typeof(self) weakself = self;
+        headView.setupblock = ^{
+            ATQSetupViewController *vc = [[ATQSetupViewController alloc]init];
+            [weakself.navigationController pushViewController:vc animated:YES];
+        };
+        
+        headView;
+    });
 }
 
 -(void)setTableView{
     _tableView = ({
         UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectZero];
-        [tableView registerNib:[UINib nibWithNibName:@"ATQFristTableViewCell" bundle:nil] forCellReuseIdentifier:@"ATQBFristTableViewCell"];
-        [tableView registerNib:[UINib nibWithNibName:@"ATQFristTableViewCell" bundle:nil] forCellReuseIdentifier:@"ATQBFristTableViewCell"];
+        
+        [tableView registerNib:[UINib nibWithNibName:@"ATQBFristTableViewCell" bundle:nil] forCellReuseIdentifier:@"ATQBFristTableViewCell"];
+        [tableView registerNib:[UINib nibWithNibName:@"ATQFristTableViewCell" bundle:nil] forCellReuseIdentifier:@"ATQFristTableViewCell"];
+        
         [tableView registerNib:[UINib nibWithNibName:@"ATQSecendTableViewCell" bundle:nil] forCellReuseIdentifier:@"ATQSecendTableViewCell"];
         [tableView registerNib:[UINib nibWithNibName:@"ATQThirdTableViewCell" bundle:nil] forCellReuseIdentifier:@"ATQThirdTableViewCell"];
         [tableView registerNib:[UINib nibWithNibName:@"ATQFourTableViewCell" bundle:nil] forCellReuseIdentifier:@"ATQFourTableViewCell"];
@@ -49,13 +90,11 @@
         [self.view addSubview:tableView];
         tableView;
     });
-    ATQMeHeadView *headView = [[ATQMeHeadView alloc] init];
-    headView.backgroundColor = [UIColor yellowColor];
-    headView.frame = CGRectMake(0, 0, ScreenWidth, 165*ScreenWidth/375);
-    self.tableView.tableHeaderView = headView;
+    
+    self.tableView.tableHeaderView = _headView;
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.mas_equalTo(self.view);
-        make.top.mas_equalTo(self.view).offset(0);
+        make.top.mas_equalTo(self.view).offset(-20);
         make.bottom.mas_equalTo(self.view).offset(-54);
     }];
     
@@ -91,16 +130,17 @@
                 NSArray *array = [[NSBundle mainBundle]loadNibNamed: CellIdentifier owner:self options:nil];
                 cell = [array objectAtIndex:0];
             }
-            cell.myaccountblock = ^(){
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            cell.vipmyaccountblock = ^(){
                 NSLog(@"点击了我的账户");
             };
-            cell.myalbumblock = ^{
+            cell.vipmyalbumblock = ^{
                 NSLog(@"点击了我的相册");
             };
-            cell.spreadblock = ^{
+            cell.vipspreadblock = ^{
                 NSLog(@"点击了推荐赚钱");
             };
-            cell.mybusinessblock = ^{
+            cell.vipmybusinessblock = ^{
                 NSLog(@"点击了我是代理商");
             };
             return cell;
@@ -111,6 +151,16 @@
                 NSArray *array = [[NSBundle mainBundle]loadNibNamed: CellIdentifier owner:self options:nil];
                 cell = [array objectAtIndex:0];
             }
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            cell.myaccountblock = ^(){
+                NSLog(@"点击了我的账户");
+            };
+            cell.myalbumblock = ^{
+                NSLog(@"点击了我的相册");
+            };
+            cell.spreadblock = ^{
+                NSLog(@"点击了推荐赚钱");
+            };
             return cell;
         }
         
@@ -122,6 +172,7 @@
             NSArray *array = [[NSBundle mainBundle]loadNibNamed: CellIdentifier owner:self options:nil];
             cell = [array objectAtIndex:0];
         }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }else if (indexPath.section == 2){
         static NSString *CellIdentifier = @"ATQThirdTableViewCell" ;
@@ -130,6 +181,7 @@
             NSArray *array = [[NSBundle mainBundle]loadNibNamed: CellIdentifier owner:self options:nil];
             cell = [array objectAtIndex:0];
         }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         if (indexPath.row == 0) {
             cell.titleLab.text = @"微信号";
             cell.subtitleLab.text = @"设置真实的微信号可以赚钱";
@@ -145,6 +197,7 @@
             NSArray *array = [[NSBundle mainBundle]loadNibNamed: CellIdentifier owner:self options:nil];
             cell = [array objectAtIndex:0];
         }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         if (indexPath.row == 0) {
             cell.titleLab.text = @"最近来访";
         }else if (indexPath.row == 1){
@@ -156,6 +209,26 @@
     }
     return cell;
 
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 2) {
+        if (indexPath.row == 0) {
+            ATQMyWechatViewController *vc = [[ATQMyWechatViewController alloc]init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }else if (indexPath.row == 1) {
+            ATQYajinRZViewController *vc = [[ATQYajinRZViewController alloc]init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+    }else if (indexPath.section == 3){
+        if (indexPath.row == 0) {
+            ATQVisitorViewController *vc = [[ATQVisitorViewController alloc]init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }else if (indexPath.row == 2) {
+            ATQCollectViewController *vc = [[ATQCollectViewController alloc]init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+    }
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

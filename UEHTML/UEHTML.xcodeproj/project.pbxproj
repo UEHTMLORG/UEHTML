@@ -42,6 +42,23 @@
 		40E061C51F7695DF0072596D /* ATQHomeRecCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40E061C31F7695DF0072596D /* ATQHomeRecCollectionViewCell.xib */; };
 		40E061D21F76A5EB0072596D /* ATQMeHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E061D11F76A5EB0072596D /* ATQMeHeadView.m */; };
 		40E061D41F76A6090072596D /* ATQMeHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40E061D31F76A6090072596D /* ATQMeHeadView.xib */; };
+		40E0F2361F78A1FA0074B064 /* ATQYajinRZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E0F2351F78A1FA0074B064 /* ATQYajinRZViewController.m */; };
+		40E0F2391F78A2470074B064 /* ATQSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E0F2381F78A2470074B064 /* ATQSetupViewController.m */; };
+		40E0F23C1F78ABB60074B064 /* ATQCollectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E0F23B1F78ABB60074B064 /* ATQCollectViewController.m */; };
+		40E0F23F1F78AE9F0074B064 /* ATQVisitorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E0F23E1F78AE9F0074B064 /* ATQVisitorViewController.m */; };
+		40E0F2431F78B0660074B064 /* YAScrollSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E0F2421F78B0660074B064 /* YAScrollSegmentControl.m */; };
+		40E0F2461F78B1D60074B064 /* ZLCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E0F2451F78B1D60074B064 /* ZLCustomButton.m */; };
+		40E0F2491F78C8F60074B064 /* ATQMyWechatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E0F2481F78C8F60074B064 /* ATQMyWechatViewController.m */; };
+		40E0F24D1F78D0400074B064 /* ATQSZFirTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E0F24B1F78D0400074B064 /* ATQSZFirTableViewCell.m */; };
+		40E0F24E1F78D0400074B064 /* ATQSZFirTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40E0F24C1F78D0400074B064 /* ATQSZFirTableViewCell.xib */; };
+		40E0F2521F78D0870074B064 /* ATQSZSecTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E0F2501F78D0870074B064 /* ATQSZSecTableViewCell.m */; };
+		40E0F2531F78D0870074B064 /* ATQSZSecTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40E0F2511F78D0870074B064 /* ATQSZSecTableViewCell.xib */; };
+		40E0F2571F78D0BB0074B064 /* ATQSZThiTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E0F2551F78D0BB0074B064 /* ATQSZThiTableViewCell.m */; };
+		40E0F2581F78D0BB0074B064 /* ATQSZThiTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40E0F2561F78D0BB0074B064 /* ATQSZThiTableViewCell.xib */; };
+		40E0F25C1F78D0DD0074B064 /* ATQSZFourTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E0F25A1F78D0DD0074B064 /* ATQSZFourTableViewCell.m */; };
+		40E0F25D1F78D0DD0074B064 /* ATQSZFourTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40E0F25B1F78D0DD0074B064 /* ATQSZFourTableViewCell.xib */; };
+		40E0F2611F78DC480074B064 /* ATQSZLoginOutTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E0F25F1F78DC480074B064 /* ATQSZLoginOutTableViewCell.m */; };
+		40E0F2621F78DC480074B064 /* ATQSZLoginOutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40E0F2601F78DC480074B064 /* ATQSZLoginOutTableViewCell.xib */; };
 		40E93DDA1F7768570018C3F5 /* ATQBFristTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E93DD81F7768570018C3F5 /* ATQBFristTableViewCell.m */; };
 		40E93DDB1F7768570018C3F5 /* ATQBFristTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40E93DD91F7768570018C3F5 /* ATQBFristTableViewCell.xib */; };
 		40E93DDF1F7775310018C3F5 /* ATQSecendTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E93DDD1F7775310018C3F5 /* ATQSecendTableViewCell.m */; };
@@ -161,6 +178,35 @@
 		40E061D01F76A5EB0072596D /* ATQMeHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQMeHeadView.h; path = UEHTML/Vicinity/ATQMeHeadView.h; sourceTree = SOURCE_ROOT; };
 		40E061D11F76A5EB0072596D /* ATQMeHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQMeHeadView.m; path = UEHTML/Vicinity/ATQMeHeadView.m; sourceTree = SOURCE_ROOT; };
 		40E061D31F76A6090072596D /* ATQMeHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQMeHeadView.xib; path = UEHTML/Vicinity/ATQMeHeadView.xib; sourceTree = SOURCE_ROOT; };
+		40E0F2341F78A1FA0074B064 /* ATQYajinRZViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQYajinRZViewController.h; sourceTree = "<group>"; };
+		40E0F2351F78A1FA0074B064 /* ATQYajinRZViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQYajinRZViewController.m; sourceTree = "<group>"; };
+		40E0F2371F78A2470074B064 /* ATQSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQSetupViewController.h; sourceTree = "<group>"; };
+		40E0F2381F78A2470074B064 /* ATQSetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQSetupViewController.m; sourceTree = "<group>"; };
+		40E0F23A1F78ABB60074B064 /* ATQCollectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQCollectViewController.h; sourceTree = "<group>"; };
+		40E0F23B1F78ABB60074B064 /* ATQCollectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQCollectViewController.m; sourceTree = "<group>"; };
+		40E0F23D1F78AE9F0074B064 /* ATQVisitorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQVisitorViewController.h; sourceTree = "<group>"; };
+		40E0F23E1F78AE9F0074B064 /* ATQVisitorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQVisitorViewController.m; sourceTree = "<group>"; };
+		40E0F2411F78B0660074B064 /* YAScrollSegmentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAScrollSegmentControl.h; sourceTree = "<group>"; };
+		40E0F2421F78B0660074B064 /* YAScrollSegmentControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YAScrollSegmentControl.m; sourceTree = "<group>"; };
+		40E0F2441F78B1D60074B064 /* ZLCustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLCustomButton.h; sourceTree = "<group>"; };
+		40E0F2451F78B1D60074B064 /* ZLCustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLCustomButton.m; sourceTree = "<group>"; };
+		40E0F2471F78C8F60074B064 /* ATQMyWechatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQMyWechatViewController.h; sourceTree = "<group>"; };
+		40E0F2481F78C8F60074B064 /* ATQMyWechatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQMyWechatViewController.m; sourceTree = "<group>"; };
+		40E0F24A1F78D0400074B064 /* ATQSZFirTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQSZFirTableViewCell.h; path = UEHTML/Me/Controller/ATQSZFirTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40E0F24B1F78D0400074B064 /* ATQSZFirTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQSZFirTableViewCell.m; path = UEHTML/Me/Controller/ATQSZFirTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40E0F24C1F78D0400074B064 /* ATQSZFirTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQSZFirTableViewCell.xib; path = UEHTML/Me/Controller/ATQSZFirTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40E0F24F1F78D0870074B064 /* ATQSZSecTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQSZSecTableViewCell.h; path = UEHTML/Me/Controller/ATQSZSecTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40E0F2501F78D0870074B064 /* ATQSZSecTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQSZSecTableViewCell.m; path = UEHTML/Me/Controller/ATQSZSecTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40E0F2511F78D0870074B064 /* ATQSZSecTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQSZSecTableViewCell.xib; path = UEHTML/Me/Controller/ATQSZSecTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40E0F2541F78D0BB0074B064 /* ATQSZThiTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQSZThiTableViewCell.h; path = UEHTML/Me/Controller/ATQSZThiTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40E0F2551F78D0BB0074B064 /* ATQSZThiTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQSZThiTableViewCell.m; path = UEHTML/Me/Controller/ATQSZThiTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40E0F2561F78D0BB0074B064 /* ATQSZThiTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQSZThiTableViewCell.xib; path = UEHTML/Me/Controller/ATQSZThiTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40E0F2591F78D0DD0074B064 /* ATQSZFourTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQSZFourTableViewCell.h; path = UEHTML/Me/Controller/ATQSZFourTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40E0F25A1F78D0DD0074B064 /* ATQSZFourTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQSZFourTableViewCell.m; path = UEHTML/Me/Controller/ATQSZFourTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40E0F25B1F78D0DD0074B064 /* ATQSZFourTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQSZFourTableViewCell.xib; path = UEHTML/Me/Controller/ATQSZFourTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40E0F25E1F78DC480074B064 /* ATQSZLoginOutTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQSZLoginOutTableViewCell.h; path = UEHTML/Me/Controller/ATQSZLoginOutTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40E0F25F1F78DC480074B064 /* ATQSZLoginOutTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQSZLoginOutTableViewCell.m; path = UEHTML/Me/Controller/ATQSZLoginOutTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40E0F2601F78DC480074B064 /* ATQSZLoginOutTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQSZLoginOutTableViewCell.xib; path = UEHTML/Me/Controller/ATQSZLoginOutTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		40E93DD71F7768570018C3F5 /* ATQBFristTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQBFristTableViewCell.h; path = UEHTML/Vicinity/ATQBFristTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		40E93DD81F7768570018C3F5 /* ATQBFristTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQBFristTableViewCell.m; path = UEHTML/Vicinity/ATQBFristTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		40E93DD91F7768570018C3F5 /* ATQBFristTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQBFristTableViewCell.xib; path = UEHTML/Vicinity/ATQBFristTableViewCell.xib; sourceTree = SOURCE_ROOT; };
@@ -438,6 +484,7 @@
 		409E6DBB1F50081200E3BE49 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				40E0F2401F78B0660074B064 /* YAScrollSegmentControl */,
 				40FA89FC1F74B1A80059A208 /* LhkhHttpManager */,
 				40FEA5D11F73B53A00D6EB89 /* LhkhButton.h */,
 				40FEA5D21F73B53A00D6EB89 /* LhkhButton.m */,
@@ -485,6 +532,16 @@
 			children = (
 				407F9BE11F6636BF0043A87A /* ATQMeViewController.h */,
 				407F9BE21F6636BF0043A87A /* ATQMeViewController.m */,
+				40E0F2371F78A2470074B064 /* ATQSetupViewController.h */,
+				40E0F2381F78A2470074B064 /* ATQSetupViewController.m */,
+				40E0F2341F78A1FA0074B064 /* ATQYajinRZViewController.h */,
+				40E0F2351F78A1FA0074B064 /* ATQYajinRZViewController.m */,
+				40E0F23A1F78ABB60074B064 /* ATQCollectViewController.h */,
+				40E0F23B1F78ABB60074B064 /* ATQCollectViewController.m */,
+				40E0F23D1F78AE9F0074B064 /* ATQVisitorViewController.h */,
+				40E0F23E1F78AE9F0074B064 /* ATQVisitorViewController.m */,
+				40E0F2471F78C8F60074B064 /* ATQMyWechatViewController.h */,
+				40E0F2481F78C8F60074B064 /* ATQMyWechatViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -517,6 +574,21 @@
 				40E93DE61F7775630018C3F5 /* ATQFourTableViewCell.h */,
 				40E93DE71F7775630018C3F5 /* ATQFourTableViewCell.m */,
 				40E93DE81F7775630018C3F5 /* ATQFourTableViewCell.xib */,
+				40E0F24A1F78D0400074B064 /* ATQSZFirTableViewCell.h */,
+				40E0F24B1F78D0400074B064 /* ATQSZFirTableViewCell.m */,
+				40E0F24C1F78D0400074B064 /* ATQSZFirTableViewCell.xib */,
+				40E0F24F1F78D0870074B064 /* ATQSZSecTableViewCell.h */,
+				40E0F2501F78D0870074B064 /* ATQSZSecTableViewCell.m */,
+				40E0F2511F78D0870074B064 /* ATQSZSecTableViewCell.xib */,
+				40E0F2541F78D0BB0074B064 /* ATQSZThiTableViewCell.h */,
+				40E0F2551F78D0BB0074B064 /* ATQSZThiTableViewCell.m */,
+				40E0F2561F78D0BB0074B064 /* ATQSZThiTableViewCell.xib */,
+				40E0F2591F78D0DD0074B064 /* ATQSZFourTableViewCell.h */,
+				40E0F25A1F78D0DD0074B064 /* ATQSZFourTableViewCell.m */,
+				40E0F25B1F78D0DD0074B064 /* ATQSZFourTableViewCell.xib */,
+				40E0F25E1F78DC480074B064 /* ATQSZLoginOutTableViewCell.h */,
+				40E0F25F1F78DC480074B064 /* ATQSZLoginOutTableViewCell.m */,
+				40E0F2601F78DC480074B064 /* ATQSZLoginOutTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -626,6 +698,17 @@
 				40E061C31F7695DF0072596D /* ATQHomeRecCollectionViewCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		40E0F2401F78B0660074B064 /* YAScrollSegmentControl */ = {
+			isa = PBXGroup;
+			children = (
+				40E0F2441F78B1D60074B064 /* ZLCustomButton.h */,
+				40E0F2451F78B1D60074B064 /* ZLCustomButton.m */,
+				40E0F2411F78B0660074B064 /* YAScrollSegmentControl.h */,
+				40E0F2421F78B0660074B064 /* YAScrollSegmentControl.m */,
+			);
+			path = YAScrollSegmentControl;
 			sourceTree = "<group>";
 		};
 		40FA89FC1F74B1A80059A208 /* LhkhHttpManager */ = {
@@ -770,7 +853,10 @@
 				40FEA5C71F73AB4E00D6EB89 /* ATQRenzhengViewController.xib in Resources */,
 				40875D6E1F6F9B4500B58609 /* ATQRegisterViewController.xib in Resources */,
 				4018F5AF1F500B4000D6C42D /* Main.storyboard in Resources */,
+				40E0F2531F78D0870074B064 /* ATQSZSecTableViewCell.xib in Resources */,
+				40E0F2581F78D0BB0074B064 /* ATQSZThiTableViewCell.xib in Resources */,
 				407F9BE81F6647020043A87A /* TabBarConfigure.plist in Resources */,
+				40E0F2621F78DC480074B064 /* ATQSZLoginOutTableViewCell.xib in Resources */,
 				4018F5AD1F500B4000D6C42D /* Assets.xcassets in Resources */,
 				18BFFF561F53B863002144D5 /* Info.plist in Resources */,
 				40E93DE51F7775490018C3F5 /* ATQThirdTableViewCell.xib in Resources */,
@@ -778,6 +864,7 @@
 				40FEA5BD1F735BC900D6EB89 /* ATQBindPhoneViewController.xib in Resources */,
 				40FA89F11F749F7D0059A208 /* ATQHomeCollectionViewCell.xib in Resources */,
 				40F085A51F74FA1500C5986C /* ATQRecPerTableViewCell.xib in Resources */,
+				40E0F25D1F78D0DD0074B064 /* ATQSZFourTableViewCell.xib in Resources */,
 				4018F5AE1F500B4000D6C42D /* LaunchScreen.storyboard in Resources */,
 				40FA89F61F74A41C0059A208 /* ATQTitleTableViewCell.xib in Resources */,
 				40FA8A091F74E6E70059A208 /* ATQTagCollectionViewCell.xib in Resources */,
@@ -787,6 +874,7 @@
 				40E93DEA1F7775630018C3F5 /* ATQFourTableViewCell.xib in Resources */,
 				40FA89FB1F74A61E0059A208 /* ATQItemTableViewCell.xib in Resources */,
 				40E93DDB1F7768570018C3F5 /* ATQBFristTableViewCell.xib in Resources */,
+				40E0F24E1F78D0400074B064 /* ATQSZFirTableViewCell.xib in Resources */,
 				40260D201F71FEF400ED8CF1 /* ATQPerfectInfoViewController.xib in Resources */,
 				40E93DE01F7775310018C3F5 /* ATQSecendTableViewCell.xib in Resources */,
 				40FA8A0E1F74E81E0059A208 /* ATQTagTableViewCell.xib in Resources */,
@@ -865,6 +953,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40E0F23F1F78AE9F0074B064 /* ATQVisitorViewController.m in Sources */,
 				40E061C01F7689100072596D /* ATQItemTableViewCell.m in Sources */,
 				4018F5B11F500B4000D6C42D /* ViewController.m in Sources */,
 				40E93DDA1F7768570018C3F5 /* ATQBFristTableViewCell.m in Sources */,
@@ -885,27 +974,38 @@
 				407F9BCA1F6633870043A87A /* UIImage+LhkhExtension.m in Sources */,
 				40E061C41F7695DF0072596D /* ATQHomeRecCollectionViewCell.m in Sources */,
 				407F9BDD1F66367F0043A87A /* ATQPublishViewController.m in Sources */,
+				40E0F2361F78A1FA0074B064 /* ATQYajinRZViewController.m in Sources */,
 				40FEA5CA1F73B40000D6EB89 /* ATQNearbyViewController.m in Sources */,
 				407F9BD71F66364C0043A87A /* ATQVicintyViewController.m in Sources */,
+				40E0F2461F78B1D60074B064 /* ZLCustomButton.m in Sources */,
 				407F9BD41F6634D30043A87A /* ATQBaseTabBarViewController.m in Sources */,
 				407F9BD11F6634A70043A87A /* ATQBaseNavigationViewController.m in Sources */,
 				40FA8A111F74EB6A0059A208 /* XHHPageControl.m in Sources */,
 				40E93DEE1F77946E0018C3F5 /* ATQFristTableViewCell.m in Sources */,
 				40FA8A081F74E6E70059A208 /* ATQTagCollectionViewCell.m in Sources */,
 				40FEA5C61F73AB4E00D6EB89 /* ATQRenzhengViewController.m in Sources */,
+				40E0F24D1F78D0400074B064 /* ATQSZFirTableViewCell.m in Sources */,
 				40FA89F01F749F7D0059A208 /* ATQHomeCollectionViewCell.m in Sources */,
+				40E0F2491F78C8F60074B064 /* ATQMyWechatViewController.m in Sources */,
 				40FEA5CD1F73B41E00D6EB89 /* ATQRecommendViewController.m in Sources */,
 				40260D1F1F71FEF400ED8CF1 /* ATQPerfectInfoViewController.m in Sources */,
+				40E0F25C1F78D0DD0074B064 /* ATQSZFourTableViewCell.m in Sources */,
 				407F9BE61F663A230043A87A /* LhkhTabBar.m in Sources */,
 				407F9BC91F6633870043A87A /* UIColor+LhkhColor.m in Sources */,
 				40FEA5D31F73B53A00D6EB89 /* LhkhButton.m in Sources */,
 				407F9BE31F6636BF0043A87A /* ATQMeViewController.m in Sources */,
 				40FEA5D01F73B46700D6EB89 /* ATQVideoChatViewController.m in Sources */,
+				40E0F2391F78A2470074B064 /* ATQSetupViewController.m in Sources */,
 				40F085A41F74FA1400C5986C /* ATQRecPerTableViewCell.m in Sources */,
 				40875D6D1F6F9B4500B58609 /* ATQRegisterViewController.m in Sources */,
 				40FA89F51F74A41C0059A208 /* ATQTitleTableViewCell.m in Sources */,
+				40E0F23C1F78ABB60074B064 /* ATQCollectViewController.m in Sources */,
+				40E0F2521F78D0870074B064 /* ATQSZSecTableViewCell.m in Sources */,
+				40E0F2431F78B0660074B064 /* YAScrollSegmentControl.m in Sources */,
 				407F9BCE1F6634360043A87A /* ATQBaseViewController.m in Sources */,
+				40E0F2571F78D0BB0074B064 /* ATQSZThiTableViewCell.m in Sources */,
 				40F085A91F74FE7200C5986C /* ATQRecPerCollectionViewCell.m in Sources */,
+				40E0F2611F78DC480074B064 /* ATQSZLoginOutTableViewCell.m in Sources */,
 				409E6D861F5003DA00E3BE49 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

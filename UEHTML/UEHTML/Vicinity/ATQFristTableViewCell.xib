@@ -27,6 +27,9 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8t-LS-u50">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <connections>
+                                            <action selector="accounClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="TYL-fm-W5b"/>
+                                        </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DCu-A4-rLH">
                                         <rect key="frame" x="20" y="10" width="40" height="40"/>
@@ -68,6 +71,9 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCS-dn-oUV">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <connections>
+                                            <action selector="albumClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="GXn-JU-9xK"/>
+                                        </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KsM-ag-isq">
                                         <rect key="frame" x="20" y="10" width="40" height="40"/>
@@ -109,6 +115,9 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOt-hn-tt4">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <connections>
+                                            <action selector="spreadClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="j3w-Ck-Ed8"/>
+                                        </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6p4-mW-ZcS">
                                         <rect key="frame" x="20" y="10" width="40" height="40"/>

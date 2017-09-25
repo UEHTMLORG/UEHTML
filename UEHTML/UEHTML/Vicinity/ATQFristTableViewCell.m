@@ -14,6 +14,21 @@
     [super awakeFromNib];
     // Initialization code
 }
+- (IBAction)accounClick:(id)sender {
+    if (_myaccountblock) {
+        _myaccountblock();
+    }
+}
+- (IBAction)albumClick:(id)sender {
+    if (_myalbumblock) {
+        _myalbumblock();
+    }
+}
+- (IBAction)spreadClick:(id)sender {
+    if (_spreadblock) {
+        _spreadblock();
+    }
+}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

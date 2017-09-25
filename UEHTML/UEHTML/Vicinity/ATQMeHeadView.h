@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
+typedef void (^setupBlock)();
 @interface ATQMeHeadView : UIView
-
+@property (weak, nonatomic) IBOutlet UIImageView *headImg;
+@property (weak, nonatomic) IBOutlet UILabel *nameLab;
+@property (weak, nonatomic) IBOutlet UIView *VIPView1;
+@property (weak, nonatomic) IBOutlet UIView *VIPView2;
+@property (weak, nonatomic) IBOutlet UIView *cView;
+@property (copy, nonatomic)setupBlock setupblock;
++ (ATQMeHeadView *)meHeadView;
 @end

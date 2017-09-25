@@ -7,14 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-typedef void(^myAccountBlock)();
-typedef void(^myAlbumBlock)();
-typedef void(^spreadBlock)();
-typedef void(^myBusinessBlock)();
+typedef void(^vipmyAccountBlock)();
+typedef void(^vipmyAlbumBlock)();
+typedef void(^vipspreadBlock)();
+typedef void(^vipmyBusinessBlock)();
 @interface ATQBFristTableViewCell : UITableViewCell
-@property(copy,nonatomic)myAccountBlock myaccountblock;
-@property(copy,nonatomic)myAlbumBlock myalbumblock;
-@property(copy,nonatomic)spreadBlock spreadblock;
-@property(copy,nonatomic)myBusinessBlock mybusinessblock;
+@property(copy,nonatomic)vipmyAccountBlock vipmyaccountblock;
+@property(copy,nonatomic)vipmyAlbumBlock vipmyalbumblock;
+@property(copy,nonatomic)vipspreadBlock vipspreadblock;
+@property(copy,nonatomic)vipmyBusinessBlock vipmybusinessblock;
 
 @end

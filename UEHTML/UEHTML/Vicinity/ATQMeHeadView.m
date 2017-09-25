@@ -17,5 +17,14 @@
     // Drawing code
 }
 */
+- (IBAction)setupClick:(id)sender {
+    if (_setupblock) {
+        _setupblock();
+    }
+}
+
++ (ATQMeHeadView *)meHeadView{
+    return [[[NSBundle mainBundle]loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil]firstObject];
+}
 
 @end

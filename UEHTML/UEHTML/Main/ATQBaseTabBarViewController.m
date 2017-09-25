@@ -86,6 +86,11 @@
         navc.navigationItem.title = title;
         [navc.rootVcAry addObject:class];
         [_vcsArray addObject:navc];
+    }else if ([vc isKindOfClass:[ATQMeViewController class]]){
+        ATQBaseNavigationViewController *navc = [[ATQBaseNavigationViewController alloc]initWithRootViewController:vc];
+        navc.navigationItem.title = title;
+        [navc.rootVcAry addObject:class];
+        [_vcsArray addObject:navc];
     }
     else{
         [_vcsArray addObject:vc];

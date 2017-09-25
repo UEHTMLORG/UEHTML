@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+typedef void(^myAccountBlock)();
+typedef void(^myAlbumBlock)();
+typedef void(^spreadBlock)();
 @interface ATQFristTableViewCell : UITableViewCell
-
+@property(copy,nonatomic)myAccountBlock myaccountblock;
+@property(copy,nonatomic)myAlbumBlock myalbumblock;
+@property(copy,nonatomic)spreadBlock spreadblock;
 @end

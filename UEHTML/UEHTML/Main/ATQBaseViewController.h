@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ATQBaseViewController : UIViewController
-
+-(void)transformView:(UIViewController *)Vc;
 @end

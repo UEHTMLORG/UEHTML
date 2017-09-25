@@ -7,6 +7,8 @@
 //
 
 #import "ATQBaseViewController.h"
+#import "ATQBaseNavigationViewController.h"
+#import "AppDelegate.h"
 
 @interface ATQBaseViewController ()
 
@@ -17,6 +19,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+
+-(void)transformView:(UIViewController *)Vc{
+    
+    ATQBaseNavigationViewController *BaseNavigationViewController = [[ATQBaseNavigationViewController  alloc] initWithRootViewController:Vc];
+    UIViewController *rootViewController = ((AppDelegate *)[UIApplication sharedApplication].delegate).window.rootViewController;
+    [rootViewController addChildViewController:BaseNavigationViewController];
+    [rootViewController.view addSubview:BaseNavigationViewController.view];
 }
 
 - (void)didReceiveMemoryWarning {

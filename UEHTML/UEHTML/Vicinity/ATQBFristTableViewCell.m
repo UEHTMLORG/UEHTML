@@ -15,23 +15,23 @@
     // Initialization code
 }
 - (IBAction)accountClick:(id)sender {
-    if (_myaccountblock) {
-        _myaccountblock();
+    if (_vipmyaccountblock) {
+        _vipmyaccountblock();
     }
 }
 - (IBAction)albumClick:(id)sender {
-    if (_myalbumblock) {
-        _myalbumblock();
+    if (_vipmyalbumblock) {
+        _vipmyalbumblock();
     }
 }
 - (IBAction)spreadClick:(id)sender {
-    if (_spreadblock) {
-        _spreadblock();
+    if (_vipspreadblock) {
+        _vipspreadblock();
     }
 }
 - (IBAction)businessClick:(id)sender {
-    if (_mybusinessblock) {
-        _mybusinessblock();
+    if (_vipmybusinessblock) {
+        _vipmybusinessblock();
     }
 }
 

@@ -16,6 +16,8 @@
 		4018F5B11F500B4000D6C42D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4018F5AC1F500B4000D6C42D /* ViewController.m */; };
 		40260D1F1F71FEF400ED8CF1 /* ATQPerfectInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260D1D1F71FEF400ED8CF1 /* ATQPerfectInfoViewController.m */; };
 		40260D201F71FEF400ED8CF1 /* ATQPerfectInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40260D1E1F71FEF400ED8CF1 /* ATQPerfectInfoViewController.xib */; };
+		4027D80F1F79409900B45C8E /* ATQVisitorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4027D80D1F79409900B45C8E /* ATQVisitorTableViewCell.m */; };
+		4027D8101F79409900B45C8E /* ATQVisitorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4027D80E1F79409900B45C8E /* ATQVisitorTableViewCell.xib */; };
 		407F9BC91F6633870043A87A /* UIColor+LhkhColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 407F9BC41F6633870043A87A /* UIColor+LhkhColor.m */; };
 		407F9BCA1F6633870043A87A /* UIImage+LhkhExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 407F9BC61F6633870043A87A /* UIImage+LhkhExtension.m */; };
 		407F9BCB1F6633870043A87A /* UIView+LhkhExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 407F9BC81F6633870043A87A /* UIView+LhkhExtension.m */; };
@@ -136,6 +138,9 @@
 		40260D1C1F71FEF400ED8CF1 /* ATQPerfectInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQPerfectInfoViewController.h; sourceTree = "<group>"; };
 		40260D1D1F71FEF400ED8CF1 /* ATQPerfectInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQPerfectInfoViewController.m; sourceTree = "<group>"; };
 		40260D1E1F71FEF400ED8CF1 /* ATQPerfectInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATQPerfectInfoViewController.xib; sourceTree = "<group>"; };
+		4027D80C1F79409900B45C8E /* ATQVisitorTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQVisitorTableViewCell.h; path = UEHTML/Me/Controller/ATQVisitorTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		4027D80D1F79409900B45C8E /* ATQVisitorTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQVisitorTableViewCell.m; path = UEHTML/Me/Controller/ATQVisitorTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		4027D80E1F79409900B45C8E /* ATQVisitorTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQVisitorTableViewCell.xib; path = UEHTML/Me/Controller/ATQVisitorTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		407F9BC31F6633870043A87A /* UIColor+LhkhColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+LhkhColor.h"; sourceTree = "<group>"; };
 		407F9BC41F6633870043A87A /* UIColor+LhkhColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+LhkhColor.m"; sourceTree = "<group>"; };
 		407F9BC51F6633870043A87A /* UIImage+LhkhExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LhkhExtension.h"; sourceTree = "<group>"; };
@@ -618,6 +623,9 @@
 				40E0F2701F78FE480074B064 /* ATQPhotoCollectionViewCell.h */,
 				40E0F2711F78FE480074B064 /* ATQPhotoCollectionViewCell.m */,
 				40E0F2721F78FE480074B064 /* ATQPhotoCollectionViewCell.xib */,
+				4027D80C1F79409900B45C8E /* ATQVisitorTableViewCell.h */,
+				4027D80D1F79409900B45C8E /* ATQVisitorTableViewCell.m */,
+				4027D80E1F79409900B45C8E /* ATQVisitorTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -887,6 +895,7 @@
 				407F9BE81F6647020043A87A /* TabBarConfigure.plist in Resources */,
 				40E0F2621F78DC480074B064 /* ATQSZLoginOutTableViewCell.xib in Resources */,
 				4018F5AD1F500B4000D6C42D /* Assets.xcassets in Resources */,
+				4027D8101F79409900B45C8E /* ATQVisitorTableViewCell.xib in Resources */,
 				18BFFF561F53B863002144D5 /* Info.plist in Resources */,
 				40E93DE51F7775490018C3F5 /* ATQThirdTableViewCell.xib in Resources */,
 				188F843B1F739BD30037213D /* ComplainViewController.xib in Resources */,
@@ -1021,6 +1030,7 @@
 				40E0F26E1F78FE2B0074B064 /* ATQPhotoTableViewCell.m in Sources */,
 				40FEA5C61F73AB4E00D6EB89 /* ATQRenzhengViewController.m in Sources */,
 				40E0F24D1F78D0400074B064 /* ATQSZFirTableViewCell.m in Sources */,
+				4027D80F1F79409900B45C8E /* ATQVisitorTableViewCell.m in Sources */,
 				40FA89F01F749F7D0059A208 /* ATQHomeCollectionViewCell.m in Sources */,
 				40E0F2491F78C8F60074B064 /* ATQMyWechatViewController.m in Sources */,
 				40FEA5CD1F73B41E00D6EB89 /* ATQRecommendViewController.m in Sources */,

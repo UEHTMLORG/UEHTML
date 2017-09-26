@@ -88,6 +88,9 @@
 		40F9F22A1F7A30BE00F5A42B /* ATQWechatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40F9F2281F7A30BD00F5A42B /* ATQWechatTableViewCell.xib */; };
 		40F9F22E1F7A32C000F5A42B /* ATQAWechatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F9F22C1F7A32C000F5A42B /* ATQAWechatTableViewCell.m */; };
 		40F9F22F1F7A32C000F5A42B /* ATQAWechatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40F9F22D1F7A32C000F5A42B /* ATQAWechatTableViewCell.xib */; };
+		40F9F2331F7A3E6E00F5A42B /* ATQSetupSecrityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F9F2311F7A3E6E00F5A42B /* ATQSetupSecrityViewController.m */; };
+		40F9F2341F7A3E6E00F5A42B /* ATQSetupSecrityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40F9F2321F7A3E6E00F5A42B /* ATQSetupSecrityViewController.xib */; };
+		40F9F23A1F7A4BCD00F5A42B /* ATQSecretView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F9F2391F7A4BCD00F5A42B /* ATQSecretView.m */; };
 		40FA89F01F749F7D0059A208 /* ATQHomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FA89EE1F749F7D0059A208 /* ATQHomeCollectionViewCell.m */; };
 		40FA89F11F749F7D0059A208 /* ATQHomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40FA89EF1F749F7D0059A208 /* ATQHomeCollectionViewCell.xib */; };
 		40FA89F51F74A41C0059A208 /* ATQTitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FA89F31F74A41C0059A208 /* ATQTitleTableViewCell.m */; };
@@ -266,6 +269,11 @@
 		40F9F22B1F7A32C000F5A42B /* ATQAWechatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQAWechatTableViewCell.h; path = UEHTML/Me/Controller/ATQAWechatTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		40F9F22C1F7A32C000F5A42B /* ATQAWechatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQAWechatTableViewCell.m; path = UEHTML/Me/Controller/ATQAWechatTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		40F9F22D1F7A32C000F5A42B /* ATQAWechatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQAWechatTableViewCell.xib; path = UEHTML/Me/Controller/ATQAWechatTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40F9F2301F7A3E6E00F5A42B /* ATQSetupSecrityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQSetupSecrityViewController.h; sourceTree = "<group>"; };
+		40F9F2311F7A3E6E00F5A42B /* ATQSetupSecrityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQSetupSecrityViewController.m; sourceTree = "<group>"; };
+		40F9F2321F7A3E6E00F5A42B /* ATQSetupSecrityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATQSetupSecrityViewController.xib; sourceTree = "<group>"; };
+		40F9F2381F7A4BCD00F5A42B /* ATQSecretView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQSecretView.h; path = UEHTML/Commons/ATQSecretView.h; sourceTree = SOURCE_ROOT; };
+		40F9F2391F7A4BCD00F5A42B /* ATQSecretView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQSecretView.m; path = UEHTML/Commons/ATQSecretView.m; sourceTree = SOURCE_ROOT; };
 		40FA89ED1F749F7D0059A208 /* ATQHomeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQHomeCollectionViewCell.h; path = UEHTML/Vicinity/Controller/ATQHomeCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
 		40FA89EE1F749F7D0059A208 /* ATQHomeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQHomeCollectionViewCell.m; path = UEHTML/Vicinity/Controller/ATQHomeCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
 		40FA89EF1F749F7D0059A208 /* ATQHomeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQHomeCollectionViewCell.xib; path = UEHTML/Vicinity/Controller/ATQHomeCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
@@ -582,6 +590,9 @@
 				40E0F2481F78C8F60074B064 /* ATQMyWechatViewController.m */,
 				40E0F2681F78FB290074B064 /* ATQMyAlbumViewController.h */,
 				40E0F2691F78FB290074B064 /* ATQMyAlbumViewController.m */,
+				40F9F2301F7A3E6E00F5A42B /* ATQSetupSecrityViewController.h */,
+				40F9F2311F7A3E6E00F5A42B /* ATQSetupSecrityViewController.m */,
+				40F9F2321F7A3E6E00F5A42B /* ATQSetupSecrityViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -650,6 +661,8 @@
 				40F9F22B1F7A32C000F5A42B /* ATQAWechatTableViewCell.h */,
 				40F9F22C1F7A32C000F5A42B /* ATQAWechatTableViewCell.m */,
 				40F9F22D1F7A32C000F5A42B /* ATQAWechatTableViewCell.xib */,
+				40F9F2381F7A4BCD00F5A42B /* ATQSecretView.h */,
+				40F9F2391F7A4BCD00F5A42B /* ATQSecretView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -932,6 +945,7 @@
 				40FA8A091F74E6E70059A208 /* ATQTagCollectionViewCell.xib in Resources */,
 				40E0F26F1F78FE2B0074B064 /* ATQPhotoTableViewCell.xib in Resources */,
 				40F9F22F1F7A32C000F5A42B /* ATQAWechatTableViewCell.xib in Resources */,
+				40F9F2341F7A3E6E00F5A42B /* ATQSetupSecrityViewController.xib in Resources */,
 				40E061D41F76A6090072596D /* ATQMeHeadView.xib in Resources */,
 				40E93DEF1F77946E0018C3F5 /* ATQFristTableViewCell.xib in Resources */,
 				40F085AA1F74FE7200C5986C /* ATQRecPerCollectionViewCell.xib in Resources */,
@@ -1035,8 +1049,10 @@
 				40E0F2731F78FE480074B064 /* ATQPhotoCollectionViewCell.m in Sources */,
 				40E93DE91F7775630018C3F5 /* ATQFourTableViewCell.m in Sources */,
 				407F9BCB1F6633870043A87A /* UIView+LhkhExtension.m in Sources */,
+				40F9F2331F7A3E6E00F5A42B /* ATQSetupSecrityViewController.m in Sources */,
 				407F9BDA1F6636630043A87A /* ATQMessageViewController.m in Sources */,
 				40FEA5BC1F735BC900D6EB89 /* ATQBindPhoneViewController.m in Sources */,
+				40F9F23A1F7A4BCD00F5A42B /* ATQSecretView.m in Sources */,
 				188F843A1F739BD30037213D /* ComplainViewController.m in Sources */,
 				409E6D891F5003DA00E3BE49 /* AppDelegate.m in Sources */,
 				40E93DE41F7775490018C3F5 /* ATQThirdTableViewCell.m in Sources */,

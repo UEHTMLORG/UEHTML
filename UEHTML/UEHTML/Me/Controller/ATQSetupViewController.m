@@ -17,6 +17,7 @@
 #import "MJRefresh.h"
 #import "UIImageView+WebCache.h"
 #import "UIColor+LhkhColor.h"
+#import "ATQSetupSecrityViewController.h"
 @interface ATQSetupViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITableView *tableView;
 
@@ -163,7 +164,12 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    if (indexPath.section == 1) {
+        if (indexPath.row == 0) {
+            ATQSetupSecrityViewController *vc = [[ATQSetupSecrityViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+    }
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

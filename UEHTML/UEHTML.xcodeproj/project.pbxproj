@@ -18,6 +18,8 @@
 		40260D201F71FEF400ED8CF1 /* ATQPerfectInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40260D1E1F71FEF400ED8CF1 /* ATQPerfectInfoViewController.xib */; };
 		4027D80F1F79409900B45C8E /* ATQVisitorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4027D80D1F79409900B45C8E /* ATQVisitorTableViewCell.m */; };
 		4027D8101F79409900B45C8E /* ATQVisitorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4027D80E1F79409900B45C8E /* ATQVisitorTableViewCell.xib */; };
+		4067ECFF1F79F58F0051173D /* ATQWechatView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4067ECFE1F79F58F0051173D /* ATQWechatView.m */; };
+		4067ED011F79F5AB0051173D /* ATQWechatView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4067ED001F79F5AB0051173D /* ATQWechatView.xib */; };
 		407F9BC91F6633870043A87A /* UIColor+LhkhColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 407F9BC41F6633870043A87A /* UIColor+LhkhColor.m */; };
 		407F9BCA1F6633870043A87A /* UIImage+LhkhExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 407F9BC61F6633870043A87A /* UIImage+LhkhExtension.m */; };
 		407F9BCB1F6633870043A87A /* UIView+LhkhExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 407F9BC81F6633870043A87A /* UIView+LhkhExtension.m */; };
@@ -82,6 +84,10 @@
 		40F085A51F74FA1500C5986C /* ATQRecPerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40F085A31F74FA1400C5986C /* ATQRecPerTableViewCell.xib */; };
 		40F085A91F74FE7200C5986C /* ATQRecPerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F085A71F74FE7200C5986C /* ATQRecPerCollectionViewCell.m */; };
 		40F085AA1F74FE7200C5986C /* ATQRecPerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40F085A81F74FE7200C5986C /* ATQRecPerCollectionViewCell.xib */; };
+		40F9F2291F7A30BD00F5A42B /* ATQWechatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F9F2271F7A30BD00F5A42B /* ATQWechatTableViewCell.m */; };
+		40F9F22A1F7A30BE00F5A42B /* ATQWechatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40F9F2281F7A30BD00F5A42B /* ATQWechatTableViewCell.xib */; };
+		40F9F22E1F7A32C000F5A42B /* ATQAWechatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F9F22C1F7A32C000F5A42B /* ATQAWechatTableViewCell.m */; };
+		40F9F22F1F7A32C000F5A42B /* ATQAWechatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40F9F22D1F7A32C000F5A42B /* ATQAWechatTableViewCell.xib */; };
 		40FA89F01F749F7D0059A208 /* ATQHomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FA89EE1F749F7D0059A208 /* ATQHomeCollectionViewCell.m */; };
 		40FA89F11F749F7D0059A208 /* ATQHomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40FA89EF1F749F7D0059A208 /* ATQHomeCollectionViewCell.xib */; };
 		40FA89F51F74A41C0059A208 /* ATQTitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FA89F31F74A41C0059A208 /* ATQTitleTableViewCell.m */; };
@@ -141,6 +147,9 @@
 		4027D80C1F79409900B45C8E /* ATQVisitorTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQVisitorTableViewCell.h; path = UEHTML/Me/Controller/ATQVisitorTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		4027D80D1F79409900B45C8E /* ATQVisitorTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQVisitorTableViewCell.m; path = UEHTML/Me/Controller/ATQVisitorTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		4027D80E1F79409900B45C8E /* ATQVisitorTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQVisitorTableViewCell.xib; path = UEHTML/Me/Controller/ATQVisitorTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		4067ECFD1F79F58F0051173D /* ATQWechatView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQWechatView.h; path = UEHTML/Me/Controller/ATQWechatView.h; sourceTree = SOURCE_ROOT; };
+		4067ECFE1F79F58F0051173D /* ATQWechatView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQWechatView.m; path = UEHTML/Me/Controller/ATQWechatView.m; sourceTree = SOURCE_ROOT; };
+		4067ED001F79F5AB0051173D /* ATQWechatView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQWechatView.xib; path = UEHTML/Me/Controller/ATQWechatView.xib; sourceTree = SOURCE_ROOT; };
 		407F9BC31F6633870043A87A /* UIColor+LhkhColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+LhkhColor.h"; sourceTree = "<group>"; };
 		407F9BC41F6633870043A87A /* UIColor+LhkhColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+LhkhColor.m"; sourceTree = "<group>"; };
 		407F9BC51F6633870043A87A /* UIImage+LhkhExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LhkhExtension.h"; sourceTree = "<group>"; };
@@ -251,6 +260,12 @@
 		40F085A61F74FE7200C5986C /* ATQRecPerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQRecPerCollectionViewCell.h; path = UEHTML/Vicinity/ATQRecPerCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
 		40F085A71F74FE7200C5986C /* ATQRecPerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQRecPerCollectionViewCell.m; path = UEHTML/Vicinity/ATQRecPerCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
 		40F085A81F74FE7200C5986C /* ATQRecPerCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQRecPerCollectionViewCell.xib; path = UEHTML/Vicinity/ATQRecPerCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40F9F2261F7A30BD00F5A42B /* ATQWechatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQWechatTableViewCell.h; path = UEHTML/Me/Controller/ATQWechatTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40F9F2271F7A30BD00F5A42B /* ATQWechatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQWechatTableViewCell.m; path = UEHTML/Me/Controller/ATQWechatTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40F9F2281F7A30BD00F5A42B /* ATQWechatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQWechatTableViewCell.xib; path = UEHTML/Me/Controller/ATQWechatTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40F9F22B1F7A32C000F5A42B /* ATQAWechatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQAWechatTableViewCell.h; path = UEHTML/Me/Controller/ATQAWechatTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40F9F22C1F7A32C000F5A42B /* ATQAWechatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQAWechatTableViewCell.m; path = UEHTML/Me/Controller/ATQAWechatTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40F9F22D1F7A32C000F5A42B /* ATQAWechatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQAWechatTableViewCell.xib; path = UEHTML/Me/Controller/ATQAWechatTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		40FA89ED1F749F7D0059A208 /* ATQHomeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQHomeCollectionViewCell.h; path = UEHTML/Vicinity/Controller/ATQHomeCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
 		40FA89EE1F749F7D0059A208 /* ATQHomeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQHomeCollectionViewCell.m; path = UEHTML/Vicinity/Controller/ATQHomeCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
 		40FA89EF1F749F7D0059A208 /* ATQHomeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQHomeCollectionViewCell.xib; path = UEHTML/Vicinity/Controller/ATQHomeCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
@@ -626,6 +641,15 @@
 				4027D80C1F79409900B45C8E /* ATQVisitorTableViewCell.h */,
 				4027D80D1F79409900B45C8E /* ATQVisitorTableViewCell.m */,
 				4027D80E1F79409900B45C8E /* ATQVisitorTableViewCell.xib */,
+				4067ECFD1F79F58F0051173D /* ATQWechatView.h */,
+				4067ECFE1F79F58F0051173D /* ATQWechatView.m */,
+				4067ED001F79F5AB0051173D /* ATQWechatView.xib */,
+				40F9F2261F7A30BD00F5A42B /* ATQWechatTableViewCell.h */,
+				40F9F2271F7A30BD00F5A42B /* ATQWechatTableViewCell.m */,
+				40F9F2281F7A30BD00F5A42B /* ATQWechatTableViewCell.xib */,
+				40F9F22B1F7A32C000F5A42B /* ATQAWechatTableViewCell.h */,
+				40F9F22C1F7A32C000F5A42B /* ATQAWechatTableViewCell.m */,
+				40F9F22D1F7A32C000F5A42B /* ATQAWechatTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -907,9 +931,11 @@
 				40FA89F61F74A41C0059A208 /* ATQTitleTableViewCell.xib in Resources */,
 				40FA8A091F74E6E70059A208 /* ATQTagCollectionViewCell.xib in Resources */,
 				40E0F26F1F78FE2B0074B064 /* ATQPhotoTableViewCell.xib in Resources */,
+				40F9F22F1F7A32C000F5A42B /* ATQAWechatTableViewCell.xib in Resources */,
 				40E061D41F76A6090072596D /* ATQMeHeadView.xib in Resources */,
 				40E93DEF1F77946E0018C3F5 /* ATQFristTableViewCell.xib in Resources */,
 				40F085AA1F74FE7200C5986C /* ATQRecPerCollectionViewCell.xib in Resources */,
+				4067ED011F79F5AB0051173D /* ATQWechatView.xib in Resources */,
 				40E93DEA1F7775630018C3F5 /* ATQFourTableViewCell.xib in Resources */,
 				40FA89FB1F74A61E0059A208 /* ATQItemTableViewCell.xib in Resources */,
 				40E93DDB1F7768570018C3F5 /* ATQBFristTableViewCell.xib in Resources */,
@@ -917,6 +943,7 @@
 				40E0F2741F78FE480074B064 /* ATQPhotoCollectionViewCell.xib in Resources */,
 				40260D201F71FEF400ED8CF1 /* ATQPerfectInfoViewController.xib in Resources */,
 				40E93DE01F7775310018C3F5 /* ATQSecendTableViewCell.xib in Resources */,
+				40F9F22A1F7A30BE00F5A42B /* ATQWechatTableViewCell.xib in Resources */,
 				40E0F2671F78E5A40074B064 /* ATQCollectTableViewCell.xib in Resources */,
 				40FA8A0E1F74E81E0059A208 /* ATQTagTableViewCell.xib in Resources */,
 				40875D691F6F9AE300B58609 /* ATQLoginViewController.xib in Resources */,
@@ -1001,6 +1028,7 @@
 				40875D681F6F9AE300B58609 /* ATQLoginViewController.m in Sources */,
 				40FA89FF1F74B1A80059A208 /* LhkhHttpsManager.m in Sources */,
 				40E93DDF1F7775310018C3F5 /* ATQSecendTableViewCell.m in Sources */,
+				40F9F2291F7A30BD00F5A42B /* ATQWechatTableViewCell.m in Sources */,
 				40E061D21F76A5EB0072596D /* ATQMeHeadView.m in Sources */,
 				40FA8A031F74CD7E0059A208 /* ATQNewPCollectionViewCell.m in Sources */,
 				40FA8A0D1F74E81E0059A208 /* ATQTagTableViewCell.m in Sources */,
@@ -1037,6 +1065,8 @@
 				40260D1F1F71FEF400ED8CF1 /* ATQPerfectInfoViewController.m in Sources */,
 				40E0F25C1F78D0DD0074B064 /* ATQSZFourTableViewCell.m in Sources */,
 				407F9BE61F663A230043A87A /* LhkhTabBar.m in Sources */,
+				40F9F22E1F7A32C000F5A42B /* ATQAWechatTableViewCell.m in Sources */,
+				4067ECFF1F79F58F0051173D /* ATQWechatView.m in Sources */,
 				407F9BC91F6633870043A87A /* UIColor+LhkhColor.m in Sources */,
 				40FEA5D31F73B53A00D6EB89 /* LhkhButton.m in Sources */,
 				407F9BE31F6636BF0043A87A /* ATQMeViewController.m in Sources */,

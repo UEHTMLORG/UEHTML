@@ -7,12 +7,21 @@
 //
 
 #import "ATQMyWechatViewController.h"
-#import "YAScrollSegmentControl.h"
 #import "UIColor+LhkhColor.h"
-@interface ATQMyWechatViewController (){
-    YAScrollSegmentControl *titleView;
+#import "LhkhButton.h"
+#import "UIView+LhkhExtension.h"
+#import "ATQWechatView.h"
+#import "ATQWechatTableViewCell.h"
+#import "ATQAWechatTableViewCell.h"
+#import "Masonry.h"
+@interface ATQMyWechatViewController ()<UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>{
+    NSInteger b;
 }
-
+@property (weak, nonatomic) UIView *titlesView;
+@property (weak, nonatomic) LhkhButton *selectedButton;
+@property (weak, nonatomic) UIView *sliderView;
+@property (nonatomic,strong)ATQWechatView *WeChatView;
+@property (nonatomic,strong)UITableView *tableView;
 @end
 
 @implementation ATQMyWechatViewController
@@ -20,17 +29,176 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-//    titleView = [[YAScrollSegmentControl alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 40)];
-//    titleView.backgroundColor = [UIColor clearColor];
-//    titleView.tintColor = [UIColor clearColor];
-//    titleView.buttons = @[@"我的微信号",@"谁查看我的微信",@"已查看的微信"];
-//    [titleView setFont:[UIFont systemFontOfSize:12]];
-//    [titleView setTitleColor:[UIColor colorWithHexString:@"FFE010"] forState:UIControlStateSelected];
-//    [titleView setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-//    self.navigationItem.titleView = titleView;
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 40)];
-    view.backgroundColor = [UIColor redColor];
-    self.navigationItem.titleView = view;
+    [self setupTitlesView];
+    [self buildWechatView];
+    [self setTableView];
+}
+
+-(void)setupTitlesView{
+    //标题数组
+    NSArray *titleArr = @[@"我的",@"谁查看我",@"已查看"];
+    //标题栏设置
+    UIView *titlesView = [[UIView alloc] init];
+    titlesView.backgroundColor = [UIColor colorWithHexString:UIColorStr];
+    titlesView.width = self.view.width ;
+    titlesView.height = 60;
+    titlesView.y = 0;
+    UIButton *backBtn = [[UIButton  alloc] initWithFrame:CGRectMake(10, 33, 13, 15)];
+    [backBtn setImage:[UIImage imageNamed:@"back_more"] forState:UIControlStateNormal];
+    [backBtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+    [titlesView addSubview:backBtn];
+    [self.view addSubview:titlesView];
+    
+    self.titlesView = titlesView;
+    
+    // 底部滑条
+    UIView *sliderView = [[UIView alloc] init];
+    sliderView.backgroundColor = [UIColor colorWithHexString:UISelTextColorStr];
+    sliderView.height = 2;
+    sliderView.tag = -1;
+    sliderView.y = titlesView.height - sliderView.height -5;
+    
+    self.sliderView = sliderView;
+    
+    //设置上面的按钮
+    NSInteger width = (titlesView.width - 80) / titleArr.count;
+    NSInteger height = 40;
+    for (NSInteger i=0; i<titleArr.count; i++) {
+        LhkhButton *btn = [[LhkhButton alloc] init];
+        btn.width = width;
+        btn.height = height;
+        btn.y = 20;
+        btn.x = i * width +40;
+        btn.tag = i;
+        [btn setTitle: titleArr[i] forState:UIControlStateNormal];
+        [btn addTarget:self action:@selector(titleClick:) forControlEvents:UIControlEventTouchUpInside];
+        [titlesView addSubview:btn];
+        
+        if (i == 0) {
+            btn.enabled = NO;
+            self.selectedButton = btn;
+            [btn.titleLabel sizeToFit];
+            self.sliderView.width = btn.titleLabel.width;
+            self.sliderView.centerX = btn.centerX;
+        }
+    }
+    [self.titlesView addSubview:sliderView];
+}
+
+-(void)buildWechatView{
+    _WeChatView = ({
+        ATQWechatView *WechatView =[ATQWechatView wechatView];
+        WechatView.frame = CGRectMake(0, 60, ScreenWidth, ScreenHeight);
+        WechatView.searchblock = ^{
+            NSLog(@"search");
+        };
+        WechatView.saveblock = ^{
+            NSLog(@"save");
+        };
+        WechatView;
+        
+    });
+    [self.view addSubview:_WeChatView];
+}
+
+-(void)back{
+    [self.navigationController popViewControllerAnimated:NO];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
+
+#pragma mark 标题栏每个按钮的点击事件
+-(void)titleClick:(LhkhButton *)button{
+    b = button.tag;
+    self.selectedButton.enabled = YES;
+    button.enabled = NO;
+    self.selectedButton = button;
+    NSLog(@"%@",self.selectedButton.titleLabel.text);
+    [UIView animateWithDuration:0.25 animations:^{
+        self.sliderView.width = button.titleLabel.width;
+        self.sliderView.centerX = button.centerX;
+        if (button.tag == 0) {
+            _WeChatView.hidden = NO;
+            _tableView.hidden = YES;
+        }else if (button.tag == 1){
+            b = button.tag;
+            _tableView.hidden = NO;
+            _WeChatView.hidden = YES;
+            [self.tableView reloadData];
+        }else{
+            _tableView.hidden = NO;
+            _WeChatView.hidden = YES;
+            [self.tableView reloadData];
+        }
+    }];
+}
+
+-(void)setTableView{
+    
+    _tableView = ({
+        UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectZero];
+        
+        [tableView registerNib:[UINib nibWithNibName:@"ATQWechatTableViewCell" bundle:nil] forCellReuseIdentifier:@"ATQWechatTableViewCell"];
+        [tableView registerNib:[UINib nibWithNibName:@"ATQAWechatTableViewCell" bundle:nil] forCellReuseIdentifier:@"ATQAWechatTableViewCell"];
+        
+        tableView.backgroundColor = RGBA(236, 236, 236, 1);
+        tableView.delegate = self;
+        tableView.dataSource = self;
+        tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        [self.view addSubview:tableView];
+        tableView;
+    });
+    b = 1;
+    self.tableView.hidden = YES;
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.mas_equalTo(self.view);
+        make.top.mas_equalTo(self.view).offset(60);
+        make.bottom.mas_equalTo(self.view).offset(0);
+    }];
+    
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 3;
+}
+-(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (b == 1) {
+        static NSString *CellIdentifier = @"ATQWechatTableViewCell" ;
+        ATQWechatTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        if (cell == nil) {
+            NSArray *array = [[NSBundle mainBundle]loadNibNamed: CellIdentifier owner:self options:nil];
+            cell = [array objectAtIndex:0];
+        }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        return cell;
+    }else{
+        static NSString *CellIdentifier = @"ATQAWechatTableViewCell" ;
+        ATQAWechatTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        if (cell == nil) {
+            NSArray *array = [[NSBundle mainBundle]loadNibNamed: CellIdentifier owner:self options:nil];
+            cell = [array objectAtIndex:0];
+        }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        return cell;
+    }
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 44;
 }
 
 - (void)didReceiveMemoryWarning {

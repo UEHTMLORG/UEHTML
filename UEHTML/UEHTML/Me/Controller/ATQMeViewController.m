@@ -219,6 +219,7 @@
     if (indexPath.section == 2) {
         if (indexPath.row == 0) {
             ATQMyWechatViewController *vc = [[ATQMyWechatViewController alloc]init];
+//            [self presentViewController:vc animated:YES completion:nil];
             [self.navigationController pushViewController:vc animated:YES];
         }else if (indexPath.row == 1) {
             ATQYajinRZViewController *vc = [[ATQYajinRZViewController alloc]init];

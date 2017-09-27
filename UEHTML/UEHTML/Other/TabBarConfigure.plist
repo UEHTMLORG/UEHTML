@@ -8,9 +8,9 @@
 		<key>title</key>
 		<string>主页</string>
 		<key>image</key>
-		<string>tab4-more</string>
+		<string>aotuquan-zhuye02</string>
 		<key>selectedImage</key>
-		<string>tab4-moreshow</string>
+		<string>aotuquan-zhuye</string>
 		<key>badgeValue</key>
 		<string>0</string>
 	</dict>
@@ -20,9 +20,9 @@
 		<key>title</key>
 		<string>凹凸圈</string>
 		<key>image</key>
-		<string>tab5-file</string>
+		<string>aotuquan-aotuquan</string>
 		<key>selectedImage</key>
-		<string>tab5-fileshow</string>
+		<string>aotuquan-aotuquan02</string>
 		<key>badgeValue</key>
 		<string>0</string>
 	</dict>
@@ -32,9 +32,9 @@
 		<key>title</key>
 		<string>兼职中心</string>
 		<key>image</key>
-		<string>tab1-heart</string>
+		<string>aotuquan-jianzhi</string>
 		<key>selectedImage</key>
-		<string>tab1-heartshow</string>
+		<string>aotuquan-jianzhi02</string>
 		<key>badgeValue</key>
 		<string>0</string>
 	</dict>
@@ -44,9 +44,9 @@
 		<key>title</key>
 		<string>消息</string>
 		<key>image</key>
-		<string>tab1-heart</string>
+		<string>aotuquan-xiaoxi</string>
 		<key>selectedImage</key>
-		<string>tab1-heartshow</string>
+		<string>aotuquan-xiaoxi02</string>
 		<key>badgeValue</key>
 		<string>0</string>
 	</dict>
@@ -56,9 +56,9 @@
 		<key>title</key>
 		<string>我的</string>
 		<key>image</key>
-		<string>tab2-doctor</string>
+		<string>aotuquan-wode</string>
 		<key>selectedImage</key>
-		<string>tab2-doctorshow</string>
+		<string>aotuquan-wode02</string>
 		<key>badgeValue</key>
 		<string>0</string>
 	</dict>

@@ -40,7 +40,7 @@
         NSString *imageName = VCsDic[@"image"];
         NSString *selectedImage = VCsDic[@"selectedImage"];
         NSString *badgeValue = VCsDic[@"badgeValue"];
-        [self navigationChildController:classs title:title imageName:imageName seletedImage:selectedImage badgeValue:badgeValue];
+        [self navigationChildController:classs title:@"" imageName:imageName seletedImage:selectedImage badgeValue:badgeValue];
     }
 //    [self setValue:[[LhkhTabBar alloc]init] forKey:@"tabBar"];
     [self setViewControllers:_vcsArray];

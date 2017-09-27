@@ -166,6 +166,12 @@
                     <rect key="frame" x="20" y="217" width="335" height="34"/>
                     <color key="backgroundColor" red="0.8862745098" green="0.45098039220000002" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <state key="normal" title="确认"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="sureClick:" destination="-1" eventType="touchUpInside" id="v26-0s-ez8"/>
                     </connections>

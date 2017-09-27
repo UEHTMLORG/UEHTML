@@ -18,7 +18,11 @@
 #import "UIImageView+WebCache.h"
 #import "UIColor+LhkhColor.h"
 #import "ATQSetupSecrityViewController.h"
-@interface ATQSetupViewController ()<UITableViewDelegate,UITableViewDataSource>
+#import "ATQUserManualViewController.h"
+#import "ATQBlackListViewController.h"
+@interface ATQSetupViewController ()<UITableViewDelegate,UITableViewDataSource,UIAlertViewDelegate>{
+    BOOL isClear;
+}
 @property (nonatomic,strong)UITableView *tableView;
 
 @end
@@ -121,7 +125,7 @@
         }
         return cell;
     }else if(indexPath.section == 3){
-        if (indexPath.row == 2) {
+        if (indexPath.row == 1) {
             static NSString *CellIdentifier = @"ATQSZFourTableViewCell" ;
             ATQSZFourTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
             if (cell == nil) {
@@ -130,6 +134,11 @@
             }
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             cell.titleLab.text = @"清除缓存";
+            if (isClear == YES) {
+                cell.cacheLab.text = @"";
+            }else{
+                cell.cacheLab.text = @"5.0M";
+            }
             return cell;
         }else{
             static NSString *CellIdentifier = @"ATQSZSecTableViewCell" ;
@@ -168,6 +177,40 @@
         if (indexPath.row == 0) {
             ATQSetupSecrityViewController *vc = [[ATQSetupSecrityViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
+        }
+    }else if (indexPath.section == 2){
+        if (indexPath.row == 0) {
+            ATQUserManualViewController *vc = [[ATQUserManualViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+    }else{
+        if (indexPath.row == 0) {
+            ATQBlackListViewController *vc = [[ATQBlackListViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }else if (indexPath.row == 1){
+            
+            UIAlertController *alertController=[UIAlertController alertControllerWithTitle:nil message:@"确定要清除所有缓存吗？" preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction *sureAction=[UIAlertAction actionWithTitle:NSLocalizedString(@"确定", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                isClear = YES;
+                [self.tableView reloadData];
+                 NSLog(@"-----");
+            }];
+            
+            [sureAction setValue:[UIColor colorWithHexString:UIColorStr] forKey:@"titleTextColor"];
+            
+            UIAlertAction *cancelAction=[UIAlertAction actionWithTitle:NSLocalizedString(@"取消", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                isClear = NO;
+                [self.tableView reloadData];
+                NSLog(@".....");
+            }];
+            [cancelAction setValue:[UIColor colorWithHexString:UIToneTextColorStr] forKey:@"titleTextColor"];
+            [alertController addAction:cancelAction];
+            [alertController addAction:sureAction];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self presentViewController:alertController animated:YES completion:nil];
+            });
+            
         }
     }
 }
@@ -219,6 +262,14 @@
         return 40;
     }else{
         return 10;
+    }
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 0) {
+        NSLog(@".....");
+    }else{
+        NSLog(@"-----");
     }
 }
 

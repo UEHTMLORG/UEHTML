@@ -7,6 +7,7 @@
 //
 
 #import "ATQSetupSecrityViewController.h"
+#import "ATQYZSecretViewController.h"
 #import "ATQSecretView.h"
 @interface ATQSetupSecrityViewController ()<UITextFieldDelegate>
 @property (strong,nonatomic)ATQSecretView *passwordView;
@@ -85,7 +86,8 @@
 }
 
 - (IBAction)sureClick:(id)sender {
-    
+    ATQYZSecretViewController *vc = [[ATQYZSecretViewController  alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

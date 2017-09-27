@@ -31,36 +31,20 @@
                                             <action selector="accountClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="9fR-cD-CXy"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fmH-Kd-z29">
-                                        <rect key="frame" x="20" y="10" width="40" height="40"/>
-                                        <color key="backgroundColor" red="0.9024937153" green="0.7244816422" blue="0.44759488110000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my-zhanghu" translatesAutoresizingMaskIntoConstraints="NO" id="fmH-Kd-z29">
+                                        <rect key="frame" x="15" y="10" width="50" height="60"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="fmH-Kd-z29" secondAttribute="height" multiplier="1:1" id="c5h-my-WMf"/>
+                                            <constraint firstAttribute="width" secondItem="fmH-Kd-z29" secondAttribute="height" multiplier="5:6" id="AOx-lY-og1"/>
                                         </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的账户" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uad-xp-okJ">
-                                        <rect key="frame" x="0.0" y="60" width="80" height="15"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <color key="textColor" red="0.54509803921568623" green="0.54509803921568623" blue="0.54509803921568623" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="pUU-qD-BUq" firstAttribute="leading" secondItem="3kx-OE-fbj" secondAttribute="leading" id="59n-dR-Lkx"/>
-                                    <constraint firstAttribute="bottom" secondItem="Uad-xp-okJ" secondAttribute="bottom" constant="5" id="7wu-kh-C4E"/>
-                                    <constraint firstAttribute="trailing" secondItem="Uad-xp-okJ" secondAttribute="trailing" id="8uM-aY-DVW"/>
-                                    <constraint firstItem="Uad-xp-okJ" firstAttribute="top" secondItem="fmH-Kd-z29" secondAttribute="bottom" constant="10" id="IPs-lg-xOW"/>
                                     <constraint firstItem="pUU-qD-BUq" firstAttribute="top" secondItem="3kx-OE-fbj" secondAttribute="top" id="OP6-ni-a8C"/>
                                     <constraint firstItem="fmH-Kd-z29" firstAttribute="centerX" secondItem="3kx-OE-fbj" secondAttribute="centerX" id="Z0H-4c-hwE"/>
-                                    <constraint firstItem="Uad-xp-okJ" firstAttribute="leading" secondItem="3kx-OE-fbj" secondAttribute="leading" id="bKK-5F-TbA"/>
                                     <constraint firstItem="fmH-Kd-z29" firstAttribute="top" secondItem="3kx-OE-fbj" secondAttribute="top" constant="10" id="jSL-ee-Lii"/>
+                                    <constraint firstAttribute="bottom" secondItem="fmH-Kd-z29" secondAttribute="bottom" constant="10" id="mpm-Ie-dBV"/>
                                     <constraint firstAttribute="trailing" secondItem="pUU-qD-BUq" secondAttribute="trailing" id="qzI-zQ-BlM"/>
                                     <constraint firstAttribute="bottom" secondItem="pUU-qD-BUq" secondAttribute="bottom" id="u3S-gg-4Up"/>
                                 </constraints>
@@ -74,35 +58,19 @@
                                             <action selector="albumClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="YeW-tT-Lvg"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n1E-cr-gGe">
-                                        <rect key="frame" x="20" y="10" width="40" height="40"/>
-                                        <color key="backgroundColor" red="0.9024937153" green="0.7244816422" blue="0.44759488110000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my-xiangce" translatesAutoresizingMaskIntoConstraints="NO" id="n1E-cr-gGe">
+                                        <rect key="frame" x="15" y="10" width="50" height="60"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="n1E-cr-gGe" secondAttribute="height" multiplier="1:1" id="Thz-uU-naG"/>
+                                            <constraint firstAttribute="width" secondItem="n1E-cr-gGe" secondAttribute="height" multiplier="5:6" id="yWl-Ga-beh"/>
                                         </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的相册" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mzM-td-Ogm">
-                                        <rect key="frame" x="0.0" y="60" width="80" height="15"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <color key="textColor" red="0.5450980392" green="0.5450980392" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="n1E-cr-gGe" secondAttribute="bottom" constant="10" id="1hG-cU-lTG"/>
                                     <constraint firstItem="Tgg-eT-d37" firstAttribute="top" secondItem="gKW-n2-YEJ" secondAttribute="top" id="4hd-Ce-Hrd"/>
-                                    <constraint firstAttribute="bottom" secondItem="mzM-td-Ogm" secondAttribute="bottom" constant="5" id="DJc-Ho-kaf"/>
-                                    <constraint firstItem="mzM-td-Ogm" firstAttribute="leading" secondItem="gKW-n2-YEJ" secondAttribute="leading" id="QwA-R2-yfE"/>
                                     <constraint firstItem="Tgg-eT-d37" firstAttribute="leading" secondItem="gKW-n2-YEJ" secondAttribute="leading" id="R3e-ZD-LkZ"/>
-                                    <constraint firstAttribute="trailing" secondItem="mzM-td-Ogm" secondAttribute="trailing" id="Wbf-Qj-w5O"/>
                                     <constraint firstAttribute="trailing" secondItem="Tgg-eT-d37" secondAttribute="trailing" id="WfD-Cv-h2B"/>
-                                    <constraint firstItem="mzM-td-Ogm" firstAttribute="top" secondItem="n1E-cr-gGe" secondAttribute="bottom" constant="10" id="XDf-Cg-P6b"/>
                                     <constraint firstItem="n1E-cr-gGe" firstAttribute="top" secondItem="gKW-n2-YEJ" secondAttribute="top" constant="10" id="a9H-ZR-1Y1"/>
                                     <constraint firstAttribute="bottom" secondItem="Tgg-eT-d37" secondAttribute="bottom" id="fsH-7k-alZ"/>
                                     <constraint firstItem="n1E-cr-gGe" firstAttribute="centerX" secondItem="gKW-n2-YEJ" secondAttribute="centerX" id="kwK-Ld-lmu"/>
@@ -118,39 +86,23 @@
                                             <action selector="spreadClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Sv4-te-NNR"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nBQ-3y-Izp">
-                                        <rect key="frame" x="20" y="10" width="40" height="40"/>
-                                        <color key="backgroundColor" red="0.9024937153" green="0.7244816422" blue="0.44759488110000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my-tuiguang" translatesAutoresizingMaskIntoConstraints="NO" id="nBQ-3y-Izp">
+                                        <rect key="frame" x="15" y="10" width="50" height="60"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="nBQ-3y-Izp" secondAttribute="height" multiplier="1:1" id="uh1-cT-ExW"/>
+                                            <constraint firstAttribute="width" secondItem="nBQ-3y-Izp" secondAttribute="height" multiplier="5:6" id="jeO-H1-aOU"/>
                                         </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="推广赚钱" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKa-FU-Ewy">
-                                        <rect key="frame" x="0.0" y="60" width="80" height="15"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <color key="textColor" red="0.5450980392" green="0.5450980392" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="nBQ-3y-Izp" firstAttribute="centerX" secondItem="N43-Jo-v8y" secondAttribute="centerX" id="33M-nj-BTF"/>
-                                    <constraint firstAttribute="bottom" secondItem="iKa-FU-Ewy" secondAttribute="bottom" constant="5" id="92R-Lx-7C6"/>
                                     <constraint firstItem="atH-Zb-oJn" firstAttribute="top" secondItem="N43-Jo-v8y" secondAttribute="top" id="Eol-MD-JKj"/>
                                     <constraint firstItem="nBQ-3y-Izp" firstAttribute="top" secondItem="N43-Jo-v8y" secondAttribute="top" constant="10" id="IMT-XL-xMY"/>
                                     <constraint firstAttribute="width" constant="80" id="MIX-b7-B3n"/>
                                     <constraint firstAttribute="bottom" secondItem="atH-Zb-oJn" secondAttribute="bottom" id="Ofu-qH-bXj"/>
-                                    <constraint firstAttribute="trailing" secondItem="iKa-FU-Ewy" secondAttribute="trailing" id="mbY-Ut-Q1K"/>
+                                    <constraint firstAttribute="bottom" secondItem="nBQ-3y-Izp" secondAttribute="bottom" constant="10" id="dW0-16-uaJ"/>
                                     <constraint firstAttribute="trailing" secondItem="atH-Zb-oJn" secondAttribute="trailing" id="qQQ-Rj-0Lt"/>
-                                    <constraint firstItem="iKa-FU-Ewy" firstAttribute="top" secondItem="nBQ-3y-Izp" secondAttribute="bottom" constant="10" id="sPU-nF-Pw1"/>
                                     <constraint firstItem="atH-Zb-oJn" firstAttribute="leading" secondItem="N43-Jo-v8y" secondAttribute="leading" id="tg2-PU-3C0"/>
-                                    <constraint firstItem="iKa-FU-Ewy" firstAttribute="leading" secondItem="N43-Jo-v8y" secondAttribute="leading" id="vyu-mJ-ngj"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ra-iX-8CQ">
@@ -162,38 +114,22 @@
                                             <action selector="businessClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="O4w-dv-oOz"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZLy-hc-1Eq">
-                                        <rect key="frame" x="20" y="10" width="40" height="40"/>
-                                        <color key="backgroundColor" red="0.9024937153" green="0.7244816422" blue="0.44759488110000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my-tuiguang" translatesAutoresizingMaskIntoConstraints="NO" id="ZLy-hc-1Eq">
+                                        <rect key="frame" x="15" y="10" width="50" height="60"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="ZLy-hc-1Eq" secondAttribute="height" multiplier="1:1" id="cDA-yp-wRZ"/>
+                                            <constraint firstAttribute="width" secondItem="ZLy-hc-1Eq" secondAttribute="height" multiplier="5:6" id="CVv-dI-zRs"/>
                                         </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我是代理商" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNv-Tf-j0U">
-                                        <rect key="frame" x="0.0" y="60" width="80" height="15"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <color key="textColor" red="0.5450980392" green="0.5450980392" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="oNv-Tf-j0U" secondAttribute="trailing" id="6gk-eB-nCW"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZLy-hc-1Eq" secondAttribute="bottom" constant="10" id="2Dg-zd-00o"/>
                                     <constraint firstItem="ZLy-hc-1Eq" firstAttribute="centerX" secondItem="0ra-iX-8CQ" secondAttribute="centerX" id="802-9e-Qcz"/>
                                     <constraint firstAttribute="trailing" secondItem="wGA-bR-ZpS" secondAttribute="trailing" id="A6e-Yz-MNm"/>
                                     <constraint firstAttribute="width" constant="80" id="Aju-Or-Ld7"/>
                                     <constraint firstAttribute="bottom" secondItem="wGA-bR-ZpS" secondAttribute="bottom" id="I4Z-Ub-UmG"/>
-                                    <constraint firstAttribute="bottom" secondItem="oNv-Tf-j0U" secondAttribute="bottom" constant="5" id="SPD-PQ-Df9"/>
                                     <constraint firstItem="wGA-bR-ZpS" firstAttribute="top" secondItem="0ra-iX-8CQ" secondAttribute="top" id="Y12-g6-c3N"/>
-                                    <constraint firstItem="oNv-Tf-j0U" firstAttribute="leading" secondItem="0ra-iX-8CQ" secondAttribute="leading" id="lLw-Cv-Ai8"/>
                                     <constraint firstItem="wGA-bR-ZpS" firstAttribute="leading" secondItem="0ra-iX-8CQ" secondAttribute="leading" id="lZG-7R-G7f"/>
-                                    <constraint firstItem="oNv-Tf-j0U" firstAttribute="top" secondItem="ZLy-hc-1Eq" secondAttribute="bottom" constant="10" id="uVZ-mo-XNT"/>
                                     <constraint firstItem="ZLy-hc-1Eq" firstAttribute="top" secondItem="0ra-iX-8CQ" secondAttribute="top" constant="10" id="xz8-Ha-zHn"/>
                                 </constraints>
                             </view>
@@ -228,4 +164,9 @@
             </constraints>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="my-tuiguang" width="100" height="120"/>
+        <image name="my-xiangce" width="100" height="120"/>
+        <image name="my-zhanghu" width="100" height="120"/>
+    </resources>
 </document>

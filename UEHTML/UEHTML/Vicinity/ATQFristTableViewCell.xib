@@ -31,39 +31,23 @@
                                             <action selector="accounClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="TYL-fm-W5b"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DCu-A4-rLH">
-                                        <rect key="frame" x="20" y="10" width="40" height="40"/>
-                                        <color key="backgroundColor" red="0.9024937153" green="0.7244816422" blue="0.44759488110000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my-zhanghu" translatesAutoresizingMaskIntoConstraints="NO" id="DCu-A4-rLH">
+                                        <rect key="frame" x="15" y="10" width="50" height="60"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="DCu-A4-rLH" secondAttribute="height" multiplier="1:1" id="r0y-gp-SF4"/>
+                                            <constraint firstAttribute="width" secondItem="DCu-A4-rLH" secondAttribute="height" multiplier="5:6" id="JHE-qm-jff"/>
                                         </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的账户" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYY-D9-C0H">
-                                        <rect key="frame" x="0.0" y="60" width="80" height="15"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <color key="textColor" red="0.5450980392" green="0.5450980392" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="XYY-D9-C0H" firstAttribute="top" secondItem="DCu-A4-rLH" secondAttribute="bottom" constant="10" id="5Qv-Je-Jrc"/>
-                                    <constraint firstAttribute="bottom" secondItem="XYY-D9-C0H" secondAttribute="bottom" constant="5" id="84t-TJ-QWT"/>
                                     <constraint firstAttribute="width" secondItem="9zp-mE-LOC" secondAttribute="height" multiplier="1:1" id="8YB-hr-Nr1"/>
+                                    <constraint firstAttribute="bottom" secondItem="DCu-A4-rLH" secondAttribute="bottom" constant="10" id="IB0-OW-d05"/>
                                     <constraint firstItem="Z8t-LS-u50" firstAttribute="leading" secondItem="9zp-mE-LOC" secondAttribute="leading" id="XJs-KN-jwK"/>
                                     <constraint firstAttribute="bottom" secondItem="Z8t-LS-u50" secondAttribute="bottom" id="a5e-s5-btw"/>
                                     <constraint firstAttribute="trailing" secondItem="Z8t-LS-u50" secondAttribute="trailing" id="b4o-RA-jP7"/>
-                                    <constraint firstItem="XYY-D9-C0H" firstAttribute="leading" secondItem="9zp-mE-LOC" secondAttribute="leading" id="b5Q-Ps-Rg2"/>
                                     <constraint firstItem="DCu-A4-rLH" firstAttribute="top" secondItem="9zp-mE-LOC" secondAttribute="top" constant="10" id="pNn-My-p9c"/>
                                     <constraint firstItem="DCu-A4-rLH" firstAttribute="centerX" secondItem="9zp-mE-LOC" secondAttribute="centerX" id="shs-WK-Hqt"/>
                                     <constraint firstItem="Z8t-LS-u50" firstAttribute="top" secondItem="9zp-mE-LOC" secondAttribute="top" id="vje-Bx-rQG"/>
-                                    <constraint firstAttribute="trailing" secondItem="XYY-D9-C0H" secondAttribute="trailing" id="xAX-kS-bpC"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9gR-hi-NLq">
@@ -75,38 +59,22 @@
                                             <action selector="albumClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="GXn-JU-9xK"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KsM-ag-isq">
-                                        <rect key="frame" x="20" y="10" width="40" height="40"/>
-                                        <color key="backgroundColor" red="0.9024937153" green="0.7244816422" blue="0.44759488110000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my-xiangce" translatesAutoresizingMaskIntoConstraints="NO" id="KsM-ag-isq">
+                                        <rect key="frame" x="15" y="10" width="50" height="60"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="KsM-ag-isq" secondAttribute="height" multiplier="1:1" id="Rid-Fx-3qd"/>
+                                            <constraint firstAttribute="width" secondItem="KsM-ag-isq" secondAttribute="height" multiplier="5:6" id="6lr-aY-bFb"/>
                                         </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的相册" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36g-Tb-ddH">
-                                        <rect key="frame" x="0.0" y="60" width="80" height="15"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <color key="textColor" red="0.5450980392" green="0.5450980392" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="pCS-dn-oUV" secondAttribute="trailing" id="2AC-ln-TJF"/>
-                                    <constraint firstItem="36g-Tb-ddH" firstAttribute="top" secondItem="KsM-ag-isq" secondAttribute="bottom" constant="10" id="2Ty-ZP-CHJ"/>
-                                    <constraint firstAttribute="bottom" secondItem="36g-Tb-ddH" secondAttribute="bottom" constant="5" id="9qr-b7-OBz"/>
-                                    <constraint firstItem="36g-Tb-ddH" firstAttribute="leading" secondItem="9gR-hi-NLq" secondAttribute="leading" id="CdO-Se-SCw"/>
                                     <constraint firstAttribute="bottom" secondItem="pCS-dn-oUV" secondAttribute="bottom" id="G7F-9t-bHL"/>
                                     <constraint firstItem="pCS-dn-oUV" firstAttribute="top" secondItem="9gR-hi-NLq" secondAttribute="top" id="GNJ-fg-QC9"/>
-                                    <constraint firstAttribute="trailing" secondItem="36g-Tb-ddH" secondAttribute="trailing" id="L4x-Al-dJR"/>
                                     <constraint firstAttribute="width" secondItem="9gR-hi-NLq" secondAttribute="height" multiplier="1:1" id="Pck-hM-cNv"/>
                                     <constraint firstItem="KsM-ag-isq" firstAttribute="top" secondItem="9gR-hi-NLq" secondAttribute="top" constant="10" id="RzF-Pz-tvc"/>
                                     <constraint firstItem="pCS-dn-oUV" firstAttribute="leading" secondItem="9gR-hi-NLq" secondAttribute="leading" id="SjF-vz-1FZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="KsM-ag-isq" secondAttribute="bottom" constant="10" id="cRX-0S-xrk"/>
                                     <constraint firstItem="KsM-ag-isq" firstAttribute="centerX" secondItem="9gR-hi-NLq" secondAttribute="centerX" id="pcL-65-mvG"/>
                                 </constraints>
                             </view>
@@ -119,25 +87,12 @@
                                             <action selector="spreadClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="j3w-Ck-Ed8"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6p4-mW-ZcS">
-                                        <rect key="frame" x="20" y="10" width="40" height="40"/>
-                                        <color key="backgroundColor" red="0.9024937153" green="0.7244816422" blue="0.44759488110000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my-tuiguang" translatesAutoresizingMaskIntoConstraints="NO" id="6p4-mW-ZcS">
+                                        <rect key="frame" x="15" y="10" width="50" height="60"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="6p4-mW-ZcS" secondAttribute="height" multiplier="1:1" id="wj6-yc-1BJ"/>
+                                            <constraint firstAttribute="width" secondItem="6p4-mW-ZcS" secondAttribute="height" multiplier="5:6" id="g6E-8N-7fH"/>
                                         </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="推广赚钱" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beO-c0-Bnx">
-                                        <rect key="frame" x="0.0" y="60" width="80" height="15"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <color key="textColor" red="0.5450980392" green="0.5450980392" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -147,11 +102,8 @@
                                     <constraint firstItem="AOt-hn-tt4" firstAttribute="top" secondItem="ecZ-1q-1un" secondAttribute="top" id="cA6-3S-M8d"/>
                                     <constraint firstAttribute="trailing" secondItem="AOt-hn-tt4" secondAttribute="trailing" id="g44-Nf-9oX"/>
                                     <constraint firstAttribute="bottom" secondItem="AOt-hn-tt4" secondAttribute="bottom" id="jdf-ex-u7j"/>
-                                    <constraint firstAttribute="trailing" secondItem="beO-c0-Bnx" secondAttribute="trailing" id="pJI-wu-x2O"/>
-                                    <constraint firstItem="beO-c0-Bnx" firstAttribute="leading" secondItem="ecZ-1q-1un" secondAttribute="leading" id="qqc-0F-6U4"/>
-                                    <constraint firstItem="beO-c0-Bnx" firstAttribute="top" secondItem="6p4-mW-ZcS" secondAttribute="bottom" constant="10" id="tGv-rW-UPz"/>
-                                    <constraint firstAttribute="bottom" secondItem="beO-c0-Bnx" secondAttribute="bottom" constant="5" id="tte-D7-Ob5"/>
                                     <constraint firstAttribute="width" secondItem="ecZ-1q-1un" secondAttribute="height" multiplier="1:1" id="vne-QG-u2h"/>
+                                    <constraint firstAttribute="bottom" secondItem="6p4-mW-ZcS" secondAttribute="bottom" constant="10" id="xhV-uE-THN"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -180,4 +132,9 @@
             </constraints>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="my-tuiguang" width="100" height="120"/>
+        <image name="my-xiangce" width="100" height="120"/>
+        <image name="my-zhanghu" width="100" height="120"/>
+    </resources>
 </document>

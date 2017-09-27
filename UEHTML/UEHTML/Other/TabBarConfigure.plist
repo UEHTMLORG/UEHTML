@@ -8,9 +8,9 @@
 		<key>title</key>
 		<string>主页</string>
 		<key>image</key>
-		<string>aotuquan-zhuye02</string>
+		<string>home01</string>
 		<key>selectedImage</key>
-		<string>aotuquan-zhuye</string>
+		<string>home02</string>
 		<key>badgeValue</key>
 		<string>0</string>
 	</dict>
@@ -20,9 +20,9 @@
 		<key>title</key>
 		<string>凹凸圈</string>
 		<key>image</key>
-		<string>aotuquan-aotuquan</string>
+		<string>aotu01</string>
 		<key>selectedImage</key>
-		<string>aotuquan-aotuquan02</string>
+		<string>aotu02</string>
 		<key>badgeValue</key>
 		<string>0</string>
 	</dict>
@@ -32,9 +32,9 @@
 		<key>title</key>
 		<string>兼职中心</string>
 		<key>image</key>
-		<string>aotuquan-jianzhi</string>
+		<string>job02</string>
 		<key>selectedImage</key>
-		<string>aotuquan-jianzhi02</string>
+		<string>job01</string>
 		<key>badgeValue</key>
 		<string>0</string>
 	</dict>
@@ -44,9 +44,9 @@
 		<key>title</key>
 		<string>消息</string>
 		<key>image</key>
-		<string>aotuquan-xiaoxi</string>
+		<string>information02</string>
 		<key>selectedImage</key>
-		<string>aotuquan-xiaoxi02</string>
+		<string>information01</string>
 		<key>badgeValue</key>
 		<string>0</string>
 	</dict>
@@ -56,9 +56,9 @@
 		<key>title</key>
 		<string>我的</string>
 		<key>image</key>
-		<string>aotuquan-wode</string>
+		<string>my02</string>
 		<key>selectedImage</key>
-		<string>aotuquan-wode02</string>
+		<string>my01</string>
 		<key>badgeValue</key>
 		<string>0</string>
 	</dict>

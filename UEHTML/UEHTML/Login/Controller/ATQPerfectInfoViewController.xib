@@ -14,7 +14,6 @@
             <connections>
                 <outlet property="ageLab" destination="bkj-Da-j2w" id="Or6-Z1-zq0"/>
                 <outlet property="ageView" destination="5AN-BU-jv4" id="EdQ-gw-B2M"/>
-                <outlet property="headBtn" destination="xx3-zn-4Au" id="aOv-5E-RN0"/>
                 <outlet property="headImg" destination="zp8-wG-Qnc" id="PO0-fI-06I"/>
                 <outlet property="manBtn" destination="ccg-np-Eta" id="cnP-YH-cRV"/>
                 <outlet property="nextBtn" destination="LLE-6w-HOy" id="LZG-Ng-DFG"/>
@@ -33,9 +32,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZO3-vl-H0r">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zp8-wG-Qnc">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zhuce-photo" translatesAutoresizingMaskIntoConstraints="NO" id="zp8-wG-Qnc">
                             <rect key="frame" x="137" y="20" width="100" height="100"/>
-                            <color key="backgroundColor" red="0.8862745098" green="0.45098039220000002" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="100" id="kPN-aV-LeF"/>
                                 <constraint firstAttribute="width" secondItem="zp8-wG-Qnc" secondAttribute="height" multiplier="1:1" id="ztf-Om-Rrr"/>
@@ -56,30 +54,17 @@
                                 <action selector="headClick:" destination="-1" eventType="touchUpInside" id="5ej-Bw-lZx"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xx3-zn-4Au">
-                            <rect key="frame" x="217" y="80" width="30" height="20"/>
-                            <color key="backgroundColor" red="0.8862745098" green="0.45098039220000002" blue="0.71372549019999998" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="30" id="4VF-pr-nkX"/>
-                                <constraint firstAttribute="height" constant="20" id="nhe-gw-1md"/>
-                            </constraints>
-                            <connections>
-                                <action selector="headClick:" destination="-1" eventType="touchUpInside" id="hps-Xp-hFq"/>
-                            </connections>
-                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="RVc-jG-tmL" firstAttribute="trailing" secondItem="zp8-wG-Qnc" secondAttribute="trailing" id="1uI-DD-YNe"/>
                         <constraint firstItem="RVc-jG-tmL" firstAttribute="leading" secondItem="zp8-wG-Qnc" secondAttribute="leading" id="9BM-DA-WdB"/>
                         <constraint firstItem="RVc-jG-tmL" firstAttribute="bottom" secondItem="zp8-wG-Qnc" secondAttribute="bottom" id="BK1-Qg-HK4"/>
-                        <constraint firstItem="xx3-zn-4Au" firstAttribute="leading" secondItem="zp8-wG-Qnc" secondAttribute="leading" constant="80" id="Fe2-XS-hpN"/>
                         <constraint firstItem="RVc-jG-tmL" firstAttribute="top" secondItem="zp8-wG-Qnc" secondAttribute="top" id="O1j-RU-mxo"/>
                         <constraint firstItem="zp8-wG-Qnc" firstAttribute="top" secondItem="ZO3-vl-H0r" secondAttribute="top" constant="20" id="X0C-EU-LCz"/>
                         <constraint firstItem="JK7-0F-Fl2" firstAttribute="leading" secondItem="ZO3-vl-H0r" secondAttribute="leading" id="Yoz-Lo-cOX"/>
                         <constraint firstItem="JK7-0F-Fl2" firstAttribute="top" secondItem="zp8-wG-Qnc" secondAttribute="bottom" constant="10" id="ZFT-gd-NVZ"/>
                         <constraint firstAttribute="trailing" secondItem="JK7-0F-Fl2" secondAttribute="trailing" id="f7S-0k-1BC"/>
-                        <constraint firstItem="xx3-zn-4Au" firstAttribute="bottom" secondItem="zp8-wG-Qnc" secondAttribute="bottom" constant="-20" id="pJ6-Sv-Anj"/>
                         <constraint firstItem="zp8-wG-Qnc" firstAttribute="centerX" secondItem="ZO3-vl-H0r" secondAttribute="centerX" id="vx7-y7-NWf"/>
                         <constraint firstAttribute="width" secondItem="ZO3-vl-H0r" secondAttribute="height" multiplier="25:12" id="yiA-r6-aNV"/>
                     </constraints>
@@ -147,14 +132,14 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iD3-vw-f18">
-                                    <rect key="frame" x="170" y="10" width="60" height="20"/>
+                                    <rect key="frame" x="170" y="6.5" width="60" height="27"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="20" id="PdC-en-mQf"/>
+                                        <constraint firstAttribute="height" constant="27" id="PdC-en-mQf"/>
                                         <constraint firstAttribute="width" constant="60" id="SdX-aO-xhc"/>
                                     </constraints>
                                     <inset key="titleEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                    <state key="normal" title="女" image="phone">
+                                    <state key="normal" title="女" image="zhuce-nv02">
                                         <color key="titleColor" red="0.8862745098" green="0.45098039220000002" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                     <connections>
@@ -185,10 +170,10 @@
                                 <constraint firstAttribute="bottom" secondItem="ccg-np-Eta" secondAttribute="bottom" constant="10" id="Syy-pk-idU"/>
                                 <constraint firstItem="fRy-u6-uzg" firstAttribute="leading" secondItem="AoE-Se-Cdv" secondAttribute="leading" id="V7r-oZ-fpY"/>
                                 <constraint firstItem="ccg-np-Eta" firstAttribute="top" secondItem="AoE-Se-Cdv" secondAttribute="top" constant="10" id="jdx-Ky-0zv"/>
-                                <constraint firstItem="iD3-vw-f18" firstAttribute="top" secondItem="AoE-Se-Cdv" secondAttribute="top" constant="10" id="mMi-K1-8Ve"/>
+                                <constraint firstItem="iD3-vw-f18" firstAttribute="top" secondItem="AoE-Se-Cdv" secondAttribute="top" constant="6.5" id="mMi-K1-8Ve"/>
                                 <constraint firstItem="fRy-u6-uzg" firstAttribute="top" secondItem="AoE-Se-Cdv" secondAttribute="top" id="nep-ez-eng"/>
                                 <constraint firstItem="ccg-np-Eta" firstAttribute="leading" secondItem="fRy-u6-uzg" secondAttribute="trailing" constant="30" id="sKM-5J-O1v"/>
-                                <constraint firstAttribute="bottom" secondItem="iD3-vw-f18" secondAttribute="bottom" constant="10" id="sgt-Ef-NY1"/>
+                                <constraint firstAttribute="bottom" secondItem="iD3-vw-f18" secondAttribute="bottom" constant="6.5" id="sgt-Ef-NY1"/>
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="性别选定后，将不可以修改" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cei-bh-4dU">
@@ -294,5 +279,7 @@
     </objects>
     <resources>
         <image name="phone" width="11" height="21"/>
+        <image name="zhuce-nv02" width="27" height="27"/>
+        <image name="zhuce-photo" width="187" height="169"/>
     </resources>
 </document>

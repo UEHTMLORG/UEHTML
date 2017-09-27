@@ -11,4 +11,5 @@ pod 'SDWebImage'
 pod 'MJRefresh'
 pod 'MBProgressHUD', '~> 1.0.0'
 pod 'IQKeyboardManager', '~> 4.0.9'
+pod 'UICountingLabel', '~> 1.4.0'
 end

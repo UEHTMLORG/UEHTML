@@ -16,4 +16,7 @@
 #define UISelTextColorStr @"FFE010"//黄色
 #define UIDeepTextColorStr @"FBAC33"//深黄色
 #define UIBgColorStr @"F2F3F4"
+#define ChartColorStr1 @"1AA0E5"
+#define ChartColorStr2 @"FCAB37"
+#define ChartColorStr3 @"FF73BA"
 #endif /* Common_h */

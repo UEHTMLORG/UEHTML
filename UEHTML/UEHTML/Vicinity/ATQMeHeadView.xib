@@ -25,11 +25,11 @@
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIQ-Oe-dFF">
                             <rect key="frame" x="340" y="25" width="20" height="20"/>
-                            <color key="backgroundColor" red="0.98431372549019602" green="0.67450980392156867" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="fIQ-Oe-dFF" secondAttribute="height" multiplier="1:1" id="Krz-M5-Eaf"/>
                                 <constraint firstAttribute="width" constant="20" id="gZU-VQ-3dh"/>
                             </constraints>
+                            <state key="normal" image="my-shezhi"/>
                             <connections>
                                 <action selector="setupClick:" destination="zyo-4r-CQ6" eventType="touchUpInside" id="ZPS-zd-CcK"/>
                             </connections>
@@ -150,4 +150,7 @@
             <point key="canvasLocation" x="26.5" y="-264.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="my-shezhi" width="32" height="32"/>
+    </resources>
 </document>

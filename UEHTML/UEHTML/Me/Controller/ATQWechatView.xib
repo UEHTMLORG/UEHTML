@@ -22,9 +22,8 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6h0-Ak-4OV">
                             <rect key="frame" x="20" y="20" width="335" height="60"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I7k-SF-yKm">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my-weixin" translatesAutoresizingMaskIntoConstraints="NO" id="I7k-SF-yKm">
                                     <rect key="frame" x="5" y="5" width="50" height="50"/>
-                                    <color key="backgroundColor" red="1" green="0.87105861350000002" blue="0.25673982020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="I7k-SF-yKm" secondAttribute="height" multiplier="1:1" id="uBY-dd-mJE"/>
                                     </constraints>
@@ -188,4 +187,7 @@
             <point key="canvasLocation" x="75.5" y="83.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="my-weixin" width="62" height="60"/>
+    </resources>
 </document>

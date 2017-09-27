@@ -37,7 +37,8 @@
     [self.view addSubview:blankView];
     
     UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectZero];
-    imageView.backgroundColor = [UIColor greenColor];
+//    imageView.backgroundColor = [UIColor greenColor];
+    imageView.image = [UIImage imageNamed:@"my-jiao"];
     [blankView addSubview:imageView];
     
     UILabel *lab1 = [[UILabel alloc]initWithFrame:CGRectZero];

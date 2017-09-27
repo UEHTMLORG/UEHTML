@@ -10,5 +10,6 @@
 
 @interface ATQFourTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *titleLab;
+@property (weak, nonatomic) IBOutlet UIImageView *headImg;
 
 @end

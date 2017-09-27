@@ -11,5 +11,6 @@
 @interface ATQThirdTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *titleLab;
 @property (weak, nonatomic) IBOutlet UILabel *subtitleLab;
+@property (weak, nonatomic) IBOutlet UIImageView *headImg;
 
 @end

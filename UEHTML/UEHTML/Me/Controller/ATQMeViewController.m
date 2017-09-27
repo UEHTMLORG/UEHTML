@@ -24,6 +24,8 @@
 #import "ATQVisitorViewController.h"
 #import "ATQMyWechatViewController.h"
 #import "ATQMyAlbumViewController.h"
+#import "ATQBusinessViewController.h"
+#import "ATQSpreadMoenyViewController.h"
 @interface ATQMeViewController ()<UITableViewDelegate,UITableViewDataSource>{
     BOOL isBusiness;
 }
@@ -143,9 +145,14 @@
             };
             cell.vipspreadblock = ^{
                 NSLog(@"点击了推荐赚钱");
+              
+                ATQSpreadMoenyViewController *vc = [[ATQSpreadMoenyViewController alloc] init];
+                [weakself.navigationController pushViewController:vc animated:YES];
             };
             cell.vipmybusinessblock = ^{
                 NSLog(@"点击了我是代理商");
+                ATQBusinessViewController *vc = [[ATQBusinessViewController alloc] init];
+                [weakself.navigationController pushViewController:vc animated:YES];
             };
             return cell;
         }else{
@@ -187,9 +194,11 @@
         }
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         if (indexPath.row == 0) {
+            cell.headImg.image = [UIImage imageNamed:@"my-wei"];
             cell.titleLab.text = @"微信号";
             cell.subtitleLab.text = @"设置真实的微信号可以赚钱";
         }else{
+            cell.headImg.image = [UIImage imageNamed:@"my-huangguan"];
             cell.titleLab.text = @"押金认证";
             cell.subtitleLab.text = @"交付押金可以增加成功率";
         }
@@ -203,10 +212,13 @@
         }
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         if (indexPath.row == 0) {
+            cell.headImg.image = [UIImage imageNamed:@"my-laifang"];
             cell.titleLab.text = @"最近来访";
         }else if (indexPath.row == 1){
+            cell.headImg.image = [UIImage imageNamed:@"my-haoyou"];
             cell.titleLab.text = @"好友";
         }else{
+            cell.headImg.image = [UIImage imageNamed:@"my-shoucang"];
             cell.titleLab.text = @"我的收藏";
         }
         return cell;

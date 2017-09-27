@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"使用手册";
+    self.navigationItem.title = @"黑名单";
     [self setTableView];
 }
 -(void)setTableView{

@@ -20,6 +20,11 @@
 #import "ATQSetupSecrityViewController.h"
 #import "ATQUserManualViewController.h"
 #import "ATQBlackListViewController.h"
+#import "ATQOpinionViewController.h"
+#import "ATQAboutAQTViewController.h"
+#import "ATQUserInfoViewController.h"
+#import "AppDelegate.h"
+
 @interface ATQSetupViewController ()<UITableViewDelegate,UITableViewDataSource,UIAlertViewDelegate>{
     BOOL isClear;
 }
@@ -125,7 +130,7 @@
         }
         return cell;
     }else if(indexPath.section == 3){
-        if (indexPath.row == 1) {
+        if (indexPath.row == 1 || indexPath.row == 3) {
             static NSString *CellIdentifier = @"ATQSZFourTableViewCell" ;
             ATQSZFourTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
             if (cell == nil) {
@@ -133,12 +138,18 @@
                 cell = [array objectAtIndex:0];
             }
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
-            cell.titleLab.text = @"清除缓存";
-            if (isClear == YES) {
-                cell.cacheLab.text = @"";
+            if (indexPath.row == 1) {
+                cell.titleLab.text = @"清除缓存";
+                if (isClear == YES) {
+                    cell.cacheLab.text = @"";
+                }else{
+                    cell.cacheLab.text = @"5.0M";
+                }
             }else{
-                cell.cacheLab.text = @"5.0M";
+                cell.titleLab.text = @"检查更新";
+                cell.cacheLab.text = @"v1.1.0";
             }
+            
             return cell;
         }else{
             static NSString *CellIdentifier = @"ATQSZSecTableViewCell" ;
@@ -150,10 +161,8 @@
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             if (indexPath.row == 0) {
                 cell.titleLab.text = @"黑名单";
-            }else if(indexPath.row == 2){
+            }else {
                 cell.titleLab.text = @"关于凹凸";
-            }else{
-                cell.titleLab.text = @"检查更新";
             }
             return cell;
         }
@@ -167,13 +176,17 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.loginoutblock = ^{
             NSLog(@"退出登录");
+            [self performSelector:@selector(loginout) withObject:self afterDelay:0.5];
         };
         return cell;
     }
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section == 1) {
+    if (indexPath.section == 0) {
+        ATQUserInfoViewController *vc = [[ATQUserInfoViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.section == 1) {
         if (indexPath.row == 0) {
             ATQSetupSecrityViewController *vc = [[ATQSetupSecrityViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
@@ -181,6 +194,9 @@
     }else if (indexPath.section == 2){
         if (indexPath.row == 0) {
             ATQUserManualViewController *vc = [[ATQUserManualViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }else{
+            ATQOpinionViewController *vc = [[ATQOpinionViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }
     }else{
@@ -211,6 +227,9 @@
                 [self presentViewController:alertController animated:YES completion:nil];
             });
             
+        }else if (indexPath.row == 2){
+            ATQAboutAQTViewController *vc = [[ATQAboutAQTViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
         }
     }
 }
@@ -265,12 +284,8 @@
     }
 }
 
--(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    if (buttonIndex == 0) {
-        NSLog(@".....");
-    }else{
-        NSLog(@"-----");
-    }
+-(void)loginout{
+    [(AppDelegate *)[UIApplication sharedApplication].delegate openTabHomeCtrl];
 }
 
 - (void)didReceiveMemoryWarning {

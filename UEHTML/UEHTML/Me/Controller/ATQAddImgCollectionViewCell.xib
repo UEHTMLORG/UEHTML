@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ATQAddImgCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hWq-OP-hUy">
+                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="7C4-co-6a2"/>
+                            <constraint firstAttribute="width" secondItem="hWq-OP-hUy" secondAttribute="height" multiplier="1:1" id="qRx-O3-Ahl"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHc-wb-IMo">
+                        <rect key="frame" x="62" y="3" width="15" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="15" id="QFm-lM-fsD"/>
+                            <constraint firstAttribute="height" constant="15" id="xCh-nH-0C7"/>
+                        </constraints>
+                        <state key="normal" image="close"/>
+                        <connections>
+                            <action selector="delImgClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="z9U-cG-Rza"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="aHc-wb-IMo" firstAttribute="trailing" secondItem="hWq-OP-hUy" secondAttribute="trailing" constant="-3" id="5pU-gd-CHi"/>
+                <constraint firstAttribute="bottom" secondItem="hWq-OP-hUy" secondAttribute="bottom" id="DOc-LC-NDd"/>
+                <constraint firstItem="hWq-OP-hUy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="LHs-Yc-fnN"/>
+                <constraint firstAttribute="trailing" secondItem="hWq-OP-hUy" secondAttribute="trailing" id="VgL-Q4-A7Q"/>
+                <constraint firstItem="aHc-wb-IMo" firstAttribute="top" secondItem="hWq-OP-hUy" secondAttribute="top" constant="3" id="ocS-Nn-kAy"/>
+                <constraint firstItem="hWq-OP-hUy" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ypq-9h-4lV"/>
+            </constraints>
+            <connections>
+                <outlet property="delBtn" destination="aHc-wb-IMo" id="E9Q-B5-HAt"/>
+                <outlet property="selImg" destination="hWq-OP-hUy" id="7Q5-Ke-CMr"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="close" width="33" height="33"/>
+    </resources>
+</document>

@@ -9,6 +9,7 @@
 #import "ATQUserManualViewController.h"
 #import "ATQSZSecTableViewCell.h"
 #import "Masonry.h"
+#import "ATQUseNoteViewController.h"
 @interface ATQUserManualViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITableView *tableView;
 @end
@@ -81,7 +82,32 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+     ATQUseNoteViewController*vc = [[ATQUseNoteViewController alloc] init];
     
+    if (indexPath.row == 0) {
+        vc.navigationItem.title = @"凹凸圈使用协议";
+    }else if (indexPath.row == 1){
+        vc.navigationItem.title = @"凹凸圈充值协议";
+    }else if (indexPath.row == 2){
+        vc.navigationItem.title = @"凹凸圈服务保障";
+    }else if (indexPath.row == 3){
+        vc.navigationItem.title = @"关于凹凸圈";
+    }else if (indexPath.row == 4){
+        vc.navigationItem.title = @"积分规则";
+    }else if (indexPath.row == 5){
+        vc.navigationItem.title = @"红包规则";
+    }else if (indexPath.row == 6){
+        vc.navigationItem.title = @"赚钱攻略";
+    }else if (indexPath.row == 7){
+        vc.navigationItem.title = @"常见问题";
+    }else if (indexPath.row == 8){
+        vc.navigationItem.title = @"审核规范";
+    }else if (indexPath.row == 9){
+        vc.navigationItem.title = @"凹凸圈用户行为规范";
+    }else{
+        vc.navigationItem.title = @"订单提醒设置方法";
+    }
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

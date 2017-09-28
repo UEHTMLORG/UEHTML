@@ -26,9 +26,8 @@
                             <constraint firstAttribute="width" secondItem="eBC-vs-vPL" secondAttribute="height" multiplier="1:1" id="F1T-z6-VHG"/>
                         </constraints>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IIZ-LL-xma">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fujin-shiping" translatesAutoresizingMaskIntoConstraints="NO" id="IIZ-LL-xma">
                         <rect key="frame" x="55" y="55" width="20" height="20"/>
-                        <color key="backgroundColor" red="0.37026213079999998" green="0.75408679249999999" blue="0.25761969699999998" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="20" id="0zT-lY-vuo"/>
                             <constraint firstAttribute="width" secondItem="IIZ-LL-xma" secondAttribute="height" multiplier="1:1" id="Mhu-sp-qBV"/>
@@ -104,4 +103,7 @@
             <point key="canvasLocation" x="65" y="183"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="fujin-shiping" width="40" height="40"/>
+    </resources>
 </document>

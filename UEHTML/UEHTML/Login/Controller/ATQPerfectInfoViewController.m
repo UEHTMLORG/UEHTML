@@ -30,8 +30,6 @@
 }
 
 -(void)buildView{
-    self.headImg.layer.cornerRadius = 50.f;
-    self.headImg.layer.masksToBounds = YES;
     
     self.nickView.layer.masksToBounds = YES;
     self.nickView.layer.cornerRadius = 4.f;

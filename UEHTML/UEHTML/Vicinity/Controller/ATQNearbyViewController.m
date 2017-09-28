@@ -20,11 +20,13 @@
 @interface ATQNearbyViewController ()<UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource,UIScrollViewDelegate>{
     UIView *headView;
     NSMutableArray *_imageArray;//滚动图数组
+
 }
 @property (nonatomic,strong)UITableView *tableView;
 @property (strong,nonatomic)UIScrollView *imageScrollView;
 @property (strong,nonatomic)XHHPageControl *pagecontrol;
 @property (strong,nonatomic)NSTimer *timer;
+
 
 @end
 
@@ -37,6 +39,7 @@
     NSArray *array = @[@"http://img5.imgtn.bdimg.com/it/u=503735038,481712869&fm=200&gp=0.jpg",@"http://img2.imgtn.bdimg.com/it/u=3438207759,2243402979&fm=200&gp=0.jpg",@"http://img3.imgtn.bdimg.com/it/u=742446113,121668976&fm=200&gp=0.jpg"];
     [_imageArray addObjectsFromArray:array];
     [self buildheadView];
+    
 }
 
 -(void)setTableView{
@@ -264,10 +267,12 @@
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSArray *imgarr = @[@"fujin-peiliaotian",@"fujin-anmo",@"fujin-wine",@"fujin-eat",@"fujin-movie",@"fujin-sing",@"fujin-tourism",@"fujin-game",@"fujin-sport",@"fujin-other",];
+    NSArray *namearr = @[@"陪聊天",@"按摩",@"送红酒",@"吃饭",@"看电影",@"唱歌",@"旅游",@"打游戏",@"运动",@"其他",];
     if (collectionView.tag == 0) {
         ATQTagCollectionViewCell *cell = (ATQTagCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"ATQTagCollectionViewCell" forIndexPath:indexPath];
-        cell.tagImg.layer.cornerRadius = (ScreenWidth-60)/10;
-        cell.tagImg.layer.masksToBounds = YES;
+        cell.tagImg.image = [UIImage imageNamed:imgarr[indexPath.row]];
+        cell.tagLab.text = namearr[indexPath.row];
         collectionView.scrollEnabled = NO;
         return cell;
     }else{
@@ -323,6 +328,8 @@ minimumLineSpacingForSectionAtIndex:(NSInteger)section
 {
     return 0.f;
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

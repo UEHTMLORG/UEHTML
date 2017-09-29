@@ -14,7 +14,12 @@
 #import "MJExtension.h"
 #import "MJRefresh.h"
 #import "UIImageView+WebCache.h"
-@interface ATQMyAlbumViewController ()<UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource>
+#import "ATQEditPhotoViewController.h"
+@interface ATQMyAlbumViewController ()<UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource,UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,IsSecretDelegate>{
+    NSMutableArray *imgArr;
+    BOOL isSecretPhoto;
+    NSInteger selImgTag;
+}
 @property (nonatomic,strong)UITableView *tableView;
 @end
 
@@ -26,11 +31,12 @@
     UIBarButtonItem *right = [[UIBarButtonItem alloc]initWithTitle:@"上传" style:UIBarButtonItemStylePlain target:self action:@selector(shangchuan)];
     right.tintColor = [UIColor colorWithHexString:UISelTextColorStr];
     self.navigationItem.rightBarButtonItem = right;
+    imgArr = [NSMutableArray array];
     [self setTableView];
 }
 
 -(void)shangchuan{
-    
+    [self selectImage];
 }
 
 -(void)setTableView{
@@ -71,6 +77,7 @@
     cell.photoCollectionView.dataSource = self;
     
     [cell.photoCollectionView registerNib:[UINib  nibWithNibName:@"ATQPhotoCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"ATQPhotoCollectionViewCell"];
+    [cell.photoCollectionView reloadData];
     return cell;
 }
 
@@ -87,12 +94,54 @@
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     ATQPhotoCollectionViewCell *cell = (ATQPhotoCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"ATQPhotoCollectionViewCell" forIndexPath:indexPath];
+    if (imgArr.count > indexPath.row) {
+        cell.userImg.image = imgArr[indexPath.row];
+    }else{
+        cell.userImg.image = [UIImage imageNamed:@"my-jiazhaopian"];
+    }
+    
     collectionView.scrollEnabled = NO;
+    if (selImgTag == indexPath.row) {
+        if (isSecretPhoto == YES) {
+            cell.secretView.hidden = NO;
+        }else{
+            cell.secretView.hidden = YES;
+        }
+    }else{
+        cell.secretView.hidden = YES;
+    }
+    
+    
+//    cell.userImg.tag = indexPath.row;
+//    cell.userImg.userInteractionEnabled = YES;
+//    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(photoTapped:)];
+//    [cell.userImg addGestureRecognizer:singleTap];
     return cell;
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"----->%ld",indexPath.row);
+    ATQEditPhotoViewController *vc = [[ATQEditPhotoViewController alloc]init];
+    vc.image = imgArr[indexPath.row];
+    selImgTag = indexPath.row;
+    vc.isSecretdelegate  = self;
+   
+    vc.view.backgroundColor = [UIColor colorWithWhite:0 alpha:0.6];
+    if ([[[UIDevice currentDevice] systemVersion] floatValue]>=8.0) {
+        
+        vc.modalPresentationStyle=UIModalPresentationOverCurrentContext;
+        
+    }else{
+        
+        self.modalPresentationStyle=UIModalPresentationCurrentContext;
+        
+    }
+    
+    [self presentViewController:vc  animated:YES completion:^(void)
+     {
+         vc.view.superview.backgroundColor = [UIColor clearColor];
+         
+     }];
     
 }
 
@@ -107,8 +156,6 @@
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
   
     return UIEdgeInsetsMake(0, 20, 0, 20);
-    
-    
 }
 
 
@@ -126,6 +173,61 @@ minimumLineSpacingForSectionAtIndex:(NSInteger)section
 {
     return 0.f;
 }
+
+//更换头像
+-(void)selectImage{
+    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"选择照片" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:@"从相册上传" otherButtonTitles:@"拍照上传", nil];
+    [sheet showInView:self.view];
+}
+
+#pragma UIActionSheet delegate
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    NSInteger sourcetype = 0;
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        switch (buttonIndex) {
+            case 2:
+                return;
+                break;
+            case 1:
+                sourcetype = UIImagePickerControllerSourceTypeCamera;
+                break;
+            case 0:
+                sourcetype = UIImagePickerControllerSourceTypePhotoLibrary;
+                break;
+            default:
+                break;
+        }
+    }else{
+        if (buttonIndex == 2) {
+            return;
+        }else{
+            sourcetype = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+        }
+    }
+    UIImagePickerController *imggePickerVc = [[UIImagePickerController alloc]init];
+    imggePickerVc.delegate = self;
+    imggePickerVc.allowsEditing = YES;
+    imggePickerVc.sourceType = sourcetype;
+    [self presentViewController:imggePickerVc animated:NO completion:nil];
+}
+
+#pragma UIImagePickerController delegate
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
+    
+    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    [imgArr addObject:image];
+    [self.tableView reloadData];
+    //    NSData *data = UIImageJPEGRepresentation(image, 0.3);
+    //    NSString *picStr = [data base64EncodedStringWithOptions:0];
+    
+    [picker dismissViewControllerAnimated:NO completion:nil];
+}
+
+-(void)passValue:(BOOL)isSecret{
+    isSecretPhoto = isSecret;
+    [self.tableView reloadData];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

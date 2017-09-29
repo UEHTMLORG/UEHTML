@@ -14,6 +14,7 @@
     [super awakeFromNib];
     self.userImg.layer.cornerRadius = 20.f;
     self.userImg.layer.masksToBounds = YES;
+ 
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

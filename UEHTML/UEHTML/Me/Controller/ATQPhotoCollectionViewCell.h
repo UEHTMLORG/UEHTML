@@ -10,4 +10,7 @@
 
 @interface ATQPhotoCollectionViewCell : UICollectionViewCell
 
+@property (weak, nonatomic) IBOutlet UIView *secretView;
+@property (weak, nonatomic) IBOutlet UIImageView *userImg;
+
 @end

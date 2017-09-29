@@ -51,20 +51,19 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rH2-Rv-5HE">
-                            <rect key="frame" x="0.0" y="180" width="375" height="70"/>
+                            <rect key="frame" x="0.0" y="180" width="375" height="48"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kFM-pA-wyZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
-                                    <color key="backgroundColor" red="0.8862745098" green="0.45098039220000002" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="kFM-pA-wyZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
                                 </imageView>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
+                                <constraint firstAttribute="width" secondItem="rH2-Rv-5HE" secondAttribute="height" multiplier="125:16" id="69Q-9j-pJf"/>
                                 <constraint firstAttribute="bottom" secondItem="kFM-pA-wyZ" secondAttribute="bottom" id="Aza-3e-7L0"/>
                                 <constraint firstItem="kFM-pA-wyZ" firstAttribute="top" secondItem="rH2-Rv-5HE" secondAttribute="top" id="IuS-SU-Xkc"/>
                                 <constraint firstItem="kFM-pA-wyZ" firstAttribute="leading" secondItem="rH2-Rv-5HE" secondAttribute="leading" id="KRL-fq-gAc"/>
                                 <constraint firstAttribute="trailing" secondItem="kFM-pA-wyZ" secondAttribute="trailing" id="Ypq-Eq-G2h"/>
-                                <constraint firstAttribute="width" secondItem="rH2-Rv-5HE" secondAttribute="height" multiplier="75:14" id="uSY-V7-kZI"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -341,6 +340,7 @@
         </view>
     </objects>
     <resources>
+        <image name="1" width="640" height="80"/>
         <image name="zhuce-QQ" width="53" height="53"/>
         <image name="zhuce-dun" width="35" height="46"/>
         <image name="zhuce-logo" width="266" height="249"/>

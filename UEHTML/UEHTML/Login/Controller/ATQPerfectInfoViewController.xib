@@ -70,15 +70,15 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MvW-vi-2Ho">
-                    <rect key="frame" x="0.0" y="180" width="375" height="70"/>
+                    <rect key="frame" x="0.0" y="180" width="375" height="48"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V9T-gx-r0K">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
-                            <color key="backgroundColor" red="0.8862745098" green="0.45098039220000002" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="V9T-gx-r0K">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstAttribute="width" secondItem="MvW-vi-2Ho" secondAttribute="height" multiplier="125:16" id="Z3w-Iq-iMV"/>
                         <constraint firstAttribute="bottom" secondItem="V9T-gx-r0K" secondAttribute="bottom" id="hi5-Q9-ueq"/>
                         <constraint firstAttribute="trailing" secondItem="V9T-gx-r0K" secondAttribute="trailing" id="pnm-ez-ahB"/>
                         <constraint firstItem="V9T-gx-r0K" firstAttribute="leading" secondItem="MvW-vi-2Ho" secondAttribute="leading" id="qMZ-OW-iZr"/>
@@ -86,7 +86,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yh2-Sm-5t4">
-                    <rect key="frame" x="0.0" y="270" width="375" height="210"/>
+                    <rect key="frame" x="0.0" y="248" width="375" height="210"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cEK-hG-uiN">
                             <rect key="frame" x="20" y="10" width="335" height="40"/>
@@ -272,7 +272,6 @@
                 <constraint firstAttribute="trailing" secondItem="ZO3-vl-H0r" secondAttribute="trailing" id="WlR-Ff-Sho"/>
                 <constraint firstItem="ZO3-vl-H0r" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ZpG-IZ-5vN"/>
                 <constraint firstAttribute="bottom" secondItem="LLE-6w-HOy" secondAttribute="bottom" constant="30" id="e3M-oX-aap"/>
-                <constraint firstItem="MvW-vi-2Ho" firstAttribute="width" secondItem="MvW-vi-2Ho" secondAttribute="height" multiplier="75:14" id="uIy-AY-Yx1"/>
                 <constraint firstItem="yh2-Sm-5t4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="v6C-HR-BEv"/>
                 <constraint firstItem="ZO3-vl-H0r" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="wtu-cu-2sc"/>
             </constraints>
@@ -281,6 +280,7 @@
         </view>
     </objects>
     <resources>
+        <image name="2" width="640" height="80"/>
         <image name="zhuce-nan02" width="27" height="27"/>
         <image name="zhuce-nv" width="27" height="27"/>
         <image name="zhuce-nv02" width="27" height="27"/>

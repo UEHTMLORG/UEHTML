@@ -119,7 +119,7 @@
 - (void)strokeChart{
     [self loadDefault];
     [self recompute];
-    /*
+    
     PNPieChartDataItem *currentItem;
     for (int i = 0; i < _items.count; i++) {
         currentItem = [self dataItemForIndex:i];
@@ -138,7 +138,7 @@
                                                        startPercentage:startPercentage
                                                          endPercentage:endPercentage];
         [_pieLayer addSublayer:currentPieLayer];
-    }*/
+    }
     
     [self maskChart];
     

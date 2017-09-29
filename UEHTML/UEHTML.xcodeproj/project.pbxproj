@@ -43,6 +43,8 @@
 		40236C671F7BA0EC004AE37B /* ATQBillTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40236C651F7BA0EC004AE37B /* ATQBillTableViewCell.xib */; };
 		40236C6B1F7BA49F004AE37B /* ATQSpreadMoenyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40236C691F7BA49F004AE37B /* ATQSpreadMoenyViewController.m */; };
 		40236C6C1F7BA49F004AE37B /* ATQSpreadMoenyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40236C6A1F7BA49F004AE37B /* ATQSpreadMoenyViewController.xib */; };
+		4024D6641F7E1B81006E56C1 /* PZXVerificationCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4024D6611F7E1B81006E56C1 /* PZXVerificationCodeView.m */; };
+		4024D6651F7E1B81006E56C1 /* PZXVerificationTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4024D6631F7E1B81006E56C1 /* PZXVerificationTextField.m */; };
 		40260D1F1F71FEF400ED8CF1 /* ATQPerfectInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260D1D1F71FEF400ED8CF1 /* ATQPerfectInfoViewController.m */; };
 		40260D201F71FEF400ED8CF1 /* ATQPerfectInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40260D1E1F71FEF400ED8CF1 /* ATQPerfectInfoViewController.xib */; };
 		4027D80F1F79409900B45C8E /* ATQVisitorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4027D80D1F79409900B45C8E /* ATQVisitorTableViewCell.m */; };
@@ -245,6 +247,10 @@
 		40236C681F7BA49F004AE37B /* ATQSpreadMoenyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQSpreadMoenyViewController.h; sourceTree = "<group>"; };
 		40236C691F7BA49F004AE37B /* ATQSpreadMoenyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQSpreadMoenyViewController.m; sourceTree = "<group>"; };
 		40236C6A1F7BA49F004AE37B /* ATQSpreadMoenyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATQSpreadMoenyViewController.xib; sourceTree = "<group>"; };
+		4024D6601F7E1B81006E56C1 /* PZXVerificationCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PZXVerificationCodeView.h; sourceTree = "<group>"; };
+		4024D6611F7E1B81006E56C1 /* PZXVerificationCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PZXVerificationCodeView.m; sourceTree = "<group>"; };
+		4024D6621F7E1B81006E56C1 /* PZXVerificationTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PZXVerificationTextField.h; sourceTree = "<group>"; };
+		4024D6631F7E1B81006E56C1 /* PZXVerificationTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PZXVerificationTextField.m; sourceTree = "<group>"; };
 		40260D1C1F71FEF400ED8CF1 /* ATQPerfectInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQPerfectInfoViewController.h; sourceTree = "<group>"; };
 		40260D1D1F71FEF400ED8CF1 /* ATQPerfectInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQPerfectInfoViewController.m; sourceTree = "<group>"; };
 		40260D1E1F71FEF400ED8CF1 /* ATQPerfectInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATQPerfectInfoViewController.xib; sourceTree = "<group>"; };
@@ -545,6 +551,17 @@
 			path = Other;
 			sourceTree = "<group>";
 		};
+		4024D65F1F7E1B81006E56C1 /* PZXVerificationCodeTextField */ = {
+			isa = PBXGroup;
+			children = (
+				4024D6601F7E1B81006E56C1 /* PZXVerificationCodeView.h */,
+				4024D6611F7E1B81006E56C1 /* PZXVerificationCodeView.m */,
+				4024D6621F7E1B81006E56C1 /* PZXVerificationTextField.h */,
+				4024D6631F7E1B81006E56C1 /* PZXVerificationTextField.m */,
+			);
+			path = PZXVerificationCodeTextField;
+			sourceTree = "<group>";
+		};
 		40875D611F6F9A5B00B58609 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -681,6 +698,7 @@
 		409E6DBB1F50081200E3BE49 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				4024D65F1F7E1B81006E56C1 /* PZXVerificationCodeTextField */,
 				40EA93291F7BBC4D005A0E50 /* PNChart */,
 				40EA93101F7BBAD3005A0E50 /* libqrencode */,
 				40E0F2401F78B0660074B064 /* YAScrollSegmentControl */,
@@ -1348,6 +1366,7 @@
 				40EA93531F7BBC4D005A0E50 /* PNLineChartData.m in Sources */,
 				40EA93241F7BBAD3005A0E50 /* qrencode.c in Sources */,
 				188F843A1F739BD30037213D /* ComplainViewController.m in Sources */,
+				4024D6651F7E1B81006E56C1 /* PZXVerificationTextField.m in Sources */,
 				409E6D891F5003DA00E3BE49 /* AppDelegate.m in Sources */,
 				40EA93221F7BBAD3005A0E50 /* mask.c in Sources */,
 				40E93DE41F7775490018C3F5 /* ATQThirdTableViewCell.m in Sources */,
@@ -1413,6 +1432,7 @@
 				40E0F2431F78B0660074B064 /* YAScrollSegmentControl.m in Sources */,
 				407F9BCE1F6634360043A87A /* ATQBaseViewController.m in Sources */,
 				40E0F2571F78D0BB0074B064 /* ATQSZThiTableViewCell.m in Sources */,
+				4024D6641F7E1B81006E56C1 /* PZXVerificationCodeView.m in Sources */,
 				40F085A91F74FE7200C5986C /* ATQRecPerCollectionViewCell.m in Sources */,
 				40236C381F7B7BFE004AE37B /* ATQOpinionTableViewCell.m in Sources */,
 				40E0F2611F78DC480074B064 /* ATQSZLoginOutTableViewCell.m in Sources */,
@@ -1567,6 +1587,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = K7B37N4V6S;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UEHTML/Login/Controller/FaceRecognition/frameworks",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/UEHTML/Commons/PrefixHeader.pch";
 				INFOPLIST_FILE = UEHTML/Info.plist;
@@ -1583,6 +1607,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = K7B37N4V6S;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UEHTML/Login/Controller/FaceRecognition/frameworks",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/UEHTML/Commons/PrefixHeader.pch";
 				INFOPLIST_FILE = UEHTML/Info.plist;

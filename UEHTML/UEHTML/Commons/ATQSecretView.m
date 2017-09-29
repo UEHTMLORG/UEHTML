@@ -83,15 +83,15 @@
 - (void)textFieldDidChange:(UITextField *)textField
 {
     NSLog(@"%@", textField.text);
-//    for (UIView *dotView in self.dotArray) {
-//        dotView.hidden = YES;
-//    }
-//    for (int i = 0; i < textField.text.length; i++) {
-//        ((UIView *)[self.dotArray objectAtIndex:i]).hidden = NO;
-//    }
-//    if (textField.text.length == kDotCount) {
-//        NSLog(@"输入完毕");
-//    }
+    for (UIView *dotView in self.dotArray) {
+        dotView.hidden = YES;
+    }
+    for (int i = 0; i < textField.text.length; i++) {
+        ((UIView *)[self.dotArray objectAtIndex:i]).hidden = NO;
+    }
+    if (textField.text.length == kDotCount) {
+        NSLog(@"输入完毕");
+    }
 }
 
 #pragma mark - init

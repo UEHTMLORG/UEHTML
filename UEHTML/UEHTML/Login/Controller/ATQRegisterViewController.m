@@ -7,6 +7,7 @@
 //
 
 #import "ATQRegisterViewController.h"
+#import "ATQLoginViewController.h"
 #import "ATQPerfectInfoViewController.h"
 #import "UIColor+LhkhColor.h"
 #import "ATQBindPhoneViewController.h"
@@ -22,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"注册凹凸圈";
-    UIBarButtonItem *right = [[UIBarButtonItem alloc ]initWithTitle:@"登录" style:UIBarButtonItemStylePlain target:self action:@selector(back:)];
+    UIBarButtonItem *right = [[UIBarButtonItem alloc ]initWithTitle:@"登录" style:UIBarButtonItemStylePlain target:self action:@selector(login)];
     self.navigationItem.rightBarButtonItem = right;
     if (ScreenWidth <= 320) {
         self.TextTop.constant = 10;
@@ -59,6 +60,10 @@
 //返回
 - (void)back:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
+}
+-(void)login{
+    ATQLoginViewController *vc = [[ATQLoginViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 //获取验证码
 - (IBAction)getCode:(id)sender {

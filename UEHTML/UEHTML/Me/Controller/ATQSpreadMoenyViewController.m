@@ -41,12 +41,12 @@
     [self.pieChart strokeChart];
     
     
-    self.pieChart.legendStyle = PNLegendItemStyleStacked;
-    self.pieChart.legendFont = [UIFont boldSystemFontOfSize:12.0f];
-    
-    UIView *legend = [self.pieChart getLegendWithMaxWidth:200];
-    [legend setFrame:CGRectMake(130, 350, legend.frame.size.width, legend.frame.size.height)];
-    [self.view addSubview:legend];
+//    self.pieChart.legendStyle = PNLegendItemStyleStacked;
+//    self.pieChart.legendFont = [UIFont boldSystemFontOfSize:12.0f];
+//    
+//    UIView *legend = [self.pieChart getLegendWithMaxWidth:200];
+//    [legend setFrame:CGRectMake(130, 350, legend.frame.size.width, legend.frame.size.height)];
+//    [self.view addSubview:legend];
     
     [self.pieChatView addSubview:self.pieChart];
 }

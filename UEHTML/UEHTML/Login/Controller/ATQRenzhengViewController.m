@@ -8,18 +8,71 @@
 
 #import "ATQRenzhengViewController.h"
 
-@interface ATQRenzhengViewController ()
-
+@interface ATQRenzhengViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@property (strong, nonatomic) UIImagePickerController *pickerController;
 @end
 
 @implementation ATQRenzhengViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor brownColor];
+    [self takePhoto];
 }
 - (IBAction)back:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (UIImagePickerController *)pickerController{
+    
+    if (!_pickerController) {
+        
+        _pickerController = [[UIImagePickerController alloc]init];
+        _pickerController.delegate = self;
+        _pickerController.view.backgroundColor = [UIColor redColor];
+        _pickerController.allowsEditing = NO;
+        
+    }
+    return _pickerController;
+}
+
+/**
+ 拍照
+ */
+- (void)takePhoto {
+    
+//    if(![self checkLibraryAndCameraAuthStatus]) return;
+    
+    // 调用相机
+    if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera]) {
+        //系统相机
+        self.pickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+        
+        //设置默认调用后置摄像头
+        _pickerController.cameraDevice = UIImagePickerControllerCameraDeviceFront;
+        [self presentViewController:_pickerController animated:YES completion:nil];
+        
+    } else {
+        NSLog(@"模拟器中无法打开照相机,请在真机中使用");
+    }
+}
+
+- (void)imagePickerController:(UIImagePickerController*)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    [picker dismissViewControllerAnimated:YES completion:^{
+        UIImage *userImage = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+        
+        NSLog(@"%@",userImage);
+        
+    }];
+    
+}
+
+
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    if ([picker isKindOfClass:[UIImagePickerController class]]) {
+        [picker dismissViewControllerAnimated:YES completion:nil];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

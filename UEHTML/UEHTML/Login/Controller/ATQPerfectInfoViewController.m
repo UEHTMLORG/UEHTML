@@ -73,7 +73,8 @@
 //下一步
 - (IBAction)nextClick:(id)sender {
     ATQRenzhengViewController *vc = [[ATQRenzhengViewController alloc]init];
-    [self presentViewController:vc animated:YES completion:nil];
+//    [self presentViewController:vc animated:YES completion:nil];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 -(void)setblackView{

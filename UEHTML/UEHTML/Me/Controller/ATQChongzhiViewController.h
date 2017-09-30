@@ -10,6 +10,9 @@
 
 @interface ATQChongzhiViewController : ATQBaseViewController
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (weak, nonatomic) IBOutlet UIButton *sureBtn;
+@property (weak, nonatomic) IBOutlet UIView *jineView;
+@property (weak, nonatomic) IBOutlet UIButton *wechatBtn;
+@property (weak, nonatomic) IBOutlet UIButton *aliBtn;
+
 
 @end

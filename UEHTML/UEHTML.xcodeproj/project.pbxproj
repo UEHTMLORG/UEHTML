@@ -76,6 +76,7 @@
 		409E6D891F5003DA00E3BE49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 409E6D881F5003DA00E3BE49 /* AppDelegate.m */; };
 		409E6D9F1F5003DA00E3BE49 /* UEHTMLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 409E6D9E1F5003DA00E3BE49 /* UEHTMLTests.m */; };
 		409E6DAA1F5003DA00E3BE49 /* UEHTMLUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 409E6DA91F5003DA00E3BE49 /* UEHTMLUITests.m */; };
+		40CB01FA1F7FFCD0000E82A5 /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 40CB01F91F7FFCD0000E82A5 /* MBProgressHUD+Add.m */; };
 		40D353B11F7F26B90017DA5C /* ATQMyAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D353B01F7F26B90017DA5C /* ATQMyAccountViewController.m */; };
 		40D353B51F7F2B900017DA5C /* ATQAccountFirTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D353B31F7F2B900017DA5C /* ATQAccountFirTableViewCell.m */; };
 		40D353B61F7F2B900017DA5C /* ATQAccountFirTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40D353B41F7F2B900017DA5C /* ATQAccountFirTableViewCell.xib */; };
@@ -325,6 +326,8 @@
 		409E6DA51F5003DA00E3BE49 /* UEHTMLUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UEHTMLUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		409E6DA91F5003DA00E3BE49 /* UEHTMLUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UEHTMLUITests.m; sourceTree = "<group>"; };
 		409E6DAB1F5003DA00E3BE49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40CB01F81F7FFCD0000E82A5 /* MBProgressHUD+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Add.h"; sourceTree = "<group>"; };
+		40CB01F91F7FFCD0000E82A5 /* MBProgressHUD+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Add.m"; sourceTree = "<group>"; };
 		40D353AF1F7F26B90017DA5C /* ATQMyAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQMyAccountViewController.h; sourceTree = "<group>"; };
 		40D353B01F7F26B90017DA5C /* ATQMyAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQMyAccountViewController.m; sourceTree = "<group>"; };
 		40D353B21F7F2B900017DA5C /* ATQAccountFirTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQAccountFirTableViewCell.h; path = UEHTML/Me/Controller/ATQAccountFirTableViewCell.h; sourceTree = SOURCE_ROOT; };
@@ -758,6 +761,8 @@
 				407F9BC61F6633870043A87A /* UIImage+LhkhExtension.m */,
 				407F9BC71F6633870043A87A /* UIView+LhkhExtension.h */,
 				407F9BC81F6633870043A87A /* UIView+LhkhExtension.m */,
+				40CB01F81F7FFCD0000E82A5 /* MBProgressHUD+Add.h */,
+				40CB01F91F7FFCD0000E82A5 /* MBProgressHUD+Add.m */,
 				407F9BE91F664AF50043A87A /* PrefixHeader.pch */,
 				407F9BEA1F664B0F0043A87A /* Common.h */,
 			);
@@ -1458,6 +1463,7 @@
 				40E0F2361F78A1FA0074B064 /* ATQYajinRZViewController.m in Sources */,
 				40EA93261F7BBAD3005A0E50 /* qrspec.c in Sources */,
 				40FEA5CA1F73B40000D6EB89 /* ATQNearbyViewController.m in Sources */,
+				40CB01FA1F7FFCD0000E82A5 /* MBProgressHUD+Add.m in Sources */,
 				40EA934C1F7BBC4D005A0E50 /* PNBar.m in Sources */,
 				40D353C91F7F44140017DA5C /* ATQChongzhiViewController.m in Sources */,
 				407F9BD71F66364C0043A87A /* ATQVicintyViewController.m in Sources */,

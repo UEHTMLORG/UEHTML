@@ -12,9 +12,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ATQChongzhiViewController">
             <connections>
+                <outlet property="aliBtn" destination="QRy-xn-hhz" id="tiJ-zb-TdB"/>
+                <outlet property="jineView" destination="ypP-6Y-5uZ" id="KfR-Db-wEo"/>
                 <outlet property="scrollView" destination="7Ii-0c-AZq" id="5Ft-Yj-j1n"/>
-                <outlet property="sureBtn" destination="MTy-K4-V5E" id="MZg-KK-qEt"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="wechatBtn" destination="YXG-7V-L6c" id="Px5-mt-GlS"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -26,10 +28,10 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zSn-9N-Pu5">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xhN-Bd-9qS">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="267"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="334"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fMx-Sv-9Vy">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
@@ -122,6 +124,9 @@
                                                             </constraints>
                                                             <state key="normal" image="zhanghu-dian02"/>
                                                             <state key="selected" image="zhanghu-dian"/>
+                                                            <connections>
+                                                                <action selector="wechatPay:" destination="-1" eventType="touchUpInside" id="9r6-kA-ie4"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gn3-UZ-I3q">
                                                             <rect key="frame" x="50" y="0.0" width="140" height="30"/>
@@ -132,6 +137,9 @@
                                                             <state key="normal" title="微信支付" image="zhanghu-weixin1">
                                                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="wechatPay:" destination="-1" eventType="touchUpInside" id="fpT-Bp-Cst"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -154,6 +162,9 @@
                                                             </constraints>
                                                             <state key="normal" image="zhanghu-dian02"/>
                                                             <state key="selected" image="zhanghu-dian"/>
+                                                            <connections>
+                                                                <action selector="AliPay:" destination="-1" eventType="touchUpInside" id="dzT-KM-Vo4"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gvf-Tk-41b">
                                                             <rect key="frame" x="50" y="0.0" width="160" height="30"/>
@@ -165,6 +176,9 @@
                                                             <state key="normal" title="支付宝支付" image="zhanghu-zhifu1">
                                                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="AliPay:" destination="-1" eventType="touchUpInside" id="4ss-pB-xKz"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -176,31 +190,53 @@
                                                         <constraint firstAttribute="bottom" secondItem="Gvf-Tk-41b" secondAttribute="bottom" id="ydb-3d-L4n"/>
                                                     </constraints>
                                                 </view>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTy-K4-V5E">
-                                                    <rect key="frame" x="20" y="150" width="335" height="30"/>
-                                                    <color key="backgroundColor" red="1" green="0.45098039220000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wti-P1-FYp">
+                                                    <rect key="frame" x="0.0" y="150" width="375" height="30"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTy-K4-V5E">
+                                                            <rect key="frame" x="20" y="0.0" width="335" height="30"/>
+                                                            <color key="backgroundColor" red="1" green="0.45098039220000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="HwE-wX-EI5"/>
+                                                            </constraints>
+                                                            <state key="normal" title="确认充值"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="4"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="sureClick:" destination="-1" eventType="touchUpInside" id="Ous-QT-lca"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="HwE-wX-EI5"/>
+                                                        <constraint firstAttribute="height" constant="30" id="Bak-Qg-a3n"/>
+                                                        <constraint firstAttribute="bottom" secondItem="MTy-K4-V5E" secondAttribute="bottom" id="HfJ-jC-sro"/>
+                                                        <constraint firstItem="MTy-K4-V5E" firstAttribute="top" secondItem="wti-P1-FYp" secondAttribute="top" id="Q2D-yM-UR8"/>
+                                                        <constraint firstAttribute="trailing" secondItem="MTy-K4-V5E" secondAttribute="trailing" constant="20" id="ZHp-KC-yJM"/>
+                                                        <constraint firstItem="MTy-K4-V5E" firstAttribute="leading" secondItem="wti-P1-FYp" secondAttribute="leading" constant="20" id="zvf-Do-F1u"/>
                                                     </constraints>
-                                                    <state key="normal" title="确认充值"/>
-                                                </button>
+                                                </view>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="zzp-9q-1l3" firstAttribute="centerY" secondItem="nxe-zB-rxP" secondAttribute="centerY" id="9jf-xJ-UJi"/>
                                                 <constraint firstItem="zzp-9q-1l3" firstAttribute="leading" secondItem="nxe-zB-rxP" secondAttribute="trailing" constant="20" id="Bfk-gM-EYr"/>
                                                 <constraint firstItem="arz-LK-7Xr" firstAttribute="top" secondItem="nxe-zB-rxP" secondAttribute="bottom" constant="20" id="FCd-em-xHa"/>
+                                                <constraint firstAttribute="bottom" secondItem="wti-P1-FYp" secondAttribute="bottom" id="GYq-bR-fy1"/>
                                                 <constraint firstItem="ItW-PU-cjE" firstAttribute="top" secondItem="arz-LK-7Xr" secondAttribute="bottom" constant="10" id="Gfx-eo-QQE"/>
                                                 <constraint firstItem="ItW-PU-cjE" firstAttribute="leading" secondItem="NRy-3c-8ty" secondAttribute="leading" id="InF-bH-GIW"/>
                                                 <constraint firstAttribute="height" constant="180" id="JGJ-q5-4uq"/>
                                                 <constraint firstAttribute="trailing" secondItem="arz-LK-7Xr" secondAttribute="trailing" id="MfS-Ob-uBc"/>
-                                                <constraint firstAttribute="bottom" secondItem="MTy-K4-V5E" secondAttribute="bottom" id="Qd7-0x-q5w"/>
+                                                <constraint firstItem="wti-P1-FYp" firstAttribute="leading" secondItem="NRy-3c-8ty" secondAttribute="leading" id="TL2-eZ-tco"/>
                                                 <constraint firstItem="nxe-zB-rxP" firstAttribute="centerX" secondItem="NRy-3c-8ty" secondAttribute="centerX" id="ToH-rv-oKX"/>
+                                                <constraint firstAttribute="trailing" secondItem="wti-P1-FYp" secondAttribute="trailing" id="hxn-xP-5LV"/>
                                                 <constraint firstItem="nxe-zB-rxP" firstAttribute="top" secondItem="NRy-3c-8ty" secondAttribute="top" constant="5" id="i1k-NI-76J"/>
                                                 <constraint firstAttribute="trailing" secondItem="ItW-PU-cjE" secondAttribute="trailing" id="iuw-fe-JRT"/>
                                                 <constraint firstItem="5kc-nV-0rg" firstAttribute="centerY" secondItem="nxe-zB-rxP" secondAttribute="centerY" id="jyA-Rn-qib"/>
-                                                <constraint firstAttribute="trailing" secondItem="MTy-K4-V5E" secondAttribute="trailing" constant="20" id="lWa-k3-zGF"/>
-                                                <constraint firstItem="MTy-K4-V5E" firstAttribute="leading" secondItem="NRy-3c-8ty" secondAttribute="leading" constant="20" id="mOw-e8-f0Z"/>
                                                 <constraint firstAttribute="trailing" secondItem="zzp-9q-1l3" secondAttribute="trailing" id="mjV-3W-H42"/>
                                                 <constraint firstItem="arz-LK-7Xr" firstAttribute="leading" secondItem="NRy-3c-8ty" secondAttribute="leading" id="qc2-1Q-ijM"/>
                                                 <constraint firstItem="5kc-nV-0rg" firstAttribute="leading" secondItem="NRy-3c-8ty" secondAttribute="leading" id="rz6-Zt-uOs"/>
@@ -283,7 +319,7 @@
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="600" id="8hv-4R-AOC"/>
+                                <constraint firstAttribute="height" constant="667" id="8hv-4R-AOC"/>
                                 <constraint firstItem="xhN-Bd-9qS" firstAttribute="top" secondItem="zSn-9N-Pu5" secondAttribute="top" id="BBu-5j-ePD"/>
                                 <constraint firstAttribute="trailing" secondItem="xhN-Bd-9qS" secondAttribute="trailing" id="HLI-Nh-JQ9"/>
                                 <constraint firstItem="xhN-Bd-9qS" firstAttribute="leading" secondItem="zSn-9N-Pu5" secondAttribute="leading" id="QqZ-01-asG"/>
@@ -301,7 +337,7 @@
                     </constraints>
                 </scrollView>
             </subviews>
-            <color key="backgroundColor" red="0.94879966974258423" green="0.95294338464736938" blue="0.95695537328720093" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.94901960784313721" green="0.95294117647058818" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="7Ii-0c-AZq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="1JY-vL-uZe"/>
                 <constraint firstAttribute="trailing" secondItem="7Ii-0c-AZq" secondAttribute="trailing" id="N3N-su-jEo"/>

@@ -62,8 +62,8 @@
     float origin = -3;
     vc.tabBarItem.imageInsets = UIEdgeInsetsMake(origin, 0, -origin, 0);
     vc.tabBarItem.titlePositionAdjustment = UIOffsetMake(6, -6);
-    [vc.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName :[UIColor grayColor],NSFontAttributeName:[UIFont systemFontOfSize:10]} forState:UIControlStateNormal];
-    [vc.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName :[UIColor colorWithHexString:UIColorStr],NSFontAttributeName:[UIFont systemFontOfSize:10]} forState:UIControlStateSelected];
+    [vc.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName :[UIColor grayColor],NSFontAttributeName:[UIFont systemFontOfSize:12]} forState:UIControlStateNormal];
+    [vc.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName :[UIColor colorWithHexString:UIColorStr],NSFontAttributeName:[UIFont systemFontOfSize:12]} forState:UIControlStateSelected];
     vc.tabBarItem.title = title;
     
     /*==========ZL注释start===========

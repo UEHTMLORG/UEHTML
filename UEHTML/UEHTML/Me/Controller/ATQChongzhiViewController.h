@@ -10,5 +10,6 @@
 
 @interface ATQChongzhiViewController : ATQBaseViewController
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIButton *sureBtn;
 
 @end

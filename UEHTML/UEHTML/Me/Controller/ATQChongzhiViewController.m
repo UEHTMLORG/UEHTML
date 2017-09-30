@@ -8,7 +8,7 @@
 
 #import "ATQChongzhiViewController.h"
 
-@interface ATQChongzhiViewController ()<UIScrollViewDelegate>
+@interface ATQChongzhiViewController ()
 
 @end
 
@@ -17,9 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"账户充值";
-    self.scrollView.delegate = self;
-    self.scrollView.contentSize = CGSizeMake(ScreenWidth, 1000);
-    
+    self.scrollView.contentSize = CGSizeMake(ScreenWidth, 600);
+    self.sureBtn.layer.cornerRadius = 4.f;
+    self.sureBtn.layer.masksToBounds = YES;
 }
 
 - (void)didReceiveMemoryWarning {

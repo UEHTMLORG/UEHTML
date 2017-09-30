@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "zhanghu-zhifu.png",
+      "filename" : "zhanghu-zhifu1.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "zhanghu-zhifu@2x.png",
+      "filename" : "zhanghu-zhifu1@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "zhanghu-zhifu@3x.png",
+      "filename" : "zhanghu-zhifu1@3x.png",
       "scale" : "3x"
     }
   ],

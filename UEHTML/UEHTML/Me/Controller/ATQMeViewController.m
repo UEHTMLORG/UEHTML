@@ -26,6 +26,7 @@
 #import "ATQMyAlbumViewController.h"
 #import "ATQBusinessViewController.h"
 #import "ATQSpreadMoenyViewController.h"
+#import "ATQMyAccountViewController.h"
 @interface ATQMeViewController ()<UITableViewDelegate,UITableViewDataSource>{
     BOOL isBusiness;
 }
@@ -137,6 +138,8 @@
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             cell.vipmyaccountblock = ^(){
                 NSLog(@"点击了我的账户");
+                ATQMyAccountViewController *vc = [[ATQMyAccountViewController alloc] init];
+                [weakself.navigationController pushViewController:vc animated:YES];
             };
             cell.vipmyalbumblock = ^{
                 NSLog(@"点击了我的相册");
@@ -165,12 +168,18 @@
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             cell.myaccountblock = ^(){
                 NSLog(@"点击了我的账户");
+                ATQMyAccountViewController *vc = [[ATQMyAccountViewController alloc] init];
+                [weakself.navigationController pushViewController:vc animated:YES];
             };
             cell.myalbumblock = ^{
                 NSLog(@"点击了我的相册");
+                ATQMyAlbumViewController *vc = [[ATQMyAlbumViewController alloc] init];
+                [weakself.navigationController pushViewController:vc animated:YES];
             };
             cell.spreadblock = ^{
                 NSLog(@"点击了推荐赚钱");
+                ATQSpreadMoenyViewController *vc = [[ATQSpreadMoenyViewController alloc] init];
+                [weakself.navigationController pushViewController:vc animated:YES];
             };
             return cell;
         }

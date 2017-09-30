@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ATQAccountSecTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="59.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PIS-HH-qbD">
+                        <rect key="frame" x="20" y="0.0" width="50" height="60"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zhanghu-hua" translatesAutoresizingMaskIntoConstraints="NO" id="6Lb-xX-U4T">
+                                <rect key="frame" x="10" y="5" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="52y-XC-rOg"/>
+                                    <constraint firstAttribute="width" secondItem="6Lb-xX-U4T" secondAttribute="height" multiplier="1:1" id="QY8-LJ-lbc"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="花 98" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7nc-wm-Pkg">
+                                <rect key="frame" x="0.0" y="38" width="50" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7nc-wm-Pkg" firstAttribute="leading" secondItem="PIS-HH-qbD" secondAttribute="leading" id="0tc-lu-slF"/>
+                            <constraint firstItem="6Lb-xX-U4T" firstAttribute="centerX" secondItem="PIS-HH-qbD" secondAttribute="centerX" id="BFG-zo-3sX"/>
+                            <constraint firstAttribute="trailing" secondItem="7nc-wm-Pkg" secondAttribute="trailing" id="OLF-bV-kzf"/>
+                            <constraint firstAttribute="width" constant="50" id="OfF-2y-GVj"/>
+                            <constraint firstAttribute="bottom" secondItem="7nc-wm-Pkg" secondAttribute="bottom" constant="5" id="aVi-IL-rLe"/>
+                            <constraint firstItem="6Lb-xX-U4T" firstAttribute="top" secondItem="PIS-HH-qbD" secondAttribute="top" constant="5" id="c5u-uR-2gH"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="每满一百朵花，系统会自动结算成现金到您的账户。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VXl-XP-rHb">
+                        <rect key="frame" x="90" y="13.5" width="210" height="33.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="VXl-XP-rHb" firstAttribute="leading" secondItem="PIS-HH-qbD" secondAttribute="trailing" constant="20" id="Al1-Ec-pMa"/>
+                </constraints>
+            </tableViewCellContentView>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="VXl-XP-rHb" secondAttribute="trailing" constant="20" id="ORu-b7-rcI"/>
+                <constraint firstItem="VXl-XP-rHb" firstAttribute="centerY" secondItem="KGk-i7-Jjw" secondAttribute="centerY" id="QiJ-ee-Q9X"/>
+                <constraint firstItem="PIS-HH-qbD" firstAttribute="leading" secondItem="KGk-i7-Jjw" secondAttribute="leading" constant="20" id="d09-m5-ZFs"/>
+                <constraint firstItem="PIS-HH-qbD" firstAttribute="top" secondItem="KGk-i7-Jjw" secondAttribute="top" id="p84-5n-GtQ"/>
+                <constraint firstAttribute="bottom" secondItem="PIS-HH-qbD" secondAttribute="bottom" id="yKQ-rB-Su4"/>
+            </constraints>
+            <connections>
+                <outlet property="huaLab" destination="7nc-wm-Pkg" id="9z5-rC-8ms"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="zhanghu-hua" width="60" height="60"/>
+    </resources>
+</document>

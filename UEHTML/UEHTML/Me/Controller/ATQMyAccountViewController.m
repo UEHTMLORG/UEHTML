@@ -8,7 +8,10 @@
 
 #import "ATQMyAccountViewController.h"
 #import "ATQCheckViewController.h"
+#import "ATQBuyVipViewController.h"
+#import "ATQBuyJinbiViewController.h"
 #import "ATQChongzhiViewController.h"
+#import "ATQMyliftViewController.h"
 #import "ATQAccountFirTableViewCell.h"
 #import "ATQAccountSecTableViewCell.h"
 #import "ATQAccountThiTableViewCell.h"
@@ -87,6 +90,7 @@
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    __weak typeof(self) weakself = self;
     if (indexPath.section == 0) {
         static NSString *CellIdentifier = @"ATQAccountFirTableViewCell" ;
         ATQAccountFirTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -95,6 +99,18 @@
             cell = [array objectAtIndex:0];
         }
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.jinbiblock = ^{
+            ATQBuyJinbiViewController *vc = [[ATQBuyJinbiViewController alloc] init];
+            [weakself.navigationController pushViewController:vc animated:YES];
+        };
+        cell.liwublock = ^{
+            ATQMyliftViewController *vc = [[ATQMyliftViewController alloc] init];
+            [weakself.navigationController pushViewController:vc animated:YES];
+        };
+        cell.vipblock = ^{
+            ATQBuyVipViewController *vc = [[ATQBuyVipViewController alloc] init];
+            [weakself.navigationController pushViewController:vc animated:YES];
+        };
         return cell;
     }else if (indexPath.section == 1){
         static NSString *CellIdentifier = @"ATQAccountSecTableViewCell" ;

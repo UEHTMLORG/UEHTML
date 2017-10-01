@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ATQMyliftViewController">
+            <connections>
+                <outlet property="liftCollectionView" destination="b2t-j8-SZs" id="3pq-tt-K9k"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QWb-xo-Mus">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zhanghu-li" translatesAutoresizingMaskIntoConstraints="NO" id="Sfe-x0-MOt">
+                            <rect key="frame" x="20" y="5" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="Sfe-x0-MOt" secondAttribute="height" multiplier="1:1" id="H35-Pu-uwd"/>
+                                <constraint firstAttribute="height" constant="40" id="HST-cP-A4E"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="礼物会自动转化为现金到您的账户中" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fk7-bX-qbX">
+                            <rect key="frame" x="70" y="5" width="285" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="HaL-SK-xBK"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Sfe-x0-MOt" firstAttribute="leading" secondItem="QWb-xo-Mus" secondAttribute="leading" constant="20" id="FPH-e1-Ohu"/>
+                        <constraint firstAttribute="trailing" secondItem="Fk7-bX-qbX" secondAttribute="trailing" constant="20" id="Gan-i1-u25"/>
+                        <constraint firstAttribute="height" constant="50" id="PUV-yI-7u6"/>
+                        <constraint firstItem="Sfe-x0-MOt" firstAttribute="centerY" secondItem="QWb-xo-Mus" secondAttribute="centerY" id="clc-Qr-3JM"/>
+                        <constraint firstItem="Fk7-bX-qbX" firstAttribute="leading" secondItem="Sfe-x0-MOt" secondAttribute="trailing" constant="10" id="in6-1P-tKa"/>
+                        <constraint firstItem="Fk7-bX-qbX" firstAttribute="centerY" secondItem="QWb-xo-Mus" secondAttribute="centerY" id="sMw-4R-q7N"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="b2t-j8-SZs">
+                    <rect key="frame" x="0.0" y="50" width="375" height="617"/>
+                    <color key="backgroundColor" red="0.94487851860000005" green="0.94902163740000001" blue="0.95303434129999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="P6t-mC-X47">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="YHI-fi-JWX"/>
+                        <outlet property="delegate" destination="-1" id="dMu-Al-QCD"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="b2t-j8-SZs" secondAttribute="trailing" id="MAJ-KV-YQf"/>
+                <constraint firstItem="b2t-j8-SZs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Moy-bU-JCQ"/>
+                <constraint firstAttribute="bottom" secondItem="b2t-j8-SZs" secondAttribute="bottom" id="RFG-Q6-Nfr"/>
+                <constraint firstItem="QWb-xo-Mus" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Vy0-vt-3RW"/>
+                <constraint firstItem="b2t-j8-SZs" firstAttribute="top" secondItem="QWb-xo-Mus" secondAttribute="bottom" id="Wua-dN-PDB"/>
+                <constraint firstItem="QWb-xo-Mus" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="XqD-MU-3ZQ"/>
+                <constraint firstAttribute="trailing" secondItem="QWb-xo-Mus" secondAttribute="trailing" id="bsd-h5-eVz"/>
+            </constraints>
+            <point key="canvasLocation" x="52.5" y="97.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="zhanghu-li" width="50" height="50"/>
+    </resources>
+</document>

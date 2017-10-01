@@ -15,10 +15,19 @@
     // Initialization code
 }
 - (IBAction)jinbiClick:(id)sender {
+    if (_jinbiblock) {
+        _jinbiblock();
+    }
 }
 - (IBAction)liwuClick:(id)sender {
+    if (_liwublock) {
+        _liwublock();
+    }
 }
 - (IBAction)vipClick:(id)sender {
+    if (_vipblock) {
+        _vipblock();
+    }
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

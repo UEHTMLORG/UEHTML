@@ -7,6 +7,7 @@
 //
 
 #import "ATQVisitorViewController.h"
+#import "ATQBuyVipViewController.h"
 #import "ATQVisitorTableViewCell.h"
 #import "YAScrollSegmentControl.h"
 #import "UIColor+LhkhColor.h"
@@ -29,7 +30,8 @@
     [self buildTitleView];
     [self  buildBlankView];
     [self setTableView];
-     blankView.hidden = YES;
+//     blankView.hidden = YES;
+    self.tableView.hidden = YES;
 }
 
 -(void)buildBlankView{
@@ -168,6 +170,8 @@
 
 -(void)gotoVip{
     NSLog(@"gotoVip");
+    ATQBuyVipViewController *vc = [[ATQBuyVipViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 -(void)right{

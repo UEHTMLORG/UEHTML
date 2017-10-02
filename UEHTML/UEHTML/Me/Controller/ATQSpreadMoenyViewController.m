@@ -18,11 +18,36 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"推广赚钱";
+    [self buildAttributeStr];
     [self buildQRCodeView ];
     [self buildPieChartView ];
-    
 }
+
+-(void)buildAttributeStr{
+    NSScanner *scanner1 = [NSScanner scannerWithString:self.tuijianLab.text];
+    [scanner1 scanUpToCharactersFromSet:[NSCharacterSet decimalDigitCharacterSet] intoString:nil];
+    int number;
+    [scanner1 scanInt:&number];
+    NSString *num=[NSString stringWithFormat:@"%d",number];
+    
+    NSMutableAttributedString *str1 = [[NSMutableAttributedString alloc]initWithString:self.tuijianLab.text];
+    [str1 addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithHexString:UIDeepTextColorStr] range:NSMakeRange(self.tuijianLab.text.length - num.length, num.length)];
+    self.tuijianLab.attributedText = str1;
+    
+    
+    NSScanner *scanner2 = [NSScanner scannerWithString:self.tuijianRSLab.text];
+    [scanner2 scanUpToCharactersFromSet:[NSCharacterSet decimalDigitCharacterSet] intoString:nil];
+    int number2;
+    [scanner2 scanInt:&number2];
+    NSString *num2=[NSString stringWithFormat:@"%d",number2];
+    
+    NSMutableAttributedString *str2 = [[NSMutableAttributedString alloc]initWithString:self.tuijianRSLab.text];
+    [str2 addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithHexString:UIColorStr] range:NSMakeRange(self.tuijianRSLab.text.length - num2.length-1, num2.length)];
+    self.tuijianRSLab.attributedText = str2;
+}
+
 -(void)buildQRCodeView{
+    
     self.qrCodeImg.image = [QRCodeGenerator qrImageForString:@"http://www.matrojp.com/?m=webview&s=download" imageSize:self.qrCodeImg.bounds.size.width];
 }
 -(void)buildPieChartView{

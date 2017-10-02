@@ -14,6 +14,8 @@
             <connections>
                 <outlet property="pieChatView" destination="Suk-Di-BNe" id="tmy-ga-hkl"/>
                 <outlet property="qrCodeImg" destination="kyE-2d-6Rf" id="sG8-Dy-zvl"/>
+                <outlet property="tuijianLab" destination="NRI-Fz-F37" id="arv-vu-I2b"/>
+                <outlet property="tuijianRSLab" destination="TZ8-OC-mHL" id="iby-n0-6Df"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -25,7 +27,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m74-pi-KLR">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="210"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您的推荐码是 3456789" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NRI-Fz-F37">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您的推荐码是 345678" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NRI-Fz-F37">
                             <rect key="frame" x="20" y="20" width="335" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="CSL-1O-QhG"/>

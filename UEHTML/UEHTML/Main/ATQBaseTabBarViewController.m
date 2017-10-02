@@ -73,7 +73,12 @@
      *4.
      ===========ZL注释end==========*/
     ATQBaseNavigationViewController *navc = nil;
-    if (class == [ATQPublishViewController class]) {
+    if (class == [ATQVicintyViewController class]) {
+        ATQBaseNavigationViewController *navc = [[ATQBaseNavigationViewController alloc]initWithRootViewController:vc];
+        navc.navigationItem.title = title;
+        [navc.rootVcAry addObject:class];
+        [_vcsArray addObject:navc];
+    }else if (class == [ATQPublishViewController class]) {
         ATQBaseNavigationViewController *navc = [[ATQBaseNavigationViewController alloc]initWithRootViewController:vc];
         //    [self addChildViewController:navc];
         navc.navigationItem.title = title;

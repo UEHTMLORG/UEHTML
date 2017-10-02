@@ -18,7 +18,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="70" height="80"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N2h-ws-y9z">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="N2h-ws-y9z">
                         <rect key="frame" x="0.0" y="0.0" width="70" height="80"/>
                         <color key="backgroundColor" red="0.92950195069999997" green="0.527502358" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </imageView>
@@ -63,4 +63,7 @@
             </connections>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="1" width="690" height="920"/>
+    </resources>
 </document>

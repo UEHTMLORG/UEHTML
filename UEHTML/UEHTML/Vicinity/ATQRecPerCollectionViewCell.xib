@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="80" height="140"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eBC-vs-vPL">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="eBC-vs-vPL">
                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                         <color key="backgroundColor" red="0.9024937153" green="0.7244816422" blue="0.44759488110000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -104,6 +104,7 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="1" width="690" height="920"/>
         <image name="fujin-shiping" width="40" height="40"/>
     </resources>
 </document>

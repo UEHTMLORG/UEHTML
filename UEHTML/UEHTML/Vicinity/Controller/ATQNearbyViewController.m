@@ -7,6 +7,7 @@
 //
 
 #import "ATQNearbyViewController.h"
+#import "ATQTypeListViewController.h"
 #import "ATQTagTableViewCell.h"
 #import "ATQRecPerTableViewCell.h"
 #import "ATQTagCollectionViewCell.h"
@@ -288,7 +289,10 @@
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"----->%ld",indexPath.row);
-    
+    NSArray *namearr = @[@"陪聊天",@"按摩",@"送红酒",@"吃饭",@"看电影",@"唱歌",@"旅游",@"打游戏",@"运动",@"其他",];
+    ATQTypeListViewController *vc = [[ATQTypeListViewController alloc] init];
+    vc.navigationItem.title = namearr[indexPath.row];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - UICollectionViewDelegateFlowLayout

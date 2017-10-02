@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="140" height="200"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oyo-8F-wfx">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="oyo-8F-wfx">
                         <rect key="frame" x="0.0" y="0.0" width="140" height="155"/>
                         <color key="backgroundColor" red="1" green="0.87105861350000002" blue="0.25673982020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -79,4 +79,7 @@
             <point key="canvasLocation" x="64" y="126"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="1" width="690" height="920"/>
+    </resources>
 </document>

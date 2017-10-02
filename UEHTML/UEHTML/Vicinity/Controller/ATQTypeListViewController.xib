@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ATQTypeListViewController">
+            <connections>
+                <outlet property="paixuBtn" destination="0TP-sp-oB3" id="aZo-YO-yUl"/>
+                <outlet property="shaixuanBtn" destination="3Mz-JG-eZQ" id="kwv-dI-gBs"/>
+                <outlet property="view" destination="iN0-l3-epB" id="m0W-AT-reA"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SeF-th-Nmr">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KJZ-Wg-7mE">
+                            <rect key="frame" x="0.0" y="0.0" width="187" height="40"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0TP-sp-oB3">
+                                    <rect key="frame" x="52.5" y="10" width="82" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="z4M-BM-W8m"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <state key="normal" title="智能排序" image="fujin-xia">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="0TP-sp-oB3" firstAttribute="centerY" secondItem="KJZ-Wg-7mE" secondAttribute="centerY" id="Ofe-Vl-wLR"/>
+                                <constraint firstItem="0TP-sp-oB3" firstAttribute="centerX" secondItem="KJZ-Wg-7mE" secondAttribute="centerX" id="ble-eC-ROe"/>
+                                <constraint firstAttribute="height" constant="40" id="xc0-9P-lG6"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D7B-KQ-5Fd">
+                            <rect key="frame" x="187" y="0.0" width="1" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.94487851860000005" green="0.94902163740000001" blue="0.95303434129999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ax1-wL-LAH">
+                            <rect key="frame" x="187.5" y="0.0" width="187.5" height="40"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Mz-JG-eZQ">
+                                    <rect key="frame" x="69" y="10" width="49" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="Tg6-gh-KRL"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <state key="normal" title="筛选" image="fujin-xia">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Wqg-v1-TK0"/>
+                                <constraint firstItem="3Mz-JG-eZQ" firstAttribute="centerY" secondItem="Ax1-wL-LAH" secondAttribute="centerY" id="X7A-sf-P5H"/>
+                                <constraint firstItem="3Mz-JG-eZQ" firstAttribute="centerX" secondItem="Ax1-wL-LAH" secondAttribute="centerX" id="idT-UP-OQk"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Ax1-wL-LAH" firstAttribute="leading" secondItem="KJZ-Wg-7mE" secondAttribute="trailing" id="1fj-w3-Dsp"/>
+                        <constraint firstAttribute="bottom" secondItem="KJZ-Wg-7mE" secondAttribute="bottom" id="L3O-ib-o9N"/>
+                        <constraint firstItem="Ax1-wL-LAH" firstAttribute="top" secondItem="SeF-th-Nmr" secondAttribute="top" id="Svz-Jl-y88"/>
+                        <constraint firstAttribute="bottom" secondItem="Ax1-wL-LAH" secondAttribute="bottom" id="fcs-xx-1FH"/>
+                        <constraint firstItem="Ax1-wL-LAH" firstAttribute="width" secondItem="KJZ-Wg-7mE" secondAttribute="width" id="fve-eg-5B6"/>
+                        <constraint firstAttribute="trailing" secondItem="Ax1-wL-LAH" secondAttribute="trailing" id="hOG-iy-PFz"/>
+                        <constraint firstItem="KJZ-Wg-7mE" firstAttribute="leading" secondItem="SeF-th-Nmr" secondAttribute="leading" id="nMY-Tv-yAp"/>
+                        <constraint firstAttribute="height" constant="40" id="wvc-Wa-PuM"/>
+                        <constraint firstItem="KJZ-Wg-7mE" firstAttribute="top" secondItem="SeF-th-Nmr" secondAttribute="top" id="y7S-th-hjm"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="SeF-th-Nmr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Eoz-tm-7N6"/>
+                <constraint firstItem="SeF-th-Nmr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="JPe-80-f6z"/>
+                <constraint firstAttribute="trailing" secondItem="SeF-th-Nmr" secondAttribute="trailing" id="LrR-7l-kJp"/>
+            </constraints>
+            <point key="canvasLocation" x="52.5" y="133.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="fujin-xia" width="16" height="15"/>
+    </resources>
+</document>

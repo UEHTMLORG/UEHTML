@@ -45,7 +45,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6yC-wY-s5O">
-                        <rect key="frame" x="0.0" y="44" width="320" height="1"/>
+                        <rect key="frame" x="0.0" y="43" width="320" height="1"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="m3r-1V-upC"/>
@@ -64,7 +64,7 @@
                 <constraint firstItem="AXO-oE-3C8" firstAttribute="top" secondItem="KGk-i7-Jjw" secondAttribute="top" constant="5" id="Qsb-Qh-nwR"/>
                 <constraint firstItem="R3i-m3-ytg" firstAttribute="top" secondItem="KGk-i7-Jjw" secondAttribute="top" constant="12" id="RWT-Rc-qrN"/>
                 <constraint firstAttribute="trailing" secondItem="lvD-px-cCN" secondAttribute="trailing" constant="20" id="TD2-ZD-jW1"/>
-                <constraint firstAttribute="bottom" secondItem="6yC-wY-s5O" secondAttribute="bottom" constant="-1" id="ZI2-2d-Iat"/>
+                <constraint firstAttribute="bottom" secondItem="6yC-wY-s5O" secondAttribute="bottom" id="ZI2-2d-Iat"/>
                 <constraint firstAttribute="bottom" secondItem="R3i-m3-ytg" secondAttribute="bottom" constant="12" id="c3Q-HI-yDJ"/>
                 <constraint firstAttribute="bottom" secondItem="lvD-px-cCN" secondAttribute="bottom" constant="12" id="gf4-Rc-R90"/>
                 <constraint firstItem="lvD-px-cCN" firstAttribute="top" secondItem="KGk-i7-Jjw" secondAttribute="top" constant="12" id="jVS-8A-VGg"/>

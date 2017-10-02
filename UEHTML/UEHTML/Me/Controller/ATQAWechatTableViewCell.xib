@@ -45,7 +45,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ecE-hU-bk4">
-                        <rect key="frame" x="0.0" y="44" width="320" height="1"/>
+                        <rect key="frame" x="0.0" y="43" width="320" height="1"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="p0Y-ON-Lwo"/>
@@ -59,7 +59,7 @@
             </tableViewCellContentView>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="gy6-Ta-m63" secondAttribute="trailing" constant="20" id="0ZA-F0-Bol"/>
-                <constraint firstAttribute="bottom" secondItem="ecE-hU-bk4" secondAttribute="bottom" constant="-1" id="EPi-LE-4gJ"/>
+                <constraint firstAttribute="bottom" secondItem="ecE-hU-bk4" secondAttribute="bottom" id="EPi-LE-4gJ"/>
                 <constraint firstItem="CJh-fE-EPo" firstAttribute="leading" secondItem="KGk-i7-Jjw" secondAttribute="leading" constant="20" id="FpL-X9-zgY"/>
                 <constraint firstAttribute="bottom" secondItem="gy6-Ta-m63" secondAttribute="bottom" constant="5" id="G5U-aC-TFN"/>
                 <constraint firstItem="CJh-fE-EPo" firstAttribute="top" secondItem="KGk-i7-Jjw" secondAttribute="top" constant="5" id="IGQ-li-W55"/>

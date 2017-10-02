@@ -35,7 +35,7 @@
                         </constraints>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fq0-Ub-FBU">
-                        <rect key="frame" x="0.0" y="40" width="320" height="1"/>
+                        <rect key="frame" x="0.0" y="39" width="320" height="1"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="esj-Yw-fzp"/>
@@ -50,7 +50,7 @@
                 <constraint firstAttribute="trailing" secondItem="Fq0-Ub-FBU" secondAttribute="trailing" id="WYp-Ep-Qf6"/>
                 <constraint firstItem="Fq0-Ub-FBU" firstAttribute="leading" secondItem="KGk-i7-Jjw" secondAttribute="leading" id="ofS-oX-YaR"/>
                 <constraint firstItem="vc6-MZ-2u7" firstAttribute="leading" secondItem="KGk-i7-Jjw" secondAttribute="leading" constant="20" id="rHq-Pk-gw1"/>
-                <constraint firstAttribute="bottom" secondItem="Fq0-Ub-FBU" secondAttribute="bottom" constant="-1" id="syZ-3b-Slv"/>
+                <constraint firstAttribute="bottom" secondItem="Fq0-Ub-FBU" secondAttribute="bottom" id="syZ-3b-Slv"/>
                 <constraint firstItem="zeb-xj-paE" firstAttribute="centerY" secondItem="KGk-i7-Jjw" secondAttribute="centerY" id="uFs-uB-vhJ"/>
             </constraints>
             <connections>

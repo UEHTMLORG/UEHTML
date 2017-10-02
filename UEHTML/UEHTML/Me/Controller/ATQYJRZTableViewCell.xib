@@ -57,7 +57,7 @@
                         </connections>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wrs-2h-IYg">
-                        <rect key="frame" x="0.0" y="60" width="320" height="1"/>
+                        <rect key="frame" x="0.0" y="59" width="320" height="1"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="1TQ-z7-ixo"/>
@@ -73,7 +73,7 @@
                 <constraint firstItem="CSU-Gx-4aI" firstAttribute="leading" secondItem="KGk-i7-Jjw" secondAttribute="leading" constant="20" id="9r5-9H-GUy"/>
                 <constraint firstAttribute="bottom" secondItem="CSU-Gx-4aI" secondAttribute="bottom" constant="5" id="CO9-CO-K7Z"/>
                 <constraint firstItem="Wrs-2h-IYg" firstAttribute="leading" secondItem="KGk-i7-Jjw" secondAttribute="leading" id="F6U-yh-jkD"/>
-                <constraint firstAttribute="bottom" secondItem="Wrs-2h-IYg" secondAttribute="bottom" constant="-1" id="HUL-LN-G0P"/>
+                <constraint firstAttribute="bottom" secondItem="Wrs-2h-IYg" secondAttribute="bottom" id="HUL-LN-G0P"/>
                 <constraint firstAttribute="trailing" secondItem="Wrs-2h-IYg" secondAttribute="trailing" id="Ia4-Fb-9dO"/>
                 <constraint firstAttribute="trailing" secondItem="cdm-CL-1gf" secondAttribute="trailing" constant="20" id="NrI-23-ZGZ"/>
                 <constraint firstItem="tin-jn-V2Y" firstAttribute="centerY" secondItem="KGk-i7-Jjw" secondAttribute="centerY" id="Ugg-oK-4th"/>

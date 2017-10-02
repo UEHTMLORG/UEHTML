@@ -35,7 +35,7 @@
                         </constraints>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bhZ-VZ-j3Q">
-                        <rect key="frame" x="0.0" y="40" width="320" height="1"/>
+                        <rect key="frame" x="0.0" y="39" width="320" height="1"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="HAQ-FC-3f8"/>
@@ -60,7 +60,7 @@
                 <constraint firstItem="7iU-oL-Vmj" firstAttribute="leading" secondItem="KGk-i7-Jjw" secondAttribute="leading" constant="20" id="FcE-ar-ysB"/>
                 <constraint firstItem="MLc-rn-4k0" firstAttribute="centerY" secondItem="KGk-i7-Jjw" secondAttribute="centerY" id="J7E-Au-lyv"/>
                 <constraint firstAttribute="trailing" secondItem="bhZ-VZ-j3Q" secondAttribute="trailing" id="K59-yj-okr"/>
-                <constraint firstAttribute="bottom" secondItem="bhZ-VZ-j3Q" secondAttribute="bottom" constant="-1" id="NEF-d3-TOi"/>
+                <constraint firstAttribute="bottom" secondItem="bhZ-VZ-j3Q" secondAttribute="bottom" id="NEF-d3-TOi"/>
                 <constraint firstItem="54X-dm-273" firstAttribute="top" secondItem="KGk-i7-Jjw" secondAttribute="top" id="R21-LG-ZGq"/>
                 <constraint firstItem="bhZ-VZ-j3Q" firstAttribute="leading" secondItem="KGk-i7-Jjw" secondAttribute="leading" id="R5p-9o-23O"/>
                 <constraint firstAttribute="bottom" secondItem="54X-dm-273" secondAttribute="bottom" id="SyF-wx-Rw8"/>

@@ -94,6 +94,9 @@
 		40DF4F7E1F8211C500EE6753 /* UIButton+Lhkh.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DF4F7D1F8211C500EE6753 /* UIButton+Lhkh.m */; };
 		40DF4F821F82155500EE6753 /* ATQTypeListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DF4F801F82155500EE6753 /* ATQTypeListTableViewCell.m */; };
 		40DF4F831F82155500EE6753 /* ATQTypeListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40DF4F811F82155500EE6753 /* ATQTypeListTableViewCell.xib */; };
+		40DF4F871F825D0600EE6753 /* ATQTypePeoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DF4F851F825D0600EE6753 /* ATQTypePeoDetailViewController.m */; };
+		40DF4F881F825D0600EE6753 /* ATQTypePeoDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40DF4F861F825D0600EE6753 /* ATQTypePeoDetailViewController.xib */; };
+		40DF4F8B1F8269CD00EE6753 /* CPStepper.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DF4F8A1F8269CD00EE6753 /* CPStepper.m */; };
 		40E061C01F7689100072596D /* ATQItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FA89F81F74A61E0059A208 /* ATQItemTableViewCell.m */; };
 		40E061C41F7695DF0072596D /* ATQHomeRecCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E061C21F7695DF0072596D /* ATQHomeRecCollectionViewCell.m */; };
 		40E061C51F7695DF0072596D /* ATQHomeRecCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40E061C31F7695DF0072596D /* ATQHomeRecCollectionViewCell.xib */; };
@@ -372,6 +375,11 @@
 		40DF4F7F1F82155500EE6753 /* ATQTypeListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQTypeListTableViewCell.h; path = UEHTML/Commons/ATQTypeListTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		40DF4F801F82155500EE6753 /* ATQTypeListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQTypeListTableViewCell.m; path = UEHTML/Commons/ATQTypeListTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		40DF4F811F82155500EE6753 /* ATQTypeListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQTypeListTableViewCell.xib; path = UEHTML/Commons/ATQTypeListTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40DF4F841F825D0600EE6753 /* ATQTypePeoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQTypePeoDetailViewController.h; sourceTree = "<group>"; };
+		40DF4F851F825D0600EE6753 /* ATQTypePeoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQTypePeoDetailViewController.m; sourceTree = "<group>"; };
+		40DF4F861F825D0600EE6753 /* ATQTypePeoDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATQTypePeoDetailViewController.xib; sourceTree = "<group>"; };
+		40DF4F891F8269CD00EE6753 /* CPStepper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPStepper.h; sourceTree = "<group>"; };
+		40DF4F8A1F8269CD00EE6753 /* CPStepper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPStepper.m; sourceTree = "<group>"; };
 		40E061C11F7695DF0072596D /* ATQHomeRecCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQHomeRecCollectionViewCell.h; path = UEHTML/Vicinity/ATQHomeRecCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
 		40E061C21F7695DF0072596D /* ATQHomeRecCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQHomeRecCollectionViewCell.m; path = UEHTML/Vicinity/ATQHomeRecCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
 		40E061C31F7695DF0072596D /* ATQHomeRecCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQHomeRecCollectionViewCell.xib; path = UEHTML/Vicinity/ATQHomeRecCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
@@ -794,6 +802,8 @@
 				40FA89FC1F74B1A80059A208 /* LhkhHttpManager */,
 				40FEA5D11F73B53A00D6EB89 /* LhkhButton.h */,
 				40FEA5D21F73B53A00D6EB89 /* LhkhButton.m */,
+				40DF4F891F8269CD00EE6753 /* CPStepper.h */,
+				40DF4F8A1F8269CD00EE6753 /* CPStepper.m */,
 				40236C4A1F7B8AB7004AE37B /* KZPhotoManager.h */,
 				40236C4B1F7B8AB7004AE37B /* KZPhotoManager.m */,
 				407F9BE41F663A230043A87A /* LhkhTabBar.h */,
@@ -1086,6 +1096,9 @@
 				40DF4F751F81F81700EE6753 /* ATQTypeListViewController.h */,
 				40DF4F761F81F81700EE6753 /* ATQTypeListViewController.m */,
 				40DF4F7A1F82102400EE6753 /* ATQTypeListViewController.xib */,
+				40DF4F841F825D0600EE6753 /* ATQTypePeoDetailViewController.h */,
+				40DF4F851F825D0600EE6753 /* ATQTypePeoDetailViewController.m */,
+				40DF4F861F825D0600EE6753 /* ATQTypePeoDetailViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1378,6 +1391,7 @@
 				188F843B1F739BD30037213D /* ComplainViewController.xib in Resources */,
 				40FEA5BD1F735BC900D6EB89 /* ATQBindPhoneViewController.xib in Resources */,
 				40FA89F11F749F7D0059A208 /* ATQHomeCollectionViewCell.xib in Resources */,
+				40DF4F881F825D0600EE6753 /* ATQTypePeoDetailViewController.xib in Resources */,
 				40F085A51F74FA1500C5986C /* ATQRecPerTableViewCell.xib in Resources */,
 				40E0F25D1F78D0DD0074B064 /* ATQSZFourTableViewCell.xib in Resources */,
 				4018F5AE1F500B4000D6C42D /* LaunchScreen.storyboard in Resources */,
@@ -1555,6 +1569,7 @@
 				40EA934C1F7BBC4D005A0E50 /* PNBar.m in Sources */,
 				40D353C91F7F44140017DA5C /* ATQChongzhiViewController.m in Sources */,
 				407F9BD71F66364C0043A87A /* ATQVicintyViewController.m in Sources */,
+				40DF4F8B1F8269CD00EE6753 /* CPStepper.m in Sources */,
 				40E0F2461F78B1D60074B064 /* ZLCustomButton.m in Sources */,
 				40EA93581F7BBC4D005A0E50 /* PNRadarChartDataItem.m in Sources */,
 				407F9BD41F6634D30043A87A /* ATQBaseTabBarViewController.m in Sources */,
@@ -1562,6 +1577,7 @@
 				407F9BD11F6634A70043A87A /* ATQBaseNavigationViewController.m in Sources */,
 				40FA8A111F74EB6A0059A208 /* XHHPageControl.m in Sources */,
 				40236C3F1F7B7E78004AE37B /* ATQPlaceholderTextView.m in Sources */,
+				40DF4F871F825D0600EE6753 /* ATQTypePeoDetailViewController.m in Sources */,
 				40D353B51F7F2B900017DA5C /* ATQAccountFirTableViewCell.m in Sources */,
 				40D353C41F7F33180017DA5C /* ATQAccountFourTableViewCell.m in Sources */,
 				40236C4C1F7B8AB7004AE37B /* KZPhotoManager.m in Sources */,

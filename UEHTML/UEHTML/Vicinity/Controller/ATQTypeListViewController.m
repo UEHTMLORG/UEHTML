@@ -7,6 +7,8 @@
 //
 
 #import "ATQTypeListViewController.h"
+#import "ATQTypePeoDetailViewController.h"
+#import "ATQTypeListTableViewCell.h"
 #import "Masonry.h"
 #import "UIButton+Lhkh.h"
 #import "UIColor+LhkhColor.h"
@@ -27,9 +29,8 @@
 -(void)setTableView{
     _tableView = ({
         UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectZero];
-        [tableView registerNib:[UINib nibWithNibName:@"ATQTagTableViewCell" bundle:nil] forCellReuseIdentifier:@"ATQTagTableViewCell"];
+        [tableView registerNib:[UINib nibWithNibName:@"ATQTypeListTableViewCell" bundle:nil] forCellReuseIdentifier:@"ATQTypeListTableViewCell"];
         
-        [tableView registerNib:[UINib nibWithNibName:@"ATQRecPerTableViewCell" bundle:nil] forCellReuseIdentifier:@"ATQRecPerTableViewCell"];
         tableView.backgroundColor = RGBA(236, 236, 236, 1);
         tableView.delegate = self;
         tableView.dataSource = self;
@@ -58,31 +59,27 @@
     return 1;
 }
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString * cellID = @"tableviewCellID";
-    UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
-    if (!cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+   
+    static NSString *CellIdentifier = @"ATQTypeListTableViewCell" ;
+    ATQTypeListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        NSArray *array = [[NSBundle mainBundle]loadNibNamed: CellIdentifier owner:self options:nil];
+        cell = [array objectAtIndex:0];
     }
-//    static NSString *CellIdentifier = @"ATQTagTableViewCell" ;
-//    ATQTagTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-//    if (cell == nil) {
-//        NSArray *array = [[NSBundle mainBundle]loadNibNamed: CellIdentifier owner:self options:nil];
-//        cell = [array objectAtIndex:0];
-//    }
-//    
-//    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-//    cell.tagCollectionView.delegate = self;
-//    cell.tagCollectionView.dataSource = self;
-//    cell.tagCollectionView.tag = 0;
-//    [cell.tagCollectionView registerNib:[UINib  nibWithNibName:@"ATQTagCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"ATQTagCollectionViewCell"];
-//    return cell;
+    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
+ 
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 100;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    ATQTypePeoDetailViewController *vc = [[ATQTypePeoDetailViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 -(UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{

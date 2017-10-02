@@ -282,17 +282,18 @@
         CGSize size = cell.frame.size;
         cell.recpImg.layer.cornerRadius = size.width/2;
         cell.recpImg.layer.masksToBounds = YES;
-//        NSLog(@"%@",NSStringFromCGSize(size));
         return cell;
     }
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"----->%ld",indexPath.row);
-    NSArray *namearr = @[@"陪聊天",@"按摩",@"送红酒",@"吃饭",@"看电影",@"唱歌",@"旅游",@"打游戏",@"运动",@"其他",];
-    ATQTypeListViewController *vc = [[ATQTypeListViewController alloc] init];
-    vc.navigationItem.title = namearr[indexPath.row];
-    [self.navigationController pushViewController:vc animated:YES];
+    if (collectionView.tag == 0) {
+        NSArray *namearr = @[@"陪聊天",@"按摩",@"送红酒",@"吃饭",@"看电影",@"唱歌",@"旅游",@"打游戏",@"运动",@"其他",];
+        ATQTypeListViewController *vc = [[ATQTypeListViewController alloc] init];
+        vc.navigationItem.title = namearr[indexPath.row];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 #pragma mark - UICollectionViewDelegateFlowLayout

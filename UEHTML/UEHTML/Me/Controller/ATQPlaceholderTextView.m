@@ -32,10 +32,18 @@
     //    PlaceholderLabel=[[UILabel alloc] initWithFrame:CGRectMake(left, top
     //                                                               , self.frame.size.width, hegiht)];
     _PlaceholderLabel=[[UILabel alloc] initWithFrame:CGRectZero];
-    _PlaceholderLabel.font=self.placeholderFont?self.placeholderFont:self.font;
+    
+//    _PlaceholderLabel.font=self.placeholderFont?self.placeholderFont:self.font;
+    if (ScreenWidth <=320) {
+        _PlaceholderLabel.font=[UIFont systemFontOfSize:9];
+    }else{
+        _PlaceholderLabel.font=[UIFont systemFontOfSize:11];
+    }
+    
     _PlaceholderLabel.textColor=self.placeholderColor;
     [self addSubview:_PlaceholderLabel];
     _PlaceholderLabel.text = self.placeholder;
+    _PlaceholderLabel.numberOfLines = 0;
     [_PlaceholderLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).offset(left);
         make.top.equalTo(self).offset(top);

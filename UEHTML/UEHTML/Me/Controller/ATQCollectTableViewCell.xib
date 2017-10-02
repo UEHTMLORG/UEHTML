@@ -92,7 +92,7 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mRb-g3-j14">
-                                <rect key="frame" x="0.0" y="79.5" width="320" height="1"/>
+                                <rect key="frame" x="0.0" y="79" width="320" height="1"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="TNJ-Tk-PkG"/>
@@ -114,7 +114,7 @@
                             <constraint firstItem="LAo-Og-0DO" firstAttribute="leading" secondItem="txQ-gB-saQ" secondAttribute="trailing" constant="5" id="exg-C6-IW6"/>
                             <constraint firstAttribute="bottom" secondItem="Dbn-YA-VX6" secondAttribute="bottom" constant="10" id="foc-qF-afS"/>
                             <constraint firstAttribute="trailing" secondItem="cpW-by-cHd" secondAttribute="trailing" constant="10" id="hPh-hY-S9I"/>
-                            <constraint firstAttribute="bottom" secondItem="mRb-g3-j14" secondAttribute="bottom" constant="-1" id="qNX-Vv-uYL"/>
+                            <constraint firstAttribute="bottom" secondItem="mRb-g3-j14" secondAttribute="bottom" id="qNX-Vv-uYL"/>
                             <constraint firstItem="jCM-zT-yPC" firstAttribute="leading" secondItem="txQ-gB-saQ" secondAttribute="leading" id="uVy-4i-oTv"/>
                         </constraints>
                     </view>

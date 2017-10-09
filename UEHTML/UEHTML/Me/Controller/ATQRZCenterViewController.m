@@ -11,6 +11,10 @@
 #import "Masonry.h"
 #import "UIColor+LhkhColor.h"
 #import "ATQYajinRZViewController.h"
+#import "ATQSPRZViewController.h"
+#import "ATQSFRZViewController.h"
+#import "ATQCarRZViewController.h"
+#import "ATQCarRZSuccessViewController.h"
 @interface ATQRZCenterViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITableView *tableView;
 
@@ -103,13 +107,17 @@
     if (indexPath.section == 0) {
         
     }else if (indexPath.section == 1){
-        
+        ATQSFRZViewController *vc = [[ATQSFRZViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
         
     }else if (indexPath.section == 2){
-        
+        ATQSPRZViewController *vc = [[ATQSPRZViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
         
     }else if (indexPath.section == 3){
         
+        ATQCarRZViewController *vc = [[ATQCarRZViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
         
     }else if (indexPath.section == 4){
         

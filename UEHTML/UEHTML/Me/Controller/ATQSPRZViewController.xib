@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ATQSPRZViewController">
             <connections>
+                <outlet property="vedioImg" destination="8JO-vS-lLX" id="mug-Px-T8f"/>
                 <outlet property="view" destination="p33-v7-eCb" id="wRH-x9-C7u"/>
             </connections>
         </placeholder>
@@ -60,13 +61,15 @@
                                                     <color key="textColor" red="1" green="0.45098039220000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRh-6e-raz">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="renzheng-shipin" translatesAutoresizingMaskIntoConstraints="NO" id="8JO-vS-lLX">
                                                     <rect key="frame" x="274" y="9.5" width="81" height="81"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="QRh-6e-raz" secondAttribute="height" multiplier="1:1" id="FLd-xR-8gu"/>
-                                                        <constraint firstAttribute="width" constant="81" id="HcT-P3-RXX"/>
+                                                        <constraint firstAttribute="height" constant="81" id="6fz-XF-cR9"/>
+                                                        <constraint firstAttribute="width" secondItem="8JO-vS-lLX" secondAttribute="height" multiplier="1:1" id="hne-3I-guY"/>
                                                     </constraints>
-                                                    <state key="normal" image="renzheng-shipin"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRh-6e-raz">
+                                                    <rect key="frame" x="274" y="9.5" width="81" height="81"/>
                                                     <connections>
                                                         <action selector="shangchuanVedio:" destination="-1" eventType="touchUpInside" id="0kX-pg-yLa"/>
                                                     </connections>
@@ -84,12 +87,16 @@
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="Txk-rX-TW2" firstAttribute="leading" secondItem="dSP-Nq-4wq" secondAttribute="leading" id="1Hp-cg-mOL"/>
+                                                <constraint firstItem="QRh-6e-raz" firstAttribute="top" secondItem="8JO-vS-lLX" secondAttribute="top" id="76V-do-KDB"/>
                                                 <constraint firstItem="Txk-rX-TW2" firstAttribute="top" secondItem="dSP-Nq-4wq" secondAttribute="bottom" constant="10" id="7kl-qz-o2q"/>
-                                                <constraint firstItem="QRh-6e-raz" firstAttribute="centerY" secondItem="Bmq-WI-ouS" secondAttribute="centerY" id="BKX-Ey-d9U"/>
+                                                <constraint firstItem="QRh-6e-raz" firstAttribute="trailing" secondItem="8JO-vS-lLX" secondAttribute="trailing" id="DFX-IO-gQd"/>
+                                                <constraint firstAttribute="trailing" secondItem="8JO-vS-lLX" secondAttribute="trailing" constant="20" id="FLW-ER-UGT"/>
+                                                <constraint firstItem="QRh-6e-raz" firstAttribute="leading" secondItem="8JO-vS-lLX" secondAttribute="leading" id="FNf-ux-GDD"/>
                                                 <constraint firstItem="dSP-Nq-4wq" firstAttribute="top" secondItem="Bmq-WI-ouS" secondAttribute="top" constant="25" id="Fxi-7g-mMX"/>
                                                 <constraint firstAttribute="height" constant="100" id="aI1-31-iLo"/>
                                                 <constraint firstItem="dSP-Nq-4wq" firstAttribute="leading" secondItem="Bmq-WI-ouS" secondAttribute="leading" constant="20" id="f7S-S4-pBf"/>
-                                                <constraint firstAttribute="trailing" secondItem="QRh-6e-raz" secondAttribute="trailing" constant="20" id="liA-fX-L00"/>
+                                                <constraint firstItem="8JO-vS-lLX" firstAttribute="centerY" secondItem="Bmq-WI-ouS" secondAttribute="centerY" id="rWg-ji-JZb"/>
+                                                <constraint firstItem="QRh-6e-raz" firstAttribute="bottom" secondItem="8JO-vS-lLX" secondAttribute="bottom" id="wma-AO-OsI"/>
                                             </constraints>
                                         </view>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFw-ie-liR">

@@ -119,10 +119,10 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NL2-bN-cdz">
-                                                            <rect key="frame" x="335" y="10" width="20" height="20"/>
+                                                            <rect key="frame" x="345" y="15" width="10" height="10"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" secondItem="NL2-bN-cdz" secondAttribute="height" multiplier="10:10" id="axA-Ao-8J3"/>
-                                                                <constraint firstAttribute="width" constant="20" id="i4R-1J-k6s"/>
+                                                                <constraint firstAttribute="width" secondItem="NL2-bN-cdz" secondAttribute="height" multiplier="1:1" id="axA-Ao-8J3"/>
+                                                                <constraint firstAttribute="width" constant="10" id="i4R-1J-k6s"/>
                                                             </constraints>
                                                             <state key="normal" image="renzheng-xia"/>
                                                             <connections>
@@ -289,7 +289,7 @@
                                             </constraints>
                                         </view>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eo-ZL-3D9">
-                                            <rect key="frame" x="20" y="587" width="335" height="30"/>
+                                            <rect key="frame" x="20" y="556" width="335" height="30"/>
                                             <color key="backgroundColor" red="1" green="0.45098039220000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="fhX-mG-AwD"/>
@@ -313,7 +313,7 @@
                                         <constraint firstAttribute="trailing" secondItem="UF1-Ip-I7e" secondAttribute="trailing" id="3Zb-hC-sTh"/>
                                         <constraint firstItem="UF1-Ip-I7e" firstAttribute="top" secondItem="p6s-WF-1s6" secondAttribute="bottom" constant="1" id="4GR-zM-VP3"/>
                                         <constraint firstItem="1Ws-aI-ITc" firstAttribute="leading" secondItem="Vvq-UD-4CW" secondAttribute="leading" id="6hl-Lz-Q0n"/>
-                                        <constraint firstAttribute="bottom" secondItem="7eo-ZL-3D9" secondAttribute="bottom" constant="50" id="92K-2Z-vjw"/>
+                                        <constraint firstItem="7eo-ZL-3D9" firstAttribute="top" secondItem="iqN-wo-aiQ" secondAttribute="bottom" constant="50" id="BHM-hQ-QRB"/>
                                         <constraint firstAttribute="trailing" secondItem="7eo-ZL-3D9" secondAttribute="trailing" constant="20" id="CqI-4N-CdT"/>
                                         <constraint firstAttribute="trailing" secondItem="40M-Tr-bTN" secondAttribute="trailing" id="E4Y-la-Y8X"/>
                                         <constraint firstItem="7eo-ZL-3D9" firstAttribute="leading" secondItem="Vvq-UD-4CW" secondAttribute="leading" constant="20" id="Jt0-jL-GoR"/>

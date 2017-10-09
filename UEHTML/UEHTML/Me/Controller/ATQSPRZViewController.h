@@ -9,5 +9,6 @@
 #import "ATQBaseViewController.h"
 
 @interface ATQSPRZViewController : ATQBaseViewController
+@property (weak, nonatomic) IBOutlet UIImageView *vedioImg;
 
 @end

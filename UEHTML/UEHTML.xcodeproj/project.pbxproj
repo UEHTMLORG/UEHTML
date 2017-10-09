@@ -72,6 +72,9 @@
 		40875D691F6F9AE300B58609 /* ATQLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40875D671F6F9AE300B58609 /* ATQLoginViewController.xib */; };
 		40875D6D1F6F9B4500B58609 /* ATQRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40875D6B1F6F9B4500B58609 /* ATQRegisterViewController.m */; };
 		40875D6E1F6F9B4500B58609 /* ATQRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40875D6C1F6F9B4500B58609 /* ATQRegisterViewController.xib */; };
+		408AE81B1F862AFE004A824C /* ATQRZCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 408AE81A1F862AFE004A824C /* ATQRZCenterViewController.m */; };
+		408AE81F1F862BD0004A824C /* ATQRZCenterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 408AE81D1F862BD0004A824C /* ATQRZCenterTableViewCell.m */; };
+		408AE8201F862BD0004A824C /* ATQRZCenterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 408AE81E1F862BD0004A824C /* ATQRZCenterTableViewCell.xib */; };
 		409E6D861F5003DA00E3BE49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 409E6D851F5003DA00E3BE49 /* main.m */; };
 		409E6D891F5003DA00E3BE49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 409E6D881F5003DA00E3BE49 /* AppDelegate.m */; };
 		409E6D9F1F5003DA00E3BE49 /* UEHTMLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 409E6D9E1F5003DA00E3BE49 /* UEHTMLTests.m */; };
@@ -336,6 +339,11 @@
 		40875D6A1F6F9B4500B58609 /* ATQRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQRegisterViewController.h; sourceTree = "<group>"; };
 		40875D6B1F6F9B4500B58609 /* ATQRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQRegisterViewController.m; sourceTree = "<group>"; };
 		40875D6C1F6F9B4500B58609 /* ATQRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATQRegisterViewController.xib; sourceTree = "<group>"; };
+		408AE8191F862AFE004A824C /* ATQRZCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQRZCenterViewController.h; sourceTree = "<group>"; };
+		408AE81A1F862AFE004A824C /* ATQRZCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQRZCenterViewController.m; sourceTree = "<group>"; };
+		408AE81C1F862BD0004A824C /* ATQRZCenterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQRZCenterTableViewCell.h; path = UEHTML/Me/Controller/ATQRZCenterTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		408AE81D1F862BD0004A824C /* ATQRZCenterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQRZCenterTableViewCell.m; path = UEHTML/Me/Controller/ATQRZCenterTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		408AE81E1F862BD0004A824C /* ATQRZCenterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQRZCenterTableViewCell.xib; path = UEHTML/Me/Controller/ATQRZCenterTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		409E6D811F5003DA00E3BE49 /* UEHTML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UEHTML.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		409E6D851F5003DA00E3BE49 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		409E6D871F5003DA00E3BE49 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -856,8 +864,6 @@
 				407F9BE21F6636BF0043A87A /* ATQMeViewController.m */,
 				40E0F2371F78A2470074B064 /* ATQSetupViewController.h */,
 				40E0F2381F78A2470074B064 /* ATQSetupViewController.m */,
-				40E0F2341F78A1FA0074B064 /* ATQYajinRZViewController.h */,
-				40E0F2351F78A1FA0074B064 /* ATQYajinRZViewController.m */,
 				40E0F23A1F78ABB60074B064 /* ATQCollectViewController.h */,
 				40E0F23B1F78ABB60074B064 /* ATQCollectViewController.m */,
 				40E0F23D1F78AE9F0074B064 /* ATQVisitorViewController.h */,
@@ -907,6 +913,10 @@
 				40F88EAF1F80B7530077F567 /* ATQMyliftViewController.h */,
 				40F88EB01F80B7530077F567 /* ATQMyliftViewController.m */,
 				40F88EB11F80B7530077F567 /* ATQMyliftViewController.xib */,
+				408AE8191F862AFE004A824C /* ATQRZCenterViewController.h */,
+				408AE81A1F862AFE004A824C /* ATQRZCenterViewController.m */,
+				40E0F2341F78A1FA0074B064 /* ATQYajinRZViewController.h */,
+				40E0F2351F78A1FA0074B064 /* ATQYajinRZViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1027,6 +1037,9 @@
 				40FB16A01F80BB07001FC339 /* ATQLiftCollectionViewCell.h */,
 				40FB16A11F80BB07001FC339 /* ATQLiftCollectionViewCell.m */,
 				40FB16A21F80BB07001FC339 /* ATQLiftCollectionViewCell.xib */,
+				408AE81C1F862BD0004A824C /* ATQRZCenterTableViewCell.h */,
+				408AE81D1F862BD0004A824C /* ATQRZCenterTableViewCell.m */,
+				408AE81E1F862BD0004A824C /* ATQRZCenterTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1375,6 +1388,7 @@
 				40875D6E1F6F9B4500B58609 /* ATQRegisterViewController.xib in Resources */,
 				4018F5AF1F500B4000D6C42D /* Main.storyboard in Resources */,
 				40E0F2531F78D0870074B064 /* ATQSZSecTableViewCell.xib in Resources */,
+				408AE8201F862BD0004A824C /* ATQRZCenterTableViewCell.xib in Resources */,
 				40236C341F7B7AD0004AE37B /* ATQQuesTableViewCell.xib in Resources */,
 				40236C671F7BA0EC004AE37B /* ATQBillTableViewCell.xib in Resources */,
 				40E0F2581F78D0BB0074B064 /* ATQSZThiTableViewCell.xib in Resources */,
@@ -1606,6 +1620,7 @@
 				407F9BE61F663A230043A87A /* LhkhTabBar.m in Sources */,
 				40F9F22E1F7A32C000F5A42B /* ATQAWechatTableViewCell.m in Sources */,
 				4067ECFF1F79F58F0051173D /* ATQWechatView.m in Sources */,
+				408AE81B1F862AFE004A824C /* ATQRZCenterViewController.m in Sources */,
 				407F9BC91F6633870043A87A /* UIColor+LhkhColor.m in Sources */,
 				40FEA5D31F73B53A00D6EB89 /* LhkhButton.m in Sources */,
 				40F88EB21F80B7530077F567 /* ATQMyliftViewController.m in Sources */,
@@ -1628,6 +1643,7 @@
 				40019C321F7F6BF600E11331 /* ATQCheckTableViewCell.m in Sources */,
 				40E0F2521F78D0870074B064 /* ATQSZSecTableViewCell.m in Sources */,
 				40DF4F7E1F8211C500EE6753 /* UIButton+Lhkh.m in Sources */,
+				408AE81F1F862BD0004A824C /* ATQRZCenterTableViewCell.m in Sources */,
 				40E0F2431F78B0660074B064 /* YAScrollSegmentControl.m in Sources */,
 				407F9BCE1F6634360043A87A /* ATQBaseViewController.m in Sources */,
 				40E0F2571F78D0BB0074B064 /* ATQSZThiTableViewCell.m in Sources */,

@@ -17,8 +17,9 @@
     NSString *payStr;
 }
 @end
-static int k = 0;
+
 @implementation ATQChongzhiViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -29,6 +30,7 @@ static int k = 0;
 }
 
 -(void)buildJineView{
+    NSInteger k = 0;
     float width = (ScreenWidth - 70)/4;
     float height = (self.jineView.frame.size.height - 40)/2;
     

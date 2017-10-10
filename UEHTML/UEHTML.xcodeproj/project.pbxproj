@@ -53,6 +53,8 @@
 		40260D201F71FEF400ED8CF1 /* ATQPerfectInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40260D1E1F71FEF400ED8CF1 /* ATQPerfectInfoViewController.xib */; };
 		4027D80F1F79409900B45C8E /* ATQVisitorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4027D80D1F79409900B45C8E /* ATQVisitorTableViewCell.m */; };
 		4027D8101F79409900B45C8E /* ATQVisitorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4027D80E1F79409900B45C8E /* ATQVisitorTableViewCell.xib */; };
+		4061BD9C1F8CB53B00F6EC30 /* ATQTypeListInviteDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4061BD9A1F8CB53B00F6EC30 /* ATQTypeListInviteDetailViewController.m */; };
+		4061BD9D1F8CB53B00F6EC30 /* ATQTypeListInviteDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4061BD9B1F8CB53B00F6EC30 /* ATQTypeListInviteDetailViewController.xib */; };
 		4067ECFF1F79F58F0051173D /* ATQWechatView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4067ECFE1F79F58F0051173D /* ATQWechatView.m */; };
 		4067ED011F79F5AB0051173D /* ATQWechatView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4067ED001F79F5AB0051173D /* ATQWechatView.xib */; };
 		407193D31F8B028E00B9F162 /* ATQSPRZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 407193D11F8B028E00B9F162 /* ATQSPRZViewController.m */; };
@@ -96,6 +98,8 @@
 		40D353C91F7F44140017DA5C /* ATQChongzhiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D353C71F7F44140017DA5C /* ATQChongzhiViewController.m */; };
 		40D353CA1F7F44140017DA5C /* ATQChongzhiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40D353C81F7F44140017DA5C /* ATQChongzhiViewController.xib */; };
 		40D353CD1F7F46040017DA5C /* ATQCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D353CC1F7F46040017DA5C /* ATQCheckViewController.m */; };
+		40DB4FDC1F8BA7D400F8EDDB /* ATQJZTypeListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DB4FDA1F8BA7D400F8EDDB /* ATQJZTypeListTableViewCell.m */; };
+		40DB4FDD1F8BA7D400F8EDDB /* ATQJZTypeListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40DB4FDB1F8BA7D400F8EDDB /* ATQJZTypeListTableViewCell.xib */; };
 		40DF4F771F81F81700EE6753 /* ATQTypeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DF4F761F81F81700EE6753 /* ATQTypeListViewController.m */; };
 		40DF4F7B1F82102400EE6753 /* ATQTypeListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40DF4F7A1F82102400EE6753 /* ATQTypeListViewController.xib */; };
 		40DF4F7E1F8211C500EE6753 /* UIButton+Lhkh.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DF4F7D1F8211C500EE6753 /* UIButton+Lhkh.m */; };
@@ -184,6 +188,8 @@
 		40F085AA1F74FE7200C5986C /* ATQRecPerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40F085A81F74FE7200C5986C /* ATQRecPerCollectionViewCell.xib */; };
 		40F88EB21F80B7530077F567 /* ATQMyliftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F88EB01F80B7530077F567 /* ATQMyliftViewController.m */; };
 		40F88EB31F80B7530077F567 /* ATQMyliftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40F88EB11F80B7530077F567 /* ATQMyliftViewController.xib */; };
+		40F9EAD31F8B779E005B8EDE /* ATQJZTypeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F9EAD11F8B779E005B8EDE /* ATQJZTypeListViewController.m */; };
+		40F9EAD41F8B779E005B8EDE /* ATQJZTypeListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40F9EAD21F8B779E005B8EDE /* ATQJZTypeListViewController.xib */; };
 		40F9F2291F7A30BD00F5A42B /* ATQWechatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F9F2271F7A30BD00F5A42B /* ATQWechatTableViewCell.m */; };
 		40F9F22A1F7A30BE00F5A42B /* ATQWechatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40F9F2281F7A30BD00F5A42B /* ATQWechatTableViewCell.xib */; };
 		40F9F22E1F7A32C000F5A42B /* ATQAWechatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F9F22C1F7A32C000F5A42B /* ATQAWechatTableViewCell.m */; };
@@ -311,6 +317,9 @@
 		4027D80C1F79409900B45C8E /* ATQVisitorTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQVisitorTableViewCell.h; path = UEHTML/Me/Controller/ATQVisitorTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		4027D80D1F79409900B45C8E /* ATQVisitorTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQVisitorTableViewCell.m; path = UEHTML/Me/Controller/ATQVisitorTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		4027D80E1F79409900B45C8E /* ATQVisitorTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQVisitorTableViewCell.xib; path = UEHTML/Me/Controller/ATQVisitorTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		4061BD991F8CB53B00F6EC30 /* ATQTypeListInviteDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQTypeListInviteDetailViewController.h; sourceTree = "<group>"; };
+		4061BD9A1F8CB53B00F6EC30 /* ATQTypeListInviteDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQTypeListInviteDetailViewController.m; sourceTree = "<group>"; };
+		4061BD9B1F8CB53B00F6EC30 /* ATQTypeListInviteDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATQTypeListInviteDetailViewController.xib; sourceTree = "<group>"; };
 		4067ECFD1F79F58F0051173D /* ATQWechatView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQWechatView.h; path = UEHTML/Me/Controller/ATQWechatView.h; sourceTree = SOURCE_ROOT; };
 		4067ECFE1F79F58F0051173D /* ATQWechatView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQWechatView.m; path = UEHTML/Me/Controller/ATQWechatView.m; sourceTree = SOURCE_ROOT; };
 		4067ED001F79F5AB0051173D /* ATQWechatView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQWechatView.xib; path = UEHTML/Me/Controller/ATQWechatView.xib; sourceTree = SOURCE_ROOT; };
@@ -389,6 +398,9 @@
 		40D353C81F7F44140017DA5C /* ATQChongzhiViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATQChongzhiViewController.xib; sourceTree = "<group>"; };
 		40D353CB1F7F46040017DA5C /* ATQCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQCheckViewController.h; sourceTree = "<group>"; };
 		40D353CC1F7F46040017DA5C /* ATQCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQCheckViewController.m; sourceTree = "<group>"; };
+		40DB4FD91F8BA7D400F8EDDB /* ATQJZTypeListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQJZTypeListTableViewCell.h; path = UEHTML/Vicinity/Controller/ATQJZTypeListTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40DB4FDA1F8BA7D400F8EDDB /* ATQJZTypeListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQJZTypeListTableViewCell.m; path = UEHTML/Vicinity/Controller/ATQJZTypeListTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40DB4FDB1F8BA7D400F8EDDB /* ATQJZTypeListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQJZTypeListTableViewCell.xib; path = UEHTML/Vicinity/Controller/ATQJZTypeListTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		40DF4F751F81F81700EE6753 /* ATQTypeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQTypeListViewController.h; sourceTree = "<group>"; };
 		40DF4F761F81F81700EE6753 /* ATQTypeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQTypeListViewController.m; sourceTree = "<group>"; };
 		40DF4F7A1F82102400EE6753 /* ATQTypeListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATQTypeListViewController.xib; sourceTree = "<group>"; };
@@ -539,6 +551,9 @@
 		40F88EAF1F80B7530077F567 /* ATQMyliftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQMyliftViewController.h; sourceTree = "<group>"; };
 		40F88EB01F80B7530077F567 /* ATQMyliftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQMyliftViewController.m; sourceTree = "<group>"; };
 		40F88EB11F80B7530077F567 /* ATQMyliftViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATQMyliftViewController.xib; sourceTree = "<group>"; };
+		40F9EAD01F8B779E005B8EDE /* ATQJZTypeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQJZTypeListViewController.h; sourceTree = "<group>"; };
+		40F9EAD11F8B779E005B8EDE /* ATQJZTypeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQJZTypeListViewController.m; sourceTree = "<group>"; };
+		40F9EAD21F8B779E005B8EDE /* ATQJZTypeListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATQJZTypeListViewController.xib; sourceTree = "<group>"; };
 		40F9F2261F7A30BD00F5A42B /* ATQWechatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQWechatTableViewCell.h; path = UEHTML/Me/Controller/ATQWechatTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		40F9F2271F7A30BD00F5A42B /* ATQWechatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQWechatTableViewCell.m; path = UEHTML/Me/Controller/ATQWechatTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		40F9F2281F7A30BD00F5A42B /* ATQWechatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQWechatTableViewCell.xib; path = UEHTML/Me/Controller/ATQWechatTableViewCell.xib; sourceTree = SOURCE_ROOT; };
@@ -1144,6 +1159,12 @@
 				40DF4F841F825D0600EE6753 /* ATQTypePeoDetailViewController.h */,
 				40DF4F851F825D0600EE6753 /* ATQTypePeoDetailViewController.m */,
 				40DF4F861F825D0600EE6753 /* ATQTypePeoDetailViewController.xib */,
+				40F9EAD01F8B779E005B8EDE /* ATQJZTypeListViewController.h */,
+				40F9EAD11F8B779E005B8EDE /* ATQJZTypeListViewController.m */,
+				40F9EAD21F8B779E005B8EDE /* ATQJZTypeListViewController.xib */,
+				4061BD991F8CB53B00F6EC30 /* ATQTypeListInviteDetailViewController.h */,
+				4061BD9A1F8CB53B00F6EC30 /* ATQTypeListInviteDetailViewController.m */,
+				4061BD9B1F8CB53B00F6EC30 /* ATQTypeListInviteDetailViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1188,6 +1209,9 @@
 				40DF4F7F1F82155500EE6753 /* ATQTypeListTableViewCell.h */,
 				40DF4F801F82155500EE6753 /* ATQTypeListTableViewCell.m */,
 				40DF4F811F82155500EE6753 /* ATQTypeListTableViewCell.xib */,
+				40DB4FD91F8BA7D400F8EDDB /* ATQJZTypeListTableViewCell.h */,
+				40DB4FDA1F8BA7D400F8EDDB /* ATQJZTypeListTableViewCell.m */,
+				40DB4FDB1F8BA7D400F8EDDB /* ATQJZTypeListTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1428,6 +1452,7 @@
 				40D353C51F7F33180017DA5C /* ATQAccountFourTableViewCell.xib in Resources */,
 				40E0F2621F78DC480074B064 /* ATQSZLoginOutTableViewCell.xib in Resources */,
 				4018F5AD1F500B4000D6C42D /* Assets.xcassets in Resources */,
+				40F9EAD41F8B779E005B8EDE /* ATQJZTypeListViewController.xib in Resources */,
 				40236C271F7B48A8004AE37B /* ATQBlacklistTableViewCell.xib in Resources */,
 				4027D8101F79409900B45C8E /* ATQVisitorTableViewCell.xib in Resources */,
 				40E084801F80A54700FD1AA3 /* ATQBuyjbFirTableViewCell.xib in Resources */,
@@ -1445,6 +1470,7 @@
 				4018F5AE1F500B4000D6C42D /* LaunchScreen.storyboard in Resources */,
 				40236C5A1F7B992D004AE37B /* ATQYJRZTableViewCell.xib in Resources */,
 				4024D66A1F7E3D4E006E56C1 /* ATQEditPhotoViewController.xib in Resources */,
+				4061BD9D1F8CB53B00F6EC30 /* ATQTypeListInviteDetailViewController.xib in Resources */,
 				40FA89F61F74A41C0059A208 /* ATQTitleTableViewCell.xib in Resources */,
 				40019C331F7F6BF600E11331 /* ATQCheckTableViewCell.xib in Resources */,
 				40FA8A091F74E6E70059A208 /* ATQTagCollectionViewCell.xib in Resources */,
@@ -1453,6 +1479,7 @@
 				40F9F22F1F7A32C000F5A42B /* ATQAWechatTableViewCell.xib in Resources */,
 				40F9F2341F7A3E6E00F5A42B /* ATQSetupSecrityViewController.xib in Resources */,
 				40236C441F7B8094004AE37B /* ATQOpinionPhotoTableViewCell.xib in Resources */,
+				40DB4FDD1F8BA7D400F8EDDB /* ATQJZTypeListTableViewCell.xib in Resources */,
 				40236C2C1F7B610D004AE37B /* ATQYZSecretViewController.xib in Resources */,
 				40E084781F80845700FD1AA3 /* ATQBuyVipViewController.xib in Resources */,
 				40D353CA1F7F44140017DA5C /* ATQChongzhiViewController.xib in Resources */,
@@ -1583,6 +1610,7 @@
 				40E0F2731F78FE480074B064 /* ATQPhotoCollectionViewCell.m in Sources */,
 				40E93DE91F7775630018C3F5 /* ATQFourTableViewCell.m in Sources */,
 				40D353CD1F7F46040017DA5C /* ATQCheckViewController.m in Sources */,
+				40DB4FDC1F8BA7D400F8EDDB /* ATQJZTypeListTableViewCell.m in Sources */,
 				40236C1F1F7B457E004AE37B /* ATQUserManualViewController.m in Sources */,
 				407F9BCB1F6633870043A87A /* UIView+LhkhExtension.m in Sources */,
 				40236C431F7B8094004AE37B /* ATQOpinionPhotoTableViewCell.m in Sources */,
@@ -1602,6 +1630,7 @@
 				4024D6651F7E1B81006E56C1 /* PZXVerificationTextField.m in Sources */,
 				409E6D891F5003DA00E3BE49 /* AppDelegate.m in Sources */,
 				40D353BA1F7F32D10017DA5C /* ATQAccountSecTableViewCell.m in Sources */,
+				4061BD9C1F8CB53B00F6EC30 /* ATQTypeListInviteDetailViewController.m in Sources */,
 				40EA93221F7BBAD3005A0E50 /* mask.c in Sources */,
 				40E93DE41F7775490018C3F5 /* ATQThirdTableViewCell.m in Sources */,
 				40E0F26A1F78FB290074B064 /* ATQMyAlbumViewController.m in Sources */,
@@ -1655,6 +1684,7 @@
 				40E0F25C1F78D0DD0074B064 /* ATQSZFourTableViewCell.m in Sources */,
 				40E084771F80845700FD1AA3 /* ATQBuyVipViewController.m in Sources */,
 				40DF89A61F8B18FA008247F9 /* ATQCarRZViewController.m in Sources */,
+				40F9EAD31F8B779E005B8EDE /* ATQJZTypeListViewController.m in Sources */,
 				40236C5D1F7B9E7C004AE37B /* ATQBusinessViewController.m in Sources */,
 				407F9BE61F663A230043A87A /* LhkhTabBar.m in Sources */,
 				40F9F22E1F7A32C000F5A42B /* ATQAWechatTableViewCell.m in Sources */,

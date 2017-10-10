@@ -8,6 +8,7 @@
 
 #import "ATQNearbyViewController.h"
 #import "ATQTypeListViewController.h"
+#import "ATQJZTypeListViewController.h"
 #import "ATQTagTableViewCell.h"
 #import "ATQRecPerTableViewCell.h"
 #import "ATQTagCollectionViewCell.h"
@@ -18,6 +19,7 @@
 #import "UIImageView+WebCache.h"
 #import "XHHPageControl.h"
 #import "UIColor+LhkhColor.h"
+#import "ATQTypeListInviteDetailViewController.h"
 @interface ATQNearbyViewController ()<UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource,UIScrollViewDelegate>{
     UIView *headView;
     NSMutableArray *_imageArray;//滚动图数组
@@ -290,8 +292,11 @@
     NSLog(@"----->%ld",indexPath.row);
     if (collectionView.tag == 0) {
         NSArray *namearr = @[@"陪聊天",@"按摩",@"送红酒",@"吃饭",@"看电影",@"唱歌",@"旅游",@"打游戏",@"运动",@"其他",];
-        ATQTypeListViewController *vc = [[ATQTypeListViewController alloc] init];
+        ATQJZTypeListViewController *vc = [[ATQJZTypeListViewController alloc] init];
         vc.navigationItem.title = namearr[indexPath.row];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else{
+        ATQTypeListInviteDetailViewController *vc = [[ATQTypeListInviteDetailViewController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }

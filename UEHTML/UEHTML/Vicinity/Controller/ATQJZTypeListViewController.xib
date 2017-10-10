@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ATQJZTypeListViewController">
+            <connections>
+                <outlet property="paixuBtn" destination="83c-DY-EU9" id="n3L-MK-dkt"/>
+                <outlet property="shaixuanBtn" destination="EVr-WC-bOa" id="VUo-Tu-v5h"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wMB-y5-xpG">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fJn-za-mux">
+                            <rect key="frame" x="0.0" y="0.0" width="186.5" height="40"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83c-DY-EU9">
+                                    <rect key="frame" x="52" y="10" width="82" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="Bci-hD-6C8"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <state key="normal" title="智能排序" image="fujin-xia">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="83c-DY-EU9" firstAttribute="centerY" secondItem="fJn-za-mux" secondAttribute="centerY" id="3Gi-aR-aEC"/>
+                                <constraint firstAttribute="height" constant="40" id="alc-Dh-6jJ"/>
+                                <constraint firstItem="83c-DY-EU9" firstAttribute="centerX" secondItem="fJn-za-mux" secondAttribute="centerX" id="m7Z-LC-8A1"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4mL-o6-WYy">
+                            <rect key="frame" x="187.5" y="0.0" width="1" height="40"/>
+                            <color key="backgroundColor" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="iWg-vi-XJH"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1pa-NJ-b9y">
+                            <rect key="frame" x="188.5" y="0.0" width="186.5" height="40"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EVr-WC-bOa">
+                                    <rect key="frame" x="68.5" y="10" width="49" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="gGF-3N-Yfq"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <state key="normal" title="筛选" image="fujin-xia">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="EVr-WC-bOa" firstAttribute="centerY" secondItem="1pa-NJ-b9y" secondAttribute="centerY" id="2tc-85-pJC"/>
+                                <constraint firstItem="EVr-WC-bOa" firstAttribute="centerX" secondItem="1pa-NJ-b9y" secondAttribute="centerX" id="OOR-9d-MsJ"/>
+                                <constraint firstAttribute="height" constant="40" id="u0E-j6-7aO"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="fJn-za-mux" firstAttribute="leading" secondItem="wMB-y5-xpG" secondAttribute="leading" id="0EE-tZ-noV"/>
+                        <constraint firstAttribute="bottom" secondItem="1pa-NJ-b9y" secondAttribute="bottom" id="3NX-ZT-4Vp"/>
+                        <constraint firstItem="1pa-NJ-b9y" firstAttribute="top" secondItem="wMB-y5-xpG" secondAttribute="top" id="HBK-sm-m1V"/>
+                        <constraint firstAttribute="bottom" secondItem="4mL-o6-WYy" secondAttribute="bottom" id="Ova-Do-7dP"/>
+                        <constraint firstItem="4mL-o6-WYy" firstAttribute="trailing" secondItem="1pa-NJ-b9y" secondAttribute="leading" id="Pa7-ge-6va"/>
+                        <constraint firstItem="4mL-o6-WYy" firstAttribute="leading" secondItem="fJn-za-mux" secondAttribute="trailing" constant="1" id="U6X-eB-HNa"/>
+                        <constraint firstItem="fJn-za-mux" firstAttribute="top" secondItem="wMB-y5-xpG" secondAttribute="top" id="Vtb-81-BgW"/>
+                        <constraint firstAttribute="bottom" secondItem="fJn-za-mux" secondAttribute="bottom" id="WRs-tN-3lE"/>
+                        <constraint firstAttribute="trailing" secondItem="1pa-NJ-b9y" secondAttribute="trailing" id="dTu-r2-uW6"/>
+                        <constraint firstItem="4mL-o6-WYy" firstAttribute="top" secondItem="wMB-y5-xpG" secondAttribute="top" id="iVu-8B-v84"/>
+                        <constraint firstItem="1pa-NJ-b9y" firstAttribute="width" secondItem="fJn-za-mux" secondAttribute="width" id="sWs-U4-rdn"/>
+                        <constraint firstAttribute="height" constant="40" id="wjX-Od-YJT"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="wMB-y5-xpG" secondAttribute="trailing" id="1m0-Oa-Hqb"/>
+                <constraint firstItem="wMB-y5-xpG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4E7-P6-AkK"/>
+                <constraint firstItem="wMB-y5-xpG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="DTj-IC-KlT"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="fujin-xia" width="16" height="15"/>
+    </resources>
+</document>

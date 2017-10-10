@@ -72,7 +72,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MvW-vi-2Ho">
                     <rect key="frame" x="0.0" y="180" width="375" height="48"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="V9T-gx-r0K">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="22" translatesAutoresizingMaskIntoConstraints="NO" id="V9T-gx-r0K">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
                         </imageView>
                     </subviews>
@@ -137,7 +137,7 @@
                                         <constraint firstAttribute="height" constant="27" id="PdC-en-mQf"/>
                                         <constraint firstAttribute="width" constant="60" id="SdX-aO-xhc"/>
                                     </constraints>
-                                    <inset key="titleEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     <state key="normal" title="女" image="zhuce-nv02">
                                         <color key="titleColor" red="0.85480856895446777" green="0.85495573282241821" blue="0.85479927062988281" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -155,10 +155,13 @@
                                         <constraint firstAttribute="height" constant="27" id="vFv-1k-l3y"/>
                                         <constraint firstAttribute="width" constant="60" id="vwL-OV-7BG"/>
                                     </constraints>
-                                    <inset key="titleEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     <state key="normal" title="男" image="zhuce-nan02">
                                         <color key="titleColor" red="0.85480856900000002" green="0.85495573280000003" blue="0.85479927060000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <state key="selected" title="男" image="zhuce-nan">
+                                        <color key="titleColor" red="0.16267064213752747" green="0.67768484354019165" blue="0.94391101598739624" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                     <connections>
                                         <action selector="manClick:" destination="-1" eventType="touchUpInside" id="geY-8y-xcc"/>
@@ -280,10 +283,11 @@
         </view>
     </objects>
     <resources>
-        <image name="2" width="640" height="80"/>
+        <image name="22" width="640" height="80"/>
+        <image name="zhuce-nan" width="27" height="27"/>
         <image name="zhuce-nan02" width="27" height="27"/>
-        <image name="zhuce-nv" width="27" height="27"/>
-        <image name="zhuce-nv02" width="27" height="27"/>
+        <image name="zhuce-nv" width="16" height="16"/>
+        <image name="zhuce-nv02" width="16" height="16"/>
         <image name="zhuce-photo" width="187" height="169"/>
     </resources>
 </document>

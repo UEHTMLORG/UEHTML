@@ -25,8 +25,8 @@
 - (void)drawRect:(CGRect)rect {
     // Drawing code
     
-//    _minValue = 1;
-//    _maxValue = 100000;
+    _minValue = 0;
+    _maxValue = 100000;
     
     self.keyboardType = UIKeyboardTypeNumberPad;
     

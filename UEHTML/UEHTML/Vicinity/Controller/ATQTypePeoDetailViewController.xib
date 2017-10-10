@@ -129,14 +129,14 @@
                                                             </constraints>
                                                         </imageView>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fujin-cheng" translatesAutoresizingMaskIntoConstraints="NO" id="33m-hj-2SR">
-                                                            <rect key="frame" x="242" y="15" width="20" height="20"/>
+                                                            <rect key="frame" x="316" y="15" width="20" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="33m-hj-2SR" secondAttribute="height" multiplier="1:1" id="IQW-5S-S35"/>
                                                                 <constraint firstAttribute="height" constant="20" id="ebQ-6q-nXF"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3M6-Yh-Bsz">
-                                                            <rect key="frame" x="262" y="15" width="24" height="20"/>
+                                                            <rect key="frame" x="341" y="15" width="24" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="20" id="v3t-On-p6t"/>
                                                             </constraints>
@@ -176,9 +176,8 @@
                                                         <constraint firstItem="acU-8B-Wcr" firstAttribute="bottom" secondItem="HP4-md-wdO" secondAttribute="bottom" id="JcR-lX-e4D"/>
                                                         <constraint firstItem="wbb-af-x33" firstAttribute="leading" secondItem="HjF-Fc-HGm" secondAttribute="trailing" constant="10" id="LOM-qj-8fP"/>
                                                         <constraint firstItem="HjF-Fc-HGm" firstAttribute="leading" secondItem="pTY-Bw-Nt9" secondAttribute="leading" constant="10" id="RZk-cO-dnZ"/>
-                                                        <constraint firstItem="33m-hj-2SR" firstAttribute="leading" secondItem="fBH-Nk-YOq" secondAttribute="trailing" constant="5" id="TvE-5g-Bx9"/>
+                                                        <constraint firstItem="33m-hj-2SR" firstAttribute="trailing" secondItem="3M6-Yh-Bsz" secondAttribute="leading" constant="-5" id="XTW-Ku-IDN"/>
                                                         <constraint firstItem="3M6-Yh-Bsz" firstAttribute="centerY" secondItem="33m-hj-2SR" secondAttribute="centerY" id="aHv-RN-iIP"/>
-                                                        <constraint firstItem="3M6-Yh-Bsz" firstAttribute="leading" secondItem="33m-hj-2SR" secondAttribute="trailing" id="aKT-W9-7vm"/>
                                                         <constraint firstItem="acU-8B-Wcr" firstAttribute="leading" secondItem="HP4-md-wdO" secondAttribute="leading" constant="20" id="dy4-Ty-zIb"/>
                                                         <constraint firstItem="5WX-ia-T7W" firstAttribute="top" secondItem="wbb-af-x33" secondAttribute="bottom" constant="5" id="eb8-Ua-xBl"/>
                                                         <constraint firstItem="HP4-md-wdO" firstAttribute="centerY" secondItem="wbb-af-x33" secondAttribute="centerY" id="k9u-kL-gdP"/>
@@ -186,6 +185,7 @@
                                                         <constraint firstItem="wbb-af-x33" firstAttribute="top" secondItem="pTY-Bw-Nt9" secondAttribute="top" constant="15" id="ksa-25-gBh"/>
                                                         <constraint firstItem="H2S-Yk-vvb" firstAttribute="leading" secondItem="HP4-md-wdO" secondAttribute="trailing" constant="5" id="mKd-IX-0zT"/>
                                                         <constraint firstItem="HjF-Fc-HGm" firstAttribute="top" secondItem="pTY-Bw-Nt9" secondAttribute="top" constant="10" id="sfa-hE-w3D"/>
+                                                        <constraint firstAttribute="trailing" secondItem="3M6-Yh-Bsz" secondAttribute="trailing" constant="10" id="xpd-Fb-Vhl"/>
                                                         <constraint firstItem="H2S-Yk-vvb" firstAttribute="centerY" secondItem="wbb-af-x33" secondAttribute="centerY" id="zEz-zz-p2D"/>
                                                     </constraints>
                                                 </view>
@@ -459,6 +459,9 @@
                                                             <state key="normal" title="押金认证">
                                                                 <color key="titleColor" red="1" green="0.45098039220000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="yajinClick:" destination="-1" eventType="touchUpInside" id="Iys-Gl-YhM"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.89390325546264648" green="0.89803808927536011" blue="0.90205961465835571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -53,7 +53,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rH2-Rv-5HE">
                             <rect key="frame" x="0.0" y="180" width="375" height="48"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="kFM-pA-wyZ">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="11" translatesAutoresizingMaskIntoConstraints="NO" id="kFM-pA-wyZ">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
                                 </imageView>
                             </subviews>
@@ -340,7 +340,7 @@
         </view>
     </objects>
     <resources>
-        <image name="1" width="640" height="80"/>
+        <image name="11" width="640" height="80"/>
         <image name="zhuce-QQ" width="53" height="53"/>
         <image name="zhuce-dun" width="35" height="46"/>
         <image name="zhuce-logo" width="266" height="249"/>

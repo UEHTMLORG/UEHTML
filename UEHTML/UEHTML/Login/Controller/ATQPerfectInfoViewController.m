@@ -58,11 +58,13 @@
 
 //男
 - (IBAction)manClick:(id)sender {
-    
+    self.manBtn.selected = YES;
+    self.womanBtn.selected = !self.manBtn.selected;
 }
 //女
 - (IBAction)womanClick:(id)sender {
-    
+    self.womanBtn.selected = YES;
+    self.manBtn.selected = !self.womanBtn.selected;
 }
 //年龄
 - (IBAction)ageClick:(id)sender {

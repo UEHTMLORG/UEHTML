@@ -19,7 +19,17 @@
     [self takePhoto];
 }
 - (IBAction)back:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:NO];
 }
 
 - (UIImagePickerController *)pickerController{
@@ -47,7 +57,7 @@
         //系统相机
         self.pickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
         
-        //设置默认调用后置摄像头
+        //设置默认调用前置摄像头
         _pickerController.cameraDevice = UIImagePickerControllerCameraDeviceFront;
         [self presentViewController:_pickerController animated:YES completion:nil];
         

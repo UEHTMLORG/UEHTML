@@ -23,9 +23,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"登录";
-    UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithImage: [UIImage imageNamed:@"back_more"] style:UIBarButtonItemStylePlain target:self action:@selector(back:)];
+//    UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithImage: [UIImage imageNamed:@"back_more"] style:UIBarButtonItemStylePlain target:self action:@selector(back:)];
     UIBarButtonItem *right = [[UIBarButtonItem alloc ]initWithTitle:@"注册" style:UIBarButtonItemStylePlain target:self action:@selector(RegisterClick:)];
-    self.navigationItem.leftBarButtonItem = left;
+//    self.navigationItem.leftBarButtonItem = left;
     self.navigationItem.rightBarButtonItem = right;
     [self buildView];
 }
@@ -47,10 +47,10 @@
     
 }
 //返回
-- (void)back:(id)sender {
-    NSLog(@"back");
-    [(AppDelegate *)[UIApplication sharedApplication].delegate openTabHomeCtrl];
-}
+//- (void)back:(id)sender {
+//    NSLog(@"back");
+//    [(AppDelegate *)[UIApplication sharedApplication].delegate openTabHomeCtrl];
+//}
 //注册
 - (void)RegisterClick:(id)sender {
     NSLog(@"RegisterClick");

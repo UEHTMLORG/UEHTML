@@ -9,5 +9,11 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 #import "Common.h"
+#ifdef __OBJC__
+#import "ZLHeader.h"
+#import "CommonHeaderZl.h"
+#endif
+
+
 
 #endif /* PrefixHeader_pch */

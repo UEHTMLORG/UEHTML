@@ -2229,11 +2229,11 @@
 				40236C621F7B9F7F004AE37B /* ATQBusinessTableViewCell.xib in Resources */,
 				40FA89FB1F74A61E0059A208 /* ATQItemTableViewCell.xib in Resources */,
 				40E93DDB1F7768570018C3F5 /* ATQBFristTableViewCell.xib in Resources */,
-<<<<<<< Updated upstream
+
 				4048AE051F8DA75900F6B928 /* ATQNewFriendsTableViewCell.xib in Resources */,
-=======
+
 				185D78641F8DF13900DA8849 /* Loading0011.png in Resources */,
->>>>>>> Stashed changes
+
 				40E0F24E1F78D0400074B064 /* ATQSZFirTableViewCell.xib in Resources */,
 				185D78651F8DF13900DA8849 /* Loading0012.png in Resources */,
 				40DF4F831F82155500EE6753 /* ATQTypeListTableViewCell.xib in Resources */,
@@ -2356,11 +2356,11 @@
 				40EA934E1F7BBC4D005A0E50 /* PNChartLabel.m in Sources */,
 				40E93DDA1F7768570018C3F5 /* ATQBFristTableViewCell.m in Sources */,
 				40875D681F6F9AE300B58609 /* ATQLoginViewController.m in Sources */,
-<<<<<<< Updated upstream
+
 				4061BDA61F8CC2FD00F6EC30 /* ATQMyFriendsTableViewCell.m in Sources */,
-=======
+
 				185D78B61F8DF13A00DA8849 /* ZLSecondAFNetworking.m in Sources */,
->>>>>>> Stashed changes
+
 				40FA89FF1F74B1A80059A208 /* LhkhHttpsManager.m in Sources */,
 				185D78AE1F8DF13A00DA8849 /* NSObject+XWAdd.m in Sources */,
 				40EA934D1F7BBC4D005A0E50 /* PNBarChart.m in Sources */,
@@ -2478,11 +2478,11 @@
 				185D78A21F8DF13A00DA8849 /* UIButton+ZLWebPSetImage.m in Sources */,
 				40260D1F1F71FEF400ED8CF1 /* ATQPerfectInfoViewController.m in Sources */,
 				40EA93521F7BBC4D005A0E50 /* PNLineChart.m in Sources */,
-<<<<<<< Updated upstream
+
 				4061BDA11F8CBED600F6EC30 /* ATQMyFriendsViewController.m in Sources */,
-=======
+
 				185D789C1F8DF13A00DA8849 /* UIView+HeinQi.m in Sources */,
->>>>>>> Stashed changes
+
 				40236C551F7B9499004AE37B /* ATQUserInfoViewController.m in Sources */,
 				185D789B1F8DF13A00DA8849 /* UIView+BlankPage.m in Sources */,
 				185D78CC1F8E3BCC00DA8849 /* JianZhiVideoViewController.m in Sources */,

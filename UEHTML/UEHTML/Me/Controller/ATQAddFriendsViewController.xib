@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ATQAddFriendsViewController">
+            <connections>
+                <outlet property="sousuoText" destination="g9r-DI-x8h" id="gZR-IT-fhn"/>
+                <outlet property="sousuoView" destination="PY6-jF-6MP" id="C5f-Xe-8df"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IIT-Rr-s0t">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PY6-jF-6MP">
+                            <rect key="frame" x="20" y="5" width="335" height="30"/>
+                            <subviews>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="通过凹凸圈ID搜索好友" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g9r-DI-x8h">
+                                    <rect key="frame" x="5" y="0.0" width="300" height="30"/>
+                                    <color key="textColor" red="0.58431372549019611" green="0.58823529411764708" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="haoyou-chazhao" translatesAutoresizingMaskIntoConstraints="NO" id="eaA-KB-rdR">
+                                    <rect key="frame" x="310" y="5" width="20" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="5aW-Ib-pBC"/>
+                                        <constraint firstAttribute="width" secondItem="eaA-KB-rdR" secondAttribute="height" multiplier="1:1" id="thG-ed-H1d"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="eaA-KB-rdR" secondAttribute="trailing" constant="5" id="3Mf-Zp-miG"/>
+                                <constraint firstItem="g9r-DI-x8h" firstAttribute="trailing" secondItem="eaA-KB-rdR" secondAttribute="leading" constant="-5" id="EBU-rQ-6Pr"/>
+                                <constraint firstItem="g9r-DI-x8h" firstAttribute="leading" secondItem="PY6-jF-6MP" secondAttribute="leading" constant="5" id="Jlf-ei-g2w"/>
+                                <constraint firstAttribute="height" constant="30" id="dvd-fc-9Ew"/>
+                                <constraint firstAttribute="bottom" secondItem="g9r-DI-x8h" secondAttribute="bottom" id="eAH-7t-Cd6"/>
+                                <constraint firstItem="g9r-DI-x8h" firstAttribute="top" secondItem="PY6-jF-6MP" secondAttribute="top" id="q3Y-Q3-cJW"/>
+                                <constraint firstItem="eaA-KB-rdR" firstAttribute="centerY" secondItem="PY6-jF-6MP" secondAttribute="centerY" id="qHp-gM-UNn"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="DJs-2d-DVj"/>
+                        <constraint firstAttribute="trailing" secondItem="PY6-jF-6MP" secondAttribute="trailing" constant="20" id="JcP-Bj-D3Q"/>
+                        <constraint firstItem="PY6-jF-6MP" firstAttribute="leading" secondItem="IIT-Rr-s0t" secondAttribute="leading" constant="20" id="PS8-UY-ZLq"/>
+                        <constraint firstAttribute="bottom" secondItem="PY6-jF-6MP" secondAttribute="bottom" constant="5" id="SQl-oD-8dR"/>
+                        <constraint firstItem="PY6-jF-6MP" firstAttribute="top" secondItem="IIT-Rr-s0t" secondAttribute="top" constant="5" id="ldP-dd-Bzn"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="IIT-Rr-s0t" secondAttribute="trailing" id="WMK-Wy-mmJ"/>
+                <constraint firstItem="IIT-Rr-s0t" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="b4q-gP-zhu"/>
+                <constraint firstItem="IIT-Rr-s0t" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="o4q-Yx-H18"/>
+            </constraints>
+            <point key="canvasLocation" x="51.5" y="62.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="haoyou-chazhao" width="40" height="40"/>
+    </resources>
+</document>

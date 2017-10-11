@@ -7,6 +7,7 @@
 //
 
 #import "ATQBaseNavigationViewController.h"
+#import "ATQSearchFriendsViewController.h"
 #import "UIImage+LhkhExtension.h"
 #import "UIColor+LhkhColor.h"
 #import "UIView+LhkhExtension.h"
@@ -58,6 +59,15 @@
         }else{
             viewController.hidesBottomBarWhenPushed = YES;
         }
+    }
+    if ([viewController isKindOfClass:[ATQSearchFriendsViewController class]]) {
+        [viewController.navigationController.navigationItem setHidesBackButton:YES];
+        [viewController.navigationItem setHidesBackButton:YES];
+        [viewController.navigationController.navigationBar.backItem setHidesBackButton:YES];
+    }else{
+        [viewController.navigationController.navigationItem setHidesBackButton:NO];
+        [viewController.navigationItem setHidesBackButton:NO];
+        [viewController.navigationController.navigationBar.backItem setHidesBackButton:NO];
     }
     [super pushViewController:viewController animated:NO];
 }

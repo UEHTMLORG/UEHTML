@@ -28,6 +28,7 @@
 #import "ATQSpreadMoenyViewController.h"
 #import "ATQMyAccountViewController.h"
 #import "ATQRZCenterViewController.h"
+#import "ATQMyFriendsViewController.h"
 @interface ATQMeViewController ()<UITableViewDelegate,UITableViewDataSource>{
     BOOL isBusiness;
 }
@@ -251,6 +252,9 @@
     }else if (indexPath.section == 3){
         if (indexPath.row == 0) {
             ATQVisitorViewController *vc = [[ATQVisitorViewController alloc]init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }else if (indexPath.row == 1) {
+            ATQMyFriendsViewController *vc = [[ATQMyFriendsViewController alloc]init];
             [self.navigationController pushViewController:vc animated:YES];
         }else if (indexPath.row == 2) {
             ATQCollectViewController *vc = [[ATQCollectViewController alloc]init];

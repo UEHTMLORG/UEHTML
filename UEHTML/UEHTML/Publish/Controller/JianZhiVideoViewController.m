@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"视频聊天";
+    self.weiKaiTongView.hidden = NO;
     // Do any additional setup after loading the view from its nib.
     [self loadUIView];
 }
@@ -104,6 +105,11 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)kaiTongVideoButtonAction:(id)sender {
+    
+    KaiTongVideoViewController * VC = [[KaiTongVideoViewController alloc]init];
+    [self.navigationController pushViewController:VC animated:YES];
 }
 
 /*

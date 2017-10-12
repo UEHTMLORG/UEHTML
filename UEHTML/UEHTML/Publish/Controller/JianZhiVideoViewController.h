@@ -9,6 +9,9 @@
 #import "ATQBaseViewController.h"
 #import <DZNSegmentedControl.h>
 #import "JZVideoTableViewCell.h"
+#import "KaiTongVideoViewController.h"
+#import "JianZhiShenHeViewController.h"
+
 @interface JianZhiVideoViewController : ATQBaseViewController<UITableViewDelegate,UITableViewDataSource,DZNSegmentedControlDelegate,UIScrollViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIView *yiKaiTongView;

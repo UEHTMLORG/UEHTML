@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KaiTongVideoViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d3r-S6-IdB">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="135"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请上传三张素颜生活照，否则审核可能不通过" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2JP-Xs-jJ6">
+                            <rect key="frame" x="10" y="15" width="355" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="18" id="vmV-6E-IMr"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="0.97854870557785034" green="0.68681919574737549" blue="0.21586614847183228" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Box-x5-CNu">
+                            <rect key="frame" x="20" y="50" width="70" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="70" id="32t-tz-eNv"/>
+                                <constraint firstAttribute="height" constant="70" id="7lL-Tf-2v3"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="jianzhi-photo"/>
+                            <connections>
+                                <action selector="shangChuanPhotoAction:" destination="-1" eventType="touchUpInside" id="LSx-YM-ZLQ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzO-SE-aPy">
+                            <rect key="frame" x="95" y="50" width="70" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="2IS-to-mKG"/>
+                                <constraint firstAttribute="width" constant="70" id="Nof-6m-epS"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="jianzhi-photo"/>
+                            <connections>
+                                <action selector="shangChuanPhotoAction:" destination="-1" eventType="touchUpInside" id="PXe-Nu-TaS"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efW-zP-PvL">
+                            <rect key="frame" x="170" y="50" width="70" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="70" id="N44-nh-0r3"/>
+                                <constraint firstAttribute="height" constant="70" id="vM4-fe-dDd"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="jianzhi-photo"/>
+                            <connections>
+                                <action selector="shangChuanPhotoAction:" destination="-1" eventType="touchUpInside" id="oBO-vZ-CDP"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="gzO-SE-aPy" firstAttribute="leading" secondItem="Box-x5-CNu" secondAttribute="trailing" constant="5" id="4Ol-iv-h4e"/>
+                        <constraint firstAttribute="bottom" secondItem="Box-x5-CNu" secondAttribute="bottom" constant="15" id="Bed-8G-YT6"/>
+                        <constraint firstAttribute="height" constant="135" id="DU7-dZ-jSO"/>
+                        <constraint firstItem="2JP-Xs-jJ6" firstAttribute="top" secondItem="d3r-S6-IdB" secondAttribute="top" constant="15" id="Erl-7N-YFr"/>
+                        <constraint firstItem="Box-x5-CNu" firstAttribute="leading" secondItem="d3r-S6-IdB" secondAttribute="leading" constant="20" id="Gy4-5S-hFf"/>
+                        <constraint firstItem="gzO-SE-aPy" firstAttribute="centerY" secondItem="Box-x5-CNu" secondAttribute="centerY" id="YLc-F5-c8r"/>
+                        <constraint firstAttribute="trailing" secondItem="2JP-Xs-jJ6" secondAttribute="trailing" constant="10" id="jUd-xV-DXV"/>
+                        <constraint firstItem="efW-zP-PvL" firstAttribute="centerY" secondItem="gzO-SE-aPy" secondAttribute="centerY" id="muo-SJ-nwb"/>
+                        <constraint firstItem="2JP-Xs-jJ6" firstAttribute="leading" secondItem="d3r-S6-IdB" secondAttribute="leading" constant="10" id="phO-u6-p60"/>
+                        <constraint firstItem="efW-zP-PvL" firstAttribute="leading" secondItem="gzO-SE-aPy" secondAttribute="trailing" constant="5" id="qka-ig-WXo"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S6J-7D-RQd">
+                    <rect key="frame" x="0.0" y="155" width="375" height="135"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请上传两段素颜视频，否则审核可能不通过" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPj-hu-qZo">
+                            <rect key="frame" x="15" y="15" width="345" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="18" id="xDZ-Dq-rjV"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="0.97854870559999996" green="0.68681919570000005" blue="0.21586614849999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQo-fx-HHd">
+                            <rect key="frame" x="20" y="50" width="70" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="b7H-jy-R5l"/>
+                                <constraint firstAttribute="width" constant="70" id="uo2-tk-jKW"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="jianzhi-photo02"/>
+                            <connections>
+                                <action selector="shangChuanVideoAction:" destination="-1" eventType="touchUpInside" id="q4N-ur-ixB"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxN-dp-gQv">
+                            <rect key="frame" x="100" y="50" width="70" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="DcK-ez-Aiw"/>
+                                <constraint firstAttribute="width" constant="70" id="w8N-te-qdK"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="jianzhi-photo02"/>
+                            <connections>
+                                <action selector="shangChuanVideoAction:" destination="-1" eventType="touchUpInside" id="3qO-lg-ZmF"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="135" id="0EK-E7-OMX"/>
+                        <constraint firstAttribute="trailing" secondItem="NPj-hu-qZo" secondAttribute="trailing" constant="15" id="4bP-h3-sGa"/>
+                        <constraint firstItem="JQo-fx-HHd" firstAttribute="leading" secondItem="S6J-7D-RQd" secondAttribute="leading" constant="20" id="7lc-0O-Jnw"/>
+                        <constraint firstItem="NPj-hu-qZo" firstAttribute="leading" secondItem="S6J-7D-RQd" secondAttribute="leading" constant="15" id="L1s-tn-ass"/>
+                        <constraint firstAttribute="bottom" secondItem="JQo-fx-HHd" secondAttribute="bottom" constant="15" id="MGg-r7-Awm"/>
+                        <constraint firstItem="NPj-hu-qZo" firstAttribute="top" secondItem="S6J-7D-RQd" secondAttribute="top" constant="15" id="dlP-Z6-gJe"/>
+                        <constraint firstItem="cxN-dp-gQv" firstAttribute="centerY" secondItem="JQo-fx-HHd" secondAttribute="centerY" id="f5A-QY-ERM"/>
+                        <constraint firstItem="cxN-dp-gQv" firstAttribute="leading" secondItem="JQo-fx-HHd" secondAttribute="trailing" constant="10" id="iga-gm-2ky"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HwM-md-X2J">
+                    <rect key="frame" x="25" y="320" width="325" height="40"/>
+                    <color key="backgroundColor" red="0.96787184476852417" green="0.450145423412323" blue="0.73122376203536987" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="vrh-j1-KEm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="提交审核">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="tijiaoButtonAction:" destination="-1" eventType="touchUpInside" id="kBE-uF-Qv4"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.95285779237747192" green="0.95299452543258667" blue="0.95282787084579468" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="S6J-7D-RQd" secondAttribute="trailing" id="18a-nd-OJH"/>
+                <constraint firstItem="HwM-md-X2J" firstAttribute="top" secondItem="S6J-7D-RQd" secondAttribute="bottom" constant="30" id="5M8-pR-CvG"/>
+                <constraint firstItem="d3r-S6-IdB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="7sr-3n-MWO"/>
+                <constraint firstItem="S6J-7D-RQd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="I8h-hr-iBJ"/>
+                <constraint firstAttribute="trailing" secondItem="HwM-md-X2J" secondAttribute="trailing" constant="25" id="IVK-Rv-a56"/>
+                <constraint firstItem="HwM-md-X2J" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="LNB-kh-EHg"/>
+                <constraint firstItem="S6J-7D-RQd" firstAttribute="top" secondItem="d3r-S6-IdB" secondAttribute="bottom" constant="20" id="PCl-3T-jqo"/>
+                <constraint firstItem="d3r-S6-IdB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dhF-5J-08O"/>
+                <constraint firstAttribute="trailing" secondItem="d3r-S6-IdB" secondAttribute="trailing" id="h01-6v-peh"/>
+            </constraints>
+            <point key="canvasLocation" x="-69.5" y="94.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="jianzhi-photo" width="120" height="120"/>
+        <image name="jianzhi-photo02" width="120" height="120"/>
+    </resources>
+</document>

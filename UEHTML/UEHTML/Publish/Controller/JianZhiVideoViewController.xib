@@ -81,6 +81,9 @@
                             <state key="normal" title="马上开通">
                                 <color key="titleColor" red="0.96787184479999999" green="0.45014542340000002" blue="0.73122376200000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
+                            <connections>
+                                <action selector="kaiTongVideoButtonAction:" destination="-1" eventType="touchUpInside" id="peV-ST-MNT"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -132,7 +135,7 @@
                 <constraint firstItem="dE1-tW-LBF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="vE7-cx-tsV"/>
                 <constraint firstItem="A47-jr-JCR" firstAttribute="top" secondItem="dE1-tW-LBF" secondAttribute="bottom" constant="5" id="z3m-q0-oDq"/>
             </constraints>
-            <point key="canvasLocation" x="25.5" y="52.5"/>
+            <point key="canvasLocation" x="184" y="18"/>
         </view>
     </objects>
     <resources>

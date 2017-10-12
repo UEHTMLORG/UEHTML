@@ -105,6 +105,12 @@
 		18D16EA21F8F150400D8DF79 /* JZVideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D16EA01F8F150400D8DF79 /* JZVideoTableViewCell.m */; };
 		18D16EA31F8F150400D8DF79 /* JZVideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D16EA11F8F150400D8DF79 /* JZVideoTableViewCell.xib */; };
 		18D16EA61F8F171000D8DF79 /* JZVideoCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D16EA51F8F171000D8DF79 /* JZVideoCellModel.m */; };
+		18D16EAA1F8F506700D8DF79 /* KaiTongVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D16EA81F8F506700D8DF79 /* KaiTongVideoViewController.m */; };
+		18D16EAB1F8F506700D8DF79 /* KaiTongVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D16EA91F8F506700D8DF79 /* KaiTongVideoViewController.xib */; };
+		18D16EAF1F8F579900D8DF79 /* JianZhiShenHeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D16EAD1F8F579900D8DF79 /* JianZhiShenHeViewController.m */; };
+		18D16EB01F8F579900D8DF79 /* JianZhiShenHeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D16EAE1F8F579900D8DF79 /* JianZhiShenHeViewController.xib */; };
+		18D16EB41F8F5AD800D8DF79 /* JianZhiTouSuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D16EB21F8F5AD800D8DF79 /* JianZhiTouSuViewController.m */; };
+		18D16EB51F8F5AD800D8DF79 /* JianZhiTouSuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D16EB31F8F5AD800D8DF79 /* JianZhiTouSuViewController.xib */; };
 		40019C321F7F6BF600E11331 /* ATQCheckTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40019C301F7F6BF600E11331 /* ATQCheckTableViewCell.m */; };
 		40019C331F7F6BF600E11331 /* ATQCheckTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40019C311F7F6BF600E11331 /* ATQCheckTableViewCell.xib */; };
 		4018F5AD1F500B4000D6C42D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4018F5A51F500B4000D6C42D /* Assets.xcassets */; };
@@ -524,6 +530,15 @@
 		18D16EA11F8F150400D8DF79 /* JZVideoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JZVideoTableViewCell.xib; sourceTree = "<group>"; };
 		18D16EA41F8F171000D8DF79 /* JZVideoCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JZVideoCellModel.h; sourceTree = "<group>"; };
 		18D16EA51F8F171000D8DF79 /* JZVideoCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JZVideoCellModel.m; sourceTree = "<group>"; };
+		18D16EA71F8F506700D8DF79 /* KaiTongVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KaiTongVideoViewController.h; sourceTree = "<group>"; };
+		18D16EA81F8F506700D8DF79 /* KaiTongVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KaiTongVideoViewController.m; sourceTree = "<group>"; };
+		18D16EA91F8F506700D8DF79 /* KaiTongVideoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KaiTongVideoViewController.xib; sourceTree = "<group>"; };
+		18D16EAC1F8F579900D8DF79 /* JianZhiShenHeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JianZhiShenHeViewController.h; sourceTree = "<group>"; };
+		18D16EAD1F8F579900D8DF79 /* JianZhiShenHeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JianZhiShenHeViewController.m; sourceTree = "<group>"; };
+		18D16EAE1F8F579900D8DF79 /* JianZhiShenHeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JianZhiShenHeViewController.xib; sourceTree = "<group>"; };
+		18D16EB11F8F5AD800D8DF79 /* JianZhiTouSuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JianZhiTouSuViewController.h; sourceTree = "<group>"; };
+		18D16EB21F8F5AD800D8DF79 /* JianZhiTouSuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JianZhiTouSuViewController.m; sourceTree = "<group>"; };
+		18D16EB31F8F5AD800D8DF79 /* JianZhiTouSuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JianZhiTouSuViewController.xib; sourceTree = "<group>"; };
 		40019C2F1F7F6BF600E11331 /* ATQCheckTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQCheckTableViewCell.h; path = UEHTML/Me/Controller/ATQCheckTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		40019C301F7F6BF600E11331 /* ATQCheckTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQCheckTableViewCell.m; path = UEHTML/Me/Controller/ATQCheckTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		40019C311F7F6BF600E11331 /* ATQCheckTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQCheckTableViewCell.xib; path = UEHTML/Me/Controller/ATQCheckTableViewCell.xib; sourceTree = SOURCE_ROOT; };
@@ -1874,6 +1889,15 @@
 				185D78C91F8E3BCC00DA8849 /* JianZhiVideoViewController.h */,
 				185D78CA1F8E3BCC00DA8849 /* JianZhiVideoViewController.m */,
 				185D78CB1F8E3BCC00DA8849 /* JianZhiVideoViewController.xib */,
+				18D16EA71F8F506700D8DF79 /* KaiTongVideoViewController.h */,
+				18D16EA81F8F506700D8DF79 /* KaiTongVideoViewController.m */,
+				18D16EA91F8F506700D8DF79 /* KaiTongVideoViewController.xib */,
+				18D16EAC1F8F579900D8DF79 /* JianZhiShenHeViewController.h */,
+				18D16EAD1F8F579900D8DF79 /* JianZhiShenHeViewController.m */,
+				18D16EAE1F8F579900D8DF79 /* JianZhiShenHeViewController.xib */,
+				18D16EB11F8F5AD800D8DF79 /* JianZhiTouSuViewController.h */,
+				18D16EB21F8F5AD800D8DF79 /* JianZhiTouSuViewController.m */,
+				18D16EB31F8F5AD800D8DF79 /* JianZhiTouSuViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2192,6 +2216,7 @@
 				4018F5AF1F500B4000D6C42D /* Main.storyboard in Resources */,
 				40E0F2531F78D0870074B064 /* ATQSZSecTableViewCell.xib in Resources */,
 				185D78681F8DF13900DA8849 /* Loading0015.png in Resources */,
+				18D16EB51F8F5AD800D8DF79 /* JianZhiTouSuViewController.xib in Resources */,
 				408AE8201F862BD0004A824C /* ATQRZCenterTableViewCell.xib in Resources */,
 				40236C341F7B7AD0004AE37B /* ATQQuesTableViewCell.xib in Resources */,
 				40236C671F7BA0EC004AE37B /* ATQBillTableViewCell.xib in Resources */,
@@ -2235,6 +2260,7 @@
 				40FA89F61F74A41C0059A208 /* ATQTitleTableViewCell.xib in Resources */,
 				40019C331F7F6BF600E11331 /* ATQCheckTableViewCell.xib in Resources */,
 				40FA8A091F74E6E70059A208 /* ATQTagCollectionViewCell.xib in Resources */,
+				18D16EAB1F8F506700D8DF79 /* KaiTongVideoViewController.xib in Resources */,
 				185D786A1F8DF13900DA8849 /* Loading0017.png in Resources */,
 				185D78741F8DF13A00DA8849 /* Loading008.png in Resources */,
 				40E0F26F1F78FE2B0074B064 /* ATQPhotoTableViewCell.xib in Resources */,
@@ -2269,6 +2295,7 @@
 				40E93DDB1F7768570018C3F5 /* ATQBFristTableViewCell.xib in Resources */,
 				4048AE051F8DA75900F6B928 /* ATQNewFriendsTableViewCell.xib in Resources */,
 				185D78641F8DF13900DA8849 /* Loading0011.png in Resources */,
+				18D16EB01F8F579900D8DF79 /* JianZhiShenHeViewController.xib in Resources */,
 				40E0F24E1F78D0400074B064 /* ATQSZFirTableViewCell.xib in Resources */,
 				185D78651F8DF13900DA8849 /* Loading0012.png in Resources */,
 				40DF4F831F82155500EE6753 /* ATQTypeListTableViewCell.xib in Resources */,
@@ -2453,6 +2480,7 @@
 				40E061C41F7695DF0072596D /* ATQHomeRecCollectionViewCell.m in Sources */,
 				40EA93211F7BBAD3005A0E50 /* bitstream.c in Sources */,
 				185D78831F8DF13A00DA8849 /* GCDGroup.m in Sources */,
+				18D16EAF1F8F579900D8DF79 /* JianZhiShenHeViewController.m in Sources */,
 				185D78901F8DF13A00DA8849 /* NavTopCommonImage.m in Sources */,
 				40D353B11F7F26B90017DA5C /* ATQMyAccountViewController.m in Sources */,
 				185D789D1F8DF13A00DA8849 /* HFSApplicationContext.m in Sources */,
@@ -2490,6 +2518,7 @@
 				40DF4F871F825D0600EE6753 /* ATQTypePeoDetailViewController.m in Sources */,
 				40D353B51F7F2B900017DA5C /* ATQAccountFirTableViewCell.m in Sources */,
 				185D78B71F8DF13A00DA8849 /* ZLBaseViewController.m in Sources */,
+				18D16EB41F8F5AD800D8DF79 /* JianZhiTouSuViewController.m in Sources */,
 				185D78A41F8DF13A00DA8849 /* RSA.m in Sources */,
 				40D353C41F7F33180017DA5C /* ATQAccountFourTableViewCell.m in Sources */,
 				40236C4C1F7B8AB7004AE37B /* KZPhotoManager.m in Sources */,
@@ -2534,6 +2563,7 @@
 				185D78C71F8E245B00DA8849 /* TiGongTableViewCell.m in Sources */,
 				40F9F22E1F7A32C000F5A42B /* ATQAWechatTableViewCell.m in Sources */,
 				185D787F1F8DF13A00DA8849 /* NewFeatureScrollView.m in Sources */,
+				18D16EAA1F8F506700D8DF79 /* KaiTongVideoViewController.m in Sources */,
 				185D789A1F8DF13A00DA8849 /* UILabel+HeinQi.m in Sources */,
 				185D78AA1F8DF13A00DA8849 /* ZLPageControl.m in Sources */,
 				4067ECFF1F79F58F0051173D /* ATQWechatView.m in Sources */,

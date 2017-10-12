@@ -102,6 +102,9 @@
 		188F843A1F739BD30037213D /* ComplainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F84381F739BD30037213D /* ComplainViewController.m */; };
 		188F843B1F739BD30037213D /* ComplainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188F84391F739BD30037213D /* ComplainViewController.xib */; };
 		18BFFF561F53B863002144D5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18BFFF551F53B863002144D5 /* Info.plist */; };
+		18D16EA21F8F150400D8DF79 /* JZVideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D16EA01F8F150400D8DF79 /* JZVideoTableViewCell.m */; };
+		18D16EA31F8F150400D8DF79 /* JZVideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D16EA11F8F150400D8DF79 /* JZVideoTableViewCell.xib */; };
+		18D16EA61F8F171000D8DF79 /* JZVideoCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D16EA51F8F171000D8DF79 /* JZVideoCellModel.m */; };
 		40019C321F7F6BF600E11331 /* ATQCheckTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40019C301F7F6BF600E11331 /* ATQCheckTableViewCell.m */; };
 		40019C331F7F6BF600E11331 /* ATQCheckTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40019C311F7F6BF600E11331 /* ATQCheckTableViewCell.xib */; };
 		4018F5AD1F500B4000D6C42D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4018F5A51F500B4000D6C42D /* Assets.xcassets */; };
@@ -516,6 +519,11 @@
 		188F84381F739BD30037213D /* ComplainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComplainViewController.m; sourceTree = "<group>"; };
 		188F84391F739BD30037213D /* ComplainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComplainViewController.xib; sourceTree = "<group>"; };
 		18BFFF551F53B863002144D5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18D16E9F1F8F150400D8DF79 /* JZVideoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JZVideoTableViewCell.h; sourceTree = "<group>"; };
+		18D16EA01F8F150400D8DF79 /* JZVideoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JZVideoTableViewCell.m; sourceTree = "<group>"; };
+		18D16EA11F8F150400D8DF79 /* JZVideoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JZVideoTableViewCell.xib; sourceTree = "<group>"; };
+		18D16EA41F8F171000D8DF79 /* JZVideoCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JZVideoCellModel.h; sourceTree = "<group>"; };
+		18D16EA51F8F171000D8DF79 /* JZVideoCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JZVideoCellModel.m; sourceTree = "<group>"; };
 		40019C2F1F7F6BF600E11331 /* ATQCheckTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQCheckTableViewCell.h; path = UEHTML/Me/Controller/ATQCheckTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		40019C301F7F6BF600E11331 /* ATQCheckTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQCheckTableViewCell.m; path = UEHTML/Me/Controller/ATQCheckTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		40019C311F7F6BF600E11331 /* ATQCheckTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQCheckTableViewCell.xib; path = UEHTML/Me/Controller/ATQCheckTableViewCell.xib; sourceTree = SOURCE_ROOT; };
@@ -1349,6 +1357,8 @@
 			children = (
 				185D78C11F8E1EAE00DA8849 /* JianZhiListCellModel.h */,
 				185D78C21F8E1EAE00DA8849 /* JianZhiListCellModel.m */,
+				18D16EA41F8F171000D8DF79 /* JZVideoCellModel.h */,
+				18D16EA51F8F171000D8DF79 /* JZVideoCellModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1367,6 +1377,9 @@
 				185D78C61F8E245B00DA8849 /* TiGongTableViewCell.xib */,
 				185D78BE1F8E1CBA00DA8849 /* JianZhiListTableVIew.h */,
 				185D78BF1F8E1CBA00DA8849 /* JianZhiListTableVIew.m */,
+				18D16E9F1F8F150400D8DF79 /* JZVideoTableViewCell.h */,
+				18D16EA01F8F150400D8DF79 /* JZVideoTableViewCell.m */,
+				18D16EA11F8F150400D8DF79 /* JZVideoTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2232,6 +2245,7 @@
 				40F9F2341F7A3E6E00F5A42B /* ATQSetupSecrityViewController.xib in Resources */,
 				40236C441F7B8094004AE37B /* ATQOpinionPhotoTableViewCell.xib in Resources */,
 				185D78691F8DF13900DA8849 /* Loading0016.png in Resources */,
+				18D16EA31F8F150400D8DF79 /* JZVideoTableViewCell.xib in Resources */,
 				185D78631F8DF13900DA8849 /* Loading0010.png in Resources */,
 				40DB4FDD1F8BA7D400F8EDDB /* ATQJZTypeListTableViewCell.xib in Resources */,
 				185D78891F8DF13A00DA8849 /* page.png in Resources */,
@@ -2459,6 +2473,7 @@
 				407F9BD71F66364C0043A87A /* ATQVicintyViewController.m in Sources */,
 				40DF4F8B1F8269CD00EE6753 /* CPStepper.m in Sources */,
 				185D78611F8DF13900DA8849 /* UIColor+KSString.m in Sources */,
+				18D16EA21F8F150400D8DF79 /* JZVideoTableViewCell.m in Sources */,
 				407193D31F8B028E00B9F162 /* ATQSPRZViewController.m in Sources */,
 				40E0F2461F78B1D60074B064 /* ZLCustomButton.m in Sources */,
 				40EA93581F7BBC4D005A0E50 /* PNRadarChartDataItem.m in Sources */,
@@ -2571,6 +2586,7 @@
 				4024D6691F7E3D4E006E56C1 /* ATQEditPhotoViewController.m in Sources */,
 				409E6D861F5003DA00E3BE49 /* main.m in Sources */,
 				185D78C31F8E1EAE00DA8849 /* JianZhiListCellModel.m in Sources */,
+				18D16EA61F8F171000D8DF79 /* JZVideoCellModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

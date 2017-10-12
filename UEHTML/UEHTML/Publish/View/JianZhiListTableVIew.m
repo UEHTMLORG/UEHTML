@@ -34,18 +34,8 @@
 */
 - (void)loadTableViewWith:(NSMutableArray *)arrary withCellType:(JianZhiCenterCellType)type{
     self.currentCellType = type;
-
-    switch (type) {
-        case JIANZHICELLTYPE:
-            [self.tableview registerNib:[UINib nibWithNibName:@"JianZhiTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"JianZhiYiCellID"];
-            break;
-        case TIGONGCELLTYPE:
-             [self.tableview registerNib:[UINib nibWithNibName:@"TiGongTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"TiGongCellID"];
-            break;
-        default:
-            break;
-    }
-    
+    [self.tableview registerNib:[UINib nibWithNibName:@"JianZhiTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"JianZhiYiCellID"];
+     [self.tableview registerNib:[UINib nibWithNibName:@"TiGongTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"TiGongCellID"];
 }
 
 - (void)reloadTableViewWith:(NSMutableArray *)arrary withCellType:(JianZhiCenterCellType)type{

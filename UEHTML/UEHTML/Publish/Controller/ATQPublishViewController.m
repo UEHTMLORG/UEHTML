@@ -93,14 +93,9 @@
     }
     else{
         self.currentButtonIndex = ZHAOREN_FUWU_INDEX;
-        self.yiYaoView.hidden = YES;
-        self.tiGongView.hidden = NO;
-        self.tiGongSubView.hidden = NO;
-
-
         
-        [self.view setNeedsUpdateConstraints];
-
+        self.listView.currentCellType = TIGONGCELLTYPE;
+        [self.listView.tableview reloadData];
     }
 
 }
@@ -110,49 +105,13 @@
     }
     else{
         self.currentButtonIndex = WOYAO_ZHUANQIAN_INDEX;
-        self.yiYaoView.hidden = NO;
-        self.tiGongView.hidden = YES;
-        self.tiGongSubView.hidden = YES;
         
-        [self.view setNeedsUpdateConstraints];
+        self.listView.currentCellType = JIANZHICELLTYPE;
+        [self.listView.tableview reloadData];
     }
 
 }
 - (void)updateViewConstraints{
-    switch (self.currentButtonIndex) {
-        case ZHAOREN_FUWU_INDEX:{
-            [self.listView mas_remakeConstraints:^(MASConstraintMaker *make) {
-                make.right.left.mas_equalTo(self.view);
-                make.top.mas_equalTo(self.tiGongSubView.mas_bottom).mas_offset(5);
-                make.bottom.mas_equalTo(self.view).offset(-49.0);
-            }];
-//            [self.listView mas_makeConstraints:^(MASConstraintMaker *make) {
-//                make.right.left.mas_equalTo(self.view);
-//                make.top.mas_equalTo(self.tiGongSubView.mas_bottom).mas_offset(5);
-//                make.bottom.mas_equalTo(self.view).offset(-49.0);
-//            }];
-        }
-            break;
-        case WOYAO_ZHUANQIAN_INDEX:{
-            [self.listView mas_remakeConstraints:^(MASConstraintMaker *make) {
-                make.right.left.mas_equalTo(self.view);
-                make.top.mas_equalTo(self.yiYaoView.mas_bottom).mas_offset(5);
-                make.bottom.mas_equalTo(self.view).offset(-49.0);
-            }];
-//            [self.listView mas_makeConstraints:^(MASConstraintMaker *make) {
-//                make.right.left.mas_equalTo(self.view);
-//                make.top.mas_equalTo(self.yiYaoView.mas_bottom).mas_offset(5);
-//                make.bottom.mas_equalTo(self.view).offset(-49.0);
-//            }];
-        
-        }
-            
-            break;
-            
-        default:
-            break;
-    }
-    NSLog(@"调用了约束更新方法");
     [super updateViewConstraints];
 }
 /**
@@ -164,17 +123,6 @@
  *4.
  ===========ZL注释end==========*/
 - (void)loadYingListView{
-    
-    self.yiYaoView = [UIView new];
-    self.yiYaoView.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:self.yiYaoView];
-    
-    [self.yiYaoView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.mas_equalTo(self.view);
-        make.top.mas_equalTo(_headView.mas_bottom).mas_offset(5);
-        make.height.mas_equalTo(@50);
-    }];
-    self.yiYaoView.hidden = YES;
     
     self.tiGongView  = [UIView new];
     self.tiGongView.backgroundColor = [UIColor whiteColor];
@@ -196,8 +144,7 @@
     
     
     
-    self.firstItemARR = @[@"我提供的兼职",@"我应邀的兼职"];
-    [self.yiYaoView addSubview:self.yiYaoControl];
+
     self.secondItemARR = @[@"我是服务方",@"我是需求方"];
     self.thirdItemARR = @[@"系统推荐",@"全部",@"交易中",@"已完成"];
     [self.tiGongView addSubview:self.tiGongControl];
@@ -348,11 +295,33 @@
 
 - (void)didChangeSegment:(DZNSegmentedControl *)control
 {
-    if (control.selectedSegmentIndex == 0) {
 
-    }
-    else{
+    switch (control.tag) {
+        case 2:{
+            if (control.selectedSegmentIndex == 0) {
+                self.currentButtonIndex = ZHAOREN_FUWU_INDEX;
+                
+                self.listView.currentCellType = TIGONGCELLTYPE;
+                [self.listView.tableview reloadData];
+            }
+            else{
+                self.currentButtonIndex = WOYAO_ZHUANQIAN_INDEX;
+                
+                self.listView.currentCellType = JIANZHICELLTYPE;
+                [self.listView.tableview reloadData];
+                
+                
+            }
+            
+        }
+            break;
+        case 3:{
 
+        }
+            
+            break;
+        default:
+            break;
     }
     
 }

@@ -34,21 +34,28 @@
         self.navigationBar.barTintColor = [UIColor whiteColor];
     }
     //系统返回按钮图片设置
-    NSString *imageName = @"back_more";
-    if ([UIApplication sharedApplication].statusBarStyle == UIStatusBarStyleDefault) {
-        imageName = @"back_more";
-    }
-    UIImage *image = [UIImage imageNamed:imageName];
-    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[image resizableImageWithCapInsets:UIEdgeInsetsMake(0, image.size.width-1, 0, 0)] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+//    NSString *imageName = @"back_more";
+//    if ([UIApplication sharedApplication].statusBarStyle == UIStatusBarStyleDefault) {
+//        imageName = @"back_more";
+//    }
+//    UIImage *image = [UIImage imageNamed:imageName];
+//    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[image resizableImageWithCapInsets:UIEdgeInsetsMake(0, image.size.width-1, 0, 0)] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-    
-    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
-                                                         forBarMetrics:UIBarMetricsDefault];
-    
+
+//    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, 0)
+//                                                         forBarMetrics:UIBarMetricsDefault];
+
+//    self.navigationBar.backIndicatorImage = [UIImage imageNamed:@"back_more"];
+//    self.navigationBar.backIndicatorTransitionMaskImage = [UIImage imageNamed:@"back_more"];
+//
 }
 
 #pragma mark push
 -(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
+    if (self.viewControllers.count > 0) {
+        viewController.hidesBottomBarWhenPushed = YES;
+        viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"back_more"] style:UIBarButtonItemStyleDone target:self action:@selector(back)];
+    }
     for (Class classes in self.rootVcAry) {
         if ([viewController isKindOfClass:classes]) {
             if (self.navigationController.viewControllers.count > 0) {
@@ -71,7 +78,10 @@
     }
     [super pushViewController:viewController animated:NO];
 }
-
+- (void)back
+{
+    [self popViewControllerAnimated:YES];
+}
 -(NSMutableArray*)rootVcAry{
     if (!_rootVcAry) {
         _rootVcAry = [NSMutableArray array];

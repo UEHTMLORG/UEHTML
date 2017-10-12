@@ -42,6 +42,7 @@ DEPENDENCIES:
   - MJExtension
   - MJRefresh
   - SDWebImage
+  - SDWebImage (~> 4.1)
   - SVProgressHUD (~> 2.0.4)
   - UICountingLabel (~> 1.4.0)
   - YYKit (~> 1.0)
@@ -60,6 +61,6 @@ SPEC CHECKSUMS:
   UICountingLabel: ed5ce5b6d5ef278ff40d99cfa49577a30ab0c87b
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: d06ab7b803f6cf4f4d33327f943e13118d46102f
+PODFILE CHECKSUM: 74eec1ae3c945e6affb64f8df68d8706adfb2fdf
 
 COCOAPODS: 1.4.0.beta.1

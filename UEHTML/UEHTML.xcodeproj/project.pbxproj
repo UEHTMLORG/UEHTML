@@ -145,6 +145,11 @@
 		40260D201F71FEF400ED8CF1 /* ATQPerfectInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40260D1E1F71FEF400ED8CF1 /* ATQPerfectInfoViewController.xib */; };
 		4027D80F1F79409900B45C8E /* ATQVisitorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4027D80D1F79409900B45C8E /* ATQVisitorTableViewCell.m */; };
 		4027D8101F79409900B45C8E /* ATQVisitorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4027D80E1F79409900B45C8E /* ATQVisitorTableViewCell.xib */; };
+		4034589A1F8F031A007993F3 /* ATQTongchengViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 403458991F8F031A007993F3 /* ATQTongchengViewController.m */; };
+		4034589D1F8F032D007993F3 /* ATQHaoyouViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4034589C1F8F032D007993F3 /* ATQHaoyouViewController.m */; };
+		403458A01F8F0340007993F3 /* ATQMyselfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4034589F1F8F0340007993F3 /* ATQMyselfViewController.m */; };
+		403458A41F8F05C2007993F3 /* ATQTongchengTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 403458A21F8F05C2007993F3 /* ATQTongchengTableViewCell.m */; };
+		403458A51F8F05C2007993F3 /* ATQTongchengTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 403458A31F8F05C2007993F3 /* ATQTongchengTableViewCell.xib */; };
 		4048AE041F8DA75900F6B928 /* ATQNewFriendsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048AE021F8DA75900F6B928 /* ATQNewFriendsTableViewCell.m */; };
 		4048AE051F8DA75900F6B928 /* ATQNewFriendsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4048AE031F8DA75900F6B928 /* ATQNewFriendsTableViewCell.xib */; };
 		4061BD9C1F8CB53B00F6EC30 /* ATQTypeListInviteDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4061BD9A1F8CB53B00F6EC30 /* ATQTypeListInviteDetailViewController.m */; };
@@ -580,6 +585,15 @@
 		4027D80C1F79409900B45C8E /* ATQVisitorTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQVisitorTableViewCell.h; path = UEHTML/Me/Controller/ATQVisitorTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		4027D80D1F79409900B45C8E /* ATQVisitorTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQVisitorTableViewCell.m; path = UEHTML/Me/Controller/ATQVisitorTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		4027D80E1F79409900B45C8E /* ATQVisitorTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQVisitorTableViewCell.xib; path = UEHTML/Me/Controller/ATQVisitorTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		403458981F8F031A007993F3 /* ATQTongchengViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQTongchengViewController.h; sourceTree = "<group>"; };
+		403458991F8F031A007993F3 /* ATQTongchengViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQTongchengViewController.m; sourceTree = "<group>"; };
+		4034589B1F8F032D007993F3 /* ATQHaoyouViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQHaoyouViewController.h; sourceTree = "<group>"; };
+		4034589C1F8F032D007993F3 /* ATQHaoyouViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQHaoyouViewController.m; sourceTree = "<group>"; };
+		4034589E1F8F0340007993F3 /* ATQMyselfViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQMyselfViewController.h; sourceTree = "<group>"; };
+		4034589F1F8F0340007993F3 /* ATQMyselfViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQMyselfViewController.m; sourceTree = "<group>"; };
+		403458A11F8F05C2007993F3 /* ATQTongchengTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQTongchengTableViewCell.h; path = UEHTML/ATQ/Controller/ATQTongchengTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		403458A21F8F05C2007993F3 /* ATQTongchengTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQTongchengTableViewCell.m; path = UEHTML/ATQ/Controller/ATQTongchengTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		403458A31F8F05C2007993F3 /* ATQTongchengTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQTongchengTableViewCell.xib; path = UEHTML/ATQ/Controller/ATQTongchengTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		4048AE011F8DA75900F6B928 /* ATQNewFriendsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQNewFriendsTableViewCell.h; path = UEHTML/Me/Controller/ATQNewFriendsTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		4048AE021F8DA75900F6B928 /* ATQNewFriendsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQNewFriendsTableViewCell.m; path = UEHTML/Me/Controller/ATQNewFriendsTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		4048AE031F8DA75900F6B928 /* ATQNewFriendsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQNewFriendsTableViewCell.xib; path = UEHTML/Me/Controller/ATQNewFriendsTableViewCell.xib; sourceTree = SOURCE_ROOT; };
@@ -1323,6 +1337,9 @@
 		186623281F76A47E00E42290 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				403458A11F8F05C2007993F3 /* ATQTongchengTableViewCell.h */,
+				403458A21F8F05C2007993F3 /* ATQTongchengTableViewCell.m */,
+				403458A31F8F05C2007993F3 /* ATQTongchengTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1522,6 +1539,12 @@
 			children = (
 				407F9BDE1F6636A90043A87A /* ATQViewController.h */,
 				407F9BDF1F6636A90043A87A /* ATQViewController.m */,
+				403458981F8F031A007993F3 /* ATQTongchengViewController.h */,
+				403458991F8F031A007993F3 /* ATQTongchengViewController.m */,
+				4034589B1F8F032D007993F3 /* ATQHaoyouViewController.h */,
+				4034589C1F8F032D007993F3 /* ATQHaoyouViewController.m */,
+				4034589E1F8F0340007993F3 /* ATQMyselfViewController.h */,
+				4034589F1F8F0340007993F3 /* ATQMyselfViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2167,6 +2190,7 @@
 				185D78BD1F8E0CED00DA8849 /* JianZhiTableViewCell.xib in Resources */,
 				40E0F2621F78DC480074B064 /* ATQSZLoginOutTableViewCell.xib in Resources */,
 				4018F5AD1F500B4000D6C42D /* Assets.xcassets in Resources */,
+				403458A51F8F05C2007993F3 /* ATQTongchengTableViewCell.xib in Resources */,
 				40F9EAD41F8B779E005B8EDE /* ATQJZTypeListViewController.xib in Resources */,
 				40236C271F7B48A8004AE37B /* ATQBlacklistTableViewCell.xib in Resources */,
 				4027D8101F79409900B45C8E /* ATQVisitorTableViewCell.xib in Resources */,
@@ -2229,11 +2253,8 @@
 				40236C621F7B9F7F004AE37B /* ATQBusinessTableViewCell.xib in Resources */,
 				40FA89FB1F74A61E0059A208 /* ATQItemTableViewCell.xib in Resources */,
 				40E93DDB1F7768570018C3F5 /* ATQBFristTableViewCell.xib in Resources */,
-
 				4048AE051F8DA75900F6B928 /* ATQNewFriendsTableViewCell.xib in Resources */,
-
 				185D78641F8DF13900DA8849 /* Loading0011.png in Resources */,
-
 				40E0F24E1F78D0400074B064 /* ATQSZFirTableViewCell.xib in Resources */,
 				185D78651F8DF13900DA8849 /* Loading0012.png in Resources */,
 				40DF4F831F82155500EE6753 /* ATQTypeListTableViewCell.xib in Resources */,
@@ -2292,7 +2313,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		02B4A1F93269442B85DFE31F /* [CP] Copy Pods Resources */ = {
@@ -2356,11 +2377,8 @@
 				40EA934E1F7BBC4D005A0E50 /* PNChartLabel.m in Sources */,
 				40E93DDA1F7768570018C3F5 /* ATQBFristTableViewCell.m in Sources */,
 				40875D681F6F9AE300B58609 /* ATQLoginViewController.m in Sources */,
-
 				4061BDA61F8CC2FD00F6EC30 /* ATQMyFriendsTableViewCell.m in Sources */,
-
 				185D78B61F8DF13A00DA8849 /* ZLSecondAFNetworking.m in Sources */,
-
 				40FA89FF1F74B1A80059A208 /* LhkhHttpsManager.m in Sources */,
 				185D78AE1F8DF13A00DA8849 /* NSObject+XWAdd.m in Sources */,
 				40EA934D1F7BBC4D005A0E50 /* PNBarChart.m in Sources */,
@@ -2391,6 +2409,7 @@
 				407F9BDA1F6636630043A87A /* ATQMessageViewController.m in Sources */,
 				40EA93511F7BBC4D005A0E50 /* PNGenericChart.m in Sources */,
 				40EA935A1F7BBC4D005A0E50 /* PNScatterChartData.m in Sources */,
+				4034589D1F8F032D007993F3 /* ATQHaoyouViewController.m in Sources */,
 				40FEA5BC1F735BC900D6EB89 /* ATQBindPhoneViewController.m in Sources */,
 				40D353BF1F7F32F00017DA5C /* ATQAccountThiTableViewCell.m in Sources */,
 				185D78911F8DF13A00DA8849 /* PulldownMenu.m in Sources */,
@@ -2408,6 +2427,7 @@
 				40D353BA1F7F32D10017DA5C /* ATQAccountSecTableViewCell.m in Sources */,
 				4061BD9C1F8CB53B00F6EC30 /* ATQTypeListInviteDetailViewController.m in Sources */,
 				185D78AD1F8DF13A00DA8849 /* KSNavigationController.m in Sources */,
+				403458A01F8F0340007993F3 /* ATQMyselfViewController.m in Sources */,
 				40EA93221F7BBAD3005A0E50 /* mask.c in Sources */,
 				185D78941F8DF13A00DA8849 /* NSValueTransformer+HeinQi.m in Sources */,
 				40E93DE41F7775490018C3F5 /* ATQThirdTableViewCell.m in Sources */,
@@ -2443,6 +2463,7 @@
 				40E0F2461F78B1D60074B064 /* ZLCustomButton.m in Sources */,
 				40EA93581F7BBC4D005A0E50 /* PNRadarChartDataItem.m in Sources */,
 				185D78A31F8DF13A00DA8849 /* UIImageView+ZLWebPsetImage.m in Sources */,
+				4034589A1F8F031A007993F3 /* ATQTongchengViewController.m in Sources */,
 				407F9BD41F6634D30043A87A /* ATQBaseTabBarViewController.m in Sources */,
 				40DF4F771F81F81700EE6753 /* ATQTypeListViewController.m in Sources */,
 				407F9BD11F6634A70043A87A /* ATQBaseNavigationViewController.m in Sources */,
@@ -2478,16 +2499,14 @@
 				185D78A21F8DF13A00DA8849 /* UIButton+ZLWebPSetImage.m in Sources */,
 				40260D1F1F71FEF400ED8CF1 /* ATQPerfectInfoViewController.m in Sources */,
 				40EA93521F7BBC4D005A0E50 /* PNLineChart.m in Sources */,
-
 				4061BDA11F8CBED600F6EC30 /* ATQMyFriendsViewController.m in Sources */,
-
 				185D789C1F8DF13A00DA8849 /* UIView+HeinQi.m in Sources */,
-
 				40236C551F7B9499004AE37B /* ATQUserInfoViewController.m in Sources */,
 				185D789B1F8DF13A00DA8849 /* UIView+BlankPage.m in Sources */,
 				185D78CC1F8E3BCC00DA8849 /* JianZhiVideoViewController.m in Sources */,
 				40E084841F80A56100FD1AA3 /* ATQBuyjbSecTableViewCell.m in Sources */,
 				185D785F1F8DF13900DA8849 /* MSSAutoresizeLabelFlowConfig.m in Sources */,
+				403458A41F8F05C2007993F3 /* ATQTongchengTableViewCell.m in Sources */,
 				40E0F25C1F78D0DD0074B064 /* ATQSZFourTableViewCell.m in Sources */,
 				40E084771F80845700FD1AA3 /* ATQBuyVipViewController.m in Sources */,
 				185D78A61F8DF13A00DA8849 /* UIScrollView+WHC_PullRefresh.m in Sources */,

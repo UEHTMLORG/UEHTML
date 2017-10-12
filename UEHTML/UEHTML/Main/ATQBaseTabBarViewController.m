@@ -72,7 +72,13 @@
      *3.消息VC
      *4.
      ===========ZL注释end==========*/
-    ATQBaseNavigationViewController *navc = nil;
+//    ATQBaseNavigationViewController *navc = nil;
+    ATQBaseNavigationViewController *navc = [[ATQBaseNavigationViewController alloc]initWithRootViewController:vc];
+    navc.navigationItem.title = title;
+    [_vcsArray addObject:navc];
+    [navc.rootVcAry addObject:class];
+    
+    /*
     if (class == [ATQVicintyViewController class]) {
         ATQBaseNavigationViewController *navc = [[ATQBaseNavigationViewController alloc]initWithRootViewController:vc];
         navc.navigationItem.title = title;
@@ -101,7 +107,7 @@
     else{
         [_vcsArray addObject:vc];
     }
-    
+    */
     return navc;
 }
 

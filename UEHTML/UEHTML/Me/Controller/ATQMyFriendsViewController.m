@@ -13,7 +13,9 @@
 #import "Masonry.h"
 #import "ATQMyFriendsTableViewCell.h"
 #import "ATQAddFriendsViewController.h"
-@interface ATQMyFriendsViewController ()<UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>
+@interface ATQMyFriendsViewController ()<UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>{
+    NSInteger b;
+}
 @property (weak, nonatomic) UIView *titlesView;
 @property (weak, nonatomic) LhkhButton *selectedButton;
 @property (weak, nonatomic) UIView *sliderView;
@@ -87,7 +89,7 @@
 }
 
 -(void)setTableView{
-    
+    b = 0;
     _tableView = ({
         UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectZero];
         
@@ -114,7 +116,7 @@
 
 #pragma mark 标题栏每个按钮的点击事件
 -(void)titleClick:(LhkhButton *)button{
-//    b = button.tag;
+    b = button.tag;
     self.selectedButton.enabled = YES;
     button.enabled = NO;
     self.selectedButton = button;
@@ -135,14 +137,25 @@
 //            _WeChatView.hidden = YES;
 //            [self.tableView reloadData];
 //        }
+        [self.tableView reloadData];
     }];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    if (b== 0) {
+        return 5;
+    }else if (b == 1){
+        return 10;
+    }
     return 15;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    if (b== 0) {
+        return 5;
+    }else if (b == 1){
+        return 10;
+    }
     return 3;
 }
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

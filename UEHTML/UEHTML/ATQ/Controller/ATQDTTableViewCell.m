@@ -1,18 +1,29 @@
 //
-//  ATQTongchengTableViewCell.m
+//  ATQDTTableViewCell.m
 //  UEHTML
 //
 //  Created by LHKH on 2017/10/12.
 //  Copyright © 2017年 LHKH. All rights reserved.
 //
 
-#import "ATQTongchengTableViewCell.h"
+#import "ATQDTTableViewCell.h"
 
-@implementation ATQTongchengTableViewCell
+
+@implementation ATQDTTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    
+}
+- (IBAction)huaClick:(id)sender {
+    if (_huablock) {
+        _huablock();
+    }
+}
+- (IBAction)pinglunClick:(id)sender {
+    if (_pinglunblock) {
+        _pinglunblock();
+    }
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

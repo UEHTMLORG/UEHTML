@@ -8,6 +8,6 @@
 
 #import "ATQBaseViewController.h"
 
-@interface ATQMessageViewController : ATQBaseViewController
+@interface ATQMessageViewController : RCConversationListViewController
 
 @end

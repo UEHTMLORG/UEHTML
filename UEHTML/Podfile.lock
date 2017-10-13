@@ -30,6 +30,25 @@ PODS:
   - MJRefresh (3.1.14)
   - PinYin4Objc (1.1.1)
   - pop (1.0.10)
+  - RongCloudIM (2.8.18):
+    - RongCloudIM/CallKit (= 2.8.18)
+    - RongCloudIM/CallLib (= 2.8.18)
+    - RongCloudIM/IMKit (= 2.8.18)
+    - RongCloudIM/IMLib (= 2.8.18)
+    - RongCloudIM/RedPacket (= 2.8.18)
+    - RongCloudIM/Sticker (= 2.8.18)
+  - RongCloudIM/CallKit (2.8.18):
+    - RongCloudIM/CallLib
+    - RongCloudIM/IMKit
+  - RongCloudIM/CallLib (2.8.18):
+    - RongCloudIM/IMLib
+  - RongCloudIM/IMKit (2.8.18):
+    - RongCloudIM/IMLib
+  - RongCloudIM/IMLib (2.8.18)
+  - RongCloudIM/RedPacket (2.8.18):
+    - RongCloudIM/IMKit
+  - RongCloudIM/Sticker (2.8.18):
+    - RongCloudIM/IMKit
   - SDAutoLayout (1.53)
   - SDWebImage (4.1.2):
     - SDWebImage/Core (= 4.1.2)
@@ -54,6 +73,7 @@ DEPENDENCIES:
   - MBProgressHUD (~> 1.0.0)
   - MJExtension
   - MJRefresh
+  - RongCloudIM (~> 2.8)
   - SDAutoLayout (~> 1.51)
   - SDWebImage
   - SDWebImage (~> 4.1)
@@ -77,6 +97,7 @@ SPEC CHECKSUMS:
   MJRefresh: 6642e35b3227a5447b9fd5e17c552c90196c9859
   PinYin4Objc: 3fa9673610368330e2dfb688b1d19a35c3930a78
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
+  RongCloudIM: 9a934460ec2115d2240c565acc15390b43fb715d
   SDAutoLayout: ea6e2ae9fbb438aa2feb0c4363dba9297e98638a
   SDWebImage: cb6f9f266a9977741efcbc21e618e8be3734c774
   SVProgressHUD: bfde85ed6c573ea802b9cb37894ed9b629034f1b
@@ -86,6 +107,6 @@ SPEC CHECKSUMS:
   YSMChineseSort: ef532bfe993ff1b4dc9bcd644ead1a43b2632b88
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: e8069751738d93f4071f9532a775fcfca89752af
+PODFILE CHECKSUM: 2d787c8869b5508a1b9df744bfac9c095d463e54
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.4.0.beta.1

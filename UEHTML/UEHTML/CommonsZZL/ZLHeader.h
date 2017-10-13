@@ -10,7 +10,7 @@
 #define ZLHeader_h
 #import "UIColor+ColorZL.h"
 #import "Masonry.h"
-
+#import <RongIMKit/RongIMKit.h>
 
 ///////////////////////////////////
 #define Main_Purple_Color @"ff73ba"

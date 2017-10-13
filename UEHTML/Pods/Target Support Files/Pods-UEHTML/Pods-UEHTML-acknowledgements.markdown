@@ -423,6 +423,10 @@ third-party archives.
    limitations under the License.
 
 
+## RongCloudIM
+
+Copyright 2014 Rong Cloud
+
 ## SDAutoLayout
 
 The MIT License (MIT)

@@ -21,4 +21,5 @@ pod 'UITableView+FDTemplateLayoutCell'
 pod 'TTTAttributedLabel'
 pod 'IDMPhotoBrowser'
 pod 'SDAutoLayout', '~> 1.51'
+pod 'RongCloudIM', '~> 2.8'
 end

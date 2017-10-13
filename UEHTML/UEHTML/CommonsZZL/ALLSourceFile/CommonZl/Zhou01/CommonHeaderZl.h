@@ -23,6 +23,7 @@
 #define	RetinaScree		(iPhone_Retina || iPhone5 || iPad_Retina)
 #define NormalScree		(iPad_Normal||iPhone_Normal)
 
+#define iPhone_X  (CGSizeEqualToSize([UIScreen mainScreen].bounds.size, CGSizeMake(375.0f, 812.0f)) || CGSizeEqualToSize([UIScreen mainScreen].bounds.size, CGSizeMake(812.0f, 375.0f))?:NO)
 
 
 #define Color(color)					(((float)color)/255.0f)

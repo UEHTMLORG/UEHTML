@@ -13,6 +13,8 @@
 #import "JianZhiListTableVIew.h"
 #import "JianZhiVideoViewController.h"
 
+#import "JianZhiChuFaViewController.h"
+
 typedef NS_ENUM(NSUInteger, CURRENTBUTTON_INDEX) {
     ZHAOREN_FUWU_INDEX,
     WOYAO_ZHUANQIAN_INDEX,

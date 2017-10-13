@@ -18,6 +18,10 @@
 #define Main_Blue_Color @"78caf2"
 #define Main_Orange_Color @"ffab3b"
 
+//融云app
+#define RONGYUN_APPKEY @"3argexb6301de"
+#define RONGYUN_APPSECRET @"HjcKRxdIQSIYg"
+
 
 #define MAS_SHORTHAND_GLOBALS
 //#define MAS_SHORTHAND

@@ -71,7 +71,10 @@
             [self woYaoZhuanQianButtonAction];
             break;
         case 3:
-            
+        {
+            JianZhiChuFaViewController * VC = [[JianZhiChuFaViewController alloc]init];
+            [self.navigationController pushViewController:VC animated:YES];
+        }
             break;
         case 4:
         {

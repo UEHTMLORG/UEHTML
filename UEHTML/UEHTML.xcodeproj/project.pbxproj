@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		183D18F21F9053A00093A982 /* JianZhiChuFaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183D18F01F9053A00093A982 /* JianZhiChuFaViewController.m */; };
+		183D18F31F9053A00093A982 /* JianZhiChuFaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183D18F11F9053A00093A982 /* JianZhiChuFaViewController.xib */; };
+		183D18F71F90570D0093A982 /* JianZhiChuFaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 183D18F51F90570D0093A982 /* JianZhiChuFaTableViewCell.m */; };
+		183D18F81F90570D0093A982 /* JianZhiChuFaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183D18F61F90570D0093A982 /* JianZhiChuFaTableViewCell.xib */; };
 		185D77901F8DA6AC00DA8849 /* ATQPHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D778F1F8DA6AC00DA8849 /* ATQPHeaderView.m */; };
 		185D77921F8DA6BD00DA8849 /* ATQPHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185D77911F8DA6BD00DA8849 /* ATQPHeaderView.xib */; };
 		185D785C1F8DF13900DA8849 /* AutoFitLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D77991F8DF13900DA8849 /* AutoFitLabelView.m */; };
@@ -364,6 +368,12 @@
 /* Begin PBXFileReference section */
 		01FD494EE7C5F40277EC06F8 /* libPods-UEHTML.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UEHTML.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		142FBB3363225B85BA8CC82E /* Pods-UEHTML.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UEHTML.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UEHTML/Pods-UEHTML.debug.xcconfig"; sourceTree = "<group>"; };
+		183D18EF1F9053A00093A982 /* JianZhiChuFaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JianZhiChuFaViewController.h; sourceTree = "<group>"; };
+		183D18F01F9053A00093A982 /* JianZhiChuFaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JianZhiChuFaViewController.m; sourceTree = "<group>"; };
+		183D18F11F9053A00093A982 /* JianZhiChuFaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JianZhiChuFaViewController.xib; sourceTree = "<group>"; };
+		183D18F41F90570D0093A982 /* JianZhiChuFaTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JianZhiChuFaTableViewCell.h; sourceTree = "<group>"; };
+		183D18F51F90570D0093A982 /* JianZhiChuFaTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JianZhiChuFaTableViewCell.m; sourceTree = "<group>"; };
+		183D18F61F90570D0093A982 /* JianZhiChuFaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JianZhiChuFaTableViewCell.xib; sourceTree = "<group>"; };
 		185D778E1F8DA6AC00DA8849 /* ATQPHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQPHeaderView.h; sourceTree = "<group>"; };
 		185D778F1F8DA6AC00DA8849 /* ATQPHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQPHeaderView.m; sourceTree = "<group>"; };
 		185D77911F8DA6BD00DA8849 /* ATQPHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATQPHeaderView.xib; sourceTree = "<group>"; };
@@ -1409,6 +1419,9 @@
 				18D16E9F1F8F150400D8DF79 /* JZVideoTableViewCell.h */,
 				18D16EA01F8F150400D8DF79 /* JZVideoTableViewCell.m */,
 				18D16EA11F8F150400D8DF79 /* JZVideoTableViewCell.xib */,
+				183D18F41F90570D0093A982 /* JianZhiChuFaTableViewCell.h */,
+				183D18F51F90570D0093A982 /* JianZhiChuFaTableViewCell.m */,
+				183D18F61F90570D0093A982 /* JianZhiChuFaTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1916,6 +1929,9 @@
 				18D16EB11F8F5AD800D8DF79 /* JianZhiTouSuViewController.h */,
 				18D16EB21F8F5AD800D8DF79 /* JianZhiTouSuViewController.m */,
 				18D16EB31F8F5AD800D8DF79 /* JianZhiTouSuViewController.xib */,
+				183D18EF1F9053A00093A982 /* JianZhiChuFaViewController.h */,
+				183D18F01F9053A00093A982 /* JianZhiChuFaViewController.m */,
+				183D18F11F9053A00093A982 /* JianZhiChuFaViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2293,6 +2309,7 @@
 				40DB4FDD1F8BA7D400F8EDDB /* ATQJZTypeListTableViewCell.xib in Resources */,
 				185D78891F8DF13A00DA8849 /* page.png in Resources */,
 				40236C2C1F7B610D004AE37B /* ATQYZSecretViewController.xib in Resources */,
+				183D18F31F9053A00093A982 /* JianZhiChuFaViewController.xib in Resources */,
 				40E084781F80845700FD1AA3 /* ATQBuyVipViewController.xib in Resources */,
 				40D353CA1F7F44140017DA5C /* ATQChongzhiViewController.xib in Resources */,
 				40E061D41F76A6090072596D /* ATQMeHeadView.xib in Resources */,
@@ -2317,6 +2334,7 @@
 				40E0F24E1F78D0400074B064 /* ATQSZFirTableViewCell.xib in Resources */,
 				185D78651F8DF13900DA8849 /* Loading0012.png in Resources */,
 				403458E21F8F684E007993F3 /* ATQDTTableViewCell.xib in Resources */,
+				183D18F81F90570D0093A982 /* JianZhiChuFaTableViewCell.xib in Resources */,
 				40DF4F831F82155500EE6753 /* ATQTypeListTableViewCell.xib in Resources */,
 				40DF89AC1F8B1CA9008247F9 /* ATQCarRZSuccessViewController.xib in Resources */,
 				185D78C81F8E245B00DA8849 /* TiGongTableViewCell.xib in Resources */,
@@ -2434,6 +2452,7 @@
 				40E0847B1F80A45F00FD1AA3 /* ATQBuyJinbiViewController.m in Sources */,
 				185D787A1F8DF13A00DA8849 /* UIApplication+Extend.m in Sources */,
 				4018F5B11F500B4000D6C42D /* ViewController.m in Sources */,
+				183D18F71F90570D0093A982 /* JianZhiChuFaTableViewCell.m in Sources */,
 				185D785E1F8DF13900DA8849 /* MSSAutoresizeLabelFlowCell.m in Sources */,
 				40EA934E1F7BBC4D005A0E50 /* PNChartLabel.m in Sources */,
 				40E93DDA1F7768570018C3F5 /* ATQBFristTableViewCell.m in Sources */,
@@ -2562,6 +2581,7 @@
 				40FEA5CD1F73B41E00D6EB89 /* ATQRecommendViewController.m in Sources */,
 				185D78951F8DF13A00DA8849 /* UIBarButtonItem+Badge.m in Sources */,
 				40236C261F7B48A8004AE37B /* ATQBlacklistTableViewCell.m in Sources */,
+				183D18F21F9053A00093A982 /* JianZhiChuFaViewController.m in Sources */,
 				185D78A21F8DF13A00DA8849 /* UIButton+ZLWebPSetImage.m in Sources */,
 				40260D1F1F71FEF400ED8CF1 /* ATQPerfectInfoViewController.m in Sources */,
 				40EA93521F7BBC4D005A0E50 /* PNLineChart.m in Sources */,

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JianZhiChuFaCellID" id="KGk-i7-Jjw" customClass="JianZhiChuFaTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="39.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="冬天雪夏天胡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Id0-hB-kWZ">
+                        <rect key="frame" x="10" y="5" width="86" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="eWr-7D-Urh"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="冬天雪夏天胡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOE-bH-Fx8">
+                        <rect key="frame" x="126" y="5" width="67.5" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="lNp-un-wxk"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="冬天雪夏天胡" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5JF-Xy-RbT">
+                        <rect key="frame" x="302.5" y="5" width="67.5" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="Rf3-p9-jKh"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="冬天雪夏天胡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Led-SZ-Meh">
+                        <rect key="frame" x="10" y="21.5" width="74" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="kvb-4G-ZWc"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.97854870559999996" green="0.68681919570000005" blue="0.21586614849999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="aOE-bH-Fx8" firstAttribute="leading" secondItem="Id0-hB-kWZ" secondAttribute="trailing" constant="30" id="0Ep-fn-TEz"/>
+                    <constraint firstItem="5JF-Xy-RbT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="9zS-S8-Hqm"/>
+                    <constraint firstAttribute="trailing" secondItem="5JF-Xy-RbT" secondAttribute="trailing" constant="5" id="H0O-Li-zmo"/>
+                    <constraint firstItem="aOE-bH-Fx8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="PDD-eg-oeS"/>
+                    <constraint firstAttribute="bottom" secondItem="Led-SZ-Meh" secondAttribute="bottom" constant="2" id="czv-SX-1wJ"/>
+                    <constraint firstItem="Id0-hB-kWZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="l8r-CN-Ue4"/>
+                    <constraint firstItem="Led-SZ-Meh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="pIF-dc-O79"/>
+                    <constraint firstItem="Id0-hB-kWZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="sgz-1B-BV2"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="24.5" y="52"/>
+        </tableViewCell>
+    </objects>
+</document>

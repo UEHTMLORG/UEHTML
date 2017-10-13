@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JianZhiChuFaViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uaK-LD-9SP">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ex-yS-Geh">
+                            <rect key="frame" x="15" y="10" width="345" height="75"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="共建文明诚信的凹凸圈！发布色情信息、刷广告、恶意辱骂她人、上传假照片等，都可能被暂时或永久封禁账号及上网设备，即使注册新号也无法登录凹凸圈" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ja7-jR-xso">
+                                    <rect key="frame" x="5" y="5" width="335" height="65"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <color key="textColor" red="0.97854870559999996" green="0.68681919570000005" blue="0.21586614849999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.94893652200698853" green="0.94907277822494507" blue="0.94890671968460083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="Ja7-jR-xso" firstAttribute="top" secondItem="8ex-yS-Geh" secondAttribute="top" constant="5" id="6H1-7w-mSi"/>
+                                <constraint firstAttribute="height" constant="75" id="AlZ-b1-5Px"/>
+                                <constraint firstAttribute="bottom" secondItem="Ja7-jR-xso" secondAttribute="bottom" constant="5" id="LQs-qY-Mei"/>
+                                <constraint firstAttribute="trailing" secondItem="Ja7-jR-xso" secondAttribute="trailing" constant="5" id="fyP-3f-LPP"/>
+                                <constraint firstItem="Ja7-jR-xso" firstAttribute="leading" secondItem="8ex-yS-Geh" secondAttribute="leading" constant="5" id="nLJ-gH-g80"/>
+                            </constraints>
+                        </view>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jianzhi-dun" translatesAutoresizingMaskIntoConstraints="NO" id="egC-rJ-pvB">
+                            <rect key="frame" x="100" y="95" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="35" id="7wT-hE-t7U"/>
+                                <constraint firstAttribute="height" constant="35" id="XGo-mP-Th0"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="凹凸圈安全提示" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJM-NE-3V2">
+                            <rect key="frame" x="145" y="102" width="122" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.96787184479999999" green="0.45014542340000002" blue="0.73122376200000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="egC-rJ-pvB" firstAttribute="top" secondItem="8ex-yS-Geh" secondAttribute="bottom" constant="10" id="3bC-TX-KUs"/>
+                        <constraint firstItem="hJM-NE-3V2" firstAttribute="leading" secondItem="egC-rJ-pvB" secondAttribute="trailing" constant="10" id="5ht-Vf-rFe"/>
+                        <constraint firstItem="8ex-yS-Geh" firstAttribute="top" secondItem="uaK-LD-9SP" secondAttribute="top" constant="10" id="Gbx-SI-4Pr"/>
+                        <constraint firstAttribute="trailing" secondItem="8ex-yS-Geh" secondAttribute="trailing" constant="15" id="UVi-K8-1pq"/>
+                        <constraint firstItem="8ex-yS-Geh" firstAttribute="leading" secondItem="uaK-LD-9SP" secondAttribute="leading" constant="15" id="b16-Kr-o0b"/>
+                        <constraint firstItem="hJM-NE-3V2" firstAttribute="centerY" secondItem="egC-rJ-pvB" secondAttribute="centerY" id="iz2-Bm-DyS"/>
+                        <constraint firstItem="egC-rJ-pvB" firstAttribute="centerX" secondItem="uaK-LD-9SP" secondAttribute="centerX" constant="-70" id="tRK-8h-vZf"/>
+                        <constraint firstAttribute="height" constant="140" id="vQP-7F-J6X"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TBt-EX-VzC">
+                    <rect key="frame" x="0.0" y="150" width="375" height="517"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="YyK-V8-Dao"/>
+                        <outlet property="delegate" destination="-1" id="FKf-Rs-vkk"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="0.95285779237747192" green="0.95299452543258667" blue="0.95282787084579468" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="TBt-EX-VzC" secondAttribute="trailing" id="Ca3-PA-PTQ"/>
+                <constraint firstItem="uaK-LD-9SP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Kme-HH-idN"/>
+                <constraint firstItem="TBt-EX-VzC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="O6Z-0k-EJM"/>
+                <constraint firstAttribute="trailing" secondItem="uaK-LD-9SP" secondAttribute="trailing" id="Uyz-iq-VeX"/>
+                <constraint firstAttribute="bottom" secondItem="TBt-EX-VzC" secondAttribute="bottom" id="d94-hX-9Bf"/>
+                <constraint firstItem="uaK-LD-9SP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="sPH-wA-fs7"/>
+                <constraint firstItem="TBt-EX-VzC" firstAttribute="top" secondItem="uaK-LD-9SP" secondAttribute="bottom" constant="10" id="vFx-BC-MHa"/>
+            </constraints>
+            <point key="canvasLocation" x="185" y="51"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="jianzhi-dun" width="56" height="70"/>
+    </resources>
+</document>

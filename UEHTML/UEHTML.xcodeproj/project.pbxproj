@@ -4529,7 +4529,7 @@
 				40F5E6271F91AFAC0077A574 /* sharemore_location@2x.png in Resources */,
 				40F5E6101F91AFAC0077A574 /* f_static_095@3x.png in Resources */,
 				40E0F26F1F78FE2B0074B064 /* ATQPhotoTableViewCell.xib in Resources */,
-<<<<<<< Updated upstream
+
 				40F5E5471F91AFAC0077A574 /* section0_emotion1@2x.png in Resources */,
 				40F5E6181F91AFAC0077A574 /* f_static_099@3x.png in Resources */,
 				40F5E60F1F91AFAC0077A574 /* f_static_095@2x.png in Resources */,
@@ -4537,9 +4537,9 @@
 				40F5E54F1F91AFAC0077A574 /* section0_emotion9@2x.png in Resources */,
 				40F5E5E01F91AFAC0077A574 /* f_static_071@3x.png in Resources */,
 				40F5E5F41F91AFAC0077A574 /* f_static_081@3x.png in Resources */,
-=======
+
 				188E19C51F91F812007F56E4 /* MsgLastCollectionViewCell.xib in Resources */,
->>>>>>> Stashed changes
+
 				185D78771F8DF13A00DA8849 /* MLAnimationViewController.xib in Resources */,
 				40F5E5961F91AFAC0077A574 /* f_static_034@3x.png in Resources */,
 				40F5E6281F91AFAC0077A574 /* sharemore_location@3x.png in Resources */,
@@ -4832,11 +4832,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< Updated upstream
-=======
+
 				188E19B81F91CA7C007F56E4 /* WWStarView.m in Sources */,
 				40B6315E1F8F9C7900D8B414 /* ATQDTPhotoCollectionViewCell.m in Sources */,
->>>>>>> Stashed changes
+
 				40236C4F1F7B8DD8004AE37B /* ATQAboutAQTViewController.m in Sources */,
 				40EA93501F7BBC4D005A0E50 /* PNColor.m in Sources */,
 				40236C331F7B7AD0004AE37B /* ATQQuesTableViewCell.m in Sources */,
@@ -4916,11 +4915,11 @@
 				40EA93241F7BBAD3005A0E50 /* qrencode.c in Sources */,
 				188F843A1F739BD30037213D /* ComplainViewController.m in Sources */,
 				4024D6651F7E1B81006E56C1 /* PZXVerificationTextField.m in Sources */,
-<<<<<<< Updated upstream
+
 				40F5E5301F91AFAC0077A574 /* NSString+Emoji.m in Sources */,
-=======
+
 				188E19BB1F91DEB5007F56E4 /* XiTongMsgViewController.m in Sources */,
->>>>>>> Stashed changes
+
 				185D78601F8DF13900DA8849 /* MSSAutoresizeLabelFlowLayout.m in Sources */,
 				409E6D891F5003DA00E3BE49 /* AppDelegate.m in Sources */,
 				40D353BA1F7F32D10017DA5C /* ATQAccountSecTableViewCell.m in Sources */,
@@ -5267,11 +5266,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = UEHTML/UEHTML.entitlements;
 				DEVELOPMENT_TEAM = K7B37N4V6S;
-<<<<<<< Updated upstream
+
 				ENABLE_BITCODE = NO;
-=======
+
 				ENABLE_ONLY_ACTIVE_RESOURCES = YES;
->>>>>>> Stashed changes
+
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/UEHTML/Login/Controller/FaceRecognition/frameworks",
@@ -5294,11 +5293,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = UEHTML/UEHTML.entitlements;
 				DEVELOPMENT_TEAM = K7B37N4V6S;
-<<<<<<< Updated upstream
+
 				ENABLE_BITCODE = NO;
-=======
+
 				ENABLE_ONLY_ACTIVE_RESOURCES = YES;
->>>>>>> Stashed changes
+
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/UEHTML/Login/Controller/FaceRecognition/frameworks",

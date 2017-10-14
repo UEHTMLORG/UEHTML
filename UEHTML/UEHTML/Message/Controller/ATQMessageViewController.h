@@ -7,7 +7,13 @@
 //
 
 #import "ATQBaseViewController.h"
+#import "UIButton+Badge.h"
+#import "XiTongMsgViewController.h"
+#import "MsgLastListView.h"
+
 
 @interface ATQMessageViewController : RCConversationListViewController
+
+
 
 @end

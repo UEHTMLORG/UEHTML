@@ -14,6 +14,7 @@
 #import "JianZhiVideoViewController.h"
 
 #import "JianZhiChuFaViewController.h"
+#import "JianZhiPingJiaViewController.h"
 
 typedef NS_ENUM(NSUInteger, CURRENTBUTTON_INDEX) {
     ZHAOREN_FUWU_INDEX,

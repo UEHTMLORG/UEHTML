@@ -38,9 +38,13 @@
      ===========ZL注释end==========*/
     NSString * ceToken = @"OHlSp+amcIt58AxlcDfLzVC0fO+o1gwgo3K8JJIiWcl47Aw0JaPFlBwIwzmForSmn9Lit6Rj5XHXLm7n5dLStQ==";
     [[RCIM sharedRCIM] initWithAppKey:RONGYUN_APPKEY];
-    
-    [[RCIM sharedRCIM] connectWithToken:ceToken     success:^(NSString *userId) {
+    [[RCIM sharedRCIM] setEnablePersistentUserInfoCache:YES];//用户信息保存到本地缓存中
+    [[RCIM sharedRCIM] connectWithToken:ceToken    success:^(NSString *userId) {
         NSLog(@"登陆成功。当前登录的用户ID：%@", userId);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [[RCIM sharedRCIM] setUserInfoDataSource:self];
+        });
+        
     } error:^(RCConnectErrorCode status) {
         NSLog(@"登陆的错误码为:%ld", status);
     } tokenIncorrect:^{
@@ -50,6 +54,26 @@
         NSLog(@"token错误");
     }];
     return YES;
+}
+/**
+ *==========ZL注释start===========
+ *1.融云  用户信息类
+ *
+ *2.返回用户信息  头像 昵称
+ *3.
+ *4.
+ ===========ZL注释end==========*/
+- (void)getUserInfoWithUserId:(NSString *)userId
+                   completion:(void (^)(RCUserInfo *userInfo))completion{
+    NSLog(@"在APPdelegate中获取用户信息：%@",userId);
+    if ([userId isEqualToString:@"test02"]) {
+        RCUserInfo *userInfo = [[RCUserInfo alloc]init];
+        userInfo.userId = userId;
+        userInfo.name = @"测试2用户名";
+        userInfo.portraitUri = @"https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=3b03c837572c11dfcadcb771024e09b5/ae51f3deb48f8c54cd34cafb3a292df5e1fe7f7a.jpg";
+        return completion(userInfo);
+    }
+    return completion(nil);
 }
 
 -(void)openLoginCtrl

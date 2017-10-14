@@ -9,5 +9,5 @@
 #import "ATQBaseViewController.h"
 
 @interface ATQMyselfViewController : ATQBaseViewController
-
+@property (nonatomic,strong)NSMutableArray *dataArray;
 @end

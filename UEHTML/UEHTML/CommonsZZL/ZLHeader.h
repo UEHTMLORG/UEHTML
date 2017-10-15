@@ -11,6 +11,8 @@
 #import "UIColor+ColorZL.h"
 #import "Masonry.h"
 #import <RongIMKit/RongIMKit.h>
+#import "RCDRCIMDataSource.h"
+#import <AFNetworking.h>
 
 ///////////////////////////////////
 #define Main_Purple_Color @"ff73ba"

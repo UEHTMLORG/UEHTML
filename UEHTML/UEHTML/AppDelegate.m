@@ -39,6 +39,9 @@
     NSString * ceToken = @"OHlSp+amcIt58AxlcDfLzVC0fO+o1gwgo3K8JJIiWcl47Aw0JaPFlBwIwzmForSmn9Lit6Rj5XHXLm7n5dLStQ==";
     [[RCIM sharedRCIM] initWithAppKey:RONGYUN_APPKEY];
     [[RCIM sharedRCIM] setEnablePersistentUserInfoCache:YES];//用户信息保存到本地缓存中
+    //设置用户信息源和群组信息源
+    [RCIM sharedRCIM].userInfoDataSource = RCDDataSource;
+    [RCIM sharedRCIM].groupInfoDataSource = RCDDataSource;
     [[RCIM sharedRCIM] connectWithToken:ceToken    success:^(NSString *userId) {
         NSLog(@"登陆成功。当前登录的用户ID：%@", userId);
         dispatch_async(dispatch_get_main_queue(), ^{

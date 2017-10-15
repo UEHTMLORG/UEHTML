@@ -124,6 +124,25 @@
 		18D16EB41F8F5AD800D8DF79 /* JianZhiTouSuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D16EB21F8F5AD800D8DF79 /* JianZhiTouSuViewController.m */; };
 		18D16EB51F8F5AD800D8DF79 /* JianZhiTouSuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D16EB31F8F5AD800D8DF79 /* JianZhiTouSuViewController.xib */; };
 		18D93D481F922F2B00D18418 /* MsgLastZaiXianModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D93D471F922F2B00D18418 /* MsgLastZaiXianModel.m */; };
+		18D93D4D1F93907F00D18418 /* RCDRCIMDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D93D4C1F924A6300D18418 /* RCDRCIMDataSource.m */; };
+		18D93D641F93998600D18418 /* RCDGroupInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D93D621F93948C00D18418 /* RCDGroupInfo.m */; };
+		18D93D651F93998600D18418 /* RCDHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D93D601F93948B00D18418 /* RCDHttpTool.m */; };
+		18D93D661F93998600D18418 /* RCDataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D93D5A1F93939C00D18418 /* RCDataBaseManager.m */; };
+		18D93D671F93998600D18418 /* RCDUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D93D5C1F93939C00D18418 /* RCDUserInfo.m */; };
+		18D93D771F939B8D00D18418 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D93D711F939B1D00D18418 /* FMDatabaseQueue.m */; };
+		18D93D781F939B8D00D18418 /* SortForTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D93D761F939B1D00D18418 /* SortForTime.m */; };
+		18D93D791F939D3500D18418 /* AFHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D93D501F93939B00D18418 /* AFHttpTool.m */; };
+		18D93D7A1F939D3500D18418 /* RCDUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D93D561F93939B00D18418 /* RCDUtilities.m */; };
+		18D93D7D1F939DB600D18418 /* RCDSettingUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D93D7C1F939DB500D18418 /* RCDSettingUserDefaults.m */; };
+		18D93D7E1F93A46300D18418 /* RCDUserInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D93D541F93939B00D18418 /* RCDUserInfoManager.m */; };
+		18D93D7F1F93A4BB00D18418 /* FMDatabaseQueue.h in Sources */ = {isa = PBXBuildFile; fileRef = 18D93D701F939B1D00D18418 /* FMDatabaseQueue.h */; };
+		18D93D801F93A4BB00D18418 /* DefaultPortraitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D93D5F1F93939C00D18418 /* DefaultPortraitView.m */; };
+		18D93D811F93A4FA00D18418 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D93D6B1F939B1D00D18418 /* FMDatabase.m */; };
+		18D93D821F93A4FA00D18418 /* pinyin.h in Sources */ = {isa = PBXBuildFile; fileRef = 18D93D521F93939B00D18418 /* pinyin.h */; };
+		18D93D831F93A56800D18418 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D93D6D1F939B1D00D18418 /* FMDatabaseAdditions.m */; };
+		18D93D841F93A56800D18418 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D93D6F1F939B1D00D18418 /* FMDatabasePool.m */; };
+		18D93D851F93A56800D18418 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D93D741F939B1D00D18418 /* FMResultSet.m */; };
+		18D93D861F93A5EB00D18418 /* pinyin.c in Sources */ = {isa = PBXBuildFile; fileRef = 18D93D511F93939B00D18418 /* pinyin.c */; };
 		40019C321F7F6BF600E11331 /* ATQCheckTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40019C301F7F6BF600E11331 /* ATQCheckTableViewCell.m */; };
 		40019C331F7F6BF600E11331 /* ATQCheckTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40019C311F7F6BF600E11331 /* ATQCheckTableViewCell.xib */; };
 		40133E8C1F91B9D600C0B8CB /* ATQTongchengViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40133E8B1F91B9D600C0B8CB /* ATQTongchengViewController.m */; };
@@ -883,6 +902,40 @@
 		18D93D471F922F2B00D18418 /* MsgLastZaiXianModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MsgLastZaiXianModel.m; sourceTree = "<group>"; };
 		18D93D4B1F924A6300D18418 /* RCDRCIMDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCDRCIMDataSource.h; sourceTree = "<group>"; };
 		18D93D4C1F924A6300D18418 /* RCDRCIMDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCDRCIMDataSource.m; sourceTree = "<group>"; };
+		18D93D4F1F93939B00D18418 /* AFHttpTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFHttpTool.h; sourceTree = "<group>"; };
+		18D93D501F93939B00D18418 /* AFHttpTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFHttpTool.m; sourceTree = "<group>"; };
+		18D93D511F93939B00D18418 /* pinyin.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pinyin.c; sourceTree = "<group>"; };
+		18D93D521F93939B00D18418 /* pinyin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pinyin.h; sourceTree = "<group>"; };
+		18D93D531F93939B00D18418 /* RCDUserInfoManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCDUserInfoManager.h; sourceTree = "<group>"; };
+		18D93D541F93939B00D18418 /* RCDUserInfoManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCDUserInfoManager.m; sourceTree = "<group>"; };
+		18D93D551F93939B00D18418 /* RCDUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCDUtilities.h; sourceTree = "<group>"; };
+		18D93D561F93939B00D18418 /* RCDUtilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCDUtilities.m; sourceTree = "<group>"; };
+		18D93D571F93939B00D18418 /* RCDCommonDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCDCommonDefine.h; sourceTree = "<group>"; };
+		18D93D591F93939C00D18418 /* RCDataBaseManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCDataBaseManager.h; sourceTree = "<group>"; };
+		18D93D5A1F93939C00D18418 /* RCDataBaseManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCDataBaseManager.m; sourceTree = "<group>"; };
+		18D93D5B1F93939C00D18418 /* RCDUserInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCDUserInfo.h; sourceTree = "<group>"; };
+		18D93D5C1F93939C00D18418 /* RCDUserInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCDUserInfo.m; sourceTree = "<group>"; };
+		18D93D5E1F93939C00D18418 /* DefaultPortraitView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefaultPortraitView.h; sourceTree = "<group>"; };
+		18D93D5F1F93939C00D18418 /* DefaultPortraitView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DefaultPortraitView.m; sourceTree = "<group>"; };
+		18D93D601F93948B00D18418 /* RCDHttpTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCDHttpTool.m; sourceTree = "<group>"; };
+		18D93D611F93948B00D18418 /* RCDGroupInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCDGroupInfo.h; sourceTree = "<group>"; };
+		18D93D621F93948C00D18418 /* RCDGroupInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCDGroupInfo.m; sourceTree = "<group>"; };
+		18D93D631F93948C00D18418 /* RCDHttpTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCDHttpTool.h; sourceTree = "<group>"; };
+		18D93D6A1F939B1D00D18418 /* FMDatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		18D93D6B1F939B1D00D18418 /* FMDatabase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		18D93D6C1F939B1D00D18418 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		18D93D6D1F939B1D00D18418 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		18D93D6E1F939B1D00D18418 /* FMDatabasePool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		18D93D6F1F939B1D00D18418 /* FMDatabasePool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		18D93D701F939B1D00D18418 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		18D93D711F939B1D00D18418 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		18D93D721F939B1D00D18418 /* FMDB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		18D93D731F939B1D00D18418 /* FMResultSet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		18D93D741F939B1D00D18418 /* FMResultSet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		18D93D751F939B1D00D18418 /* SortForTime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortForTime.h; sourceTree = "<group>"; };
+		18D93D761F939B1D00D18418 /* SortForTime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SortForTime.m; sourceTree = "<group>"; };
+		18D93D7B1F939DB400D18418 /* RCDSettingUserDefaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCDSettingUserDefaults.h; sourceTree = "<group>"; };
+		18D93D7C1F939DB500D18418 /* RCDSettingUserDefaults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCDSettingUserDefaults.m; sourceTree = "<group>"; };
 		40019C2F1F7F6BF600E11331 /* ATQCheckTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQCheckTableViewCell.h; path = UEHTML/Me/Controller/ATQCheckTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		40019C301F7F6BF600E11331 /* ATQCheckTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQCheckTableViewCell.m; path = UEHTML/Me/Controller/ATQCheckTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		40019C311F7F6BF600E11331 /* ATQCheckTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQCheckTableViewCell.xib; path = UEHTML/Me/Controller/ATQCheckTableViewCell.xib; sourceTree = SOURCE_ROOT; };
@@ -2162,10 +2215,84 @@
 		18D93D4A1F924A6300D18418 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				18D93D681F939B1D00D18418 /* UtilitiesClass */,
+				18D93D581F93939C00D18418 /* ModelsClass */,
+				18D93D571F93939B00D18418 /* RCDCommonDefine.h */,
+				18D93D4E1F93939B00D18418 /* ToolsClass */,
+				18D93D5D1F93939C00D18418 /* ViewClass */,
 				18D93D4B1F924A6300D18418 /* RCDRCIMDataSource.h */,
 				18D93D4C1F924A6300D18418 /* RCDRCIMDataSource.m */,
 			);
 			path = DataSource;
+			sourceTree = "<group>";
+		};
+		18D93D4E1F93939B00D18418 /* ToolsClass */ = {
+			isa = PBXGroup;
+			children = (
+				18D93D4F1F93939B00D18418 /* AFHttpTool.h */,
+				18D93D501F93939B00D18418 /* AFHttpTool.m */,
+				18D93D511F93939B00D18418 /* pinyin.c */,
+				18D93D521F93939B00D18418 /* pinyin.h */,
+				18D93D531F93939B00D18418 /* RCDUserInfoManager.h */,
+				18D93D541F93939B00D18418 /* RCDUserInfoManager.m */,
+				18D93D551F93939B00D18418 /* RCDUtilities.h */,
+				18D93D561F93939B00D18418 /* RCDUtilities.m */,
+			);
+			path = ToolsClass;
+			sourceTree = "<group>";
+		};
+		18D93D581F93939C00D18418 /* ModelsClass */ = {
+			isa = PBXGroup;
+			children = (
+				18D93D7B1F939DB400D18418 /* RCDSettingUserDefaults.h */,
+				18D93D7C1F939DB500D18418 /* RCDSettingUserDefaults.m */,
+				18D93D611F93948B00D18418 /* RCDGroupInfo.h */,
+				18D93D621F93948C00D18418 /* RCDGroupInfo.m */,
+				18D93D631F93948C00D18418 /* RCDHttpTool.h */,
+				18D93D601F93948B00D18418 /* RCDHttpTool.m */,
+				18D93D591F93939C00D18418 /* RCDataBaseManager.h */,
+				18D93D5A1F93939C00D18418 /* RCDataBaseManager.m */,
+				18D93D5B1F93939C00D18418 /* RCDUserInfo.h */,
+				18D93D5C1F93939C00D18418 /* RCDUserInfo.m */,
+			);
+			path = ModelsClass;
+			sourceTree = "<group>";
+		};
+		18D93D5D1F93939C00D18418 /* ViewClass */ = {
+			isa = PBXGroup;
+			children = (
+				18D93D5E1F93939C00D18418 /* DefaultPortraitView.h */,
+				18D93D5F1F93939C00D18418 /* DefaultPortraitView.m */,
+			);
+			path = ViewClass;
+			sourceTree = "<group>";
+		};
+		18D93D681F939B1D00D18418 /* UtilitiesClass */ = {
+			isa = PBXGroup;
+			children = (
+				18D93D691F939B1D00D18418 /* DB */,
+				18D93D751F939B1D00D18418 /* SortForTime.h */,
+				18D93D761F939B1D00D18418 /* SortForTime.m */,
+			);
+			path = UtilitiesClass;
+			sourceTree = "<group>";
+		};
+		18D93D691F939B1D00D18418 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				18D93D6A1F939B1D00D18418 /* FMDatabase.h */,
+				18D93D6B1F939B1D00D18418 /* FMDatabase.m */,
+				18D93D6C1F939B1D00D18418 /* FMDatabaseAdditions.h */,
+				18D93D6D1F939B1D00D18418 /* FMDatabaseAdditions.m */,
+				18D93D6E1F939B1D00D18418 /* FMDatabasePool.h */,
+				18D93D6F1F939B1D00D18418 /* FMDatabasePool.m */,
+				18D93D701F939B1D00D18418 /* FMDatabaseQueue.h */,
+				18D93D711F939B1D00D18418 /* FMDatabaseQueue.m */,
+				18D93D721F939B1D00D18418 /* FMDB.h */,
+				18D93D731F939B1D00D18418 /* FMResultSet.h */,
+				18D93D741F939B1D00D18418 /* FMResultSet.m */,
+			);
+			path = DB;
 			sourceTree = "<group>";
 		};
 		4018F5A41F500B4000D6C42D /* Other */ = {
@@ -4529,7 +4656,6 @@
 				40F5E6271F91AFAC0077A574 /* sharemore_location@2x.png in Resources */,
 				40F5E6101F91AFAC0077A574 /* f_static_095@3x.png in Resources */,
 				40E0F26F1F78FE2B0074B064 /* ATQPhotoTableViewCell.xib in Resources */,
-
 				40F5E5471F91AFAC0077A574 /* section0_emotion1@2x.png in Resources */,
 				40F5E6181F91AFAC0077A574 /* f_static_099@3x.png in Resources */,
 				40F5E60F1F91AFAC0077A574 /* f_static_095@2x.png in Resources */,
@@ -4537,9 +4663,7 @@
 				40F5E54F1F91AFAC0077A574 /* section0_emotion9@2x.png in Resources */,
 				40F5E5E01F91AFAC0077A574 /* f_static_071@3x.png in Resources */,
 				40F5E5F41F91AFAC0077A574 /* f_static_081@3x.png in Resources */,
-
 				188E19C51F91F812007F56E4 /* MsgLastCollectionViewCell.xib in Resources */,
-
 				185D78771F8DF13A00DA8849 /* MLAnimationViewController.xib in Resources */,
 				40F5E5961F91AFAC0077A574 /* f_static_034@3x.png in Resources */,
 				40F5E6281F91AFAC0077A574 /* sharemore_location@3x.png in Resources */,
@@ -4832,10 +4956,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
+				18D93D861F93A5EB00D18418 /* pinyin.c in Sources */,
+				18D93D831F93A56800D18418 /* FMDatabaseAdditions.m in Sources */,
+				18D93D841F93A56800D18418 /* FMDatabasePool.m in Sources */,
+				18D93D851F93A56800D18418 /* FMResultSet.m in Sources */,
+				18D93D811F93A4FA00D18418 /* FMDatabase.m in Sources */,
+				18D93D821F93A4FA00D18418 /* pinyin.h in Sources */,
+				18D93D7F1F93A4BB00D18418 /* FMDatabaseQueue.h in Sources */,
+				18D93D801F93A4BB00D18418 /* DefaultPortraitView.m in Sources */,
+				18D93D7E1F93A46300D18418 /* RCDUserInfoManager.m in Sources */,
+				18D93D791F939D3500D18418 /* AFHttpTool.m in Sources */,
+				18D93D7A1F939D3500D18418 /* RCDUtilities.m in Sources */,
+				18D93D771F939B8D00D18418 /* FMDatabaseQueue.m in Sources */,
+				18D93D781F939B8D00D18418 /* SortForTime.m in Sources */,
+				18D93D641F93998600D18418 /* RCDGroupInfo.m in Sources */,
+				18D93D651F93998600D18418 /* RCDHttpTool.m in Sources */,
+				18D93D661F93998600D18418 /* RCDataBaseManager.m in Sources */,
+				18D93D671F93998600D18418 /* RCDUserInfo.m in Sources */,
+				18D93D4D1F93907F00D18418 /* RCDRCIMDataSource.m in Sources */,
 				188E19B81F91CA7C007F56E4 /* WWStarView.m in Sources */,
-				40B6315E1F8F9C7900D8B414 /* ATQDTPhotoCollectionViewCell.m in Sources */,
-
 				40236C4F1F7B8DD8004AE37B /* ATQAboutAQTViewController.m in Sources */,
 				40EA93501F7BBC4D005A0E50 /* PNColor.m in Sources */,
 				40236C331F7B7AD0004AE37B /* ATQQuesTableViewCell.m in Sources */,
@@ -4854,6 +4993,7 @@
 				40F5E38C1F91AB7A0077A574 /* NSString+ZJ.m in Sources */,
 				40E0847B1F80A45F00FD1AA3 /* ATQBuyJinbiViewController.m in Sources */,
 				185D787A1F8DF13A00DA8849 /* UIApplication+Extend.m in Sources */,
+				18D93D7D1F939DB600D18418 /* RCDSettingUserDefaults.m in Sources */,
 				4018F5B11F500B4000D6C42D /* ViewController.m in Sources */,
 				183D18F71F90570D0093A982 /* JianZhiChuFaTableViewCell.m in Sources */,
 				188E19C41F91F812007F56E4 /* MsgLastCollectionViewCell.m in Sources */,
@@ -4915,11 +5055,8 @@
 				40EA93241F7BBAD3005A0E50 /* qrencode.c in Sources */,
 				188F843A1F739BD30037213D /* ComplainViewController.m in Sources */,
 				4024D6651F7E1B81006E56C1 /* PZXVerificationTextField.m in Sources */,
-
 				40F5E5301F91AFAC0077A574 /* NSString+Emoji.m in Sources */,
-
 				188E19BB1F91DEB5007F56E4 /* XiTongMsgViewController.m in Sources */,
-
 				185D78601F8DF13900DA8849 /* MSSAutoresizeLabelFlowLayout.m in Sources */,
 				409E6D891F5003DA00E3BE49 /* AppDelegate.m in Sources */,
 				40D353BA1F7F32D10017DA5C /* ATQAccountSecTableViewCell.m in Sources */,
@@ -5266,11 +5403,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = UEHTML/UEHTML.entitlements;
 				DEVELOPMENT_TEAM = K7B37N4V6S;
-
 				ENABLE_BITCODE = NO;
-
 				ENABLE_ONLY_ACTIVE_RESOURCES = YES;
-
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/UEHTML/Login/Controller/FaceRecognition/frameworks",
@@ -5293,11 +5427,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = UEHTML/UEHTML.entitlements;
 				DEVELOPMENT_TEAM = K7B37N4V6S;
-
 				ENABLE_BITCODE = NO;
-
 				ENABLE_ONLY_ACTIVE_RESOURCES = YES;
-
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/UEHTML/Login/Controller/FaceRecognition/frameworks",

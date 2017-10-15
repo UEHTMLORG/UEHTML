@@ -5,13 +5,13 @@
 //  Created by Liv on 14/11/11.
 //  Copyright (c) 2014年 RongCloud. All rights reserved.
 //
+#import "RCDRCIMDataSource.h"
 
 #import "AFHttpTool.h"
 #import "DefaultPortraitView.h"
 #import "RCDCommonDefine.h"
 #import "RCDGroupInfo.h"
 #import "RCDHttpTool.h"
-#import "RCDRCIMDataSource.h"
 #import "RCDUserInfo.h"
 #import "RCDUtilities.h"
 #import "RCDataBaseManager.h"
@@ -150,11 +150,11 @@
 }
 
 #pragma mark - 名片消息
-- (void)getAllContacts:(void (^)(NSArray<RCCCUserInfo *> *contactsInfoList))resultBlock{
+- (void)getAllContacts:(void (^)(NSArray<RCUserInfo *> *contactsInfoList))resultBlock{
   NSMutableArray *contacts = [NSMutableArray new];
   NSArray *allFriends = [[RCDataBaseManager shareInstance] getAllFriends];
-  for (RCDUserInfo *friend in allFriends) {
-    RCCCUserInfo *contact = [RCCCUserInfo new];
+  for (RCUserInfo *friend in allFriends) {
+    RCUserInfo *contact = [RCUserInfo new];
     contact.userId = friend.userId;
     contact.name = friend.name;
     contact.portraitUri = friend.portraitUri;
@@ -162,7 +162,7 @@
       contact.portraitUri = [RCDUtilities defaultUserPortrait:friend];
     }
     RCUserInfo *tempContact = [[RCDUserInfoManager shareInstance] getFriendInfoFromDB:friend.userId];
-    contact.displayName = tempContact.name;
+//    contact.displayName = tempContact.name;
     [contacts addObject:contact];
   }
   resultBlock(contacts);
@@ -170,9 +170,9 @@
 
 
 - (void)getGroupInfoByGroupId:(NSString *)groupId
-                       result:(void (^)(RCCCGroupInfo *groupInfo))resultBlock {
+                       result:(void (^)(RCDGroupInfo *groupInfo))resultBlock {
   RCDGroupInfo *group = [[RCDataBaseManager shareInstance] getGroupByGroupId:groupId];
-  RCCCGroupInfo *groupInfo =[RCCCGroupInfo new];
+  RCDGroupInfo *groupInfo =[RCDGroupInfo new];
   groupInfo.groupId = groupId;
   groupInfo.groupName = group.groupName;
   groupInfo.portraitUri = group.portraitUri;

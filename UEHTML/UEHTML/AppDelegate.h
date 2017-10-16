@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ATQBaseTabBarViewController.h"
 #import "ATQBaseNavigationViewController.h"
-@interface AppDelegate : UIResponder <UIApplicationDelegate,RCIMUserInfoDataSource>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic)  ATQBaseTabBarViewController*BaseTabBarController;

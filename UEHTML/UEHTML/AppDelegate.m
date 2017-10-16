@@ -32,8 +32,8 @@
      *==========ZL注释start===========
      *1.集成融云
      *
-     *2.<#注释描述#>
-     *3.<#注释描述#>
+     *2.融云属性设置
+     *3.
      *4.测试用户userID ：123456 测试token  OHlSp+amcIt58AxlcDfLzVC0fO+o1gwgo3K8JJIiWcl47Aw0JaPFlBwIwzmForSmn9Lit6Rj5XHXLm7n5dLStQ==
      ===========ZL注释end==========*/
     NSString * ceToken = @"OHlSp+amcIt58AxlcDfLzVC0fO+o1gwgo3K8JJIiWcl47Aw0JaPFlBwIwzmForSmn9Lit6Rj5XHXLm7n5dLStQ==";
@@ -42,10 +42,51 @@
     //设置用户信息源和群组信息源
     [RCIM sharedRCIM].userInfoDataSource = RCDDataSource;
     [RCIM sharedRCIM].groupInfoDataSource = RCDDataSource;
+    
+    //设置接收消息代理
+    [RCIM sharedRCIM].receiveMessageDelegate = self;
+    //    [RCIM sharedRCIM].globalMessagePortraitSize = CGSizeMake(46, 46);
+    //开启输入状态监听
+    [RCIM sharedRCIM].enableTypingStatus = YES;
+    
+    //开启发送已读回执
+    [RCIM sharedRCIM].enabledReadReceiptConversationTypeList = @[@(ConversationType_PRIVATE),@(ConversationType_DISCUSSION),@(ConversationType_GROUP)];
+    
+    //开启多端未读状态同步
+    [RCIM sharedRCIM].enableSyncReadStatus = YES;
+    
+    //设置显示未注册的消息
+    //如：新版本增加了某种自定义消息，但是老版本不能识别，开发者可以在旧版本中预先自定义这种未识别的消息的显示
+    [RCIM sharedRCIM].showUnkownMessage = YES;
+    [RCIM sharedRCIM].showUnkownMessageNotificaiton = YES;
+    
+    //群成员数据源
+    [RCIM sharedRCIM].groupMemberDataSource = RCDDataSource;
+    
+    //开启消息@功能（只支持群聊和讨论组, App需要实现群成员数据源groupMemberDataSource）
+    [RCIM sharedRCIM].enableMessageMentioned = YES;
+    
+    //开启消息撤回功能
+    [RCIM sharedRCIM].enableMessageRecall = YES;
+    
+    
+    //  设置头像为圆形
+    //  [RCIM sharedRCIM].globalMessageAvatarStyle = RC_USER_AVATAR_CYCLE;
+    //  [RCIM sharedRCIM].globalConversationAvatarStyle = RC_USER_AVATAR_CYCLE;
+    //   设置优先使用WebView打开URL
+    //  [RCIM sharedRCIM].embeddedWebViewPreferred = YES;
+    
+    //  设置通话视频分辨率
+    //  [[RCCallClient sharedRCCallClient] setVideoProfile:RC_VIDEO_PROFILE_480P];
+    
+    //设置Log级别，开发阶段打印详细log
+    [RCIMClient sharedRCIMClient].logLevel = RC_Log_Level_Info;
+    
+    
     [[RCIM sharedRCIM] connectWithToken:ceToken    success:^(NSString *userId) {
         NSLog(@"登陆成功。当前登录的用户ID：%@", userId);
         dispatch_async(dispatch_get_main_queue(), ^{
-            [[RCIM sharedRCIM] setUserInfoDataSource:self];
+//            [[RCIM sharedRCIM] setUserInfoDataSource:self];
         });
         
     } error:^(RCConnectErrorCode status) {
@@ -60,7 +101,7 @@
 }
 /**
  *==========ZL注释start===========
- *1.融云  用户信息类
+ *1.融云  用户信息类 获取用户信息代理方法实现
  *
  *2.返回用户信息  头像 昵称
  *3.

@@ -175,14 +175,14 @@
 -(void)didClickCommentBtnWithIndexPath:(NSIndexPath *)indexPath
 {
     self.commentIndexpath = indexPath;
-    ATQPYQModel *model = self.dataArray[indexPath.row];
+    ATQPYQModel *model = self.dataArray[indexPath.row-1];
     self.chatKeyBoard.placeHolder = [NSString stringWithFormat:@"评论：%@",model.usernName];
     [self.chatKeyBoard keyboardUpforComment];
 }
 #pragma mark --点击评论内容的某一行
 -(void)didClickRowWithFirstIndexPath:(NSIndexPath *)firIndexPath secondIndex:(NSIndexPath *)secIndexPath
 {
-    ATQPYQModel *model = self.dataArray[firIndexPath.row];
+    ATQPYQModel *model = self.dataArray[firIndexPath.row-1];
     ATQCommentModel *comModel = model.commentArray[secIndexPath.row];
     if([comModel.userName isEqualToString:@"Sky"])
     {
@@ -214,7 +214,7 @@
 #pragma mark -- ChatKeyBoardDelegate
 - (void)chatKeyBoardSendText:(NSString *)text;
 {
-    ATQPYQModel *model = self.dataArray[self.commentIndexpath.row];
+    ATQPYQModel *model = self.dataArray[self.commentIndexpath.row-1];
     
     ATQCommentModel *newComModel = [[ATQCommentModel alloc] init];
     newComModel.userName = @"Sky";

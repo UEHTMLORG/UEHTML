@@ -26,9 +26,6 @@
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return self.imgsArray.count;
 }
-
-
-// The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     ATQAddImgCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ATQAddImgCollectionViewCell" forIndexPath:indexPath];
     id img = [_imgsArray objectAtIndex:indexPath.row];
@@ -46,6 +43,9 @@
     cell.delBtn.hidden = (indexPath.row == self.imgsArray.count-1);
     __weak typeof(self) weakself = self;
     cell.addImgCollectionDelBlock = ^(){
+        if (_deleteTuPianBlock) {
+            _deleteTuPianBlock();
+        }
         [weakself.imgsArray removeObjectAtIndex:indexPath.row];
         [weakself.publishCollectionView reloadData];
     };
@@ -76,12 +76,9 @@
                 self.xuanZeTuPianBlock();
             }
         }else{
-            NSLog(@"=============");
             UIAlertView *alert = [[UIAlertView alloc]initWithTitle:nil message:@"最多上传9张额" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
             [alert show];
         }
-    }else{
-        NSLog(@"---");
     }
 }
 

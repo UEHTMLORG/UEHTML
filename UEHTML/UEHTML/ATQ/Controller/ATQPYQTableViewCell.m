@@ -115,7 +115,7 @@ NSString *const ZJFriendLineCellOperationButtonClickedNotification = @"ZJFriendL
     
     ATQCommentView *comView = [[ATQCommentView alloc] init];
     comView.delegate = self;
-    comView.backgroundColor = RGBA(240, 240, 240,1);
+    comView.backgroundColor = [UIColor whiteColor];
     [self.contentView addSubview:comView];
     self.commentView = comView;
     
@@ -210,13 +210,7 @@ NSString *const ZJFriendLineCellOperationButtonClickedNotification = @"ZJFriendL
         make.width.mas_equalTo(0);
         make.height.mas_equalTo(32);
     }];
-    
-    //赞 评论的View
-    [comView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.operationView.mas_bottom).offset(5);
-        make.left.right.mas_equalTo(self.msgLabel);
-        
-    }];*/
+    */
     
     [bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.offset(20);
@@ -267,11 +261,18 @@ NSString *const ZJFriendLineCellOperationButtonClickedNotification = @"ZJFriendL
         make.right.mas_equalTo(pinglunLab.mas_right);
     }];
     
+    //赞 评论的View
+    [comView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(bottomView.mas_bottom).offset(5);
+        make.left.right.mas_equalTo(self.msgLabel);
+        
+    }];
+    
     [spaceView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.offset(1);
         make.left.right.bottom.mas_equalTo(self);
     }];
-    self.hyb_lastViewInCell = bottomView;
+    self.hyb_lastViewInCell = comView;
     self.hyb_bottomOffsetToCell = 10;
     
 }
@@ -279,9 +280,17 @@ NSString *const ZJFriendLineCellOperationButtonClickedNotification = @"ZJFriendL
 
 -(void)huaClick{
     NSLog(@"hua---");
+    if([self.delegate respondsToSelector:@selector(didClickenLikeBtnWithIndexPath:)])
+    {
+        [self.delegate didClickenLikeBtnWithIndexPath:self.indexPath];
+    }
 }
 -(void)pinglunClick{
     NSLog(@"pinglun---");
+    if([self.delegate respondsToSelector:@selector(didClickCommentBtnWithIndexPath:)])
+    {
+        [self.delegate didClickCommentBtnWithIndexPath:self.indexPath];
+    }
 }
 - (void)configCellWithModel:(ATQPYQModel *)model indexPath:(NSIndexPath *)indexPath
 {

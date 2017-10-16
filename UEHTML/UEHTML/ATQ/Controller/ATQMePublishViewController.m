@@ -32,7 +32,7 @@
     UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithTitle:@"发表" style:UIBarButtonItemStylePlain target:self action:@selector(publish)];
     self.navigationItem.leftBarButtonItem = left;
     self.navigationItem.rightBarButtonItem = right;
-    height = 90;
+    height = 110;
     NSLog(@"----%@",self.typeStr);
     [self setTableView];
 }
@@ -167,12 +167,18 @@
                     CGFloat width = (ScreenWidth - 50)/4;
                     NSLog(@"+++++%ld",cell.imgsArray.count);
                     if (cell.imgsArray.count >0 && cell.imgsArray.count <= 4) {
-                        height = 90;
+                        height = 110;
                     }else if (cell.imgsArray.count >4 && cell.imgsArray.count <= 8){
-                        height = 90 + width + 20;
+                        height = 110 + width + 20;
                     }else{
-                        height = 90 + 2*width + 30;
+                        height = 110 + 2*width + 30;
                     }
+                    
+                    cell.deleteTuPianBlock = ^{
+                        
+                        ATQMePublishPTableViewCell *cell  =[weakself.tableView cellForRowAtIndexPath:indexPath];
+                        NSLog(@"delete---%ld",cell.imgsArray.count);
+                    };
                     [weakself.tableView reloadData];
                 } showIn:weakself AndActionTitle:@"请选择照片"];
             };

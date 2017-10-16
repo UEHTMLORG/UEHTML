@@ -15,10 +15,10 @@
 #import "NSString+ZJ.h"
 #import "UIColor+LhkhColor.h"
 @interface ATQMeTableViewCell ()<ATQContainViewDelegate,ATQCommentViewDelegate>
-//@property (nonatomic,strong)UIImageView *headImageView;
+@property (nonatomic,strong)UIImageView *headImageView;
 @property (nonatomic,strong)UILabel *timeLabel;
 @property (nonatomic,strong)UILabel *addrLabel;
-//@property (nonatomic,strong)UILabel *nameLabel;
+@property (nonatomic,strong)UILabel *nameLabel;
 @property (nonatomic,strong)UILabel *msgLabel;
 @property (nonatomic,strong)UILabel *chakanLabel;
 @property (nonatomic,strong)UILabel *pinglunLabel;
@@ -45,14 +45,21 @@ NSString *const MeOperationButtonClickedNotification = @"MeOperationButtonClicke
 }
 -(void)setup
 {
+    self.backgroundColor = [UIColor redColor];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveOperationButtonClickedNotification:) name:MeOperationButtonClickedNotification object:nil];
     
-//    UIImageView *headImageView = [[UIImageView alloc] init];
-//    [self.contentView addSubview:headImageView];
-//    self.headImageView = headImageView;
+    UIImageView *headImageView = [[UIImageView alloc] init];
+    [self.contentView addSubview:headImageView];
+    self.headImageView = headImageView;
     
     UILabel *timeLab = [[UILabel alloc] initWithFrame:CGRectZero];
     timeLab.text = @"137月";
+    timeLab.font = [UIFont systemFontOfSize:14];
+    NSMutableAttributedString *noteStr = [[NSMutableAttributedString alloc] initWithString:timeLab.text];
+    NSRange range = NSMakeRange(0, 2);
+    [noteStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:20] range:range];
+    [timeLab setAttributedText:noteStr];
+    
     [self.contentView addSubview:timeLab];
     self.timeLabel = timeLab;
     
@@ -63,11 +70,11 @@ NSString *const MeOperationButtonClickedNotification = @"MeOperationButtonClicke
     [self.contentView addSubview:addrLab];
     self.addrLabel = addrLab;
     
-//    UILabel *nameLabel = [[UILabel alloc] init];
-//    nameLabel.font = [UIFont systemFontOfSize:16];
-//    nameLabel.textColor = [UIColor colorWithHexString:UIDeepTextColorStr];
-//    [self.contentView addSubview:nameLabel];
-//    self.nameLabel = nameLabel;
+    UILabel *nameLabel = [[UILabel alloc] init];
+    nameLabel.font = [UIFont systemFontOfSize:16];
+    nameLabel.textColor = [UIColor colorWithHexString:UIDeepTextColorStr];
+    [self.contentView addSubview:nameLabel];
+    self.nameLabel = nameLabel;
     
     UILabel *msgLabel = [[UILabel alloc] init];
     msgLabel.font = [UIFont systemFontOfSize:14];
@@ -170,41 +177,38 @@ NSString *const MeOperationButtonClickedNotification = @"MeOperationButtonClicke
     spaceView.backgroundColor = [UIColor colorWithHexString:UIBgColorStr];
     [self.contentView addSubview:spaceView];
     //头像图片
-//    [headImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.and.left.equalTo(self.contentView).with.offset(10);
-//        make.size.mas_equalTo(CGSizeMake(50, 50));
-//        
-//        make.right.equalTo(nameLabel.mas_left).with.offset(-10);
-//    }];
-    [timeLab mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.and.left.mas_equalTo(self.contentView).width.offset(10);
-        make.height.offset(30);
-        make.width.offset(50);
+    [headImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.and.left.equalTo(self.contentView).with.offset(10);
+        make.size.mas_equalTo(CGSizeMake(50, 50));
         
+        make.right.equalTo(nameLabel.mas_left).with.offset(-10);
+    }];
+    [timeLab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.offset(50);
+        make.top.equalTo(headImageView.mas_top).offset(0);
+        make.bottom.equalTo(headImageView.mas_bottom).offset(-20);
+        make.left.right.equalTo(headImageView);
     }];
     //位置
     [addrLab mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(timeLab.mas_left);
-        make.height.offset(20);
-        make.width.offset(50);
-        make.top.mas_equalTo(timeLab.mas_bottom).offset(5);
+        make.left.equalTo(headImageView.mas_left);
+        make.size.mas_equalTo(CGSizeMake(50,20));
+        make.top.equalTo(headImageView.mas_bottom).offset(-20);
     }];
     //名字
 //    [nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.equalTo(self.contentView.mas_top).with.offset(10);
+//        make.top.equalTo(self.contentView.mas_top).with.offset(0);
 //        make.left.equalTo(headImageView.mas_right).with.offset(10);
 //        
-//        make.size.mas_equalTo(CGSizeMake(150, 20));
+//        make.size.mas_equalTo(CGSizeMake(150, 0));
 //        make.bottom.equalTo(msgLabel.mas_top).with.offset(-5);
 //    }];
     //文字信息
     [msgLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.mas_equalTo(timeLab.mas_top);
-//        make.left.mas_equalTo(timeLab.mas_right).offset(-10);
-//        make.right.mas_equalTo(self.contentView.mas_right).with.offset(-10);
-        make.top.equalTo(self.contentView.mas_top).with.offset(5);
-        make.width.offset(ScreenWidth-80);
-//      make.left.mas_equalTo(timeLab.mas_right).offset(-10);
+        make.top.equalTo(nameLabel.mas_bottom).with.offset(5);
+        make.top.equalTo(self.contentView).with.offset(10);
+//        make.left.mas_equalTo(nameLabel);
+        make.left.equalTo(headImageView.mas_right).with.offset(10);
         make.right.equalTo(self.contentView.mas_right).with.offset(-10);
     }];
     msgLabel.preferredMaxLayoutWidth = ScreenWidth-80;
@@ -307,7 +311,7 @@ NSString *const MeOperationButtonClickedNotification = @"MeOperationButtonClicke
     
 }
 
--(void)delClick{
+-(void)deleteClick{
     NSLog(@"delete---");
 }
 -(void)huaClick{
@@ -320,9 +324,11 @@ NSString *const MeOperationButtonClickedNotification = @"MeOperationButtonClicke
 {
     self.model = model;
     self.indexPath = indexPath;
+//    self.headImageView.image = [UIImage imageNamed:model.headImgName];
+//    self.nameLabel.text = model.usernName;
     self.msgLabel.text = model.msgContent;
     // self.imageViewContainView.model = model;
-    float msgHeight = [NSString stringHeightWithString:model.msgContent size:14 maxWidth: ScreenWidth-80];
+    float msgHeight = [NSString stringHeightWithString:model.msgContent size:15 maxWidth: ScreenWidth-80];
     if(msgHeight <=60)
     {
         [self.moreBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
@@ -342,7 +348,7 @@ NSString *const MeOperationButtonClickedNotification = @"MeOperationButtonClicke
     {
         [self.msgLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.contentView).with.offset(10);
-            make.left.mas_equalTo(self.timeLabel.mas_right).offset(10);
+            make.left.mas_equalTo(self.headImageView.mas_right).offset(10);
             make.right.equalTo(self.contentView.mas_right).with.offset(-10);
             make.height.mas_lessThanOrEqualTo(msgHeight);
         }];
@@ -351,7 +357,7 @@ NSString *const MeOperationButtonClickedNotification = @"MeOperationButtonClicke
     {
         [self.msgLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.contentView).with.offset(10);
-            make.left.mas_equalTo(self.timeLabel.mas_right).offset(10);
+            make.left.mas_equalTo(self.headImageView.mas_right).offset(10);
             make.right.equalTo(self.contentView.mas_right).with.offset(-10);
             make.height.mas_lessThanOrEqualTo(60);
         }];

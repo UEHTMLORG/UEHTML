@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ATQMepublishTTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aotuquan-" translatesAutoresizingMaskIntoConstraints="NO" id="Iar-Pv-d2J">
+                        <rect key="frame" x="20" y="14" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Iar-Pv-d2J" secondAttribute="height" multiplier="1:1" id="9r6-nb-FaX"/>
+                            <constraint firstAttribute="height" constant="16" id="pMt-a5-TD8"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="提醒谁看" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPH-eX-OI4">
+                        <rect key="frame" x="46" y="12" width="57.5" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="rhy-Fw-vzP"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aotuquan-you" translatesAutoresizingMaskIntoConstraints="NO" id="Ebe-ew-7f0">
+                        <rect key="frame" x="294" y="14" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="ja2-1g-0LP"/>
+                            <constraint firstAttribute="width" secondItem="Ebe-ew-7f0" secondAttribute="height" multiplier="1:1" id="z34-Pe-WgC"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="公开" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUw-2i-42g">
+                        <rect key="frame" x="269" y="12" width="25" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="ctz-m1-Bd3"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JMW-eK-eSl">
+                        <rect key="frame" x="0.0" y="43" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="mah-54-VdZ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="RUw-2i-42g" firstAttribute="trailing" secondItem="Ebe-ew-7f0" secondAttribute="leading" id="NAD-wg-6Z2"/>
+                    <constraint firstItem="GPH-eX-OI4" firstAttribute="leading" secondItem="Iar-Pv-d2J" secondAttribute="trailing" constant="10" id="dtU-bc-PtS"/>
+                </constraints>
+            </tableViewCellContentView>
+            <constraints>
+                <constraint firstItem="GPH-eX-OI4" firstAttribute="centerY" secondItem="KGk-i7-Jjw" secondAttribute="centerY" id="2Nf-Fq-922"/>
+                <constraint firstItem="Iar-Pv-d2J" firstAttribute="leading" secondItem="KGk-i7-Jjw" secondAttribute="leading" constant="20" id="7Cn-nQ-VvG"/>
+                <constraint firstAttribute="trailing" secondItem="JMW-eK-eSl" secondAttribute="trailing" id="9HD-kV-Cmr"/>
+                <constraint firstItem="JMW-eK-eSl" firstAttribute="leading" secondItem="KGk-i7-Jjw" secondAttribute="leading" id="9w7-bH-bvI"/>
+                <constraint firstItem="RUw-2i-42g" firstAttribute="centerY" secondItem="KGk-i7-Jjw" secondAttribute="centerY" id="CDM-wl-cMv"/>
+                <constraint firstItem="Ebe-ew-7f0" firstAttribute="centerY" secondItem="KGk-i7-Jjw" secondAttribute="centerY" id="TX1-6s-3dr"/>
+                <constraint firstAttribute="bottom" secondItem="JMW-eK-eSl" secondAttribute="bottom" id="Yn9-if-Y7k"/>
+                <constraint firstAttribute="trailing" secondItem="Ebe-ew-7f0" secondAttribute="trailing" constant="10" id="bNx-yG-lqH"/>
+                <constraint firstItem="Iar-Pv-d2J" firstAttribute="centerY" secondItem="KGk-i7-Jjw" secondAttribute="centerY" id="vFU-hy-kWt"/>
+            </constraints>
+            <connections>
+                <outlet property="subLab" destination="RUw-2i-42g" id="URC-VG-6Nb"/>
+                <outlet property="typeImg" destination="Iar-Pv-d2J" id="Ch2-DQ-v8n"/>
+                <outlet property="typeTitleLab" destination="GPH-eX-OI4" id="FiD-zp-JF3"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="aotuquan-" width="32" height="32"/>
+        <image name="aotuquan-you" width="25" height="25"/>
+    </resources>
+</document>

@@ -7,8 +7,10 @@
 //
 
 #import "ATQMyselfViewController.h"
+#import "ATQMePublishViewController.h"
 #import "ATQDataSource.h"
 #import "ATQMeTableViewCell.h"
+#import "ATQMePublishTableViewCell.h"
 #import "ATQCommentModel.h"
 #import "ATQPYQModel.h"
 #import "UITableViewCell+HYBMasonryAutoCellHeight.h"
@@ -18,7 +20,12 @@
 #import "ChatToolBarItem.h"
 #import "FaceSourceManager.h"
 #import "Masonry.h"
-@interface ATQMyselfViewController ()<ATQMeCellDelegate,ChatKeyBoardDelegate, ChatKeyBoardDataSource,UITableViewDataSource,UITableViewDelegate>
+#import <MediaPlayer/MediaPlayer.h>
+#import <AVFoundation/AVFoundation.h>
+#import <CoreAudio/CoreAudioTypes.h>
+#import <MobileCoreServices/MobileCoreServices.h>
+#import <AssetsLibrary/AssetsLibrary.h>
+@interface ATQMyselfViewController ()<ATQMeCellDelegate,ChatKeyBoardDelegate, ChatKeyBoardDataSource,UITableViewDataSource,UITableViewDelegate,UIActionSheetDelegate>
 @property (nonatomic, strong) ChatKeyBoard *chatKeyBoard;
 @property (nonatomic,strong)NSIndexPath *commentIndexpath;
 @property (nonatomic,strong)NSIndexPath *replyIndexpath;
@@ -65,6 +72,7 @@
         tableView.backgroundColor = RGBA(236, 236, 236, 1);
         tableView.delegate = self;
         tableView.dataSource = self;
+        [tableView registerNib:[UINib nibWithNibName:@"ATQMePublishTableViewCell" bundle:nil] forCellReuseIdentifier:@"ATQMePublishTableViewCell"];
         tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [self.view addSubview:tableView];
         tableView;
@@ -85,31 +93,51 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.dataArray.count;
+    return self.dataArray.count+1;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    float h =  [ATQMeTableViewCell hyb_heightForTableView:tableView config:^(UITableViewCell *sourceCell) {
-        ATQMeTableViewCell *cell = (ATQMeTableViewCell *)sourceCell;
-        [self  configureCell:cell atIndexPath:indexPath];
-    }];
-    return h;
+    if (indexPath.row == 0) {
+        return 80;
+    }else{
+        float h =  [ATQMeTableViewCell hyb_heightForTableView:tableView config:^(UITableViewCell *sourceCell) {
+            ATQMeTableViewCell *cell = (ATQMeTableViewCell *)sourceCell;
+            [self  configureCell:cell atIndexPath:indexPath];
+        }];
+        return h;
+    }
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    ATQMeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ATQMeTableViewCell"];
-    if(cell==nil)
-    {
-        cell = [[ATQMeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ATQMeTableViewCell"];
-        cell.delegate = self;
+    __weak typeof(self) weakself = self;
+    if (indexPath.row == 0) {
+        static NSString *CellIdentifier = @"ATQMePublishTableViewCell" ;
+        ATQMePublishTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        if (cell == nil) {
+            NSArray *array = [[NSBundle mainBundle]loadNibNamed: CellIdentifier owner:self options:nil];
+            cell = [array objectAtIndex:0];
+        }
+        cell.publishblock = ^{
+
+            [weakself selectImage];
+        };
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return cell;
+    }else{
+        ATQMeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ATQMeTableViewCell"];
+        if(cell==nil)
+        {
+            cell = [[ATQMeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ATQMeTableViewCell"];
+            cell.delegate = self;
+        }
+        cell.backgroundColor = [UIColor whiteColor];
+        [self configureCell:cell atIndexPath:indexPath];
+        return cell;
     }
-    cell.backgroundColor = [UIColor whiteColor];
-    [self configureCell:cell atIndexPath:indexPath];
-    return cell;
 }
 - (void)configureCell:(ATQMeTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
-    [cell configCellWithModel:self.dataArray[indexPath.row] indexPath:indexPath];
+    [cell configCellWithModel:self.dataArray[indexPath.row-1] indexPath:indexPath];
 }
 #pragma mark -- FriendLineCellDelegate
 #pragma mark -- 点击全文、收起
@@ -118,6 +146,7 @@
     ATQPYQModel *model = self.dataArray[indexPath.row];
     model.isExpand = !model.isExpand;
     [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    
 }
 #pragma mark -- 点击图片
 -(void)didClickImageViewWithCurrentView:(UIImageView *)imageView imageViewArray:(NSMutableArray *)array imageSuperView:(UIView *)view indexPath:(NSIndexPath *)indexPath
@@ -129,18 +158,22 @@
 #pragma mark -- 点击赞
 -(void)didClickenLikeBtnWithIndexPath:(NSIndexPath *)indexPath
 {
-    ATQPYQModel *model = self.dataArray[indexPath.row];
-    NSMutableArray *likeArray = [NSMutableArray arrayWithArray:model.likeNameArray];
-    model.isLiked ==YES ? [likeArray removeObject:@"Sky"]:[likeArray addObject:@"Sky"];
+    if (indexPath.row == 0) {
+        
+    }else{
+        ATQPYQModel *model = self.dataArray[indexPath.row];
+        NSMutableArray *likeArray = [NSMutableArray arrayWithArray:model.likeNameArray];
+        model.isLiked ==YES ? [likeArray removeObject:@"Sky"]:[likeArray addObject:@"Sky"];
+        
+        model.likeNameArray = [likeArray copy];
+        model.isLiked = !model.isLiked;
+        [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+    }
     
-    model.likeNameArray = [likeArray copy];
-    model.isLiked = !model.isLiked;
-    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
 }
 #pragma mark -- 点击评论按钮
 -(void)didClickCommentBtnWithIndexPath:(NSIndexPath *)indexPath
 {
-    
     self.commentIndexpath = indexPath;
     ATQPYQModel *model = self.dataArray[indexPath.row];
     self.chatKeyBoard.placeHolder = [NSString stringWithFormat:@"评论：%@",model.usernName];
@@ -245,6 +278,44 @@
 {
     [self.chatKeyBoard keyboardDownForComment];
 }
+
+//更换头像
+-(void)selectImage{
+    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"发布动态" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:@"拍摄" otherButtonTitles:@"从手机相册选择",@"纯文字动态", nil];
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 50, 20)];
+    view.backgroundColor = [UIColor redColor];
+    [sheet insertSubview:view atIndex:2];
+    [sheet showInView:self.view];
+}
+
+#pragma UIActionSheet delegate
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 0) {
+        NSLog(@"====0000");
+        NSString *typestr = [NSString stringWithFormat:@"%ld",buttonIndex];
+        ATQMePublishViewController *vc = [[ATQMePublishViewController alloc] init];
+        vc.typeStr = typestr;
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if (buttonIndex == 1){
+        NSLog(@"====1111");
+        NSString *typestr = [NSString stringWithFormat:@"%ld",buttonIndex];
+        ATQMePublishViewController *vc = [[ATQMePublishViewController alloc] init];
+        vc.typeStr = typestr;
+        [self.navigationController pushViewController:vc animated:YES];
+    
+    }else if (buttonIndex == 2){
+        NSLog(@"====2222");
+        NSString *typestr = [NSString stringWithFormat:@"%ld",buttonIndex];
+        ATQMePublishViewController *vc = [[ATQMePublishViewController alloc] init];
+        vc.typeStr = typestr;
+        [self.navigationController pushViewController:vc animated:YES];
+        
+    }else{
+        NSLog(@"cancel");
+    }
+}
+
+
 -(void)dealloc
 {
     NSLog(@"dealloc");

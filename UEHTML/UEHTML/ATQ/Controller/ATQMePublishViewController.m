@@ -165,7 +165,6 @@
                     [cell.imgsArray insertObject:image atIndex:0];
                     [cell.publishCollectionView reloadData];
                     CGFloat width = (ScreenWidth - 50)/4;
-                    NSLog(@"+++++%ld",cell.imgsArray.count);
                     if (cell.imgsArray.count >0 && cell.imgsArray.count <= 4) {
                         height = 110;
                     }else if (cell.imgsArray.count >4 && cell.imgsArray.count <= 8){
@@ -173,14 +172,21 @@
                     }else{
                         height = 110 + 2*width + 30;
                     }
-                    
-                    cell.deleteTuPianBlock = ^{
-                        
-                        ATQMePublishPTableViewCell *cell  =[weakself.tableView cellForRowAtIndexPath:indexPath];
-                        NSLog(@"delete---%ld",cell.imgsArray.count);
-                    };
                     [weakself.tableView reloadData];
                 } showIn:weakself AndActionTitle:@"请选择照片"];
+            };
+            cell.deleteTuPianBlock = ^{
+                
+                ATQMePublishPTableViewCell *cell  =[weakself.tableView cellForRowAtIndexPath:indexPath];
+                CGFloat width = (ScreenWidth - 50)/4;
+                if ((cell.imgsArray.count-1)>0 && (cell.imgsArray.count-1) <= 4) {
+                    height = 110;
+                }else if ((cell.imgsArray.count-1) >4 && (cell.imgsArray.count-1) <= 8){
+                    height = 110 + width + 20;
+                }else{
+                    height = 110 + 2*width + 30;
+                }
+                [weakself.tableView reloadData];
             };
             return cell;
             

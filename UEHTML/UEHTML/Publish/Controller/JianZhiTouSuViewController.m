@@ -19,6 +19,20 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+- (void)xuanQuPhoto{
+    
+    TZImagePickerController *pickerController = [[TZImagePickerController alloc]initWithMaxImagesCount:9 delegate:self];
+    pickerController.naviBgColor = [UIColor greenColor];
+    pickerController.needCircleCrop = YES;
+    pickerController.circleCropRadius = 100;
+    [pickerController setDidFinishPickingPhotosHandle:^(NSArray<UIImage *> *photo, NSArray *assets, BOOL isSelectOriginalPhoto) {
+        if (photo.count) {
+
+        }
+    }];
+
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

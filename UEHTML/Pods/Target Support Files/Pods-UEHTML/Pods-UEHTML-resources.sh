@@ -101,6 +101,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_ROOT}/RongCloudIM/RongCloudIM/AlipaySDK/AlipaySDK.bundle"
   install_resource "${PODS_ROOT}/RongCloudIM/RongCloudIM/BQMM.bundle"
   install_resource "${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
+  install_resource "${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/YSMChineseSort/YSMChineseSort.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -121,6 +122,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "${PODS_ROOT}/RongCloudIM/RongCloudIM/AlipaySDK/AlipaySDK.bundle"
   install_resource "${PODS_ROOT}/RongCloudIM/RongCloudIM/BQMM.bundle"
   install_resource "${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
+  install_resource "${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/YSMChineseSort/YSMChineseSort.bundle"
 fi
 

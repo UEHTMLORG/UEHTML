@@ -30,24 +30,24 @@ PODS:
   - MJRefresh (3.1.14)
   - PinYin4Objc (1.1.1)
   - pop (1.0.10)
-  - RongCloudIM (2.8.18):
-    - RongCloudIM/CallKit (= 2.8.18)
-    - RongCloudIM/CallLib (= 2.8.18)
-    - RongCloudIM/IMKit (= 2.8.18)
-    - RongCloudIM/IMLib (= 2.8.18)
-    - RongCloudIM/RedPacket (= 2.8.18)
-    - RongCloudIM/Sticker (= 2.8.18)
-  - RongCloudIM/CallKit (2.8.18):
+  - RongCloudIM (2.8.19):
+    - RongCloudIM/CallKit (= 2.8.19)
+    - RongCloudIM/CallLib (= 2.8.19)
+    - RongCloudIM/IMKit (= 2.8.19)
+    - RongCloudIM/IMLib (= 2.8.19)
+    - RongCloudIM/RedPacket (= 2.8.19)
+    - RongCloudIM/Sticker (= 2.8.19)
+  - RongCloudIM/CallKit (2.8.19):
     - RongCloudIM/CallLib
     - RongCloudIM/IMKit
-  - RongCloudIM/CallLib (2.8.18):
+  - RongCloudIM/CallLib (2.8.19):
     - RongCloudIM/IMLib
-  - RongCloudIM/IMKit (2.8.18):
+  - RongCloudIM/IMKit (2.8.19):
     - RongCloudIM/IMLib
-  - RongCloudIM/IMLib (2.8.18)
-  - RongCloudIM/RedPacket (2.8.18):
+  - RongCloudIM/IMLib (2.8.19)
+  - RongCloudIM/RedPacket (2.8.19):
     - RongCloudIM/IMKit
-  - RongCloudIM/Sticker (2.8.18):
+  - RongCloudIM/Sticker (2.8.19):
     - RongCloudIM/IMKit
   - SDAutoLayout (1.53)
   - SDWebImage (4.1.2):
@@ -55,6 +55,7 @@ PODS:
   - SDWebImage/Core (4.1.2)
   - SVProgressHUD (2.0.4)
   - TTTAttributedLabel (2.0.0)
+  - TZImagePickerController (1.9.3)
   - UICountingLabel (1.4.0)
   - UITableView+FDTemplateLayoutCell (1.6)
   - YSMChineseSort (0.1.1):
@@ -79,6 +80,7 @@ DEPENDENCIES:
   - SDWebImage (~> 4.1)
   - SVProgressHUD (~> 2.0.4)
   - TTTAttributedLabel
+  - TZImagePickerController (~> 1.9)
   - UICountingLabel (~> 1.4.0)
   - UITableView+FDTemplateLayoutCell
   - YSMChineseSort (~> 0.1.0)
@@ -97,16 +99,17 @@ SPEC CHECKSUMS:
   MJRefresh: 6642e35b3227a5447b9fd5e17c552c90196c9859
   PinYin4Objc: 3fa9673610368330e2dfb688b1d19a35c3930a78
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
-  RongCloudIM: 9a934460ec2115d2240c565acc15390b43fb715d
+  RongCloudIM: 11eb03db1eabdd78228d50c83daee79d0d61b359
   SDAutoLayout: ea6e2ae9fbb438aa2feb0c4363dba9297e98638a
   SDWebImage: cb6f9f266a9977741efcbc21e618e8be3734c774
   SVProgressHUD: bfde85ed6c573ea802b9cb37894ed9b629034f1b
   TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
+  TZImagePickerController: 079ab986018c22793462e531045a75e366b18252
   UICountingLabel: ed5ce5b6d5ef278ff40d99cfa49577a30ab0c87b
   UITableView+FDTemplateLayoutCell: 5c949b4a5059c404b442926c0e80f81d10a2d66f
   YSMChineseSort: ef532bfe993ff1b4dc9bcd644ead1a43b2632b88
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 2d787c8869b5508a1b9df744bfac9c095d463e54
+PODFILE CHECKSUM: c52fbcb2372321dc67a1b0356e6d7921ba38614c
 
 COCOAPODS: 1.4.0.beta.1

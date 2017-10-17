@@ -7,7 +7,7 @@
 //
 
 #import "ATQBaseViewController.h"
-
-@interface JianZhiTouSuViewController : ATQBaseViewController
+#import <TZImagePickerController.h>
+@interface JianZhiTouSuViewController : ATQBaseViewController<TZImagePickerControllerDelegate>
 
 @end

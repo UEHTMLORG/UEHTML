@@ -103,8 +103,8 @@
             if ([responseObject[@"status"] isEqualToString:@"1"]) {
                 NSString *user_id = responseObject[@"data"][@"user_id"];
                 NSString *user_token = responseObject[@"data"][@"user_token"];
-                [[NSUserDefaults standardUserDefaults] setObject:user_id forKey:@"user_id"];
-                [[NSUserDefaults standardUserDefaults] setObject:user_token forKey:@"user_token"];
+                [[NSUserDefaults standardUserDefaults] setObject:user_id forKey:USER_ID_AOTU_ZL];
+                [[NSUserDefaults standardUserDefaults] setObject:user_token forKey:USER_TOEKN_AOTU_ZL];
         
                 ATQRenzhengViewController  *vc = [[ATQRenzhengViewController alloc] init];
 

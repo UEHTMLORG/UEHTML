@@ -7,7 +7,15 @@
 //
 
 #import "ATQBaseViewController.h"
-
+#import "KZPhotoManager.h"
 @interface KaiTongVideoViewController : ATQBaseViewController
+
+@property (strong, nonatomic) IBOutlet UIButton *firstImageButton;
+@property (strong, nonatomic) IBOutlet UIButton *secondImageButton;
+@property (strong, nonatomic) IBOutlet UIButton *thirdImageButton;
+@property (strong, nonatomic) IBOutlet UIButton *firstVideoBtn;
+@property (strong, nonatomic) IBOutlet UIButton *secondVideoBtn;
+
+
 
 @end

@@ -11,6 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KaiTongVideoViewController">
             <connections>
+                <outlet property="firstImageButton" destination="Box-x5-CNu" id="F57-BF-0Lq"/>
+                <outlet property="firstVideoBtn" destination="JQo-fx-HHd" id="nA0-Rb-C0v"/>
+                <outlet property="secondImageButton" destination="gzO-SE-aPy" id="5fj-yA-SiW"/>
+                <outlet property="secondVideoBtn" destination="cxN-dp-gQv" id="Jcf-Nq-WHU"/>
+                <outlet property="thirdImageButton" destination="efW-zP-PvL" id="ulY-8c-vCX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

@@ -11,6 +11,7 @@
 #import "ATQPerfectInfoViewController.h"
 #import "UIColor+LhkhColor.h"
 #import "ATQBindPhoneViewController.h"
+#import "ATQRenzhengViewController.h"
 #import "LhkhHttpsManager.h"
 #import "MBProgressHUD+Add.h"
 @interface ATQRegisterViewController ()
@@ -89,6 +90,7 @@
         params[@"apptype"] = @"ios";
         params[@"appversion"] = @"1.0.0";
         NSString *random_str = [LhkhHttpsManager getNowTimeTimestamp];
+        params[@"random_str"] = random_str;
         NSString *app_token = @"apptest";
         NSString *signStr = [NSString stringWithFormat:@"%@%@",app_token,random_str];
         NSString *sign1 = [LhkhHttpsManager md5:signStr];
@@ -99,7 +101,14 @@
         [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
             NSLog(@"-----register=%@",responseObject);
             if ([responseObject[@"status"] isEqualToString:@"1"]) {
-                [MBProgressHUD show:[NSString stringWithFormat:@"%@",responseObject[@"message"]] view:self.view];
+                NSString *user_id = responseObject[@"data"][@"user_id"];
+                NSString *user_token = responseObject[@"data"][@"user_token"];
+                [[NSUserDefaults standardUserDefaults] setObject:user_id forKey:@"user_id"];
+                [[NSUserDefaults standardUserDefaults] setObject:user_token forKey:@"user_token"];
+        
+                ATQRenzhengViewController  *vc = [[ATQRenzhengViewController alloc] init];
+//                ATQPerfectInfoViewController  *vc = [[ATQPerfectInfoViewController alloc] init];
+                [self.navigationController pushViewController:vc animated:YES];
             }else{
                 [MBProgressHUD show:responseObject[@"message"] view:self.view];
             }
@@ -114,8 +123,6 @@
         return;
     }
     
-//    ATQPerfectInfoViewController  *vc = [[ATQPerfectInfoViewController alloc] init];
-//    [self.navigationController pushViewController:vc animated:YES];
 }
 //微博
 - (IBAction)sina:(id)sender {

@@ -143,7 +143,7 @@
 #pragma mark -- 点击全文、收起
 -(void)didClickedMoreBtn:(UIButton *)btn indexPath:(NSIndexPath *)indexPath;
 {
-    ATQPYQModel *model = self.dataArray[indexPath.row];
+    ATQPYQModel *model = self.dataArray[indexPath.row-1];
     model.isExpand = !model.isExpand;
     [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     
@@ -182,7 +182,8 @@
 #pragma mark --点击评论内容的某一行
 -(void)didClickRowWithFirstIndexPath:(NSIndexPath *)firIndexPath secondIndex:(NSIndexPath *)secIndexPath
 {
-    ATQPYQModel *model = self.dataArray[firIndexPath.row-1];
+    self.tabBarController.tabBar.hidden = YES;
+    ATQPYQModel *model = self.dataArray[firIndexPath.row];
     ATQCommentModel *comModel = model.commentArray[secIndexPath.row];
     if([comModel.userName isEqualToString:@"Sky"])
     {
@@ -209,7 +210,6 @@
         self.chatKeyBoard.placeHolder = [NSString stringWithFormat:@"回复：%@",comModel.userName];
         [self.chatKeyBoard keyboardUpforComment];
     }
-    
 }
 #pragma mark -- ChatKeyBoardDelegate
 - (void)chatKeyBoardSendText:(NSString *)text;
@@ -233,7 +233,7 @@
     [self.tableView reloadRowsAtIndexPaths:@[self.commentIndexpath] withRowAnimation:UITableViewRowAnimationFade];
     self.replyIndexpath = nil;
     [self.chatKeyBoard keyboardDownForComment];
-    
+    self.tabBarController.tabBar.hidden = NO;
 }
 
 #pragma mark -- ChatKeyBoardDataSource

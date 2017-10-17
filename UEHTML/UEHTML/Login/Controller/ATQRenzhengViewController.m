@@ -77,8 +77,6 @@
     
 }
 
-
-
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     if ([picker isKindOfClass:[UIImagePickerController class]]) {
         [picker dismissViewControllerAnimated:YES completion:nil];

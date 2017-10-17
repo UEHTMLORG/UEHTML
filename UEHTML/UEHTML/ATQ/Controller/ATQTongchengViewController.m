@@ -139,10 +139,12 @@
     ATQPYQModel *model = self.dataArray[indexPath.row];
     self.chatKeyBoard.placeHolder = [NSString stringWithFormat:@"评论：%@",model.usernName];
     [self.chatKeyBoard keyboardUpforComment];
+    self.tabBarController.tabBar.hidden = YES;
 }
 #pragma mark --点击评论内容的某一行
 -(void)didClickRowWithFirstIndexPath:(NSIndexPath *)firIndexPath secondIndex:(NSIndexPath *)secIndexPath
 {
+    self.tabBarController.tabBar.hidden = YES;
     ATQPYQModel *model = self.dataArray[firIndexPath.row];
     ATQCommentModel *comModel = model.commentArray[secIndexPath.row];
     if([comModel.userName isEqualToString:@"Sky"])
@@ -194,6 +196,7 @@
     [self.tableView reloadRowsAtIndexPaths:@[self.commentIndexpath] withRowAnimation:UITableViewRowAnimationFade];
     self.replyIndexpath = nil;
     [self.chatKeyBoard keyboardDownForComment];
+    self.tabBarController.tabBar.hidden = NO;
     
 }
 
@@ -238,6 +241,7 @@
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     [self.chatKeyBoard keyboardDownForComment];
+    self.tabBarController.tabBar.hidden = NO;
 }
 -(void)dealloc
 {

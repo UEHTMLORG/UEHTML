@@ -11,9 +11,16 @@
 #import "UIColor+LhkhColor.h"
 #import "Masonry.h"
 #import "ATQRenzhengViewController.h"
+#import "LhkhHttpsManager.h"
+#import "MBProgressHUD+Add.h"
+#import <AssetsLibrary/ALAsset.h>
+#import <AssetsLibrary/ALAssetsLibrary.h>
+#import <AssetsLibrary/ALAssetsGroup.h>
+#import <AssetsLibrary/ALAssetRepresentation.h>
 @interface ATQPerfectInfoViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIActionSheetDelegate>{
     UIControl *_blackView;
     NSString *dateStr;
+    NSString *sexStr;
 }
 @property (nonatomic,strong)UIView *datePickerView;
 @property (nonatomic,strong)UIDatePicker *datePicker;
@@ -30,7 +37,7 @@
 }
 
 -(void)buildView{
-    
+    sexStr = nil;
     self.nickView.layer.masksToBounds = YES;
     self.nickView.layer.cornerRadius = 4.f;
     self.nickView.layer.borderWidth = 1.f;
@@ -58,11 +65,13 @@
 
 //男
 - (IBAction)manClick:(id)sender {
+    sexStr = @"1";
     self.manBtn.selected = YES;
     self.womanBtn.selected = !self.manBtn.selected;
 }
 //女
 - (IBAction)womanClick:(id)sender {
+    sexStr = @"2";
     self.womanBtn.selected = YES;
     self.manBtn.selected = !self.womanBtn.selected;
 }
@@ -74,9 +83,50 @@
 }
 //下一步
 - (IBAction)nextClick:(id)sender {
-    ATQRenzhengViewController *vc = [[ATQRenzhengViewController alloc]init];
-//    [self presentViewController:vc animated:YES completion:nil];
-    [self.navigationController pushViewController:vc animated:YES];
+    if (self.nickText.text.length <= 0 || self.nickText.text == nil ) {
+        [MBProgressHUD show:@"请完善您的昵称" view:self.view];
+        return;
+    }
+    if (sexStr.length <= 0 || sexStr == nil ) {
+        [MBProgressHUD show:@"请选择您的性别" view:self.view];
+        return;
+    }
+    if (self.ageLab.text.length <= 0 || self.ageLab.text == nil ) {
+        [MBProgressHUD show:@"请选择您的出生日期" view:self.view];
+        return;
+    }
+    NSMutableDictionary *params = [NSMutableDictionary  dictionary];
+    NSString *user_token = [[NSUserDefaults standardUserDefaults]objectForKey:@"user_token"];
+    NSString *user_id = [[NSUserDefaults standardUserDefaults]objectForKey:@"user_id"];
+    params[@"user_id"] = user_id;
+    params[@"user_token"] = user_token;
+    params[@"apptype"] = @"ios";
+    params[@"appversion"] = @"1.0.0";
+    NSString *random_str = [LhkhHttpsManager getNowTimeTimestamp];
+    params[@"random_str"] = random_str;
+    NSString *app_token = @"apptest";
+    NSString *signStr = [NSString stringWithFormat:@"%@%@",app_token,random_str];
+    NSString *sign1 = [LhkhHttpsManager md5:signStr];
+    NSString *sign2 = [LhkhHttpsManager md5:sign1];
+    NSString *sign = [LhkhHttpsManager md5:sign2];
+    params[@"sign"] = sign;
+    params[@"nick_name"] = self.nickText.text;
+    params[@"gender"] = sexStr;
+    params[@"birth"] = self.ageLab.text;
+    NSString *url = [NSString stringWithFormat:@"%@/api/user/register/step3",ATQBaseUrl];
+   
+     [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
+     NSLog(@"-----register/step3=%@",responseObject);
+     if ([responseObject[@"status"] isEqualToString:@"1"]) {
+     [MBProgressHUD show:responseObject[@"message"] view:self.view];
+     }else{
+     [MBProgressHUD show:responseObject[@"message"] view:self.view];
+     }
+     
+     } failure:^(NSError *error) {
+     NSString *str = [NSString stringWithFormat:@"%@",error];
+     [MBProgressHUD show:str view:self.view];
+     }];
 }
 
 -(void)setblackView{
@@ -225,14 +275,61 @@
 
 #pragma UIImagePickerController delegate
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
+   
+//     NSURL *imageURL = [info valueForKey:UIImagePickerControllerReferenceURL];
+//     ALAssetsLibraryAssetForURLResultBlock resultblock = ^(ALAsset *myasset)
+//     {
+//     ALAssetRepresentation *representation = [myasset defaultRepresentation];
+//     NSString *fileName = [representation filename];
+//     NSLog(@"fileName : %@",fileName);
+//     [self shangchuanImg:fileName];
+//     };
+//
+//     ALAssetsLibrary* assetslibrary = [[ALAssetsLibrary alloc] init];
+//     [assetslibrary assetForURL:imageURL
+//     resultBlock:resultblock
+//     failureBlock:nil];
     
     UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
     
-    self.headImg.image = image;
-//    NSData *data = UIImageJPEGRepresentation(image, 0.3);
+    NSData *data = UIImageJPEGRepresentation(image, 0.3);
 //    NSString *picStr = [data base64EncodedStringWithOptions:0];
-    
+    [self shangchuanImg:data];
     [picker dismissViewControllerAnimated:NO completion:nil];
+}
+
+-(void)shangchuanImg:(NSData*)imgData{
+    NSMutableDictionary *params = [NSMutableDictionary  dictionary];
+    NSString *user_token = [[NSUserDefaults standardUserDefaults]objectForKey:@"user_token"];
+    NSString *user_id = [[NSUserDefaults standardUserDefaults]objectForKey:@"user_id"];
+    params[@"user_id"] = user_id;
+    params[@"user_token"] = user_token;
+    params[@"apptype"] = @"ios";
+    params[@"appversion"] = @"1.0.0";
+    NSString *random_str = [LhkhHttpsManager getNowTimeTimestamp];
+    params[@"random_str"] = random_str;
+    NSString *app_token = @"apptest";
+    NSString *signStr = [NSString stringWithFormat:@"%@%@",app_token,random_str];
+    NSString *sign1 = [LhkhHttpsManager md5:signStr];
+    NSString *sign2 = [LhkhHttpsManager md5:sign1];
+    NSString *sign = [LhkhHttpsManager md5:sign2];
+    params[@"sign"] = sign;
+//    params[@"avatar"] = imgStr;
+    params[@"avatar_auth"] = @"1";
+    NSString *url = [NSString stringWithFormat:@"%@/api/user/upload_avatar",ATQBaseUrl];
+    
+    [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
+        NSLog(@"-----upload_avatar=%@",responseObject);
+        if ([responseObject[@"status"] isEqualToString:@"1"]) {
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+        }else{
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+        }
+        
+    } failure:^(NSError *error) {
+        NSString *str = [NSString stringWithFormat:@"%@",error];
+        [MBProgressHUD show:str view:self.view];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

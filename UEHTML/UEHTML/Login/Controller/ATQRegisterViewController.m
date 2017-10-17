@@ -11,6 +11,8 @@
 #import "ATQPerfectInfoViewController.h"
 #import "UIColor+LhkhColor.h"
 #import "ATQBindPhoneViewController.h"
+#import "LhkhHttpsManager.h"
+#import "MBProgressHUD+Add.h"
 @interface ATQRegisterViewController ()
 {
     NSTimer *mTimer;
@@ -79,8 +81,41 @@
 //注册
 - (IBAction)registerClick:(id)sender {
     NSLog(@"registerClick");
-    ATQPerfectInfoViewController  *vc = [[ATQPerfectInfoViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+    if (self.userPhone.text.length > 0 && self.userPhone.text != nil && ![self.userPhone isKindOfClass:[NSNull  class]] && ![self.userPhone.text isEqualToString:@""] && !(self.userPhone.text.length > 11)) {
+        
+        NSMutableDictionary *params = [NSMutableDictionary  dictionary];
+        params[@"username"] = self.userPhone.text;
+        params[@"check_code"] = @"111111";
+        params[@"apptype"] = @"ios";
+        params[@"appversion"] = @"1.0.0";
+        NSString *random_str = [LhkhHttpsManager getNowTimeTimestamp];
+        NSString *app_token = @"apptest";
+        NSString *signStr = [NSString stringWithFormat:@"%@%@",app_token,random_str];
+        NSString *sign1 = [LhkhHttpsManager md5:signStr];
+        NSString *sign2 = [LhkhHttpsManager md5:sign1];
+        NSString *sign = [LhkhHttpsManager md5:sign2];
+        params[@"sign"] = sign;
+        NSString *url = [NSString stringWithFormat:@"%@/api/user/register/step1",ATQBaseUrl];
+        [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
+            NSLog(@"-----register=%@",responseObject);
+            if ([responseObject[@"status"] isEqualToString:@"1"]) {
+                [MBProgressHUD show:[NSString stringWithFormat:@"%@",responseObject[@"message"]] view:self.view];
+            }else{
+                [MBProgressHUD show:responseObject[@"message"] view:self.view];
+            }
+            
+        } failure:^(NSError *error) {
+            NSString *str = [NSString stringWithFormat:@"%@",error];
+            [MBProgressHUD show:str view:self.view];
+        }];
+        
+    }else{
+        [MBProgressHUD show:@"请正确输入手机号码" view:self.view];
+        return;
+    }
+    
+//    ATQPerfectInfoViewController  *vc = [[ATQPerfectInfoViewController alloc] init];
+//    [self.navigationController pushViewController:vc animated:YES];
 }
 //微博
 - (IBAction)sina:(id)sender {

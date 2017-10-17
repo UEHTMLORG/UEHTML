@@ -93,10 +93,22 @@
         NSString *sign = [ZLSecondAFNetworking getMD5fromString:sign2];
         params[@"sign"] = sign;
         NSString *url = [NSString stringWithFormat:@"%@/api/user/login",ATQBaseUrl];
+<<<<<<< Updated upstream
         
         [[ZLSecondAFNetworking sharedInstance] postWithURLString:url parameters:params success:^(id responseObject) {
             NSDictionary * dataJson = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
             NSLog(@"登录成功：%@",dataJson);
+=======
+        [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
+            NSLog(@"-----Login=%@",responseObject);
+            if ([responseObject[@"status"] isEqualToString:@"1"]) {
+                [MBProgressHUD show:[NSString stringWithFormat:@"%@",responseObject[@"message"]] view:self.view];
+                [(AppDelegate *)[UIApplication sharedApplication].delegate openTabHomeCtrl];
+            }else{
+                [MBProgressHUD show:responseObject[@"message"] view:self.view];
+            }
+            
+>>>>>>> Stashed changes
         } failure:^(NSError *error) {
             NSLog(@"登录失败：%@",error);
         }];

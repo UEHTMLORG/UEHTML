@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ATQLoginViewController.h"
 #import "IQKeyboardManager.h"
+
 @interface AppDelegate ()
 
 @end
@@ -26,8 +27,7 @@
     manager.shouldResignOnTouchOutside = YES;
     manager.shouldToolbarUsesTextFieldTintColor = YES;
     manager.enableAutoToolbar = NO;
-    
-    
+   
     /**
      *==========ZL注释start===========
      *1.集成融云

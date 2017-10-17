@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,12 +15,14 @@
                 <outlet property="TextTop" destination="eg4-Xx-2TM" id="HMA-mv-zEL"/>
                 <outlet property="bottomH" destination="bPh-vW-ObP" id="qNS-0c-HBE"/>
                 <outlet property="codeBtn" destination="dLi-wN-Mgi" id="Vol-dl-mrY"/>
-                <outlet property="codeLab" destination="Wwu-uR-BUN" id="rnu-LW-j3A"/>
+                <outlet property="codeLab" destination="Wwu-uR-BUN" id="Kc6-Oc-ny6"/>
+                <outlet property="codeText" destination="cE1-ji-V5n" id="D1U-BB-Sd2"/>
                 <outlet property="img1" destination="MJo-Tm-HnR" id="3Bl-F3-d0V"/>
                 <outlet property="img2" destination="KDS-59-E4s" id="X6F-oq-KvQ"/>
                 <outlet property="img3" destination="vC4-YH-RLe" id="1e9-2s-PIz"/>
                 <outlet property="registerBtn" destination="R9W-9K-Wty" id="NEv-xq-abH"/>
                 <outlet property="registerTop" destination="Q7w-DS-TZM" id="U8D-Wh-xWc"/>
+                <outlet property="userPhone" destination="D0d-Um-cBm" id="hAU-pW-Vxs"/>
                 <outlet property="view" destination="Wxj-f5-jfR" id="xsP-hr-NDY"/>
             </connections>
         </placeholder>

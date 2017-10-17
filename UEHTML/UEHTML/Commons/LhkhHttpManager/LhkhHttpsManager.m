@@ -18,7 +18,7 @@
 {
     NSLog(@"URL---->%@",URLString);
     NSLog(@"params---->%@",parameters);
-    NSString *netStatus = [[NSUserDefaults standardUserDefaults] objectForKey:@"status"];
+//    NSString *netStatus = [[NSUserDefaults standardUserDefaults] objectForKey:@"status"];
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     manager.requestSerializer.timeoutInterval = 30.0f;
@@ -44,7 +44,7 @@
             break;
         case HttpRequestTypePost:
         {
-            if ([netStatus isEqualToString:@"1"] || [netStatus isEqualToString:@"2"]) {//有网络时
+//            if ([netStatus isEqualToString:@"1"] || [netStatus isEqualToString:@"2"]) {//有网络时
                 AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
                 manager.responseSerializer = [AFHTTPResponseSerializer serializer];
                 [manager POST:URLString parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -57,11 +57,11 @@
                         failure(error);
                     }
                 }];
-            }else //无网络时
-            {
-                NSError *error = nil;
-                failure(error);
-            }
+//            }else //无网络时
+//            {
+//                NSError *error = nil;
+//                failure(error);
+//            }
         }
             break;
         default:

@@ -94,4 +94,24 @@ typedef NS_ENUM(NSUInteger,HttpRequestTypeZL) {
                       success:(void (^)())success
                       failure:(void (^)(NSError *error))failure;
 
+/**
+ *==========ZL注释start===========
+ *1.获取当前时间
+ *
+ *2.设置时区
+ *3.设置时间格式
+ *4.返回字符串
+ ===========ZL注释end==========*/
++ (NSString *)getNowTime;
+
+/**
+ *==========ZL注释start===========
+ *1.md5加密
+ *
+ *2.<#注释描述#>
+ *3.<#注释描述#>
+ *4.<#注释描述#>
+ ===========ZL注释end==========*/
++ (NSString *)getMD5fromString:(NSString *)string;
+
 @end

@@ -46,7 +46,8 @@
                                 };
     
     [[ZLSecondAFNetworking sharedInstance] postWithURLString:zhuCeURls parameters:parmaDic success:^(id responseObject) {
-        NSLog(@"注册请求成功：%@",responseObject);
+        NSDictionary * dataJson = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSLog(@"注册请求成功：%@",dataJson);
     } failure:^(NSError *error) {
         NSLog(@"注册请求失败：%@",error);
     }];

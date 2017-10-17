@@ -9,7 +9,7 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 #import "Common.h"
-//#import "UIKit+ZJ.h"
+#define ATQBaseUrl  @"http://atapi.dotry.cn"
 #ifdef __OBJC__
 #import "ZLHeader.h"
 #import "CommonHeaderZl.h"

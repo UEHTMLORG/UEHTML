@@ -113,7 +113,6 @@
 		188E19C51F91F812007F56E4 /* MsgLastCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188E19C31F91F812007F56E4 /* MsgLastCollectionViewCell.xib */; };
 		188F843A1F739BD30037213D /* ComplainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F84381F739BD30037213D /* ComplainViewController.m */; };
 		188F843B1F739BD30037213D /* ComplainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188F84391F739BD30037213D /* ComplainViewController.xib */; };
-		18BFFF561F53B863002144D5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18BFFF551F53B863002144D5 /* Info.plist */; };
 		18D16EA21F8F150400D8DF79 /* JZVideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D16EA01F8F150400D8DF79 /* JZVideoTableViewCell.m */; };
 		18D16EA31F8F150400D8DF79 /* JZVideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D16EA11F8F150400D8DF79 /* JZVideoTableViewCell.xib */; };
 		18D16EA61F8F171000D8DF79 /* JZVideoCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D16EA51F8F171000D8DF79 /* JZVideoCellModel.m */; };
@@ -892,7 +891,6 @@
 		188F84371F739BD30037213D /* ComplainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComplainViewController.h; sourceTree = "<group>"; };
 		188F84381F739BD30037213D /* ComplainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComplainViewController.m; sourceTree = "<group>"; };
 		188F84391F739BD30037213D /* ComplainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComplainViewController.xib; sourceTree = "<group>"; };
-		18BFFF551F53B863002144D5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18D16E9F1F8F150400D8DF79 /* JZVideoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JZVideoTableViewCell.h; sourceTree = "<group>"; };
 		18D16EA01F8F150400D8DF79 /* JZVideoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JZVideoTableViewCell.m; sourceTree = "<group>"; };
 		18D16EA11F8F150400D8DF79 /* JZVideoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JZVideoTableViewCell.xib; sourceTree = "<group>"; };
@@ -948,6 +946,7 @@
 		40019C2F1F7F6BF600E11331 /* ATQCheckTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQCheckTableViewCell.h; path = UEHTML/Me/View/ATQCheckTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		40019C301F7F6BF600E11331 /* ATQCheckTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQCheckTableViewCell.m; path = UEHTML/Me/View/ATQCheckTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		40019C311F7F6BF600E11331 /* ATQCheckTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQCheckTableViewCell.xib; path = UEHTML/Me/View/ATQCheckTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40076A0A1F95A9F5006839C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40133E8A1F91B9D600C0B8CB /* ATQTongchengViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQTongchengViewController.h; sourceTree = "<group>"; };
 		40133E8B1F91B9D600C0B8CB /* ATQTongchengViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQTongchengViewController.m; sourceTree = "<group>"; };
 		40133E8D1F91F07A00C0B8CB /* ATQMeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQMeTableViewCell.h; path = UEHTML/ATQ/View/ATQMeTableViewCell.h; sourceTree = SOURCE_ROOT; };
@@ -2638,7 +2637,7 @@
 		409E6D841F5003DA00E3BE49 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				18BFFF551F53B863002144D5 /* Info.plist */,
+				40076A0A1F95A9F5006839C7 /* Info.plist */,
 				409E6D851F5003DA00E3BE49 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -4593,7 +4592,6 @@
 				40F5E5851F91AFAC0077A574 /* f_static_026@2x.png in Resources */,
 				40F5E5CA1F91AFAC0077A574 /* f_static_060@3x.png in Resources */,
 				40F5E5A41F91AFAC0077A574 /* f_static_041@3x.png in Resources */,
-				18BFFF561F53B863002144D5 /* Info.plist in Resources */,
 				40F5E62C1F91AFAC0077A574 /* sharemore_video@3x.png in Resources */,
 				40F5E5AA1F91AFAC0077A574 /* f_static_044@3x.png in Resources */,
 				40F5E6131F91AFAC0077A574 /* f_static_097@2x.png in Resources */,

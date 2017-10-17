@@ -25,4 +25,6 @@ typedef NS_ENUM(NSUInteger,HttpRequestType) {
                         type:(HttpRequestType)type
                      success:(void (^)(id responseObject))success
                      failure:(void (^)(NSError *error))failure;
++(NSString *)getNowTimeTimestamp;
++(NSString *)md5:(NSString *)str;
 @end

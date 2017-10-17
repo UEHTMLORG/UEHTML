@@ -41,14 +41,6 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-//        __weak typeof(self) weakSelf = self;
-//        [self.tableView addRefreshHeaderViewWithCallback:^{
-//            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//                weakSelf.dataArray = [DataSourceManager loadDataArray].mutableCopy;
-//                [weakSelf.tableView reloadData];
-//                [weakSelf.tableView headerEndRefreshing];
-//            });
-//        }];
         
     _chatKeyBoard =[ChatKeyBoard keyBoardWithParentViewBounds:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
     _chatKeyBoard.delegate = self;

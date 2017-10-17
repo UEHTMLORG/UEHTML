@@ -107,7 +107,7 @@
                 [[NSUserDefaults standardUserDefaults] setObject:user_token forKey:@"user_token"];
         
                 ATQRenzhengViewController  *vc = [[ATQRenzhengViewController alloc] init];
-//                ATQPerfectInfoViewController  *vc = [[ATQPerfectInfoViewController alloc] init];
+
                 [self.navigationController pushViewController:vc animated:YES];
             }else{
                 [MBProgressHUD show:responseObject[@"message"] view:self.view];

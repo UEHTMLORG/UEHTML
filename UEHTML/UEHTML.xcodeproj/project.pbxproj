@@ -200,6 +200,24 @@
 		403458A01F8F0340007993F3 /* ATQMyselfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4034589F1F8F0340007993F3 /* ATQMyselfViewController.m */; };
 		403458D91F8F5BBB007993F3 /* NSString+Pinyin.m in Sources */ = {isa = PBXBuildFile; fileRef = 403458D61F8F5BBB007993F3 /* NSString+Pinyin.m */; };
 		403458DD1F8F6781007993F3 /* WeChatHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 403458DC1F8F6781007993F3 /* WeChatHelper.m */; };
+		40473D231F96244F00E6EE35 /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 40473D221F96244E00E6EE35 /* libc++.1.tbd */; };
+		40473D251F96245800E6EE35 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 40473D241F96245800E6EE35 /* libz.tbd */; };
+		40473D271F96246000E6EE35 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40473D261F96245F00E6EE35 /* AVFoundation.framework */; };
+		40473D291F96246900E6EE35 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40473D281F96246800E6EE35 /* SystemConfiguration.framework */; };
+		40473D2B1F96247100E6EE35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40473D2A1F96247100E6EE35 /* Foundation.framework */; };
+		40473D2D1F96248800E6EE35 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40473D2C1F96248800E6EE35 /* CoreTelephony.framework */; };
+		40473D2F1F96262100E6EE35 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40473D2E1F96262100E6EE35 /* AudioToolbox.framework */; };
+		40473D311F96262900E6EE35 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40473D301F96262900E6EE35 /* UIKit.framework */; };
+		40473D331F96263200E6EE35 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40473D321F96263200E6EE35 /* CoreLocation.framework */; };
+		40473D351F96263C00E6EE35 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40473D341F96263C00E6EE35 /* AddressBook.framework */; };
+		40473D371F96264500E6EE35 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40473D361F96264500E6EE35 /* CoreGraphics.framework */; };
+		40473D391F962AFB00E6EE35 /* CanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40473D0D1F96239700E6EE35 /* CanvasView.m */; };
+		40473D3A1F962BAB00E6EE35 /* IFlyFaceImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 40473D161F96239700E6EE35 /* IFlyFaceImage.m */; };
+		40473D3B1F962BAB00E6EE35 /* IFlyFaceResultKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 40473D201F96239700E6EE35 /* IFlyFaceResultKeys.m */; };
+		40473D3C1F962C5200E6EE35 /* CaptureManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 40473D101F96239700E6EE35 /* CaptureManager.m */; };
+		40473D3D1F962C7800E6EE35 /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40473D211F96242600E6EE35 /* iflyMSC.framework */; };
+		40473D3E1F962CDA00E6EE35 /* PermissionDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 40473D1D1F96239700E6EE35 /* PermissionDetector.m */; };
+		40473D3F1F962D9B00E6EE35 /* CalculatorTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 40473D141F96239700E6EE35 /* CalculatorTools.m */; };
 		4048AE041F8DA75900F6B928 /* ATQNewFriendsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048AE021F8DA75900F6B928 /* ATQNewFriendsTableViewCell.m */; };
 		4048AE051F8DA75900F6B928 /* ATQNewFriendsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4048AE031F8DA75900F6B928 /* ATQNewFriendsTableViewCell.xib */; };
 		4061BD9C1F8CB53B00F6EC30 /* ATQTypeListInviteDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4061BD9A1F8CB53B00F6EC30 /* ATQTypeListInviteDetailViewController.m */; };
@@ -1039,6 +1057,35 @@
 		403458D61F8F5BBB007993F3 /* NSString+Pinyin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Pinyin.m"; path = "../NSString+Pinyin.m"; sourceTree = "<group>"; };
 		403458DB1F8F6781007993F3 /* WeChatHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeChatHelper.h; path = ../WeChatHelper.h; sourceTree = "<group>"; };
 		403458DC1F8F6781007993F3 /* WeChatHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeChatHelper.m; path = ../WeChatHelper.m; sourceTree = "<group>"; };
+		40473D0C1F96239700E6EE35 /* CanvasView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CanvasView.h; sourceTree = "<group>"; };
+		40473D0D1F96239700E6EE35 /* CanvasView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CanvasView.m; sourceTree = "<group>"; };
+		40473D0F1F96239700E6EE35 /* CaptureManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CaptureManager.h; sourceTree = "<group>"; };
+		40473D101F96239700E6EE35 /* CaptureManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CaptureManager.m; sourceTree = "<group>"; };
+		40473D111F96239700E6EE35 /* DemoPreDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoPreDefine.h; sourceTree = "<group>"; };
+		40473D131F96239700E6EE35 /* CalculatorTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculatorTools.h; sourceTree = "<group>"; };
+		40473D141F96239700E6EE35 /* CalculatorTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorTools.m; sourceTree = "<group>"; };
+		40473D151F96239700E6EE35 /* IFlyFaceImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IFlyFaceImage.h; sourceTree = "<group>"; };
+		40473D161F96239700E6EE35 /* IFlyFaceImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IFlyFaceImage.m; sourceTree = "<group>"; };
+		40473D171F96239700E6EE35 /* UIImage+compress.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+compress.h"; sourceTree = "<group>"; };
+		40473D181F96239700E6EE35 /* UIImage+compress.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+compress.m"; sourceTree = "<group>"; };
+		40473D191F96239700E6EE35 /* UIImage+Extensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extensions.h"; sourceTree = "<group>"; };
+		40473D1A1F96239700E6EE35 /* UIImage+Extensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extensions.m"; sourceTree = "<group>"; };
+		40473D1C1F96239700E6EE35 /* PermissionDetector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PermissionDetector.h; sourceTree = "<group>"; };
+		40473D1D1F96239700E6EE35 /* PermissionDetector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PermissionDetector.m; sourceTree = "<group>"; };
+		40473D1F1F96239700E6EE35 /* IFlyFaceResultKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IFlyFaceResultKeys.h; sourceTree = "<group>"; };
+		40473D201F96239700E6EE35 /* IFlyFaceResultKeys.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IFlyFaceResultKeys.m; sourceTree = "<group>"; };
+		40473D211F96242600E6EE35 /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iflyMSC.framework; sourceTree = "<group>"; };
+		40473D221F96244E00E6EE35 /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
+		40473D241F96245800E6EE35 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		40473D261F96245F00E6EE35 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		40473D281F96246800E6EE35 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		40473D2A1F96247100E6EE35 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		40473D2C1F96248800E6EE35 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		40473D2E1F96262100E6EE35 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		40473D301F96262900E6EE35 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		40473D321F96263200E6EE35 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		40473D341F96263C00E6EE35 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		40473D361F96264500E6EE35 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		4048AE011F8DA75900F6B928 /* ATQNewFriendsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQNewFriendsTableViewCell.h; path = UEHTML/Me/View/ATQNewFriendsTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		4048AE021F8DA75900F6B928 /* ATQNewFriendsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQNewFriendsTableViewCell.m; path = UEHTML/Me/View/ATQNewFriendsTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		4048AE031F8DA75900F6B928 /* ATQNewFriendsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQNewFriendsTableViewCell.xib; path = UEHTML/Me/View/ATQNewFriendsTableViewCell.xib; sourceTree = SOURCE_ROOT; };
@@ -1707,6 +1754,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40473D3D1F962C7800E6EE35 /* iflyMSC.framework in Frameworks */,
+				40473D371F96264500E6EE35 /* CoreGraphics.framework in Frameworks */,
+				40473D351F96263C00E6EE35 /* AddressBook.framework in Frameworks */,
+				40473D331F96263200E6EE35 /* CoreLocation.framework in Frameworks */,
+				40473D311F96262900E6EE35 /* UIKit.framework in Frameworks */,
+				40473D2F1F96262100E6EE35 /* AudioToolbox.framework in Frameworks */,
+				40473D2D1F96248800E6EE35 /* CoreTelephony.framework in Frameworks */,
+				40473D2B1F96247100E6EE35 /* Foundation.framework in Frameworks */,
+				40473D291F96246900E6EE35 /* SystemConfiguration.framework in Frameworks */,
+				40473D271F96246000E6EE35 /* AVFoundation.framework in Frameworks */,
+				40473D251F96245800E6EE35 /* libz.tbd in Frameworks */,
+				40473D231F96244F00E6EE35 /* libc++.1.tbd in Frameworks */,
 				92FB59049DF9E3548E8B4B00 /* libPods-UEHTML.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2531,6 +2590,70 @@
 			path = ../PZXVerificationCodeTextField;
 			sourceTree = "<group>";
 		};
+		40473D0A1F96239700E6EE35 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				40473D0B1F96239700E6EE35 /* CanvasView */,
+				40473D0E1F96239700E6EE35 /* Capture */,
+				40473D111F96239700E6EE35 /* DemoPreDefine.h */,
+				40473D121F96239700E6EE35 /* Image */,
+				40473D1B1F96239700E6EE35 /* Permission */,
+				40473D1E1F96239700E6EE35 /* Result */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		40473D0B1F96239700E6EE35 /* CanvasView */ = {
+			isa = PBXGroup;
+			children = (
+				40473D0C1F96239700E6EE35 /* CanvasView.h */,
+				40473D0D1F96239700E6EE35 /* CanvasView.m */,
+			);
+			path = CanvasView;
+			sourceTree = "<group>";
+		};
+		40473D0E1F96239700E6EE35 /* Capture */ = {
+			isa = PBXGroup;
+			children = (
+				40473D0F1F96239700E6EE35 /* CaptureManager.h */,
+				40473D101F96239700E6EE35 /* CaptureManager.m */,
+			);
+			path = Capture;
+			sourceTree = "<group>";
+		};
+		40473D121F96239700E6EE35 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				40473D131F96239700E6EE35 /* CalculatorTools.h */,
+				40473D141F96239700E6EE35 /* CalculatorTools.m */,
+				40473D151F96239700E6EE35 /* IFlyFaceImage.h */,
+				40473D161F96239700E6EE35 /* IFlyFaceImage.m */,
+				40473D171F96239700E6EE35 /* UIImage+compress.h */,
+				40473D181F96239700E6EE35 /* UIImage+compress.m */,
+				40473D191F96239700E6EE35 /* UIImage+Extensions.h */,
+				40473D1A1F96239700E6EE35 /* UIImage+Extensions.m */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		40473D1B1F96239700E6EE35 /* Permission */ = {
+			isa = PBXGroup;
+			children = (
+				40473D1C1F96239700E6EE35 /* PermissionDetector.h */,
+				40473D1D1F96239700E6EE35 /* PermissionDetector.m */,
+			);
+			path = Permission;
+			sourceTree = "<group>";
+		};
+		40473D1E1F96239700E6EE35 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				40473D1F1F96239700E6EE35 /* IFlyFaceResultKeys.h */,
+				40473D201F96239700E6EE35 /* IFlyFaceResultKeys.m */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
 		4069320E1F90531200161167 /* HYBUnicodeReadable */ = {
 			isa = PBXGroup;
 			children = (
@@ -2551,6 +2674,7 @@
 				40875D621F6F9A5B00B58609 /* Controller */,
 				40875D631F6F9A5B00B58609 /* Model */,
 				40875D641F6F9A5B00B58609 /* View */,
+				40473D0A1F96239700E6EE35 /* Tools */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -2691,6 +2815,7 @@
 		409E6DBB1F50081200E3BE49 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				40473D211F96242600E6EE35 /* iflyMSC.framework */,
 				40F5E34E1F919EB60077A574 /* Libs */,
 				40F5E34D1F919EA90077A574 /* Categories */,
 				40FA89FC1F74B1A80059A208 /* LhkhHttpManager */,
@@ -4404,6 +4529,17 @@
 		EC6D5F91F075CA55506A82FD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				40473D361F96264500E6EE35 /* CoreGraphics.framework */,
+				40473D341F96263C00E6EE35 /* AddressBook.framework */,
+				40473D321F96263200E6EE35 /* CoreLocation.framework */,
+				40473D301F96262900E6EE35 /* UIKit.framework */,
+				40473D2E1F96262100E6EE35 /* AudioToolbox.framework */,
+				40473D2C1F96248800E6EE35 /* CoreTelephony.framework */,
+				40473D2A1F96247100E6EE35 /* Foundation.framework */,
+				40473D281F96246800E6EE35 /* SystemConfiguration.framework */,
+				40473D261F96245F00E6EE35 /* AVFoundation.framework */,
+				40473D241F96245800E6EE35 /* libz.tbd */,
+				40473D221F96244E00E6EE35 /* libc++.1.tbd */,
 				01FD494EE7C5F40277EC06F8 /* libPods-UEHTML.a */,
 			);
 			name = Frameworks;
@@ -4995,6 +5131,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40473D3F1F962D9B00E6EE35 /* CalculatorTools.m in Sources */,
+				40473D3E1F962CDA00E6EE35 /* PermissionDetector.m in Sources */,
+				40473D3C1F962C5200E6EE35 /* CaptureManager.m in Sources */,
+				40473D3A1F962BAB00E6EE35 /* IFlyFaceImage.m in Sources */,
+				40473D3B1F962BAB00E6EE35 /* IFlyFaceResultKeys.m in Sources */,
+				40473D391F962AFB00E6EE35 /* CanvasView.m in Sources */,
 				18D93D861F93A5EB00D18418 /* pinyin.c in Sources */,
 				18D93D831F93A56800D18418 /* FMDatabaseAdditions.m in Sources */,
 				18D93D841F93A56800D18418 /* FMDatabasePool.m in Sources */,
@@ -5452,6 +5594,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/UEHTML/Login/Controller/FaceRecognition/frameworks",
+					"$(PROJECT_DIR)/UEHTML/Commons",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/UEHTML/Commons/PrefixHeader.pch";
@@ -5461,6 +5604,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = LHKH.UEHTML;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -5476,6 +5620,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/UEHTML/Login/Controller/FaceRecognition/frameworks",
+					"$(PROJECT_DIR)/UEHTML/Commons",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/UEHTML/Commons/PrefixHeader.pch";
@@ -5484,6 +5629,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LHKH.UEHTML;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

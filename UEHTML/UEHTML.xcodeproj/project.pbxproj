@@ -945,58 +945,58 @@
 		18D93D761F939B1D00D18418 /* SortForTime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SortForTime.m; sourceTree = "<group>"; };
 		18D93D7B1F939DB400D18418 /* RCDSettingUserDefaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCDSettingUserDefaults.h; sourceTree = "<group>"; };
 		18D93D7C1F939DB500D18418 /* RCDSettingUserDefaults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCDSettingUserDefaults.m; sourceTree = "<group>"; };
-		40019C2F1F7F6BF600E11331 /* ATQCheckTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQCheckTableViewCell.h; path = UEHTML/Me/Controller/ATQCheckTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		40019C301F7F6BF600E11331 /* ATQCheckTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQCheckTableViewCell.m; path = UEHTML/Me/Controller/ATQCheckTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		40019C311F7F6BF600E11331 /* ATQCheckTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQCheckTableViewCell.xib; path = UEHTML/Me/Controller/ATQCheckTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40019C2F1F7F6BF600E11331 /* ATQCheckTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQCheckTableViewCell.h; path = UEHTML/Me/View/ATQCheckTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40019C301F7F6BF600E11331 /* ATQCheckTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQCheckTableViewCell.m; path = UEHTML/Me/View/ATQCheckTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40019C311F7F6BF600E11331 /* ATQCheckTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQCheckTableViewCell.xib; path = UEHTML/Me/View/ATQCheckTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		40133E8A1F91B9D600C0B8CB /* ATQTongchengViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQTongchengViewController.h; sourceTree = "<group>"; };
 		40133E8B1F91B9D600C0B8CB /* ATQTongchengViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQTongchengViewController.m; sourceTree = "<group>"; };
-		40133E8D1F91F07A00C0B8CB /* ATQMeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQMeTableViewCell.h; path = UEHTML/ATQ/Controller/ATQMeTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		40133E8E1F91F07A00C0B8CB /* ATQMeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQMeTableViewCell.m; path = UEHTML/ATQ/Controller/ATQMeTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40133E8D1F91F07A00C0B8CB /* ATQMeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQMeTableViewCell.h; path = UEHTML/ATQ/View/ATQMeTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40133E8E1F91F07A00C0B8CB /* ATQMeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQMeTableViewCell.m; path = UEHTML/ATQ/View/ATQMeTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		4018F5A51F500B4000D6C42D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4018F5A71F500B4000D6C42D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4018F5A91F500B4000D6C42D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4018F5AB1F500B4000D6C42D /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		4018F5AC1F500B4000D6C42D /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		401D68E21F94468500329D1B /* ATQMePublishTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQMePublishTableViewCell.h; path = UEHTML/ATQ/Controller/ATQMePublishTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		401D68E31F94468500329D1B /* ATQMePublishTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQMePublishTableViewCell.m; path = UEHTML/ATQ/Controller/ATQMePublishTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		401D68E41F94468500329D1B /* ATQMePublishTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQMePublishTableViewCell.xib; path = UEHTML/ATQ/Controller/ATQMePublishTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		401D68E21F94468500329D1B /* ATQMePublishTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQMePublishTableViewCell.h; path = UEHTML/ATQ/View/ATQMePublishTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		401D68E31F94468500329D1B /* ATQMePublishTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQMePublishTableViewCell.m; path = UEHTML/ATQ/View/ATQMePublishTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		401D68E41F94468500329D1B /* ATQMePublishTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQMePublishTableViewCell.xib; path = UEHTML/ATQ/View/ATQMePublishTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		401D68E71F944CFF00329D1B /* ATQMePublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQMePublishViewController.h; sourceTree = "<group>"; };
 		401D68E81F944CFF00329D1B /* ATQMePublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQMePublishViewController.m; sourceTree = "<group>"; };
-		401D68EC1F947B0600329D1B /* ATQMePublishFTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQMePublishFTableViewCell.h; path = UEHTML/ATQ/Controller/ATQMePublishFTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		401D68ED1F947B0600329D1B /* ATQMePublishFTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQMePublishFTableViewCell.m; path = UEHTML/ATQ/Controller/ATQMePublishFTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		401D68EE1F947B0600329D1B /* ATQMePublishFTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQMePublishFTableViewCell.xib; path = UEHTML/ATQ/Controller/ATQMePublishFTableViewCell.xib; sourceTree = SOURCE_ROOT; };
-		401D68F11F947D5400329D1B /* ATQMePublishPTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQMePublishPTableViewCell.h; path = UEHTML/ATQ/Controller/ATQMePublishPTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		401D68F21F947D5400329D1B /* ATQMePublishPTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQMePublishPTableViewCell.m; path = UEHTML/ATQ/Controller/ATQMePublishPTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		401D68F31F947D5400329D1B /* ATQMePublishPTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQMePublishPTableViewCell.xib; path = UEHTML/ATQ/Controller/ATQMePublishPTableViewCell.xib; sourceTree = SOURCE_ROOT; };
-		401D68F61F94836A00329D1B /* ATQMepublishTTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQMepublishTTableViewCell.h; path = UEHTML/ATQ/Controller/ATQMepublishTTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		401D68F71F94836A00329D1B /* ATQMepublishTTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQMepublishTTableViewCell.m; path = UEHTML/ATQ/Controller/ATQMepublishTTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		401D68F81F94836A00329D1B /* ATQMepublishTTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQMepublishTTableViewCell.xib; path = UEHTML/ATQ/Controller/ATQMepublishTTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		401D68EC1F947B0600329D1B /* ATQMePublishFTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQMePublishFTableViewCell.h; path = UEHTML/ATQ/View/ATQMePublishFTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		401D68ED1F947B0600329D1B /* ATQMePublishFTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQMePublishFTableViewCell.m; path = UEHTML/ATQ/View/ATQMePublishFTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		401D68EE1F947B0600329D1B /* ATQMePublishFTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQMePublishFTableViewCell.xib; path = UEHTML/ATQ/View/ATQMePublishFTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		401D68F11F947D5400329D1B /* ATQMePublishPTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQMePublishPTableViewCell.h; path = UEHTML/ATQ/View/ATQMePublishPTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		401D68F21F947D5400329D1B /* ATQMePublishPTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQMePublishPTableViewCell.m; path = UEHTML/ATQ/View/ATQMePublishPTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		401D68F31F947D5400329D1B /* ATQMePublishPTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQMePublishPTableViewCell.xib; path = UEHTML/ATQ/View/ATQMePublishPTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		401D68F61F94836A00329D1B /* ATQMepublishTTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQMepublishTTableViewCell.h; path = UEHTML/ATQ/View/ATQMepublishTTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		401D68F71F94836A00329D1B /* ATQMepublishTTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQMepublishTTableViewCell.m; path = UEHTML/ATQ/View/ATQMepublishTTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		401D68F81F94836A00329D1B /* ATQMepublishTTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQMepublishTTableViewCell.xib; path = UEHTML/ATQ/View/ATQMepublishTTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		40236C1D1F7B457E004AE37B /* ATQUserManualViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQUserManualViewController.h; sourceTree = "<group>"; };
 		40236C1E1F7B457E004AE37B /* ATQUserManualViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQUserManualViewController.m; sourceTree = "<group>"; };
 		40236C201F7B4800004AE37B /* ATQBlackListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQBlackListViewController.h; sourceTree = "<group>"; };
 		40236C211F7B4800004AE37B /* ATQBlackListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQBlackListViewController.m; sourceTree = "<group>"; };
-		40236C231F7B48A8004AE37B /* ATQBlacklistTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQBlacklistTableViewCell.h; path = UEHTML/Me/Controller/ATQBlacklistTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		40236C241F7B48A8004AE37B /* ATQBlacklistTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQBlacklistTableViewCell.m; path = UEHTML/Me/Controller/ATQBlacklistTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		40236C251F7B48A8004AE37B /* ATQBlacklistTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQBlacklistTableViewCell.xib; path = UEHTML/Me/Controller/ATQBlacklistTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40236C231F7B48A8004AE37B /* ATQBlacklistTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQBlacklistTableViewCell.h; path = UEHTML/Me/View/ATQBlacklistTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40236C241F7B48A8004AE37B /* ATQBlacklistTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQBlacklistTableViewCell.m; path = UEHTML/Me/View/ATQBlacklistTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40236C251F7B48A8004AE37B /* ATQBlacklistTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQBlacklistTableViewCell.xib; path = UEHTML/Me/View/ATQBlacklistTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		40236C281F7B610D004AE37B /* ATQYZSecretViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQYZSecretViewController.h; sourceTree = "<group>"; };
 		40236C291F7B610D004AE37B /* ATQYZSecretViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQYZSecretViewController.m; sourceTree = "<group>"; };
 		40236C2A1F7B610D004AE37B /* ATQYZSecretViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATQYZSecretViewController.xib; sourceTree = "<group>"; };
 		40236C2D1F7B7943004AE37B /* ATQOpinionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQOpinionViewController.h; sourceTree = "<group>"; };
 		40236C2E1F7B7943004AE37B /* ATQOpinionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQOpinionViewController.m; sourceTree = "<group>"; };
-		40236C301F7B7AD0004AE37B /* ATQQuesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQQuesTableViewCell.h; path = UEHTML/Me/Controller/ATQQuesTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		40236C311F7B7AD0004AE37B /* ATQQuesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQQuesTableViewCell.m; path = UEHTML/Me/Controller/ATQQuesTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		40236C321F7B7AD0004AE37B /* ATQQuesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQQuesTableViewCell.xib; path = UEHTML/Me/Controller/ATQQuesTableViewCell.xib; sourceTree = SOURCE_ROOT; };
-		40236C351F7B7BFE004AE37B /* ATQOpinionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQOpinionTableViewCell.h; path = UEHTML/Me/Controller/ATQOpinionTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		40236C361F7B7BFE004AE37B /* ATQOpinionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQOpinionTableViewCell.m; path = UEHTML/Me/Controller/ATQOpinionTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		40236C371F7B7BFE004AE37B /* ATQOpinionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQOpinionTableViewCell.xib; path = UEHTML/Me/Controller/ATQOpinionTableViewCell.xib; sourceTree = SOURCE_ROOT; };
-		40236C3D1F7B7E78004AE37B /* ATQPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQPlaceholderTextView.h; path = UEHTML/Me/Controller/ATQPlaceholderTextView.h; sourceTree = SOURCE_ROOT; };
-		40236C3E1F7B7E78004AE37B /* ATQPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQPlaceholderTextView.m; path = UEHTML/Me/Controller/ATQPlaceholderTextView.m; sourceTree = SOURCE_ROOT; };
-		40236C401F7B8094004AE37B /* ATQOpinionPhotoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQOpinionPhotoTableViewCell.h; path = UEHTML/Me/Controller/ATQOpinionPhotoTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		40236C411F7B8094004AE37B /* ATQOpinionPhotoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQOpinionPhotoTableViewCell.m; path = UEHTML/Me/Controller/ATQOpinionPhotoTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		40236C421F7B8094004AE37B /* ATQOpinionPhotoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQOpinionPhotoTableViewCell.xib; path = UEHTML/Me/Controller/ATQOpinionPhotoTableViewCell.xib; sourceTree = SOURCE_ROOT; };
-		40236C451F7B83F6004AE37B /* ATQAddImgCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQAddImgCollectionViewCell.h; path = UEHTML/Me/Controller/ATQAddImgCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
-		40236C461F7B83F6004AE37B /* ATQAddImgCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQAddImgCollectionViewCell.m; path = UEHTML/Me/Controller/ATQAddImgCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
-		40236C471F7B83F6004AE37B /* ATQAddImgCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQAddImgCollectionViewCell.xib; path = UEHTML/Me/Controller/ATQAddImgCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40236C301F7B7AD0004AE37B /* ATQQuesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQQuesTableViewCell.h; path = UEHTML/Me/View/ATQQuesTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40236C311F7B7AD0004AE37B /* ATQQuesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQQuesTableViewCell.m; path = UEHTML/Me/View/ATQQuesTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40236C321F7B7AD0004AE37B /* ATQQuesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQQuesTableViewCell.xib; path = UEHTML/Me/View/ATQQuesTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40236C351F7B7BFE004AE37B /* ATQOpinionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQOpinionTableViewCell.h; path = UEHTML/Me/View/ATQOpinionTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40236C361F7B7BFE004AE37B /* ATQOpinionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQOpinionTableViewCell.m; path = UEHTML/Me/View/ATQOpinionTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40236C371F7B7BFE004AE37B /* ATQOpinionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQOpinionTableViewCell.xib; path = UEHTML/Me/View/ATQOpinionTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40236C3D1F7B7E78004AE37B /* ATQPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQPlaceholderTextView.h; path = UEHTML/Me/View/ATQPlaceholderTextView.h; sourceTree = SOURCE_ROOT; };
+		40236C3E1F7B7E78004AE37B /* ATQPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQPlaceholderTextView.m; path = UEHTML/Me/View/ATQPlaceholderTextView.m; sourceTree = SOURCE_ROOT; };
+		40236C401F7B8094004AE37B /* ATQOpinionPhotoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQOpinionPhotoTableViewCell.h; path = UEHTML/Me/View/ATQOpinionPhotoTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40236C411F7B8094004AE37B /* ATQOpinionPhotoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQOpinionPhotoTableViewCell.m; path = UEHTML/Me/View/ATQOpinionPhotoTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40236C421F7B8094004AE37B /* ATQOpinionPhotoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQOpinionPhotoTableViewCell.xib; path = UEHTML/Me/View/ATQOpinionPhotoTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40236C451F7B83F6004AE37B /* ATQAddImgCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQAddImgCollectionViewCell.h; path = UEHTML/Me/View/ATQAddImgCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
+		40236C461F7B83F6004AE37B /* ATQAddImgCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQAddImgCollectionViewCell.m; path = UEHTML/Me/View/ATQAddImgCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
+		40236C471F7B83F6004AE37B /* ATQAddImgCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQAddImgCollectionViewCell.xib; path = UEHTML/Me/View/ATQAddImgCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
 		40236C4A1F7B8AB7004AE37B /* KZPhotoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KZPhotoManager.h; path = ../LhkhHttpManager/KZPhotoManager.h; sourceTree = "<group>"; };
 		40236C4B1F7B8AB7004AE37B /* KZPhotoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KZPhotoManager.m; path = ../LhkhHttpManager/KZPhotoManager.m; sourceTree = "<group>"; };
 		40236C4D1F7B8DD8004AE37B /* ATQAboutAQTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQAboutAQTViewController.h; sourceTree = "<group>"; };
@@ -1005,17 +1005,17 @@
 		40236C511F7B8ED6004AE37B /* ATQUseNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQUseNoteViewController.m; sourceTree = "<group>"; };
 		40236C531F7B9499004AE37B /* ATQUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQUserInfoViewController.h; sourceTree = "<group>"; };
 		40236C541F7B9499004AE37B /* ATQUserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQUserInfoViewController.m; sourceTree = "<group>"; };
-		40236C561F7B992D004AE37B /* ATQYJRZTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQYJRZTableViewCell.h; path = UEHTML/Me/Controller/ATQYJRZTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		40236C571F7B992D004AE37B /* ATQYJRZTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQYJRZTableViewCell.m; path = UEHTML/Me/Controller/ATQYJRZTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		40236C581F7B992D004AE37B /* ATQYJRZTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQYJRZTableViewCell.xib; path = UEHTML/Me/Controller/ATQYJRZTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40236C561F7B992D004AE37B /* ATQYJRZTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQYJRZTableViewCell.h; path = UEHTML/Me/View/ATQYJRZTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40236C571F7B992D004AE37B /* ATQYJRZTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQYJRZTableViewCell.m; path = UEHTML/Me/View/ATQYJRZTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40236C581F7B992D004AE37B /* ATQYJRZTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQYJRZTableViewCell.xib; path = UEHTML/Me/View/ATQYJRZTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		40236C5B1F7B9E7C004AE37B /* ATQBusinessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQBusinessViewController.h; sourceTree = "<group>"; };
 		40236C5C1F7B9E7C004AE37B /* ATQBusinessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQBusinessViewController.m; sourceTree = "<group>"; };
-		40236C5E1F7B9F7F004AE37B /* ATQBusinessTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQBusinessTableViewCell.h; path = UEHTML/Me/Controller/ATQBusinessTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		40236C5F1F7B9F7F004AE37B /* ATQBusinessTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQBusinessTableViewCell.m; path = UEHTML/Me/Controller/ATQBusinessTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		40236C601F7B9F7F004AE37B /* ATQBusinessTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQBusinessTableViewCell.xib; path = UEHTML/Me/Controller/ATQBusinessTableViewCell.xib; sourceTree = SOURCE_ROOT; };
-		40236C631F7BA0EC004AE37B /* ATQBillTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQBillTableViewCell.h; path = UEHTML/Me/Controller/ATQBillTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		40236C641F7BA0EC004AE37B /* ATQBillTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQBillTableViewCell.m; path = UEHTML/Me/Controller/ATQBillTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		40236C651F7BA0EC004AE37B /* ATQBillTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQBillTableViewCell.xib; path = UEHTML/Me/Controller/ATQBillTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40236C5E1F7B9F7F004AE37B /* ATQBusinessTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQBusinessTableViewCell.h; path = UEHTML/Me/View/ATQBusinessTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40236C5F1F7B9F7F004AE37B /* ATQBusinessTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQBusinessTableViewCell.m; path = UEHTML/Me/View/ATQBusinessTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40236C601F7B9F7F004AE37B /* ATQBusinessTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQBusinessTableViewCell.xib; path = UEHTML/Me/View/ATQBusinessTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40236C631F7BA0EC004AE37B /* ATQBillTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQBillTableViewCell.h; path = UEHTML/Me/View/ATQBillTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40236C641F7BA0EC004AE37B /* ATQBillTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQBillTableViewCell.m; path = UEHTML/Me/View/ATQBillTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40236C651F7BA0EC004AE37B /* ATQBillTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQBillTableViewCell.xib; path = UEHTML/Me/View/ATQBillTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		40236C681F7BA49F004AE37B /* ATQSpreadMoenyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQSpreadMoenyViewController.h; sourceTree = "<group>"; };
 		40236C691F7BA49F004AE37B /* ATQSpreadMoenyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQSpreadMoenyViewController.m; sourceTree = "<group>"; };
 		40236C6A1F7BA49F004AE37B /* ATQSpreadMoenyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATQSpreadMoenyViewController.xib; sourceTree = "<group>"; };
@@ -1029,9 +1029,9 @@
 		40260D1C1F71FEF400ED8CF1 /* ATQPerfectInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQPerfectInfoViewController.h; sourceTree = "<group>"; };
 		40260D1D1F71FEF400ED8CF1 /* ATQPerfectInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQPerfectInfoViewController.m; sourceTree = "<group>"; };
 		40260D1E1F71FEF400ED8CF1 /* ATQPerfectInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATQPerfectInfoViewController.xib; sourceTree = "<group>"; };
-		4027D80C1F79409900B45C8E /* ATQVisitorTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQVisitorTableViewCell.h; path = UEHTML/Me/Controller/ATQVisitorTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		4027D80D1F79409900B45C8E /* ATQVisitorTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQVisitorTableViewCell.m; path = UEHTML/Me/Controller/ATQVisitorTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		4027D80E1F79409900B45C8E /* ATQVisitorTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQVisitorTableViewCell.xib; path = UEHTML/Me/Controller/ATQVisitorTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		4027D80C1F79409900B45C8E /* ATQVisitorTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQVisitorTableViewCell.h; path = UEHTML/Me/View/ATQVisitorTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		4027D80D1F79409900B45C8E /* ATQVisitorTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQVisitorTableViewCell.m; path = UEHTML/Me/View/ATQVisitorTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		4027D80E1F79409900B45C8E /* ATQVisitorTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQVisitorTableViewCell.xib; path = UEHTML/Me/View/ATQVisitorTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		4034589B1F8F032D007993F3 /* ATQHaoyouViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQHaoyouViewController.h; sourceTree = "<group>"; };
 		4034589C1F8F032D007993F3 /* ATQHaoyouViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQHaoyouViewController.m; sourceTree = "<group>"; };
 		4034589E1F8F0340007993F3 /* ATQMyselfViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQMyselfViewController.h; sourceTree = "<group>"; };
@@ -1040,24 +1040,24 @@
 		403458D61F8F5BBB007993F3 /* NSString+Pinyin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Pinyin.m"; path = "../NSString+Pinyin.m"; sourceTree = "<group>"; };
 		403458DB1F8F6781007993F3 /* WeChatHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeChatHelper.h; path = ../WeChatHelper.h; sourceTree = "<group>"; };
 		403458DC1F8F6781007993F3 /* WeChatHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeChatHelper.m; path = ../WeChatHelper.m; sourceTree = "<group>"; };
-		4048AE011F8DA75900F6B928 /* ATQNewFriendsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQNewFriendsTableViewCell.h; path = UEHTML/Me/Controller/ATQNewFriendsTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		4048AE021F8DA75900F6B928 /* ATQNewFriendsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQNewFriendsTableViewCell.m; path = UEHTML/Me/Controller/ATQNewFriendsTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		4048AE031F8DA75900F6B928 /* ATQNewFriendsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQNewFriendsTableViewCell.xib; path = UEHTML/Me/Controller/ATQNewFriendsTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		4048AE011F8DA75900F6B928 /* ATQNewFriendsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQNewFriendsTableViewCell.h; path = UEHTML/Me/View/ATQNewFriendsTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		4048AE021F8DA75900F6B928 /* ATQNewFriendsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQNewFriendsTableViewCell.m; path = UEHTML/Me/View/ATQNewFriendsTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		4048AE031F8DA75900F6B928 /* ATQNewFriendsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQNewFriendsTableViewCell.xib; path = UEHTML/Me/View/ATQNewFriendsTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		4061BD991F8CB53B00F6EC30 /* ATQTypeListInviteDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQTypeListInviteDetailViewController.h; sourceTree = "<group>"; };
 		4061BD9A1F8CB53B00F6EC30 /* ATQTypeListInviteDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQTypeListInviteDetailViewController.m; sourceTree = "<group>"; };
 		4061BD9B1F8CB53B00F6EC30 /* ATQTypeListInviteDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATQTypeListInviteDetailViewController.xib; sourceTree = "<group>"; };
 		4061BD9E1F8CBED600F6EC30 /* ATQMyFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQMyFriendsViewController.h; sourceTree = "<group>"; };
 		4061BD9F1F8CBED600F6EC30 /* ATQMyFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQMyFriendsViewController.m; sourceTree = "<group>"; };
 		4061BDA01F8CBED600F6EC30 /* ATQMyFriendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATQMyFriendsViewController.xib; sourceTree = "<group>"; };
-		4061BDA31F8CC2FD00F6EC30 /* ATQMyFriendsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQMyFriendsTableViewCell.h; path = UEHTML/Me/Controller/ATQMyFriendsTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		4061BDA41F8CC2FD00F6EC30 /* ATQMyFriendsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQMyFriendsTableViewCell.m; path = UEHTML/Me/Controller/ATQMyFriendsTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		4061BDA51F8CC2FD00F6EC30 /* ATQMyFriendsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQMyFriendsTableViewCell.xib; path = UEHTML/Me/Controller/ATQMyFriendsTableViewCell.xib; sourceTree = SOURCE_ROOT; };
-		4067ECFD1F79F58F0051173D /* ATQWechatView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQWechatView.h; path = UEHTML/Me/Controller/ATQWechatView.h; sourceTree = SOURCE_ROOT; };
-		4067ECFE1F79F58F0051173D /* ATQWechatView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQWechatView.m; path = UEHTML/Me/Controller/ATQWechatView.m; sourceTree = SOURCE_ROOT; };
-		4067ED001F79F5AB0051173D /* ATQWechatView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQWechatView.xib; path = UEHTML/Me/Controller/ATQWechatView.xib; sourceTree = SOURCE_ROOT; };
+		4061BDA31F8CC2FD00F6EC30 /* ATQMyFriendsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQMyFriendsTableViewCell.h; path = UEHTML/Me/View/ATQMyFriendsTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		4061BDA41F8CC2FD00F6EC30 /* ATQMyFriendsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQMyFriendsTableViewCell.m; path = UEHTML/Me/View/ATQMyFriendsTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		4061BDA51F8CC2FD00F6EC30 /* ATQMyFriendsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQMyFriendsTableViewCell.xib; path = UEHTML/Me/View/ATQMyFriendsTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		4067ECFD1F79F58F0051173D /* ATQWechatView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQWechatView.h; path = UEHTML/Me/View/ATQWechatView.h; sourceTree = SOURCE_ROOT; };
+		4067ECFE1F79F58F0051173D /* ATQWechatView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQWechatView.m; path = UEHTML/Me/View/ATQWechatView.m; sourceTree = SOURCE_ROOT; };
+		4067ED001F79F5AB0051173D /* ATQWechatView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQWechatView.xib; path = UEHTML/Me/View/ATQWechatView.xib; sourceTree = SOURCE_ROOT; };
 		406932061F904D5E00161167 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
-		4069320B1F904E0300161167 /* ATQCommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQCommentModel.h; path = UEHTML/ATQ/Controller/ATQCommentModel.h; sourceTree = SOURCE_ROOT; };
-		4069320C1F904E0300161167 /* ATQCommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQCommentModel.m; path = UEHTML/ATQ/Controller/ATQCommentModel.m; sourceTree = SOURCE_ROOT; };
+		4069320B1F904E0300161167 /* ATQCommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQCommentModel.h; path = UEHTML/ATQ/Model/ATQCommentModel.h; sourceTree = SOURCE_ROOT; };
+		4069320C1F904E0300161167 /* ATQCommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQCommentModel.m; path = UEHTML/ATQ/Model/ATQCommentModel.m; sourceTree = SOURCE_ROOT; };
 		4069320F1F90531200161167 /* NSArray+HYBUnicodeReadable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+HYBUnicodeReadable.h"; sourceTree = "<group>"; };
 		406932101F90531200161167 /* NSArray+HYBUnicodeReadable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+HYBUnicodeReadable.m"; sourceTree = "<group>"; };
 		406932111F90531200161167 /* NSDictionary+HYBUnicodeReadable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+HYBUnicodeReadable.h"; sourceTree = "<group>"; };
@@ -1105,9 +1105,9 @@
 		40875D6C1F6F9B4500B58609 /* ATQRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATQRegisterViewController.xib; sourceTree = "<group>"; };
 		408AE8191F862AFE004A824C /* ATQRZCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQRZCenterViewController.h; sourceTree = "<group>"; };
 		408AE81A1F862AFE004A824C /* ATQRZCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQRZCenterViewController.m; sourceTree = "<group>"; };
-		408AE81C1F862BD0004A824C /* ATQRZCenterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQRZCenterTableViewCell.h; path = UEHTML/Me/Controller/ATQRZCenterTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		408AE81D1F862BD0004A824C /* ATQRZCenterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQRZCenterTableViewCell.m; path = UEHTML/Me/Controller/ATQRZCenterTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		408AE81E1F862BD0004A824C /* ATQRZCenterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQRZCenterTableViewCell.xib; path = UEHTML/Me/Controller/ATQRZCenterTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		408AE81C1F862BD0004A824C /* ATQRZCenterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQRZCenterTableViewCell.h; path = UEHTML/Me/View/ATQRZCenterTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		408AE81D1F862BD0004A824C /* ATQRZCenterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQRZCenterTableViewCell.m; path = UEHTML/Me/View/ATQRZCenterTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		408AE81E1F862BD0004A824C /* ATQRZCenterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQRZCenterTableViewCell.xib; path = UEHTML/Me/View/ATQRZCenterTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		409E6D811F5003DA00E3BE49 /* UEHTML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UEHTML.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		409E6D851F5003DA00E3BE49 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		409E6D871F5003DA00E3BE49 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1128,34 +1128,34 @@
 		40CB01F91F7FFCD0000E82A5 /* MBProgressHUD+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MBProgressHUD+Add.m"; path = "../MBProgressHUD+Add.m"; sourceTree = "<group>"; };
 		40D353AF1F7F26B90017DA5C /* ATQMyAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQMyAccountViewController.h; sourceTree = "<group>"; };
 		40D353B01F7F26B90017DA5C /* ATQMyAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQMyAccountViewController.m; sourceTree = "<group>"; };
-		40D353B21F7F2B900017DA5C /* ATQAccountFirTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQAccountFirTableViewCell.h; path = UEHTML/Me/Controller/ATQAccountFirTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		40D353B31F7F2B900017DA5C /* ATQAccountFirTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQAccountFirTableViewCell.m; path = UEHTML/Me/Controller/ATQAccountFirTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		40D353B41F7F2B900017DA5C /* ATQAccountFirTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQAccountFirTableViewCell.xib; path = UEHTML/Me/Controller/ATQAccountFirTableViewCell.xib; sourceTree = SOURCE_ROOT; };
-		40D353B71F7F32D10017DA5C /* ATQAccountSecTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQAccountSecTableViewCell.h; path = UEHTML/Me/Controller/ATQAccountSecTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		40D353B81F7F32D10017DA5C /* ATQAccountSecTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQAccountSecTableViewCell.m; path = UEHTML/Me/Controller/ATQAccountSecTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		40D353B91F7F32D10017DA5C /* ATQAccountSecTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQAccountSecTableViewCell.xib; path = UEHTML/Me/Controller/ATQAccountSecTableViewCell.xib; sourceTree = SOURCE_ROOT; };
-		40D353BC1F7F32F00017DA5C /* ATQAccountThiTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQAccountThiTableViewCell.h; path = UEHTML/Me/Controller/ATQAccountThiTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		40D353BD1F7F32F00017DA5C /* ATQAccountThiTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQAccountThiTableViewCell.m; path = UEHTML/Me/Controller/ATQAccountThiTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		40D353BE1F7F32F00017DA5C /* ATQAccountThiTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQAccountThiTableViewCell.xib; path = UEHTML/Me/Controller/ATQAccountThiTableViewCell.xib; sourceTree = SOURCE_ROOT; };
-		40D353C11F7F33180017DA5C /* ATQAccountFourTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQAccountFourTableViewCell.h; path = UEHTML/Me/Controller/ATQAccountFourTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		40D353C21F7F33180017DA5C /* ATQAccountFourTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQAccountFourTableViewCell.m; path = UEHTML/Me/Controller/ATQAccountFourTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		40D353C31F7F33180017DA5C /* ATQAccountFourTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQAccountFourTableViewCell.xib; path = UEHTML/Me/Controller/ATQAccountFourTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40D353B21F7F2B900017DA5C /* ATQAccountFirTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQAccountFirTableViewCell.h; path = UEHTML/Me/View/ATQAccountFirTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40D353B31F7F2B900017DA5C /* ATQAccountFirTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQAccountFirTableViewCell.m; path = UEHTML/Me/View/ATQAccountFirTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40D353B41F7F2B900017DA5C /* ATQAccountFirTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQAccountFirTableViewCell.xib; path = UEHTML/Me/View/ATQAccountFirTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40D353B71F7F32D10017DA5C /* ATQAccountSecTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQAccountSecTableViewCell.h; path = UEHTML/Me/View/ATQAccountSecTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40D353B81F7F32D10017DA5C /* ATQAccountSecTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQAccountSecTableViewCell.m; path = UEHTML/Me/View/ATQAccountSecTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40D353B91F7F32D10017DA5C /* ATQAccountSecTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQAccountSecTableViewCell.xib; path = UEHTML/Me/View/ATQAccountSecTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40D353BC1F7F32F00017DA5C /* ATQAccountThiTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQAccountThiTableViewCell.h; path = UEHTML/Me/View/ATQAccountThiTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40D353BD1F7F32F00017DA5C /* ATQAccountThiTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQAccountThiTableViewCell.m; path = UEHTML/Me/View/ATQAccountThiTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40D353BE1F7F32F00017DA5C /* ATQAccountThiTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQAccountThiTableViewCell.xib; path = UEHTML/Me/View/ATQAccountThiTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40D353C11F7F33180017DA5C /* ATQAccountFourTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQAccountFourTableViewCell.h; path = UEHTML/Me/View/ATQAccountFourTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40D353C21F7F33180017DA5C /* ATQAccountFourTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQAccountFourTableViewCell.m; path = UEHTML/Me/View/ATQAccountFourTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40D353C31F7F33180017DA5C /* ATQAccountFourTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQAccountFourTableViewCell.xib; path = UEHTML/Me/View/ATQAccountFourTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		40D353C61F7F44140017DA5C /* ATQChongzhiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQChongzhiViewController.h; sourceTree = "<group>"; };
 		40D353C71F7F44140017DA5C /* ATQChongzhiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQChongzhiViewController.m; sourceTree = "<group>"; };
 		40D353C81F7F44140017DA5C /* ATQChongzhiViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATQChongzhiViewController.xib; sourceTree = "<group>"; };
 		40D353CB1F7F46040017DA5C /* ATQCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQCheckViewController.h; sourceTree = "<group>"; };
 		40D353CC1F7F46040017DA5C /* ATQCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQCheckViewController.m; sourceTree = "<group>"; };
-		40DB4FD91F8BA7D400F8EDDB /* ATQJZTypeListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQJZTypeListTableViewCell.h; path = UEHTML/Vicinity/Controller/ATQJZTypeListTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		40DB4FDA1F8BA7D400F8EDDB /* ATQJZTypeListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQJZTypeListTableViewCell.m; path = UEHTML/Vicinity/Controller/ATQJZTypeListTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		40DB4FDB1F8BA7D400F8EDDB /* ATQJZTypeListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQJZTypeListTableViewCell.xib; path = UEHTML/Vicinity/Controller/ATQJZTypeListTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40DB4FD91F8BA7D400F8EDDB /* ATQJZTypeListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQJZTypeListTableViewCell.h; path = UEHTML/Vicinity/View/ATQJZTypeListTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40DB4FDA1F8BA7D400F8EDDB /* ATQJZTypeListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQJZTypeListTableViewCell.m; path = UEHTML/Vicinity/View/ATQJZTypeListTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40DB4FDB1F8BA7D400F8EDDB /* ATQJZTypeListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQJZTypeListTableViewCell.xib; path = UEHTML/Vicinity/View/ATQJZTypeListTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		40DF4F751F81F81700EE6753 /* ATQTypeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQTypeListViewController.h; sourceTree = "<group>"; };
 		40DF4F761F81F81700EE6753 /* ATQTypeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQTypeListViewController.m; sourceTree = "<group>"; };
 		40DF4F7A1F82102400EE6753 /* ATQTypeListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATQTypeListViewController.xib; sourceTree = "<group>"; };
 		40DF4F7C1F8211C500EE6753 /* UIButton+Lhkh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIButton+Lhkh.h"; path = "../UIButton+Lhkh.h"; sourceTree = "<group>"; };
 		40DF4F7D1F8211C500EE6753 /* UIButton+Lhkh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+Lhkh.m"; path = "../UIButton+Lhkh.m"; sourceTree = "<group>"; };
-		40DF4F7F1F82155500EE6753 /* ATQTypeListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQTypeListTableViewCell.h; path = UEHTML/Commons/ATQTypeListTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		40DF4F801F82155500EE6753 /* ATQTypeListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQTypeListTableViewCell.m; path = UEHTML/Commons/ATQTypeListTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		40DF4F811F82155500EE6753 /* ATQTypeListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQTypeListTableViewCell.xib; path = UEHTML/Commons/ATQTypeListTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40DF4F7F1F82155500EE6753 /* ATQTypeListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQTypeListTableViewCell.h; path = UEHTML/Vicinity/View/ATQTypeListTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40DF4F801F82155500EE6753 /* ATQTypeListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQTypeListTableViewCell.m; path = UEHTML/Vicinity/View/ATQTypeListTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40DF4F811F82155500EE6753 /* ATQTypeListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQTypeListTableViewCell.xib; path = UEHTML/Vicinity/View/ATQTypeListTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		40DF4F841F825D0600EE6753 /* ATQTypePeoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQTypePeoDetailViewController.h; sourceTree = "<group>"; };
 		40DF4F851F825D0600EE6753 /* ATQTypePeoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQTypePeoDetailViewController.m; sourceTree = "<group>"; };
 		40DF4F861F825D0600EE6753 /* ATQTypePeoDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATQTypePeoDetailViewController.xib; sourceTree = "<group>"; };
@@ -1167,23 +1167,23 @@
 		40DF89A81F8B1CA9008247F9 /* ATQCarRZSuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQCarRZSuccessViewController.h; sourceTree = "<group>"; };
 		40DF89A91F8B1CA9008247F9 /* ATQCarRZSuccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQCarRZSuccessViewController.m; sourceTree = "<group>"; };
 		40DF89AA1F8B1CA9008247F9 /* ATQCarRZSuccessViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATQCarRZSuccessViewController.xib; sourceTree = "<group>"; };
-		40E061C11F7695DF0072596D /* ATQHomeRecCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQHomeRecCollectionViewCell.h; path = UEHTML/Vicinity/ATQHomeRecCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
-		40E061C21F7695DF0072596D /* ATQHomeRecCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQHomeRecCollectionViewCell.m; path = UEHTML/Vicinity/ATQHomeRecCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
-		40E061C31F7695DF0072596D /* ATQHomeRecCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQHomeRecCollectionViewCell.xib; path = UEHTML/Vicinity/ATQHomeRecCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
-		40E061D01F76A5EB0072596D /* ATQMeHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQMeHeadView.h; path = UEHTML/Vicinity/ATQMeHeadView.h; sourceTree = SOURCE_ROOT; };
-		40E061D11F76A5EB0072596D /* ATQMeHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQMeHeadView.m; path = UEHTML/Vicinity/ATQMeHeadView.m; sourceTree = SOURCE_ROOT; };
-		40E061D31F76A6090072596D /* ATQMeHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQMeHeadView.xib; path = UEHTML/Vicinity/ATQMeHeadView.xib; sourceTree = SOURCE_ROOT; };
+		40E061C11F7695DF0072596D /* ATQHomeRecCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQHomeRecCollectionViewCell.h; path = UEHTML/Vicinity/View/ATQHomeRecCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
+		40E061C21F7695DF0072596D /* ATQHomeRecCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQHomeRecCollectionViewCell.m; path = UEHTML/Vicinity/View/ATQHomeRecCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
+		40E061C31F7695DF0072596D /* ATQHomeRecCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQHomeRecCollectionViewCell.xib; path = UEHTML/Vicinity/View/ATQHomeRecCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40E061D01F76A5EB0072596D /* ATQMeHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQMeHeadView.h; path = UEHTML/Me/View/ATQMeHeadView.h; sourceTree = SOURCE_ROOT; };
+		40E061D11F76A5EB0072596D /* ATQMeHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQMeHeadView.m; path = UEHTML/Me/View/ATQMeHeadView.m; sourceTree = SOURCE_ROOT; };
+		40E061D31F76A6090072596D /* ATQMeHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQMeHeadView.xib; path = UEHTML/Me/View/ATQMeHeadView.xib; sourceTree = SOURCE_ROOT; };
 		40E084741F80845700FD1AA3 /* ATQBuyVipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQBuyVipViewController.h; sourceTree = "<group>"; };
 		40E084751F80845700FD1AA3 /* ATQBuyVipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQBuyVipViewController.m; sourceTree = "<group>"; };
 		40E084761F80845700FD1AA3 /* ATQBuyVipViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATQBuyVipViewController.xib; sourceTree = "<group>"; };
 		40E084791F80A45F00FD1AA3 /* ATQBuyJinbiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQBuyJinbiViewController.h; sourceTree = "<group>"; };
 		40E0847A1F80A45F00FD1AA3 /* ATQBuyJinbiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQBuyJinbiViewController.m; sourceTree = "<group>"; };
-		40E0847C1F80A54700FD1AA3 /* ATQBuyjbFirTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQBuyjbFirTableViewCell.h; path = UEHTML/Me/Controller/ATQBuyjbFirTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		40E0847D1F80A54700FD1AA3 /* ATQBuyjbFirTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQBuyjbFirTableViewCell.m; path = UEHTML/Me/Controller/ATQBuyjbFirTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		40E0847E1F80A54700FD1AA3 /* ATQBuyjbFirTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQBuyjbFirTableViewCell.xib; path = UEHTML/Me/Controller/ATQBuyjbFirTableViewCell.xib; sourceTree = SOURCE_ROOT; };
-		40E084811F80A56100FD1AA3 /* ATQBuyjbSecTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQBuyjbSecTableViewCell.h; path = UEHTML/Me/Controller/ATQBuyjbSecTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		40E084821F80A56100FD1AA3 /* ATQBuyjbSecTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQBuyjbSecTableViewCell.m; path = UEHTML/Me/Controller/ATQBuyjbSecTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		40E084831F80A56100FD1AA3 /* ATQBuyjbSecTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQBuyjbSecTableViewCell.xib; path = UEHTML/Me/Controller/ATQBuyjbSecTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40E0847C1F80A54700FD1AA3 /* ATQBuyjbFirTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQBuyjbFirTableViewCell.h; path = UEHTML/Me/View/ATQBuyjbFirTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40E0847D1F80A54700FD1AA3 /* ATQBuyjbFirTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQBuyjbFirTableViewCell.m; path = UEHTML/Me/View/ATQBuyjbFirTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40E0847E1F80A54700FD1AA3 /* ATQBuyjbFirTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQBuyjbFirTableViewCell.xib; path = UEHTML/Me/View/ATQBuyjbFirTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40E084811F80A56100FD1AA3 /* ATQBuyjbSecTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQBuyjbSecTableViewCell.h; path = UEHTML/Me/View/ATQBuyjbSecTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40E084821F80A56100FD1AA3 /* ATQBuyjbSecTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQBuyjbSecTableViewCell.m; path = UEHTML/Me/View/ATQBuyjbSecTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40E084831F80A56100FD1AA3 /* ATQBuyjbSecTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQBuyjbSecTableViewCell.xib; path = UEHTML/Me/View/ATQBuyjbSecTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		40E0F2341F78A1FA0074B064 /* ATQYajinRZViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQYajinRZViewController.h; sourceTree = "<group>"; };
 		40E0F2351F78A1FA0074B064 /* ATQYajinRZViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQYajinRZViewController.m; sourceTree = "<group>"; };
 		40E0F2371F78A2470074B064 /* ATQSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQSetupViewController.h; sourceTree = "<group>"; };
@@ -1198,47 +1198,47 @@
 		40E0F2451F78B1D60074B064 /* ZLCustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLCustomButton.m; sourceTree = "<group>"; };
 		40E0F2471F78C8F60074B064 /* ATQMyWechatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQMyWechatViewController.h; sourceTree = "<group>"; };
 		40E0F2481F78C8F60074B064 /* ATQMyWechatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQMyWechatViewController.m; sourceTree = "<group>"; };
-		40E0F24A1F78D0400074B064 /* ATQSZFirTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQSZFirTableViewCell.h; path = UEHTML/Me/Controller/ATQSZFirTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		40E0F24B1F78D0400074B064 /* ATQSZFirTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQSZFirTableViewCell.m; path = UEHTML/Me/Controller/ATQSZFirTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		40E0F24C1F78D0400074B064 /* ATQSZFirTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQSZFirTableViewCell.xib; path = UEHTML/Me/Controller/ATQSZFirTableViewCell.xib; sourceTree = SOURCE_ROOT; };
-		40E0F24F1F78D0870074B064 /* ATQSZSecTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQSZSecTableViewCell.h; path = UEHTML/Me/Controller/ATQSZSecTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		40E0F2501F78D0870074B064 /* ATQSZSecTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQSZSecTableViewCell.m; path = UEHTML/Me/Controller/ATQSZSecTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		40E0F2511F78D0870074B064 /* ATQSZSecTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQSZSecTableViewCell.xib; path = UEHTML/Me/Controller/ATQSZSecTableViewCell.xib; sourceTree = SOURCE_ROOT; };
-		40E0F2541F78D0BB0074B064 /* ATQSZThiTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQSZThiTableViewCell.h; path = UEHTML/Me/Controller/ATQSZThiTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		40E0F2551F78D0BB0074B064 /* ATQSZThiTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQSZThiTableViewCell.m; path = UEHTML/Me/Controller/ATQSZThiTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		40E0F2561F78D0BB0074B064 /* ATQSZThiTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQSZThiTableViewCell.xib; path = UEHTML/Me/Controller/ATQSZThiTableViewCell.xib; sourceTree = SOURCE_ROOT; };
-		40E0F2591F78D0DD0074B064 /* ATQSZFourTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQSZFourTableViewCell.h; path = UEHTML/Me/Controller/ATQSZFourTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		40E0F25A1F78D0DD0074B064 /* ATQSZFourTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQSZFourTableViewCell.m; path = UEHTML/Me/Controller/ATQSZFourTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		40E0F25B1F78D0DD0074B064 /* ATQSZFourTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQSZFourTableViewCell.xib; path = UEHTML/Me/Controller/ATQSZFourTableViewCell.xib; sourceTree = SOURCE_ROOT; };
-		40E0F25E1F78DC480074B064 /* ATQSZLoginOutTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQSZLoginOutTableViewCell.h; path = UEHTML/Me/Controller/ATQSZLoginOutTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		40E0F25F1F78DC480074B064 /* ATQSZLoginOutTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQSZLoginOutTableViewCell.m; path = UEHTML/Me/Controller/ATQSZLoginOutTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		40E0F2601F78DC480074B064 /* ATQSZLoginOutTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQSZLoginOutTableViewCell.xib; path = UEHTML/Me/Controller/ATQSZLoginOutTableViewCell.xib; sourceTree = SOURCE_ROOT; };
-		40E0F2631F78E5A40074B064 /* ATQCollectTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQCollectTableViewCell.h; path = UEHTML/Me/Controller/ATQCollectTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		40E0F2641F78E5A40074B064 /* ATQCollectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQCollectTableViewCell.m; path = UEHTML/Me/Controller/ATQCollectTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		40E0F2651F78E5A40074B064 /* ATQCollectTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQCollectTableViewCell.xib; path = UEHTML/Me/Controller/ATQCollectTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40E0F24A1F78D0400074B064 /* ATQSZFirTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQSZFirTableViewCell.h; path = UEHTML/Me/View/ATQSZFirTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40E0F24B1F78D0400074B064 /* ATQSZFirTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQSZFirTableViewCell.m; path = UEHTML/Me/View/ATQSZFirTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40E0F24C1F78D0400074B064 /* ATQSZFirTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQSZFirTableViewCell.xib; path = UEHTML/Me/View/ATQSZFirTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40E0F24F1F78D0870074B064 /* ATQSZSecTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQSZSecTableViewCell.h; path = UEHTML/Me/View/ATQSZSecTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40E0F2501F78D0870074B064 /* ATQSZSecTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQSZSecTableViewCell.m; path = UEHTML/Me/View/ATQSZSecTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40E0F2511F78D0870074B064 /* ATQSZSecTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQSZSecTableViewCell.xib; path = UEHTML/Me/View/ATQSZSecTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40E0F2541F78D0BB0074B064 /* ATQSZThiTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQSZThiTableViewCell.h; path = UEHTML/Me/View/ATQSZThiTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40E0F2551F78D0BB0074B064 /* ATQSZThiTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQSZThiTableViewCell.m; path = UEHTML/Me/View/ATQSZThiTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40E0F2561F78D0BB0074B064 /* ATQSZThiTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQSZThiTableViewCell.xib; path = UEHTML/Me/View/ATQSZThiTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40E0F2591F78D0DD0074B064 /* ATQSZFourTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQSZFourTableViewCell.h; path = UEHTML/Me/View/ATQSZFourTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40E0F25A1F78D0DD0074B064 /* ATQSZFourTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQSZFourTableViewCell.m; path = UEHTML/Me/View/ATQSZFourTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40E0F25B1F78D0DD0074B064 /* ATQSZFourTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQSZFourTableViewCell.xib; path = UEHTML/Me/View/ATQSZFourTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40E0F25E1F78DC480074B064 /* ATQSZLoginOutTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQSZLoginOutTableViewCell.h; path = UEHTML/Me/View/ATQSZLoginOutTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40E0F25F1F78DC480074B064 /* ATQSZLoginOutTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQSZLoginOutTableViewCell.m; path = UEHTML/Me/View/ATQSZLoginOutTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40E0F2601F78DC480074B064 /* ATQSZLoginOutTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQSZLoginOutTableViewCell.xib; path = UEHTML/Me/View/ATQSZLoginOutTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40E0F2631F78E5A40074B064 /* ATQCollectTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQCollectTableViewCell.h; path = UEHTML/Me/View/ATQCollectTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40E0F2641F78E5A40074B064 /* ATQCollectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQCollectTableViewCell.m; path = UEHTML/Me/View/ATQCollectTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40E0F2651F78E5A40074B064 /* ATQCollectTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQCollectTableViewCell.xib; path = UEHTML/Me/View/ATQCollectTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		40E0F2681F78FB290074B064 /* ATQMyAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQMyAlbumViewController.h; sourceTree = "<group>"; };
 		40E0F2691F78FB290074B064 /* ATQMyAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQMyAlbumViewController.m; sourceTree = "<group>"; };
-		40E0F26B1F78FE2B0074B064 /* ATQPhotoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQPhotoTableViewCell.h; path = UEHTML/Me/Controller/ATQPhotoTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		40E0F26C1F78FE2B0074B064 /* ATQPhotoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQPhotoTableViewCell.m; path = UEHTML/Me/Controller/ATQPhotoTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		40E0F26D1F78FE2B0074B064 /* ATQPhotoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQPhotoTableViewCell.xib; path = UEHTML/Me/Controller/ATQPhotoTableViewCell.xib; sourceTree = SOURCE_ROOT; };
-		40E0F2701F78FE480074B064 /* ATQPhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQPhotoCollectionViewCell.h; path = UEHTML/Me/Controller/ATQPhotoCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
-		40E0F2711F78FE480074B064 /* ATQPhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQPhotoCollectionViewCell.m; path = UEHTML/Me/Controller/ATQPhotoCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
-		40E0F2721F78FE480074B064 /* ATQPhotoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQPhotoCollectionViewCell.xib; path = UEHTML/Me/Controller/ATQPhotoCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
-		40E93DD71F7768570018C3F5 /* ATQBFristTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQBFristTableViewCell.h; path = UEHTML/Vicinity/ATQBFristTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		40E93DD81F7768570018C3F5 /* ATQBFristTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQBFristTableViewCell.m; path = UEHTML/Vicinity/ATQBFristTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		40E93DD91F7768570018C3F5 /* ATQBFristTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQBFristTableViewCell.xib; path = UEHTML/Vicinity/ATQBFristTableViewCell.xib; sourceTree = SOURCE_ROOT; };
-		40E93DDC1F7775310018C3F5 /* ATQSecendTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQSecendTableViewCell.h; path = UEHTML/Vicinity/ATQSecendTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		40E93DDD1F7775310018C3F5 /* ATQSecendTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQSecendTableViewCell.m; path = UEHTML/Vicinity/ATQSecendTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		40E93DDE1F7775310018C3F5 /* ATQSecendTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQSecendTableViewCell.xib; path = UEHTML/Vicinity/ATQSecendTableViewCell.xib; sourceTree = SOURCE_ROOT; };
-		40E93DE11F7775480018C3F5 /* ATQThirdTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQThirdTableViewCell.h; path = UEHTML/Vicinity/ATQThirdTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		40E93DE21F7775480018C3F5 /* ATQThirdTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQThirdTableViewCell.m; path = UEHTML/Vicinity/ATQThirdTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		40E93DE31F7775490018C3F5 /* ATQThirdTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQThirdTableViewCell.xib; path = UEHTML/Vicinity/ATQThirdTableViewCell.xib; sourceTree = SOURCE_ROOT; };
-		40E93DE61F7775630018C3F5 /* ATQFourTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQFourTableViewCell.h; path = UEHTML/Vicinity/ATQFourTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		40E93DE71F7775630018C3F5 /* ATQFourTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQFourTableViewCell.m; path = UEHTML/Vicinity/ATQFourTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		40E93DE81F7775630018C3F5 /* ATQFourTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQFourTableViewCell.xib; path = UEHTML/Vicinity/ATQFourTableViewCell.xib; sourceTree = SOURCE_ROOT; };
-		40E93DEB1F77946E0018C3F5 /* ATQFristTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQFristTableViewCell.h; path = UEHTML/Vicinity/ATQFristTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		40E93DEC1F77946E0018C3F5 /* ATQFristTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQFristTableViewCell.m; path = UEHTML/Vicinity/ATQFristTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		40E93DED1F77946E0018C3F5 /* ATQFristTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQFristTableViewCell.xib; path = UEHTML/Vicinity/ATQFristTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40E0F26B1F78FE2B0074B064 /* ATQPhotoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQPhotoTableViewCell.h; path = UEHTML/Me/View/ATQPhotoTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40E0F26C1F78FE2B0074B064 /* ATQPhotoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQPhotoTableViewCell.m; path = UEHTML/Me/View/ATQPhotoTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40E0F26D1F78FE2B0074B064 /* ATQPhotoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQPhotoTableViewCell.xib; path = UEHTML/Me/View/ATQPhotoTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40E0F2701F78FE480074B064 /* ATQPhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQPhotoCollectionViewCell.h; path = UEHTML/Me/View/ATQPhotoCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
+		40E0F2711F78FE480074B064 /* ATQPhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQPhotoCollectionViewCell.m; path = UEHTML/Me/View/ATQPhotoCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
+		40E0F2721F78FE480074B064 /* ATQPhotoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQPhotoCollectionViewCell.xib; path = UEHTML/Me/View/ATQPhotoCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40E93DD71F7768570018C3F5 /* ATQBFristTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQBFristTableViewCell.h; path = UEHTML/Me/View/ATQBFristTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40E93DD81F7768570018C3F5 /* ATQBFristTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQBFristTableViewCell.m; path = UEHTML/Me/View/ATQBFristTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40E93DD91F7768570018C3F5 /* ATQBFristTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQBFristTableViewCell.xib; path = UEHTML/Me/View/ATQBFristTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40E93DDC1F7775310018C3F5 /* ATQSecendTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQSecendTableViewCell.h; path = UEHTML/Me/View/ATQSecendTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40E93DDD1F7775310018C3F5 /* ATQSecendTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQSecendTableViewCell.m; path = UEHTML/Me/View/ATQSecendTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40E93DDE1F7775310018C3F5 /* ATQSecendTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQSecendTableViewCell.xib; path = UEHTML/Me/View/ATQSecendTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40E93DE11F7775480018C3F5 /* ATQThirdTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQThirdTableViewCell.h; path = UEHTML/Me/View/ATQThirdTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40E93DE21F7775480018C3F5 /* ATQThirdTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQThirdTableViewCell.m; path = UEHTML/Me/View/ATQThirdTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40E93DE31F7775490018C3F5 /* ATQThirdTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQThirdTableViewCell.xib; path = UEHTML/Me/View/ATQThirdTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40E93DE61F7775630018C3F5 /* ATQFourTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQFourTableViewCell.h; path = UEHTML/Me/View/ATQFourTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40E93DE71F7775630018C3F5 /* ATQFourTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQFourTableViewCell.m; path = UEHTML/Me/View/ATQFourTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40E93DE81F7775630018C3F5 /* ATQFourTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQFourTableViewCell.xib; path = UEHTML/Me/View/ATQFourTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40E93DEB1F77946E0018C3F5 /* ATQFristTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQFristTableViewCell.h; path = UEHTML/Me/View/ATQFristTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40E93DEC1F77946E0018C3F5 /* ATQFristTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQFristTableViewCell.m; path = UEHTML/Me/View/ATQFristTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40E93DED1F77946E0018C3F5 /* ATQFristTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQFristTableViewCell.xib; path = UEHTML/Me/View/ATQFristTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		40EA93111F7BBAD3005A0E50 /* bitstream.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bitstream.c; sourceTree = "<group>"; };
 		40EA93121F7BBAD3005A0E50 /* bitstream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bitstream.h; sourceTree = "<group>"; };
 		40EA93131F7BBAD3005A0E50 /* mask.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mask.c; sourceTree = "<group>"; };
@@ -1289,24 +1289,24 @@
 		40EA93491F7BBC4D005A0E50 /* PNScatterChartData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNScatterChartData.m; sourceTree = "<group>"; };
 		40EA934A1F7BBC4D005A0E50 /* PNScatterChartDataItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNScatterChartDataItem.h; sourceTree = "<group>"; };
 		40EA934B1F7BBC4D005A0E50 /* PNScatterChartDataItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNScatterChartDataItem.m; sourceTree = "<group>"; };
-		40F085A11F74FA1400C5986C /* ATQRecPerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQRecPerTableViewCell.h; path = UEHTML/Vicinity/ATQRecPerTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		40F085A21F74FA1400C5986C /* ATQRecPerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQRecPerTableViewCell.m; path = UEHTML/Vicinity/ATQRecPerTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		40F085A31F74FA1400C5986C /* ATQRecPerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQRecPerTableViewCell.xib; path = UEHTML/Vicinity/ATQRecPerTableViewCell.xib; sourceTree = SOURCE_ROOT; };
-		40F085A61F74FE7200C5986C /* ATQRecPerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQRecPerCollectionViewCell.h; path = UEHTML/Vicinity/ATQRecPerCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
-		40F085A71F74FE7200C5986C /* ATQRecPerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQRecPerCollectionViewCell.m; path = UEHTML/Vicinity/ATQRecPerCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
-		40F085A81F74FE7200C5986C /* ATQRecPerCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQRecPerCollectionViewCell.xib; path = UEHTML/Vicinity/ATQRecPerCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
-		40F5E3401F919C2C0077A574 /* ATQPYQTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQPYQTableViewCell.h; path = UEHTML/ATQ/Controller/ATQPYQTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		40F5E3411F919C2C0077A574 /* ATQPYQTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQPYQTableViewCell.m; path = UEHTML/ATQ/Controller/ATQPYQTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		40F5E3431F919C630077A574 /* ATQPYQModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQPYQModel.h; path = UEHTML/ATQ/Controller/ATQPYQModel.h; sourceTree = SOURCE_ROOT; };
-		40F5E3441F919C630077A574 /* ATQPYQModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQPYQModel.m; path = UEHTML/ATQ/Controller/ATQPYQModel.m; sourceTree = SOURCE_ROOT; };
+		40F085A11F74FA1400C5986C /* ATQRecPerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQRecPerTableViewCell.h; path = UEHTML/Vicinity/View/ATQRecPerTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40F085A21F74FA1400C5986C /* ATQRecPerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQRecPerTableViewCell.m; path = UEHTML/Vicinity/View/ATQRecPerTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40F085A31F74FA1400C5986C /* ATQRecPerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQRecPerTableViewCell.xib; path = UEHTML/Vicinity/View/ATQRecPerTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40F085A61F74FE7200C5986C /* ATQRecPerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQRecPerCollectionViewCell.h; path = UEHTML/Vicinity/View/ATQRecPerCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
+		40F085A71F74FE7200C5986C /* ATQRecPerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQRecPerCollectionViewCell.m; path = UEHTML/Vicinity/View/ATQRecPerCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
+		40F085A81F74FE7200C5986C /* ATQRecPerCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQRecPerCollectionViewCell.xib; path = UEHTML/Vicinity/View/ATQRecPerCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40F5E3401F919C2C0077A574 /* ATQPYQTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQPYQTableViewCell.h; path = UEHTML/ATQ/View/ATQPYQTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40F5E3411F919C2C0077A574 /* ATQPYQTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQPYQTableViewCell.m; path = UEHTML/ATQ/View/ATQPYQTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40F5E3431F919C630077A574 /* ATQPYQModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQPYQModel.h; path = UEHTML/ATQ/Model/ATQPYQModel.h; sourceTree = SOURCE_ROOT; };
+		40F5E3441F919C630077A574 /* ATQPYQModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQPYQModel.m; path = UEHTML/ATQ/Model/ATQPYQModel.m; sourceTree = SOURCE_ROOT; };
 		40F5E3471F919DBD0077A574 /* UITableView+HYBCacheHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+HYBCacheHeight.h"; sourceTree = "<group>"; };
 		40F5E3481F919DBD0077A574 /* UITableView+HYBCacheHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+HYBCacheHeight.m"; sourceTree = "<group>"; };
 		40F5E3491F919DBD0077A574 /* UITableViewCell+HYBMasonryAutoCellHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+HYBMasonryAutoCellHeight.h"; sourceTree = "<group>"; };
 		40F5E34A1F919DBD0077A574 /* UITableViewCell+HYBMasonryAutoCellHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+HYBMasonryAutoCellHeight.m"; sourceTree = "<group>"; };
-		40F5E34F1F919F870077A574 /* ATQContainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQContainView.h; path = UEHTML/ATQ/Controller/ATQContainView.h; sourceTree = SOURCE_ROOT; };
-		40F5E3501F919F870077A574 /* ATQContainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQContainView.m; path = UEHTML/ATQ/Controller/ATQContainView.m; sourceTree = SOURCE_ROOT; };
-		40F5E3551F91A1B10077A574 /* ATQCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQCommentView.h; path = UEHTML/ATQ/Controller/ATQCommentView.h; sourceTree = SOURCE_ROOT; };
-		40F5E3561F91A1B10077A574 /* ATQCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQCommentView.m; path = UEHTML/ATQ/Controller/ATQCommentView.m; sourceTree = SOURCE_ROOT; };
+		40F5E34F1F919F870077A574 /* ATQContainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQContainView.h; path = UEHTML/ATQ/View/ATQContainView.h; sourceTree = SOURCE_ROOT; };
+		40F5E3501F919F870077A574 /* ATQContainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQContainView.m; path = UEHTML/ATQ/View/ATQContainView.m; sourceTree = SOURCE_ROOT; };
+		40F5E3551F91A1B10077A574 /* ATQCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQCommentView.h; path = UEHTML/ATQ/View/ATQCommentView.h; sourceTree = SOURCE_ROOT; };
+		40F5E3561F91A1B10077A574 /* ATQCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQCommentView.m; path = UEHTML/ATQ/View/ATQCommentView.m; sourceTree = SOURCE_ROOT; };
 		40F5E35A1F91A3820077A574 /* NSAttributedString+MLLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+MLLabel.h"; sourceTree = "<group>"; };
 		40F5E35B1F91A3820077A574 /* NSAttributedString+MLLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+MLLabel.m"; sourceTree = "<group>"; };
 		40F5E35C1F91A3820077A574 /* NSMutableAttributedString+MLLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+MLLabel.h"; sourceTree = "<group>"; };
@@ -1328,12 +1328,12 @@
 		40F5E36E1F91A3820077A574 /* MLLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLLabel.m; sourceTree = "<group>"; };
 		40F5E36F1F91A3820077A574 /* MLLinkLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLLinkLabel.h; sourceTree = "<group>"; };
 		40F5E3701F91A3820077A574 /* MLLinkLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLLinkLabel.m; sourceTree = "<group>"; };
-		40F5E37B1F91A4790077A574 /* ATQCommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQCommentTableViewCell.h; path = UEHTML/ATQ/Controller/ATQCommentTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		40F5E37C1F91A4790077A574 /* ATQCommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQCommentTableViewCell.m; path = UEHTML/ATQ/Controller/ATQCommentTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		40F5E3841F91A69D0077A574 /* ATQDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQDataSource.h; path = UEHTML/ATQ/Controller/ATQDataSource.h; sourceTree = SOURCE_ROOT; };
-		40F5E3851F91A69D0077A574 /* ATQDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQDataSource.m; path = UEHTML/ATQ/Controller/ATQDataSource.m; sourceTree = SOURCE_ROOT; };
-		40F5E3871F91A8430077A574 /* ATQOperationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQOperationView.h; path = UEHTML/ATQ/Controller/ATQOperationView.h; sourceTree = SOURCE_ROOT; };
-		40F5E3881F91A8430077A574 /* ATQOperationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQOperationView.m; path = UEHTML/ATQ/Controller/ATQOperationView.m; sourceTree = SOURCE_ROOT; };
+		40F5E37B1F91A4790077A574 /* ATQCommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQCommentTableViewCell.h; path = UEHTML/ATQ/View/ATQCommentTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40F5E37C1F91A4790077A574 /* ATQCommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQCommentTableViewCell.m; path = UEHTML/ATQ/View/ATQCommentTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40F5E3841F91A69D0077A574 /* ATQDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQDataSource.h; path = UEHTML/ATQ/Model/ATQDataSource.h; sourceTree = SOURCE_ROOT; };
+		40F5E3851F91A69D0077A574 /* ATQDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQDataSource.m; path = UEHTML/ATQ/Model/ATQDataSource.m; sourceTree = SOURCE_ROOT; };
+		40F5E3871F91A8430077A574 /* ATQOperationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQOperationView.h; path = UEHTML/ATQ/View/ATQOperationView.h; sourceTree = SOURCE_ROOT; };
+		40F5E3881F91A8430077A574 /* ATQOperationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQOperationView.m; path = UEHTML/ATQ/View/ATQOperationView.m; sourceTree = SOURCE_ROOT; };
 		40F5E38A1F91AB7A0077A574 /* NSString+ZJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ZJ.h"; sourceTree = "<group>"; };
 		40F5E38B1F91AB7A0077A574 /* NSString+ZJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ZJ.m"; sourceTree = "<group>"; };
 		40F5E38E1F91AF920077A574 /* MyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewCell.h; sourceTree = "<group>"; };
@@ -1648,42 +1648,42 @@
 		40F9EAD01F8B779E005B8EDE /* ATQJZTypeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQJZTypeListViewController.h; sourceTree = "<group>"; };
 		40F9EAD11F8B779E005B8EDE /* ATQJZTypeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQJZTypeListViewController.m; sourceTree = "<group>"; };
 		40F9EAD21F8B779E005B8EDE /* ATQJZTypeListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATQJZTypeListViewController.xib; sourceTree = "<group>"; };
-		40F9F2261F7A30BD00F5A42B /* ATQWechatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQWechatTableViewCell.h; path = UEHTML/Me/Controller/ATQWechatTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		40F9F2271F7A30BD00F5A42B /* ATQWechatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQWechatTableViewCell.m; path = UEHTML/Me/Controller/ATQWechatTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		40F9F2281F7A30BD00F5A42B /* ATQWechatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQWechatTableViewCell.xib; path = UEHTML/Me/Controller/ATQWechatTableViewCell.xib; sourceTree = SOURCE_ROOT; };
-		40F9F22B1F7A32C000F5A42B /* ATQAWechatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQAWechatTableViewCell.h; path = UEHTML/Me/Controller/ATQAWechatTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		40F9F22C1F7A32C000F5A42B /* ATQAWechatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQAWechatTableViewCell.m; path = UEHTML/Me/Controller/ATQAWechatTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		40F9F22D1F7A32C000F5A42B /* ATQAWechatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQAWechatTableViewCell.xib; path = UEHTML/Me/Controller/ATQAWechatTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40F9F2261F7A30BD00F5A42B /* ATQWechatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQWechatTableViewCell.h; path = UEHTML/Me/View/ATQWechatTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40F9F2271F7A30BD00F5A42B /* ATQWechatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQWechatTableViewCell.m; path = UEHTML/Me/View/ATQWechatTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40F9F2281F7A30BD00F5A42B /* ATQWechatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQWechatTableViewCell.xib; path = UEHTML/Me/View/ATQWechatTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40F9F22B1F7A32C000F5A42B /* ATQAWechatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQAWechatTableViewCell.h; path = UEHTML/Me/View/ATQAWechatTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40F9F22C1F7A32C000F5A42B /* ATQAWechatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQAWechatTableViewCell.m; path = UEHTML/Me/View/ATQAWechatTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40F9F22D1F7A32C000F5A42B /* ATQAWechatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQAWechatTableViewCell.xib; path = UEHTML/Me/View/ATQAWechatTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		40F9F2301F7A3E6E00F5A42B /* ATQSetupSecrityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQSetupSecrityViewController.h; sourceTree = "<group>"; };
 		40F9F2311F7A3E6E00F5A42B /* ATQSetupSecrityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQSetupSecrityViewController.m; sourceTree = "<group>"; };
 		40F9F2321F7A3E6E00F5A42B /* ATQSetupSecrityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATQSetupSecrityViewController.xib; sourceTree = "<group>"; };
-		40F9F2381F7A4BCD00F5A42B /* ATQSecretView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQSecretView.h; path = UEHTML/Commons/ATQSecretView.h; sourceTree = SOURCE_ROOT; };
-		40F9F2391F7A4BCD00F5A42B /* ATQSecretView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQSecretView.m; path = UEHTML/Commons/ATQSecretView.m; sourceTree = SOURCE_ROOT; };
-		40FA89ED1F749F7D0059A208 /* ATQHomeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQHomeCollectionViewCell.h; path = UEHTML/Vicinity/Controller/ATQHomeCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
-		40FA89EE1F749F7D0059A208 /* ATQHomeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQHomeCollectionViewCell.m; path = UEHTML/Vicinity/Controller/ATQHomeCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
-		40FA89EF1F749F7D0059A208 /* ATQHomeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQHomeCollectionViewCell.xib; path = UEHTML/Vicinity/Controller/ATQHomeCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
-		40FA89F21F74A41C0059A208 /* ATQTitleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQTitleTableViewCell.h; path = UEHTML/Vicinity/Controller/ATQTitleTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		40FA89F31F74A41C0059A208 /* ATQTitleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQTitleTableViewCell.m; path = UEHTML/Vicinity/Controller/ATQTitleTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		40FA89F41F74A41C0059A208 /* ATQTitleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQTitleTableViewCell.xib; path = UEHTML/Vicinity/Controller/ATQTitleTableViewCell.xib; sourceTree = SOURCE_ROOT; };
-		40FA89F71F74A61E0059A208 /* ATQItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQItemTableViewCell.h; path = UEHTML/Vicinity/Controller/ATQItemTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		40FA89F81F74A61E0059A208 /* ATQItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQItemTableViewCell.m; path = UEHTML/Vicinity/Controller/ATQItemTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		40FA89F91F74A61E0059A208 /* ATQItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQItemTableViewCell.xib; path = UEHTML/Vicinity/Controller/ATQItemTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40F9F2381F7A4BCD00F5A42B /* ATQSecretView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQSecretView.h; path = UEHTML/Me/View/ATQSecretView.h; sourceTree = SOURCE_ROOT; };
+		40F9F2391F7A4BCD00F5A42B /* ATQSecretView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQSecretView.m; path = UEHTML/Me/View/ATQSecretView.m; sourceTree = SOURCE_ROOT; };
+		40FA89ED1F749F7D0059A208 /* ATQHomeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQHomeCollectionViewCell.h; path = UEHTML/Vicinity/View/ATQHomeCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
+		40FA89EE1F749F7D0059A208 /* ATQHomeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQHomeCollectionViewCell.m; path = UEHTML/Vicinity/View/ATQHomeCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
+		40FA89EF1F749F7D0059A208 /* ATQHomeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQHomeCollectionViewCell.xib; path = UEHTML/Vicinity/View/ATQHomeCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40FA89F21F74A41C0059A208 /* ATQTitleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQTitleTableViewCell.h; path = UEHTML/Vicinity/View/ATQTitleTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40FA89F31F74A41C0059A208 /* ATQTitleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQTitleTableViewCell.m; path = UEHTML/Vicinity/View/ATQTitleTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40FA89F41F74A41C0059A208 /* ATQTitleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQTitleTableViewCell.xib; path = UEHTML/Vicinity/View/ATQTitleTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40FA89F71F74A61E0059A208 /* ATQItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQItemTableViewCell.h; path = UEHTML/Vicinity/View/ATQItemTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40FA89F81F74A61E0059A208 /* ATQItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQItemTableViewCell.m; path = UEHTML/Vicinity/View/ATQItemTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40FA89F91F74A61E0059A208 /* ATQItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQItemTableViewCell.xib; path = UEHTML/Vicinity/View/ATQItemTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		40FA89FD1F74B1A80059A208 /* LhkhHttpsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LhkhHttpsManager.h; sourceTree = "<group>"; };
 		40FA89FE1F74B1A80059A208 /* LhkhHttpsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LhkhHttpsManager.m; sourceTree = "<group>"; };
-		40FA8A001F74CD7E0059A208 /* ATQNewPCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQNewPCollectionViewCell.h; path = UEHTML/Vicinity/Controller/ATQNewPCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
-		40FA8A011F74CD7E0059A208 /* ATQNewPCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQNewPCollectionViewCell.m; path = UEHTML/Vicinity/Controller/ATQNewPCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
-		40FA8A021F74CD7E0059A208 /* ATQNewPCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQNewPCollectionViewCell.xib; path = UEHTML/Vicinity/Controller/ATQNewPCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
-		40FA8A051F74E6E70059A208 /* ATQTagCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQTagCollectionViewCell.h; path = UEHTML/Vicinity/Controller/ATQTagCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
-		40FA8A061F74E6E70059A208 /* ATQTagCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQTagCollectionViewCell.m; path = UEHTML/Vicinity/Controller/ATQTagCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
-		40FA8A071F74E6E70059A208 /* ATQTagCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQTagCollectionViewCell.xib; path = UEHTML/Vicinity/Controller/ATQTagCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
-		40FA8A0A1F74E81E0059A208 /* ATQTagTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQTagTableViewCell.h; path = UEHTML/Vicinity/Controller/ATQTagTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		40FA8A0B1F74E81E0059A208 /* ATQTagTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQTagTableViewCell.m; path = UEHTML/Vicinity/Controller/ATQTagTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		40FA8A0C1F74E81E0059A208 /* ATQTagTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQTagTableViewCell.xib; path = UEHTML/Vicinity/Controller/ATQTagTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40FA8A001F74CD7E0059A208 /* ATQNewPCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQNewPCollectionViewCell.h; path = UEHTML/Vicinity/View/ATQNewPCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
+		40FA8A011F74CD7E0059A208 /* ATQNewPCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQNewPCollectionViewCell.m; path = UEHTML/Vicinity/View/ATQNewPCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
+		40FA8A021F74CD7E0059A208 /* ATQNewPCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQNewPCollectionViewCell.xib; path = UEHTML/Vicinity/View/ATQNewPCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40FA8A051F74E6E70059A208 /* ATQTagCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQTagCollectionViewCell.h; path = UEHTML/Vicinity/View/ATQTagCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
+		40FA8A061F74E6E70059A208 /* ATQTagCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQTagCollectionViewCell.m; path = UEHTML/Vicinity/View/ATQTagCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
+		40FA8A071F74E6E70059A208 /* ATQTagCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQTagCollectionViewCell.xib; path = UEHTML/Vicinity/View/ATQTagCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40FA8A0A1F74E81E0059A208 /* ATQTagTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQTagTableViewCell.h; path = UEHTML/Vicinity/View/ATQTagTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		40FA8A0B1F74E81E0059A208 /* ATQTagTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQTagTableViewCell.m; path = UEHTML/Vicinity/View/ATQTagTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		40FA8A0C1F74E81E0059A208 /* ATQTagTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQTagTableViewCell.xib; path = UEHTML/Vicinity/View/ATQTagTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		40FA8A0F1F74EB6A0059A208 /* XHHPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XHHPageControl.h; path = ../XHHPageControl.h; sourceTree = "<group>"; };
 		40FA8A101F74EB6A0059A208 /* XHHPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XHHPageControl.m; path = ../XHHPageControl.m; sourceTree = "<group>"; };
-		40FB16A01F80BB07001FC339 /* ATQLiftCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQLiftCollectionViewCell.h; path = UEHTML/Me/Controller/ATQLiftCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
-		40FB16A11F80BB07001FC339 /* ATQLiftCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQLiftCollectionViewCell.m; path = UEHTML/Me/Controller/ATQLiftCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
-		40FB16A21F80BB07001FC339 /* ATQLiftCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQLiftCollectionViewCell.xib; path = UEHTML/Me/Controller/ATQLiftCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
+		40FB16A01F80BB07001FC339 /* ATQLiftCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQLiftCollectionViewCell.h; path = UEHTML/Me/View/ATQLiftCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
+		40FB16A11F80BB07001FC339 /* ATQLiftCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQLiftCollectionViewCell.m; path = UEHTML/Me/View/ATQLiftCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
+		40FB16A21F80BB07001FC339 /* ATQLiftCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQLiftCollectionViewCell.xib; path = UEHTML/Me/View/ATQLiftCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
 		40FB16A61F80BC03001FC339 /* JSBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBadgeView.h; sourceTree = "<group>"; };
 		40FB16A71F80BC03001FC339 /* JSBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBadgeView.m; sourceTree = "<group>"; };
 		40FEA5B91F735BC900D6EB89 /* ATQBindPhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQBindPhoneViewController.h; sourceTree = "<group>"; };
@@ -2130,50 +2130,6 @@
 			path = ZLCollectionViewGird;
 			sourceTree = "<group>";
 		};
-		186623271F76A47E00E42290 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				40F5E3431F919C630077A574 /* ATQPYQModel.h */,
-				40F5E3441F919C630077A574 /* ATQPYQModel.m */,
-				4069320B1F904E0300161167 /* ATQCommentModel.h */,
-				4069320C1F904E0300161167 /* ATQCommentModel.m */,
-				40F5E3841F91A69D0077A574 /* ATQDataSource.h */,
-				40F5E3851F91A69D0077A574 /* ATQDataSource.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		186623281F76A47E00E42290 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				40F5E3401F919C2C0077A574 /* ATQPYQTableViewCell.h */,
-				40F5E3411F919C2C0077A574 /* ATQPYQTableViewCell.m */,
-				40133E8D1F91F07A00C0B8CB /* ATQMeTableViewCell.h */,
-				40133E8E1F91F07A00C0B8CB /* ATQMeTableViewCell.m */,
-				401D68E21F94468500329D1B /* ATQMePublishTableViewCell.h */,
-				401D68E31F94468500329D1B /* ATQMePublishTableViewCell.m */,
-				401D68E41F94468500329D1B /* ATQMePublishTableViewCell.xib */,
-				40F5E37B1F91A4790077A574 /* ATQCommentTableViewCell.h */,
-				40F5E37C1F91A4790077A574 /* ATQCommentTableViewCell.m */,
-				40F5E34F1F919F870077A574 /* ATQContainView.h */,
-				40F5E3501F919F870077A574 /* ATQContainView.m */,
-				40F5E3551F91A1B10077A574 /* ATQCommentView.h */,
-				40F5E3561F91A1B10077A574 /* ATQCommentView.m */,
-				40F5E3871F91A8430077A574 /* ATQOperationView.h */,
-				40F5E3881F91A8430077A574 /* ATQOperationView.m */,
-				401D68EC1F947B0600329D1B /* ATQMePublishFTableViewCell.h */,
-				401D68ED1F947B0600329D1B /* ATQMePublishFTableViewCell.m */,
-				401D68EE1F947B0600329D1B /* ATQMePublishFTableViewCell.xib */,
-				401D68F11F947D5400329D1B /* ATQMePublishPTableViewCell.h */,
-				401D68F21F947D5400329D1B /* ATQMePublishPTableViewCell.m */,
-				401D68F31F947D5400329D1B /* ATQMePublishPTableViewCell.xib */,
-				401D68F61F94836A00329D1B /* ATQMepublishTTableViewCell.h */,
-				401D68F71F94836A00329D1B /* ATQMepublishTTableViewCell.m */,
-				401D68F81F94836A00329D1B /* ATQMepublishTTableViewCell.xib */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		186623291F76A49A00E42290 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -2328,6 +2284,226 @@
 				18D93D741F939B1D00D18418 /* FMResultSet.m */,
 			);
 			path = DB;
+			sourceTree = "<group>";
+		};
+		40076A031F95925A006839C7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				40FA8A0A1F74E81E0059A208 /* ATQTagTableViewCell.h */,
+				40FA8A0B1F74E81E0059A208 /* ATQTagTableViewCell.m */,
+				40FA8A0C1F74E81E0059A208 /* ATQTagTableViewCell.xib */,
+				40F085A11F74FA1400C5986C /* ATQRecPerTableViewCell.h */,
+				40F085A21F74FA1400C5986C /* ATQRecPerTableViewCell.m */,
+				40F085A31F74FA1400C5986C /* ATQRecPerTableViewCell.xib */,
+				40FA89F21F74A41C0059A208 /* ATQTitleTableViewCell.h */,
+				40FA89F31F74A41C0059A208 /* ATQTitleTableViewCell.m */,
+				40FA89F41F74A41C0059A208 /* ATQTitleTableViewCell.xib */,
+				40FA89F71F74A61E0059A208 /* ATQItemTableViewCell.h */,
+				40FA89F81F74A61E0059A208 /* ATQItemTableViewCell.m */,
+				40FA89F91F74A61E0059A208 /* ATQItemTableViewCell.xib */,
+				40FA8A051F74E6E70059A208 /* ATQTagCollectionViewCell.h */,
+				40FA8A061F74E6E70059A208 /* ATQTagCollectionViewCell.m */,
+				40FA8A071F74E6E70059A208 /* ATQTagCollectionViewCell.xib */,
+				40FA8A001F74CD7E0059A208 /* ATQNewPCollectionViewCell.h */,
+				40FA8A011F74CD7E0059A208 /* ATQNewPCollectionViewCell.m */,
+				40FA8A021F74CD7E0059A208 /* ATQNewPCollectionViewCell.xib */,
+				40FA89ED1F749F7D0059A208 /* ATQHomeCollectionViewCell.h */,
+				40FA89EE1F749F7D0059A208 /* ATQHomeCollectionViewCell.m */,
+				40FA89EF1F749F7D0059A208 /* ATQHomeCollectionViewCell.xib */,
+				40F085A61F74FE7200C5986C /* ATQRecPerCollectionViewCell.h */,
+				40F085A71F74FE7200C5986C /* ATQRecPerCollectionViewCell.m */,
+				40F085A81F74FE7200C5986C /* ATQRecPerCollectionViewCell.xib */,
+				40E061C11F7695DF0072596D /* ATQHomeRecCollectionViewCell.h */,
+				40E061C21F7695DF0072596D /* ATQHomeRecCollectionViewCell.m */,
+				40E061C31F7695DF0072596D /* ATQHomeRecCollectionViewCell.xib */,
+				40DF4F7F1F82155500EE6753 /* ATQTypeListTableViewCell.h */,
+				40DF4F801F82155500EE6753 /* ATQTypeListTableViewCell.m */,
+				40DF4F811F82155500EE6753 /* ATQTypeListTableViewCell.xib */,
+				40DB4FD91F8BA7D400F8EDDB /* ATQJZTypeListTableViewCell.h */,
+				40DB4FDA1F8BA7D400F8EDDB /* ATQJZTypeListTableViewCell.m */,
+				40DB4FDB1F8BA7D400F8EDDB /* ATQJZTypeListTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		40076A041F95925A006839C7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		40076A051F9592EC006839C7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				40E061D01F76A5EB0072596D /* ATQMeHeadView.h */,
+				40E061D11F76A5EB0072596D /* ATQMeHeadView.m */,
+				40E061D31F76A6090072596D /* ATQMeHeadView.xib */,
+				40E93DEB1F77946E0018C3F5 /* ATQFristTableViewCell.h */,
+				40E93DEC1F77946E0018C3F5 /* ATQFristTableViewCell.m */,
+				40E93DED1F77946E0018C3F5 /* ATQFristTableViewCell.xib */,
+				40E93DD71F7768570018C3F5 /* ATQBFristTableViewCell.h */,
+				40E93DD81F7768570018C3F5 /* ATQBFristTableViewCell.m */,
+				40E93DD91F7768570018C3F5 /* ATQBFristTableViewCell.xib */,
+				40E93DDC1F7775310018C3F5 /* ATQSecendTableViewCell.h */,
+				40E93DDD1F7775310018C3F5 /* ATQSecendTableViewCell.m */,
+				40E93DDE1F7775310018C3F5 /* ATQSecendTableViewCell.xib */,
+				40E93DE11F7775480018C3F5 /* ATQThirdTableViewCell.h */,
+				40E93DE21F7775480018C3F5 /* ATQThirdTableViewCell.m */,
+				40E93DE31F7775490018C3F5 /* ATQThirdTableViewCell.xib */,
+				40E93DE61F7775630018C3F5 /* ATQFourTableViewCell.h */,
+				40E93DE71F7775630018C3F5 /* ATQFourTableViewCell.m */,
+				40E93DE81F7775630018C3F5 /* ATQFourTableViewCell.xib */,
+				40E0F24A1F78D0400074B064 /* ATQSZFirTableViewCell.h */,
+				40E0F24B1F78D0400074B064 /* ATQSZFirTableViewCell.m */,
+				40E0F24C1F78D0400074B064 /* ATQSZFirTableViewCell.xib */,
+				40E0F24F1F78D0870074B064 /* ATQSZSecTableViewCell.h */,
+				40E0F2501F78D0870074B064 /* ATQSZSecTableViewCell.m */,
+				40E0F2511F78D0870074B064 /* ATQSZSecTableViewCell.xib */,
+				40E0F2541F78D0BB0074B064 /* ATQSZThiTableViewCell.h */,
+				40E0F2551F78D0BB0074B064 /* ATQSZThiTableViewCell.m */,
+				40E0F2561F78D0BB0074B064 /* ATQSZThiTableViewCell.xib */,
+				40E0F2591F78D0DD0074B064 /* ATQSZFourTableViewCell.h */,
+				40E0F25A1F78D0DD0074B064 /* ATQSZFourTableViewCell.m */,
+				40E0F25B1F78D0DD0074B064 /* ATQSZFourTableViewCell.xib */,
+				40E0F25E1F78DC480074B064 /* ATQSZLoginOutTableViewCell.h */,
+				40E0F25F1F78DC480074B064 /* ATQSZLoginOutTableViewCell.m */,
+				40E0F2601F78DC480074B064 /* ATQSZLoginOutTableViewCell.xib */,
+				40E0F2631F78E5A40074B064 /* ATQCollectTableViewCell.h */,
+				40E0F2641F78E5A40074B064 /* ATQCollectTableViewCell.m */,
+				40E0F2651F78E5A40074B064 /* ATQCollectTableViewCell.xib */,
+				40E0F26B1F78FE2B0074B064 /* ATQPhotoTableViewCell.h */,
+				40E0F26C1F78FE2B0074B064 /* ATQPhotoTableViewCell.m */,
+				40E0F26D1F78FE2B0074B064 /* ATQPhotoTableViewCell.xib */,
+				40E0F2701F78FE480074B064 /* ATQPhotoCollectionViewCell.h */,
+				40E0F2711F78FE480074B064 /* ATQPhotoCollectionViewCell.m */,
+				40E0F2721F78FE480074B064 /* ATQPhotoCollectionViewCell.xib */,
+				4027D80C1F79409900B45C8E /* ATQVisitorTableViewCell.h */,
+				4027D80D1F79409900B45C8E /* ATQVisitorTableViewCell.m */,
+				4027D80E1F79409900B45C8E /* ATQVisitorTableViewCell.xib */,
+				4067ECFD1F79F58F0051173D /* ATQWechatView.h */,
+				4067ECFE1F79F58F0051173D /* ATQWechatView.m */,
+				4067ED001F79F5AB0051173D /* ATQWechatView.xib */,
+				40F9F2261F7A30BD00F5A42B /* ATQWechatTableViewCell.h */,
+				40F9F2271F7A30BD00F5A42B /* ATQWechatTableViewCell.m */,
+				40F9F2281F7A30BD00F5A42B /* ATQWechatTableViewCell.xib */,
+				40F9F22B1F7A32C000F5A42B /* ATQAWechatTableViewCell.h */,
+				40F9F22C1F7A32C000F5A42B /* ATQAWechatTableViewCell.m */,
+				40F9F22D1F7A32C000F5A42B /* ATQAWechatTableViewCell.xib */,
+				40F9F2381F7A4BCD00F5A42B /* ATQSecretView.h */,
+				40F9F2391F7A4BCD00F5A42B /* ATQSecretView.m */,
+				40236C231F7B48A8004AE37B /* ATQBlacklistTableViewCell.h */,
+				40236C241F7B48A8004AE37B /* ATQBlacklistTableViewCell.m */,
+				40236C251F7B48A8004AE37B /* ATQBlacklistTableViewCell.xib */,
+				40236C301F7B7AD0004AE37B /* ATQQuesTableViewCell.h */,
+				40236C311F7B7AD0004AE37B /* ATQQuesTableViewCell.m */,
+				40236C321F7B7AD0004AE37B /* ATQQuesTableViewCell.xib */,
+				40236C351F7B7BFE004AE37B /* ATQOpinionTableViewCell.h */,
+				40236C361F7B7BFE004AE37B /* ATQOpinionTableViewCell.m */,
+				40236C371F7B7BFE004AE37B /* ATQOpinionTableViewCell.xib */,
+				40236C3D1F7B7E78004AE37B /* ATQPlaceholderTextView.h */,
+				40236C3E1F7B7E78004AE37B /* ATQPlaceholderTextView.m */,
+				40236C401F7B8094004AE37B /* ATQOpinionPhotoTableViewCell.h */,
+				40236C411F7B8094004AE37B /* ATQOpinionPhotoTableViewCell.m */,
+				40236C421F7B8094004AE37B /* ATQOpinionPhotoTableViewCell.xib */,
+				40236C451F7B83F6004AE37B /* ATQAddImgCollectionViewCell.h */,
+				40236C461F7B83F6004AE37B /* ATQAddImgCollectionViewCell.m */,
+				40236C471F7B83F6004AE37B /* ATQAddImgCollectionViewCell.xib */,
+				40236C561F7B992D004AE37B /* ATQYJRZTableViewCell.h */,
+				40236C571F7B992D004AE37B /* ATQYJRZTableViewCell.m */,
+				40236C581F7B992D004AE37B /* ATQYJRZTableViewCell.xib */,
+				40236C5E1F7B9F7F004AE37B /* ATQBusinessTableViewCell.h */,
+				40236C5F1F7B9F7F004AE37B /* ATQBusinessTableViewCell.m */,
+				40236C601F7B9F7F004AE37B /* ATQBusinessTableViewCell.xib */,
+				40236C631F7BA0EC004AE37B /* ATQBillTableViewCell.h */,
+				40236C641F7BA0EC004AE37B /* ATQBillTableViewCell.m */,
+				40236C651F7BA0EC004AE37B /* ATQBillTableViewCell.xib */,
+				40D353B21F7F2B900017DA5C /* ATQAccountFirTableViewCell.h */,
+				40D353B31F7F2B900017DA5C /* ATQAccountFirTableViewCell.m */,
+				40D353B41F7F2B900017DA5C /* ATQAccountFirTableViewCell.xib */,
+				40D353B71F7F32D10017DA5C /* ATQAccountSecTableViewCell.h */,
+				40D353B81F7F32D10017DA5C /* ATQAccountSecTableViewCell.m */,
+				40D353B91F7F32D10017DA5C /* ATQAccountSecTableViewCell.xib */,
+				40D353BC1F7F32F00017DA5C /* ATQAccountThiTableViewCell.h */,
+				40D353BD1F7F32F00017DA5C /* ATQAccountThiTableViewCell.m */,
+				40D353BE1F7F32F00017DA5C /* ATQAccountThiTableViewCell.xib */,
+				40D353C11F7F33180017DA5C /* ATQAccountFourTableViewCell.h */,
+				40D353C21F7F33180017DA5C /* ATQAccountFourTableViewCell.m */,
+				40D353C31F7F33180017DA5C /* ATQAccountFourTableViewCell.xib */,
+				40019C2F1F7F6BF600E11331 /* ATQCheckTableViewCell.h */,
+				40019C301F7F6BF600E11331 /* ATQCheckTableViewCell.m */,
+				40019C311F7F6BF600E11331 /* ATQCheckTableViewCell.xib */,
+				40E0847C1F80A54700FD1AA3 /* ATQBuyjbFirTableViewCell.h */,
+				40E0847D1F80A54700FD1AA3 /* ATQBuyjbFirTableViewCell.m */,
+				40E0847E1F80A54700FD1AA3 /* ATQBuyjbFirTableViewCell.xib */,
+				40E084811F80A56100FD1AA3 /* ATQBuyjbSecTableViewCell.h */,
+				40E084821F80A56100FD1AA3 /* ATQBuyjbSecTableViewCell.m */,
+				40E084831F80A56100FD1AA3 /* ATQBuyjbSecTableViewCell.xib */,
+				40FB16A01F80BB07001FC339 /* ATQLiftCollectionViewCell.h */,
+				40FB16A11F80BB07001FC339 /* ATQLiftCollectionViewCell.m */,
+				40FB16A21F80BB07001FC339 /* ATQLiftCollectionViewCell.xib */,
+				408AE81C1F862BD0004A824C /* ATQRZCenterTableViewCell.h */,
+				408AE81D1F862BD0004A824C /* ATQRZCenterTableViewCell.m */,
+				408AE81E1F862BD0004A824C /* ATQRZCenterTableViewCell.xib */,
+				4061BDA31F8CC2FD00F6EC30 /* ATQMyFriendsTableViewCell.h */,
+				4061BDA41F8CC2FD00F6EC30 /* ATQMyFriendsTableViewCell.m */,
+				4061BDA51F8CC2FD00F6EC30 /* ATQMyFriendsTableViewCell.xib */,
+				4048AE011F8DA75900F6B928 /* ATQNewFriendsTableViewCell.h */,
+				4048AE021F8DA75900F6B928 /* ATQNewFriendsTableViewCell.m */,
+				4048AE031F8DA75900F6B928 /* ATQNewFriendsTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		40076A061F9592EC006839C7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		40076A071F95934B006839C7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				40F5E3431F919C630077A574 /* ATQPYQModel.h */,
+				40F5E3441F919C630077A574 /* ATQPYQModel.m */,
+				4069320B1F904E0300161167 /* ATQCommentModel.h */,
+				4069320C1F904E0300161167 /* ATQCommentModel.m */,
+				40F5E3841F91A69D0077A574 /* ATQDataSource.h */,
+				40F5E3851F91A69D0077A574 /* ATQDataSource.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		40076A081F95934B006839C7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				40F5E3401F919C2C0077A574 /* ATQPYQTableViewCell.h */,
+				40F5E3411F919C2C0077A574 /* ATQPYQTableViewCell.m */,
+				40133E8D1F91F07A00C0B8CB /* ATQMeTableViewCell.h */,
+				40133E8E1F91F07A00C0B8CB /* ATQMeTableViewCell.m */,
+				401D68E21F94468500329D1B /* ATQMePublishTableViewCell.h */,
+				401D68E31F94468500329D1B /* ATQMePublishTableViewCell.m */,
+				401D68E41F94468500329D1B /* ATQMePublishTableViewCell.xib */,
+				40F5E37B1F91A4790077A574 /* ATQCommentTableViewCell.h */,
+				40F5E37C1F91A4790077A574 /* ATQCommentTableViewCell.m */,
+				40F5E34F1F919F870077A574 /* ATQContainView.h */,
+				40F5E3501F919F870077A574 /* ATQContainView.m */,
+				40F5E3551F91A1B10077A574 /* ATQCommentView.h */,
+				40F5E3561F91A1B10077A574 /* ATQCommentView.m */,
+				40F5E3871F91A8430077A574 /* ATQOperationView.h */,
+				40F5E3881F91A8430077A574 /* ATQOperationView.m */,
+				401D68EC1F947B0600329D1B /* ATQMePublishFTableViewCell.h */,
+				401D68ED1F947B0600329D1B /* ATQMePublishFTableViewCell.m */,
+				401D68EE1F947B0600329D1B /* ATQMePublishFTableViewCell.xib */,
+				401D68F11F947D5400329D1B /* ATQMePublishPTableViewCell.h */,
+				401D68F21F947D5400329D1B /* ATQMePublishPTableViewCell.m */,
+				401D68F31F947D5400329D1B /* ATQMePublishPTableViewCell.xib */,
+				401D68F61F94836A00329D1B /* ATQMepublishTTableViewCell.h */,
+				401D68F71F94836A00329D1B /* ATQMepublishTTableViewCell.m */,
+				401D68F81F94836A00329D1B /* ATQMepublishTTableViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		4018F5A41F500B4000D6C42D /* Other */ = {
@@ -2489,8 +2665,8 @@
 		409E6DB71F50081200E3BE49 /* ATQ */ = {
 			isa = PBXGroup;
 			children = (
-				186623271F76A47E00E42290 /* Model */,
-				186623281F76A47E00E42290 /* View */,
+				40076A071F95934B006839C7 /* Model */,
+				40076A081F95934B006839C7 /* View */,
 				409E6DB81F50081200E3BE49 /* Controller */,
 			);
 			path = ATQ;
@@ -2541,9 +2717,9 @@
 		409E6DBD1F50081200E3BE49 /* Me */ = {
 			isa = PBXGroup;
 			children = (
+				40076A061F9592EC006839C7 /* Model */,
+				40076A051F9592EC006839C7 /* View */,
 				409E6DBE1F50081200E3BE49 /* Controller */,
-				409E6DBF1F50081200E3BE49 /* Model */,
-				409E6DC01F50081200E3BE49 /* View */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -2633,135 +2809,6 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		409E6DBF1F50081200E3BE49 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		409E6DC01F50081200E3BE49 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				40E061D01F76A5EB0072596D /* ATQMeHeadView.h */,
-				40E061D11F76A5EB0072596D /* ATQMeHeadView.m */,
-				40E061D31F76A6090072596D /* ATQMeHeadView.xib */,
-				40E93DEB1F77946E0018C3F5 /* ATQFristTableViewCell.h */,
-				40E93DEC1F77946E0018C3F5 /* ATQFristTableViewCell.m */,
-				40E93DED1F77946E0018C3F5 /* ATQFristTableViewCell.xib */,
-				40E93DD71F7768570018C3F5 /* ATQBFristTableViewCell.h */,
-				40E93DD81F7768570018C3F5 /* ATQBFristTableViewCell.m */,
-				40E93DD91F7768570018C3F5 /* ATQBFristTableViewCell.xib */,
-				40E93DDC1F7775310018C3F5 /* ATQSecendTableViewCell.h */,
-				40E93DDD1F7775310018C3F5 /* ATQSecendTableViewCell.m */,
-				40E93DDE1F7775310018C3F5 /* ATQSecendTableViewCell.xib */,
-				40E93DE11F7775480018C3F5 /* ATQThirdTableViewCell.h */,
-				40E93DE21F7775480018C3F5 /* ATQThirdTableViewCell.m */,
-				40E93DE31F7775490018C3F5 /* ATQThirdTableViewCell.xib */,
-				40E93DE61F7775630018C3F5 /* ATQFourTableViewCell.h */,
-				40E93DE71F7775630018C3F5 /* ATQFourTableViewCell.m */,
-				40E93DE81F7775630018C3F5 /* ATQFourTableViewCell.xib */,
-				40E0F24A1F78D0400074B064 /* ATQSZFirTableViewCell.h */,
-				40E0F24B1F78D0400074B064 /* ATQSZFirTableViewCell.m */,
-				40E0F24C1F78D0400074B064 /* ATQSZFirTableViewCell.xib */,
-				40E0F24F1F78D0870074B064 /* ATQSZSecTableViewCell.h */,
-				40E0F2501F78D0870074B064 /* ATQSZSecTableViewCell.m */,
-				40E0F2511F78D0870074B064 /* ATQSZSecTableViewCell.xib */,
-				40E0F2541F78D0BB0074B064 /* ATQSZThiTableViewCell.h */,
-				40E0F2551F78D0BB0074B064 /* ATQSZThiTableViewCell.m */,
-				40E0F2561F78D0BB0074B064 /* ATQSZThiTableViewCell.xib */,
-				40E0F2591F78D0DD0074B064 /* ATQSZFourTableViewCell.h */,
-				40E0F25A1F78D0DD0074B064 /* ATQSZFourTableViewCell.m */,
-				40E0F25B1F78D0DD0074B064 /* ATQSZFourTableViewCell.xib */,
-				40E0F25E1F78DC480074B064 /* ATQSZLoginOutTableViewCell.h */,
-				40E0F25F1F78DC480074B064 /* ATQSZLoginOutTableViewCell.m */,
-				40E0F2601F78DC480074B064 /* ATQSZLoginOutTableViewCell.xib */,
-				40E0F2631F78E5A40074B064 /* ATQCollectTableViewCell.h */,
-				40E0F2641F78E5A40074B064 /* ATQCollectTableViewCell.m */,
-				40E0F2651F78E5A40074B064 /* ATQCollectTableViewCell.xib */,
-				40E0F26B1F78FE2B0074B064 /* ATQPhotoTableViewCell.h */,
-				40E0F26C1F78FE2B0074B064 /* ATQPhotoTableViewCell.m */,
-				40E0F26D1F78FE2B0074B064 /* ATQPhotoTableViewCell.xib */,
-				40E0F2701F78FE480074B064 /* ATQPhotoCollectionViewCell.h */,
-				40E0F2711F78FE480074B064 /* ATQPhotoCollectionViewCell.m */,
-				40E0F2721F78FE480074B064 /* ATQPhotoCollectionViewCell.xib */,
-				4027D80C1F79409900B45C8E /* ATQVisitorTableViewCell.h */,
-				4027D80D1F79409900B45C8E /* ATQVisitorTableViewCell.m */,
-				4027D80E1F79409900B45C8E /* ATQVisitorTableViewCell.xib */,
-				4067ECFD1F79F58F0051173D /* ATQWechatView.h */,
-				4067ECFE1F79F58F0051173D /* ATQWechatView.m */,
-				4067ED001F79F5AB0051173D /* ATQWechatView.xib */,
-				40F9F2261F7A30BD00F5A42B /* ATQWechatTableViewCell.h */,
-				40F9F2271F7A30BD00F5A42B /* ATQWechatTableViewCell.m */,
-				40F9F2281F7A30BD00F5A42B /* ATQWechatTableViewCell.xib */,
-				40F9F22B1F7A32C000F5A42B /* ATQAWechatTableViewCell.h */,
-				40F9F22C1F7A32C000F5A42B /* ATQAWechatTableViewCell.m */,
-				40F9F22D1F7A32C000F5A42B /* ATQAWechatTableViewCell.xib */,
-				40F9F2381F7A4BCD00F5A42B /* ATQSecretView.h */,
-				40F9F2391F7A4BCD00F5A42B /* ATQSecretView.m */,
-				40236C231F7B48A8004AE37B /* ATQBlacklistTableViewCell.h */,
-				40236C241F7B48A8004AE37B /* ATQBlacklistTableViewCell.m */,
-				40236C251F7B48A8004AE37B /* ATQBlacklistTableViewCell.xib */,
-				40236C301F7B7AD0004AE37B /* ATQQuesTableViewCell.h */,
-				40236C311F7B7AD0004AE37B /* ATQQuesTableViewCell.m */,
-				40236C321F7B7AD0004AE37B /* ATQQuesTableViewCell.xib */,
-				40236C351F7B7BFE004AE37B /* ATQOpinionTableViewCell.h */,
-				40236C361F7B7BFE004AE37B /* ATQOpinionTableViewCell.m */,
-				40236C371F7B7BFE004AE37B /* ATQOpinionTableViewCell.xib */,
-				40236C3D1F7B7E78004AE37B /* ATQPlaceholderTextView.h */,
-				40236C3E1F7B7E78004AE37B /* ATQPlaceholderTextView.m */,
-				40236C401F7B8094004AE37B /* ATQOpinionPhotoTableViewCell.h */,
-				40236C411F7B8094004AE37B /* ATQOpinionPhotoTableViewCell.m */,
-				40236C421F7B8094004AE37B /* ATQOpinionPhotoTableViewCell.xib */,
-				40236C451F7B83F6004AE37B /* ATQAddImgCollectionViewCell.h */,
-				40236C461F7B83F6004AE37B /* ATQAddImgCollectionViewCell.m */,
-				40236C471F7B83F6004AE37B /* ATQAddImgCollectionViewCell.xib */,
-				40236C561F7B992D004AE37B /* ATQYJRZTableViewCell.h */,
-				40236C571F7B992D004AE37B /* ATQYJRZTableViewCell.m */,
-				40236C581F7B992D004AE37B /* ATQYJRZTableViewCell.xib */,
-				40236C5E1F7B9F7F004AE37B /* ATQBusinessTableViewCell.h */,
-				40236C5F1F7B9F7F004AE37B /* ATQBusinessTableViewCell.m */,
-				40236C601F7B9F7F004AE37B /* ATQBusinessTableViewCell.xib */,
-				40236C631F7BA0EC004AE37B /* ATQBillTableViewCell.h */,
-				40236C641F7BA0EC004AE37B /* ATQBillTableViewCell.m */,
-				40236C651F7BA0EC004AE37B /* ATQBillTableViewCell.xib */,
-				40D353B21F7F2B900017DA5C /* ATQAccountFirTableViewCell.h */,
-				40D353B31F7F2B900017DA5C /* ATQAccountFirTableViewCell.m */,
-				40D353B41F7F2B900017DA5C /* ATQAccountFirTableViewCell.xib */,
-				40D353B71F7F32D10017DA5C /* ATQAccountSecTableViewCell.h */,
-				40D353B81F7F32D10017DA5C /* ATQAccountSecTableViewCell.m */,
-				40D353B91F7F32D10017DA5C /* ATQAccountSecTableViewCell.xib */,
-				40D353BC1F7F32F00017DA5C /* ATQAccountThiTableViewCell.h */,
-				40D353BD1F7F32F00017DA5C /* ATQAccountThiTableViewCell.m */,
-				40D353BE1F7F32F00017DA5C /* ATQAccountThiTableViewCell.xib */,
-				40D353C11F7F33180017DA5C /* ATQAccountFourTableViewCell.h */,
-				40D353C21F7F33180017DA5C /* ATQAccountFourTableViewCell.m */,
-				40D353C31F7F33180017DA5C /* ATQAccountFourTableViewCell.xib */,
-				40019C2F1F7F6BF600E11331 /* ATQCheckTableViewCell.h */,
-				40019C301F7F6BF600E11331 /* ATQCheckTableViewCell.m */,
-				40019C311F7F6BF600E11331 /* ATQCheckTableViewCell.xib */,
-				40E0847C1F80A54700FD1AA3 /* ATQBuyjbFirTableViewCell.h */,
-				40E0847D1F80A54700FD1AA3 /* ATQBuyjbFirTableViewCell.m */,
-				40E0847E1F80A54700FD1AA3 /* ATQBuyjbFirTableViewCell.xib */,
-				40E084811F80A56100FD1AA3 /* ATQBuyjbSecTableViewCell.h */,
-				40E084821F80A56100FD1AA3 /* ATQBuyjbSecTableViewCell.m */,
-				40E084831F80A56100FD1AA3 /* ATQBuyjbSecTableViewCell.xib */,
-				40FB16A01F80BB07001FC339 /* ATQLiftCollectionViewCell.h */,
-				40FB16A11F80BB07001FC339 /* ATQLiftCollectionViewCell.m */,
-				40FB16A21F80BB07001FC339 /* ATQLiftCollectionViewCell.xib */,
-				408AE81C1F862BD0004A824C /* ATQRZCenterTableViewCell.h */,
-				408AE81D1F862BD0004A824C /* ATQRZCenterTableViewCell.m */,
-				408AE81E1F862BD0004A824C /* ATQRZCenterTableViewCell.xib */,
-				4061BDA31F8CC2FD00F6EC30 /* ATQMyFriendsTableViewCell.h */,
-				4061BDA41F8CC2FD00F6EC30 /* ATQMyFriendsTableViewCell.m */,
-				4061BDA51F8CC2FD00F6EC30 /* ATQMyFriendsTableViewCell.xib */,
-				4048AE011F8DA75900F6B928 /* ATQNewFriendsTableViewCell.h */,
-				4048AE021F8DA75900F6B928 /* ATQNewFriendsTableViewCell.m */,
-				4048AE031F8DA75900F6B928 /* ATQNewFriendsTableViewCell.xib */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		409E6DC11F50081200E3BE49 /* Message */ = {
 			isa = PBXGroup;
 			children = (
@@ -2830,8 +2877,8 @@
 			isa = PBXGroup;
 			children = (
 				409E6DCB1F50081200E3BE49 /* Controller */,
-				409E6DCC1F50081200E3BE49 /* Model */,
-				409E6DCD1F50081200E3BE49 /* View */,
+				40076A041F95925A006839C7 /* Model */,
+				40076A031F95925A006839C7 /* View */,
 			);
 			path = Vicinity;
 			sourceTree = "<group>";
@@ -2861,53 +2908,6 @@
 				4061BD9B1F8CB53B00F6EC30 /* ATQTypeListInviteDetailViewController.xib */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		409E6DCC1F50081200E3BE49 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		409E6DCD1F50081200E3BE49 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				40FA8A0A1F74E81E0059A208 /* ATQTagTableViewCell.h */,
-				40FA8A0B1F74E81E0059A208 /* ATQTagTableViewCell.m */,
-				40FA8A0C1F74E81E0059A208 /* ATQTagTableViewCell.xib */,
-				40F085A11F74FA1400C5986C /* ATQRecPerTableViewCell.h */,
-				40F085A21F74FA1400C5986C /* ATQRecPerTableViewCell.m */,
-				40F085A31F74FA1400C5986C /* ATQRecPerTableViewCell.xib */,
-				40FA89F21F74A41C0059A208 /* ATQTitleTableViewCell.h */,
-				40FA89F31F74A41C0059A208 /* ATQTitleTableViewCell.m */,
-				40FA89F41F74A41C0059A208 /* ATQTitleTableViewCell.xib */,
-				40FA89F71F74A61E0059A208 /* ATQItemTableViewCell.h */,
-				40FA89F81F74A61E0059A208 /* ATQItemTableViewCell.m */,
-				40FA89F91F74A61E0059A208 /* ATQItemTableViewCell.xib */,
-				40FA8A051F74E6E70059A208 /* ATQTagCollectionViewCell.h */,
-				40FA8A061F74E6E70059A208 /* ATQTagCollectionViewCell.m */,
-				40FA8A071F74E6E70059A208 /* ATQTagCollectionViewCell.xib */,
-				40FA8A001F74CD7E0059A208 /* ATQNewPCollectionViewCell.h */,
-				40FA8A011F74CD7E0059A208 /* ATQNewPCollectionViewCell.m */,
-				40FA8A021F74CD7E0059A208 /* ATQNewPCollectionViewCell.xib */,
-				40FA89ED1F749F7D0059A208 /* ATQHomeCollectionViewCell.h */,
-				40FA89EE1F749F7D0059A208 /* ATQHomeCollectionViewCell.m */,
-				40FA89EF1F749F7D0059A208 /* ATQHomeCollectionViewCell.xib */,
-				40F085A61F74FE7200C5986C /* ATQRecPerCollectionViewCell.h */,
-				40F085A71F74FE7200C5986C /* ATQRecPerCollectionViewCell.m */,
-				40F085A81F74FE7200C5986C /* ATQRecPerCollectionViewCell.xib */,
-				40E061C11F7695DF0072596D /* ATQHomeRecCollectionViewCell.h */,
-				40E061C21F7695DF0072596D /* ATQHomeRecCollectionViewCell.m */,
-				40E061C31F7695DF0072596D /* ATQHomeRecCollectionViewCell.xib */,
-				40DF4F7F1F82155500EE6753 /* ATQTypeListTableViewCell.h */,
-				40DF4F801F82155500EE6753 /* ATQTypeListTableViewCell.m */,
-				40DF4F811F82155500EE6753 /* ATQTypeListTableViewCell.xib */,
-				40DB4FD91F8BA7D400F8EDDB /* ATQJZTypeListTableViewCell.h */,
-				40DB4FDA1F8BA7D400F8EDDB /* ATQJZTypeListTableViewCell.m */,
-				40DB4FDB1F8BA7D400F8EDDB /* ATQJZTypeListTableViewCell.xib */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		40E0F2401F78B0660074B064 /* YAScrollSegmentControl */ = {
@@ -4481,6 +4481,7 @@
 				TargetAttributes = {
 					409E6D801F5003DA00E3BE49 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 55N9XRKAM7;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -5447,7 +5448,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = UEHTML/UEHTML.entitlements;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 55N9XRKAM7;
 				ENABLE_BITCODE = NO;
 				ENABLE_ONLY_ACTIVE_RESOURCES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -5471,7 +5472,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = UEHTML/UEHTML.entitlements;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 55N9XRKAM7;
 				ENABLE_BITCODE = NO;
 				ENABLE_ONLY_ACTIVE_RESOURCES = YES;
 				FRAMEWORK_SEARCH_PATHS = (

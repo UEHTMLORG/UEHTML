@@ -12,15 +12,15 @@
 /**
  *  网络请求类型
  */
-typedef NS_ENUM(NSUInteger,HttpRequestType) {
+typedef NS_ENUM(NSUInteger,HttpRequestTypeZL) {
     /**
      *  get请求
      */
-    HttpRequestTypeGet = 0,
+    HttpRequestTypeGetzl = 0,
     /**
      *  post请求
      */
-    HttpRequestTypePost
+    HttpRequestTypePostzl
 };
 @interface ZLSecondAFNetworking : NSObject
 + (instancetype)sharedInstance;
@@ -61,7 +61,7 @@ typedef NS_ENUM(NSUInteger,HttpRequestType) {
  */
 - (void)requestWithURLString:(NSString *)URLString
                   parameters:(id)parameters
-                        type:(HttpRequestType)type
+                        type:(HttpRequestTypeZL)type
                      success:(void (^)(id responseObject))success
                      failure:(void (^)(NSError *error))failure;
 

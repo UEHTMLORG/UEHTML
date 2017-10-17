@@ -26,11 +26,30 @@
     self.title = @"兼职中心";
     self.currentButtonIndex = ZHAOREN_FUWU_INDEX;
     [self loadUIView];
+    [self loadDATA];
 }
 
 - (void)loadUIView{
     [self loadHeadView];
     [self loadYingListView];
+    
+}
+
+- (void)loadDATA{
+    NSString * zhuceString = @"api/user/register/step1";
+    NSString * zhuCeURls = [NSString stringWithFormat:@"%@%@",Common_URL_ZL,zhuceString];
+    
+    NSDictionary * parmaDic = @{
+                                @"username":@"18868672308",
+                                @"check_coke":@"111111",
+                                @"apptype":@"ios"
+                                };
+    
+    [[ZLSecondAFNetworking sharedInstance] postWithURLString:zhuCeURls parameters:parmaDic success:^(id responseObject) {
+        NSLog(@"注册请求成功：%@",responseObject);
+    } failure:^(NSError *error) {
+        NSLog(@"注册请求失败：%@",error);
+    }];
     
 }
 

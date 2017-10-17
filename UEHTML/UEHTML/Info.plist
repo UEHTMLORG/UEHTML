@@ -84,6 +84,12 @@
                 <key>NSExceptionAllowsInsecureHTTPLoads</key>
                 <true/>
             </dict>
+            <key>atapi.dotry.cn</key>
+            <dict>
+                <key>NSExceptionAllowsInsecureHTTPLoads</key>
+                <true/>
+            </dict>
+            
 		</dict>
 		<key>NSAllowsArbitraryLoadsInWebContent</key>
 		<true/>

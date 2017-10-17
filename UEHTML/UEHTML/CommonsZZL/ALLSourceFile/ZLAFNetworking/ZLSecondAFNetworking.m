@@ -112,14 +112,14 @@ static id _instance = nil;
 #pragma mark -- POST/GET网络请求 --
 - (void)requestWithURLString:(NSString *)URLString
                   parameters:(id)parameters
-                        type:(HttpRequestType)type
+                        type:(HttpRequestTypeZL)type
                      success:(void (^)(id))success
                      failure:(void (^)(NSError *))failure {
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     switch (type) {
-        case HttpRequestTypeGet:
+        case HttpRequestTypeGetzl:
         {
             [manager GET:URLString parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 if (success) {
@@ -132,7 +132,7 @@ static id _instance = nil;
             }];
         }
             break;
-        case HttpRequestTypePost:
+        case HttpRequestTypePostzl:
         {
             [manager POST:URLString parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 if (success) {

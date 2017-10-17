@@ -13,6 +13,7 @@
 #import <RongIMKit/RongIMKit.h>
 #import "RCDRCIMDataSource.h"
 #import <AFNetworking.h>
+#import "ZLSecondAFNetworking.h"
 
 ///////////////////////////////////
 #define Main_Purple_Color @"ff73ba"
@@ -23,6 +24,9 @@
 //融云app
 #define RONGYUN_APPKEY @"3argexb6301de"
 #define RONGYUN_APPSECRET @"HjcKRxdIQSIYg"
+
+
+#define Common_URL_ZL @"http://atapi.dotry.cn/"
 
 
 #define MAS_SHORTHAND_GLOBALS

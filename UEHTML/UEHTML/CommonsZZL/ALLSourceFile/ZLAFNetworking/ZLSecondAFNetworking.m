@@ -218,6 +218,10 @@ static id _instance = nil;
     NSDate *datenow = [NSDate date];//现在时间,你可以输出来看下是什么格式
     
     NSString *timeSp = [NSString stringWithFormat:@"%ld", (long)[datenow timeIntervalSince1970]];
+//    NSLog(@"时间未格式化之前得到的字符串：%@",timeSp);
+//    NSString * timeFp = [formatter stringFromDate:datenow];
+//    NSLog(@"时间格式化之后的得到的字符串：%@",timeFp);
+
     
     return timeSp;
     

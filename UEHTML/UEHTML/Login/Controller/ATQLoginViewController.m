@@ -76,6 +76,9 @@
 //登录
 - (IBAction)login:(id)sender {
     NSLog(@"login");
+
+   //[(AppDelegate *)[UIApplication sharedApplication].delegate openTabHomeCtrl];
+
     if (self.userText.text.length > 0 && self.userText.text != nil && ![self.userText isKindOfClass:[NSNull  class]] && ![self.userText.text isEqualToString:@""] && !(self.userText.text.length > 11)) {
         
         NSMutableDictionary *params = [NSMutableDictionary  dictionary];
@@ -99,9 +102,9 @@
                 NSString *user_id = responseObject[@"data"][@"user_id"];
                 NSString *user_token = responseObject[@"data"][@"user_token"];
                 NSString *message_token = responseObject[@"data"][@"message_token"];
-                [[NSUserDefaults standardUserDefaults] setObject:user_id forKey:@"user_id"];
-                [[NSUserDefaults standardUserDefaults] setObject:user_token forKey:@"user_token"];
-                [[NSUserDefaults standardUserDefaults] setObject:message_token forKey:@"message_token"];
+                [[NSUserDefaults standardUserDefaults] setObject:user_id forKey:USER_ID_AOTU_ZL];
+                [[NSUserDefaults standardUserDefaults] setObject:user_token forKey:USER_TOEKN_AOTU_ZL];
+                [[NSUserDefaults standardUserDefaults] setObject:message_token forKey:MESSAGE_TOKEN_AOTU_ZL];
                 [(AppDelegate *)[UIApplication sharedApplication].delegate openTabHomeCtrl];
             }else{
                 [MBProgressHUD show:responseObject[@"message"] view:self.view];
@@ -110,6 +113,8 @@
         } failure:^(NSError *error) {
             NSLog(@"登录失败：%@",error);
         }];
+
+
     }else{
         [MBProgressHUD show:@"请正确输入手机号码" view:self.view];
         return;

@@ -142,6 +142,7 @@
 		18D93D841F93A56800D18418 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D93D6F1F939B1D00D18418 /* FMDatabasePool.m */; };
 		18D93D851F93A56800D18418 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D93D741F939B1D00D18418 /* FMResultSet.m */; };
 		18D93D861F93A5EB00D18418 /* pinyin.c in Sources */ = {isa = PBXBuildFile; fileRef = 18D93D511F93939B00D18418 /* pinyin.c */; };
+		18D93D891F95BF2C00D18418 /* MD5FilesZl.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D93D881F95BF2C00D18418 /* MD5FilesZl.m */; };
 		40019C321F7F6BF600E11331 /* ATQCheckTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40019C301F7F6BF600E11331 /* ATQCheckTableViewCell.m */; };
 		40019C331F7F6BF600E11331 /* ATQCheckTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40019C311F7F6BF600E11331 /* ATQCheckTableViewCell.xib */; };
 		40133E8C1F91B9D600C0B8CB /* ATQTongchengViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40133E8B1F91B9D600C0B8CB /* ATQTongchengViewController.m */; };
@@ -811,7 +812,6 @@
 		185D77F01F8DF13900DA8849 /* MBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBManager.m; sourceTree = "<group>"; };
 		185D77F71F8DF13900DA8849 /* UIView+MJAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJAlertView.h"; sourceTree = "<group>"; };
 		185D77F81F8DF13900DA8849 /* UIView+MJAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJAlertView.m"; sourceTree = "<group>"; };
-		185D77F91F8DF13900DA8849 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		185D77FB1F8DF13900DA8849 /* NavTopCommonImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavTopCommonImage.h; sourceTree = "<group>"; };
 		185D77FC1F8DF13900DA8849 /* NavTopCommonImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavTopCommonImage.m; sourceTree = "<group>"; };
 		185D77FE1F8DF13900DA8849 /* PulldownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PulldownMenu.h; sourceTree = "<group>"; };
@@ -961,6 +961,8 @@
 		18D93D761F939B1D00D18418 /* SortForTime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SortForTime.m; sourceTree = "<group>"; };
 		18D93D7B1F939DB400D18418 /* RCDSettingUserDefaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCDSettingUserDefaults.h; sourceTree = "<group>"; };
 		18D93D7C1F939DB500D18418 /* RCDSettingUserDefaults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCDSettingUserDefaults.m; sourceTree = "<group>"; };
+		18D93D871F95BF2C00D18418 /* MD5FilesZl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MD5FilesZl.h; sourceTree = "<group>"; };
+		18D93D881F95BF2C00D18418 /* MD5FilesZl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MD5FilesZl.m; sourceTree = "<group>"; };
 		40019C2F1F7F6BF600E11331 /* ATQCheckTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQCheckTableViewCell.h; path = UEHTML/Me/View/ATQCheckTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		40019C301F7F6BF600E11331 /* ATQCheckTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQCheckTableViewCell.m; path = UEHTML/Me/View/ATQCheckTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		40019C311F7F6BF600E11331 /* ATQCheckTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQCheckTableViewCell.xib; path = UEHTML/Me/View/ATQCheckTableViewCell.xib; sourceTree = SOURCE_ROOT; };
@@ -1866,7 +1868,6 @@
 				185D77E81F8DF13900DA8849 /* iCarousel */,
 				185D77EE1F8DF13900DA8849 /* MBProgressHUDZL */,
 				185D77F11F8DF13900DA8849 /* MJAlertView */,
-				185D77F91F8DF13900DA8849 /* PrefixHeader.pch */,
 				185D77FA1F8DF13900DA8849 /* TopNavBackground */,
 				185D77FD1F8DF13900DA8849 /* xiaLacaiDan */,
 				185D78001F8DF13900DA8849 /* ZhengZe */,
@@ -2175,6 +2176,8 @@
 				185D78541F8DF13900DA8849 /* ZLAFNetworking.m */,
 				185D78551F8DF13900DA8849 /* ZLSecondAFNetworking.h */,
 				185D78561F8DF13900DA8849 /* ZLSecondAFNetworking.m */,
+				18D93D871F95BF2C00D18418 /* MD5FilesZl.h */,
+				18D93D881F95BF2C00D18418 /* MD5FilesZl.m */,
 			);
 			path = ZLAFNetworking;
 			sourceTree = "<group>";
@@ -4616,7 +4619,7 @@
 				TargetAttributes = {
 					409E6D801F5003DA00E3BE49 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 55N9XRKAM7;
+						DevelopmentTeam = 8W4WG2KX6B;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -5098,6 +5101,7 @@
 				"${PODS_ROOT}/RongCloudIM/RongCloudIM/AlipaySDK/AlipaySDK.bundle",
 				"${PODS_ROOT}/RongCloudIM/RongCloudIM/BQMM.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+				"${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/YSMChineseSort/YSMChineseSort.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -5429,6 +5433,7 @@
 				40236C381F7B7BFE004AE37B /* ATQOpinionTableViewCell.m in Sources */,
 				40F5E62F1F91AFAC0077A574 /* ChatToolBarItem.m in Sources */,
 				185D78781F8DF13A00DA8849 /* YYAnimationIndicator.m in Sources */,
+				18D93D891F95BF2C00D18418 /* MD5FilesZl.m in Sources */,
 				40F5E63C1F91AFAC0077A574 /* ChatToolBar.m in Sources */,
 				40F5E3741F91A3820077A574 /* MLExpressionManager.m in Sources */,
 				40E0F2611F78DC480074B064 /* ATQSZLoginOutTableViewCell.m in Sources */,
@@ -5588,7 +5593,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = UEHTML/UEHTML.entitlements;
-				DEVELOPMENT_TEAM = 55N9XRKAM7;
+				DEVELOPMENT_TEAM = 8W4WG2KX6B;
 				ENABLE_BITCODE = NO;
 				ENABLE_ONLY_ACTIVE_RESOURCES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -5602,7 +5607,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = LHKH.UEHTML;
+				PRODUCT_BUNDLE_IDENTIFIER = LHKH.UEHTM.COM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -5614,7 +5619,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = UEHTML/UEHTML.entitlements;
-				DEVELOPMENT_TEAM = 55N9XRKAM7;
+				DEVELOPMENT_TEAM = 8W4WG2KX6B;
 				ENABLE_BITCODE = NO;
 				ENABLE_ONLY_ACTIVE_RESOURCES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -5627,7 +5632,7 @@
 				INFOPLIST_FILE = UEHTML/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = LHKH.UEHTML;
+				PRODUCT_BUNDLE_IDENTIFIER = LHKH.UEHTM.COM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

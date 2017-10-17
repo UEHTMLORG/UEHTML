@@ -26,7 +26,15 @@
 #define RONGYUN_APPSECRET @"HjcKRxdIQSIYg"
 
 
-#define Common_URL_ZL @"http://atapi.dotry.cn/"
+#define Common_URL_ZL @"http://atapi.dotry.cn"
+
+
+
+//用户信息
+
+#define USER_ID_AOTU_ZL @"USER_ID"
+#define USER_TOEKN_AOTU_ZL @"USER_TOKEN"
+#define MESSAGE_TOKEN_AOTU_ZL @"message_token"
 
 
 #define MAS_SHORTHAND_GLOBALS

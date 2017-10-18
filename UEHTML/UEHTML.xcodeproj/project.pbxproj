@@ -218,7 +218,6 @@
 		40473D3A1F962BAB00E6EE35 /* IFlyFaceImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 40473D161F96239700E6EE35 /* IFlyFaceImage.m */; };
 		40473D3B1F962BAB00E6EE35 /* IFlyFaceResultKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 40473D201F96239700E6EE35 /* IFlyFaceResultKeys.m */; };
 		40473D3C1F962C5200E6EE35 /* CaptureManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 40473D101F96239700E6EE35 /* CaptureManager.m */; };
-		40473D3D1F962C7800E6EE35 /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40473D211F96242600E6EE35 /* iflyMSC.framework */; };
 		40473D3E1F962CDA00E6EE35 /* PermissionDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 40473D1D1F96239700E6EE35 /* PermissionDetector.m */; };
 		40473D3F1F962D9B00E6EE35 /* CalculatorTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 40473D141F96239700E6EE35 /* CalculatorTools.m */; };
 		4048AE041F8DA75900F6B928 /* ATQNewFriendsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048AE021F8DA75900F6B928 /* ATQNewFriendsTableViewCell.m */; };
@@ -260,6 +259,7 @@
 		408AE81B1F862AFE004A824C /* ATQRZCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 408AE81A1F862AFE004A824C /* ATQRZCenterViewController.m */; };
 		408AE81F1F862BD0004A824C /* ATQRZCenterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 408AE81D1F862BD0004A824C /* ATQRZCenterTableViewCell.m */; };
 		408AE8201F862BD0004A824C /* ATQRZCenterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 408AE81E1F862BD0004A824C /* ATQRZCenterTableViewCell.xib */; };
+		4097C3941F96FC6400D330AF /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4097C3931F96FC6400D330AF /* iflyMSC.framework */; };
 		409E6D861F5003DA00E3BE49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 409E6D851F5003DA00E3BE49 /* main.m */; };
 		409E6D891F5003DA00E3BE49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 409E6D881F5003DA00E3BE49 /* AppDelegate.m */; };
 		409E6D9F1F5003DA00E3BE49 /* UEHTMLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 409E6D9E1F5003DA00E3BE49 /* UEHTMLTests.m */; };
@@ -1081,7 +1081,6 @@
 		40473D1D1F96239700E6EE35 /* PermissionDetector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PermissionDetector.m; sourceTree = "<group>"; };
 		40473D1F1F96239700E6EE35 /* IFlyFaceResultKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IFlyFaceResultKeys.h; sourceTree = "<group>"; };
 		40473D201F96239700E6EE35 /* IFlyFaceResultKeys.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IFlyFaceResultKeys.m; sourceTree = "<group>"; };
-		40473D211F96242600E6EE35 /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iflyMSC.framework; sourceTree = "<group>"; };
 		40473D221F96244E00E6EE35 /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
 		40473D241F96245800E6EE35 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		40473D261F96245F00E6EE35 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -1161,6 +1160,8 @@
 		408AE81C1F862BD0004A824C /* ATQRZCenterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQRZCenterTableViewCell.h; path = UEHTML/Me/View/ATQRZCenterTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		408AE81D1F862BD0004A824C /* ATQRZCenterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQRZCenterTableViewCell.m; path = UEHTML/Me/View/ATQRZCenterTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		408AE81E1F862BD0004A824C /* ATQRZCenterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQRZCenterTableViewCell.xib; path = UEHTML/Me/View/ATQRZCenterTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		4097C3921F96FC4200D330AF /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iflyMSC.framework; path = ../../../../../iOS_face_1144_59e6bdcd/lib/iflyMSC.framework; sourceTree = "<group>"; };
+		4097C3931F96FC6400D330AF /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iflyMSC.framework; path = UEHTML/Commons/Libs/iflyMSC.framework; sourceTree = "<group>"; };
 		409E6D811F5003DA00E3BE49 /* UEHTML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UEHTML.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		409E6D851F5003DA00E3BE49 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		409E6D871F5003DA00E3BE49 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1761,7 +1762,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40473D3D1F962C7800E6EE35 /* iflyMSC.framework in Frameworks */,
+				4097C3941F96FC6400D330AF /* iflyMSC.framework in Frameworks */,
 				40473D371F96264500E6EE35 /* CoreGraphics.framework in Frameworks */,
 				40473D351F96263C00E6EE35 /* AddressBook.framework in Frameworks */,
 				40473D331F96263200E6EE35 /* CoreLocation.framework in Frameworks */,
@@ -2826,7 +2827,6 @@
 		409E6DBB1F50081200E3BE49 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
-				40473D211F96242600E6EE35 /* iflyMSC.framework */,
 				40F5E34E1F919EB60077A574 /* Libs */,
 				40F5E34D1F919EA90077A574 /* Categories */,
 				40FA89FC1F74B1A80059A208 /* LhkhHttpManager */,
@@ -3182,6 +3182,7 @@
 		40F5E34E1F919EB60077A574 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				4097C3921F96FC4200D330AF /* iflyMSC.framework */,
 				40F5E3971F91AFAB0077A574 /* KeyBoard */,
 				40F5E38D1F91AF920077A574 /* ZJImageViewBrowser */,
 				40F5E3581F91A3820077A574 /* MyLinkLabel */,
@@ -4540,6 +4541,7 @@
 		EC6D5F91F075CA55506A82FD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4097C3931F96FC6400D330AF /* iflyMSC.framework */,
 				40473D361F96264500E6EE35 /* CoreGraphics.framework */,
 				40473D341F96263C00E6EE35 /* AddressBook.framework */,
 				40473D321F96263200E6EE35 /* CoreLocation.framework */,
@@ -5610,6 +5612,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/UEHTML/Login/Controller/FaceRecognition/frameworks",
 					"$(PROJECT_DIR)/UEHTML/Commons",
+					"$(PROJECT_DIR)/UEHTML/Commons/Libs",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/UEHTML/Commons/PrefixHeader.pch";
@@ -5636,6 +5639,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/UEHTML/Login/Controller/FaceRecognition/frameworks",
 					"$(PROJECT_DIR)/UEHTML/Commons",
+					"$(PROJECT_DIR)/UEHTML/Commons/Libs",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/UEHTML/Commons/PrefixHeader.pch";

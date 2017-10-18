@@ -57,7 +57,8 @@
     int smallNumber;
     int firstNumber;
 }
-@property (nonatomic, retain ) UIView         *previewView;
+@property (weak, nonatomic) IBOutlet UIView     *previewView;
+//@property (nonatomic, retain ) UIView         *previewView;
 @property (nonatomic, strong ) UILabel        *textLabel;
 
 @property (nonatomic, retain ) AVCaptureVideoPreviewLayer *previewLayer;
@@ -73,8 +74,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //创建界面
-    [self makeUI];
+
     //创建摄像页面
     [self makeCamera];
     //创建数据
@@ -119,41 +119,6 @@
     smallNumber = 0;
     firstNumber = 0;
 }
-
-#pragma mark --- 创建UI界面
--(void)makeUI
-{
-    self.previewView = [[UIView alloc]initWithFrame:CGRectMake(0, 80, ScreenWidth, ScreenWidth*3/2)];
-    self.previewView.layer.cornerRadius = ScreenWidth/2;
-    self.previewView.layer.masksToBounds = YES;
-    [self.view addSubview:self.previewView];
-    
-    //提示框
-    imgView = [[UIImageView alloc]initWithFrame:CGRectMake((ScreenWidth-ScreenHeight/6+10)/2, CGRectGetMaxY(self.previewView.frame)+15, ScreenHeight/6-10, ScreenHeight/6-10)];
-    [self.view addSubview:imgView];
-    
-    self.textLabel = [[UILabel alloc]initWithFrame:CGRectMake((ScreenWidth-150)/2, CGRectGetMaxY(imgView.frame)+10, 150, 30)];
-    self.textLabel.textAlignment = NSTextAlignmentCenter;
-    self.textLabel.layer.cornerRadius = 15;
-    self.textLabel.text = @"请按提示做动作";
-    self.textLabel.textColor = [UIColor whiteColor];
-    [self.view addSubview:self.textLabel];
-    
-    //背景View
-    backView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight-64)];
-    backView.backgroundColor = [UIColor lightGrayColor];
-    
-    //图片放置View
-    imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 10, ScreenWidth, ScreenWidth*4/3)];
-    [backView addSubview:imageView];
-    
-    //button上传图片
-    [self buttonWithTitle:@"上传图片" frame:CGRectMake(ScreenWidth/2-150, CGRectGetMaxY(imageView.frame)+10, 100, 30) action:@selector(didClickUpPhoto) AddView:backView];
-    
-    //重拍图片按钮
-    [self buttonWithTitle:@"重拍" frame:CGRectMake(ScreenWidth/2+50, CGRectGetMaxY(imageView.frame)+10, 100, 30) action:@selector(didClickPhotoAgain) AddView:backView];
-}
-
 #pragma mark --- 创建相机
 -(void)makeCamera
 {
@@ -168,8 +133,7 @@
     }
 #endif
     
-    self.view.backgroundColor=[UIColor blackColor];
-    self.previewView.backgroundColor=[UIColor whiteColor];
+//    self.previewView.backgroundColor=[UIColor whiteColor];
     
     //设置初始化打开识别
     self.faceDetector=[IFlyFaceDetector sharedInstance];
@@ -183,15 +147,16 @@
     self.previewLayer=self.captureManager.previewLayer;
     
     self.captureManager.previewLayer.frame= self.previewView.frame;
-    self.captureManager.previewLayer.position=self.previewView.center;
-    self.captureManager.previewLayer.videoGravity=AVLayerVideoGravityResizeAspectFill;
+ self.captureManager.previewLayer.position=self.previewView.center;
+ self.captureManager.previewLayer.videoGravity=AVLayerVideoGravityResizeAspectFill;
     [self.previewView.layer addSublayer:self.captureManager.previewLayer];
     
     self.viewCanvas = [[CanvasView alloc] initWithFrame:self.captureManager.previewLayer.frame] ;
     [self.previewView addSubview:self.viewCanvas] ;
     self.viewCanvas.center=self.captureManager.previewLayer.position;
     self.viewCanvas.backgroundColor = [UIColor clearColor];
-    NSString *str = [NSString stringWithFormat:@"{{%f, %f}, {220, 240}}",(ScreenWidth-220)/2,(ScreenWidth-240)/2+15];
+//    NSString *str = [NSString stringWithFormat:@"{{%f, %f}, {100, 120}}",(ScreenWidth-220)/2,(ScreenWidth-240)/2+15];
+    NSString *str = [NSString stringWithFormat:@"{{30, 0}, {180, 180}}"];
     NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
     [dic setObject:str forKey:@"RECT_KEY"];
     [dic setObject:@"1" forKey:@"RECT_ORI"];

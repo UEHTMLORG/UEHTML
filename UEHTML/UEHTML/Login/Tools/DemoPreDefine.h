@@ -18,7 +18,7 @@
 #define NavigationBarHeight 44
 
 
-#define USER_APPID           @"56ce54a5"
+#define USER_APPID           @"59e6bdcd"
 
 
 #ifdef __IPHONE_6_0

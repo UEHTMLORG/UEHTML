@@ -14,6 +14,7 @@
 #import "RCDRCIMDataSource.h"
 #import <AFNetworking.h>
 #import "ZLSecondAFNetworking.h"
+#import "MBManager.h"
 
 ///////////////////////////////////
 #define Main_Purple_Color @"ff73ba"
@@ -31,7 +32,6 @@
 
 
 //用户信息
-
 #define USER_ID_AOTU_ZL @"USER_ID"
 #define USER_TOEKN_AOTU_ZL @"USER_TOKEN"
 #define MESSAGE_TOKEN_AOTU_ZL @"message_token"

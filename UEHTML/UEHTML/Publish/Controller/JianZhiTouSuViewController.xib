@@ -11,6 +11,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JianZhiTouSuViewController">
             <connections>
+                <outlet property="niChengLabel" destination="3gu-PD-jsn" id="S70-p4-NXg"/>
+                <outlet property="photoCollectionView" destination="HE2-ZR-PsH" id="z7x-vA-Gs8"/>
+                <outlet property="subMessageTextView" destination="OuA-HA-GbL" id="9XP-4f-apq"/>
+                <outlet property="touXiangImageViewe" destination="uMA-Ac-5vb" id="dUS-AX-2b8"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -99,6 +103,9 @@
                             <state key="normal" title="付款后不服务">
                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="juBaoBtnAction:" destination="-1" eventType="touchUpInside" id="wET-0U-hK9"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHH-uH-srL">
                             <rect key="frame" x="13" y="103" width="102" height="17"/>
@@ -107,6 +114,9 @@
                             <state key="normal" title="支付后无法取得联系">
                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="juBaoBtnAction:" destination="-1" eventType="touchUpInside" id="d2s-Tu-QTt"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y6s-Ie-G61">
                             <rect key="frame" x="200" y="103" width="29" height="17"/>
@@ -115,6 +125,9 @@
                             <state key="normal" title="骚扰">
                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="juBaoBtnAction:" destination="-1" eventType="touchUpInside" id="4Cy-Sc-of4"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHz-Xx-XTy">
                             <rect key="frame" x="237" y="103" width="29" height="17"/>
@@ -123,6 +136,9 @@
                             <state key="normal" title="色情">
                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="juBaoBtnAction:" destination="-1" eventType="touchUpInside" id="SBY-nZ-68H"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trn-RA-EI2">
                             <rect key="frame" x="13" y="128" width="51" height="17"/>
@@ -131,6 +147,9 @@
                             <state key="normal" title="微信欺诈">
                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="juBaoBtnAction:" destination="-1" eventType="touchUpInside" id="eN3-Ha-xqZ"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oza-Ah-ekh">
                             <rect key="frame" x="77" y="128" width="51" height="17"/>
@@ -139,6 +158,9 @@
                             <state key="normal" title="线下毁约">
                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="juBaoBtnAction:" destination="-1" eventType="touchUpInside" id="8Di-22-0Nv"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTY-IB-FuE">
                             <rect key="frame" x="148" y="128" width="51" height="17"/>
@@ -147,6 +169,9 @@
                             <state key="normal" title="人身攻击">
                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="juBaoBtnAction:" destination="-1" eventType="touchUpInside" id="oMX-jw-NJ6"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qS-mR-7va">
                             <rect key="frame" x="211" y="128" width="29" height="17"/>
@@ -155,6 +180,9 @@
                             <state key="normal" title="其他">
                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="juBaoBtnAction:" destination="-1" eventType="touchUpInside" id="7yA-am-RYd"/>
+                            </connections>
                         </button>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="请描述举报详细情况" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OuA-HA-GbL">
                             <rect key="frame" x="10" y="166" width="355" height="40"/>
@@ -209,6 +237,10 @@
                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </collectionViewFlowLayout>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="WeH-3m-aEj"/>
+                                <outlet property="delegate" destination="-1" id="iX0-wb-9mc"/>
+                            </connections>
                         </collectionView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -228,6 +260,9 @@
                     <state key="normal" title="提交">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="tijiaoButtonAction:" destination="-1" eventType="touchUpInside" id="QkX-Zi-LWf"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.95285779237747192" green="0.95299452543258667" blue="0.95282787084579468" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

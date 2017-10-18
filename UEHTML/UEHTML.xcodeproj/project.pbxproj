@@ -143,6 +143,8 @@
 		18D93D851F93A56800D18418 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D93D741F939B1D00D18418 /* FMResultSet.m */; };
 		18D93D861F93A5EB00D18418 /* pinyin.c in Sources */ = {isa = PBXBuildFile; fileRef = 18D93D511F93939B00D18418 /* pinyin.c */; };
 		18D93D891F95BF2C00D18418 /* MD5FilesZl.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D93D881F95BF2C00D18418 /* MD5FilesZl.m */; };
+		18D93D8D1F96E9CB00D18418 /* JianZhiTouSuCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D93D8B1F96E9CA00D18418 /* JianZhiTouSuCollectionViewCell.m */; };
+		18D93D8E1F96E9CB00D18418 /* JianZhiTouSuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D93D8C1F96E9CA00D18418 /* JianZhiTouSuCollectionViewCell.xib */; };
 		40019C321F7F6BF600E11331 /* ATQCheckTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40019C301F7F6BF600E11331 /* ATQCheckTableViewCell.m */; };
 		40019C331F7F6BF600E11331 /* ATQCheckTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40019C311F7F6BF600E11331 /* ATQCheckTableViewCell.xib */; };
 		40133E8C1F91B9D600C0B8CB /* ATQTongchengViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40133E8B1F91B9D600C0B8CB /* ATQTongchengViewController.m */; };
@@ -963,6 +965,9 @@
 		18D93D7C1F939DB500D18418 /* RCDSettingUserDefaults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCDSettingUserDefaults.m; sourceTree = "<group>"; };
 		18D93D871F95BF2C00D18418 /* MD5FilesZl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MD5FilesZl.h; sourceTree = "<group>"; };
 		18D93D881F95BF2C00D18418 /* MD5FilesZl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MD5FilesZl.m; sourceTree = "<group>"; };
+		18D93D8A1F96E9CA00D18418 /* JianZhiTouSuCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JianZhiTouSuCollectionViewCell.h; sourceTree = "<group>"; };
+		18D93D8B1F96E9CA00D18418 /* JianZhiTouSuCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JianZhiTouSuCollectionViewCell.m; sourceTree = "<group>"; };
+		18D93D8C1F96E9CA00D18418 /* JianZhiTouSuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JianZhiTouSuCollectionViewCell.xib; sourceTree = "<group>"; };
 		40019C2F1F7F6BF600E11331 /* ATQCheckTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQCheckTableViewCell.h; path = UEHTML/Me/View/ATQCheckTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		40019C301F7F6BF600E11331 /* ATQCheckTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQCheckTableViewCell.m; path = UEHTML/Me/View/ATQCheckTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		40019C311F7F6BF600E11331 /* ATQCheckTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQCheckTableViewCell.xib; path = UEHTML/Me/View/ATQCheckTableViewCell.xib; sourceTree = SOURCE_ROOT; };
@@ -2222,6 +2227,9 @@
 				183D18F41F90570D0093A982 /* JianZhiChuFaTableViewCell.h */,
 				183D18F51F90570D0093A982 /* JianZhiChuFaTableViewCell.m */,
 				183D18F61F90570D0093A982 /* JianZhiChuFaTableViewCell.xib */,
+				18D93D8A1F96E9CA00D18418 /* JianZhiTouSuCollectionViewCell.h */,
+				18D93D8B1F96E9CA00D18418 /* JianZhiTouSuCollectionViewCell.m */,
+				18D93D8C1F96E9CA00D18418 /* JianZhiTouSuCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -4773,6 +4781,7 @@
 				40F5E56C1F91AFAC0077A574 /* f_static_013@3x.png in Resources */,
 				40F5E6261F91AFAC0077A574 /* f_static_106@3x.png in Resources */,
 				40F5E5DE1F91AFAC0077A574 /* f_static_070@3x.png in Resources */,
+				18D93D8E1F96E9CB00D18418 /* JianZhiTouSuCollectionViewCell.xib in Resources */,
 				40DF4F881F825D0600EE6753 /* ATQTypePeoDetailViewController.xib in Resources */,
 				40F5E6251F91AFAC0077A574 /* f_static_106@2x.png in Resources */,
 				40F085A51F74FA1500C5986C /* ATQRecPerTableViewCell.xib in Resources */,
@@ -5324,6 +5333,7 @@
 				40236C221F7B4800004AE37B /* ATQBlackListViewController.m in Sources */,
 				40E0F24D1F78D0400074B064 /* ATQSZFirTableViewCell.m in Sources */,
 				40EA93541F7BBC4D005A0E50 /* PNLineChartDataItem.m in Sources */,
+				18D93D8D1F96E9CB00D18418 /* JianZhiTouSuCollectionViewCell.m in Sources */,
 				40F5E3731F91A3820077A574 /* NSString+MLLabel.m in Sources */,
 				4027D80F1F79409900B45C8E /* ATQVisitorTableViewCell.m in Sources */,
 				40EA93251F7BBAD3005A0E50 /* qrinput.c in Sources */,

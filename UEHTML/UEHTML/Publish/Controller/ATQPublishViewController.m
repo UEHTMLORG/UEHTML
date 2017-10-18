@@ -111,7 +111,7 @@
             break;
         case 3:
         {
-            JianZhiPingJiaViewController * VC = [[JianZhiPingJiaViewController alloc]init];
+            JianZhiTouSuViewController * VC = [[JianZhiTouSuViewController alloc]init];
             [self.navigationController pushViewController:VC animated:YES];
         }
             break;

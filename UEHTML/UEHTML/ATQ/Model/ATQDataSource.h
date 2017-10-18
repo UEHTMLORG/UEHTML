@@ -10,4 +10,5 @@
 
 @interface ATQDataSource : NSObject
 +(NSMutableArray *)loadDataArray;
++(NSMutableArray *)initFeedArray ;
 @end

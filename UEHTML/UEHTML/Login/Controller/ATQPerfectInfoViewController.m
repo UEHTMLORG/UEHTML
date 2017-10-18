@@ -10,7 +10,6 @@
 #import "AppDelegate.h"
 #import "UIColor+LhkhColor.h"
 #import "Masonry.h"
-#import "ATQRenzhengViewController.h"
 #import "LhkhHttpsManager.h"
 #import "MBProgressHUD+Add.h"
 #import <AssetsLibrary/ALAsset.h>

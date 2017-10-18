@@ -11,7 +11,6 @@
 #import "ATQPerfectInfoViewController.h"
 #import "UIColor+LhkhColor.h"
 #import "ATQBindPhoneViewController.h"
-#import "ATQRenzhengViewController.h"
 #import "LhkhHttpsManager.h"
 #import "MBProgressHUD+Add.h"
 @interface ATQRegisterViewController ()
@@ -106,9 +105,6 @@
                 [[NSUserDefaults standardUserDefaults] setObject:user_id forKey:USER_ID_AOTU_ZL];
                 [[NSUserDefaults standardUserDefaults] setObject:user_token forKey:USER_TOEKN_AOTU_ZL];
         
-                ATQRenzhengViewController  *vc = [[ATQRenzhengViewController alloc] init];
-
-                [self.navigationController pushViewController:vc animated:YES];
             }else{
                 [MBProgressHUD show:responseObject[@"message"] view:self.view];
             }

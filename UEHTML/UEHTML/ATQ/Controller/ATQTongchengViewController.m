@@ -12,13 +12,18 @@
 #import "ATQCommentModel.h"
 #import "ATQPYQModel.h"
 #import "UITableViewCell+HYBMasonryAutoCellHeight.h"
+#import "UITableView+FDTemplateLayoutCell.h"
 #import "ZJImageViewBrowser.h"
 #import "ChatKeyBoard.h"
 #import "MoreItem.h"
 #import "ChatToolBarItem.h"
 #import "FaceSourceManager.h"
 #import "Masonry.h"
-@interface ATQTongchengViewController ()<ATQPYQCellDelegate,ChatKeyBoardDelegate, ChatKeyBoardDataSource,UITableViewDataSource,UITableViewDelegate>
+
+
+#import "ATQDTTableViewCell.h"
+
+@interface ATQTongchengViewController ()<ATQPYQCellDelegate,ChatKeyBoardDelegate, ChatKeyBoardDataSource,UITableViewDataSource,UITableViewDelegate,ATQDTTableViewCellDelegate>
 @property (nonatomic, strong) ChatKeyBoard *chatKeyBoard;
 @property (nonatomic,strong)NSIndexPath *commentIndexpath;
 @property (nonatomic,strong)NSIndexPath *replyIndexpath;
@@ -33,6 +38,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.dataArray = [ATQDataSource loadDataArray].mutableCopy;
+    
+//    self.dataArray = [ATQDataSource initFeedArray].mutableCopy;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillChangeNotification:) name:UIKeyboardWillChangeFrameNotification object:nil];
     [self setTableView];
 }
@@ -59,6 +66,7 @@
         tableView.backgroundColor = RGBA(236, 236, 236, 1);
         tableView.delegate = self;
         tableView.dataSource = self;
+        [tableView registerClass:[ATQPYQTableViewCell class] forCellReuseIdentifier:@"ATQPYQTableViewCell"];
         tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [self.view addSubview:tableView];
         tableView;
@@ -83,21 +91,29 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    float h =  [ATQPYQTableViewCell hyb_heightForTableView:tableView config:^(UITableViewCell *sourceCell) {
-        ATQPYQTableViewCell *cell = (ATQPYQTableViewCell *)sourceCell;
+    
+    return [tableView fd_heightForCellWithIdentifier:@"ATQPYQTableViewCell" cacheByIndexPath:indexPath configuration:^(ATQPYQTableViewCell *cell) {
         [self  configureCell:cell atIndexPath:indexPath];
     }];
-    return h;
+//    float h =  [ATQPYQTableViewCell hyb_heightForTableView:tableView config:^(UITableViewCell *sourceCell) {
+//        ATQPYQTableViewCell *cell = (ATQPYQTableViewCell *)sourceCell;
+//        [self  configureCell:cell atIndexPath:indexPath];
+//    }];
+//    return h;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    ATQPYQTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ATQPYQTableViewCell"];
-    if(cell==nil)
-    {
-        cell = [[ATQPYQTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ATQPYQTableViewCell"];
-        cell.delegate = self;
-    }
-    cell.backgroundColor = [UIColor whiteColor];
+//    ATQPYQTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ATQPYQTableViewCell"];
+//    if(cell==nil)
+//    {
+//        cell = [[ATQPYQTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ATQPYQTableViewCell"];
+//        cell.delegate = self;
+//    }
+//    cell.backgroundColor = [UIColor whiteColor];
+//    [self configureCell:cell atIndexPath:indexPath];
+//    return cell;
+    ATQPYQTableViewCell * cell = [_tableView dequeueReusableCellWithIdentifier:@"ATQPYQTableViewCell"];
+//    [cell setModel:[self.dataArray  objectAtIndex:indexPath.row]];
     [self configureCell:cell atIndexPath:indexPath];
     return cell;
 }
@@ -111,7 +127,8 @@
 {
     ATQPYQModel *model = self.dataArray[indexPath.row];
     model.isExpand = !model.isExpand;
-    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+//    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    [self.tableView reloadData];
 }
 #pragma mark -- 点击图片
 -(void)didClickImageViewWithCurrentView:(UIImageView *)imageView imageViewArray:(NSMutableArray *)array imageSuperView:(UIView *)view indexPath:(NSIndexPath *)indexPath
@@ -139,12 +156,12 @@
     ATQPYQModel *model = self.dataArray[indexPath.row];
     self.chatKeyBoard.placeHolder = [NSString stringWithFormat:@"评论：%@",model.usernName];
     [self.chatKeyBoard keyboardUpforComment];
-    self.tabBarController.tabBar.hidden = YES;
+    
 }
 #pragma mark --点击评论内容的某一行
 -(void)didClickRowWithFirstIndexPath:(NSIndexPath *)firIndexPath secondIndex:(NSIndexPath *)secIndexPath
 {
-    self.tabBarController.tabBar.hidden = YES;
+    
     ATQPYQModel *model = self.dataArray[firIndexPath.row];
     ATQCommentModel *comModel = model.commentArray[secIndexPath.row];
     if([comModel.userName isEqualToString:@"Sky"])
@@ -196,7 +213,7 @@
     [self.tableView reloadRowsAtIndexPaths:@[self.commentIndexpath] withRowAnimation:UITableViewRowAnimationFade];
     self.replyIndexpath = nil;
     [self.chatKeyBoard keyboardDownForComment];
-    self.tabBarController.tabBar.hidden = NO;
+    
     
 }
 
@@ -241,7 +258,7 @@
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     [self.chatKeyBoard keyboardDownForComment];
-    self.tabBarController.tabBar.hidden = NO;
+    
 }
 -(void)dealloc
 {

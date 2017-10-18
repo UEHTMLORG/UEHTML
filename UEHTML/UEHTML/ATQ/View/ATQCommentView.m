@@ -27,27 +27,6 @@
 {
     if(self = [super init])
     {
-        //        self.commentDataArray = @[].mutableCopy;
-        //        self.likeArray = @[].mutableCopy;
-        //        UIImageView *bigImageView = [[UIImageView alloc] init];
-        //        UIImage *bgImage = [[[UIImage imageNamed:@"LikeCmtBg"] stretchableImageWithLeftCapWidth:40 topCapHeight:30] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-        //        bigImageView.image = bgImage;
-        //        [self addSubview:bigImageView];
-        //        self.bigImageView = bigImageView;
-        
-//        MLLinkLabel *praiseLabel = [MLLinkLabel new];
-//        praiseLabel.delegate = self;
-//        praiseLabel.linkTextAttributes = @{NSForegroundColorAttributeName : [UIColor colorWithRed:92/255.0 green:140/255.0 blue:255/255.0 alpha:1.0]};
-//        praiseLabel.activeLinkTextAttributes = @{NSForegroundColorAttributeName : [UIColor redColor]};
-//        praiseLabel.numberOfLines = 0;
-//        praiseLabel.font = [UIFont systemFontOfSize:14];
-//        [self addSubview:praiseLabel];
-//        self.praiseLabel = praiseLabel;
-//        
-//        UIView *lineView = [UIView new];
-//        lineView.backgroundColor = [UIColor colorWithRed:180/255.0 green:180/255.0 blue:180/255.0 alpha:1.0];
-//        [self addSubview:lineView];
-        
         UITableView *tableView = [[UITableView alloc] init];
         tableView.delegate = self;
         tableView.dataSource = self;
@@ -56,22 +35,7 @@
         
         [self addSubview:tableView];
         self.tableView = tableView;
-        //        [bigImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        //            make.top.left.bottom.right.mas_equalTo(self).insets(UIEdgeInsetsMake(0, 0, 0, 0));
-        //        }];
-        
-//        self.praiseLabel.preferredMaxLayoutWidth = ScreenWidth-80;;
-//        [praiseLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-//            
-//            make.top.mas_equalTo(self).offset(5);
-//            make.left.right.mas_equalTo(self).offset(0);
-//            make.bottom.mas_equalTo(lineView.mas_top).offset(-5);
-//        }];
-//        [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.top.mas_equalTo(self.praiseLabel.mas_bottom).offset(5);
-//            make.left.right.mas_equalTo(self).offset(0);
-//            make.height.mas_equalTo(1);
-//        }];
+
         [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self).offset(5);
             make.left.bottom.right.mas_equalTo(self).insets(UIEdgeInsetsMake(0, 0, 0, 0));

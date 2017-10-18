@@ -28,7 +28,7 @@
     manager.shouldResignOnTouchOutside = YES;
     manager.shouldToolbarUsesTextFieldTintColor = YES;
     manager.enableAutoToolbar = NO;
-   
+    //集成讯飞
     [self makeConfiguration];
     
     /**

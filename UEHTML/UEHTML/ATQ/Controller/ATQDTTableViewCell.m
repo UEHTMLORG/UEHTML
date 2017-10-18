@@ -1,20 +1,20 @@
 //
-//  ATQPYQTableViewCell.m
+//  ATQDTTableViewCell.m
 //  UEHTML
 //
-//  Created by LHKH on 2017/10/14.
+//  Created by LHKH on 2017/10/18.
 //  Copyright © 2017年 LHKH. All rights reserved.
 //
 
-#import "ATQPYQTableViewCell.h"
-#import "ATQPYQModel.h"
-#import "UITableViewCell+HYBMasonryAutoCellHeight.h"
-#import "ATQContainView.h"
+#import "ATQDTTableViewCell.h"
+#import "Masonry.h"
 #import "ATQCommentView.h"
-#import "ATQOperationView.h"
-#import "NSString+ZJ.h"
+#import "ATQContainView.h"
+#import "ATQPYQModel.h"
 #import "UIColor+LhkhColor.h"
-@interface ATQPYQTableViewCell ()<ATQContainViewDelegate,ATQCommentViewDelegate>
+#import "ATQPYQModel.h"
+#import "NSString+ZJ.h"
+@interface ATQDTTableViewCell()<ATQCommentViewDelegate,ATQContainViewDelegate>
 @property (nonatomic,strong)UIImageView *headImageView;
 @property (nonatomic,strong)UILabel *addrLabel;
 @property (nonatomic,strong)UILabel *nameLabel;
@@ -24,28 +24,22 @@
 @property (nonatomic,strong)UILabel *huaLabel;
 @property (nonatomic, strong) UIButton *moreBtn;
 @property (nonatomic,strong)ATQContainView *imageViewContainView;//图片所在的view
-@property (nonatomic,strong)UIButton *operationBtn;
-
-@property (nonatomic,strong)UILabel *praiseLabel;//赞 label
 @property (nonatomic,strong)ATQCommentView *commentView; // 评论view
 @property (nonatomic, strong) NSIndexPath *indexPath;
 @property (nonatomic,strong)ATQPYQModel *model;
 @end
-NSString *const ZJFriendLineCellOperationButtonClickedNotification = @"ZJFriendLineCellOperationButtonClickedNotification";
-@implementation ATQPYQTableViewCell
+@implementation ATQDTTableViewCell
 
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
-    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        [self setup];
-        self.selectionStyle = UITableViewCellSelectionStyleNone;
+-(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        [self BuildViews];
     }
     return self;
-}
--(void)setup
-{
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveOperationButtonClickedNotification:) name:ZJFriendLineCellOperationButtonClickedNotification object:nil];
+}
+
+-(void)BuildViews{
     
     UIImageView *headImageView = [[UIImageView alloc] init];
     [self.contentView addSubview:headImageView];
@@ -86,7 +80,7 @@ NSString *const ZJFriendLineCellOperationButtonClickedNotification = @"ZJFriendL
     containView.delegate = self;
     [self.contentView addSubview:containView];
     self.imageViewContainView = containView;
-   
+
     ATQCommentView *comView = [[ATQCommentView alloc] init];
     comView.delegate = self;
     comView.backgroundColor = [UIColor whiteColor];
@@ -132,8 +126,8 @@ NSString *const ZJFriendLineCellOperationButtonClickedNotification = @"ZJFriendL
     [self.contentView addSubview:spaceView];
     //头像图片
     [headImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.and.left.equalTo(self.contentView).with.offset(10);
-        make.size.mas_equalTo(CGSizeMake(50, 50));
+        make.top.left.equalTo(self.contentView).with.offset(10);
+            make.size.mas_equalTo(CGSizeMake(50, 50));
         make.right.equalTo(nameLabel.mas_left).with.offset(-10);
     }];
     //位置
@@ -164,17 +158,18 @@ NSString *const ZJFriendLineCellOperationButtonClickedNotification = @"ZJFriendL
     }];
     
     //图片
-    [containView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(moreBtn.mas_bottom).with.offset(10);
-        make.left.mas_equalTo(moreBtn);
-    }];
-    
+//    [containView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(moreBtn.mas_bottom).with.offset(10);
+//        make.left.mas_equalTo(moreBtn);
+//    }];
+    //下面查看人数   评论  花
     [bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.offset(20);
         make.left.right.mas_equalTo(self.msgLabel);
-        make.top.mas_equalTo(containView.mas_bottom).offset(10);
+        make.top.mas_equalTo(moreBtn.mas_bottom).offset(10);
+        make.bottom.mas_equalTo(self.contentView.mas_bottom).offset(-10);
     }];
-   
+    
     [chakanLab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.offset(20);
         make.left.top.bottom.mas_equalTo(bottomView);
@@ -217,48 +212,36 @@ NSString *const ZJFriendLineCellOperationButtonClickedNotification = @"ZJFriendL
         make.left.mas_equalTo(pinglunImg.mas_left);
         make.right.mas_equalTo(pinglunLab.mas_right);
     }];
-    
     //赞 评论的View
-    [comView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(bottomView.mas_bottom).offset(5);
-        make.left.right.mas_equalTo(self.msgLabel);
-        make.bottom.mas_equalTo(self.contentView.mas_bottom).offset(-10);
-        
-    }];
+//    [comView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.mas_equalTo(bottomView.mas_bottom).offset(5);
+//        make.left.right.mas_equalTo(self.msgLabel);
+//
+//    }];
     
     [spaceView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.offset(1);
-        make.left.right.bottom.mas_equalTo(self);
+        make.left.right.mas_equalTo(self);
+        make.bottom.mas_equalTo(self.contentView.mas_bottom);
     }];
-//    self.hyb_lastViewInCell = comView;
-//    self.hyb_bottomOffsetToCell = 10;
     
 }
 
 
--(void)huaClick{
-    NSLog(@"hua---");
-    if([self.delegate respondsToSelector:@selector(didClickenLikeBtnWithIndexPath:)])
-    {
-        [self.delegate didClickenLikeBtnWithIndexPath:self.indexPath];
-    }
-}
--(void)pinglunClick{
-    NSLog(@"pinglun---");
-    if([self.delegate respondsToSelector:@selector(didClickCommentBtnWithIndexPath:)])
-    {
-        [self.delegate didClickCommentBtnWithIndexPath:self.indexPath];
-    }
-}
-- (void)configCellWithModel:(ATQPYQModel *)model indexPath:(NSIndexPath *)indexPath
+-(void)moreAction:(UIButton *)sender
 {
-    self.model = model;
-    self.indexPath = indexPath;
-    self.headImageView.image = [UIImage imageNamed:model.headImgName];
+    NSLog(@"moreAction");
+    if([_delegate respondsToSelector:@selector(didClickedMoreBtn:indexPath:)])
+    {
+        [_delegate didClickedMoreBtn:sender indexPath:self.indexPath];
+    }
+}
+
+-(void)setModel:(ATQPYQModel *)model{
+    self.headImageView.image = [UIImage imageNamed:@"1"];
     self.nameLabel.text = model.usernName;
     self.msgLabel.text = model.msgContent;
-    // self.imageViewContainView.model = model;
-    float msgHeight = [NSString stringHeightWithString:model.msgContent size:15 maxWidth: ScreenWidth-80];
+    float msgHeight = [NSString stringHeightWithString:model.msgContent size:14 maxWidth: ScreenWidth-80];
     if(msgHeight <=60)
     {
         [self.moreBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
@@ -293,82 +276,17 @@ NSString *const ZJFriendLineCellOperationButtonClickedNotification = @"ZJFriendL
         }];
     }
     self.moreBtn.selected = model.isExpand;
-    CGSize imageContainViewSize;
-    if(model.picNameArray.count==0)
-    {
-        imageContainViewSize = CGSizeMake(0, 0);
-    }
-    else if (model.picNameArray.count>0 && model.picNameArray.count<4)
-    {
-        imageContainViewSize = CGSizeMake(ScreenWidth-80, (ScreenWidth-80-10)/3);
-    }
-    else
-    {
-        imageContainViewSize = CGSizeMake(ScreenWidth-80,(2*(ScreenWidth-90)/3)+5);
-    }
-    [self.imageViewContainView mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.moreBtn.mas_bottom).with.offset(10);
-        make.left.mas_equalTo(self.moreBtn);
-        make.size.mas_equalTo(imageContainViewSize);
-    }];
-    
-    
-    
-    self.imageViewContainView.model = model;
-    [self.commentView configCellWithModel:model indexPath:indexPath];
 }
 
--(void)moreAction:(UIButton *)sender
-{
-    if([_delegate respondsToSelector:@selector(didClickedMoreBtn:indexPath:)])
-    {
-        [_delegate didClickedMoreBtn:sender indexPath:self.indexPath];
-    }
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    // Initialization code
 }
--(void)didClickImageViewWithCurrentImageView:(UIImageView *)imageView imageViewArray:(NSMutableArray *)array imageSuperView:(UIView *)superView
-{
-    if([_delegate respondsToSelector:@selector(didClickImageViewWithCurrentView:imageViewArray:imageSuperView:indexPath:)])
-    {
-        [_delegate didClickImageViewWithCurrentView:imageView imageViewArray:array imageSuperView:superView indexPath:self.indexPath];
-    }
-}
--(void)didClickRowWithFirstIndexPath:(NSIndexPath *)firIndexPath secondIndex:(NSIndexPath *)secIndexPath
-{
-    
-    if([_delegate respondsToSelector:@selector(didClickRowWithFirstIndexPath:secondIndex:)])
-    {
-        [_delegate didClickRowWithFirstIndexPath:firIndexPath secondIndex:secIndexPath];
-    }
-}
--(void)operationBtnClick
-{
-    
-    if(self.model.isLiked)
-    {
-        self.operationView.praiseString = @"取消赞";
-    }
-    else
-    {
-        self.operationView.praiseString = @"赞";
-    }
-    self.operationView.isShowing = !self.operationView.isShowing;
-}
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
-    self.operationView.isShowing = NO;
-    [[NSNotificationCenter defaultCenter] postNotificationName:ZJFriendLineCellOperationButtonClickedNotification object:self.operationBtn];
-}
-- (void)receiveOperationButtonClickedNotification:(NSNotification *)notification
-{
-    UIButton *btn = notification.object;
-    if(btn != self.operationBtn && self.operationView.isShowing == YES)
-    {
-        self.operationView.isShowing = NO;
-    }
-}
--(void)dealloc
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+
+    // Configure the view for the selected state
 }
 
 @end

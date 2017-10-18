@@ -13,7 +13,7 @@
 #import "ATQBindPhoneViewController.h"
 #import "LhkhHttpsManager.h"
 #import "MBProgressHUD+Add.h"
-#import "ATQRenzhengViewController.h"
+#import "ATQFaceRZViewController.h"
 @interface ATQLoginViewController (){
     NSTimer *mTimer;
     int time;
@@ -58,7 +58,7 @@
 - (void)RegisterClick:(id)sender {
     NSLog(@"RegisterClick");
 //    ATQRegisterViewController *vc = [[ATQRegisterViewController  alloc]init];
-    ATQRenzhengViewController *vc = [[ATQRenzhengViewController  alloc]init];
+    ATQFaceRZViewController *vc = [[ATQFaceRZViewController  alloc]init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 ////隐藏密码

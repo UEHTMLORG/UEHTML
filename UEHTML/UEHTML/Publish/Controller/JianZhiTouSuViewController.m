@@ -124,6 +124,7 @@
     NSLog(@"点击了Cell");
     if (self.photosARR.count == 9) {
         [MBManager showBriefAlert:@"最多添加9张照片"];
+        return;
     }
         TZImagePickerController *pickerController = [[TZImagePickerController alloc]initWithMaxImagesCount:9 delegate:self];
         pickerController.naviBgColor = [UIColor colorWithhex16stringToColor:Main_Purple_Color];

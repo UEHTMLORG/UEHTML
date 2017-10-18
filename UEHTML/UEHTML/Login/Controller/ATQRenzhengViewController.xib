@@ -48,10 +48,16 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zhuce-zhayan" translatesAutoresizingMaskIntoConstraints="NO" id="qVg-Sa-cmW">
-                    <rect key="frame" x="0.0" y="116" width="375" height="375"/>
+                    <rect key="frame" x="0.0" y="116" width="375" height="437"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="qVg-Sa-cmW" secondAttribute="height" multiplier="1:1" id="UVm-YJ-r2e"/>
+                        <constraint firstAttribute="width" secondItem="qVg-Sa-cmW" secondAttribute="height" multiplier="375:437" id="qso-W3-Shh"/>
                     </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="UVm-YJ-r2e"/>
+                        </mask>
+                    </variation>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="0.12547165155410767" green="0.12550082802772522" blue="0.12546983361244202" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

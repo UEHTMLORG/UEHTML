@@ -146,9 +146,16 @@
     
     self.previewLayer=self.captureManager.previewLayer;
     
-    self.captureManager.previewLayer.frame= self.previewView.frame;
- self.captureManager.previewLayer.position=self.previewView.center;
- self.captureManager.previewLayer.videoGravity=AVLayerVideoGravityResizeAspectFill;
+     CALayer *layer = [CALayer layer];
+    layer.frame = CGRectMake(0, 0, self.previewView.frame.size.width, self.previewView.frame.size.height);//self.previewView.frame;
+     layer.contents = (id)[UIImage imageNamed:@"zhuce-zhayan"].CGImage;
+    
+    self.captureManager.previewLayer.frame= CGRectMake(0, 0, self.previewView.frame.size.width, self.previewView.frame.size.height);
+    //self.captureManager.previewLayer.cornerRadius = 100;
+    //self.captureManager.previewLayer.position=self.previewView.center;
+    self.captureManager.previewLayer.videoGravity=AVLayerVideoGravityResizeAspectFill;
+    [self.captureManager.previewLayer addSublayer:layer];
+    
     [self.previewView.layer addSublayer:self.captureManager.previewLayer];
     
     self.viewCanvas = [[CanvasView alloc] initWithFrame:self.captureManager.previewLayer.frame] ;

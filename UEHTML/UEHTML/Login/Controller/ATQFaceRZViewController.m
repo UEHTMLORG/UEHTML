@@ -169,7 +169,7 @@
         }
         
     } failure:^(NSError *error) {
-        NSLog(@"登录失败：%@",error);
+        NSLog(@"%@",error);
     }];
 }
 

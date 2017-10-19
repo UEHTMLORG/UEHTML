@@ -29,11 +29,15 @@
 #import "ATQMyAccountViewController.h"
 #import "ATQRZCenterViewController.h"
 #import "ATQMyFriendsViewController.h"
+#import "LhkhHttpsManager.h"
+#import "MBProgressHUD+Add.h"
+#import "ATQMeModel.h"
 @interface ATQMeViewController ()<UITableViewDelegate,UITableViewDataSource>{
     BOOL isBusiness;
 }
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,strong)ATQMeHeadView *headView;
+@property (nonatomic,strong)NSDictionary *MeDic;
 
 @end
 
@@ -41,7 +45,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    isBusiness = YES;
     [self buildHeadView];
     [self setTableView];
 }
@@ -60,15 +63,7 @@
     _headView = ({
         ATQMeHeadView *headView =[ATQMeHeadView meHeadView];
         headView.frame = CGRectMake(0, 0, ScreenWidth, 185);
-        if (isBusiness == YES) {
-            headView.cView.hidden = YES;
-            headView.VIPView1.hidden = NO;
-            headView.VIPView2.hidden = NO;
-        }else{
-            headView.cView.hidden = NO;
-            headView.VIPView1.hidden = YES;
-            headView.VIPView2.hidden = YES;
-        }
+        
         __weak typeof(self) weakself = self;
         headView.setupblock = ^{
             ATQSetupViewController *vc = [[ATQSetupViewController alloc]init];
@@ -96,7 +91,9 @@
         [self.view addSubview:tableView];
         tableView;
     });
-    
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadData)];
+    self.tableView.mj_header.automaticallyChangeAlpha = YES;
+    [self.tableView.mj_header beginRefreshing];
     self.tableView.tableHeaderView = _headView;
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.mas_equalTo(self.view);
@@ -104,6 +101,66 @@
         make.bottom.mas_equalTo(self.view).offset(0);
     }];
     
+}
+
+-(void)loadData{
+    NSMutableDictionary *params = [NSMutableDictionary  dictionary];
+    NSString *user_id = [[NSUserDefaults standardUserDefaults] objectForKey:USER_ID_AOTU_ZL];
+    NSString *user_token = [[NSUserDefaults standardUserDefaults] objectForKey:USER_TOEKN_AOTU_ZL];
+    params[@"user_id"] = user_id;
+    params[@"user_token"] = user_token;
+    params[@"apptype"] = @"ios";
+    params[@"appversion"] = @"1.0.0";
+    NSString *random_str = [LhkhHttpsManager getNowTimeTimestamp];
+    params[@"random_str"] = random_str;
+    NSString *app_token = APP_TOKEN;
+    NSString *signStr = [NSString stringWithFormat:@"%@%@",app_token,random_str];
+    NSString *sign1 = [LhkhHttpsManager md5:signStr];
+    NSString *sign2 = [LhkhHttpsManager md5:sign1];
+    NSString *sign = [LhkhHttpsManager md5:sign2];
+    params[@"sign"] = sign;
+    NSString *url = [NSString stringWithFormat:@"%@/api/user/home",ATQBaseUrl];
+    
+    [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
+        NSLog(@"-----me=%@",responseObject);
+        [self.tableView.mj_header endRefreshing];
+        if ([responseObject[@"status"] isEqualToString:@"1"]) {
+            
+//            NSString *card_level = responseObject[@"data"][@"card_level"];
+//            NSString *disturbed_time = responseObject[@"data"][@"disturbed_time"];
+//            NSString *deposit_auth = responseObject[@"data"][@"deposit_auth"];
+            
+//            NSString *disturbed_open = responseObject[@"data"][@"disturbed_open"];
+            if(responseObject[@"data"] && [responseObject[@"data"] isKindOfClass:[NSDictionary class]]){
+                _MeDic = responseObject[@"data"];
+                NSString *avatar = _MeDic[@"avatar"];
+                NSString *nick_name = _MeDic[@"nick_name"];
+                NSString *is_agent = _MeDic[@"is_agent"];
+                
+                [_headView.headImg sd_setImageWithURL:[NSURL URLWithString:avatar] placeholderImage:[UIImage imageNamed:@"1"]];
+                _headView.nameLab.text = nick_name;
+                if([is_agent isEqualToString:@"1"]){
+                    isBusiness = YES;
+                }else{
+                    isBusiness = NO;
+                }
+                if (isBusiness == YES) {
+                    _headView.cView.hidden = YES;
+                    _headView.VIPView1.hidden = NO;
+                    _headView.VIPView2.hidden = NO;
+                }else{
+                    _headView.cView.hidden = NO;
+                    _headView.VIPView1.hidden = YES;
+                    _headView.VIPView2.hidden = YES;
+                }
+            }
+        }else{
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+        }
+        
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -290,6 +347,15 @@
     }else{
         return 10;
     }
+}
+
+-(NSDictionary*)MeDic{
+    if(_MeDic == nil ){
+        
+        _MeDic = [NSDictionary dictionary];
+    }
+    
+    return _MeDic;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -58,7 +58,6 @@
 - (void)RegisterClick:(id)sender {
     NSLog(@"RegisterClick");
     ATQRegisterViewController *vc = [[ATQRegisterViewController  alloc]init];
-//    ATQFaceRZViewController *vc = [[ATQFaceRZViewController  alloc]init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 ////隐藏密码

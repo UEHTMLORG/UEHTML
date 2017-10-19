@@ -153,6 +153,7 @@
 		4018F5AE1F500B4000D6C42D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4018F5A61F500B4000D6C42D /* LaunchScreen.storyboard */; };
 		4018F5AF1F500B4000D6C42D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4018F5A81F500B4000D6C42D /* Main.storyboard */; };
 		4018F5B11F500B4000D6C42D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4018F5AC1F500B4000D6C42D /* ViewController.m */; };
+		401C1B131F98D8E80030B0F2 /* ATQWechatModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 401C1B121F98D8E80030B0F2 /* ATQWechatModel.m */; };
 		401D68E51F94468500329D1B /* ATQMePublishTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 401D68E31F94468500329D1B /* ATQMePublishTableViewCell.m */; };
 		401D68E61F94468500329D1B /* ATQMePublishTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 401D68E41F94468500329D1B /* ATQMePublishTableViewCell.xib */; };
 		401D68EA1F944CFF00329D1B /* ATQMePublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 401D68E81F944CFF00329D1B /* ATQMePublishViewController.m */; };
@@ -228,6 +229,14 @@
 		4061BDA21F8CBED600F6EC30 /* ATQMyFriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4061BDA01F8CBED600F6EC30 /* ATQMyFriendsViewController.xib */; };
 		4061BDA61F8CC2FD00F6EC30 /* ATQMyFriendsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4061BDA41F8CC2FD00F6EC30 /* ATQMyFriendsTableViewCell.m */; };
 		4061BDA71F8CC2FD00F6EC30 /* ATQMyFriendsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4061BDA51F8CC2FD00F6EC30 /* ATQMyFriendsTableViewCell.xib */; };
+		4067AE9D1F987C0300553458 /* ATQMeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4067AE9C1F987C0300553458 /* ATQMeModel.m */; };
+		4067AEA11F9890EF00553458 /* ATQSCMyAlumbViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4067AE9F1F9890EF00553458 /* ATQSCMyAlumbViewController.m */; };
+		4067AEA61F98A54900553458 /* ATQMyAlumbSCFTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4067AEA41F98A54900553458 /* ATQMyAlumbSCFTableViewCell.m */; };
+		4067AEA71F98A54900553458 /* ATQMyAlumbSCFTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4067AEA51F98A54900553458 /* ATQMyAlumbSCFTableViewCell.xib */; };
+		4067AEAB1F98A56400553458 /* ATQMyAlumbSCSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4067AEA91F98A56400553458 /* ATQMyAlumbSCSTableViewCell.m */; };
+		4067AEAC1F98A56400553458 /* ATQMyAlumbSCSTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4067AEAA1F98A56400553458 /* ATQMyAlumbSCSTableViewCell.xib */; };
+		4067AEB01F98A58100553458 /* ATQMyAlumbSCTTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4067AEAE1F98A58100553458 /* ATQMyAlumbSCTTableViewCell.m */; };
+		4067AEB11F98A58100553458 /* ATQMyAlumbSCTTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4067AEAF1F98A58100553458 /* ATQMyAlumbSCTTableViewCell.xib */; };
 		4067ECFF1F79F58F0051173D /* ATQWechatView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4067ECFE1F79F58F0051173D /* ATQWechatView.m */; };
 		4067ED011F79F5AB0051173D /* ATQWechatView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4067ED001F79F5AB0051173D /* ATQWechatView.xib */; };
 		406932071F904D5E00161167 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 406932061F904D5E00161167 /* data.json */; };
@@ -983,6 +992,8 @@
 		4018F5A91F500B4000D6C42D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4018F5AB1F500B4000D6C42D /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		4018F5AC1F500B4000D6C42D /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		401C1B111F98D8E80030B0F2 /* ATQWechatModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATQWechatModel.h; sourceTree = "<group>"; };
+		401C1B121F98D8E80030B0F2 /* ATQWechatModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATQWechatModel.m; sourceTree = "<group>"; };
 		401D68E21F94468500329D1B /* ATQMePublishTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQMePublishTableViewCell.h; path = UEHTML/ATQ/View/ATQMePublishTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		401D68E31F94468500329D1B /* ATQMePublishTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQMePublishTableViewCell.m; path = UEHTML/ATQ/View/ATQMePublishTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		401D68E41F94468500329D1B /* ATQMePublishTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQMePublishTableViewCell.xib; path = UEHTML/ATQ/View/ATQMePublishTableViewCell.xib; sourceTree = SOURCE_ROOT; };
@@ -1106,6 +1117,19 @@
 		4061BDA31F8CC2FD00F6EC30 /* ATQMyFriendsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQMyFriendsTableViewCell.h; path = UEHTML/Me/View/ATQMyFriendsTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		4061BDA41F8CC2FD00F6EC30 /* ATQMyFriendsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQMyFriendsTableViewCell.m; path = UEHTML/Me/View/ATQMyFriendsTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		4061BDA51F8CC2FD00F6EC30 /* ATQMyFriendsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQMyFriendsTableViewCell.xib; path = UEHTML/Me/View/ATQMyFriendsTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		4067AE9B1F987C0300553458 /* ATQMeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATQMeModel.h; sourceTree = "<group>"; };
+		4067AE9C1F987C0300553458 /* ATQMeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATQMeModel.m; sourceTree = "<group>"; };
+		4067AE9E1F9890EF00553458 /* ATQSCMyAlumbViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATQSCMyAlumbViewController.h; sourceTree = "<group>"; };
+		4067AE9F1F9890EF00553458 /* ATQSCMyAlumbViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATQSCMyAlumbViewController.m; sourceTree = "<group>"; };
+		4067AEA31F98A54900553458 /* ATQMyAlumbSCFTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATQMyAlumbSCFTableViewCell.h; sourceTree = "<group>"; };
+		4067AEA41F98A54900553458 /* ATQMyAlumbSCFTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATQMyAlumbSCFTableViewCell.m; sourceTree = "<group>"; };
+		4067AEA51F98A54900553458 /* ATQMyAlumbSCFTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ATQMyAlumbSCFTableViewCell.xib; sourceTree = "<group>"; };
+		4067AEA81F98A56400553458 /* ATQMyAlumbSCSTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATQMyAlumbSCSTableViewCell.h; sourceTree = "<group>"; };
+		4067AEA91F98A56400553458 /* ATQMyAlumbSCSTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATQMyAlumbSCSTableViewCell.m; sourceTree = "<group>"; };
+		4067AEAA1F98A56400553458 /* ATQMyAlumbSCSTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ATQMyAlumbSCSTableViewCell.xib; sourceTree = "<group>"; };
+		4067AEAD1F98A58100553458 /* ATQMyAlumbSCTTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATQMyAlumbSCTTableViewCell.h; sourceTree = "<group>"; };
+		4067AEAE1F98A58100553458 /* ATQMyAlumbSCTTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATQMyAlumbSCTTableViewCell.m; sourceTree = "<group>"; };
+		4067AEAF1F98A58100553458 /* ATQMyAlumbSCTTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ATQMyAlumbSCTTableViewCell.xib; sourceTree = "<group>"; };
 		4067ECFD1F79F58F0051173D /* ATQWechatView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQWechatView.h; path = UEHTML/Me/View/ATQWechatView.h; sourceTree = SOURCE_ROOT; };
 		4067ECFE1F79F58F0051173D /* ATQWechatView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQWechatView.m; path = UEHTML/Me/View/ATQWechatView.m; sourceTree = SOURCE_ROOT; };
 		4067ED001F79F5AB0051173D /* ATQWechatView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQWechatView.xib; path = UEHTML/Me/View/ATQWechatView.xib; sourceTree = SOURCE_ROOT; };
@@ -2528,6 +2552,15 @@
 				4048AE011F8DA75900F6B928 /* ATQNewFriendsTableViewCell.h */,
 				4048AE021F8DA75900F6B928 /* ATQNewFriendsTableViewCell.m */,
 				4048AE031F8DA75900F6B928 /* ATQNewFriendsTableViewCell.xib */,
+				4067AEA31F98A54900553458 /* ATQMyAlumbSCFTableViewCell.h */,
+				4067AEA41F98A54900553458 /* ATQMyAlumbSCFTableViewCell.m */,
+				4067AEA51F98A54900553458 /* ATQMyAlumbSCFTableViewCell.xib */,
+				4067AEA81F98A56400553458 /* ATQMyAlumbSCSTableViewCell.h */,
+				4067AEA91F98A56400553458 /* ATQMyAlumbSCSTableViewCell.m */,
+				4067AEAA1F98A56400553458 /* ATQMyAlumbSCSTableViewCell.xib */,
+				4067AEAD1F98A58100553458 /* ATQMyAlumbSCTTableViewCell.h */,
+				4067AEAE1F98A58100553458 /* ATQMyAlumbSCTTableViewCell.m */,
+				4067AEAF1F98A58100553458 /* ATQMyAlumbSCTTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2535,6 +2568,10 @@
 		40076A061F9592EC006839C7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4067AE9B1F987C0300553458 /* ATQMeModel.h */,
+				4067AE9C1F987C0300553458 /* ATQMeModel.m */,
+				401C1B111F98D8E80030B0F2 /* ATQWechatModel.h */,
+				401C1B121F98D8E80030B0F2 /* ATQWechatModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2886,6 +2923,8 @@
 				40E0F2481F78C8F60074B064 /* ATQMyWechatViewController.m */,
 				40E0F2681F78FB290074B064 /* ATQMyAlbumViewController.h */,
 				40E0F2691F78FB290074B064 /* ATQMyAlbumViewController.m */,
+				4067AE9E1F9890EF00553458 /* ATQSCMyAlumbViewController.h */,
+				4067AE9F1F9890EF00553458 /* ATQSCMyAlumbViewController.m */,
 				40F9F2301F7A3E6E00F5A42B /* ATQSetupSecrityViewController.h */,
 				40F9F2311F7A3E6E00F5A42B /* ATQSetupSecrityViewController.m */,
 				40F9F2321F7A3E6E00F5A42B /* ATQSetupSecrityViewController.xib */,
@@ -4831,6 +4870,7 @@
 				40F5E5B11F91AFAC0077A574 /* f_static_048@2x.png in Resources */,
 				40F5E5591F91AFAC0077A574 /* f_static_004@3x.png in Resources */,
 				4024D66A1F7E3D4E006E56C1 /* ATQEditPhotoViewController.xib in Resources */,
+				4067AEA71F98A54900553458 /* ATQMyAlumbSCFTableViewCell.xib in Resources */,
 				40F5E6001F91AFAC0077A574 /* f_static_087@3x.png in Resources */,
 				40F5E54A1F91AFAC0077A574 /* section0_emotion4@2x.png in Resources */,
 				40F5E6141F91AFAC0077A574 /* f_static_097@3x.png in Resources */,
@@ -5026,6 +5066,7 @@
 				40E0F2671F78E5A40074B064 /* ATQCollectTableViewCell.xib in Resources */,
 				40FA8A0E1F74E81E0059A208 /* ATQTagTableViewCell.xib in Resources */,
 				40F5E55B1F91AFAC0077A574 /* f_static_005@3x.png in Resources */,
+				4067AEAC1F98A56400553458 /* ATQMyAlumbSCSTableViewCell.xib in Resources */,
 				40F5E5E31F91AFAC0077A574 /* f_static_073@2x.png in Resources */,
 				4061BDA71F8CC2FD00F6EC30 /* ATQMyFriendsTableViewCell.xib in Resources */,
 				40F5E5C91F91AFAC0077A574 /* f_static_060@2x.png in Resources */,
@@ -5039,6 +5080,7 @@
 				185D78721F8DF13A00DA8849 /* Loading006.png in Resources */,
 				185D786B1F8DF13900DA8849 /* Loading0018.png in Resources */,
 				40875D691F6F9AE300B58609 /* ATQLoginViewController.xib in Resources */,
+				4067AEB11F98A58100553458 /* ATQMyAlumbSCTTableViewCell.xib in Resources */,
 				40F5E6231F91AFAC0077A574 /* f_static_105@2x.png in Resources */,
 				40F5E59B1F91AFAC0077A574 /* f_static_037@2x.png in Resources */,
 				40F5E5CB1F91AFAC0077A574 /* f_static_061@2x.png in Resources */,
@@ -5191,6 +5233,7 @@
 				401D68E51F94468500329D1B /* ATQMePublishTableViewCell.m in Sources */,
 				40F5E3961F91AF920077A574 /* ZJImageViewBrowser.m in Sources */,
 				185D78A01F8DF13A00DA8849 /* NSDatezlModel.m in Sources */,
+				4067AEB01F98A58100553458 /* ATQMyAlumbSCTTableViewCell.m in Sources */,
 				40EA93551F7BBC4D005A0E50 /* PNPieChart.m in Sources */,
 				40EA935B1F7BBC4D005A0E50 /* PNScatterChartDataItem.m in Sources */,
 				40EA93561F7BBC4D005A0E50 /* PNPieChartDataItem.m in Sources */,
@@ -5286,6 +5329,7 @@
 				40F5E3721F91A3820077A574 /* NSMutableAttributedString+MLLabel.m in Sources */,
 				4097C3971F97335D00D330AF /* ATQDTTableViewCell.m in Sources */,
 				40E061C41F7695DF0072596D /* ATQHomeRecCollectionViewCell.m in Sources */,
+				401C1B131F98D8E80030B0F2 /* ATQWechatModel.m in Sources */,
 				40EA93211F7BBAD3005A0E50 /* bitstream.c in Sources */,
 				40F5E6381F91AFAC0077A574 /* FaceSourceManager.m in Sources */,
 				185D78831F8DF13A00DA8849 /* GCDGroup.m in Sources */,
@@ -5357,6 +5401,7 @@
 				40F5E3771F91A3820077A574 /* NSString+MLExpression.m in Sources */,
 				40F5E3781F91A3820077A574 /* MLLabelLayoutManager.m in Sources */,
 				40E0F2491F78C8F60074B064 /* ATQMyWechatViewController.m in Sources */,
+				4067AEAB1F98A56400553458 /* ATQMyAlumbSCSTableViewCell.m in Sources */,
 				18D93D481F922F2B00D18418 /* MsgLastZaiXianModel.m in Sources */,
 				185D78981F8DF13A00DA8849 /* UIColor+HeinQi.m in Sources */,
 				40FEA5CD1F73B41E00D6EB89 /* ATQRecommendViewController.m in Sources */,
@@ -5367,6 +5412,7 @@
 				185D78A21F8DF13A00DA8849 /* UIButton+ZLWebPSetImage.m in Sources */,
 				40260D1F1F71FEF400ED8CF1 /* ATQPerfectInfoViewController.m in Sources */,
 				40EA93521F7BBC4D005A0E50 /* PNLineChart.m in Sources */,
+				4067AE9D1F987C0300553458 /* ATQMeModel.m in Sources */,
 				4061BDA11F8CBED600F6EC30 /* ATQMyFriendsViewController.m in Sources */,
 				185D789C1F8DF13A00DA8849 /* UIView+HeinQi.m in Sources */,
 				40236C551F7B9499004AE37B /* ATQUserInfoViewController.m in Sources */,
@@ -5375,6 +5421,7 @@
 				406932161F90531200161167 /* NSDictionary+HYBUnicodeReadable.m in Sources */,
 				185D78CC1F8E3BCC00DA8849 /* JianZhiVideoViewController.m in Sources */,
 				4069320D1F904E0300161167 /* ATQCommentModel.m in Sources */,
+				4067AEA11F9890EF00553458 /* ATQSCMyAlumbViewController.m in Sources */,
 				40E084841F80A56100FD1AA3 /* ATQBuyjbSecTableViewCell.m in Sources */,
 				185D785F1F8DF13900DA8849 /* MSSAutoresizeLabelFlowConfig.m in Sources */,
 				40F5E3891F91A8430077A574 /* ATQOperationView.m in Sources */,
@@ -5410,6 +5457,7 @@
 				40F88EB21F80B7530077F567 /* ATQMyliftViewController.m in Sources */,
 				40236C2F1F7B7943004AE37B /* ATQOpinionViewController.m in Sources */,
 				406932171F90531200161167 /* NSSet+HYBUnicodeReadable.m in Sources */,
+				4067AEA61F98A54900553458 /* ATQMyAlumbSCFTableViewCell.m in Sources */,
 				40FB16A31F80BB07001FC339 /* ATQLiftCollectionViewCell.m in Sources */,
 				40F5E63F1F91AFAC0077A574 /* RFTextView.m in Sources */,
 				407F9BE31F6636BF0043A87A /* ATQMeViewController.m in Sources */,

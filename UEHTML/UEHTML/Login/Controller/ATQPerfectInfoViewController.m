@@ -17,6 +17,7 @@
 #import <AssetsLibrary/ALAssetsLibrary.h>
 #import <AssetsLibrary/ALAssetsGroup.h>
 #import <AssetsLibrary/ALAssetRepresentation.h>
+#import "UIImageView+WebCache.h"
 @interface ATQPerfectInfoViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIActionSheetDelegate>{
     UIControl *_blackView;
     NSString *dateStr;
@@ -119,16 +120,23 @@
      NSLog(@"-----register/step3=%@",responseObject);
      if ([responseObject[@"status"] isEqualToString:@"1"]) {
          [MBProgressHUD show:responseObject[@"message"] view:self.view];
-         ATQLoginViewController *vc = [[ATQLoginViewController alloc]init];
          
+         [self performSelector:@selector(gotoHome) withObject:nil afterDelay:1];
+                  
      }else{
          [MBProgressHUD show:responseObject[@"message"] view:self.view];
      }
      
      } failure:^(NSError *error) {
-     NSString *str = [NSString stringWithFormat:@"%@",error];
-     [MBProgressHUD show:str view:self.view];
+         NSString *str = [NSString stringWithFormat:@"%@",error];
+         
+         [MBProgressHUD show:str view:self.view];
      }];
+}
+
+-(void)gotoHome{
+    
+    [(AppDelegate *)[UIApplication sharedApplication].delegate openTabHomeCtrl];
 }
 
 -(void)setblackView{
@@ -277,59 +285,52 @@
 
 #pragma UIImagePickerController delegate
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
-   
-//     NSURL *imageURL = [info valueForKey:UIImagePickerControllerReferenceURL];
-//     ALAssetsLibraryAssetForURLResultBlock resultblock = ^(ALAsset *myasset)
-//     {
-//     ALAssetRepresentation *representation = [myasset defaultRepresentation];
-//     NSString *fileName = [representation filename];
-//     NSLog(@"fileName : %@",fileName);
-//     [self shangchuanImg:fileName];
-//     };
-//
-//     ALAssetsLibrary* assetslibrary = [[ALAssetsLibrary alloc] init];
-//     [assetslibrary assetForURL:imageURL
-//     resultBlock:resultblock
-//     failureBlock:nil];
     
     UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
     
     NSData *data = UIImageJPEGRepresentation(image, 0.3);
-//    NSString *picStr = [data base64EncodedStringWithOptions:0];
-    [self shangchuanImg:data];
+    NSString *picStr = [data base64EncodedStringWithOptions:0];
+    [self shangchuanImg:picStr];
     [picker dismissViewControllerAnimated:NO completion:nil];
 }
 
--(void)shangchuanImg:(NSData*)imgData{
+-(void)shangchuanImg:(NSString*)imgStr{
     NSMutableDictionary *params = [NSMutableDictionary  dictionary];
-    NSString *user_token = [[NSUserDefaults standardUserDefaults]objectForKey:@"user_token"];
-    NSString *user_id = [[NSUserDefaults standardUserDefaults]objectForKey:@"user_id"];
+    NSString *user_token = [[NSUserDefaults standardUserDefaults]objectForKey:USER_TOEKN_AOTU_ZL];
+    NSString *user_id = [[NSUserDefaults standardUserDefaults]objectForKey:USER_ID_AOTU_ZL];
     params[@"user_id"] = user_id;
     params[@"user_token"] = user_token;
     params[@"apptype"] = @"ios";
     params[@"appversion"] = @"1.0.0";
     NSString *random_str = [LhkhHttpsManager getNowTimeTimestamp];
     params[@"random_str"] = random_str;
-    NSString *app_token = @"apptest";
+    NSString *app_token = APP_TOKEN;
     NSString *signStr = [NSString stringWithFormat:@"%@%@",app_token,random_str];
     NSString *sign1 = [LhkhHttpsManager md5:signStr];
     NSString *sign2 = [LhkhHttpsManager md5:sign1];
     NSString *sign = [LhkhHttpsManager md5:sign2];
     params[@"sign"] = sign;
-//    params[@"avatar"] = imgStr;
+    params[@"avatar"] = imgStr;
     params[@"avatar_auth"] = @"1";
     NSString *url = [NSString stringWithFormat:@"%@/api/user/upload_avatar",ATQBaseUrl];
     
     [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
         NSLog(@"-----upload_avatar=%@",responseObject);
         if ([responseObject[@"status"] isEqualToString:@"1"]) {
+            
             [MBProgressHUD show:responseObject[@"message"] view:self.view];
+            
+            if(responseObject[@"data"]){
+                NSString *picStr = responseObject[@"data"];
+                [self.headImg sd_setImageWithURL:[NSURL URLWithString:picStr]];
+            }
         }else{
             [MBProgressHUD show:responseObject[@"message"] view:self.view];
         }
         
     } failure:^(NSError *error) {
         NSString *str = [NSString stringWithFormat:@"%@",error];
+        NSLog(@"------%@",str);
         [MBProgressHUD show:str view:self.view];
     }];
 }

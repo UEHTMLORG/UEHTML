@@ -15,6 +15,7 @@
 #import "MJRefresh.h"
 #import "UIImageView+WebCache.h"
 #import "ATQEditPhotoViewController.h"
+#import "ATQSCMyAlumbViewController.h"
 @interface ATQMyAlbumViewController ()<UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource,UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,IsSecretDelegate>{
     NSMutableArray *imgArr;
     BOOL isSecretPhoto;
@@ -36,7 +37,9 @@
 }
 
 -(void)shangchuan{
-    [self selectImage];
+//    [self selectImage];
+    ATQSCMyAlumbViewController *vc = [[ATQSCMyAlumbViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 -(void)setTableView{

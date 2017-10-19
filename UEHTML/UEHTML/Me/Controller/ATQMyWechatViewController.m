@@ -14,6 +14,12 @@
 #import "ATQWechatTableViewCell.h"
 #import "ATQAWechatTableViewCell.h"
 #import "Masonry.h"
+#import "MJExtension.h"
+#import "MJRefresh.h"
+#import "UIImageView+WebCache.h"
+#import "LhkhHttpsManager.h"
+#import "MBProgressHUD+Add.h"
+#import "ATQWechatModel.h"
 @interface ATQMyWechatViewController ()<UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>{
     NSInteger b;
 }
@@ -22,6 +28,7 @@
 @property (weak, nonatomic) UIView *sliderView;
 @property (nonatomic,strong)ATQWechatView *WeChatView;
 @property (nonatomic,strong)UITableView *tableView;
+@property (nonatomic,strong)NSMutableArray *wechatArr;
 @end
 
 @implementation ATQMyWechatViewController
@@ -32,8 +39,8 @@
     [self setupTitlesView];
     [self buildWechatView];
     [self setTableView];
+    [self loadMeWechatData];
 }
-
 -(void)setupTitlesView{
     //标题数组
     NSArray *titleArr = @[@"我的",@"谁查看我",@"已查看"];
@@ -86,6 +93,7 @@
 }
 
 -(void)buildWechatView{
+    __weak typeof(self) weakself = self;
     _WeChatView = ({
         ATQWechatView *WechatView =[ATQWechatView wechatView];
         WechatView.frame = CGRectMake(0, 60, ScreenWidth, ScreenHeight);
@@ -93,7 +101,7 @@
             NSLog(@"search");
         };
         WechatView.saveblock = ^{
-            NSLog(@"save");
+            [weakself settingWechat];
         };
         WechatView;
         
@@ -132,12 +140,121 @@
             b = button.tag;
             _tableView.hidden = NO;
             _WeChatView.hidden = YES;
-            [self.tableView reloadData];
+            [self loadData:[NSString stringWithFormat:@"%ld",button.tag]];
+
         }else{
             _tableView.hidden = NO;
             _WeChatView.hidden = YES;
-            [self.tableView reloadData];
+            [self loadData:[NSString stringWithFormat:@"%ld",button.tag]];
+
         }
+    }];
+}
+
+-(void)loadMeWechatData{
+    NSMutableDictionary *params = [NSMutableDictionary  dictionary];
+    NSString *user_id = [[NSUserDefaults standardUserDefaults] objectForKey:USER_ID_AOTU_ZL];
+    NSString *user_token = [[NSUserDefaults standardUserDefaults] objectForKey:USER_TOEKN_AOTU_ZL];
+    params[@"user_id"] = user_id;
+    params[@"user_token"] = user_token;
+    params[@"apptype"] = @"ios";
+    params[@"appversion"] = @"1.0.0";
+    NSString *random_str = [LhkhHttpsManager getNowTimeTimestamp];
+    params[@"random_str"] = random_str;
+    NSString *app_token = APP_TOKEN;
+    NSString *signStr = [NSString stringWithFormat:@"%@%@",app_token,random_str];
+    NSString *sign1 = [LhkhHttpsManager md5:signStr];
+    NSString *sign2 = [LhkhHttpsManager md5:sign1];
+    NSString *sign = [LhkhHttpsManager md5:sign2];
+    params[@"sign"] = sign;
+    NSString *url = [NSString stringWithFormat:@"%@/api/user/wechat/info",ATQBaseUrl];
+    
+    [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
+        NSLog(@"-----wechat=%@",responseObject);
+        if ([responseObject[@"status"] isEqualToString:@"1"]) {
+       
+            if(responseObject[@"data"] && [responseObject[@"data"] isKindOfClass:[NSDictionary class]]){
+                NSString *wechat_income = responseObject[@"data"][@"wechat_income"];
+                _WeChatView.shouyiLab.text = wechat_income;
+            }
+        }else{
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+        }
+        
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+    
+}
+
+-(void)loadData:(NSString *)typeStr{
+    NSLog(@"typeStr-%@",typeStr);
+    NSMutableDictionary *params = [NSMutableDictionary  dictionary];
+    NSString *user_id = [[NSUserDefaults standardUserDefaults] objectForKey:USER_ID_AOTU_ZL];
+    NSString *user_token = [[NSUserDefaults standardUserDefaults] objectForKey:USER_TOEKN_AOTU_ZL];
+    params[@"model"] = typeStr;
+    params[@"user_id"] = user_id;
+    params[@"user_token"] = user_token;
+    params[@"apptype"] = @"ios";
+    params[@"appversion"] = @"1.0.0";
+    NSString *random_str = [LhkhHttpsManager getNowTimeTimestamp];
+    params[@"random_str"] = random_str;
+    NSString *app_token = APP_TOKEN;
+    NSString *signStr = [NSString stringWithFormat:@"%@%@",app_token,random_str];
+    NSString *sign1 = [LhkhHttpsManager md5:signStr];
+    NSString *sign2 = [LhkhHttpsManager md5:sign1];
+    NSString *sign = [LhkhHttpsManager md5:sign2];
+    params[@"sign"] = sign;
+    NSString *url = [NSString stringWithFormat:@"%@/api/user/wechat/see_list",ATQBaseUrl];
+    
+    [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
+        NSLog(@"-----wechatlist=%@",responseObject);
+        if ([responseObject[@"status"] isEqualToString:@"1"]) {
+           
+            if (responseObject[@"data"]) {
+                self.wechatArr = [ATQWechatModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
+            }
+            [self.tableView reloadData];
+            
+        }else{
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+        }
+        
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+}
+
+-(void)settingWechat{
+    NSLog(@"settingWechat-%@",_WeChatView.wechatText.text);
+    NSMutableDictionary *params = [NSMutableDictionary  dictionary];
+    NSString *user_id = [[NSUserDefaults standardUserDefaults] objectForKey:USER_ID_AOTU_ZL];
+    NSString *user_token = [[NSUserDefaults standardUserDefaults] objectForKey:USER_TOEKN_AOTU_ZL];
+    params[@"wechat"] = _WeChatView.wechatText.text;
+    params[@"user_id"] = user_id;
+    params[@"user_token"] = user_token;
+    params[@"apptype"] = @"ios";
+    params[@"appversion"] = @"1.0.0";
+    NSString *random_str = [LhkhHttpsManager getNowTimeTimestamp];
+    params[@"random_str"] = random_str;
+    NSString *app_token = APP_TOKEN;
+    NSString *signStr = [NSString stringWithFormat:@"%@%@",app_token,random_str];
+    NSString *sign1 = [LhkhHttpsManager md5:signStr];
+    NSString *sign2 = [LhkhHttpsManager md5:sign1];
+    NSString *sign = [LhkhHttpsManager md5:sign2];
+    params[@"sign"] = sign;
+    NSString *url = [NSString stringWithFormat:@"%@/user/wechat/setting",ATQBaseUrl];
+    
+    [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
+        NSLog(@"-----setwechat=%@",responseObject);
+        if ([responseObject[@"status"] isEqualToString:@"1"]) {
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+        }else{
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+        }
+        
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
     }];
 }
 
@@ -167,9 +284,10 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 3;
+    return _wechatArr.count;
 }
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    ATQWechatModel *model = self.wechatArr[indexPath.row];
     if (b == 1) {
         static NSString *CellIdentifier = @"ATQWechatTableViewCell" ;
         ATQWechatTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -177,6 +295,9 @@
             NSArray *array = [[NSBundle mainBundle]loadNibNamed: CellIdentifier owner:self options:nil];
             cell = [array objectAtIndex:0];
         }
+        
+        [cell.headImg sd_setImageWithURL:[NSURL URLWithString:model.avatar] placeholderImage:[UIImage imageNamed:@"1"]];
+        cell.nameLab.text = model.nick_name;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
         return cell;
@@ -187,6 +308,9 @@
             NSArray *array = [[NSBundle mainBundle]loadNibNamed: CellIdentifier owner:self options:nil];
             cell = [array objectAtIndex:0];
         }
+        [cell.headImg sd_setImageWithURL:[NSURL URLWithString:model.avatar] placeholderImage:[UIImage imageNamed:@"1"]];
+        cell.nameLab.text = model.nick_name;
+        cell.wechatLab.text = [NSString stringWithFormat:@"微信号：%@",model.wechat];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
         return cell;
@@ -198,7 +322,14 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 44;
+    return 50;
+}
+
+-(NSMutableArray*)wechatArr{
+    if (_wechatArr == nil) {
+        _wechatArr = [NSMutableArray array];
+    }
+    return _wechatArr;
 }
 
 - (void)didReceiveMemoryWarning {

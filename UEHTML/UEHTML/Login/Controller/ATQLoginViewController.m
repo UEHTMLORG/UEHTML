@@ -57,8 +57,8 @@
 //注册
 - (void)RegisterClick:(id)sender {
     NSLog(@"RegisterClick");
-//    ATQRegisterViewController *vc = [[ATQRegisterViewController  alloc]init];
-    ATQFaceRZViewController *vc = [[ATQFaceRZViewController  alloc]init];
+    ATQRegisterViewController *vc = [[ATQRegisterViewController  alloc]init];
+//    ATQFaceRZViewController *vc = [[ATQFaceRZViewController  alloc]init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 ////隐藏密码
@@ -90,7 +90,7 @@
         params[@"appversion"] = @"1.0.0";
         NSString *random_str = [ZLSecondAFNetworking getNowTime];
         params[@"random_str"] = random_str;
-        NSString *app_token = @"apptest";
+        NSString *app_token = APP_TOKEN;
         NSString *signStr = [NSString stringWithFormat:@"%@%@",app_token,random_str];
         NSString *sign1 = [ZLSecondAFNetworking getMD5fromString:signStr];
         NSString *sign2 = [ZLSecondAFNetworking getMD5fromString:sign1];

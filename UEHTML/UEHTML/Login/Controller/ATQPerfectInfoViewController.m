@@ -7,6 +7,7 @@
 //
 
 #import "ATQPerfectInfoViewController.h"
+#import "ATQLoginViewController.h"
 #import "AppDelegate.h"
 #import "UIColor+LhkhColor.h"
 #import "Masonry.h"
@@ -95,15 +96,15 @@
         return;
     }
     NSMutableDictionary *params = [NSMutableDictionary  dictionary];
-    NSString *user_token = [[NSUserDefaults standardUserDefaults]objectForKey:@"user_token"];
-    NSString *user_id = [[NSUserDefaults standardUserDefaults]objectForKey:@"user_id"];
-    params[@"user_id"] = user_id;
+    NSString *user_id = [[NSUserDefaults standardUserDefaults]objectForKey:USER_ID_AOTU_ZL];
+    NSString *user_token = [[NSUserDefaults standardUserDefaults]objectForKey:USER_TOEKN_AOTU_ZL];
     params[@"user_token"] = user_token;
+    params[@"user_id"] = user_id;
     params[@"apptype"] = @"ios";
     params[@"appversion"] = @"1.0.0";
     NSString *random_str = [LhkhHttpsManager getNowTimeTimestamp];
     params[@"random_str"] = random_str;
-    NSString *app_token = @"apptest";
+    NSString *app_token = APP_TOKEN;
     NSString *signStr = [NSString stringWithFormat:@"%@%@",app_token,random_str];
     NSString *sign1 = [LhkhHttpsManager md5:signStr];
     NSString *sign2 = [LhkhHttpsManager md5:sign1];
@@ -117,9 +118,11 @@
      [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
      NSLog(@"-----register/step3=%@",responseObject);
      if ([responseObject[@"status"] isEqualToString:@"1"]) {
-     [MBProgressHUD show:responseObject[@"message"] view:self.view];
+         [MBProgressHUD show:responseObject[@"message"] view:self.view];
+         ATQLoginViewController *vc = [[ATQLoginViewController alloc]init];
+         
      }else{
-     [MBProgressHUD show:responseObject[@"message"] view:self.view];
+         [MBProgressHUD show:responseObject[@"message"] view:self.view];
      }
      
      } failure:^(NSError *error) {

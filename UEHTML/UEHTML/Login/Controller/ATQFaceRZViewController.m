@@ -7,7 +7,11 @@
 //
 
 #import "ATQFaceRZViewController.h"
+#import "ATQPerfectInfoViewController.h"
 #import "DetectorView.h"
+#import "UIColor+LhkhColor.h"
+#import "MBProgressHUD+Add.h"
+#import "LhkhHttpsManager.h"
 @interface ATQFaceRZViewController ()
 {
     NSTimer *timer;
@@ -18,59 +22,56 @@
 @property(nonatomic,strong)UIImageView *frontImageView;
 @property(nonatomic,strong)UIImageView *showImageView;
 @property(nonatomic,strong)UILabel *timeLabel;
+@property(nonatomic,strong)UILabel *tishiLabel;
 @end
 
 @implementation ATQFaceRZViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    UIButton *backbtn = [[UIButton alloc] initWithFrame:CGRectMake(20, 25, 15, 15)];
+    self.view.backgroundColor = [UIColor colorWithHexString:@"202020"];
+    UIButton *backbtn = [[UIButton alloc] initWithFrame:CGRectMake(20, 30, 25, 25)];
     [backbtn setImage:[UIImage imageNamed:@"zhuce-Top zuo"] forState:UIControlStateNormal];
     [backbtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:backbtn];
     
-    UIImageView *imageview = [[UIImageView alloc] initWithFrame:CGRectMake(0, 94, 375, 400)];
+    UIButton *voicebtn = [[UIButton alloc] initWithFrame:CGRectMake(ScreenWidth - 50, 30, 25, 25)];
+    [voicebtn setImage:[UIImage imageNamed:@"zhuce-shengyin"] forState:UIControlStateNormal];
+    [voicebtn addTarget:self action:@selector(voice) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:voicebtn];
+    
+    UILabel *tishiLab = [[UILabel alloc] initWithFrame:CGRectMake((ScreenWidth-90)/2, 60, 90, 20)];
+    tishiLab.text = @"请眨眼";
+    tishiLab.textAlignment = NSTextAlignmentCenter;
+    tishiLab.textColor = [UIColor whiteColor];
+    [self.view addSubview:tishiLab];
+    self.timeLabel = tishiLab;
+    UIImageView *imageview = [[UIImageView alloc] initWithFrame:CGRectMake(0, 100, ScreenWidth, ScreenWidth*373/320)];
     imageview.image = [UIImage imageNamed:@"zhuce-zhayan"];
     [self.view addSubview:imageview];
-    DetectorView *detector = [[DetectorView alloc] initWithFrame:CGRectMake((ScreenWidth - 360) / 2, 94, 360, 300)];
-    detector.layer.cornerRadius = 180.f;
+    DetectorView *detector = [[DetectorView alloc] initWithFrame:CGRectMake(15, 150, ScreenWidth-30, ScreenWidth*373/320 - 100)];
+    detector.layer.cornerRadius = (ScreenWidth-30)/2;
     detector.layer.masksToBounds = YES;
     [self.view addSubview:detector];
     self.detector = detector;
-    
-    
-    UIButton *cancelBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.view addSubview:cancelBtn];
-    cancelBtn.frame = CGRectMake(CGRectGetMaxX(detector.frame) - 80, CGRectGetMaxY(detector.frame) + 15, 80, 30);
-    [cancelBtn setTitle:@"清除" forState:UIControlStateNormal];
-    [cancelBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    cancelBtn.backgroundColor = [UIColor yellowColor];
-    [cancelBtn addTarget:self action:@selector(cancelPhoto) forControlEvents:UIControlEventTouchUpInside];
-    
-    UIImageView *showImageView = [[UIImageView alloc] initWithFrame:CGRectMake(50, CGRectGetMaxY(cancelBtn.frame) + 15, 100, 100)];
-    [self.view addSubview:showImageView];
-    showImageView.clipsToBounds = YES;
-    self.showImageView = showImageView;
-    UILabel *tipLabel = [[UILabel alloc] initWithFrame:CGRectMake(ScreenWidth / 2 - 50, CGRectGetMaxY(self.showImageView.frame), 100, 30)];
-    [self.view addSubview:tipLabel];
-    UILabel *timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(ScreenWidth / 2 - 100, CGRectGetMaxY(tipLabel.frame) + 15, 200, 30)];
-    [self.view addSubview:timeLabel];
-    self.timeLabel = timeLabel;
-    
     self.detector.interfaceOrientation = [[UIApplication sharedApplication] statusBarOrientation];
     
+    UILabel *tipLabel = [[UILabel alloc] initWithFrame:CGRectMake((ScreenWidth  - 60)/2, CGRectGetMaxY(imageview.frame), 100, 30)];
+    tipLabel.textAlignment = NSTextAlignmentCenter;
+    tipLabel.textColor = [UIColor whiteColor];
+    [self.view addSubview:tipLabel];
+    self.tishiLabel = tipLabel;
     
     __weak typeof(self) weakSelf = self;
     
     self.detector.getStringBlock = ^(NSDictionary *resultDict){
         
         if ([[resultDict objectForKey:@"result"] boolValue]) {
-            
+            NSLog(@"检测成功");
             [weakSelf timeBegin];
         }
         else{
-            
+            NSLog(@"检测失败");
             [weakSelf releaseTimer];
         }
         tipLabel.text = resultDict[@"desc"];
@@ -80,6 +81,11 @@
 -(void)back{
     
     [self.navigationController popViewControllerAnimated:NO];
+}
+
+-(void)voice{
+    
+    NSLog(@"点击了声音");
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -119,26 +125,65 @@
     }
     else
     {
+        self.timeLabel.text = @"检测成功";
+        self.tishiLabel.hidden = YES;
         [theTimer invalidate];
         theTimer=nil;
+        
         if (self.detector.takePhotoBlock) {
             self.detector.takePhotoBlock(self.showImageView);
+            [self commit];
         }
         
     }
 }
-- (void)cancelPhoto{
-    if (self.detector.cancelPhotoBlock) {
-        self.detector.cancelPhotoBlock();
-    }else{
-        NSLog(@"22");
-    }
+
+-(void)commit{
+    NSMutableDictionary *params = [NSMutableDictionary  dictionary];
+    NSString *user_id = [[NSUserDefaults standardUserDefaults]objectForKey:USER_ID_AOTU_ZL];
+    NSString *user_token = [[NSUserDefaults standardUserDefaults]objectForKey:USER_TOEKN_AOTU_ZL];
+    params[@"user_token"] = user_token;
+    params[@"user_id"] = user_id;
+    params[@"apptype"] = @"ios";
+    params[@"appversion"] = @"1.0.0";
+    NSString *random_str = [ZLSecondAFNetworking getNowTime];
+    params[@"random_str"] = random_str;
+    NSString *app_token = APP_TOKEN;
+    NSString *signStr = [NSString stringWithFormat:@"%@%@",app_token,random_str];
+    NSString *sign1 = [ZLSecondAFNetworking getMD5fromString:signStr];
+    NSString *sign2 = [ZLSecondAFNetworking getMD5fromString:sign1];
+    NSString *sign = [ZLSecondAFNetworking getMD5fromString:sign2];
+    params[@"sign"] = sign;
+    NSString *url = [NSString stringWithFormat:@"%@/api/user/register/step2",ATQBaseUrl];
     
-    self.showImageView.image = nil;
+    [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
+        NSLog(@"-----register/step2=%@",responseObject);
+        if ([responseObject[@"status"] isEqualToString:@"1"]) {
+            
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+            ATQPerfectInfoViewController *vc = [[ATQPerfectInfoViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            
+        }else{
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+        }
+        
+    } failure:^(NSError *error) {
+        NSLog(@"登录失败：%@",error);
+    }];
 }
 
+//- (void)cancelPhoto{
+//    if (self.detector.cancelPhotoBlock) {
+//        self.detector.cancelPhotoBlock();
+//    }else{
+//        NSLog(@"22");
+//    }
+//
+//    self.showImageView.image = nil;
+//}
+
 -(void)dealloc{
-    
     
 }
 

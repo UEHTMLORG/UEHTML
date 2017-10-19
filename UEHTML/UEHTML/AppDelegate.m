@@ -20,9 +20,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    [self openLoginCtrl];
-    
-//    [self openTabHomeCtrl];
+    NSString *user_id = [[NSUserDefaults standardUserDefaults]objectForKey:USER_ID_AOTU_ZL];
+    NSString *user_token = [[NSUserDefaults standardUserDefaults]objectForKey:USER_TOEKN_AOTU_ZL];
+    if (![user_id isEqualToString:@""] && user_id.length >0 && ![user_token isEqualToString:@""] && user_token.length >0) {
+        [self openTabHomeCtrl];
+    }else{
+        [self openLoginCtrl];
+    }
+
     IQKeyboardManager *manager = [IQKeyboardManager sharedManager];
     manager.enable = YES;
     manager.shouldResignOnTouchOutside = YES;
@@ -140,7 +145,7 @@
     [self.window makeKeyAndVisible];
 }
 
-#pragma mark --- 配置文件
+#pragma mark IFly--- 配置文件
 -(void)makeConfiguration
 {
     //设置log等级，此处log为默认在app沙盒目录下的msc.log文件

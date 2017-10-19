@@ -8,7 +8,7 @@
 
 #import "ATQRegisterViewController.h"
 #import "ATQLoginViewController.h"
-#import "ATQPerfectInfoViewController.h"
+#import "ATQFaceRZViewController.h"
 #import "UIColor+LhkhColor.h"
 #import "ATQBindPhoneViewController.h"
 #import "LhkhHttpsManager.h"
@@ -90,7 +90,7 @@
         params[@"appversion"] = @"1.0.0";
         NSString *random_str = [LhkhHttpsManager getNowTimeTimestamp];
         params[@"random_str"] = random_str;
-        NSString *app_token = @"apptest";
+        NSString *app_token = APP_TOKEN;
         NSString *signStr = [NSString stringWithFormat:@"%@%@",app_token,random_str];
         NSString *sign1 = [LhkhHttpsManager md5:signStr];
         NSString *sign2 = [LhkhHttpsManager md5:sign1];
@@ -98,13 +98,16 @@
         params[@"sign"] = sign;
         NSString *url = [NSString stringWithFormat:@"%@/api/user/register/step1",ATQBaseUrl];
         [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
-            NSLog(@"-----register=%@",responseObject);
+            NSLog(@"-----register/step1=%@",responseObject);
             if ([responseObject[@"status"] isEqualToString:@"1"]) {
                 NSString *user_id = responseObject[@"data"][@"user_id"];
                 NSString *user_token = responseObject[@"data"][@"user_token"];
                 [[NSUserDefaults standardUserDefaults] setObject:user_id forKey:USER_ID_AOTU_ZL];
                 [[NSUserDefaults standardUserDefaults] setObject:user_token forKey:USER_TOEKN_AOTU_ZL];
-        
+                
+                ATQFaceRZViewController *vc = [[ATQFaceRZViewController alloc] init];
+                [self.navigationController pushViewController:vc animated:NO];
+                
             }else{
                 [MBProgressHUD show:responseObject[@"message"] view:self.view];
             }

@@ -41,6 +41,7 @@ typedef UIImage *(^ImageBlock)(UIImageView *showImageView);
 @property(nonatomic,copy)PhotoBlcok setPhotoDelegateBlock;
 
 @property(nonatomic,copy)ImageBlock getImageBlock;
+
 @end
 
 @implementation DetectorView
@@ -223,6 +224,8 @@ typedef UIImage *(^ImageBlock)(UIImageView *showImageView);
     // scale coordinates so they fit in the preview box, which may be scaled
     CGFloat widthScaleBy = self.previewLayer.frame.size.width / faceImg.height;
     CGFloat heightScaleBy = self.previewLayer.frame.size.height / faceImg.width;
+    
+    
     
     NSMutableArray *arrStrPoints = [NSMutableArray array] ;
     NSEnumerator* keys=[landmarkDic keyEnumerator];

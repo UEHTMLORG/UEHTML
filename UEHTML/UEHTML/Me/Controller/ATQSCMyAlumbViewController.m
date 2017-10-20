@@ -13,10 +13,14 @@
 #import "ATQMyAlumbSCFTableViewCell.h"
 #import "ATQMyAlumbSCSTableViewCell.h"
 #import "ATQMyAlumbSCTTableViewCell.h"
+#import "LhkhHttpsManager.h"
+#import "MBProgressHUD+Add.h"
 @interface ATQSCMyAlumbViewController ()<UITableViewDelegate,UITableViewDataSource>{
     NSInteger height;
+    BOOL isSelected;
 }
 @property (nonatomic,strong)UITableView *tableView;
+@property (strong,nonatomic)NSMutableArray *imageArr;
 @end
 
 @implementation ATQSCMyAlumbViewController
@@ -25,6 +29,7 @@
     [super viewDidLoad];
     self.navigationItem.title = @"我的相册";
      height = 180;
+     _imageArr = [NSMutableArray array];
     [self setTableView];
 }
 -(void)setTableView{
@@ -54,7 +59,7 @@
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     
-    return 3;
+    return 2;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 1;
@@ -62,6 +67,7 @@
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     __weak typeof(self) weakself = self;
+    /*  这块先不要
     if(indexPath.section == 0){
         static NSString *CellIdentifier = @"ATQMyAlumbSCFTableViewCell" ;
         ATQMyAlumbSCFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -69,18 +75,27 @@
             NSArray *array = [[NSBundle mainBundle]loadNibNamed: CellIdentifier owner:self options:nil];
             cell = [array objectAtIndex:0];
         }
-        
+
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
-        
-    }else if (indexPath.section == 1){
+
+    }else */
+    if (indexPath.section == 0){
         static NSString *CellIdentifier = @"ATQMyAlumbSCSTableViewCell" ;
         ATQMyAlumbSCSTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         if (cell == nil) {
             NSArray *array = [[NSBundle mainBundle]loadNibNamed: CellIdentifier owner:self options:nil];
             cell = [array objectAtIndex:0];
         }
-        
+        cell.selectSwicthblock = ^(BOOL isSel) {
+            if (isSel == YES) {
+                NSLog(@"yes");
+                isSelected = YES;
+            }else{
+                NSLog(@"no");
+                isSelected = NO;
+            }
+        };
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }else{
@@ -107,6 +122,16 @@
                 }else{
                     height = 180 + 3*width + 40;
                 }
+                NSString *type = nil;
+                if (isSelected == YES) {
+                    type = @"1";
+                }else{
+                    type = @"0";
+                }
+                if (cell.imgsArray.count >1) {
+                    UIImage *firImg = cell.imgsArray[0];
+                    [self uploadImage:firImg secretType:type];
+                }
                 [weakself.tableView reloadData];
             } showIn:weakself AndActionTitle:@"请选择照片"];
         };
@@ -132,9 +157,15 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.section == 0) {
-        return 100;
-    }else if(indexPath.section == 1){
+//    if (indexPath.section == 0) {
+//        return 100;
+//    }else if(indexPath.section == 1){
+//        return 80;
+//
+//    }else{
+//        return height;
+//    }
+    if(indexPath.section == 0){
         return 80;
         
     }else{
@@ -143,23 +174,59 @@
 }
 
 -(UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    if (section == 1) {
-        UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 10)];
-        view.backgroundColor = [UIColor colorWithHexString:UIBgColorStr];
-        return view;
-    }else{
-        return nil;
-    }
-    
+//    if (section == 1) {
+//        UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 10)];
+//        view.backgroundColor = [UIColor colorWithHexString:UIBgColorStr];
+//        return view;
+//    }else{
+//        return nil;
+//    }
+    return nil;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    if (section == 1) {
-        return 10;
-    }else{
-        return 0;
-    }
+//    if (section == 1) {
+//        return 10;
+//    }else{
+//        return 0;
+//    }
+    return 0;
+}
+
+-(void)uploadImage:(UIImage *)image secretType:(NSString*)secrettype{
+    NSData *data = UIImageJPEGRepresentation(image, 0.3);
+    NSString *picStr = [data base64EncodedStringWithOptions:0];
+    NSMutableDictionary *params = [NSMutableDictionary  dictionary];
+    NSString *user_id = [[NSUserDefaults standardUserDefaults] objectForKey:USER_ID_AOTU_ZL];
+    NSString *user_token = [[NSUserDefaults standardUserDefaults] objectForKey:USER_TOEKN_AOTU_ZL];
+    params[@"model"] = secrettype;
+    params[@"picture"] = picStr;
+    params[@"user_id"] = user_id;
+    params[@"user_token"] = user_token;
+    params[@"apptype"] = @"ios";
+    params[@"appversion"] = @"1.0.0";
+    NSString *random_str = [LhkhHttpsManager getNowTimeTimestamp];
+    params[@"random_str"] = random_str;
+    NSString *app_token = APP_TOKEN;
+    NSString *signStr = [NSString stringWithFormat:@"%@%@",app_token,random_str];
+    NSString *sign1 = [LhkhHttpsManager md5:signStr];
+    NSString *sign2 = [LhkhHttpsManager md5:sign1];
+    NSString *sign = [LhkhHttpsManager md5:sign2];
+    params[@"sign"] = sign;
+    NSString *url = [NSString stringWithFormat:@"%@/api/user/album/save",ATQBaseUrl];
     
+    [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
+        NSLog(@"-----album/save=%@",responseObject);
+        if ([responseObject[@"status"] isEqualToString:@"1"]) {
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+            [self.tableView reloadData];
+        }else{
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+        }
+        
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+typedef void (^SelectSwicthBlock)(BOOL isSel);
 @interface ATQMyAlumbSCSTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UISwitch *secretSwicth;
-
+@property (copy,nonatomic)SelectSwicthBlock selectSwicthblock;
 @end

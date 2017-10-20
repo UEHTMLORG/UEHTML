@@ -210,7 +210,7 @@
     [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
         NSLog(@"-----wechatlist=%@",responseObject);
         if ([responseObject[@"status"] isEqualToString:@"1"]) {
-           
+            [self.wechatArr removeAllObjects];
             if (responseObject[@"data"]) {
                 self.wechatArr = [ATQWechatModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
             }
@@ -298,6 +298,7 @@
         
         [cell.headImg sd_setImageWithURL:[NSURL URLWithString:model.avatar] placeholderImage:[UIImage imageNamed:@"1"]];
         cell.nameLab.text = model.nick_name;
+        cell.statusLab.text = model.is_friend;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
         return cell;

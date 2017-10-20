@@ -14,5 +14,10 @@
     [super awakeFromNib];
     // Initialization code
 }
+- (IBAction)deleteTupianClick:(id)sender {
+    if (_deleteTupianblock) {
+        _deleteTupianblock();
+    }
+}
 
 @end

@@ -248,6 +248,7 @@
 		407193D41F8B028E00B9F162 /* ATQSPRZViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 407193D21F8B028E00B9F162 /* ATQSPRZViewController.xib */; };
 		407193D81F8B07AC00B9F162 /* ATQSFRZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 407193D61F8B07AC00B9F162 /* ATQSFRZViewController.m */; };
 		407193D91F8B07AC00B9F162 /* ATQSFRZViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 407193D71F8B07AC00B9F162 /* ATQSFRZViewController.xib */; };
+		407A27FD1F999F7B000F5A74 /* ATQAlumbModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 407A27FC1F999F7B000F5A74 /* ATQAlumbModel.m */; };
 		407F9BC91F6633870043A87A /* UIColor+LhkhColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 407F9BC41F6633870043A87A /* UIColor+LhkhColor.m */; };
 		407F9BCA1F6633870043A87A /* UIImage+LhkhExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 407F9BC61F6633870043A87A /* UIImage+LhkhExtension.m */; };
 		407F9BCB1F6633870043A87A /* UIView+LhkhExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 407F9BC81F6633870043A87A /* UIView+LhkhExtension.m */; };
@@ -1148,6 +1149,8 @@
 		407193D51F8B07AC00B9F162 /* ATQSFRZViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQSFRZViewController.h; sourceTree = "<group>"; };
 		407193D61F8B07AC00B9F162 /* ATQSFRZViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQSFRZViewController.m; sourceTree = "<group>"; };
 		407193D71F8B07AC00B9F162 /* ATQSFRZViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATQSFRZViewController.xib; sourceTree = "<group>"; };
+		407A27FB1F999F7B000F5A74 /* ATQAlumbModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATQAlumbModel.h; sourceTree = "<group>"; };
+		407A27FC1F999F7B000F5A74 /* ATQAlumbModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATQAlumbModel.m; sourceTree = "<group>"; };
 		407F9BC31F6633870043A87A /* UIColor+LhkhColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+LhkhColor.h"; path = "../UIColor+LhkhColor.h"; sourceTree = "<group>"; };
 		407F9BC41F6633870043A87A /* UIColor+LhkhColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+LhkhColor.m"; path = "../UIColor+LhkhColor.m"; sourceTree = "<group>"; };
 		407F9BC51F6633870043A87A /* UIImage+LhkhExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+LhkhExtension.h"; path = "../UIImage+LhkhExtension.h"; sourceTree = "<group>"; };
@@ -2572,6 +2575,8 @@
 				4067AE9C1F987C0300553458 /* ATQMeModel.m */,
 				401C1B111F98D8E80030B0F2 /* ATQWechatModel.h */,
 				401C1B121F98D8E80030B0F2 /* ATQWechatModel.m */,
+				407A27FB1F999F7B000F5A74 /* ATQAlumbModel.h */,
+				407A27FC1F999F7B000F5A74 /* ATQAlumbModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -5238,6 +5243,7 @@
 				40EA935B1F7BBC4D005A0E50 /* PNScatterChartDataItem.m in Sources */,
 				40EA93561F7BBC4D005A0E50 /* PNPieChartDataItem.m in Sources */,
 				40133E8F1F91F07A00C0B8CB /* ATQMeTableViewCell.m in Sources */,
+				407A27FD1F999F7B000F5A74 /* ATQAlumbModel.m in Sources */,
 				40F5E63B1F91AFAC0077A574 /* MorePanel.m in Sources */,
 				40236C6B1F7BA49F004AE37B /* ATQSpreadMoenyViewController.m in Sources */,
 				40E061C01F7689100072596D /* ATQItemTableViewCell.m in Sources */,

@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+typedef void (^DeteleTupianBlock)();
 @interface ATQPhotoCollectionViewCell : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UIView *secretView;
 @property (weak, nonatomic) IBOutlet UIImageView *userImg;
-
+@property (weak, nonatomic) IBOutlet UIButton *delBtn;
+@property (copy,nonatomic) DeteleTupianBlock deleteTupianblock;
 @end

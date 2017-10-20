@@ -8,7 +8,8 @@
 
 #import "ATQEditPhotoViewController.h"
 #import "ATQMyAlbumViewController.h"
-@interface ATQEditPhotoViewController ()<IsSecretDelegate>
+#import "UIImageView+WebCache.h"
+@interface ATQEditPhotoViewController ()
 
 @end
 
@@ -16,14 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.imageView.image = self.image;
+    [self.imageView sd_setImageWithURL:[NSURL URLWithString:self.imageStr] placeholderImage:[UIImage imageNamed:@"my-jiazhaopian"]];
+    
 }
-- (IBAction)secretClick:(id)sender {
-    self.secretBtn.selected = !self.secretBtn.selected;
-    if ([self.isSecretdelegate respondsToSelector:@selector(passValue:)]) {
-        [self.isSecretdelegate passValue:self.secretBtn.selected];
-    }
-}
+
 - (IBAction)back:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }

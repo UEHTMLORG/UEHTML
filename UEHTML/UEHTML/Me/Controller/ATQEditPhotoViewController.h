@@ -7,12 +7,9 @@
 //
 
 #import "ATQBaseViewController.h"
-@protocol  IsSecretDelegate <NSObject>
--(void)passValue:(BOOL)isSecret ;
-@end
+
 @interface ATQEditPhotoViewController : ATQBaseViewController
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
-@property (weak, nonatomic) IBOutlet UIButton *secretBtn;
-@property (strong,nonatomic) UIImage *image;
-@property(weak,nonatomic) id <IsSecretDelegate> isSecretdelegate;
+@property (copy,nonatomic) NSString *imageStr;
+
 @end

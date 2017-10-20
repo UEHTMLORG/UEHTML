@@ -15,6 +15,11 @@
     self.secretSwicth.onTintColor = [UIColor colorWithHexString:UIColorStr];
     self.secretSwicth.transform = CGAffineTransformMakeScale(0.75, 0.75);
 }
+- (IBAction)swicthClick:(UISwitch*)sender {
+    if (_selectSwicthblock) {
+        _selectSwicthblock(sender.on);
+    }
+}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

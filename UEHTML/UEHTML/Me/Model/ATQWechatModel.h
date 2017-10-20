@@ -11,6 +11,6 @@
 @interface ATQWechatModel : NSObject
 @property (nonatomic,copy)NSString *avatar;//头像
 @property (nonatomic,copy)NSString *nick_name;//昵称
-@property (nonatomic,copy)NSString *isFriend;//是否是好友
-@property (nonatomic,copy)NSString *wechat;//是否是好友
+@property (nonatomic,copy)NSString *is_friend;//是否是好友
+@property (nonatomic,copy)NSString *wechat;//微信号
 @end

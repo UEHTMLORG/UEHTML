@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -43,6 +43,17 @@
                             <constraint firstItem="kFn-0j-5R2" firstAttribute="centerY" secondItem="g1F-of-Mh3" secondAttribute="centerY" id="umm-Ql-6oj"/>
                         </constraints>
                     </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nmh-Mn-U9C">
+                        <rect key="frame" x="45" y="0.0" width="15" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="X9x-8q-zeb"/>
+                            <constraint firstAttribute="width" constant="15" id="fh1-sI-GeK"/>
+                        </constraints>
+                        <state key="normal" image="my-cha"/>
+                        <connections>
+                            <action selector="deleteTupianClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="9vb-Av-Va2"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <constraints>
@@ -51,17 +62,21 @@
                 <constraint firstItem="g1F-of-Mh3" firstAttribute="trailing" secondItem="nGI-oP-UFa" secondAttribute="trailing" id="Cve-Ay-cjO"/>
                 <constraint firstItem="nGI-oP-UFa" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="HJ2-IF-sTB"/>
                 <constraint firstAttribute="trailing" secondItem="nGI-oP-UFa" secondAttribute="trailing" id="PbX-mS-wsk"/>
+                <constraint firstAttribute="trailing" secondItem="Nmh-Mn-U9C" secondAttribute="trailing" id="T44-cy-8bL"/>
                 <constraint firstItem="nGI-oP-UFa" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="WNU-5l-doC"/>
+                <constraint firstItem="Nmh-Mn-U9C" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="wTR-d5-4sg"/>
                 <constraint firstAttribute="bottom" secondItem="nGI-oP-UFa" secondAttribute="bottom" id="x4k-8U-AGo"/>
                 <constraint firstItem="g1F-of-Mh3" firstAttribute="leading" secondItem="nGI-oP-UFa" secondAttribute="leading" id="zcY-aY-pdC"/>
             </constraints>
             <connections>
+                <outlet property="delBtn" destination="Nmh-Mn-U9C" id="xPp-4n-ZOW"/>
                 <outlet property="secretView" destination="g1F-of-Mh3" id="RLF-r4-4O4"/>
                 <outlet property="userImg" destination="nGI-oP-UFa" id="cYa-5Z-ZDj"/>
             </connections>
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="my-cha" width="13" height="13"/>
         <image name="my-jiazhaopian" width="126" height="126"/>
         <image name="my-suo" width="58" height="64"/>
     </resources>

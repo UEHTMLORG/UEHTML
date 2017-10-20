@@ -112,7 +112,7 @@
         }
     }
     
-    [[UIColor blueColor] set];
+//    [[UIColor blueColor] set];
     CGContextSetLineWidth(context, 2);
     CGContextStrokePath(context);
 }

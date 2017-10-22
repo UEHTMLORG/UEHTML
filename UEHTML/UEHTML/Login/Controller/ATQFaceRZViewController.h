@@ -7,7 +7,10 @@
 //
 
 #import "ATQBaseViewController.h"
-
+@protocol FaceRZIsSuccessDelegate <NSObject>
+-(void)passValue:(NSString*)SusStr;
+@end
 @interface ATQFaceRZViewController : ATQBaseViewController
-
+@property(nonatomic, copy)NSString *vcStr;
+@property (nonatomic,weak)id<FaceRZIsSuccessDelegate>delegate;
 @end

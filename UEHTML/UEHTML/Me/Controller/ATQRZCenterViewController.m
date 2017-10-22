@@ -15,8 +15,11 @@
 #import "ATQSFRZViewController.h"
 #import "ATQCarRZViewController.h"
 #import "ATQCarRZSuccessViewController.h"
+#import "LhkhHttpsManager.h"
+#import "MBProgressHUD+Add.h"
 @interface ATQRZCenterViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITableView *tableView;
+@property (strong,nonatomic)NSDictionary *dic;
 
 @end
 
@@ -25,7 +28,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"认证中心";
+    _dic = [NSDictionary dictionary];
     [self setTableView];
+    [self loadData];
 }
 -(void)setTableView{
     _tableView = ({
@@ -49,6 +54,43 @@
     
 }
 
+-(void)loadData{
+    
+    NSMutableDictionary *params = [NSMutableDictionary  dictionary];
+    NSString *user_id = [[NSUserDefaults standardUserDefaults] objectForKey:USER_ID_AOTU_ZL];
+    NSString *user_token = [[NSUserDefaults standardUserDefaults] objectForKey:USER_TOEKN_AOTU_ZL];
+    params[@"user_id"] = user_id;
+    params[@"user_token"] = user_token;
+    params[@"apptype"] = @"ios";
+    params[@"appversion"] = @"1.0.0";
+    NSString *random_str = [LhkhHttpsManager getNowTimeTimestamp];
+    params[@"random_str"] = random_str;
+    NSString *app_token = APP_TOKEN;
+    NSString *signStr = [NSString stringWithFormat:@"%@%@",app_token,random_str];
+    NSString *sign1 = [LhkhHttpsManager md5:signStr];
+    NSString *sign2 = [LhkhHttpsManager md5:sign1];
+    NSString *sign = [LhkhHttpsManager md5:sign2];
+    params[@"sign"] = sign;
+    NSString *url = [NSString stringWithFormat:@"%@/api/user/auth_list",ATQBaseUrl];
+    
+    [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
+        
+        if ([responseObject[@"status"] isEqualToString:@"1"]) {
+            if (responseObject[@"data"]) {
+                NSDictionary *tempdic = [NSDictionary dictionary];
+                tempdic = responseObject[@"data"];
+                _dic = tempdic;
+            }
+            
+        }else{
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+        }
+        
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+}
+
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 6;
 }
@@ -63,40 +105,83 @@
         cell = [array objectAtIndex:0];
     }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    NSString *phone_auth = _dic[@"phone_auth"];
+    NSString *id_info_auth = _dic[@"id_info_auth"];
+    NSString *video_auth = _dic[@"video_auth"];
+    NSString *car_auth = _dic[@"car_auth"];
+    NSString *avatar_auth = _dic[@"avatar_auth"];
+    NSString *deposit_auth = _dic[@"deposit_auth"];
     if (indexPath.section == 0) {
         cell.typeImg.image = [UIImage imageNamed:@"renzheng-button02"];
         cell.typeLab.text = @"手机认证";
         cell.zengsongLab.text = @"送5金币";
-        cell.statusLab.text = @"已认证";
+        if (phone_auth != nil && [phone_auth isEqualToString:@"1"]) {
+            cell.statusLab.text = @"已认证";
+            cell.statusLab.textColor = [UIColor colorWithHexString:UIColorStr];
+        }else{
+            cell.statusLab.text = @"未认证";
+            cell.statusLab.textColor = [UIColor colorWithHexString:UIToneTextColorStr];
+        }
+        
     }else if (indexPath.section == 1){
         cell.typeImg.image = [UIImage imageNamed:@"renzheng-button03"];
         cell.typeLab.text = @"身份认证";
         cell.zengsongLab.text = @"送5金币";
-        cell.statusLab.text = @"已认证";
+        if (id_info_auth != nil && [id_info_auth isEqualToString:@"1"]) {
+            cell.statusLab.text = @"已认证";
+            cell.statusLab.textColor = [UIColor colorWithHexString:UIColorStr];
+        }else{
+            cell.statusLab.text = @"未认证";
+            cell.statusLab.textColor = [UIColor colorWithHexString:UIToneTextColorStr];
+        }
         
     }else if (indexPath.section == 2){
         cell.typeImg.image = [UIImage imageNamed:@"renzheng-button04"];
         cell.typeLab.text = @"视频认证";
         cell.zengsongLab.text = @"送5金币";
-        cell.statusLab.text = @"已认证";
+        if (video_auth != nil && [video_auth isEqualToString:@"1"]) {
+            cell.statusLab.text = @"已认证";
+            cell.statusLab.textColor = [UIColor colorWithHexString:UIColorStr];
+        }else{
+            cell.statusLab.text = @"未认证";
+            cell.statusLab.textColor = [UIColor colorWithHexString:UIToneTextColorStr];
+        }
        
     }else if (indexPath.section == 3){
         cell.typeImg.image = [UIImage imageNamed:@"renzheng-button05"];
         cell.typeLab.text = @"车辆认证";
         cell.zengsongLab.text = @"送5金币";
-        cell.statusLab.text = @"已认证";
+        if (car_auth != nil && [car_auth isEqualToString:@"1"]) {
+            cell.statusLab.text = @"已认证";
+            cell.statusLab.textColor = [UIColor colorWithHexString:UIColorStr];
+        }else{
+            cell.statusLab.text = @"未认证";
+            cell.statusLab.textColor = [UIColor colorWithHexString:UIToneTextColorStr];
+        }
         
     }else if (indexPath.section == 4){
         cell.typeImg.image = [UIImage imageNamed:@"renzheng-button06"];
         cell.typeLab.text = @"个人头像认证";
         cell.zengsongLab.text = @"送5金币";
-        cell.statusLab.text = @"已认证";
+        if (avatar_auth != nil && [avatar_auth isEqualToString:@"1"]) {
+            cell.statusLab.text = @"已认证";
+            cell.statusLab.textColor = [UIColor colorWithHexString:UIColorStr];
+        }else{
+            cell.statusLab.text = @"未认证";
+            cell.statusLab.textColor = [UIColor colorWithHexString:UIToneTextColorStr];
+        }
         
     }else{
         cell.typeImg.image = [UIImage imageNamed:@"renzheng-button07"];
         cell.typeLab.text = @"押金认证";
         cell.zengsongLab.text = @"送5金币";
-        cell.statusLab.text = @"已认证";
+        if (deposit_auth != nil && [deposit_auth isEqualToString:@"1"]) {
+            cell.statusLab.text = @"已认证";
+            cell.statusLab.textColor = [UIColor colorWithHexString:UIColorStr];
+        }else{
+            cell.statusLab.text = @"未认证";
+            cell.statusLab.textColor = [UIColor colorWithHexString:UIToneTextColorStr];
+        }
     }
     
     return cell;

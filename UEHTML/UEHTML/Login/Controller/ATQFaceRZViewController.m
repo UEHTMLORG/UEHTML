@@ -161,8 +161,16 @@
         if ([responseObject[@"status"] isEqualToString:@"1"]) {
             
             [MBProgressHUD show:responseObject[@"message"] view:self.view];
-            ATQPerfectInfoViewController *vc = [[ATQPerfectInfoViewController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
+            if (self.vcStr != nil && [self.vcStr isEqualToString:@"ATQSFRZViewController"]) {
+                if ([self.delegate respondsToSelector:@selector(passValue:)]) {
+                        [self.delegate passValue:@"1"];
+                }
+                
+            }else{
+                ATQPerfectInfoViewController *vc = [[ATQPerfectInfoViewController alloc] init];
+                [self.navigationController pushViewController:vc animated:YES];
+            }
+            
             
         }else{
             [MBProgressHUD show:responseObject[@"message"] view:self.view];

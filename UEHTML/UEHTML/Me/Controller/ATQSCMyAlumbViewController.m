@@ -196,6 +196,8 @@
 -(void)uploadImage:(UIImage *)image secretType:(NSString*)secrettype{
     NSData *data = UIImageJPEGRepresentation(image, 0.3);
     NSString *picStr = [data base64EncodedStringWithOptions:0];
+    float lenth = [data length]/1000;
+    NSLog(@"=======%.2fKB",lenth);
     NSMutableDictionary *params = [NSMutableDictionary  dictionary];
     NSString *user_id = [[NSUserDefaults standardUserDefaults] objectForKey:USER_ID_AOTU_ZL];
     NSString *user_token = [[NSUserDefaults standardUserDefaults] objectForKey:USER_TOEKN_AOTU_ZL];

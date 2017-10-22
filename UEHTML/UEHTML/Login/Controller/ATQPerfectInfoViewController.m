@@ -289,6 +289,7 @@
     UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
     
     NSData *data = UIImageJPEGRepresentation(image, 0.3);
+    
     NSString *picStr = [data base64EncodedStringWithOptions:0];
     [self shangchuanImg:picStr];
     [picker dismissViewControllerAnimated:NO completion:nil];

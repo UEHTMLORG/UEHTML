@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -30,7 +30,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="096-pi-sha">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="096-pi-sha">
                                 <rect key="frame" x="261" y="5" width="51" height="31"/>
                                 <connections>
                                     <action selector="switchClick:" destination="KGk-i7-Jjw" eventType="valueChanged" id="Fft-AY-Id4"/>
@@ -60,15 +60,6 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sIN-NT-TyG">
                         <rect key="frame" x="0.0" y="40" width="320" height="40"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22:00-08:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAv-XF-E3e">
-                                <rect key="frame" x="20" y="0.0" width="100" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="2n1-sn-Foi"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.5450980392" green="0.5450980392" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rM1-R6-yRL">
                                 <rect key="frame" x="250" y="0.0" width="50" height="40"/>
                                 <constraints>
@@ -82,16 +73,25 @@
                                     <action selector="setupClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="oCK-NA-XJn"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入勿扰时间段" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5oh-Bw-i11">
+                                <rect key="frame" x="20" y="0.0" width="150" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Vbq-AJ-bou"/>
+                                </constraints>
+                                <color key="textColor" red="0.58431372550000005" green="0.58823529409999997" blue="0.59215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="dAv-XF-E3e" firstAttribute="leading" secondItem="sIN-NT-TyG" secondAttribute="leading" constant="20" id="Enw-lt-mgc"/>
+                            <constraint firstItem="5oh-Bw-i11" firstAttribute="leading" secondItem="sIN-NT-TyG" secondAttribute="leading" constant="20" id="Hob-64-hZO"/>
                             <constraint firstItem="rM1-R6-yRL" firstAttribute="top" secondItem="sIN-NT-TyG" secondAttribute="top" id="MbK-3B-5xr"/>
                             <constraint firstAttribute="trailing" secondItem="rM1-R6-yRL" secondAttribute="trailing" constant="20" id="QBL-BG-Y6j"/>
-                            <constraint firstItem="dAv-XF-E3e" firstAttribute="top" secondItem="sIN-NT-TyG" secondAttribute="top" id="Vqc-bK-NqS"/>
-                            <constraint firstAttribute="bottom" secondItem="dAv-XF-E3e" secondAttribute="bottom" id="YgM-Kk-R88"/>
                             <constraint firstAttribute="bottom" secondItem="rM1-R6-yRL" secondAttribute="bottom" id="gUu-Vg-CcY"/>
+                            <constraint firstAttribute="bottom" secondItem="5oh-Bw-i11" secondAttribute="bottom" id="hWa-wf-o9I"/>
                             <constraint firstAttribute="height" constant="40" id="l8o-wc-W7V"/>
+                            <constraint firstItem="5oh-Bw-i11" firstAttribute="top" secondItem="sIN-NT-TyG" secondAttribute="top" id="qvG-gf-qnN"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tvi-jK-Jex">
@@ -132,8 +132,10 @@
                 <constraint firstItem="tvi-jK-Jex" firstAttribute="leading" secondItem="KGk-i7-Jjw" secondAttribute="leading" id="z7c-Oi-Dkv"/>
             </constraints>
             <connections>
+                <outlet property="setBtn" destination="rM1-R6-yRL" id="oDz-Or-AsI"/>
                 <outlet property="setSwitch" destination="096-pi-sha" id="UyW-QQ-Q5Z"/>
-                <outlet property="timeLab" destination="dAv-XF-E3e" id="C5f-vh-jYH"/>
+                <outlet property="setviewH" destination="l8o-wc-W7V" id="W8q-zm-NAN"/>
+                <outlet property="timeText" destination="5oh-Bw-i11" id="9xI-Iw-ZbL"/>
             </connections>
         </tableViewCell>
     </objects>

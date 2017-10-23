@@ -34,6 +34,8 @@
 #import "ATQMeModel.h"
 @interface ATQMeViewController ()<UITableViewDelegate,UITableViewDataSource>{
     BOOL isBusiness;
+    BOOL isSetSus;
+    BOOL isFirst;
 }
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,strong)ATQMeHeadView *headView;
@@ -153,6 +155,7 @@
                     _headView.VIPView1.hidden = YES;
                     _headView.VIPView2.hidden = YES;
                 }
+                [self.tableView reloadData];
             }
         }else{
             [MBProgressHUD show:responseObject[@"message"] view:self.view];
@@ -251,6 +254,40 @@
             NSArray *array = [[NSBundle mainBundle]loadNibNamed: CellIdentifier owner:self options:nil];
             cell = [array objectAtIndex:0];
         }
+        NSString *disturbed_time = _MeDic[@"disturbed_time"];
+        NSString *disturbed_open = _MeDic[@"disturbed_open"];
+        if (isFirst == NO) {
+            if (disturbed_open != nil && [disturbed_open isEqualToString:@"1"]) {
+                cell.setSwitch.on = YES;
+                cell.setviewH.constant = 40;
+                cell.setBtn.hidden = NO;
+                cell.timeText.text = disturbed_time;
+                isSetSus = YES;
+            }else{
+                cell.setSwitch.on = NO;
+                cell.setBtn.hidden = YES;
+                cell.setviewH.constant = 0;
+                cell.timeText.text = @"";
+                isSetSus = NO;
+            }
+        }else{
+            cell.setviewH.constant = 40;
+            cell.setBtn.hidden = NO;
+            cell.timeText.text = disturbed_time;
+        }
+        cell.setswitchblock = ^(BOOL isSet) {
+            isFirst = isSetSus = isSet;
+            if (isSet == YES) {
+                [self.tableView reloadData];
+            } else{
+                [self setWuRaoTime:@""];
+            }
+            
+        };
+        cell.settimeblock = ^(NSString *timeStr) {
+            NSLog(@"---%@",timeStr);
+            [self setWuRaoTime:timeStr];
+        };
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }else if (indexPath.section == 2){
@@ -324,7 +361,12 @@
     if (indexPath.section == 0) {
         return 80*ScreenWidth/375;
     }else if (indexPath.section == 1){
-        return 110;
+        if (isSetSus == YES) {
+            return 110;
+        }else{
+            return 70;
+        }
+        
     }else{
         return 40;
     }
@@ -347,6 +389,47 @@
     }else{
         return 10;
     }
+}
+
+-(void)setWuRaoTime:(NSString*)time{
+    NSString *status = nil;
+    if (isSetSus == YES) {
+        status = @"1";
+    }else{
+        status = @"0";
+    }
+    NSMutableDictionary *params = [NSMutableDictionary  dictionary];
+    NSString *user_id = [[NSUserDefaults standardUserDefaults] objectForKey:USER_ID_AOTU_ZL];
+    NSString *user_token = [[NSUserDefaults standardUserDefaults] objectForKey:USER_TOEKN_AOTU_ZL];
+    params[@"status"] = status;
+    params[@"time"] = time;
+    params[@"user_id"] = user_id;
+    params[@"user_token"] = user_token;
+    params[@"apptype"] = @"ios";
+    params[@"appversion"] = @"1.0.0";
+    NSString *random_str = [LhkhHttpsManager getNowTimeTimestamp];
+    params[@"random_str"] = random_str;
+    NSString *app_token = APP_TOKEN;
+    NSString *signStr = [NSString stringWithFormat:@"%@%@",app_token,random_str];
+    NSString *sign1 = [LhkhHttpsManager md5:signStr];
+    NSString *sign2 = [LhkhHttpsManager md5:sign1];
+    NSString *sign = [LhkhHttpsManager md5:sign2];
+    params[@"sign"] = sign;
+    NSString *url = [NSString stringWithFormat:@"%@/api/user/disturbed_setting",ATQBaseUrl];
+    
+    [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
+        NSLog(@"-----disturbed_setting=%@",responseObject);
+        if ([responseObject[@"status"] isEqualToString:@"1"]) {
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+            isFirst = NO;
+            [self loadData];
+        }else{
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+        }
+        
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
 }
 
 -(NSDictionary*)MeDic{

@@ -11,7 +11,10 @@
 #import "IQKeyboardManager.h"
 #import "DemoPreDefine.h"
 #import "iflyMSC/IFlyFaceSDK.h"
-@interface AppDelegate ()
+#import <BaiduMapAPI_Map/BMKMapComponent.h>
+@interface AppDelegate (){
+    BMKMapManager* _mapManager;
+}
 
 @end
 
@@ -35,6 +38,23 @@
     manager.enableAutoToolbar = NO;
     //集成讯飞
     [self makeConfiguration];
+    
+    //集成百度地图
+    _mapManager = [[BMKMapManager alloc]init];
+    /**
+     *百度地图SDK所有接口均支持百度坐标（BD09）和国测局坐标（GCJ02），用此方法设置您使用的坐标类型.
+     *默认是BD09（BMK_COORDTYPE_BD09LL）坐标.
+     *如果需要使用GCJ02坐标，需要设置CoordinateType为：BMK_COORDTYPE_COMMON.
+     */
+    if ([BMKMapManager setCoordinateTypeUsedInBaiduMapSDK:BMK_COORDTYPE_BD09LL]) {
+        NSLog(@"经纬度类型设置成功");
+    } else {
+        NSLog(@"经纬度类型设置失败");
+    }
+    BOOL ret = [_mapManager start:@"Please enter your key" generalDelegate:self];
+    if (!ret) {
+        NSLog(@"manager start failed!");
+    }
     
     /**
      *==========ZL注释start===========
@@ -165,6 +185,29 @@
     //所有服务启动前，需要确保执行createUtility
     [IFlySpeechUtility createUtility:initString];
 }
+
+#pragma mark -百度地图
+- (void)onGetNetworkState:(int)iError
+{
+    if (0 == iError) {
+        NSLog(@"联网成功");
+    }
+    else{
+        NSLog(@"onGetNetworkState %d",iError);
+    }
+    
+}
+
+- (void)onGetPermissionState:(int)iError
+{
+    if (0 == iError) {
+        NSLog(@"授权成功");
+    }
+    else {
+        NSLog(@"onGetPermissionState %d",iError);
+    }
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

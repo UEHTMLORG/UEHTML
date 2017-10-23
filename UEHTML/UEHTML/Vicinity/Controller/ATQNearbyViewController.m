@@ -20,9 +20,16 @@
 #import "XHHPageControl.h"
 #import "UIColor+LhkhColor.h"
 #import "ATQTypeListInviteDetailViewController.h"
-@interface ATQNearbyViewController ()<UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource,UIScrollViewDelegate>{
+#import "LhkhHttpsManager.h"
+#import "MBProgressHUD+Add.h"
+#import <BaiduMapAPI_Map/BMKMapComponent.h>
+#import <BaiduMapAPI_Location/BMKLocationComponent.h>
+@interface ATQNearbyViewController ()<UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource,UIScrollViewDelegate,BMKLocationServiceDelegate>{
     UIView *headView;
     NSMutableArray *_imageArray;//滚动图数组
+    BMKLocationService* _locService;
+    NSString *lat;
+    NSString *lon;
 
 }
 @property (nonatomic,strong)UITableView *tableView;
@@ -41,8 +48,65 @@
     _imageArray = [NSMutableArray array];
     NSArray *array = @[@"http://img5.imgtn.bdimg.com/it/u=503735038,481712869&fm=200&gp=0.jpg",@"http://img2.imgtn.bdimg.com/it/u=3438207759,2243402979&fm=200&gp=0.jpg",@"http://img3.imgtn.bdimg.com/it/u=742446113,121668976&fm=200&gp=0.jpg"];
     [_imageArray addObjectsFromArray:array];
+    _locService = [[BMKLocationService alloc]init];
+    [_locService startUserLocationService];
     [self buildheadView];
     
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    _locService.delegate = self;
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    _locService.delegate = nil;
+}
+
+/**
+ *用户位置更新后，会调用此函数
+ *@param userLocation 新的用户位置
+ */
+- (void)didUpdateBMKUserLocation:(BMKUserLocation *)userLocation
+{
+    lat = [NSString stringWithFormat:@"%f",userLocation.location.coordinate.latitude] ;
+    lon = [NSString stringWithFormat:@"%f",userLocation.location.coordinate.longitude] ;
+    NSLog(@"lat===%@----log===%@",lat,lon);
+    [self loadData];
+}
+
+-(void)loadData{
+    NSMutableDictionary *params = [NSMutableDictionary  dictionary];
+    NSString *user_id = [[NSUserDefaults standardUserDefaults] objectForKey:USER_ID_AOTU_ZL];
+    NSString *user_token = [[NSUserDefaults standardUserDefaults] objectForKey:USER_TOEKN_AOTU_ZL];
+    params[@"lat"] = lat;
+    params[@"lon"] = lon;
+    params[@"user_id"] = user_id;
+    params[@"user_token"] = user_token;
+    params[@"apptype"] = @"ios";
+    params[@"appversion"] = @"1.0.0";
+    NSString *random_str = [LhkhHttpsManager getNowTimeTimestamp];
+    params[@"random_str"] = random_str;
+    NSString *app_token = APP_TOKEN;
+    NSString *signStr = [NSString stringWithFormat:@"%@%@",app_token,random_str];
+    NSString *sign1 = [LhkhHttpsManager md5:signStr];
+    NSString *sign2 = [LhkhHttpsManager md5:sign1];
+    NSString *sign = [LhkhHttpsManager md5:sign2];
+    params[@"sign"] = sign;
+    NSString *url = [NSString stringWithFormat:@"%@/api/home/index",ATQBaseUrl];
+    
+    [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
+        NSLog(@"-----home=%@",responseObject);
+        if ([responseObject[@"status"] isEqualToString:@"1"]) {
+            if(responseObject[@"data"]){
+                
+            }
+        }else{
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+        }
+        
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
 }
 
 -(void)setTableView{
@@ -270,7 +334,7 @@
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSArray *imgarr = @[@"fujin-peiliaotian",@"fujin-anmo",@"fujin-wine",@"fujin-eat",@"fujin-movie",@"fujin-sing",@"fujin-tourism",@"fujin-game",@"fujin-sport",@"fujin-other",];
+    NSArray *imgarr = @[@"fujin-peiliao",@"fujin-anmo",@"fujin-wine",@"fujin-eat",@"fujin-movie",@"fujin-sing",@"fujin-tourism",@"fujin-game",@"fujin-sport",@"fujin-other",];
     NSArray *namearr = @[@"陪聊天",@"按摩",@"送红酒",@"吃饭",@"看电影",@"唱歌",@"旅游",@"打游戏",@"运动",@"其他",];
     if (collectionView.tag == 0) {
         ATQTagCollectionViewCell *cell = (ATQTagCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"ATQTagCollectionViewCell" forIndexPath:indexPath];

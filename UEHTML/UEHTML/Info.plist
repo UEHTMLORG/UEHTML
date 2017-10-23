@@ -101,6 +101,10 @@
 	<string>凹凸圈想要访问您的媒体</string>
 	<key>NSCameraUsageDescription</key>
 	<string>凹凸圈想要访问您的相机</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>凹凸圈想要始终访问您的位置</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>凹凸圈想要访问您的位置</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>凹凸圈想要访问您的媒体</string>
 	<key>NSPhotoLibraryUsageDescription</key>

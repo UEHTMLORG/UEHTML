@@ -8,7 +8,8 @@
 
 #import "ATQSecendTableViewCell.h"
 #import "UIColor+LhkhColor.h"
-
+@interface ATQSecendTableViewCell()<UITextFieldDelegate>
+@end
 @implementation ATQSecendTableViewCell
 
 - (void)awakeFromNib {
@@ -16,9 +17,15 @@
     self.setSwitch.onTintColor = [UIColor colorWithHexString:UIColorStr];
     self.setSwitch.transform = CGAffineTransformMakeScale(0.75, 0.75);
 }
-- (IBAction)switchClick:(id)sender {
+- (IBAction)switchClick:(UISwitch*)sender {
+    if (_setswitchblock) {
+        _setswitchblock(sender.on);
+    }
 }
 - (IBAction)setupClick:(id)sender {
+    if (_settimeblock) {
+        _settimeblock(self.timeText.text);
+    }
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

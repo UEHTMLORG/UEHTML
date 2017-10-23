@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
+typedef void (^SetSwitchBlock)(BOOL isSet);
+typedef void (^SetTimeBlock)(NSString *timeStr);
 @interface ATQSecendTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UISwitch *setSwitch;
-@property (weak, nonatomic) IBOutlet UILabel *timeLab;
+@property (weak, nonatomic) IBOutlet UITextField *timeText;
 
+@property(nonatomic,copy)SetSwitchBlock setswitchblock;
+@property(nonatomic,copy)SetTimeBlock settimeblock;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *setviewH;
+@property (weak, nonatomic) IBOutlet UIButton *setBtn;
 
 @end

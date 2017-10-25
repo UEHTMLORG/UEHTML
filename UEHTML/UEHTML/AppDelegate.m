@@ -51,7 +51,7 @@
     } else {
         NSLog(@"经纬度类型设置失败");
     }
-    BOOL ret = [_mapManager start:@"Please enter your key" generalDelegate:self];
+    BOOL ret = [_mapManager start:APP_KEY generalDelegate:self];
     if (!ret) {
         NSLog(@"manager start failed!");
     }

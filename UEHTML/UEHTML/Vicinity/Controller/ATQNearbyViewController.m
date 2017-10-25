@@ -24,18 +24,24 @@
 #import "MBProgressHUD+Add.h"
 #import <BaiduMapAPI_Map/BMKMapComponent.h>
 #import <BaiduMapAPI_Location/BMKLocationComponent.h>
+#import "ATQHomeModel.h"
+#import "ATQRecModel.h"
 @interface ATQNearbyViewController ()<UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource,UIScrollViewDelegate,BMKLocationServiceDelegate>{
     UIView *headView;
     NSMutableArray *_imageArray;//滚动图数组
     BMKLocationService* _locService;
     NSString *lat;
     NSString *lon;
-
+    NSMutableArray *leftArray;
+    NSMutableArray *midArray;
+    NSMutableArray *rightArray;
 }
 @property (nonatomic,strong)UITableView *tableView;
 @property (strong,nonatomic)UIScrollView *imageScrollView;
 @property (strong,nonatomic)XHHPageControl *pagecontrol;
 @property (strong,nonatomic)NSTimer *timer;
+@property (strong,nonatomic)NSMutableArray *job_classArr;
+@property (strong,nonatomic)NSMutableArray *recommend_listArr;
 
 
 @end
@@ -46,8 +52,11 @@
     [super viewDidLoad];
     [self setTableView];
     _imageArray = [NSMutableArray array];
-    NSArray *array = @[@"http://img5.imgtn.bdimg.com/it/u=503735038,481712869&fm=200&gp=0.jpg",@"http://img2.imgtn.bdimg.com/it/u=3438207759,2243402979&fm=200&gp=0.jpg",@"http://img3.imgtn.bdimg.com/it/u=742446113,121668976&fm=200&gp=0.jpg"];
-    [_imageArray addObjectsFromArray:array];
+    leftArray = [NSMutableArray array];
+    midArray = [NSMutableArray array];
+    rightArray = [NSMutableArray array];
+//    NSArray *array = @[@"http://img5.imgtn.bdimg.com/it/u=503735038,481712869&fm=200&gp=0.jpg",@"http://img2.imgtn.bdimg.com/it/u=3438207759,2243402979&fm=200&gp=0.jpg",@"http://img3.imgtn.bdimg.com/it/u=742446113,121668976&fm=200&gp=0.jpg"];
+//    [_imageArray addObjectsFromArray:array];
     _locService = [[BMKLocationService alloc]init];
     [_locService startUserLocationService];
     [self buildheadView];
@@ -95,16 +104,58 @@
     NSString *url = [NSString stringWithFormat:@"%@/api/home/index",ATQBaseUrl];
     
     [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
+        [self.tableView.mj_header endRefreshing];
         NSLog(@"-----home=%@",responseObject);
         if ([responseObject[@"status"] isEqualToString:@"1"]) {
+            [_imageArray removeAllObjects];
+            [_job_classArr removeAllObjects];
+            [_recommend_listArr removeAllObjects];
             if(responseObject[@"data"]){
-                
+                NSArray *arr = responseObject[@"data"][@"banner"];
+                [_imageArray addObjectsFromArray:arr];
+                if (![_imageArray isKindOfClass:[NSNull class]]) {//防崩溃
+                    [self imageUIInit];
+                }
+                if (responseObject[@"data"][@"job_class"]) {
+                    self.job_classArr = [ATQHomeModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"][@"job_class"]];
+                }
+                [leftArray removeAllObjects];
+                [midArray removeAllObjects];
+                [rightArray removeAllObjects];
+                if (responseObject[@"data"][@"recommend_list"]) {
+                    self.recommend_listArr = [ATQRecModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"][@"recommend_list"]];
+                    
+                    if (self.recommend_listArr.count>0) {
+                        
+                        NSInteger hangcount = self.recommend_listArr.count/3;
+                        NSInteger liecount = self.recommend_listArr.count%3;
+                        for (int i = 0; i<=hangcount; i++) {
+                            for (int j = 0; j<(3*i+liecount); j++) {
+                                if (j==0 && i==0) {
+                                    [leftArray addObject:self.recommend_listArr[j]];
+                                }else{
+                                    if (j%3 == 0 && j!=0) {
+                                        [leftArray addObject:self.recommend_listArr[i*3]];
+                                    }else if(j%3 == 1){
+                                        [midArray addObject:self.recommend_listArr[3*i-2]];
+                                    }else if(j%3 == 2){
+                                        [rightArray addObject:self.recommend_listArr[3*i-1]];
+                                    }
+                                }
+                            }
+                        }
+                        NSLog(@"left--->%ld---mid--->%ld---right--->%ld",leftArray.count,midArray.count,rightArray.count);
+                    }
+                }
             }
+            [self.tableView reloadData];
         }else{
+            [self.tableView.mj_header endRefreshing];
             [MBProgressHUD show:responseObject[@"message"] view:self.view];
         }
         
     } failure:^(NSError *error) {
+        [self.tableView.mj_header endRefreshing];
         NSLog(@"%@",error);
     }];
 }
@@ -123,9 +174,9 @@
         tableView;
     });
     
-    //    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadData)];
-    //    self.tableView.mj_header.automaticallyChangeAlpha = YES;
-    //    [self.tableView.mj_header beginRefreshing];
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadData)];
+    self.tableView.mj_header.automaticallyChangeAlpha = YES;
+    [self.tableView.mj_header beginRefreshing];
     self.tableView.mj_footer = [self loadMoreDataFooterWith:self.tableView];
     
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -140,13 +191,11 @@
     
     headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenWidth*170/375)];
     _imageScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenWidth*170/375)];
-    _pagecontrol = [[XHHPageControl alloc]initWithFrame:CGRectMake((ScreenWidth-100)/2, ScreenWidth*170/375-20, 100, 20)];
+    _pagecontrol = [[XHHPageControl alloc] initWithFrame:CGRectMake((ScreenWidth-100)/2, ScreenWidth*170/375-20, 100, 20)];
     _pagecontrol.userInteractionEnabled = NO;
     [headView addSubview:_imageScrollView];
     [headView addSubview: _pagecontrol];
-    if (![_imageArray isKindOfClass:[NSNull class]]) {//防崩溃
-        [self imageUIInit];
-    }
+    
     [self addTimer];
 }
 
@@ -192,6 +241,7 @@
         cell.tagCollectionView.dataSource = self;
         cell.tagCollectionView.tag = 0;
         [cell.tagCollectionView registerNib:[UINib  nibWithNibName:@"ATQTagCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"ATQTagCollectionViewCell"];
+        [cell.tagCollectionView reloadData];
         return cell;
     }else{
         static NSString *CellIdentifier = @"ATQRecPerTableViewCell" ;
@@ -205,14 +255,17 @@
         cell.leftCollectionView.dataSource = self;
         cell.leftCollectionView.tag = 1;
         [cell.leftCollectionView registerNib:[UINib  nibWithNibName:@"ATQRecPerCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"ATQRecPerCollectionViewCell"];
+        [cell.leftCollectionView reloadData];
         cell.midCollectionView.delegate = self;
         cell.midCollectionView.dataSource = self;
         cell.midCollectionView.tag = 2;
         [cell.midCollectionView registerNib:[UINib  nibWithNibName:@"ATQRecPerCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"ATQRecPerCollectionViewCell"];
+        [cell.midCollectionView reloadData];
         cell.rightCollectionView.delegate = self;
         cell.rightCollectionView.dataSource = self;
         cell.rightCollectionView.tag = 3;
         [cell.rightCollectionView registerNib:[UINib  nibWithNibName:@"ATQRecPerCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"ATQRecPerCollectionViewCell"];
+        [cell.rightCollectionView reloadData];
         return cell;
     }
     return cell;
@@ -227,7 +280,8 @@
         return 2*(7*width/5+5);
     }else{
         float width = (ScreenWidth-80)/3;
-        return 10*(14*width/8+20);
+        int count = (_recommend_listArr.count+2)/3;
+        return count*(14*width/8+40);
     }
 }
 
@@ -264,7 +318,7 @@
         
         UIImageView *imageview =[[UIImageView alloc]initWithFrame:CGRectMake(imageScrollViewWidth*i, 0, imageScrollViewWidth,imageScrollViewHeight)];
         
-        [imageview sd_setImageWithURL:[NSURL URLWithString:_imageArray[i]] placeholderImage:[UIImage imageNamed:@""]];
+        [imageview sd_setImageWithURL:[NSURL URLWithString:_imageArray[i][@"pic"]] placeholderImage:[UIImage imageNamed:@""]];
 
 //        imageview.contentMode = UIViewContentModeScaleAspectFit;
 //        imageview.tag = i;
@@ -330,24 +384,88 @@
 #pragma mark - UICollectionViewDataSource
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 10;
+    if (collectionView.tag == 0) {
+        return 10;
+    }else if(collectionView.tag == 1){
+        return leftArray.count;
+    }else if (collectionView.tag == 2){
+        return midArray.count;
+    }else{
+        return rightArray.count;
+    }
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     NSArray *imgarr = @[@"fujin-peiliao",@"fujin-anmo",@"fujin-wine",@"fujin-eat",@"fujin-movie",@"fujin-sing",@"fujin-tourism",@"fujin-game",@"fujin-sport",@"fujin-other",];
     NSArray *namearr = @[@"陪聊天",@"按摩",@"送红酒",@"吃饭",@"看电影",@"唱歌",@"旅游",@"打游戏",@"运动",@"其他",];
+    
     if (collectionView.tag == 0) {
+        
         ATQTagCollectionViewCell *cell = (ATQTagCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"ATQTagCollectionViewCell" forIndexPath:indexPath];
+        if (self.job_classArr.count >0) {
+            ATQHomeModel *model = self.job_classArr[indexPath.row];
+            if ([model.is_hot isEqualToString:@"1"]) {
+                cell.statusImg.hidden = NO;
+            }else{
+                cell.statusImg.hidden = YES;
+            }
+        }
         cell.tagImg.image = [UIImage imageNamed:imgarr[indexPath.row]];
         cell.tagLab.text = namearr[indexPath.row];
+        
         collectionView.scrollEnabled = NO;
         return cell;
     }else{
+        
         ATQRecPerCollectionViewCell *cell = (ATQRecPerCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"ATQRecPerCollectionViewCell" forIndexPath:indexPath];
         collectionView.scrollEnabled = NO;
         CGSize size = cell.frame.size;
         cell.recpImg.layer.cornerRadius = size.width/2;
         cell.recpImg.layer.masksToBounds = YES;
+        ATQRecModel *model = nil;
+        if (collectionView.tag == 1) {
+            if (leftArray.count>0) {
+                model = leftArray[indexPath.row];
+                [cell.recpImg sd_setImageWithURL:[NSURL URLWithString:model.avatar] placeholderImage:[UIImage imageNamed:@""]];
+                cell.nameLab.text = model.nick_name;
+                cell.timeLab.text = model.actived_at;
+                cell.bzLab1.text = model.job_class_name;
+                cell.bzLab2.text = [NSString stringWithFormat:@"%@岁",model.age];
+                if ([model.video_auth isEqualToString:@"0"]) {
+                    cell.bzImg.hidden = YES;
+                }else{
+                    cell.bzImg.hidden = NO;
+                }
+            }
+        }else if (collectionView.tag == 2){
+            if (midArray.count>0) {
+                model = midArray[indexPath.row];
+                [cell.recpImg sd_setImageWithURL:[NSURL URLWithString:model.avatar] placeholderImage:[UIImage imageNamed:@""]];
+                cell.nameLab.text = model.nick_name;
+                cell.timeLab.text = model.actived_at;
+                cell.bzLab1.text = model.job_class_name;
+                cell.bzLab2.text = [NSString stringWithFormat:@"%@岁",model.age];
+                if ([model.video_auth isEqualToString:@"0"]) {
+                    cell.bzImg.hidden = YES;
+                }else{
+                    cell.bzImg.hidden = NO;
+                }
+            }
+        }else{
+            if (rightArray.count>0) {
+                model = rightArray[indexPath.row];
+                [cell.recpImg sd_setImageWithURL:[NSURL URLWithString:model.avatar] placeholderImage:[UIImage imageNamed:@""]];
+                cell.nameLab.text = model.nick_name;
+                cell.timeLab.text = model.actived_at;
+                cell.bzLab1.text = model.job_class_name;
+                cell.bzLab2.text = [NSString stringWithFormat:@"%@岁",model.age];
+                if ([model.video_auth isEqualToString:@"0"]) {
+                    cell.bzImg.hidden = YES;
+                }else{
+                    cell.bzImg.hidden = NO;
+                }
+            }
+        }
         return cell;
     }
 }
@@ -403,8 +521,18 @@ minimumLineSpacingForSectionAtIndex:(NSInteger)section
     return 0.f;
 }
 
-
-
+-(NSMutableArray*)job_classArr{
+    if (_job_classArr == nil) {
+        _job_classArr = [NSMutableArray array];
+    }
+    return _job_classArr;
+}
+-(NSMutableArray*)recommend_listArr{
+    if (_recommend_listArr == nil) {
+        _recommend_listArr = [NSMutableArray array];
+    }
+    return _recommend_listArr;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

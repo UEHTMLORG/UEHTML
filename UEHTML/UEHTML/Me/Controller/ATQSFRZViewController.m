@@ -12,6 +12,7 @@
 #import "MBProgressHUD+Add.h"
 #import "UIImageView+WebCache.h"
 #import "ATQFaceRZViewController.h"
+#import "ATQSFShiLiViewController.h"
 @interface ATQSFRZViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIActionSheetDelegate,FaceRZIsSuccessDelegate>
 {
     NSString *imgType;
@@ -42,6 +43,8 @@
     }
 }
 - (IBAction)cardListClick:(id)sender {
+    
+
 }
 - (IBAction)zhengImgClick:(id)sender {
     imgType = @"zhengImg";
@@ -51,6 +54,23 @@
     imgType = @"cardImg";
     [self selectImage];
 }
+- (IBAction)shiliClick:(id)sender {
+    ATQSFShiLiViewController *vc = [[ATQSFShiLiViewController alloc]init];
+    
+    vc.view.backgroundColor = [UIColor colorWithWhite:0.5 alpha:0.6];
+    if ([[[UIDevice currentDevice] systemVersion] floatValue]>=8.0) {
+        vc.modalPresentationStyle=UIModalPresentationOverCurrentContext;
+        
+    }else{
+        self.modalPresentationStyle=UIModalPresentationCurrentContext;
+        
+    }
+    [self presentViewController:vc  animated:YES completion:^(void)
+     {
+         vc.view.superview.backgroundColor = [UIColor clearColor];
+     }];
+}
+
 - (IBAction)commitClick:(id)sender {
     NSLog(@"idcard=%@-id_positive=%@-hold_url=%@",self.cardNumText.text,id_positive,hold_url);
     if (self.cardNumText.text != nil && id_positive != nil && hold_url != nil) {

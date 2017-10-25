@@ -14,6 +14,11 @@
     [super awakeFromNib];
     // Initialization code
 }
+- (IBAction)yuetaClick:(id)sender {
+    if (_yuetablock) {
+        _yuetablock();
+    }
+}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

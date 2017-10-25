@@ -13,9 +13,12 @@
 #import "MJRefresh.h"
 #import "UIImageView+WebCache.h"
 #import "UIColor+LhkhColor.h"
-
+#import "LhkhHttpsManager.h"
+#import "MBProgressHUD+Add.h"
+#import "ATQCollectModel.h"
 @interface ATQCollectViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITableView *tableView;
+@property (nonatomic,strong)NSMutableArray *collectArr;
 
 @end
 
@@ -25,7 +28,45 @@
     [super viewDidLoad];
     self.navigationItem.title = @"我的收藏";
     [self setTableView];
+    [self loadData];
 }
+
+-(void)loadData{
+    NSMutableDictionary *params = [NSMutableDictionary  dictionary];
+    NSString *user_id = [[NSUserDefaults standardUserDefaults] objectForKey:USER_ID_AOTU_ZL];
+    NSString *user_token = [[NSUserDefaults standardUserDefaults] objectForKey:USER_TOEKN_AOTU_ZL];
+    params[@"user_id"] = user_id;
+    params[@"user_token"] = user_token;
+    params[@"apptype"] = @"ios";
+    params[@"appversion"] = @"1.0.0";
+    NSString *random_str = [LhkhHttpsManager getNowTimeTimestamp];
+    params[@"random_str"] = random_str;
+    NSString *app_token = APP_TOKEN;
+    NSString *signStr = [NSString stringWithFormat:@"%@%@",app_token,random_str];
+    NSString *sign1 = [LhkhHttpsManager md5:signStr];
+    NSString *sign2 = [LhkhHttpsManager md5:sign1];
+    NSString *sign = [LhkhHttpsManager md5:sign2];
+    params[@"sign"] = sign;
+    NSString *url = [NSString stringWithFormat:@"%@/api/user/collection/data",ATQBaseUrl];
+    
+    [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
+        NSLog(@"-----collection=%@",responseObject);
+        
+        if ([responseObject[@"status"] isEqualToString:@"1"]) {
+            [self.collectArr removeAllObjects];
+            if(responseObject[@"data"]){
+                self.collectArr = [ATQCollectModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
+                [self.tableView reloadData];
+            }
+        }else{
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+        }
+        
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+}
+
 -(void)setTableView{
     _tableView = ({
         UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectZero];
@@ -48,7 +89,7 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 3;
+    return self.collectArr.count;
 }
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *CellIdentifier = @"ATQCollectTableViewCell" ;
@@ -58,7 +99,26 @@
         cell = [array objectAtIndex:0];
     }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        
+    if (self.collectArr.count>0) {
+        ATQCollectModel *model = self.collectArr[indexPath.row];
+        [cell.headImg sd_setImageWithURL:[NSURL URLWithString:model.avatar] placeholderImage:[UIImage imageNamed:@""]];
+        cell.userName.text = model.nick_name;
+        [cell.disBtn setTitle:[NSString stringWithFormat:@"%@",model.distance] forState:UIControlStateNormal];
+        cell.bqLab.text = model.job_class_name;
+        cell.ageLab.text = model.age;
+        if ([model.gender isEqualToString:@"0"]) {
+            cell.bqImg.hidden = YES;
+        }else if ([model.gender isEqualToString:@"1"]){
+            cell.bqImg.hidden = NO;
+            cell.bqImg.image = [UIImage imageNamed:@"my-sex02"];
+        }else{
+            cell.bqImg.hidden = NO;
+            cell.bqImg.image = [UIImage imageNamed:@"my-sex"];
+        }
+        cell.yuetablock = ^{
+            NSLog(@"约她");
+        };
+    }
     return cell;
 
 }
@@ -120,6 +180,12 @@
      return arr;
 }
 
+-(NSMutableArray*)collectArr{
+    if (_collectArr == nil) {
+        _collectArr = [NSMutableArray array];
+    }
+    return _collectArr;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

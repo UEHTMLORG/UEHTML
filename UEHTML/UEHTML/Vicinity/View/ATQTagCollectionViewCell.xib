@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -34,20 +34,33 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fujin-hot" translatesAutoresizingMaskIntoConstraints="NO" id="hbl-vr-rbH">
+                        <rect key="frame" x="26" y="0.0" width="24" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="apU-yO-V04"/>
+                            <constraint firstAttribute="width" secondItem="hbl-vr-rbH" secondAttribute="height" multiplier="3:2" id="g5C-AY-Uk8"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstItem="8yp-u7-k6h" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="RSg-PQ-3zC"/>
                 <constraint firstAttribute="trailing" secondItem="8yp-u7-k6h" secondAttribute="trailing" id="RxA-4p-LMT"/>
+                <constraint firstAttribute="trailing" secondItem="hbl-vr-rbH" secondAttribute="trailing" id="Z7B-aa-M1x"/>
                 <constraint firstItem="gmJ-UV-lC4" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ZQf-kv-PzU"/>
+                <constraint firstItem="hbl-vr-rbH" firstAttribute="top" secondItem="8yp-u7-k6h" secondAttribute="top" id="dh9-95-Iys"/>
                 <constraint firstAttribute="trailing" secondItem="gmJ-UV-lC4" secondAttribute="trailing" id="fPq-xQ-JEp"/>
                 <constraint firstAttribute="bottom" secondItem="gmJ-UV-lC4" secondAttribute="bottom" constant="5" id="kLq-SX-9qD"/>
                 <constraint firstItem="8yp-u7-k6h" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="nkT-k0-IQO"/>
             </constraints>
             <connections>
+                <outlet property="statusImg" destination="hbl-vr-rbH" id="vhu-MR-hBo"/>
                 <outlet property="tagImg" destination="8yp-u7-k6h" id="y8m-d3-1t8"/>
                 <outlet property="tagLab" destination="gmJ-UV-lC4" id="M1N-Sg-LYU"/>
             </connections>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="fujin-hot" width="46" height="33"/>
+    </resources>
 </document>

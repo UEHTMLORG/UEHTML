@@ -128,7 +128,8 @@
         [self.tableView.mj_header endRefreshing];
         if ([responseObject[@"status"] isEqualToString:@"1"]) {
             
-//            NSString *card_level = responseObject[@"data"][@"card_level"];
+            NSString *card_level = responseObject[@"data"][@"card_level"];
+            [[NSUserDefaults standardUserDefaults]setObject:card_level forKey:CARD_LEVEL_AOTU_ZL];
 //            NSString *disturbed_time = responseObject[@"data"][@"disturbed_time"];
 //            NSString *deposit_auth = responseObject[@"data"][@"deposit_auth"];
             
@@ -278,6 +279,9 @@
         cell.setswitchblock = ^(BOOL isSet) {
             isFirst = isSetSus = isSet;
             if (isSet == YES) {
+                if (disturbed_time !=nil && ![disturbed_time isEqualToString:@""]) {
+                    [self setWuRaoTime:disturbed_time];
+                }
                 [self.tableView reloadData];
             } else{
                 [self setWuRaoTime:@""];

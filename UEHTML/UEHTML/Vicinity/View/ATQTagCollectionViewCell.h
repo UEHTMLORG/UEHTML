@@ -11,5 +11,6 @@
 @interface ATQTagCollectionViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *tagImg;
 @property (weak, nonatomic) IBOutlet UILabel *tagLab;
+@property (weak, nonatomic) IBOutlet UIImageView *statusImg;
 
 @end

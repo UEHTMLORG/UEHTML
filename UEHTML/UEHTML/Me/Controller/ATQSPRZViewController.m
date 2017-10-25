@@ -73,7 +73,8 @@
     if([mediaType isEqualToString:@"public.movie"])
     {
         NSURL *videoURL = [info objectForKey:UIImagePickerControllerMediaURL];
-        NSLog(@"found a video");
+        NSLog(@"%@",[NSString stringWithFormat:@"%f s",[self getVideoLength:videoURL]]);
+        NSLog(@"%@",[NSString stringWithFormat:@"%.2f kb",[self getFileSize:[videoURL path]]]);
         
         NSError *error = nil;
         NSData *data = [NSData dataWithContentsOfURL:videoURL options:NSDataReadingUncached error:&error];
@@ -103,6 +104,29 @@
     }
     
     [picker dismissViewControllerAnimated:NO completion:nil];
+}
+
+#pragma mark --获取视频信息的方法--
+//此方法可以获取文件的大小，返回的是单位是KB。
+-(CGFloat)getFileSize:(NSString *)path{
+    NSLog(@"文件的路径%@",path);
+    NSFileManager * fileManager = [NSFileManager defaultManager];
+    float filesize = -1.0;
+    if ([fileManager fileExistsAtPath:path]) {
+        NSDictionary * fileDic = [fileManager attributesOfItemAtPath:path error:nil];//获取文件的属性
+        unsigned long long size = [[fileDic objectForKey:NSFileSize]longLongValue];
+        filesize = 1.0 * size/1024;
+    } else {
+        NSLog(@"找不到这个文件");
+    }
+    return filesize;
+}
+//这个方法获取的是视频文件的时长
+-(CGFloat)getVideoLength:(NSURL *)url{
+    AVAsset * avUrl = [AVAsset assetWithURL:url];
+    CMTime time = [avUrl duration];
+    int second = ceil(time.value/time.timescale);
+    return second;
 }
 
 - (void)didReceiveMemoryWarning {

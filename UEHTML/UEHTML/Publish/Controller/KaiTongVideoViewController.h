@@ -17,6 +17,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *firstVideoBtn;
 @property (strong, nonatomic) IBOutlet UIButton *secondVideoBtn;
 
-
+@property (nonatomic, strong) NSMutableDictionary *photoArray;
+@property (nonatomic, strong) NSMutableDictionary *videoArray;
 
 @end

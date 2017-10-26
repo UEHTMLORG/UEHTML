@@ -8,7 +8,11 @@
 
 #import "KaiTongVideoViewController.h"
 
-@interface KaiTongVideoViewController ()
+@interface KaiTongVideoViewController (){
+    
+    NSInteger _currentPhotoIndex;
+    NSInteger _currentVideoIndex;
+}
 
 @end
 
@@ -21,9 +25,11 @@
 }
 
 - (IBAction)shangChuanPhotoAction:(UIButton *)sender {
-//    [self uploadImage];
+    //    [self uploadImage];
     [KZPhotoManager getImage:^(UIImage *image) {
-        [self uploadImageWithImage:image];
+        
+        _currentPhotoIndex = sender.tag;
+        [weak_self(self) uploadImageWithImage:image];
         [sender setBackgroundImage:image forState:UIControlStateNormal];
         
         
@@ -33,10 +39,11 @@
 
 - (IBAction)shangChuanVideoAction:(UIButton *)sender {
     
+    _currentVideoIndex = sender.tag;
     [KZPhotoManager getVideo:^(NSURL *videoURL) {
         
     } withData:^(NSData *videoData) {
-        
+        [weak_self(self) uploadVideoWith:videoData];
     } withFirstImage:^(UIImage *firstimage) {
         [sender setBackgroundImage:firstimage forState:UIControlStateNormal];
     } showIn:self AndActionTitle:@"选取视频"];
@@ -57,25 +64,91 @@
  ===========ZL注释end==========*/
 - (void)uploadImageWithImage:(UIImage *)image{
     //api/user/upload_picture
-        NSString * upImageString = [NSString stringWithFormat:@"%@/api/user/upload_picture",Common_URL_ZL];
+    NSString * upImageString = [NSString stringWithFormat:@"%@/api/user/upload_picture",Common_URL_ZL];
     
-        NSDictionary * parmaDic = @{
-                                    @"picture_type":@"car",
-                                    @"picture":@"测试图片"
-                                    };
-    UploadParam * uploadParamImage = [[UploadParam alloc]init];
-    uploadParamImage.data = UIImageJPEGRepresentation(image, 0.5);
-    uploadParamImage.mimeType = @"jpg";
-    uploadParamImage.name = @"测试测试";
-    uploadParamImage.filename = @"car测试";
-    NSLog(@"上传照片的parmaDic:%@",parmaDic);
-    [[ZLSecondAFNetworking sharedInstance] uploadWithURLString:upImageString parameters:[ZLSecondAFNetworking joinParamsWithDict:parmaDic] uploadParam:@[uploadParamImage] success:^{
-        NSLog(@"上传请求成功：");
+    NSData * imageData = UIImageJPEGRepresentation(image, 0.2);
+    NSString *encodedImageStr = [imageData base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
+    NSDictionary * parmaDic = @{
+                                @"picture_type":@"car",
+                                @"picture":encodedImageStr
+                                };
+    //    UploadParam * uploadParamImage = [[UploadParam alloc]init];
+    //    uploadParamImage.data = UIImageJPEGRepresentation(image, 0.5);
+    //    uploadParamImage.mimeType = @"jpg";
+    //    uploadParamImage.name = @"测试测试";
+    //    uploadParamImage.filename = @"car测试";
+    //    NSLog(@"上传照片的parmaDic:%@",parmaDic);
+    //    [[ZLSecondAFNetworking sharedInstance] uploadWithURLString:upImageString parameters:[ZLSecondAFNetworking joinParamsWithDict:parmaDic] uploadParam:@[uploadParamImage] success:^(id responseObject) {
+    //        NSDictionary * dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+    //         NSLog(@"上传请求成功：%@",dic);
+    //    } failure:^(NSError *error) {
+    //        NSLog(@"上传请求失败：%@",error);
+    //    }];
+    [MBManager showLoading];
+    [[ZLSecondAFNetworking sharedInstance] postWithUSER_INFO_URLString:upImageString parameters:parmaDic success:^(id responseObject) {
+        [MBManager hideAlert];
+        NSDictionary * dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSLog(@"上传图片：%@",dic);
+        if ([dic[@"status"] isEqualToString:@"1"]) {
+            [self.photoArray setValue:dic[@"data"] forKey:[NSString stringWithFormat:@"%ld",_currentPhotoIndex]];
+        }
+        
     } failure:^(NSError *error) {
-         NSLog(@"上传请求失败：%@",error);
+         [MBManager hideAlert];
+        NSLog(@"上传请求失败：%@",error);
     }];
-
+    
 }
+//上传视频
+-(void)uploadVideoWith:(NSData *)videoData{
+    ///api/user/upload_video
+    NSString * upImageString = [NSString stringWithFormat:@"%@/api/user/upload_video",Common_URL_ZL];
+    NSString *encodedImageStr = [videoData base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
+    NSDictionary * parmaDic = @{
+                                @"video_type":@"video",
+                                @"video":encodedImageStr
+                                };
+    //    UploadParam * uploadParamImage = [[UploadParam alloc]init];
+    //    uploadParamImage.data = UIImageJPEGRepresentation(image, 0.5);
+    //    uploadParamImage.mimeType = @"jpg";
+    //    uploadParamImage.name = @"测试测试";
+    //    uploadParamImage.filename = @"car测试";
+    //    NSLog(@"上传照片的parmaDic:%@",parmaDic);
+    //    [[ZLSecondAFNetworking sharedInstance] uploadWithURLString:upImageString parameters:[ZLSecondAFNetworking joinParamsWithDict:parmaDic] uploadParam:@[uploadParamImage] success:^(id responseObject) {
+    //        NSDictionary * dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+    //         NSLog(@"上传请求成功：%@",dic);
+    //    } failure:^(NSError *error) {
+    //        NSLog(@"上传请求失败：%@",error);
+    //    }];
+    [MBManager showLoading];
+    [[ZLSecondAFNetworking sharedInstance] postWithUSER_INFO_URLString:upImageString parameters:parmaDic success:^(id responseObject) {
+        [MBManager hideAlert];
+        NSDictionary * dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSLog(@"上传视频：%@",dic);
+        if ([dic[@"status"] isEqualToString:@"1"]) {
+            [self.videoArray setValue:dic[@"data"] forKey:[NSString stringWithFormat:@"%ld",_currentVideoIndex]];
+        }
+    } failure:^(NSError *error) {
+        [MBManager hideAlert];
+        NSLog(@"上传请求失败：%@",error);
+    }];
+    
+}
+
+
+- (NSMutableDictionary *)photoArray{
+    if (!_photoArray) {
+        _photoArray = [NSMutableDictionary new];
+    }
+    return _photoArray;
+}
+- (NSMutableDictionary *)videoArray{
+    if (!_videoArray) {
+        _videoArray = [NSMutableDictionary new];
+    }
+    return _videoArray;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -83,13 +156,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

@@ -104,7 +104,7 @@ typedef NS_ENUM(NSUInteger,HttpRequestTypeZL) {
 - (void)uploadWithURLString:(NSString *)URLString
                  parameters:(id)parameters
                 uploadParam:(NSArray <UploadParam *> *)uploadParams
-                    success:(void (^)())success
+                    success:(void (^)(id responseObject))success
                     failure:(void (^)(NSError *error))failure;
 
 /**
@@ -118,7 +118,7 @@ typedef NS_ENUM(NSUInteger,HttpRequestTypeZL) {
 - (void)downLoadWithURLString:(NSString *)URLString
                    parameters:(id)parameters
                      progerss:(void (^)())progress
-                      success:(void (^)())success
+                      success:(void (^)(id responseObject))success
                       failure:(void (^)(NSError *error))failure;
 
 /**

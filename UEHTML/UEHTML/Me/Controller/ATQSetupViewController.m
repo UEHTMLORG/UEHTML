@@ -285,7 +285,7 @@
 }
 
 -(void)loginout{
-    [(AppDelegate *)[UIApplication sharedApplication].delegate openTabHomeCtrl];
+    [(AppDelegate *)[UIApplication sharedApplication].delegate openLoginCtrl];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -15,7 +15,7 @@
 #import <AFNetworking.h>
 #import "ZLSecondAFNetworking.h"
 #import "MBManager.h"
-
+#import "UploadParam.h"
 ///////////////////////////////////
 #define Main_Purple_Color @"ff73ba"
 #define Light_Gray_Color @"f3f3f3"

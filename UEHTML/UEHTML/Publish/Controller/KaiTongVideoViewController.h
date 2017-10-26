@@ -8,6 +8,7 @@
 
 #import "ATQBaseViewController.h"
 #import "KZPhotoManager.h"
+
 @interface KaiTongVideoViewController : ATQBaseViewController
 
 @property (strong, nonatomic) IBOutlet UIButton *firstImageButton;

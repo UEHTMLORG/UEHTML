@@ -62,6 +62,13 @@ static id _instance = nil;
 }
 
 #pragma mark -- GET请求 --
+- (void)getWithUSER_INFO_URLString:(NSString *)URLString
+                        parameters:(id)parameters
+                           success:(void (^)(id))success
+                           failure:(void (^)(NSError *))failure{
+    
+    [self getWithURLString:URLString parameters:[ZLSecondAFNetworking joinParamsWithDict:parameters] success:success failure:failure];
+}
 - (void)getWithURLString:(NSString *)URLString
               parameters:(id)parameters
                  success:(void (^)(id))success
@@ -92,6 +99,13 @@ static id _instance = nil;
 }
 
 #pragma mark -- POST请求 --
+- (void)postWithUSER_INFO_URLString:(NSString *)URLString
+                         parameters:(id)parameters
+                            success:(void (^)(id))success
+                            failure:(void (^)(NSError *))failure{
+    [self postWithURLString:URLString parameters:[ZLSecondAFNetworking joinParamsWithDict:parameters] success:success failure:failure];
+    
+}
 - (void)postWithURLString:(NSString *)URLString
                parameters:(id)parameters
                   success:(void (^)(id))success
@@ -218,13 +232,43 @@ static id _instance = nil;
     NSDate *datenow = [NSDate date];//现在时间,你可以输出来看下是什么格式
     
     NSString *timeSp = [NSString stringWithFormat:@"%ld", (long)[datenow timeIntervalSince1970]];
-//    NSLog(@"时间未格式化之前得到的字符串：%@",timeSp);
-//    NSString * timeFp = [formatter stringFromDate:datenow];
-//    NSLog(@"时间格式化之后的得到的字符串：%@",timeFp);
-
-    
+    //    NSLog(@"时间未格式化之前得到的字符串：%@",timeSp);
+    //    NSString * timeFp = [formatter stringFromDate:datenow];
+    //    NSLog(@"时间格式化之后的得到的字符串：%@",timeFp);
     return timeSp;
-    
 }
+
+/**
+ *==========ZL注释start===========
+ *1.拼接用户信息
+ *
+ *2.<#注释描述#>
+ *3.<#注释描述#>
+ *4.<#注释描述#>
+ ===========ZL注释end==========*/
++ (NSDictionary *)joinParamsWithDict:(NSDictionary *)params{
+    NSMutableDictionary *allParams = [NSMutableDictionary dictionary];
+    // 拼接传进来的参数
+    if (params) {
+        [allParams setDictionary:params];
+    }
+    
+    NSString *user_id = [[NSUserDefaults standardUserDefaults] objectForKey:USER_ID_AOTU_ZL];
+    NSString *user_token = [[NSUserDefaults standardUserDefaults] objectForKey:USER_TOEKN_AOTU_ZL];
+    allParams[@"user_id"] = user_id;
+    allParams[@"user_token"] = user_token;
+    allParams[@"apptype"] = @"ios";
+    allParams[@"appversion"] = @"1.0.0";
+    NSString *random_str = [self getNowTime];
+    allParams[@"random_str"] = random_str;
+    NSString *app_token = APP_TOKEN;
+    NSString *signStr = [NSString stringWithFormat:@"%@%@",app_token,random_str];
+    NSString *sign1 = [self getMD5fromString:signStr];
+    NSString *sign2 = [self getMD5fromString:sign1];
+    NSString *sign = [self getMD5fromString:sign2];
+    allParams[@"sign"] = sign;
+    return allParams;
+}
+
 
 @end

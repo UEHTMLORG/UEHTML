@@ -26,6 +26,19 @@ typedef NS_ENUM(NSUInteger,HttpRequestTypeZL) {
 + (instancetype)sharedInstance;
 
 /**
+ *==========ZL注释start===========
+ *1.get请求拼接用户信息 NSDictionary
+ *
+ *2.sign
+ *3.md5
+ *4.时间戳
+ ===========ZL注释end==========*/
+- (void)getWithUSER_INFO_URLString:(NSString *)URLString
+              parameters:(id)parameters
+                 success:(void (^)(id responseObject))success
+                 failure:(void (^)(NSError *error))failure;
+
+/**
  *  发送get请求
  *
  *  @param URLString  请求的网址字符串
@@ -37,6 +50,20 @@ typedef NS_ENUM(NSUInteger,HttpRequestTypeZL) {
               parameters:(id)parameters
                  success:(void (^)(id responseObject))success
                  failure:(void (^)(NSError *error))failure;
+
+/**
+ *==========ZL注释start===========
+ *1.post请求 添加用户信息
+ *
+ *2.
+ *3.
+ *4.
+ ===========ZL注释end==========*/
+- (void)postWithUSER_INFO_URLString:(NSString *)URLString
+               parameters:(id)parameters
+                  success:(void (^)(id responseObject))success
+                  failure:(void (^)(NSError *error))failure;
+
 
 /**
  *  发送post请求
@@ -113,5 +140,16 @@ typedef NS_ENUM(NSUInteger,HttpRequestTypeZL) {
  *4.<#注释描述#>
  ===========ZL注释end==========*/
 + (NSString *)getMD5fromString:(NSString *)string;
+
+/**
+ *==========ZL注释start===========
+ *1.拼接用户 信息的 ParmaDictionary
+ *
+ *2.<#注释描述#>
+ *3.<#注释描述#>
+ *4.<#注释描述#>
+ ===========ZL注释end==========*/
++ (NSDictionary *)joinParamsWithDict:(NSDictionary *)params;
+
 
 @end

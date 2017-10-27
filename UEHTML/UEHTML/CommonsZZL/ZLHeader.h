@@ -36,6 +36,7 @@
 #define USER_TOEKN_AOTU_ZL @"USER_TOKEN"
 #define MESSAGE_TOKEN_AOTU_ZL @"message_token"
 #define CARD_LEVEL_AOTU_ZL @"card_level"
+#define APPVERSION_AOTU_ZL @"1.0.0"
 
 #define MAS_SHORTHAND_GLOBALS
 //#define MAS_SHORTHAND

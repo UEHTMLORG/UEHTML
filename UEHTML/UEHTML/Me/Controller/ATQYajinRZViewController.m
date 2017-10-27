@@ -13,8 +13,11 @@
 #import "MJRefresh.h"
 #import "UIImageView+WebCache.h"
 #import "UIColor+LhkhColor.h"
+#import "LhkhHttpsManager.h"
+#import "MBProgressHUD+Add.h"
 @interface ATQYajinRZViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITableView *tableView;
+@property (nonatomic,strong)NSMutableArray *yajinArr;
 
 @end
 
@@ -24,7 +27,46 @@
     [super viewDidLoad];
     self.navigationItem.title = @"押金认证";
     self.view.backgroundColor = [UIColor whiteColor];
+    _yajinArr = [NSMutableArray array];
     [self setTableView];
+    [self loadData];
+}
+
+-(void)loadData{
+    NSMutableDictionary *params = [NSMutableDictionary  dictionary];
+    NSString *user_id = [[NSUserDefaults standardUserDefaults] objectForKey:USER_ID_AOTU_ZL];
+    NSString *user_token = [[NSUserDefaults standardUserDefaults] objectForKey:USER_TOEKN_AOTU_ZL];
+    params[@"user_id"] = user_id;
+    params[@"user_token"] = user_token;
+    params[@"apptype"] = @"ios";
+    params[@"appversion"] = APPVERSION_AOTU_ZL;
+    NSString *random_str = [LhkhHttpsManager getNowTimeTimestamp];
+    params[@"random_str"] = random_str;
+    NSString *app_token = APP_TOKEN;
+    NSString *signStr = [NSString stringWithFormat:@"%@%@",app_token,random_str];
+    NSString *sign1 = [LhkhHttpsManager md5:signStr];
+    NSString *sign2 = [LhkhHttpsManager md5:sign1];
+    NSString *sign = [LhkhHttpsManager md5:sign2];
+    params[@"sign"] = sign;
+    NSString *url = [NSString stringWithFormat:@"%@/api/user/auth_deposit/price_list",ATQBaseUrl];
+    
+    [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
+        NSLog(@"-----price_list=%@",responseObject);
+        [_yajinArr removeAllObjects];
+        if ([responseObject[@"status"] isEqualToString:@"1"]) {
+           
+            if(responseObject[@"data"]){
+                NSArray *arr = responseObject[@"data"];
+                [_yajinArr addObjectsFromArray:arr];
+                [self.tableView reloadData];
+            }
+        }else{
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+        }
+        
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
 }
 
 -(void)setTableView{
@@ -49,7 +91,7 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 6;
+    return _yajinArr.count;
 }
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *CellIdentifier = @"ATQYJRZTableViewCell" ;
@@ -59,31 +101,36 @@
         cell = [array objectAtIndex:0];
     }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    if (indexPath.row == 0) {
-        cell.lvImg.image = [UIImage imageNamed:@"renzheng-yajin"];
-        cell.lvLab.text = @"平民";
-        cell.lvMoney.text = @"￥1000";
-    }else if (indexPath.row == 1) {
-        cell.lvImg.image = [UIImage imageNamed:@"renzheng-yajin02"];
-        cell.lvLab.text = @"商人";
-        cell.lvMoney.text = @"￥2000";
-    }else if (indexPath.row == 2) {
-        cell.lvImg.image = [UIImage imageNamed:@"renzheng-yajin03"];
-        cell.lvLab.text = @"财主";
-        cell.lvMoney.text = @"￥3000";
-    }else if (indexPath.row == 3) {
-        cell.lvImg.image = [UIImage imageNamed:@"renzheng-yajin04"];
-        cell.lvLab.text = @"知县";
-        cell.lvMoney.text = @"￥4000";
-    }else if (indexPath.row == 4) {
-        cell.lvImg.image = [UIImage imageNamed:@"renzheng-yajin05"];
-        cell.lvLab.text = @"总督";
-        cell.lvMoney.text = @"￥5000";
-    }else {
-        cell.lvImg.image = [UIImage imageNamed:@"renzheng-yajin06"];
-        cell.lvLab.text = @"帝主";
-        cell.lvMoney.text = @"￥6000";
+    if (_yajinArr.count>0) {
+        NSDictionary *dic = _yajinArr[indexPath.row];
+        NSString *price = dic[@"price"];
+        if (indexPath.row == 0) {
+            cell.lvImg.image = [UIImage imageNamed:@"renzheng-yajin"];
+            cell.lvLab.text = dic[@"title"];
+            cell.lvMoney.text = [NSString stringWithFormat:@"￥%.0f",price.floatValue];
+        }else if (indexPath.row == 1) {
+            cell.lvImg.image = [UIImage imageNamed:@"renzheng-yajin02"];
+            cell.lvLab.text = dic[@"title"];
+            cell.lvMoney.text = [NSString stringWithFormat:@"￥%.0f",price.floatValue];
+        }else if (indexPath.row == 2) {
+            cell.lvImg.image = [UIImage imageNamed:@"renzheng-yajin03"];
+            cell.lvLab.text = dic[@"title"];
+            cell.lvMoney.text = [NSString stringWithFormat:@"￥%.0f",price.floatValue];
+        }else if (indexPath.row == 3) {
+            cell.lvImg.image = [UIImage imageNamed:@"renzheng-yajin04"];
+            cell.lvLab.text = dic[@"title"];
+            cell.lvMoney.text = [NSString stringWithFormat:@"￥%.0f",price.floatValue];
+        }else if (indexPath.row == 4) {
+            cell.lvImg.image = [UIImage imageNamed:@"renzheng-yajin05"];
+            cell.lvLab.text = dic[@"title"];
+            cell.lvMoney.text = [NSString stringWithFormat:@"￥%.0f",price.floatValue];
+        }else {
+            cell.lvImg.image = [UIImage imageNamed:@"renzheng-yajin06"];
+            cell.lvLab.text = dic[@"title"];
+            cell.lvMoney.text = [NSString stringWithFormat:@"￥%.0f",price.floatValue];
+        }
     }
+    
     cell.renzhengblock = ^{
         NSLog(@"认证%ld",indexPath.row);
     };
@@ -98,6 +145,7 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 60;
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

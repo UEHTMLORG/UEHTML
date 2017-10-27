@@ -49,8 +49,17 @@
      @"user_id":userid
      */
     NSDictionary * parmaDic = @{
+<<<<<<< Updated upstream
                                 @"lat":@"31",
                                 @"lon":@"100"
+=======
+                                @"username":@"18868672308",
+                                @"check_coke":@"111111",
+                                @"apptype":@"ios",
+                                @"appversion":APPVERSION_AOTU_ZL,
+                                @"random_str":random_str,
+                                @"sign":sign
+>>>>>>> Stashed changes
                                 };
     
     [[ZLSecondAFNetworking sharedInstance] postWithUSER_INFO_URLString:zhuCeURls parameters:parmaDic success:^(id responseObject) {

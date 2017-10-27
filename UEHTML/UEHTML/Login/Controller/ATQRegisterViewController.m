@@ -87,7 +87,7 @@
         params[@"username"] = self.userPhone.text;
         params[@"check_code"] = @"111111";
         params[@"apptype"] = @"ios";
-        params[@"appversion"] = @"1.0.0";
+        params[@"appversion"] = APPVERSION_AOTU_ZL;
         NSString *random_str = [LhkhHttpsManager getNowTimeTimestamp];
         params[@"random_str"] = random_str;
         NSString *app_token = APP_TOKEN;

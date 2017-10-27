@@ -158,7 +158,7 @@
     params[@"user_id"] = user_id;
     params[@"user_token"] = user_token;
     params[@"apptype"] = @"ios";
-    params[@"appversion"] = @"1.0.0";
+    params[@"appversion"] = APPVERSION_AOTU_ZL;
     NSString *random_str = [LhkhHttpsManager getNowTimeTimestamp];
     params[@"random_str"] = random_str;
     NSString *app_token = APP_TOKEN;
@@ -196,7 +196,7 @@
     params[@"user_id"] = user_id;
     params[@"user_token"] = user_token;
     params[@"apptype"] = @"ios";
-    params[@"appversion"] = @"1.0.0";
+    params[@"appversion"] = APPVERSION_AOTU_ZL;
     NSString *random_str = [LhkhHttpsManager getNowTimeTimestamp];
     params[@"random_str"] = random_str;
     NSString *app_token = APP_TOKEN;
@@ -234,7 +234,7 @@
     params[@"user_id"] = user_id;
     params[@"user_token"] = user_token;
     params[@"apptype"] = @"ios";
-    params[@"appversion"] = @"1.0.0";
+    params[@"appversion"] = APPVERSION_AOTU_ZL;
     NSString *random_str = [LhkhHttpsManager getNowTimeTimestamp];
     params[@"random_str"] = random_str;
     NSString *app_token = APP_TOKEN;

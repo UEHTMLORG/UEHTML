@@ -79,8 +79,13 @@
 {
     lat = [NSString stringWithFormat:@"%f",userLocation.location.coordinate.latitude] ;
     lon = [NSString stringWithFormat:@"%f",userLocation.location.coordinate.longitude] ;
-    NSLog(@"lat===%@----log===%@",lat,lon);
-    [self loadData];
+    NSLog(@"lat===%@----log===%@---%f--%f",lat,lon,userLocation.location.coordinate.latitude,userLocation.location.coordinate.longitude);
+    
+    if (lat.floatValue == userLocation.location.coordinate.latitude && lon.floatValue == userLocation.location.coordinate.longitude) {
+        
+    }else{
+        [self loadData];
+    }
 }
 
 -(void)loadData{
@@ -130,6 +135,9 @@
                         NSInteger hangcount = self.recommend_listArr.count/3;
                         NSInteger liecount = self.recommend_listArr.count%3;
                         for (int i = 0; i<=hangcount; i++) {
+                            if (i== 0 && liecount == 0) {
+                                [leftArray addObject:self.recommend_listArr[0]];
+                            }
                             for (int j = 0; j<(3*i+liecount); j++) {
                                 if (j==0 && i==0) {
                                     [leftArray addObject:self.recommend_listArr[j]];
@@ -177,7 +185,7 @@
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadData)];
     self.tableView.mj_header.automaticallyChangeAlpha = YES;
     [self.tableView.mj_header beginRefreshing];
-    self.tableView.mj_footer = [self loadMoreDataFooterWith:self.tableView];
+//    self.tableView.mj_footer = [self loadMoreDataFooterWith:self.tableView];
     
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.mas_equalTo(self.view);
@@ -280,8 +288,8 @@
         return 2*(7*width/5+5);
     }else{
         float width = (ScreenWidth-80)/3;
-        int count = (_recommend_listArr.count+2)/3;
-        return count*(14*width/8+40);
+        long count = (_recommend_listArr.count+2)/3;
+        return count*(20+14*width/8)+60;
     }
 }
 
@@ -423,6 +431,7 @@
         cell.recpImg.layer.cornerRadius = size.width/2;
         cell.recpImg.layer.masksToBounds = YES;
         ATQRecModel *model = nil;
+    
         if (collectionView.tag == 1) {
             if (leftArray.count>0) {
                 model = leftArray[indexPath.row];

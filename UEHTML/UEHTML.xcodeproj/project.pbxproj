@@ -147,6 +147,7 @@
 		18D93D8E1F96E9CB00D18418 /* JianZhiTouSuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D93D8C1F96E9CA00D18418 /* JianZhiTouSuCollectionViewCell.xib */; };
 		40019C321F7F6BF600E11331 /* ATQCheckTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40019C301F7F6BF600E11331 /* ATQCheckTableViewCell.m */; };
 		40019C331F7F6BF600E11331 /* ATQCheckTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40019C311F7F6BF600E11331 /* ATQCheckTableViewCell.xib */; };
+		400879CA1FA2E6E900272318 /* ATQFreshModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 400879C91FA2E6E900272318 /* ATQFreshModel.m */; };
 		40133E8C1F91B9D600C0B8CB /* ATQTongchengViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40133E8B1F91B9D600C0B8CB /* ATQTongchengViewController.m */; };
 		40133E8F1F91F07A00C0B8CB /* ATQMeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40133E8E1F91F07A00C0B8CB /* ATQMeTableViewCell.m */; };
 		401640EC1F9D9EF700E3ED9E /* ATQSFShiLiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 401640EA1F9D9EF700E3ED9E /* ATQSFShiLiViewController.m */; };
@@ -990,6 +991,8 @@
 		40019C301F7F6BF600E11331 /* ATQCheckTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQCheckTableViewCell.m; path = UEHTML/Me/View/ATQCheckTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		40019C311F7F6BF600E11331 /* ATQCheckTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQCheckTableViewCell.xib; path = UEHTML/Me/View/ATQCheckTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		40076A0A1F95A9F5006839C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		400879C81FA2E6E900272318 /* ATQFreshModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATQFreshModel.h; sourceTree = "<group>"; };
+		400879C91FA2E6E900272318 /* ATQFreshModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATQFreshModel.m; sourceTree = "<group>"; };
 		40133E8A1F91B9D600C0B8CB /* ATQTongchengViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQTongchengViewController.h; sourceTree = "<group>"; };
 		40133E8B1F91B9D600C0B8CB /* ATQTongchengViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQTongchengViewController.m; sourceTree = "<group>"; };
 		40133E8D1F91F07A00C0B8CB /* ATQMeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQMeTableViewCell.h; path = UEHTML/ATQ/View/ATQMeTableViewCell.h; sourceTree = SOURCE_ROOT; };
@@ -2454,6 +2457,8 @@
 				401640EF1F9DE8F500E3ED9E /* ATQHomeModel.m */,
 				401640F11F9DEC9B00E3ED9E /* ATQRecModel.h */,
 				401640F21F9DEC9B00E3ED9E /* ATQRecModel.m */,
+				400879C81FA2E6E900272318 /* ATQFreshModel.h */,
+				400879C91FA2E6E900272318 /* ATQFreshModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -5296,6 +5301,7 @@
 				40E93DDF1F7775310018C3F5 /* ATQSecendTableViewCell.m in Sources */,
 				40F5E63A1F91AFAC0077A574 /* PanelBottomView.m in Sources */,
 				185D789E1F8DF13A00DA8849 /* HQRSA.m in Sources */,
+				400879CA1FA2E6E900272318 /* ATQFreshModel.m in Sources */,
 				185D78A91F8DF13A00DA8849 /* UIView+WHC_ViewProperty.m in Sources */,
 				40F9F2291F7A30BD00F5A42B /* ATQWechatTableViewCell.m in Sources */,
 				185D787C1F8DF13A00DA8849 /* CoreNewFeatureVC.m in Sources */,

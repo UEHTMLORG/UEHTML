@@ -64,7 +64,6 @@
  ===========ZL注释end==========*/
 - (void)uploadImageWithImage:(UIImage *)image{
     //api/user/upload_picture
-<<<<<<< Updated upstream
     NSString * upImageString = [NSString stringWithFormat:@"%@/api/user/upload_picture",Common_URL_ZL];
     
     NSData * imageData = UIImageJPEGRepresentation(image, 0.2);
@@ -93,7 +92,6 @@
         if ([dic[@"status"] isEqualToString:@"1"]) {
             [self.photoArray setValue:dic[@"data"] forKey:[NSString stringWithFormat:@"%ld",_currentPhotoIndex]];
         }
-=======
         NSString * upImageString = [NSString stringWithFormat:@"%@/api/user/upload_picture",Common_URL_ZL];
         
         NSString *random_str = [ZLSecondAFNetworking getNowTime];
@@ -128,7 +126,6 @@
         } failure:^(NSError *error) {
             NSLog(@"上传请求失败：%@",error);
         }];
->>>>>>> Stashed changes
         
     } failure:^(NSError *error) {
          [MBManager hideAlert];

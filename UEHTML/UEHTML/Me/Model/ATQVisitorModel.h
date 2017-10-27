@@ -15,4 +15,6 @@
 @property (nonatomic,copy)NSString *gender;
 @property (nonatomic,copy)NSString *age;
 @property (nonatomic,copy)NSString *card_level;
+@property (nonatomic,copy)NSString *visit_time;
+
 @end

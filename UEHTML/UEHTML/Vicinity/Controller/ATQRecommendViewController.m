@@ -14,9 +14,14 @@
 #import "Masonry.h"
 #import "MJExtension.h"
 #import "MJRefresh.h"
-
+#import "LhkhHttpsManager.h"
+#import "MBProgressHUD+Add.h"
+#import "ATQRecModel.h"
+#import "ATQFreshModel.h"
 @interface ATQRecommendViewController ()<UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic,strong)UITableView *tableView;
+@property (nonatomic,strong)NSMutableArray *freshArr;
+@property (nonatomic,strong)NSMutableArray *recArr;
 
 @end
 
@@ -26,6 +31,46 @@
     [super viewDidLoad];
     [self setTableView];
 }
+
+-(void)loadData{
+    NSMutableDictionary *params = [NSMutableDictionary  dictionary];
+    NSString *user_id = [[NSUserDefaults standardUserDefaults] objectForKey:USER_ID_AOTU_ZL];
+    NSString *user_token = [[NSUserDefaults standardUserDefaults] objectForKey:USER_TOEKN_AOTU_ZL];
+    params[@"user_id"] = user_id;
+    params[@"user_token"] = user_token;
+    params[@"apptype"] = @"ios";
+    params[@"appversion"] = APPVERSION_AOTU_ZL;
+    NSString *random_str = [LhkhHttpsManager getNowTimeTimestamp];
+    params[@"random_str"] = random_str;
+    NSString *app_token = APP_TOKEN;
+    NSString *signStr = [NSString stringWithFormat:@"%@%@",app_token,random_str];
+    NSString *sign1 = [LhkhHttpsManager md5:signStr];
+    NSString *sign2 = [LhkhHttpsManager md5:sign1];
+    NSString *sign = [LhkhHttpsManager md5:sign2];
+    params[@"sign"] = sign;
+    NSString *url = [NSString stringWithFormat:@"%@/api/home/recommend",ATQBaseUrl];
+    
+    [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
+        [self.tableView.mj_header endRefreshing];
+        NSLog(@"-----home/recommend=%@",responseObject);
+        if ([responseObject[@"status"] isEqualToString:@"1"]) {
+            [_recArr removeAllObjects];
+            [_freshArr removeAllObjects];
+            if(responseObject[@"data"]){
+                
+            }
+            [self.tableView reloadData];
+        }else{
+            [self.tableView.mj_header endRefreshing];
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+        }
+        
+    } failure:^(NSError *error) {
+        [self.tableView.mj_header endRefreshing];
+        NSLog(@"%@",error);
+    }];
+}
+
 -(void)setTableView{
     _tableView = ({
         UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectZero];
@@ -179,6 +224,18 @@ minimumLineSpacingForSectionAtIndex:(NSInteger)section
     return 0.f;
 }
 
+-(NSMutableArray*)recArr{
+    if (_recArr==nil) {
+        _recArr = [NSMutableArray array];
+    }
+    return _recArr;
+}
+-(NSMutableArray*)freshArr{
+    if (_freshArr==nil) {
+        _freshArr = [NSMutableArray array];
+    }
+    return _freshArr;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

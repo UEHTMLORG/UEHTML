@@ -48,18 +48,22 @@
      @"user_token":app_token,
      @"user_id":userid
      */
+    NSString *random_str = [ZLSecondAFNetworking getNowTime];
+    NSString * app_token_string = [kUserDefaults objectForKey:USER_TOEKN_AOTU_ZL];
+    NSString *app_token = app_token_string?:@"apptest";
+    NSString *signStr = [NSString stringWithFormat:@"%@%@",app_token,random_str];
+    NSString *sign1 = [ZLSecondAFNetworking getMD5fromString:signStr];
+    NSString *sign2 = [ZLSecondAFNetworking getMD5fromString:sign1];
+    NSString *sign = [ZLSecondAFNetworking getMD5fromString:sign2];
     NSDictionary * parmaDic = @{
-<<<<<<< Updated upstream
                                 @"lat":@"31",
-                                @"lon":@"100"
-=======
+                                @"lon":@"100",
                                 @"username":@"18868672308",
                                 @"check_coke":@"111111",
                                 @"apptype":@"ios",
                                 @"appversion":APPVERSION_AOTU_ZL,
                                 @"random_str":random_str,
                                 @"sign":sign
->>>>>>> Stashed changes
                                 };
     
     [[ZLSecondAFNetworking sharedInstance] postWithUSER_INFO_URLString:zhuCeURls parameters:parmaDic success:^(id responseObject) {

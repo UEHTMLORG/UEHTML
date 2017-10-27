@@ -44,6 +44,7 @@
     if ([card_level isEqualToString:@"0"]) {
         blankView.hidden = NO;
         self.tableView.hidden = YES;
+        [MBProgressHUD show:@"对不起，您还不是会员，无法查看来访者" view:self.view];
     }else{
         blankView.hidden = YES;
         self.tableView.hidden = NO;
@@ -78,9 +79,9 @@
             [_seeVisitorArr removeAllObjects];
             if(responseObject[@"data"]){
                 if ([type isEqualToString:@"1"]) {
-                    self.VisitorArr = [ATQVisitorModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
+                    self.VisitorArr = [ATQVisitorModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"][@"list"]];
                 }else if([type isEqualToString:@"2"]){
-                    self.seeVisitorArr =  [ATQVisitorModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
+                    self.seeVisitorArr =  [ATQVisitorModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"][@"list"]];
                 }
                 [self.tableView reloadData];
             }
@@ -238,6 +239,7 @@
             }else{
                 cell.vipImg.hidden = NO;
             }
+            cell.timeLab.text = model.visit_time;
         }
     }else{
         if (self.seeVisitorArr.count>0) {
@@ -259,6 +261,7 @@
             }else{
                 cell.vipImg.hidden = NO;
             }
+            cell.timeLab.text = model.visit_time;
         }
     }
     return cell;
@@ -296,6 +299,7 @@
             if ([card_level isEqualToString:@"0"]) {
                 blankView.hidden = NO;
                 self.tableView.hidden = YES;
+                [MBProgressHUD show:@"对不起，您还不是会员，无法查看来访者" view:self.view];
             }else{
                 blankView.hidden = YES;
                 self.tableView.hidden = NO;

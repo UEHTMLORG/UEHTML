@@ -177,6 +177,7 @@
         tableView.backgroundColor = RGBA(236, 236, 236, 1);
         tableView.delegate = self;
         tableView.dataSource = self;
+        
         tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [self.view addSubview:tableView];
         tableView;
@@ -185,7 +186,10 @@
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadData)];
     self.tableView.mj_header.automaticallyChangeAlpha = YES;
     [self.tableView.mj_header beginRefreshing];
-//    self.tableView.mj_footer = [self loadMoreDataFooterWith:self.tableView];
+    self.tableView.mj_footer = [self loadMoreDataFooterWith:self.tableView];
+    self.tableView.estimatedRowHeight = 0;
+    self.tableView.estimatedSectionHeaderHeight = 0;
+    self.tableView.estimatedSectionFooterHeight = 0;
     
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.mas_equalTo(self.view);

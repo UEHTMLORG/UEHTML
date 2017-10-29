@@ -17,4 +17,6 @@
 @property (nonatomic,copy)NSString *actived_at;
 @property (nonatomic,copy)NSString *job_class_name;
 @property (nonatomic,copy)NSString *video_auth;
+@property (nonatomic,copy)NSString *distance;
+@property (nonatomic,copy)NSString *credit_num;
 @end

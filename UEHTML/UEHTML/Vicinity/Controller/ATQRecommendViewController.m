@@ -18,6 +18,7 @@
 #import "MBProgressHUD+Add.h"
 #import "ATQRecModel.h"
 #import "ATQFreshModel.h"
+#import "UIImageView+WebCache.h"
 @interface ATQRecommendViewController ()<UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,strong)NSMutableArray *freshArr;
@@ -57,7 +58,8 @@
             [_recArr removeAllObjects];
             [_freshArr removeAllObjects];
             if(responseObject[@"data"]){
-                
+                self.recArr = [ATQRecModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"][@"recommend_list"]];
+                self.freshArr = [ATQFreshModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"][@"fresh_list"]];
             }
             [self.tableView reloadData];
         }else{
@@ -86,10 +88,13 @@
         tableView;
     });
     
-    //    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadData)];
-    //    self.tableView.mj_header.automaticallyChangeAlpha = YES;
-    //    [self.tableView.mj_header beginRefreshing];
+        self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadData)];
+        self.tableView.mj_header.automaticallyChangeAlpha = YES;
+        [self.tableView.mj_header beginRefreshing];
     self.tableView.mj_footer = [self loadMoreDataFooterWith:self.tableView];
+    self.tableView.estimatedRowHeight = 0;
+    self.tableView.estimatedSectionHeaderHeight = 0;
+    self.tableView.estimatedSectionFooterHeight = 0;
     
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.mas_equalTo(self.view);
@@ -130,6 +135,7 @@
         cell.titleCollectionView.dataSource = self;
         cell.titleCollectionView.tag = 0;
         [cell.titleCollectionView registerNib:[UINib  nibWithNibName:@"ATQNewPCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"ATQNewPCollectionViewCell"];
+        [cell.titleCollectionView reloadData];
         return cell;
         
     }else{
@@ -145,6 +151,7 @@
         cell.itemCollectionView.dataSource = self;
         cell.itemCollectionView.tag = 1;
         [cell.itemCollectionView registerNib:[UINib  nibWithNibName:@"ATQHomeRecCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"ATQHomeRecCollectionViewCell"];
+        [cell.itemCollectionView reloadData];
         return cell;
     }
     
@@ -159,7 +166,8 @@
         return 8*width/7+40;
     }else{
         float width = (ScreenWidth-40)/2;
-        return 5*(10*width/7+10)+40;
+        long count = (self.recArr.count+1)/2;
+        return count*(10*width/7+10)+40;
     }
     
 }
@@ -169,19 +177,32 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     if (collectionView.tag == 0) {
-        return 8;
+        return self.freshArr.count;
     }
-    return 10;
+    return self.recArr.count;
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     if (collectionView.tag == 0) {
         ATQNewPCollectionViewCell *cell = (ATQNewPCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"ATQNewPCollectionViewCell" forIndexPath:indexPath];
+        if (self.freshArr.count>0) {
+            ATQFreshModel *model = self.freshArr[indexPath.row];
+            [cell.personImg sd_setImageWithURL:[NSURL URLWithString:model.avatar] placeholderImage:[UIImage imageNamed:@""]];
+            cell.nameLab.text = model.nick_name;
+            cell.disLab.text = model.distance;
+        }
         return cell;
     }else{
         ATQHomeRecCollectionViewCell *cell = (ATQHomeRecCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"ATQHomeRecCollectionViewCell" forIndexPath:indexPath];
         collectionView.scrollEnabled = NO;
-        
+        if (self.recArr.count>0) {
+            ATQRecModel *model = self.recArr[indexPath.row];
+            [cell.recPImg sd_setImageWithURL:[NSURL URLWithString:model.avatar] placeholderImage:[UIImage imageNamed:@""]];
+            [cell.disBtn setTitle:model.distance forState:UIControlStateNormal];
+            cell.nameLab.text = model.nick_name;
+            cell.lvLab.text = [NSString stringWithFormat:@"诚 %@",model.credit_num] ;
+            cell.bqLab.text = model.job_class_name;
+        }
         return cell;
     }
 }

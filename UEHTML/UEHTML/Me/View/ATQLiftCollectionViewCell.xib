@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,13 +20,13 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N1Z-bd-9xU">
-                        <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                        <rect key="frame" x="23" y="20" width="44" height="50"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="N1Z-bd-9xU" secondAttribute="height" multiplier="1:1" id="vMl-Ag-QeA"/>
+                            <constraint firstAttribute="width" secondItem="N1Z-bd-9xU" secondAttribute="height" multiplier="22:25" id="rYS-ea-ty4"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="棒棒糖" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGA-Qw-zoI">
-                        <rect key="frame" x="0.0" y="100" width="90" height="20"/>
+                        <rect key="frame" x="0.0" y="90" width="90" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="zGN-qb-f4d"/>
                         </constraints>
@@ -35,7 +35,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2lk-UJ-VQT">
-                        <rect key="frame" x="70" y="0.0" width="20" height="20"/>
+                        <rect key="frame" x="65" y="0.0" width="20" height="20"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="20" id="RPk-i0-Unj"/>
@@ -47,12 +47,12 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="FGA-Qw-zoI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="0qs-I3-ET7"/>
-                <constraint firstItem="2lk-UJ-VQT" firstAttribute="trailing" secondItem="N1Z-bd-9xU" secondAttribute="trailing" id="4bd-zb-8qR"/>
-                <constraint firstItem="N1Z-bd-9xU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="IQg-S1-bRh"/>
-                <constraint firstAttribute="trailing" secondItem="N1Z-bd-9xU" secondAttribute="trailing" id="Pk3-zo-Sb5"/>
-                <constraint firstItem="N1Z-bd-9xU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="aDz-zo-cja"/>
-                <constraint firstItem="2lk-UJ-VQT" firstAttribute="top" secondItem="N1Z-bd-9xU" secondAttribute="top" id="fIM-X7-CFm"/>
-                <constraint firstItem="FGA-Qw-zoI" firstAttribute="top" secondItem="N1Z-bd-9xU" secondAttribute="bottom" constant="10" id="fLp-GA-4gf"/>
+                <constraint firstItem="N1Z-bd-9xU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="20" id="IQg-S1-bRh"/>
+                <constraint firstAttribute="trailing" secondItem="2lk-UJ-VQT" secondAttribute="trailing" constant="5" id="OUG-hv-5Bb"/>
+                <constraint firstAttribute="trailing" secondItem="N1Z-bd-9xU" secondAttribute="trailing" constant="23" id="Pk3-zo-Sb5"/>
+                <constraint firstItem="2lk-UJ-VQT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Twv-Vy-mET"/>
+                <constraint firstItem="N1Z-bd-9xU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="23" id="aDz-zo-cja"/>
+                <constraint firstItem="FGA-Qw-zoI" firstAttribute="top" secondItem="N1Z-bd-9xU" secondAttribute="bottom" constant="20" id="fLp-GA-4gf"/>
                 <constraint firstAttribute="trailing" secondItem="FGA-Qw-zoI" secondAttribute="trailing" id="jvW-wZ-uHy"/>
             </constraints>
             <connections>

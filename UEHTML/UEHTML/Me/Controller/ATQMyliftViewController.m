@@ -29,7 +29,7 @@
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSArray *imgarr = @[@"fujin-peiliaotian",@"fujin-anmo",@"fujin-wine",@"fujin-eat",@"fujin-movie",@"fujin-sing",@"fujin-tourism",@"fujin-game",@"fujin-sport"];
+    NSArray *imgarr = @[@"liwu-tang",@"liwu-coffee",@"liwu-cake",@"liwu-chocolate",@"liwu-rose",@"liwu-flower",@"liwu-toys",@"liwu-Versace",@"liwu-iwatch"];
     NSArray *namearr = @[@"棒棒糖",@"咖啡",@"蛋糕",@"巧克力",@"粉玫瑰",@"花束",@"毛绒玩具",@"范思哲",@"IWatch"];
     NSArray *badgearr = @[@"25",@"4",@"56",@"12",@"9",@"4",@"100",@"45",@"7"];
     ATQLiftCollectionViewCell *cell = (ATQLiftCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"ATQLiftCollectionViewCell" forIndexPath:indexPath];
@@ -69,7 +69,6 @@
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
     return UIEdgeInsetsMake(10, 20, 5, 20);
 }
-
 
 - (CGFloat) collectionView:(UICollectionView *)collectionView
                     layout:(UICollectionViewLayout *)collectionViewLayout

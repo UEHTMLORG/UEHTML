@@ -17,6 +17,9 @@
 #import "JianZhiPingJiaViewController.h"
 #import "JianZhiTouSuViewController.h"
 
+#import "ZhaoRenFuWuViewController.h"
+#import "WoYaoZhuanViewController.h"
+
 typedef NS_ENUM(NSUInteger, CURRENTBUTTON_INDEX) {
     ZHAOREN_FUWU_INDEX,
     WOYAO_ZHUANQIAN_INDEX,

@@ -133,18 +133,27 @@
     
 }
 - (void)zhaoRenFuWuButtonAction{
+    
+    ZhaoRenFuWuViewController * VC = [ZhaoRenFuWuViewController new];
+    [self.navigationController pushViewController:VC animated:YES];
+    
+    /*
     if (self.currentButtonIndex == ZHAOREN_FUWU_INDEX) {
         return;
     }
     else{
-        self.currentButtonIndex = ZHAOREN_FUWU_INDEX;
         
+        self.currentButtonIndex = ZHAOREN_FUWU_INDEX;
         self.listView.currentCellType = TIGONGCELLTYPE;
         [self.listView.tableview reloadData];
     }
-
+*/
 }
 - (void)woYaoZhuanQianButtonAction{
+    WoYaoZhuanViewController * VC = [WoYaoZhuanViewController new];
+    [self.navigationController pushViewController:VC animated:YES];
+    
+    /*
     if (self.currentButtonIndex == WOYAO_ZHUANQIAN_INDEX) {
         return;
     }
@@ -154,7 +163,7 @@
         self.listView.currentCellType = JIANZHICELLTYPE;
         [self.listView.tableview reloadData];
     }
-
+*/
 }
 - (void)updateViewConstraints{
     [super updateViewConstraints];

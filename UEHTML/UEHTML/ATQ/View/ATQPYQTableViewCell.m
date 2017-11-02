@@ -312,8 +312,6 @@ NSString *const ZJFriendLineCellOperationButtonClickedNotification = @"ZJFriendL
         make.size.mas_equalTo(imageContainViewSize);
     }];
     
-    
-    
     self.imageViewContainView.model = model;
     [self.commentView configCellWithModel:model indexPath:indexPath];
 }

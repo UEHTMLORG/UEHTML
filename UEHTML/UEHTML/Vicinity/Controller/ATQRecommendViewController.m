@@ -62,6 +62,12 @@
                 self.freshArr = [ATQFreshModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"][@"fresh_list"]];
             }
             [self.tableView reloadData];
+        }else if ([responseObject[@"status"] isEqualToString:@"302"]){
+            [self.tableView.mj_header endRefreshing];
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self login];
+            });
         }else{
             [self.tableView.mj_header endRefreshing];
             [MBProgressHUD show:responseObject[@"message"] view:self.view];

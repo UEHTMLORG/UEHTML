@@ -30,6 +30,9 @@
     [rootViewController.view addSubview:BaseNavigationViewController.view];
 }
 
+-(void)login{
+    [(AppDelegate *)[UIApplication sharedApplication].delegate openLoginCtrl];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

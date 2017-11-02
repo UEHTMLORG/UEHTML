@@ -10,4 +10,5 @@
 
 @interface ATQBaseViewController : UIViewController
 -(void)transformView:(UIViewController *)Vc;
+-(void)login;
 @end

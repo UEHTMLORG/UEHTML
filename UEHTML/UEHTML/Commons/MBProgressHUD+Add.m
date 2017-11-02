@@ -26,7 +26,7 @@
     hud.removeFromSuperViewOnHide = YES;
     
     // 1秒之后再消失
-    [hud hide:YES afterDelay:0.7];
+    [hud hide:YES afterDelay:1];
     
 }
 
@@ -39,7 +39,7 @@
     HUD.removeFromSuperViewOnHide = YES;
     HUD.detailsLabelText = text;
     HUD.labelFont = [UIFont systemFontOfSize:13]; //Johnkui - added
-    [HUD hide:YES afterDelay:2];
+    [HUD hide:YES afterDelay:1];
 }
 
 #pragma mark 显示错误信息
@@ -64,7 +64,7 @@
     // YES代表需要蒙版效果
     hud.dimBackground = NO;
     // 1秒之后再消失
-    [hud hide:YES afterDelay:0.7];
+    [hud hide:YES afterDelay:1];
     return hud;
 }
 @end

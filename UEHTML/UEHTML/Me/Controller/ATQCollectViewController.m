@@ -58,6 +58,11 @@
                 self.collectArr = [ATQCollectModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
                 [self.tableView reloadData];
             }
+        }else if ([responseObject[@"status"] isEqualToString:@"302"]){
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self login];
+            });
         }else{
             [MBProgressHUD show:responseObject[@"message"] view:self.view];
         }
@@ -207,6 +212,11 @@
         if ([responseObject[@"status"] isEqualToString:@"1"]) {
             [self loadData];
             
+        }else if ([responseObject[@"status"] isEqualToString:@"302"]){
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self login];
+            });
         }else{
             [MBProgressHUD show:responseObject[@"message"] view:self.view];
         }

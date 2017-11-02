@@ -32,6 +32,7 @@
 #import "LhkhHttpsManager.h"
 #import "MBProgressHUD+Add.h"
 #import "ATQMeModel.h"
+
 @interface ATQMeViewController ()<UITableViewDelegate,UITableViewDataSource>{
     BOOL isBusiness;
     BOOL isSetSus;
@@ -158,7 +159,12 @@
                 }
                 [self.tableView reloadData];
             }
-        }else{
+        }else if ([responseObject[@"status"] isEqualToString:@"302"]){
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self login];
+            });
+        } else{
             [MBProgressHUD show:responseObject[@"message"] view:self.view];
         }
         
@@ -427,6 +433,11 @@
             [MBProgressHUD show:responseObject[@"message"] view:self.view];
             isFirst = NO;
             [self loadData];
+        }else if ([responseObject[@"status"] isEqualToString:@"302"]){
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self login];
+            });
         }else{
             [MBProgressHUD show:responseObject[@"message"] view:self.view];
         }

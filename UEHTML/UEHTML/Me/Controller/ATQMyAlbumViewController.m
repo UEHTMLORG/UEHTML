@@ -81,6 +81,11 @@
             bottomLab.text = @"照片可以上传8张普通照片,4张私密照片";
             [self.collectionView reloadData];
             
+        }else if ([responseObject[@"status"] isEqualToString:@"302"]){
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self login];
+            });
         }else{
             [MBProgressHUD show:responseObject[@"message"] view:self.view];
         }
@@ -304,6 +309,11 @@ minimumLineSpacingForSectionAtIndex:(NSInteger)section
         NSLog(@"-----album/delete=%@",responseObject);
         if ([responseObject[@"status"] isEqualToString:@"1"]) {
             [self loadData];
+        }else if ([responseObject[@"status"] isEqualToString:@"302"]){
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self login];
+            });
         }else{
             [MBProgressHUD show:responseObject[@"message"] view:self.view];
         }

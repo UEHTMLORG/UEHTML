@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,22 +26,41 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1a-uz-IFB">
-                        <rect key="frame" x="273" y="6.5" width="27" height="27"/>
+                        <rect key="frame" x="285" y="12.5" width="15" height="15"/>
                         <constraints>
+                            <constraint firstAttribute="height" constant="15" id="7c0-Wo-s8S"/>
                             <constraint firstAttribute="width" secondItem="b1a-uz-IFB" secondAttribute="height" multiplier="1:1" id="dtk-QO-J2d"/>
                         </constraints>
                         <state key="normal" image="shezhi-Top-xia"/>
+                        <connections>
+                            <action selector="questionClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="0SF-RZ-RdP"/>
+                        </connections>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJV-0U-S1W">
+                        <rect key="frame" x="275" y="10" width="0.0" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="B8Q-B5-SQy"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.58431372550000005" green="0.58823529409999997" blue="0.59215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="b1a-uz-IFB" firstAttribute="centerY" secondItem="VF5-YK-syu" secondAttribute="centerY" id="1r4-YB-VaV"/>
+                    <constraint firstItem="LJV-0U-S1W" firstAttribute="trailing" secondItem="b1a-uz-IFB" secondAttribute="leading" constant="-10" id="Id2-la-dhi"/>
+                </constraints>
             </tableViewCellContentView>
             <constraints>
-                <constraint firstItem="b1a-uz-IFB" firstAttribute="top" secondItem="KGk-i7-Jjw" secondAttribute="top" constant="6.5" id="9hT-YF-bsK"/>
                 <constraint firstItem="VF5-YK-syu" firstAttribute="top" secondItem="KGk-i7-Jjw" secondAttribute="top" id="OMd-z3-bDE"/>
                 <constraint firstAttribute="trailing" secondItem="b1a-uz-IFB" secondAttribute="trailing" constant="20" id="XMR-Hv-taU"/>
                 <constraint firstItem="VF5-YK-syu" firstAttribute="leading" secondItem="KGk-i7-Jjw" secondAttribute="leading" constant="20" id="Z4s-Xj-Th3"/>
-                <constraint firstAttribute="bottom" secondItem="b1a-uz-IFB" secondAttribute="bottom" constant="6.5" id="fCJ-4y-h9P"/>
+                <constraint firstItem="LJV-0U-S1W" firstAttribute="centerY" secondItem="KGk-i7-Jjw" secondAttribute="centerY" id="dK3-Jb-dsr"/>
                 <constraint firstAttribute="bottom" secondItem="VF5-YK-syu" secondAttribute="bottom" id="rqA-1F-IaG"/>
             </constraints>
+            <connections>
+                <outlet property="quesLab" destination="LJV-0U-S1W" id="8eK-xd-3M1"/>
+            </connections>
         </tableViewCell>
     </objects>
     <resources>

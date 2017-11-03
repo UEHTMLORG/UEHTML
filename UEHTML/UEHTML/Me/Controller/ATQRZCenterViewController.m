@@ -17,6 +17,7 @@
 #import "ATQCarRZSuccessViewController.h"
 #import "LhkhHttpsManager.h"
 #import "MBProgressHUD+Add.h"
+#import "ZLSecondAFNetworking.h"
 @interface ATQRZCenterViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITableView *tableView;
 @property (strong,nonatomic)NSDictionary *dic;
@@ -72,7 +73,7 @@
     NSString *sign = [LhkhHttpsManager md5:sign2];
     params[@"sign"] = sign;
     NSString *url = [NSString stringWithFormat:@"%@/api/user/auth_list",ATQBaseUrl];
-    
+  
     [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
         
         if ([responseObject[@"status"] isEqualToString:@"1"]) {
@@ -81,7 +82,7 @@
                 tempdic = responseObject[@"data"];
                 _dic = tempdic;
             }
-            
+            [self.tableView reloadData];
         }else if ([responseObject[@"status"] isEqualToString:@"302"]){
             [MBProgressHUD show:responseObject[@"message"] view:self.view];
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{

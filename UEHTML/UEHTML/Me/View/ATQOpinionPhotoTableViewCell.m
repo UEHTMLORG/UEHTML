@@ -51,6 +51,9 @@
     cell.delBtn.hidden = (indexPath.row == self.imgsArray.count-1);
     __weak typeof(self) weakself = self;
     cell.addImgCollectionDelBlock = ^(){
+        if (_deleteSCTuPianBlock) {
+            _deleteSCTuPianBlock();
+        }
         [weakself.imgsArray removeObjectAtIndex:indexPath.row];
         [weakself.photoCollectionView reloadData];
     };

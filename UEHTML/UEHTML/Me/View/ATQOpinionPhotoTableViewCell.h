@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 typedef void(^XuanZeTuPianBlock)();
+typedef void(^DeleteSCTuPianBlock)();
 @interface ATQOpinionPhotoTableViewCell : UITableViewCell
 @property (nonatomic,strong)NSMutableArray *imgsArray;
 @property (weak, nonatomic) IBOutlet UICollectionView *photoCollectionView;
 @property (nonatomic,copy)XuanZeTuPianBlock xuanZeTuPianBlock;
+@property (nonatomic,copy)DeleteSCTuPianBlock deleteSCTuPianBlock;
 @end

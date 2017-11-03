@@ -160,11 +160,14 @@
         NSLog(@"-----register/step2=%@",responseObject);
         if ([responseObject[@"status"] isEqualToString:@"1"]) {
             
-            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+            [MBProgressHUD show:@"识别成功" view:self.view];
             if (self.vcStr != nil && [self.vcStr isEqualToString:@"ATQSFRZViewController"]) {
                 if ([self.delegate respondsToSelector:@selector(passValue:)]) {
                         [self.delegate passValue:@"1"];
                 }
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [self.navigationController popViewControllerAnimated:YES];
+                });
                 
             }else{
                 ATQPerfectInfoViewController *vc = [[ATQPerfectInfoViewController alloc] init];

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+typedef void (^QuestionListBlock)();
 @interface ATQQuesTableViewCell : UITableViewCell
-
+@property (weak, nonatomic) IBOutlet UILabel *quesLab;
+@property (copy,nonatomic)QuestionListBlock questionlistblock;
 @end

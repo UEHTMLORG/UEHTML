@@ -171,7 +171,17 @@
     }else{
         cell.sexImg.image = [UIImage imageNamed:@"zhuce-nv"];
     }
-  
+    if ([model.status isEqualToString:@"1"]) {
+        [cell.addBtn setTitle:@"已添加" forState:UIControlStateNormal];
+        cell.addBtn.backgroundColor = [UIColor clearColor];
+        [cell.addBtn setTitleColor:[UIColor colorWithHexString:UIDTTextColorStr] forState:UIControlStateNormal];
+        cell.addBtn.enabled = NO;
+    }else{
+        [cell.addBtn setTitle:@"添加" forState:UIControlStateNormal];
+        cell.addBtn.backgroundColor = [UIColor colorWithHexString:UIColorStr];
+        [cell.addBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        cell.addBtn.enabled = YES;
+    }
     cell.addfriendsblock = ^{
         NSLog(@"add");
         [self addNewFriend:model.user_id];

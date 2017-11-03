@@ -9,5 +9,5 @@
 #import "ATQBaseViewController.h"
 
 @interface ATQUseNoteViewController : ATQBaseViewController
-
+@property (nonatomic,copy)NSString *idStr;
 @end

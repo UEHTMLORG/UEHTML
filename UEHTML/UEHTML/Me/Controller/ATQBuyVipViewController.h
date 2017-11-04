@@ -26,5 +26,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *vipSaleLab2;
 @property (weak, nonatomic) IBOutlet UILabel *vipSaleLab3;
 @property (weak, nonatomic) IBOutlet UIView *hengxianView;
+@property (weak, nonatomic) IBOutlet UIButton *duiBtn;
 
 @end

@@ -112,7 +112,7 @@
         if (indexPath.row == 0) {
             cell.lvImg.image = [UIImage imageNamed:@"renzheng-yajin"];
             cell.lvLab.text = dic[@"title"];
-            cell.lvMoney.text = [NSString stringWithFormat:@"￥%.0f",price.floatValue];
+            cell.lvMoney.text = [NSString stringWithFormat:@"￥%.f",price.floatValue];
         }else if (indexPath.row == 1) {
             cell.lvImg.image = [UIImage imageNamed:@"renzheng-yajin02"];
             cell.lvLab.text = dic[@"title"];

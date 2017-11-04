@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UIView *jineView;
 @property (weak, nonatomic) IBOutlet UIButton *wechatBtn;
 @property (weak, nonatomic) IBOutlet UIButton *aliBtn;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topH;
 
 
 @end

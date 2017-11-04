@@ -10,12 +10,15 @@
 #import "UIColor+LhkhColor.h"
 #import "Masonry.h"
 #import "MBProgressHUD+Add.h"
+#import "LhkhHttpsManager.h"
 @interface ATQChongzhiViewController ()<UITextFieldDelegate>
 {
     UIButton *selectedBtn;
     UITextField *othertextField;
     NSString *payStr;
 }
+@property (strong,nonatomic)NSMutableArray *priceArr;
+
 @end
 
 @implementation ATQChongzhiViewController
@@ -25,16 +28,64 @@
     [super viewDidLoad];
     self.navigationItem.title = @"账户充值";
     self.scrollView.contentSize = CGSizeMake(ScreenWidth, 667);
+    _priceArr = [NSMutableArray array];
     payStr = @"wechatPay";
-    [self buildJineView];
+    [self loadData];
+    
+}
+
+-(void)loadData{
+    NSMutableDictionary *params = [NSMutableDictionary  dictionary];
+    NSString *user_id = [[NSUserDefaults standardUserDefaults] objectForKey:USER_ID_AOTU_ZL];
+    NSString *user_token = [[NSUserDefaults standardUserDefaults] objectForKey:USER_TOEKN_AOTU_ZL];
+    params[@"user_id"] = user_id;
+    params[@"user_token"] = user_token;
+    params[@"apptype"] = @"ios";
+    params[@"appversion"] = APPVERSION_AOTU_ZL;
+    NSString *random_str = [LhkhHttpsManager getNowTimeTimestamp];
+    params[@"random_str"] = random_str;
+    NSString *app_token = APP_TOKEN;
+    NSString *signStr = [NSString stringWithFormat:@"%@%@",app_token,random_str];
+    NSString *sign1 = [LhkhHttpsManager md5:signStr];
+    NSString *sign2 = [LhkhHttpsManager md5:sign1];
+    NSString *sign = [LhkhHttpsManager md5:sign2];
+    params[@"sign"] = sign;
+    NSString *url = [NSString stringWithFormat:@"%@/api/user/recharge/price_list",ATQBaseUrl];
+    
+    [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
+        NSLog(@"-----buy_show=%@",responseObject);
+       
+        if ([responseObject[@"status"] isEqualToString:@"1"]) {
+            if (responseObject[@"data"]) {
+                _priceArr = responseObject[@"data"];
+                [self buildJineView];
+            }
+           
+        }else if ([responseObject[@"status"] isEqualToString:@"302"]){
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self login];
+            });
+        } else{
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+        }
+        
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
 }
 
 -(void)buildJineView{
     NSInteger k = 0;
     float width = (ScreenWidth - 70)/4;
     float height = (self.jineView.frame.size.height - 40)/2;
-    
-    for (int i = 0; i<2; i++) {
+    long hang = (_priceArr.count +4)/4;
+    if (hang == 1) {
+        _topH.constant = 80;
+    }else{
+        _topH.constant = 140;
+    }
+    for (int i = 0; i<hang; i++) {
         for (int j = 0; j<4; j++) {
             UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(20 + j*(width+10), 15 +i*(height+10), width, height)];
             btn.backgroundColor = [UIColor whiteColor];
@@ -42,10 +93,29 @@
             btn.layer.masksToBounds = YES;
             [btn setTitleColor:[UIColor colorWithHexString:UIToneTextColorStr] forState:UIControlStateNormal];
             [btn addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchUpInside];
-            
+            if (k<_priceArr.count) {
+                btn.tag = 100+k;
+                NSString *price = _priceArr[k][@"price"];
+                [btn setTitle:[NSString stringWithFormat:@"%.f元",price.floatValue] forState:UIControlStateNormal];
+            }
+            if ((k) == _priceArr.count) {
+                btn.tag = 100+k;
+                [btn setTitle:@"其他金额" forState:UIControlStateNormal];
+                othertextField = [[UITextField alloc] initWithFrame:CGRectMake(btn.frame.origin.x, btn.frame.origin.y, btn.frame.size.width, btn.frame.size.height)];
+                othertextField.delegate = self;
+                othertextField.layer.cornerRadius = 4.f;
+                othertextField.layer.masksToBounds = YES;
+                othertextField.placeholder = @"其他金额";
+                othertextField.keyboardType = UIKeyboardTypeNumberPad;
+                othertextField.backgroundColor = [UIColor whiteColor];
+                othertextField.textAlignment = NSTextAlignmentCenter;
+                othertextField.textColor = [UIColor colorWithHexString:UIColorStr];
+                [self.jineView addSubview:othertextField];
+            }
+            /*
             if (k==0) {
                 btn.tag = 100;
-                [btn setTitle:@"25元" forState:UIControlStateNormal];
+                [btn setTitle:_priceArr[k][@"price"] forState:UIControlStateNormal];
             }else if (k==1){
                 btn.tag = 101;
                 [btn setTitle:@"50元" forState:UIControlStateNormal];
@@ -77,7 +147,7 @@
                 othertextField.textAlignment = NSTextAlignmentCenter;
                 othertextField.textColor = [UIColor colorWithHexString:UIColorStr];
                 [self.jineView addSubview:othertextField];
-            }
+            }*/
             [self.jineView addSubview:btn];
             if (ScreenWidth <= 320) {
                 btn.titleLabel.font = [UIFont systemFontOfSize:12];
@@ -107,7 +177,7 @@
     [selectedBtn setTitleColor:[UIColor colorWithHexString:UIColorStr] forState:UIControlStateNormal];
     [othertextField resignFirstResponder];
     othertextField.text =@"";
-    if (sender.tag == 107) {
+    if (sender.tag == (100+_priceArr.count)) {
         [othertextField becomeFirstResponder];
         sender.backgroundColor = [UIColor clearColor];
         [sender setTitle:@"" forState:UIControlStateNormal];

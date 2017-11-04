@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ATQBuyVipViewController">
             <connections>
                 <outlet property="aliBtn" destination="w5f-Un-Ank" id="SdY-0f-dKj"/>
+                <outlet property="duiBtn" destination="B3v-z3-qe3" id="J3f-Jt-mx9"/>
                 <outlet property="hengxianView" destination="tFB-R8-9vp" id="4Bo-dY-WGU"/>
                 <outlet property="timeLab" destination="aOi-pj-Ihz" id="H4k-mD-Sf3"/>
                 <outlet property="userImg" destination="54S-jJ-GTe" id="bdV-4n-TNz"/>
@@ -356,13 +357,6 @@
                                                     <color key="textColor" red="0.98823529409999999" green="0.6705882353" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zhanghu-dui" translatesAutoresizingMaskIntoConstraints="NO" id="KXX-Jy-WEB">
-                                                    <rect key="frame" x="20" y="55" width="30" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="VDO-3I-U7a"/>
-                                                        <constraint firstAttribute="width" secondItem="KXX-Jy-WEB" secondAttribute="height" multiplier="1:1" id="nR2-Fi-wfd"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="到期自动付费" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORV-Yn-NtU">
                                                     <rect key="frame" x="70" y="55" width="98" height="30"/>
                                                     <constraints>
@@ -372,22 +366,33 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3v-z3-qe3">
+                                                    <rect key="frame" x="20" y="55" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="T9Q-5C-waa"/>
+                                                        <constraint firstAttribute="width" secondItem="B3v-z3-qe3" secondAttribute="height" multiplier="1:1" id="w3g-s1-sfF"/>
+                                                    </constraints>
+                                                    <state key="selected" image="zhanghu-dui"/>
+                                                    <connections>
+                                                        <action selector="duiClick:" destination="-1" eventType="touchUpInside" id="bKh-Ro-LZQ"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="KXX-Jy-WEB" secondAttribute="bottom" constant="15" id="4Dp-WJ-lZu"/>
                                                 <constraint firstItem="tFB-R8-9vp" firstAttribute="centerY" secondItem="hor-w5-kRZ" secondAttribute="centerY" id="4xf-cb-0TV"/>
-                                                <constraint firstItem="KXX-Jy-WEB" firstAttribute="leading" secondItem="35i-Nh-cp2" secondAttribute="leading" constant="20" id="BeI-0N-lu9"/>
+                                                <constraint firstItem="B3v-z3-qe3" firstAttribute="leading" secondItem="35i-Nh-cp2" secondAttribute="leading" constant="20" id="F2L-aq-F2M"/>
                                                 <constraint firstItem="hor-w5-kRZ" firstAttribute="leading" secondItem="cML-gQ-eeK" secondAttribute="trailing" constant="10" id="HaF-SF-ZR7"/>
-                                                <constraint firstItem="ORV-Yn-NtU" firstAttribute="centerY" secondItem="KXX-Jy-WEB" secondAttribute="centerY" id="O4w-cP-ihg"/>
+                                                <constraint firstItem="B3v-z3-qe3" firstAttribute="centerY" secondItem="ORV-Yn-NtU" secondAttribute="centerY" id="OIi-iP-cKv"/>
                                                 <constraint firstItem="tFB-R8-9vp" firstAttribute="leading" secondItem="hor-w5-kRZ" secondAttribute="leading" id="VYM-VG-pJZ"/>
                                                 <constraint firstItem="cML-gQ-eeK" firstAttribute="leading" secondItem="1un-8q-j75" secondAttribute="trailing" constant="20" id="WzR-9g-DxO"/>
+                                                <constraint firstItem="B3v-z3-qe3" firstAttribute="trailing" secondItem="ORV-Yn-NtU" secondAttribute="leading" constant="-20" id="aKT-HK-0TU"/>
                                                 <constraint firstItem="tFB-R8-9vp" firstAttribute="trailing" secondItem="hor-w5-kRZ" secondAttribute="trailing" id="az2-lk-Yow"/>
+                                                <constraint firstAttribute="bottom" secondItem="B3v-z3-qe3" secondAttribute="bottom" constant="15" id="d4J-EX-hhS"/>
                                                 <constraint firstItem="hor-w5-kRZ" firstAttribute="centerY" secondItem="cML-gQ-eeK" secondAttribute="centerY" id="ftw-5g-aOG"/>
                                                 <constraint firstItem="1un-8q-j75" firstAttribute="top" secondItem="35i-Nh-cp2" secondAttribute="top" constant="15" id="ipx-uz-gO2"/>
                                                 <constraint firstItem="cML-gQ-eeK" firstAttribute="centerY" secondItem="1un-8q-j75" secondAttribute="centerY" id="lLE-WH-Xje"/>
                                                 <constraint firstItem="1un-8q-j75" firstAttribute="leading" secondItem="35i-Nh-cp2" secondAttribute="leading" constant="20" id="nQC-wg-pLm"/>
-                                                <constraint firstItem="ORV-Yn-NtU" firstAttribute="leading" secondItem="KXX-Jy-WEB" secondAttribute="trailing" constant="20" id="wnz-jS-DPC"/>
                                                 <constraint firstAttribute="height" constant="100" id="yJe-RV-5uW"/>
                                             </constraints>
                                         </view>

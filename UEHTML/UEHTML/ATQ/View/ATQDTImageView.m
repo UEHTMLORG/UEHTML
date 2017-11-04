@@ -1,41 +1,46 @@
 //
-//  ATQContainView.m
+//  ATQDTImageView.m
 //  UEHTML
 //
-//  Created by LHKH on 2017/10/14.
+//  Created by LHKH on 2017/11/4.
 //  Copyright © 2017年 LHKH. All rights reserved.
 //
 
-#import "ATQContainView.h"
-@interface ATQContainView()
+#import "ATQDTImageView.h"
+#import "ATQDTModel.h"
+#import "UIImageView+WebCache.h"
+@interface ATQDTImageView()
 @property (nonatomic,strong)NSMutableArray *cusImageViewArray;
 @property (nonatomic,strong)UIImageView *imageView;
 @end
-@implementation ATQContainView
 
--(id)init
+@implementation ATQDTImageView
+
+#pragma mark - Life Cycle
+
+- (instancetype)initWithFrame:(CGRect)frame
 {
-    self = [super init];
-    if(self)
-    {
+    if (self = [super initWithFrame:frame]) {
         
     }
     return self;
 }
--(void)setModel:(ATQPYQModel *)model
+
+
+-(void)setModel:(ATQDTModel *)model
 {
     _model = model;
     self.cusImageViewArray = [NSMutableArray array];
     [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
-    if(model.picNameArray.count > 0)
+    if(model.pictures.count > 0)
     {
         float heightAndWidth = (ScreenWidth - 80 - 10)/3;
-        [model.picNameArray enumerateObjectsUsingBlock:^(NSString *  imageName, NSUInteger idx, BOOL * _Nonnull stop) {
+        [model.pictures enumerateObjectsUsingBlock:^(NSDictionary *imageName, NSUInteger idx, BOOL * _Nonnull stop) {
             
             UIImageView *imageView = [[UIImageView alloc] init];
             imageView.userInteractionEnabled = YES;
             imageView.frame = CGRectMake((idx%3) * (heightAndWidth+5), (idx/3)* (heightAndWidth+5), heightAndWidth, heightAndWidth);
-            imageView.image = [UIImage imageNamed:imageName];
+            [imageView sd_setImageWithURL:imageName[@"pic"] placeholderImage:[UIImage imageNamed:@""]];
             imageView.clipsToBounds = YES;
             imageView.contentMode = UIViewContentModeScaleAspectFill;
             [self addSubview:imageView];
@@ -55,4 +60,45 @@
     }
 }
 
+
+#pragma mark - Layout SubViews
+
+
+
+
+#pragma mark - System Delegate
+
+
+
+
+#pragma mark - Custom Delegate
+
+
+
+
+#pragma mark - Event Response
+
+
+
+
+#pragma mark - Network requests
+
+
+
+
+#pragma mark - Public Methods
+
+
+
+
+#pragma mark - Private Methods
+
+
+
+
+#pragma mark - Getters and Setters
+
+
+
 @end
+

@@ -8,6 +8,7 @@
 
 #import "ATQTypeListInviteDetailViewController.h"
 #import "UIColor+LhkhColor.h"
+#import "ATQYajinRZViewController.h"
 @interface ATQTypeListInviteDetailViewController ()<UITextViewDelegate>
 
 @end
@@ -40,6 +41,8 @@
 - (IBAction)selectTimeClick:(id)sender {
 }
 - (IBAction)yajinRZClick:(id)sender {
+    ATQYajinRZViewController *vc = [[ATQYajinRZViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 - (IBAction)sureInviteClick:(id)sender {
 }

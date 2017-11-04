@@ -7,16 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-@class ATQPYQModel;
+@class ATQDTModel;
 
 @protocol ATQDTTableViewCellDelegate <NSObject>
 
 -(void)didClickedMoreBtn:(UIButton *)btn indexPath:(NSIndexPath *)indexPath;
+-(void)didClickImageViewWithCurrentCell:(UIImageView *)imageView imageViewArray:(NSMutableArray *)array imageSuperView:(UIView *)view indexPath:(NSIndexPath *)indexPath;
 
 @end
 @interface ATQDTTableViewCell : UITableViewCell
 
 @property (nonatomic,weak)id <ATQDTTableViewCellDelegate>delegate;
--(void)setModel:(ATQPYQModel *)model;
-- (void)configCellWithModel:(ATQPYQModel *)model indexPath:(NSIndexPath *)indexPath;
+
+- (void)configCellWithModel:(ATQDTModel *)model indexPath:(NSIndexPath *)indexPath;
 @end

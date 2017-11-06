@@ -174,7 +174,7 @@ static NSInteger page = 1;
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    return 300;
+    return 370;
 
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -209,6 +209,60 @@ static NSInteger page = 1;
     browser.selectedImageView = imageView;
     [browser show];
 }
+
+#pragma mark -- 花
+-(void)didClickHuaWithIndexPath:(NSIndexPath *)indexPath{
+    ATQDTModel *model = self.DTArr[indexPath.row];
+    [self songHuaClick:model.ID];
+}
+
+#pragma mark -- 评论
+-(void)didClickCommentWithIndexPath:(NSIndexPath *)indexPath{
+    
+}
+
+-(void)songHuaClick:(NSString*)cid{
+    NSMutableDictionary *params = [NSMutableDictionary  dictionary];
+    NSString *user_id = [[NSUserDefaults standardUserDefaults] objectForKey:USER_ID_AOTU_ZL];
+    NSString *user_token = [[NSUserDefaults standardUserDefaults] objectForKey:USER_TOEKN_AOTU_ZL];
+    params[@"cid"] = cid;
+    params[@"user_id"] = user_id;
+    params[@"user_token"] = user_token;
+    params[@"apptype"] = @"ios";
+    params[@"appversion"] = APPVERSION_AOTU_ZL;
+    NSString *random_str = [LhkhHttpsManager getNowTimeTimestamp];
+    params[@"random_str"] = random_str;
+    NSString *app_token = APP_TOKEN;
+    NSString *signStr = [NSString stringWithFormat:@"%@%@",app_token,random_str];
+    NSString *sign1 = [LhkhHttpsManager md5:signStr];
+    NSString *sign2 = [LhkhHttpsManager md5:sign1];
+    NSString *sign = [LhkhHttpsManager md5:sign2];
+    params[@"sign"] = sign;
+    NSString *url = [NSString stringWithFormat:@"%@/api/circle/flower",ATQBaseUrl];
+    
+    [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
+        [self.tableView.mj_header endRefreshing];
+        NSLog(@"-----flower=%@",responseObject);
+        if ([responseObject[@"status"] isEqualToString:@"1"]) {
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+            [self loadData];
+        }else if ([responseObject[@"status"] isEqualToString:@"302"]){
+            [self.tableView.mj_header endRefreshing];
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self login];
+            });
+        }else{
+            [self.tableView.mj_header endRefreshing];
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+        }
+        
+    } failure:^(NSError *error) {
+        [self.tableView.mj_header endRefreshing];
+        NSLog(@"%@",error);
+    }];
+}
+
 
 -(NSMutableArray*)DTArr{
     if (_DTArr == nil) {

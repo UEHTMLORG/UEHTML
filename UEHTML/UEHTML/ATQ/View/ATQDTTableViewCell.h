@@ -13,7 +13,8 @@
 
 -(void)didClickedMoreBtn:(UIButton *)btn indexPath:(NSIndexPath *)indexPath;
 -(void)didClickImageViewWithCurrentCell:(UIImageView *)imageView imageViewArray:(NSMutableArray *)array imageSuperView:(UIView *)view indexPath:(NSIndexPath *)indexPath;
-
+-(void)didClickHuaWithIndexPath:(NSIndexPath *)indexPath;
+-(void)didClickCommentWithIndexPath:(NSIndexPath *)indexPath;
 @end
 @interface ATQDTTableViewCell : UITableViewCell
 

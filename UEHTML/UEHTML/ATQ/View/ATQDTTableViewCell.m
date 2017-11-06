@@ -194,7 +194,7 @@
         make.top.equalTo(bottomView.mas_bottom).offset(10);
         make.left.mas_equalTo(msgLabel);
         make.right.equalTo(msgLabel.mas_right);
-        make.bottom.mas_equalTo(self.contentView.mas_bottom).offset(-10);
+//        make.bottom.mas_equalTo(self.contentView.mas_bottom).offset(-10);
     }];
     
     [chakanLab mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -254,7 +254,6 @@
     self.indexPath = indexPath;
     [self.headImageView sd_setImageWithURL:[NSURL URLWithString:model.avatar] placeholderImage:[UIImage imageNamed:@""]];
     self.nameLabel.text = model.nick_name;
-    model.desc = @"发快捷施法很舒服哈开始大富科技发货速度发空间很大的";
     self.msgLabel.text = model.desc;
     self.pinglunLabel.text = model.message_num;
     self.chakanLabel.text = [NSString stringWithFormat:@"%@人查看",model.read_num];
@@ -316,7 +315,8 @@
     }];
     
     self.DTimageView.model = model;
-//    [self.DTContentView configCellWithModel:model indexPath:indexPath];
+    [self.DTContentView configCellWithModel:model indexPath:indexPath];
+    
 }
 
 -(void)moreAction:(UIButton *)sender
@@ -336,17 +336,17 @@
 
 -(void)huaClick{
     NSLog(@"hua---");
-//    if([self.delegate respondsToSelector:@selector(didClickenLikeBtnWithIndexPath:)])
-//    {
-//        [self.delegate didClickenLikeBtnWithIndexPath:self.indexPath];
-//    }
+    if([self.delegate respondsToSelector:@selector(didClickHuaWithIndexPath:)])
+    {
+        [self.delegate didClickHuaWithIndexPath:self.indexPath];
+    }
 }
 -(void)pinglunClick{
     NSLog(@"pinglun---");
-//    if([self.delegate respondsToSelector:@selector(didClickCommentBtnWithIndexPath:)])
-//    {
-//        [self.delegate didClickCommentBtnWithIndexPath:self.indexPath];
-//    }
+    if([self.delegate respondsToSelector:@selector(didClickCommentWithIndexPath:)])
+    {
+        [self.delegate didClickCommentWithIndexPath:self.indexPath];
+    }
 }
 
 - (void)awakeFromNib {

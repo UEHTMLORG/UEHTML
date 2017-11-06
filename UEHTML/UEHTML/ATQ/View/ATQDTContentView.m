@@ -11,6 +11,7 @@
 #import "ATQDTModel.h"
 #import "ATQContentModel.h"
 #import "MJExtension.h"
+#import "UITableView+FDTemplateLayoutCell.h"
 @interface ATQDTContentView()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,strong)NSMutableArray *commentDataArray;
@@ -57,7 +58,7 @@
     return 1;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 1;
+    return self.commentDataArray.count;
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -100,21 +101,19 @@
 {
     self.commentDataArray = [ATQContentModel mj_objectArrayWithKeyValuesArray:model.message_list];
     self.indexPath = indexPath;
-    [self.tableView reloadData];
-    float height;
-    
-    for(ATQContentModel *model in self.commentDataArray)
+    long count = self.commentDataArray.count;
+    float height = 40*count;
+    NSLog(@"%ld",self.commentDataArray.count);
+    for(ATQContentModel *commetmodel in self.commentDataArray)
     {
-//        float cellHeight = [ATQContentTableViewCell hyb_heightForTableView:self.tableView config:^(UITableViewCell *sourceCell) {
-            ATQContentTableViewCell *cell = (ATQContentTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
-            [cell configCellWithModel:model];
-//        }];
-//        height += cellHeight;
+        ATQContentTableViewCell *cell = (ATQContentTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+        [cell configCellWithModel:commetmodel];
     }
     [self.tableView mas_updateConstraints:^(MASConstraintMaker *make) {
         make.height.mas_equalTo(height);
     }];
     [self.superview layoutIfNeeded];
+    [self.tableView reloadData];
 }
 
 

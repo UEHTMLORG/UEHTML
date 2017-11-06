@@ -164,7 +164,7 @@
         make.top.equalTo(nameLabel.mas_bottom).with.offset(5);
         make.left.mas_equalTo(nameLabel);
         make.right.equalTo(self.contentView.mas_right).with.offset(-10);
-        make.height.offset(30);
+//        make.height.offset(30);
     }];
     msgLabel.preferredMaxLayoutWidth = ScreenWidth-80;
     

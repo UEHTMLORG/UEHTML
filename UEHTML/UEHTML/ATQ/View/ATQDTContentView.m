@@ -11,8 +11,11 @@
 #import "ATQDTModel.h"
 #import "ATQContentModel.h"
 #import "MJExtension.h"
-#import "UITableView+FDTemplateLayoutCell.h"
+#import "NSString+ZJ.h"
 @interface ATQDTContentView()<UITableViewDelegate,UITableViewDataSource>
+{
+    float CellHeight;
+}
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,strong)NSMutableArray *commentDataArray;
 @property (nonatomic,strong)NSIndexPath *indexPath;
@@ -78,7 +81,8 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 40;
+    
+    return CellHeight;
 }
 #pragma mark - Custom Delegate
 
@@ -102,13 +106,17 @@
     self.commentDataArray = [ATQContentModel mj_objectArrayWithKeyValuesArray:model.message_list];
     self.indexPath = indexPath;
     long count = self.commentDataArray.count;
-    float height = 40*count;
+    
     NSLog(@"%ld",self.commentDataArray.count);
+    float msgHeight;
     for(ATQContentModel *commetmodel in self.commentDataArray)
     {
         ATQContentTableViewCell *cell = (ATQContentTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
         [cell configCellWithModel:commetmodel];
+        msgHeight = [NSString stringHeightWithString:commetmodel.message size:14 maxWidth: ScreenWidth-80];
+        CellHeight = msgHeight +25;
     }
+    float height = CellHeight*count;
     [self.tableView mas_updateConstraints:^(MASConstraintMaker *make) {
         make.height.mas_equalTo(height);
     }];

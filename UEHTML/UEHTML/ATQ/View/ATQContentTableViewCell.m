@@ -31,19 +31,16 @@
 
 -(void)BuildViews{
     UIImageView *headImg = [[UIImageView alloc] initWithFrame:CGRectZero];
-    headImg.image = [UIImage imageNamed:@"1"];
     [self.contentView addSubview:headImg];
     self.headImg = headImg;
     
     UILabel *nameLab = [[UILabel alloc] initWithFrame:CGRectZero];
-    nameLab.text = @"陈一发儿";
     nameLab.textColor = [UIColor colorWithHexString:UIDeepTextColorStr];
     nameLab.font = [UIFont systemFontOfSize:12];
     [self.contentView addSubview:nameLab];
     self.nameLabel = nameLab;
     
     self.contentLabel = [[MLLinkLabel alloc] init];
-    self.contentLabel.text = @"恩，是很不错额";
     self.contentLabel.delegate = self;
     self.contentLabel.linkTextAttributes = @{NSForegroundColorAttributeName : [UIColor colorWithRed:92/255.0 green:140/255.0 blue:255/255.0 alpha:1.0]};
     self.contentLabel.activeLinkTextAttributes = @{NSForegroundColorAttributeName : [UIColor redColor]};
@@ -74,6 +71,7 @@
 {
     [self.headImg sd_setImageWithURL:[NSURL URLWithString:model.avatar] placeholderImage:[UIImage imageNamed:@"1"]];
     self.nameLabel.text = model.nick_name;
+//    model.message = @"大恒科技上返回看见啊话费卡发货快乐话费卡刷卡了发付款撒哈拉付款后考虑恢复啊鸿福路口哈克龙付好款返回来看法拉还是两块返回来看安抚flash考虑f";
     self.contentLabel.text = model.message;
     
 //    NSString *string =[NSString stringWithFormat:@"%@",model.content];

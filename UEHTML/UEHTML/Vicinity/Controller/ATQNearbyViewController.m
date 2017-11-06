@@ -80,6 +80,8 @@
     lat = [NSString stringWithFormat:@"%f",userLocation.location.coordinate.latitude] ;
     lon = [NSString stringWithFormat:@"%f",userLocation.location.coordinate.longitude] ;
     NSLog(@"lat===%@----log===%@---%f--%f",lat,lon,userLocation.location.coordinate.latitude,userLocation.location.coordinate.longitude);
+    [[NSUserDefaults standardUserDefaults] setObject:lat forKey:@"lat"];
+    [[NSUserDefaults standardUserDefaults] setObject:lon forKey:@"lon"];
     
     if (lat.floatValue == userLocation.location.coordinate.latitude && lon.floatValue == userLocation.location.coordinate.longitude) {
         

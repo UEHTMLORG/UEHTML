@@ -18,10 +18,19 @@
 #import "ATQMepublishTTableViewCell.h"
 #import "UIColor+LhkhColor.h"
 #import "KZPhotoManager.h"
+#import "LhkhHttpsManager.h"
+#import "MJExtension.h"
+#import "MJRefresh.h"
+#import "UIImageView+WebCache.h"
+#import "MBProgressHUD+Add.h"
+#import "ATQDTImageView.h"
+#import "ZJImageViewBrowser.h"
+#import "NSString+ZJ.h"
 @interface ATQMePublishViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate,MPMediaPickerControllerDelegate,UITextViewDelegate,UITableViewDelegate,UITableViewDataSource>{
     float height;
 }
 @property (nonatomic,strong)UITableView *tableView;
+
 @end
 
 @implementation ATQMePublishViewController
@@ -43,6 +52,59 @@
 
 -(void)publish{
     NSLog(@"发表");
+    NSString *lat = [[NSUserDefaults standardUserDefaults]objectForKey:@"lat"];
+    NSString *lon = [[NSUserDefaults standardUserDefaults]objectForKey:@"lon"];
+    NSMutableDictionary *params = [NSMutableDictionary  dictionary];
+    NSString *user_id = [[NSUserDefaults standardUserDefaults] objectForKey:USER_ID_AOTU_ZL];
+    NSString *user_token = [[NSUserDefaults standardUserDefaults] objectForKey:USER_TOEKN_AOTU_ZL];
+    NSString *model = nil;
+    if ([self.typeStr isEqualToString:@"0"]) {
+        model = @"1";
+    }else if ([self.typeStr isEqualToString:@"1"]){
+        model = @"2";
+    }else if([self.typeStr isEqualToString:@"2"]){
+        model = @"3";
+    }
+    params[@"model"] = model;
+    params[@"lat"] = lat;
+    params[@"lon"] = lon;
+    params[@"user_id"] = user_id;
+    params[@"user_token"] = user_token;
+    params[@"apptype"] = @"ios";
+    params[@"appversion"] = APPVERSION_AOTU_ZL;
+    NSString *random_str = [LhkhHttpsManager getNowTimeTimestamp];
+    params[@"random_str"] = random_str;
+    NSString *app_token = APP_TOKEN;
+    NSString *signStr = [NSString stringWithFormat:@"%@%@",app_token,random_str];
+    NSString *sign1 = [LhkhHttpsManager md5:signStr];
+    NSString *sign2 = [LhkhHttpsManager md5:sign1];
+    NSString *sign = [LhkhHttpsManager md5:sign2];
+    params[@"sign"] = sign;
+    NSString *url = [NSString stringWithFormat:@"%@/api/circle/send",ATQBaseUrl];
+    
+    [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
+        [self.tableView.mj_header endRefreshing];
+        NSLog(@"-----send=%@",responseObject);
+        if ([responseObject[@"status"] isEqualToString:@"1"]) {
+            if(responseObject[@"data"]){
+
+            }
+            [self.tableView reloadData];
+        }else if ([responseObject[@"status"] isEqualToString:@"302"]){
+            [self.tableView.mj_header endRefreshing];
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self login];
+            });
+        }else{
+            [self.tableView.mj_header endRefreshing];
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+        }
+        
+    } failure:^(NSError *error) {
+        [self.tableView.mj_header endRefreshing];
+        NSLog(@"%@",error);
+    }];
 }
 
 -(void)setTableView{
@@ -60,12 +122,7 @@
         [self.view addSubview:tableView];
         tableView;
     });
-    
-    //    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadData)];
-    //    self.tableView.mj_header.automaticallyChangeAlpha = YES;
-    //    [self.tableView.mj_header beginRefreshing];
-//    self.tableView.mj_footer = [self loadMoreDataFooterWith:self.tableView];
-    
+
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.mas_equalTo(self.view);
         make.top.mas_equalTo(self.view).offset(0);

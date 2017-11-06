@@ -15,8 +15,10 @@
 #import "UIImageView+WebCache.h"
 #import "MBProgressHUD+Add.h"
 #import "ATQDTModel.h"
+#import "ATQContentModel.h"
 #import "ATQDTImageView.h"
 #import "ZJImageViewBrowser.h"
+#import "NSString+ZJ.h"
 @interface ATQTongchengViewController ()<UITableViewDataSource,UITableViewDelegate,ATQDTTableViewCellDelegate>
 
 @property (nonatomic,strong)UITableView *tableView;
@@ -173,8 +175,45 @@ static NSInteger page = 1;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    ATQDTModel *model = nil;
+    if (_DTArr.count>0) {
+        model = _DTArr[indexPath.row];
+    }
+    float msgHeight = [NSString stringHeightWithString:model.desc size:14 maxWidth: ScreenWidth-80];
+    if (msgHeight >60) {
+        msgHeight = 90;
+    }
+    float imageContainViewHeight;
+    if(model.pictures.count==0)
+    {
+        imageContainViewHeight = 0;
+    }
+    else if (model.pictures.count>0 && model.pictures.count<4)
+    {
+        imageContainViewHeight = (ScreenWidth-90)/3;
+    }
+    else
+    {
+        imageContainViewHeight = (2*(ScreenWidth-90)/3)+5;
+    }
+    float btnHeight;
+    if (model.isExpand) {
+        btnHeight = 40;
+        msgHeight = [NSString stringHeightWithString:model.desc size:14 maxWidth: ScreenWidth-80];
+    }else{
+        btnHeight = 0;
+    }
+    float pinglunHeight = 0;
+    NSArray *arr =  [ATQContentModel mj_objectArrayWithKeyValuesArray:model.message_list];
+    ATQContentModel *conmodel = nil;
     
-    return 370;
+    if (arr.count>0) {
+        conmodel = arr[indexPath.row];
+        pinglunHeight = [NSString stringHeightWithString:conmodel.message size:12 maxWidth: ScreenWidth-80];
+    }
+    
+    float messageHeight = (30+pinglunHeight)*arr.count;
+    return 80+msgHeight+imageContainViewHeight+messageHeight+btnHeight;
 
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -201,6 +240,7 @@ static NSInteger page = 1;
 {
     ATQDTModel *model = self.DTArr[indexPath.row];
     model.isExpand = !model.isExpand;
+    
     [self.tableView reloadData];
 }
 #pragma mark -- 图片

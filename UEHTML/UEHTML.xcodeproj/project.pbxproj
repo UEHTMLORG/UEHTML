@@ -157,6 +157,10 @@
 		18D93D891F95BF2C00D18418 /* MD5FilesZl.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D93D881F95BF2C00D18418 /* MD5FilesZl.m */; };
 		18D93D8D1F96E9CB00D18418 /* JianZhiTouSuCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D93D8B1F96E9CA00D18418 /* JianZhiTouSuCollectionViewCell.m */; };
 		18D93D8E1F96E9CB00D18418 /* JianZhiTouSuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D93D8C1F96E9CA00D18418 /* JianZhiTouSuCollectionViewCell.xib */; };
+		18F988791FB0A70300335E5D /* DetailSubPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F988771FB0A70300335E5D /* DetailSubPublishViewController.m */; };
+		18F9887A1FB0A70300335E5D /* DetailSubPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F988781FB0A70300335E5D /* DetailSubPublishViewController.xib */; };
+		18F9887E1FB0A78400335E5D /* DetailSubPublishCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F9887C1FB0A78400335E5D /* DetailSubPublishCell.m */; };
+		18F9887F1FB0A78400335E5D /* DetailSubPublishCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F9887D1FB0A78400335E5D /* DetailSubPublishCell.xib */; };
 		40019C321F7F6BF600E11331 /* ATQCheckTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40019C301F7F6BF600E11331 /* ATQCheckTableViewCell.m */; };
 		40019C331F7F6BF600E11331 /* ATQCheckTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40019C311F7F6BF600E11331 /* ATQCheckTableViewCell.xib */; };
 		40056E171FA5873A0069DEF4 /* ATQVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 40056E161FA5873A0069DEF4 /* ATQVideoModel.m */; };
@@ -1016,6 +1020,12 @@
 		18D93D8A1F96E9CA00D18418 /* JianZhiTouSuCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JianZhiTouSuCollectionViewCell.h; sourceTree = "<group>"; };
 		18D93D8B1F96E9CA00D18418 /* JianZhiTouSuCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JianZhiTouSuCollectionViewCell.m; sourceTree = "<group>"; };
 		18D93D8C1F96E9CA00D18418 /* JianZhiTouSuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JianZhiTouSuCollectionViewCell.xib; sourceTree = "<group>"; };
+		18F988761FB0A70300335E5D /* DetailSubPublishViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailSubPublishViewController.h; sourceTree = "<group>"; };
+		18F988771FB0A70300335E5D /* DetailSubPublishViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailSubPublishViewController.m; sourceTree = "<group>"; };
+		18F988781FB0A70300335E5D /* DetailSubPublishViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailSubPublishViewController.xib; sourceTree = "<group>"; };
+		18F9887B1FB0A78400335E5D /* DetailSubPublishCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailSubPublishCell.h; sourceTree = "<group>"; };
+		18F9887C1FB0A78400335E5D /* DetailSubPublishCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailSubPublishCell.m; sourceTree = "<group>"; };
+		18F9887D1FB0A78400335E5D /* DetailSubPublishCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailSubPublishCell.xib; sourceTree = "<group>"; };
 		40019C2F1F7F6BF600E11331 /* ATQCheckTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQCheckTableViewCell.h; path = UEHTML/Me/View/ATQCheckTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		40019C301F7F6BF600E11331 /* ATQCheckTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQCheckTableViewCell.m; path = UEHTML/Me/View/ATQCheckTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		40019C311F7F6BF600E11331 /* ATQCheckTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQCheckTableViewCell.xib; path = UEHTML/Me/View/ATQCheckTableViewCell.xib; sourceTree = SOURCE_ROOT; };
@@ -2486,6 +2496,51 @@
 			path = DB;
 			sourceTree = "<group>";
 		};
+		18F988711FB0A6C700335E5D /* DetailSubPublish */ = {
+			isa = PBXGroup;
+			children = (
+				18F988721FB0A6C700335E5D /* Model */,
+				18F988731FB0A6C700335E5D /* View */,
+				18F988741FB0A6C700335E5D /* ViewController */,
+				18F988751FB0A6C700335E5D /* ViewModel */,
+			);
+			path = DetailSubPublish;
+			sourceTree = "<group>";
+		};
+		18F988721FB0A6C700335E5D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18F988731FB0A6C700335E5D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18F9887B1FB0A78400335E5D /* DetailSubPublishCell.h */,
+				18F9887C1FB0A78400335E5D /* DetailSubPublishCell.m */,
+				18F9887D1FB0A78400335E5D /* DetailSubPublishCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18F988741FB0A6C700335E5D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				18F988761FB0A70300335E5D /* DetailSubPublishViewController.h */,
+				18F988771FB0A70300335E5D /* DetailSubPublishViewController.m */,
+				18F988781FB0A70300335E5D /* DetailSubPublishViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		18F988751FB0A6C700335E5D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		40076A031F95925A006839C7 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -3134,6 +3189,7 @@
 		409E6DC61F50081200E3BE49 /* Publish */ = {
 			isa = PBXGroup;
 			children = (
+				18F988711FB0A6C700335E5D /* DetailSubPublish */,
 				18A9461D1FAA14E0007F8A1D /* FaBuPublish */,
 				186623291F76A49A00E42290 /* Model */,
 				1866232A1F76A49A00E42290 /* View */,
@@ -5158,6 +5214,7 @@
 				40F5E62E1F91AFAC0077A574 /* yy@2x.png in Resources */,
 				40E0F2741F78FE480074B064 /* ATQPhotoCollectionViewCell.xib in Resources */,
 				40F5E5B61F91AFAC0077A574 /* f_static_050@3x.png in Resources */,
+				18F9887A1FB0A70300335E5D /* DetailSubPublishViewController.xib in Resources */,
 				40F5E56F1F91AFAC0077A574 /* f_static_015@2x.png in Resources */,
 				40F5E5F91F91AFAC0077A574 /* f_static_084@2x.png in Resources */,
 				40F5E5711F91AFAC0077A574 /* f_static_016@2x.png in Resources */,
@@ -5194,6 +5251,7 @@
 				40F5E55D1F91AFAC0077A574 /* f_static_006@3x.png in Resources */,
 				40F5E5A11F91AFAC0077A574 /* f_static_040@2x.png in Resources */,
 				40F5E5401F91AFAC0077A574 /* section0_emotion0@2x.png in Resources */,
+				18F9887F1FB0A78400335E5D /* DetailSubPublishCell.xib in Resources */,
 				40F5E5D01F91AFAC0077A574 /* f_static_063@3x.png in Resources */,
 				40DF4F7B1F82102400EE6753 /* ATQTypeListViewController.xib in Resources */,
 				185D78721F8DF13A00DA8849 /* Loading006.png in Resources */,
@@ -5409,6 +5467,7 @@
 				40236C431F7B8094004AE37B /* ATQOpinionPhotoTableViewCell.m in Sources */,
 				40F5E6361F91AFAC0077A574 /* FacePageView.m in Sources */,
 				185D78991F8DF13A00DA8849 /* UIImage+HeinQi.m in Sources */,
+				18F988791FB0A70300335E5D /* DetailSubPublishViewController.m in Sources */,
 				40EA93591F7BBC4D005A0E50 /* PNScatterChart.m in Sources */,
 				40EA934F1F7BBC4D005A0E50 /* PNCircleChart.m in Sources */,
 				40F5E63E1F91AFAC0077A574 /* RFRecordButton.m in Sources */,
@@ -5439,6 +5498,7 @@
 				40D1E79D1FAB4D6500276DFC /* ATQAddFriListModel.m in Sources */,
 				409E6D891F5003DA00E3BE49 /* AppDelegate.m in Sources */,
 				40D353BA1F7F32D10017DA5C /* ATQAccountSecTableViewCell.m in Sources */,
+				18F9887E1FB0A78400335E5D /* DetailSubPublishCell.m in Sources */,
 				40EC722D1F9F31D600412871 /* ATQCollectModel.m in Sources */,
 				4061BD9C1F8CB53B00F6EC30 /* ATQTypeListInviteDetailViewController.m in Sources */,
 				185D78AD1F8DF13A00DA8849 /* KSNavigationController.m in Sources */,

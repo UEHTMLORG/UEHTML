@@ -1,12 +1,12 @@
 //
-//  ATQDTTableViewCell.m
+//  ATQMeDTTableViewCell.m
 //  UEHTML
 //
-//  Created by LHKH on 2017/10/18.
+//  Created by LHKH on 2017/11/7.
 //  Copyright © 2017年 LHKH. All rights reserved.
 //
 
-#import "ATQDTTableViewCell.h"
+#import "ATQMeDTTableViewCell.h"
 #import "ATQDTImageView.h"
 #import "ATQDTContentView.h"
 #import "Masonry.h"
@@ -14,11 +14,10 @@
 #import "ATQDTModel.h"
 #import "UIImageView+WebCache.h"
 #import "NSString+ZJ.h"
-
-@interface ATQDTTableViewCell()<ATQDTImageViewDelegate>
-@property (nonatomic,strong)UIImageView *headImageView;//头像
+@interface ATQMeDTTableViewCell ()<ATQDTImageViewDelegate>
+@property (nonatomic,strong)UILabel *timeLabel;//发布的时间
+@property (nonatomic,strong)UILabel *ytimeLabel;//发布年的时间
 @property (nonatomic,strong)UILabel *addrLabel;//所属地方
-@property (nonatomic,strong)UILabel *nameLabel;//昵称
 @property (nonatomic,strong)UILabel *msgLabel;//动态内容
 @property (nonatomic,strong)ATQDTImageView *DTimageView;//动态的图片
 @property (nonatomic,strong)ATQDTContentView *DTContentView;//动态的图片
@@ -28,24 +27,35 @@
 @property (nonatomic,strong) UIButton *moreBtn;//展开按钮
 @property (nonatomic,strong) NSIndexPath *indexPath;//展开按钮
 @property (strong,nonatomic)ATQDTModel *model;
-
 @end
-@implementation ATQDTTableViewCell
 
--(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
+@implementation ATQMeDTTableViewCell
+
+#pragma mark - Life Cycle
+
+
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         [self BuildViews];
     }
     return self;
 }
 
 -(void)BuildViews{
-    //头像
-    UIImageView *headImageView = [[UIImageView alloc] init];
-    headImageView.image = [UIImage imageNamed:@"1"];
-    [self.contentView addSubview:headImageView];
-    self.headImageView = headImageView;
+    //发布的时间
+    UILabel *timeLab = [[UILabel alloc]initWithFrame:CGRectZero];
+    timeLab.text = @"137月";
+    timeLab.font = [UIFont systemFontOfSize:20];
+    [self.contentView addSubview:timeLab];
+    self.timeLabel = timeLab;
+    
+    //发布年的时间
+    UILabel *ytimeLab = [[UILabel alloc]initWithFrame:CGRectZero];
+    ytimeLab.text = @"2016年";
+    ytimeLab.font = [UIFont systemFontOfSize:14];
+    [self.contentView addSubview:ytimeLab];
+    self.ytimeLabel = ytimeLab;
     
     //所属地方
     UILabel *addrLab = [[UILabel alloc] initWithFrame:CGRectZero];
@@ -54,14 +64,6 @@
     addrLab.textColor = [UIColor colorWithHexString:UIColorStr];
     [self.contentView addSubview:addrLab];
     self.addrLabel = addrLab;
-    
-    //昵称
-    UILabel *nameLabel = [[UILabel alloc] init];
-    nameLabel.text = @"陈一发儿";
-    nameLabel.font = [UIFont systemFontOfSize:16];
-    nameLabel.textColor = [UIColor colorWithHexString:UIDeepTextColorStr];
-    [self.contentView addSubview:nameLabel];
-    self.nameLabel = nameLabel;
     
     //动态内容
     UILabel *msgLabel = [[UILabel alloc] init];
@@ -100,6 +102,16 @@
     chakanLab.font = [UIFont systemFontOfSize:12];
     self.chakanLabel = chakanLab;
     [bottomView addSubview:chakanLab];
+    
+    //删除按钮
+    UIButton *delBtn = [[UIButton alloc] init];
+    [delBtn setTitle:@"删除" forState:UIControlStateNormal];
+    [delBtn setTitleColor:[UIColor colorWithHexString:UIDeepTextColorStr] forState:UIControlStateNormal];
+    delBtn.titleLabel.font = [UIFont systemFontOfSize:14.0];
+    delBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    [delBtn addTarget:self action:@selector(delAction:) forControlEvents:UIControlEventTouchUpInside];
+    [bottomView addSubview:delBtn];
+    
     UILabel *pinglunLab = [[UILabel alloc] initWithFrame:CGRectZero];
     pinglunLab.text = @"118";
     pinglunLab.textColor = [UIColor colorWithHexString:UIDeepToneTextColorStr];
@@ -136,33 +148,32 @@
     [self.contentView addSubview:DTContentView];
     self.DTContentView = DTContentView;
     
-    //头像图片
-    [headImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+    //时间
+    [timeLab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.equalTo(self.contentView).with.offset(10);
-            make.size.mas_equalTo(CGSizeMake(50, 50));
-        make.right.equalTo(nameLabel.mas_left).with.offset(-10);
+        make.size.mas_equalTo(CGSizeMake(50, 20));
+        make.right.equalTo(msgLabel.mas_left).with.offset(-10);
+    }];
+    
+    //年时间
+    [ytimeLab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(timeLab.mas_bottom).with.offset(10);
+        make.left.equalTo(timeLab.mas_left);
+        make.size.mas_equalTo(CGSizeMake(50, 20));
+        make.right.equalTo(msgLabel.mas_left).with.offset(-10);
     }];
     
     //位置
     [addrLab mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(headImageView.mas_left);
+        make.left.equalTo(ytimeLab.mas_left);
         make.size.mas_equalTo(CGSizeMake(50,20));
-        make.top.equalTo(headImageView.mas_bottom).offset(5);
+        make.top.equalTo(ytimeLab.mas_bottom).offset(5);
     }];
-    
-    //名字
-    [nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.contentView.mas_top).with.offset(10);
-        make.left.equalTo(headImageView.mas_right).with.offset(10);
-        
-        make.size.mas_equalTo(CGSizeMake(150, 20));
-        make.bottom.equalTo(msgLabel.mas_top).with.offset(-5);
-    }];
-    
+  
     //动态信息
     [msgLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(nameLabel.mas_bottom).with.offset(5);
-        make.left.mas_equalTo(nameLabel);
+        make.top.equalTo(self.contentView).with.offset(5);
+        make.left.mas_equalTo(timeLab.mas_right).offset(10);
         make.right.equalTo(self.contentView.mas_right).with.offset(-10);
     }];
     msgLabel.preferredMaxLayoutWidth = ScreenWidth-80;
@@ -198,6 +209,12 @@
     [chakanLab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.offset(20);
         make.left.top.bottom.mas_equalTo(bottomView);
+    }];
+    
+    [delBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.height.offset(20);
+        make.left.equalTo(chakanLab.mas_right).offset(10);
+        make.top.bottom.equalTo(bottomView);
     }];
     
     [huaLab mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -237,7 +254,7 @@
         make.left.mas_equalTo(pinglunImg.mas_left);
         make.right.mas_equalTo(pinglunLab.mas_right);
     }];
-
+    
     [spaceView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.offset(1);
         make.left.right.mas_equalTo(self);
@@ -250,13 +267,35 @@
 {
     _model = model;
     self.indexPath = indexPath;
-    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:model.avatar] placeholderImage:[UIImage imageNamed:@""]];
-    self.nameLabel.text = model.nick_name;
     self.msgLabel.text = model.desc;
     self.pinglunLabel.text = model.message_num;
     self.chakanLabel.text = [NSString stringWithFormat:@"%@人查看",model.read_num];
     self.huaLabel.text = model.flower_num;
     self.addrLabel.text = model.city;
+    NSString *str = [NSString stringWithFormat:@"%@%@",model.day,model.month];
+    if (str.length>0) {
+        NSMutableAttributedString *attrStr = [[NSMutableAttributedString alloc]initWithString:str];
+        [attrStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:12] range:NSMakeRange(2, (str.length-2))];
+        self.timeLabel.attributedText = attrStr;
+    }
+    self.ytimeLabel.text = model.year;
+    if (model.year == nil || [model.year isEqualToString:@""]) {
+        [self.ytimeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.timeLabel.mas_bottom).with.offset(10);
+            make.left.equalTo(self.timeLabel.mas_left);
+            make.size.mas_equalTo(CGSizeMake(50, 0));
+            make.right.equalTo(self.msgLabel.mas_left).with.offset(-10);
+        }];
+    }else{
+        
+        [self.ytimeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.timeLabel.mas_bottom).with.offset(10);
+            make.left.equalTo(self.timeLabel.mas_left);
+            make.size.mas_equalTo(CGSizeMake(50, 20));
+            make.right.equalTo(self.msgLabel.mas_left).with.offset(-10);
+        }];
+    }
+    
     float msgHeight = [NSString stringHeightWithString:model.desc size:14 maxWidth: ScreenWidth-80];
     if(msgHeight <=60)
     {
@@ -276,8 +315,8 @@
     if(model.isExpand)
     {
         [self.msgLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.nameLabel.mas_bottom).with.offset(5);
-            make.left.mas_equalTo(self.nameLabel);
+            make.top.equalTo(self.contentView).with.offset(5);
+            make.left.mas_equalTo(self.timeLabel.mas_right).offset(10);
             make.right.equalTo(self.contentView.mas_right).with.offset(-10);
             make.height.mas_lessThanOrEqualTo(msgHeight);
         }];
@@ -285,8 +324,8 @@
     else
     {
         [self.msgLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.nameLabel.mas_bottom).with.offset(5);
-            make.left.mas_equalTo(self.nameLabel);
+            make.top.equalTo(self.contentView).with.offset(5);
+            make.left.mas_equalTo(self.timeLabel.mas_right).offset(10);
             make.right.equalTo(self.contentView.mas_right).with.offset(-10);
             make.height.mas_lessThanOrEqualTo(60);
         }];
@@ -319,43 +358,41 @@
 
 -(void)moreAction:(UIButton *)sender
 {
-    if([_delegate respondsToSelector:@selector(didClickedMoreBtn:indexPath:)])
+    if([_delegate respondsToSelector:@selector(didClickMeMoreBtn:indexPath:)])
     {
-        [_delegate didClickedMoreBtn:sender indexPath:self.indexPath];
+        [_delegate didClickMeMoreBtn:sender indexPath:self.indexPath];
     }
 }
 
 -(void)didClickImageViewWithCurrentImageView:(UIImageView *)imageView imageViewArray:(NSMutableArray *)array imageSuperView:(UIView *)superView{
-    if([_delegate respondsToSelector:@selector(didClickImageViewWithCurrentCell:imageViewArray:imageSuperView:indexPath:)])
+    if([_delegate respondsToSelector:@selector(didClickMeImageViewWithCurrentCell:imageViewArray:imageSuperView:indexPath:)])
     {
-        [_delegate didClickImageViewWithCurrentCell:imageView imageViewArray:array imageSuperView:superView indexPath:self.indexPath];
+        [_delegate didClickMeImageViewWithCurrentCell:imageView imageViewArray:array imageSuperView:superView indexPath:self.indexPath];
+    }
+}
+
+-(void)delAction:(UIButton*)sender{
+    NSLog(@"del---");
+    if([self.delegate respondsToSelector:@selector(didClickMeDelWithIndexPath:)])
+    {
+        [self.delegate didClickMeDelWithIndexPath:self.indexPath];
     }
 }
 
 -(void)huaClick{
     NSLog(@"hua---");
-    if([self.delegate respondsToSelector:@selector(didClickHuaWithIndexPath:)])
+    if([self.delegate respondsToSelector:@selector(didClickMeHuaWithIndexPath:)])
     {
-        [self.delegate didClickHuaWithIndexPath:self.indexPath];
+        [self.delegate didClickMeHuaWithIndexPath:self.indexPath];
     }
 }
 -(void)pinglunClick{
     NSLog(@"pinglun---");
-    if([self.delegate respondsToSelector:@selector(didClickCommentWithIndexPath:)])
+    if([self.delegate respondsToSelector:@selector(didClickMeCommentWithIndexPath:)])
     {
-        [self.delegate didClickCommentWithIndexPath:self.indexPath];
+        [self.delegate didClickMeCommentWithIndexPath:self.indexPath];
     }
 }
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
-
 @end
+

@@ -19,6 +19,7 @@
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,strong)NSMutableArray *commentDataArray;
 @property (nonatomic,strong)NSIndexPath *indexPath;
+@property (nonatomic,strong)NSMutableArray *heightArr;
 @end
 
 @implementation ATQDTContentView
@@ -28,6 +29,7 @@
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
+        _heightArr = [NSMutableArray array];
         [self setTableView];
     }
     return self;
@@ -81,7 +83,12 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    ATQContentModel *model = nil;
+    if (self.commentDataArray.count >0) {
+        model = self.commentDataArray[indexPath.row];
+    }
+    float msgheight = [NSString stringHeightWithString:model.message size:12 maxWidth: ScreenWidth-80];
+    CellHeight = msgheight +30;
     return CellHeight;
 }
 #pragma mark - Custom Delegate
@@ -105,18 +112,17 @@
 {
     self.commentDataArray = [ATQContentModel mj_objectArrayWithKeyValuesArray:model.message_list];
     self.indexPath = indexPath;
-    long count = self.commentDataArray.count;
-    
     NSLog(@"%ld",self.commentDataArray.count);
-    float msgHeight;
+    float height = 0;
+    float msgheight = 0;
     for(ATQContentModel *commetmodel in self.commentDataArray)
     {
         ATQContentTableViewCell *cell = (ATQContentTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+    
+        msgheight = [NSString stringHeightWithString:commetmodel.message size:12 maxWidth: ScreenWidth-80];
+        height += msgheight+30;
         [cell configCellWithModel:commetmodel];
-        msgHeight = [NSString stringHeightWithString:commetmodel.message size:14 maxWidth: ScreenWidth-80];
-        CellHeight = msgHeight +25;
     }
-    float height = CellHeight*count;
     [self.tableView mas_updateConstraints:^(MASConstraintMaker *make) {
         make.height.mas_equalTo(height);
     }];

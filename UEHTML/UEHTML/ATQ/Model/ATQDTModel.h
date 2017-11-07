@@ -18,6 +18,9 @@
 @property(copy,nonatomic)NSString *avatar;
 @property(copy,nonatomic)NSString *message_num;
 @property(copy,nonatomic)NSString *city;
+@property(copy,nonatomic)NSString *day;
+@property(copy,nonatomic)NSString *year;
+@property(copy,nonatomic)NSString *month;
 @property(copy,nonatomic)NSString *model;
 @property(copy,nonatomic)NSString *video;
 @property(strong,nonatomic)NSArray *pictures;

@@ -205,15 +205,15 @@ static NSInteger page = 1;
     }
     float pinglunHeight = 0;
     NSArray *arr =  [ATQContentModel mj_objectArrayWithKeyValuesArray:model.message_list];
-    ATQContentModel *conmodel = nil;
-    
+
+    float pinglunMsgH = 0;
     if (arr.count>0) {
-        conmodel = arr[indexPath.row];
-        pinglunHeight = [NSString stringHeightWithString:conmodel.message size:12 maxWidth: ScreenWidth-80];
+        for (ATQContentModel *conmodel in arr) {
+            pinglunMsgH = [NSString stringHeightWithString:conmodel.message size:12 maxWidth: ScreenWidth-80];
+            pinglunHeight += pinglunMsgH+35;
+        }
     }
-    
-    float messageHeight = (30+pinglunHeight)*arr.count;
-    return 80+msgHeight+imageContainViewHeight+messageHeight+btnHeight;
+    return 80+msgHeight+imageContainViewHeight+pinglunHeight+btnHeight;
 
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

@@ -9,12 +9,14 @@
 #import <Foundation/Foundation.h>
 
 @interface ATQContentModel : NSObject
+@property(copy,nonatomic)NSString *ID;//消息id
 @property(copy,nonatomic)NSString *avatar;
-@property(copy,nonatomic)NSString *ID;
+@property(copy,nonatomic)NSString *user_id;
 @property(copy,nonatomic)NSString *nick_name;
 @property(copy,nonatomic)NSString *model;
 @property(copy,nonatomic)NSString *message;
-@property(strong,nonatomic)NSArray *message_list;
+@property(copy,nonatomic)NSString *reply_nick_name;
+@property(copy,nonatomic)NSString *reply_user_id;
 @end
 /*
 {

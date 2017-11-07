@@ -15,6 +15,7 @@
 @property (nonatomic, strong) MLLinkLabel *contentLabel;
 @property (nonatomic, strong) UIImageView *headImg;
 @property (nonatomic, strong) UILabel *nameLabel;
+@property (nonatomic, strong) UILabel *qiaoLabel;
 @end
 
 @implementation ATQContentTableViewCell
@@ -40,10 +41,17 @@
     [self.contentView addSubview:nameLab];
     self.nameLabel = nameLab;
     
+    UILabel *qiaoLab = [[UILabel alloc] initWithFrame:CGRectZero];
+    qiaoLab.text = @"悄悄话";
+    qiaoLab.textColor = [UIColor colorWithHexString:UIColorStr];
+    qiaoLab.font = [UIFont systemFontOfSize:12];
+    [self.contentView addSubview:qiaoLab];
+    self.qiaoLabel = qiaoLab;
+    
     self.contentLabel = [[MLLinkLabel alloc] init];
     self.contentLabel.delegate = self;
     self.contentLabel.linkTextAttributes = @{NSForegroundColorAttributeName : [UIColor colorWithRed:92/255.0 green:140/255.0 blue:255/255.0 alpha:1.0]};
-    self.contentLabel.activeLinkTextAttributes = @{NSForegroundColorAttributeName : [UIColor redColor]};
+    self.contentLabel.activeLinkTextAttributes = @{NSForegroundColorAttributeName : [UIColor colorWithRed:92/255.0 green:140/255.0 blue:255/255.0 alpha:1]};
     self.contentLabel.numberOfLines = 0;
     self.contentLabel.font = [UIFont systemFontOfSize:12];
     self.contentLabel.preferredMaxLayoutWidth = ScreenWidth-80;;
@@ -60,6 +68,12 @@
         make.height.offset(15);
     }];
     
+    [qiaoLab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.contentView).offset(-10);
+        make.centerY.equalTo(nameLab.mas_centerY);
+        make.height.offset(15);
+    }];
+    
     [self.contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(nameLab.mas_left);
         make.right.mas_equalTo(self.contentView);
@@ -70,23 +84,23 @@
 - (void)configCellWithModel:(ATQContentModel *)model
 {
     [self.headImg sd_setImageWithURL:[NSURL URLWithString:model.avatar] placeholderImage:[UIImage imageNamed:@"1"]];
-    self.nameLabel.text = model.nick_name;
-//    model.message = @"大恒科技上返回看见啊话费卡发货快乐话费卡刷卡了发付款撒哈拉付款后考虑恢复啊鸿福路口哈克龙付好款返回来看法拉还是两块返回来看安抚flash考虑f";
-    self.contentLabel.text = model.message;
-    
-//    NSString *string =[NSString stringWithFormat:@"%@",model.content];
-//    if(model.replyUserName.length != 0)
-//    {
-//        self.nameLabel.text = model.userName;
-//        string =[NSString stringWithFormat:@"回复%@：%@",model.replyUserName ,model.content];
-//    }
-//    NSMutableAttributedString *text = [[NSMutableAttributedString alloc] initWithString:string];
-//    [text setAttributes:@{NSLinkAttributeName : model.userName} range:[string rangeOfString:model.userName]];
-//    if(model.replyUserName.length != 0)
-//    {
-//        [text setAttributes:@{NSLinkAttributeName : model.replyUserName} range:[string rangeOfString:model.replyUserName]];
-//    }
-//    self.contentLabel.attributedText = text;
+    if ([model.model isEqualToString:@"1"]) {
+        self.qiaoLabel.hidden = NO;
+    }else{
+        self.qiaoLabel.hidden = YES;
+    }
+    NSString *str = nil;
+    if (![model.reply_user_id isEqualToString:@"0"]) {
+        self.nameLabel.text = model.reply_nick_name;
+        NSString *nickname = model.nick_name;
+        str = [NSString stringWithFormat:@"回复%@:%@",nickname,model.message];
+        NSMutableAttributedString *text = [[NSMutableAttributedString alloc] initWithString:str];
+        [text setAttributes:@{NSLinkAttributeName : model.reply_nick_name} range:[str rangeOfString:model.nick_name]];
+        self.contentLabel.attributedText = text;
+    }else{
+        self.nameLabel.text = model.nick_name;
+        self.contentLabel.text = model.message;
+    }
 }
 
 #pragma mark - Layout SubViews

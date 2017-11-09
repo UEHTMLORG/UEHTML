@@ -12,8 +12,12 @@
 #import "Masonry.h"
 #import "UIButton+Lhkh.h"
 #import "UIColor+LhkhColor.h"
-@interface ATQTypeListViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface ATQTypeListViewController ()<UITableViewDelegate,UITableViewDataSource>{
+    NSString *paixuStr;
+}
 @property (nonatomic,strong)UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UITableView *paixutableView;
+@property (nonatomic,strong)NSArray *paixuArr;
 @end
 
 @implementation ATQTypeListViewController
@@ -27,6 +31,7 @@
 }
 
 -(void)setTableView{
+    self.paixutableView.hidden = YES;
     _tableView = ({
         UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectZero];
         [tableView registerNib:[UINib nibWithNibName:@"ATQTypeListTableViewCell" bundle:nil] forCellReuseIdentifier:@"ATQTypeListTableViewCell"];
@@ -53,53 +58,103 @@
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 10;
+    if (tableView == _tableView) {
+        return 10;
+    }else{
+        return 3;
+    }
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 1;
 }
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-   
-    static NSString *CellIdentifier = @"ATQTypeListTableViewCell" ;
-    ATQTypeListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        NSArray *array = [[NSBundle mainBundle]loadNibNamed: CellIdentifier owner:self options:nil];
-        cell = [array objectAtIndex:0];
+    if (tableView == _tableView) {
+        static NSString *CellIdentifier = @"ATQTypeListTableViewCell" ;
+        ATQTypeListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        if (cell == nil) {
+            NSArray *array = [[NSBundle mainBundle]loadNibNamed: CellIdentifier owner:self options:nil];
+            cell = [array objectAtIndex:0];
+        }
+        
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return cell;
+    }else{
+        static NSString *CellIdentifier = @"UITableViewCell" ;
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        if (cell == nil) {
+            NSArray *array = [[NSBundle mainBundle]loadNibNamed: CellIdentifier owner:self options:nil];
+            cell = [array objectAtIndex:0];
+        }
+        cell.textLabel.text = _paixuArr[indexPath.section];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return cell;
     }
     
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    return cell;
- 
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 100;
+    if (tableView == _tableView) {
+        return 100;
+    }else{
+        return 30;
+    }
+    
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    ATQTypePeoDetailViewController *vc = [[ATQTypePeoDetailViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+    if (tableView == _tableView) {
+        ATQTypePeoDetailViewController *vc = [[ATQTypePeoDetailViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else{
+        paixuStr = _paixuArr[indexPath.section];
+        self.paixutableView.hidden = YES;
+    }
+    
 }
 
 -(UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    if (section == 0) {
-        UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 5)];
-        view.backgroundColor = [UIColor colorWithHexString:UIBgColorStr];
-        return view;
+    if (tableView == _tableView) {
+        if (section == 0) {
+            UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 5)];
+            view.backgroundColor = [UIColor colorWithHexString:UIBgColorStr];
+            return view;
+        }else{
+            UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 10)];
+            view.backgroundColor = [UIColor colorWithHexString:UIBgColorStr];
+            return view;
+        }
     }else{
-        UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 10)];
-        view.backgroundColor = [UIColor colorWithHexString:UIBgColorStr];
-        return view;
+        return nil;
     }
+    
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    if (section == 0) {
-        return 5;
+    if (tableView == _tableView) {
+        if (section == 0) {
+            return 5;
+        }else{
+            return 10;
+        }
     }else{
-        return 10;
+        return 0;
     }
+    
+}
+
+- (IBAction)paixuClick:(id)sender {
+    self.paixutableView.hidden = NO;
+    [self.paixutableView reloadData];
+}
+- (IBAction)shaixuanClick:(id)sender {
+}
+
+-(NSArray*)paixuArr{
+    if (_paixuArr == nil) {
+        _paixuArr = [[NSArray alloc] initWithObjects:@"最新发布",@"距离最近",@"诚信度最高", nil];
+    }
+    return _paixuArr;
 }
 
 - (void)didReceiveMemoryWarning {

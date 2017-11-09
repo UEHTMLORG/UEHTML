@@ -11,7 +11,9 @@
 #import "LhkhHttpsManager.h"
 #import "MBProgressHUD+Add.h"
 @interface ATQUseNoteViewController ()
-
+//<UIWebViewDelegate>
+//@property (nonatomic,strong)UIWebView *webView;
+@property(strong,nonatomic)UILabel *label;
 @end
 
 @implementation ATQUseNoteViewController
@@ -19,6 +21,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
+    label.font = [UIFont systemFontOfSize:14];
+    [self.view addSubview:label];
+    self.label = label;
+    [self.label mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.equalTo(self.view).offset(15);
+        make.right.equalTo(self.view).offset(-15);
+    }];
+//    _webView = ({
+//        UIWebView *webView = [[UIWebView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-64)];
+//        webView.delegate = self;
+//        [self.view addSubview:webView];
+//        webView;
+//    });
     [self loadData];
 }
 
@@ -46,8 +62,8 @@
        
         if ([responseObject[@"status"] isEqualToString:@"1"]) {
             if(responseObject[@"data"]){
-
-              
+                NSString *htmlCode = responseObject[@"data"][@"content"];
+                self.label.text = htmlCode;
             }
         }else if ([responseObject[@"status"] isEqualToString:@"302"]){
             [MBProgressHUD show:responseObject[@"message"] view:self.view];
@@ -63,7 +79,30 @@
     }];
     
 }
-
+//- (void)webViewDidFinishLoad:(UIWebView *)webView
+//{
+//    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+//    [webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"var script = document.createElement('script');"
+//                                                     "script.type = 'text/javascript';"
+//                                                     "script.text = \"function ResizeImages() { "
+//                                                     "var myimg,oldwidth;"
+//                                                     "var maxwidth=%f;"
+//                                                     "for(i=0;i <document.images.length;i++){"
+//                                                     "myimg = document.images[i];"
+//                                                     "if(myimg.width > maxwidth){"
+//                                                     "oldwidth = myimg.width;"
+//                                                     "myimg.width = maxwidth;"
+//                                                     
+//                                                     "myimg.height = myimg.height * (myimg.width/myimg.height);"
+//                                                     "}"
+//                                                     "}"
+//                                                     "}\";"
+//                                                     "document.getElementsByTagName('head')[0].appendChild(script);",ScreenWidth]
+//     ];
+//    
+//    [webView stringByEvaluatingJavaScriptFromString:@"ResizeImages();"];
+//    
+//}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

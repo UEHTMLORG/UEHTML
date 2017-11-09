@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailXuQiuViewController">
+            <connections>
+                <outlet property="tabeView" destination="Rqm-Zx-x2H" id="SJv-E9-27x"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rqm-Zx-x2H">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="607"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z9H-EF-j3h">
+                    <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x7m-Ii-2KK">
+                            <rect key="frame" x="37" y="15" width="140" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="UwR-YS-FiW"/>
+                                <constraint firstAttribute="width" constant="140" id="rh5-1S-ZhC"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="fabu-liaotian2"/>
+                            <connections>
+                                <action selector="liaoTianButtonAction:" destination="-1" eventType="touchUpInside" id="3Yw-rl-CnF"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5B6-7O-Trw">
+                            <rect key="frame" x="198" y="15" width="140" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="Oks-oe-gPI"/>
+                                <constraint firstAttribute="width" constant="140" id="pfR-7H-e8J"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="fabu-yingyao2"/>
+                            <connections>
+                                <action selector="yingYaoButtonAction:" destination="-1" eventType="touchUpInside" id="a3b-lZ-wng"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8MQ-eX-KoT">
+                            <rect key="frame" x="187" y="0.0" width="1" height="60"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="LTG-Nn-u3B"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.95285791158676147" green="0.95299452543258667" blue="0.95282799005508423" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="x7m-Ii-2KK" firstAttribute="centerY" secondItem="z9H-EF-j3h" secondAttribute="centerY" id="2oL-Zm-4UI"/>
+                        <constraint firstItem="8MQ-eX-KoT" firstAttribute="leading" secondItem="x7m-Ii-2KK" secondAttribute="trailing" constant="10" id="9MK-Am-RGs"/>
+                        <constraint firstItem="5B6-7O-Trw" firstAttribute="centerY" secondItem="z9H-EF-j3h" secondAttribute="centerY" id="DB0-GP-FSB"/>
+                        <constraint firstItem="8MQ-eX-KoT" firstAttribute="top" secondItem="z9H-EF-j3h" secondAttribute="top" id="Fpd-eC-O94"/>
+                        <constraint firstItem="5B6-7O-Trw" firstAttribute="leading" secondItem="8MQ-eX-KoT" secondAttribute="trailing" constant="10" id="YZZ-Ag-fvP"/>
+                        <constraint firstItem="8MQ-eX-KoT" firstAttribute="centerX" secondItem="z9H-EF-j3h" secondAttribute="centerX" id="b9N-1c-nY6"/>
+                        <constraint firstAttribute="bottom" secondItem="8MQ-eX-KoT" secondAttribute="bottom" id="hPM-rJ-8Ka"/>
+                        <constraint firstAttribute="height" constant="60" id="mHc-Dt-2Qo"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Rqm-Zx-x2H" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="7Va-1T-yGm"/>
+                <constraint firstAttribute="trailing" secondItem="Rqm-Zx-x2H" secondAttribute="trailing" id="9xi-s7-E1x"/>
+                <constraint firstAttribute="trailing" secondItem="z9H-EF-j3h" secondAttribute="trailing" id="Fnf-Rv-CXe"/>
+                <constraint firstItem="Rqm-Zx-x2H" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="K8R-sF-Cn7"/>
+                <constraint firstItem="z9H-EF-j3h" firstAttribute="top" secondItem="Rqm-Zx-x2H" secondAttribute="bottom" id="c6E-OE-ueq"/>
+                <constraint firstItem="z9H-EF-j3h" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="dGP-Ju-YZg"/>
+                <constraint firstItem="z9H-EF-j3h" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hPO-tL-tdz"/>
+            </constraints>
+            <point key="canvasLocation" x="65.5" y="55.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="fabu-liaotian2" width="275" height="56"/>
+        <image name="fabu-yingyao2" width="275" height="56"/>
+    </resources>
+</document>

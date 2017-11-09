@@ -16,6 +16,7 @@
 #import "ZLSecondAFNetworking.h"
 #import "MBManager.h"
 #import "UploadParam.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 ///////////////////////////////////
 #define Main_Purple_Color @"ff73ba"
@@ -39,6 +40,10 @@
 #define CARD_LEVEL_AOTU_ZL @"card_level"
 #define APPVERSION_AOTU_ZL @"1.0.0"
 
+
+#define DEFAULT_HEADIMAGE @"jianzhi-car"
+
+/** mansory全局宏 */
 #define MAS_SHORTHAND_GLOBALS
 //#define MAS_SHORTHAND
 #endif /* ZLHeader_h */

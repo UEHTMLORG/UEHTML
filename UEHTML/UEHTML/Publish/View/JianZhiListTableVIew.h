@@ -21,6 +21,7 @@ typedef NS_ENUM(NSUInteger, JianZhiCenterCellType) {
 @property (nonatomic, strong) UITableView *tableview;
 @property (nonatomic, strong) NSMutableArray *tableARR;
 @property (nonatomic, assign) JianZhiCenterCellType currentCellType;
+@property (nonatomic, assign) PublishNetWorking_enum curPublishNetworkingType;
 
 - (void)loadTableViewWith:(NSMutableArray *)arrary withCellType:(JianZhiCenterCellType)type;
 - (void)reloadTableViewWith:(NSMutableArray *)arrary withCellType:(JianZhiCenterCellType)type;

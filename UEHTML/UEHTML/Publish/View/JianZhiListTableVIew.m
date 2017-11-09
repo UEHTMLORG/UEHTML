@@ -34,8 +34,10 @@
 */
 - (void)loadTableViewWith:(NSMutableArray *)arrary withCellType:(JianZhiCenterCellType)type{
     self.currentCellType = type;
-    [self.tableview registerNib:[UINib nibWithNibName:@"JianZhiTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"JianZhiYiCellID"];
-     [self.tableview registerNib:[UINib nibWithNibName:@"TiGongTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"TiGongCellID"];
+
+//     [self.tableview registerNib:[UINib nibWithNibName:@"TiGongTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"TiGongCellID"];
+//    [self.tableview registerNib:[UINib nibWithNibName:@"XuQiuFangTuiJianCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"XuQiuFangCellTuijianId"];
+//    [self.tableview registerNib:[UINib nibWithNibName:@"JianZhiTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"JianZhiYiCellID"];
 }
 
 - (void)reloadTableViewWith:(NSMutableArray *)arrary withCellType:(JianZhiCenterCellType)type{
@@ -47,7 +49,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectio{
-    return 10;
+    return self.tableARR.count;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     switch (self.currentCellType) {
@@ -66,21 +68,48 @@
     
     switch (self.currentCellType) {
         case JIANZHICELLTYPE:{
-            static NSString *rid=@"JianZhiYiCellID";
-            JianZhiTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:rid];
-            
-            
-            
-            return cell;
+            if (self.curPublishNetworkingType == XUQIUFANG_TUIJIAN) {
+                static NSString *rid=@"XuQiuFangCellTuijianId";
+                XuQiuFangTuiJianCell *cell = [tableView dequeueReusableCellWithIdentifier:rid];
+                if (cell == nil) {
+                    cell = [[NSBundle mainBundle] loadNibNamed:@"JianZhiTableViewCell" owner:self options:nil][1];
+                }
+                [cell bindTuiJianModel:self.tableARR[indexPath.row]];
+                return cell;
+            }
+            else{
+               static NSString *rid=@"JianZhiYiCellID";
+                JianZhiTableViewCell *cell= [tableView dequeueReusableCellWithIdentifier:rid];
+                if (cell == nil) {
+                    cell = [[NSBundle mainBundle] loadNibNamed:@"JianZhiTableViewCell" owner:self options:nil][0];
+                }
+                [cell bindMyModel:self.tableARR[indexPath.row]];
+                return cell;
+            }
+           
         }
             break;
         case TIGONGCELLTYPE:{
-            static NSString *rid=@"TiGongCellID";
-            TiGongTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:rid];
-            
-            
-            
-            return cell;
+            if (self.curPublishNetworkingType == FUWUFANG_TUIJIAN) {
+                static NSString *rid=@"TiGongCellID";
+                TiGongTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:rid];
+                if (cell == nil) {
+                    cell = [[NSBundle mainBundle] loadNibNamed:@"TiGongTableViewCell" owner:self options:nil][0];
+                }
+                
+                
+                return cell;
+            }
+            else{
+                static NSString *rid=@"TiGongCellID";
+                TiGongTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:rid];
+                if (cell == nil) {
+                    cell = [[NSBundle mainBundle] loadNibNamed:@"TiGongTableViewCell" owner:self options:nil][0];
+                }
+                
+                
+                return cell;
+            }
         }
             break;
         default:
@@ -92,6 +121,19 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"点击了Cell");
+    switch (self.currentCellType) {
+        case JIANZHICELLTYPE:{
+            
+        }
+            break;
+        case TIGONGCELLTYPE:{
+            
+        }
+            break;
+        default:
+            
+            break;
+    }
 }
 
 

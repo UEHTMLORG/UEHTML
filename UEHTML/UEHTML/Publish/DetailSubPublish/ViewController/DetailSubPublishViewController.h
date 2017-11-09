@@ -8,6 +8,9 @@
 
 #import "ATQBaseViewController.h"
 
-@interface DetailSubPublishViewController : ATQBaseViewController
+@interface DetailSubPublishViewController : ATQBaseViewController<UITableViewDelegate,UITableViewDataSource>
+
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+
 
 @end

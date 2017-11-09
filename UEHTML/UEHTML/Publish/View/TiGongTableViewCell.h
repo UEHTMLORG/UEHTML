@@ -8,11 +8,22 @@
 
 #import <UIKit/UIKit.h>
 #import "JianZhiListCellModel.h"
-
+#import "PublishZLViewModel.h"
 @interface TiGongTableViewCell : UITableViewCell
 
 
+@property (nonatomic, assign) PublishNetWorking_enum curPublishNetworkType;
 
-- (void)bingWithModel:(TiGongListCellModel *)model;
+
+- (void)bindWithMyModel:(FuWuFangMyListCellModel *)model;
+
+
+@end
+
+
+@interface FuWuFangTuiJianCell: UITableViewCell
+@property (nonatomic, assign) PublishNetWorking_enum curPublishNetworkType;
+
+- (void)bindWithTuiJianModel:(FuWuFangTuiJianCellModel *)model;
 
 @end

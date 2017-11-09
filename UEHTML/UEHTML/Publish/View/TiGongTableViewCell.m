@@ -15,7 +15,8 @@
     // Initialization code
     self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
-- (void)bingWithModel:(TiGongListCellModel *)model{
+
+- (void)bindWithMyModel:(FuWuFangMyListCellModel *)model{
     
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -24,4 +25,23 @@
     // Configure the view for the selected state
 }
 
+@end
+
+@implementation FuWuFangTuiJianCell
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    // Initialization code
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
+}
+
+
+- (void)bindWithTuiJianModel:(FuWuFangTuiJianCellModel *)model{
+    
+}
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+    
+    // Configure the view for the selected state
+}
 @end

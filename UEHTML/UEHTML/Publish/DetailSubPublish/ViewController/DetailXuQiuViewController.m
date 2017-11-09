@@ -1,18 +1,18 @@
 //
-//  DetailSubPublishViewController.m
+//  DetailXuQiuViewController.m
 //  UEHTML
 //
-//  Created by apple on 2017/11/6.
+//  Created by apple on 2017/11/9.
 //  Copyright © 2017年 LHKH. All rights reserved.
 //
 
-#import "DetailSubPublishViewController.h"
+#import "DetailXuQiuViewController.h"
 
-@interface DetailSubPublishViewController ()
+@interface DetailXuQiuViewController ()
 
 @end
 
-@implementation DetailSubPublishViewController
+@implementation DetailXuQiuViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -23,20 +23,14 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-#pragma mark ===================底部按钮执行方法 START==================
+#pragma mark ===================底部按钮执行方法==================
 
-- (IBAction)songLiBtnAction:(id)sender {
+- (IBAction)liaoTianButtonAction:(id)sender {
 }
-- (IBAction)shipinBtnAction:(id)sender {
-}
-- (IBAction)liaotianBtnAction:(id)sender {
-}
-- (IBAction)yueTaBtnAction:(id)sender {
+- (IBAction)yingYaoButtonAction:(id)sender {
 }
 
 
-
-#pragma mark ===================底部按钮执行方法 END==================
 /*
 #pragma mark - Navigation
 

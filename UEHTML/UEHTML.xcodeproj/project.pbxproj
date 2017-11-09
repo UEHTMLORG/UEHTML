@@ -125,6 +125,11 @@
 		18A946391FAA17EA007F8A1D /* FaBuXuQiuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A946371FAA17EA007F8A1D /* FaBuXuQiuTableViewCell.xib */; };
 		18A9463D1FAA1829007F8A1D /* FaJianZhiLVYouTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A9463B1FAA1829007F8A1D /* FaJianZhiLVYouTableViewCell.m */; };
 		18A9463E1FAA1829007F8A1D /* FaJianZhiLVYouTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A9463C1FAA1829007F8A1D /* FaJianZhiLVYouTableViewCell.xib */; };
+		18B2D8A21FB3FD0400C59550 /* DetailXuQiuViewCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B2D8A01FB3FD0400C59550 /* DetailXuQiuViewCellTableViewCell.m */; };
+		18B2D8A31FB3FD0400C59550 /* DetailXuQiuViewCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B2D8A11FB3FD0400C59550 /* DetailXuQiuViewCellTableViewCell.xib */; };
+		18B2D8A71FB404FD00C59550 /* DetailXuQiuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B2D8A51FB404FD00C59550 /* DetailXuQiuViewController.m */; };
+		18B2D8A81FB404FD00C59550 /* DetailXuQiuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B2D8A61FB404FD00C59550 /* DetailXuQiuViewController.xib */; };
+		18B2D8AD1FB423E800C59550 /* PublishZLViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B2D8AC1FB423E800C59550 /* PublishZLViewModel.m */; };
 		18D16EA21F8F150400D8DF79 /* JZVideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D16EA01F8F150400D8DF79 /* JZVideoTableViewCell.m */; };
 		18D16EA31F8F150400D8DF79 /* JZVideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D16EA11F8F150400D8DF79 /* JZVideoTableViewCell.xib */; };
 		18D16EA61F8F171000D8DF79 /* JZVideoCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D16EA51F8F171000D8DF79 /* JZVideoCellModel.m */; };
@@ -970,6 +975,14 @@
 		18A9463A1FAA1829007F8A1D /* FaJianZhiLVYouTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaJianZhiLVYouTableViewCell.h; sourceTree = "<group>"; };
 		18A9463B1FAA1829007F8A1D /* FaJianZhiLVYouTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaJianZhiLVYouTableViewCell.m; sourceTree = "<group>"; };
 		18A9463C1FAA1829007F8A1D /* FaJianZhiLVYouTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FaJianZhiLVYouTableViewCell.xib; sourceTree = "<group>"; };
+		18B2D89F1FB3FD0400C59550 /* DetailXuQiuViewCellTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailXuQiuViewCellTableViewCell.h; sourceTree = "<group>"; };
+		18B2D8A01FB3FD0400C59550 /* DetailXuQiuViewCellTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailXuQiuViewCellTableViewCell.m; sourceTree = "<group>"; };
+		18B2D8A11FB3FD0400C59550 /* DetailXuQiuViewCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailXuQiuViewCellTableViewCell.xib; sourceTree = "<group>"; };
+		18B2D8A41FB404FD00C59550 /* DetailXuQiuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailXuQiuViewController.h; sourceTree = "<group>"; };
+		18B2D8A51FB404FD00C59550 /* DetailXuQiuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailXuQiuViewController.m; sourceTree = "<group>"; };
+		18B2D8A61FB404FD00C59550 /* DetailXuQiuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailXuQiuViewController.xib; sourceTree = "<group>"; };
+		18B2D8AB1FB423E800C59550 /* PublishZLViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublishZLViewModel.h; sourceTree = "<group>"; };
+		18B2D8AC1FB423E800C59550 /* PublishZLViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublishZLViewModel.m; sourceTree = "<group>"; };
 		18D16E9F1F8F150400D8DF79 /* JZVideoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JZVideoTableViewCell.h; sourceTree = "<group>"; };
 		18D16EA01F8F150400D8DF79 /* JZVideoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JZVideoTableViewCell.m; sourceTree = "<group>"; };
 		18D16EA11F8F150400D8DF79 /* JZVideoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JZVideoTableViewCell.xib; sourceTree = "<group>"; };
@@ -2423,6 +2436,15 @@
 			path = FaBuViewController;
 			sourceTree = "<group>";
 		};
+		18B2D8AA1FB423C100C59550 /* PublishViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				18B2D8AB1FB423E800C59550 /* PublishZLViewModel.h */,
+				18B2D8AC1FB423E800C59550 /* PublishZLViewModel.m */,
+			);
+			path = PublishViewModel;
+			sourceTree = "<group>";
+		};
 		18D93D491F924A6300D18418 /* RongYunZLFIle */ = {
 			isa = PBXGroup;
 			children = (
@@ -2538,6 +2560,9 @@
 				18F9887B1FB0A78400335E5D /* DetailSubPublishCell.h */,
 				18F9887C1FB0A78400335E5D /* DetailSubPublishCell.m */,
 				18F9887D1FB0A78400335E5D /* DetailSubPublishCell.xib */,
+				18B2D89F1FB3FD0400C59550 /* DetailXuQiuViewCellTableViewCell.h */,
+				18B2D8A01FB3FD0400C59550 /* DetailXuQiuViewCellTableViewCell.m */,
+				18B2D8A11FB3FD0400C59550 /* DetailXuQiuViewCellTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2548,6 +2573,9 @@
 				18F988761FB0A70300335E5D /* DetailSubPublishViewController.h */,
 				18F988771FB0A70300335E5D /* DetailSubPublishViewController.m */,
 				18F988781FB0A70300335E5D /* DetailSubPublishViewController.xib */,
+				18B2D8A41FB404FD00C59550 /* DetailXuQiuViewController.h */,
+				18B2D8A51FB404FD00C59550 /* DetailXuQiuViewController.m */,
+				18B2D8A61FB404FD00C59550 /* DetailXuQiuViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -3218,6 +3246,7 @@
 		409E6DC61F50081200E3BE49 /* Publish */ = {
 			isa = PBXGroup;
 			children = (
+				18B2D8AA1FB423C100C59550 /* PublishViewModel */,
 				18F988711FB0A6C700335E5D /* DetailSubPublish */,
 				18A9461D1FAA14E0007F8A1D /* FaBuPublish */,
 				186623291F76A49A00E42290 /* Model */,
@@ -5144,6 +5173,7 @@
 				402D5C541FB48910006C666D /* ATQModifyUserInfoViewController.xib in Resources */,
 				40F88EB31F80B7530077F567 /* ATQMyliftViewController.xib in Resources */,
 				40F5E5D81F91AFAC0077A574 /* f_static_067@3x.png in Resources */,
+				18B2D8A31FB3FD0400C59550 /* DetailXuQiuViewCellTableViewCell.xib in Resources */,
 				40F5E5391F91AFAC0077A574 /* keyboard_HL@2x.png in Resources */,
 				40F5E5D91F91AFAC0077A574 /* f_static_068@2x.png in Resources */,
 				40F5E5AD1F91AFAC0077A574 /* f_static_046@2x.png in Resources */,
@@ -5228,6 +5258,7 @@
 				185D78651F8DF13900DA8849 /* Loading0012.png in Resources */,
 				183D18F81F90570D0093A982 /* JianZhiChuFaTableViewCell.xib in Resources */,
 				40F5E6081F91AFAC0077A574 /* f_static_091@3x.png in Resources */,
+				18B2D8A81FB404FD00C59550 /* DetailXuQiuViewController.xib in Resources */,
 				40F5E5791F91AFAC0077A574 /* f_static_020@2x.png in Resources */,
 				40DF4F831F82155500EE6753 /* ATQTypeListTableViewCell.xib in Resources */,
 				40F5E53A1F91AFAC0077A574 /* more_ios@2x.png in Resources */,
@@ -5417,6 +5448,7 @@
 				40473D3B1F962BAB00E6EE35 /* IFlyFaceResultKeys.m in Sources */,
 				40473D391F962AFB00E6EE35 /* CanvasView.m in Sources */,
 				18D93D861F93A5EB00D18418 /* pinyin.c in Sources */,
+				18B2D8AD1FB423E800C59550 /* PublishZLViewModel.m in Sources */,
 				18D93D831F93A56800D18418 /* FMDatabaseAdditions.m in Sources */,
 				18D93D841F93A56800D18418 /* FMDatabasePool.m in Sources */,
 				18D93D851F93A56800D18418 /* FMResultSet.m in Sources */,
@@ -5620,6 +5652,7 @@
 				18D93D8D1F96E9CB00D18418 /* JianZhiTouSuCollectionViewCell.m in Sources */,
 				40F5E3731F91A3820077A574 /* NSString+MLLabel.m in Sources */,
 				4027D80F1F79409900B45C8E /* ATQVisitorTableViewCell.m in Sources */,
+				18B2D8A21FB3FD0400C59550 /* DetailXuQiuViewCellTableViewCell.m in Sources */,
 				40EA93251F7BBAD3005A0E50 /* qrinput.c in Sources */,
 				40FA89F01F749F7D0059A208 /* ATQHomeCollectionViewCell.m in Sources */,
 				40236C591F7B992D004AE37B /* ATQYJRZTableViewCell.m in Sources */,
@@ -5666,6 +5699,7 @@
 				18A946381FAA17EA007F8A1D /* FaBuXuQiuTableViewCell.m in Sources */,
 				40F5E34B1F919DBD0077A574 /* UITableView+HYBCacheHeight.m in Sources */,
 				40E569FE1F97791B006F450F /* ATQFaceRZViewController.m in Sources */,
+				18B2D8A71FB404FD00C59550 /* DetailXuQiuViewController.m in Sources */,
 				185D789A1F8DF13A00DA8849 /* UILabel+HeinQi.m in Sources */,
 				40C77E2E1FAD9991000D8F70 /* ATQDTModel.m in Sources */,
 				40E569F91F977864006F450F /* CaptureSessionManager.m in Sources */,

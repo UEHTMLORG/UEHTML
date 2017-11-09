@@ -25,55 +25,31 @@
     self.view.backgroundColor = [UIColor colorWithhex16stringToColor:Light_Gray_Color];
     self.title = @"兼职中心";
     self.currentButtonIndex = ZHAOREN_FUWU_INDEX;
+    
+    self.currentPage = 1;
+    self.currentPageType = FUWUFANG_TUIJIAN;
     [self loadUIView];
-//    [self loadDATA];
+    [self createViewModel];
+   
+}
+/** 设置VIewModel */
+- (void)createViewModel{
+    /** 设置ViewModel */
+    self.myViewModel = [PublishZLViewModel shareInstance];
+    /** 开始请求数据 */
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self.myViewModel startAFNetWorkingGetListWithType:XUQIUFANG_TUIJIAN withPage:self.currentPage];
+    });
+    __weak typeof(self) weakself = self;
+    [self.myViewModel getPublishModelArrayBlockAction:^(PublishNetWorking_enum typeEnum, NSMutableArray *array) {
+        weakself.listView.tableARR = array;
+        [weakself.listView.tableview reloadData];
+    }];
 }
 
 - (void)loadUIView{
     [self loadHeadView];
     [self loadYingListView];
-    
-}
-
-- (void)loadDATA{
-    NSString * zhuceString = @"/api/home/index";
-    NSString * zhuCeURls = [NSString stringWithFormat:@"%@%@",Common_URL_ZL,zhuceString];
-
-
-    /*
-     @"apptype":@"ios",
-     @"appversion":@"1.0.0",
-     @"random_str":random_str,
-     @"sign":sign,
-     @"user_token":app_token,
-     @"user_id":userid
-     */
-    NSString *random_str = [ZLSecondAFNetworking getNowTime];
-    NSString * app_token_string = [kUserDefaults objectForKey:USER_TOEKN_AOTU_ZL];
-    NSString *app_token = app_token_string?:@"apptest";
-    NSString *signStr = [NSString stringWithFormat:@"%@%@",app_token,random_str];
-    NSString *sign1 = [ZLSecondAFNetworking getMD5fromString:signStr];
-    NSString *sign2 = [ZLSecondAFNetworking getMD5fromString:sign1];
-    NSString *sign = [ZLSecondAFNetworking getMD5fromString:sign2];
-    NSDictionary * parmaDic = @{
-                                @"lat":@"31",
-                                @"lon":@"100",
-                                @"username":@"18868672308",
-                                @"check_coke":@"111111",
-                                @"apptype":@"ios",
-                                @"appversion":APPVERSION_AOTU_ZL,
-                                @"random_str":random_str,
-                                @"sign":sign
-                                };
-    
-    [[ZLSecondAFNetworking sharedInstance] postWithUSER_INFO_URLString:zhuCeURls parameters:parmaDic success:^(id responseObject) {
-        NSDictionary * dataJson = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-        NSLog(@"注册请求成功：%@",dataJson);
-    } failure:^(NSError *error) {
-         NSLog(@"注册请求失败：%@",error);
-    }];
-
-    
 }
 
 - (void)loadHeadView{
@@ -136,34 +112,12 @@
     
     ZhaoRenFuWuViewController * VC = [ZhaoRenFuWuViewController new];
     [self.navigationController pushViewController:VC animated:YES];
-    
-    /*
-    if (self.currentButtonIndex == ZHAOREN_FUWU_INDEX) {
-        return;
-    }
-    else{
-        
-        self.currentButtonIndex = ZHAOREN_FUWU_INDEX;
-        self.listView.currentCellType = TIGONGCELLTYPE;
-        [self.listView.tableview reloadData];
-    }
-*/
+
 }
 - (void)woYaoZhuanQianButtonAction{
     WoYaoZhuanViewController * VC = [WoYaoZhuanViewController new];
     [self.navigationController pushViewController:VC animated:YES];
-    
-    /*
-    if (self.currentButtonIndex == WOYAO_ZHUANQIAN_INDEX) {
-        return;
-    }
-    else{
-        self.currentButtonIndex = WOYAO_ZHUANQIAN_INDEX;
-        
-        self.listView.currentCellType = JIANZHICELLTYPE;
-        [self.listView.tableview reloadData];
-    }
-*/
+
 }
 - (void)updateViewConstraints{
     [super updateViewConstraints];
@@ -195,9 +149,6 @@
         make.top.mas_equalTo(self.tiGongView.mas_bottom).mas_offset(5);
         make.height.mas_equalTo(@30);
     }];
-    
-    
-    
 
     self.secondItemARR = @[@"我是服务方",@"我是需求方"];
     self.thirdItemARR = @[@"系统推荐",@"全部",@"交易中",@"已完成"];
@@ -213,13 +164,7 @@
         make.top.mas_equalTo(self.tiGongSubView.mas_bottom).mas_offset(5);
         make.bottom.mas_equalTo(self.view).offset(-49.0);
     }];
-    
-    
 }
-
-
-
-
 
 - (DZNSegmentedControl *)yiYaoControl
 {
@@ -349,20 +294,18 @@
 
 - (void)didChangeSegment:(DZNSegmentedControl *)control
 {
-
+    self.currentPage = 1;
     switch (control.tag) {
         case 2:{
             if (control.selectedSegmentIndex == 0) {
                 self.currentButtonIndex = ZHAOREN_FUWU_INDEX;
-                
                 self.listView.currentCellType = TIGONGCELLTYPE;
-                [self.listView.tableview reloadData];
+                [self.tiGongSubControl setSelectedSegmentIndex:0];
             }
             else{
                 self.currentButtonIndex = WOYAO_ZHUANQIAN_INDEX;
-                
                 self.listView.currentCellType = JIANZHICELLTYPE;
-                [self.listView.tableview reloadData];
+                 [self.tiGongSubControl setSelectedSegmentIndex:0];
                 
                 
             }
@@ -370,14 +313,60 @@
         }
             break;
         case 3:{
-
+            if ( self.currentButtonIndex == ZHAOREN_FUWU_INDEX) {
+                if (control.selectedSegmentIndex == 0) {
+                    self.currentPageType = FUWUFANG_TUIJIAN;
+                    self.listView.curPublishNetworkingType = FUWUFANG_TUIJIAN;
+                    
+                }
+                else if(control.selectedSegmentIndex == 1){
+                    self.currentPageType = FUWUFANG_MYLIST;
+                    self.listView.curPublishNetworkingType = FUWUFANG_MYLIST;
+                    
+                }
+                else if(control.selectedSegmentIndex == 2){
+                    self.currentPageType = FUWUFANG_DOING;
+                    self.listView.curPublishNetworkingType = FUWUFANG_DOING;
+                    
+                }
+                else if(control.selectedSegmentIndex == 3){
+                    self.currentPageType = FUWUFANG_FINISHED;
+                    self.listView.curPublishNetworkingType = FUWUFANG_FINISHED;
+                    
+                }
+                
+            }else{
+                if (control.selectedSegmentIndex == 0) {
+                    self.currentPageType = XUQIUFANG_TUIJIAN;
+                    self.listView.curPublishNetworkingType = XUQIUFANG_TUIJIAN;
+                    
+                }
+                else if(control.selectedSegmentIndex == 1){
+                    self.currentPageType = XUQIUFANG_MYLIST;
+                    self.listView.curPublishNetworkingType = XUQIUFANG_MYLIST;
+                    
+                }
+                else if(control.selectedSegmentIndex == 2){
+                    self.currentPageType = XUQIUFANG_DOING;
+                    self.listView.curPublishNetworkingType = XUQIUFANG_DOING;
+                    
+                }
+                else if(control.selectedSegmentIndex == 3){
+                    self.currentPageType = XUQIUFANG_FINISHED;
+                    self.listView.curPublishNetworkingType = XUQIUFANG_FINISHED;
+                    
+                }
+                
+            }
         }
             
             break;
         default:
             break;
     }
-    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self.myViewModel startAFNetWorkingGetListWithType:self.currentPageType withPage:self.currentPage];
+    });
 }
 #pragma mark - DZNSegmentedControlDelegate Methods
 
@@ -391,49 +380,6 @@
     return UIBarPositionAny;
 }
 
-
-
-//-(void)buildView{
-//    self.view.backgroundColor = [UIColor colorWithWhite:0 alpha:0.6];
-//    if ([[[UIDevice currentDevice] systemVersion] floatValue]>=8.0) {
-//        
-//        self.modalPresentationStyle=UIModalPresentationOverCurrentContext;
-//        
-//    }else{
-//        
-//        self.modalPresentationStyle=UIModalPresentationCurrentContext;
-//        
-//    }
-//    
-//    UIButton *cancel = [[UIButton alloc] initWithFrame:CGRectMake(20, 20, 40, 20)];
-//    [cancel setTitle:@"返回" forState:UIControlStateNormal];
-//    [cancel setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-//    [cancel addTarget:self action:@selector(cancel) forControlEvents:UIControlEventTouchUpInside];
-//    [self.view addSubview:cancel];
-//
-//}
-//-(void)cancel{
-
-//    self.view.backgroundColor = [UIColor colorWithWhite:0 alpha:0.6];
-//    if ([[[UIDevice currentDevice] systemVersion] floatValue]>=8.0) {
-//        
-//        self.modalPresentationStyle=UIModalPresentationOverCurrentContext;
-//        
-//    }else{
-//        
-//        self.modalPresentationStyle=UIModalPresentationCurrentContext;
-//        
-//    }
-//    
-//    UIButton *cancel = [[UIButton alloc] initWithFrame:CGRectMake(20, 20, 40, 20)];
-//    [cancel setTitle:@"返回" forState:UIControlStateNormal];
-//    [cancel setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-//    [cancel addTarget:self action:@selector(cancel) forControlEvents:UIControlEventTouchUpInside];
-//    [self.view addSubview:cancel];
-//    
-//
-//}
-
 -(void)cancel{
     ComplainViewController * VC = [ComplainViewController new];
     [self.navigationController pushViewController:VC animated:YES];
@@ -442,19 +388,23 @@
 //    [self.parentViewController removeFromParentViewController];
 //    [(AppDelegate *)[UIApplication sharedApplication].delegate openTabHomeCtrl];
 }
+
+
+#pragma mark ===================懒加载==================
+- (NSMutableArray *)currentListArray{
+    if (!_currentListArray) {
+        _currentListArray = [NSMutableArray new];
+    }
+    return _currentListArray;
+}
+
+#pragma mark ===================懒加载结束==================
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

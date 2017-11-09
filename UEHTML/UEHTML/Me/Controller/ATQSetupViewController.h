@@ -9,5 +9,5 @@
 #import "ATQBaseViewController.h"
 
 @interface ATQSetupViewController : ATQBaseViewController
-
+@property(strong,nonatomic)NSDictionary *dic;
 @end

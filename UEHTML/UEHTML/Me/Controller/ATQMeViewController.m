@@ -70,6 +70,7 @@
         __weak typeof(self) weakself = self;
         headView.setupblock = ^{
             ATQSetupViewController *vc = [[ATQSetupViewController alloc]init];
+            vc.dic = _MeDic;
             [weakself.navigationController pushViewController:vc animated:YES];
         };
         
@@ -131,10 +132,7 @@
             
             NSString *card_level = responseObject[@"data"][@"card_level"];
             [[NSUserDefaults standardUserDefaults]setObject:card_level forKey:CARD_LEVEL_AOTU_ZL];
-//            NSString *disturbed_time = responseObject[@"data"][@"disturbed_time"];
-//            NSString *deposit_auth = responseObject[@"data"][@"deposit_auth"];
             
-//            NSString *disturbed_open = responseObject[@"data"][@"disturbed_open"];
             if(responseObject[@"data"] && [responseObject[@"data"] isKindOfClass:[NSDictionary class]]){
                 _MeDic = responseObject[@"data"];
                 NSString *avatar = _MeDic[@"avatar"];
@@ -349,8 +347,7 @@
 //            [self presentViewController:vc animated:YES completion:nil];
             [self.navigationController pushViewController:vc animated:YES];
         }else if (indexPath.row == 1) {
-//            ATQYajinRZViewController *vc = [[ATQYajinRZViewController alloc]init];
-            ATQRZCenterViewController *vc = [[ATQRZCenterViewController alloc]init];
+            ATQYajinRZViewController *vc = [[ATQYajinRZViewController alloc]init];
             [self.navigationController pushViewController:vc animated:YES];
         }
     }else if (indexPath.section == 3){

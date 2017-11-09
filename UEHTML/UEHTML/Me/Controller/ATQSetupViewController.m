@@ -27,6 +27,7 @@
 
 @interface ATQSetupViewController ()<UITableViewDelegate,UITableViewDataSource,UIAlertViewDelegate>{
     BOOL isClear;
+    
 }
 @property (nonatomic,strong)UITableView *tableView;
 
@@ -37,6 +38,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"设置";
+    
     [self setTableView];
 }
 -(void)setTableView{
@@ -91,7 +93,8 @@
                 cell = [array objectAtIndex:0];
             }
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        
+        [cell.userImg sd_setImageWithURL:[NSURL URLWithString:_dic[@"avatar"]] placeholderImage:[UIImage imageNamed:@""]];
+        cell.userName.text = _dic[@"nick_name"];
             return cell;
     }else if (indexPath.section == 1){
         if (indexPath.row == 0) {
@@ -185,6 +188,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
         ATQUserInfoViewController *vc = [[ATQUserInfoViewController alloc] init];
+        vc.dic = _dic;
         [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.section == 1) {
         if (indexPath.row == 0) {

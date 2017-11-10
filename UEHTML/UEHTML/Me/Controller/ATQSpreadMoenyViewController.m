@@ -9,8 +9,10 @@
 #import "ATQSpreadMoenyViewController.h"
 #import "QRCodeGenerator.h"
 #import "UIColor+LhkhColor.h"
+#import "LhkhHttpsManager.h"
+#import "MBProgressHUD+Add.h"
 @interface ATQSpreadMoenyViewController ()
-
+@property (strong,nonatomic)NSArray *items;
 @end
 
 @implementation ATQSpreadMoenyViewController
@@ -18,9 +20,69 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"推广赚钱";
-    [self buildAttributeStr];
-    [self buildQRCodeView ];
-    [self buildPieChartView ];
+    _items = [NSArray array];
+    [self loadData];
+//    [self buildAttributeStr];
+//    [self buildQRCodeView ];
+//    [self buildPieChartView ];
+    
+}
+
+-(void)viewDidLayoutSubviews{
+    
+}
+
+-(void)loadData{
+    NSMutableDictionary *params = [NSMutableDictionary  dictionary];
+    NSString *user_id = [[NSUserDefaults standardUserDefaults] objectForKey:USER_ID_AOTU_ZL];
+    NSString *user_token = [[NSUserDefaults standardUserDefaults] objectForKey:USER_TOEKN_AOTU_ZL];
+    params[@"user_id"] = user_id;
+    params[@"user_token"] = user_token;
+    params[@"apptype"] = @"ios";
+    params[@"appversion"] = APPVERSION_AOTU_ZL;
+    NSString *random_str = [LhkhHttpsManager getNowTimeTimestamp];
+    params[@"random_str"] = random_str;
+    NSString *app_token = APP_TOKEN;
+    NSString *signStr = [NSString stringWithFormat:@"%@%@",app_token,random_str];
+    NSString *sign1 = [LhkhHttpsManager md5:signStr];
+    NSString *sign2 = [LhkhHttpsManager md5:sign1];
+    NSString *sign = [LhkhHttpsManager md5:sign2];
+    params[@"sign"] = sign;
+    NSString *url = [NSString stringWithFormat:@"%@/api/user/invite",ATQBaseUrl];
+    
+    [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
+        NSLog(@"-----invite=%@",responseObject);
+        if ([responseObject[@"status"] isEqualToString:@"1"]) {
+            
+            if (responseObject[@"data"]) {
+                NSString *invite_code = responseObject[@"data"][@"invite_code"];
+                self.tuijianLab.text = [NSString stringWithFormat:@"您的推荐码是 %@",invite_code];
+                NSString *all_level_num = responseObject[@"data"][@"all_level_num"];
+                self.tuijianRSLab.text = [NSString stringWithFormat:@"您一共推荐了%@人",all_level_num];
+                
+                NSString *level1_per = responseObject[@"data"][@"level1_per"];
+                NSString *level2_per = responseObject[@"data"][@"level2_per"];
+                NSString *level3_per = responseObject[@"data"][@"level3_per"];
+                _items =  @[[PNPieChartDataItem dataItemWithValue:level1_per.integerValue color:[UIColor colorWithHexString:ChartColorStr1]],
+                  [PNPieChartDataItem dataItemWithValue:level2_per.integerValue color:[UIColor colorWithHexString:ChartColorStr2] ],
+                  [PNPieChartDataItem dataItemWithValue:level3_per.integerValue color:[UIColor colorWithHexString:ChartColorStr3] ],
+                  ];
+                [self buildAttributeStr];
+                [self buildQRCodeView ];
+                [self buildPieChartView];
+            }
+        }else if ([responseObject[@"status"] isEqualToString:@"302"]){
+            
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self login];
+            });
+        }else{
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+        }
+        
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
 }
 
 -(void)buildAttributeStr{
@@ -51,12 +113,12 @@
     self.qrCodeImg.image = [QRCodeGenerator qrImageForString:@"http://www.matrojp.com/?m=webview&s=download" imageSize:self.qrCodeImg.bounds.size.width];
 }
 -(void)buildPieChartView{
-    NSArray *items = @[[PNPieChartDataItem dataItemWithValue:15 color:[UIColor colorWithHexString:ChartColorStr1]],
-                       [PNPieChartDataItem dataItemWithValue:65 color:[UIColor colorWithHexString:ChartColorStr2] ],
-                       [PNPieChartDataItem dataItemWithValue:20 color:[UIColor colorWithHexString:ChartColorStr3] ],
-                       ];
+//    NSArray *items = @[[PNPieChartDataItem dataItemWithValue:15 color:[UIColor colorWithHexString:ChartColorStr1]],
+//                       [PNPieChartDataItem dataItemWithValue:65 color:[UIColor colorWithHexString:ChartColorStr2] ],
+//                       [PNPieChartDataItem dataItemWithValue:20 color:[UIColor colorWithHexString:ChartColorStr3] ],
+//                       ];
     
-    self.pieChart = [[PNPieChart alloc] initWithFrame:CGRectMake(0, 0, self.pieChatView.bounds.size.width, self.pieChatView.bounds.size.height) items:items];
+    self.pieChart = [[PNPieChart alloc] initWithFrame:CGRectMake(0, 0, self.pieChatView.bounds.size.width, self.pieChatView.bounds.size.height) items:_items];
     self.pieChart.descriptionTextColor = [UIColor whiteColor];
     self.pieChart.descriptionTextFont = [UIFont fontWithName:@"Avenir-Medium" size:11.0];
     self.pieChart.descriptionTextShadowColor = [UIColor clearColor];

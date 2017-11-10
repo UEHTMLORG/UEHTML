@@ -19,7 +19,10 @@
 #import "ATQDTImageView.h"
 #import "ZJImageViewBrowser.h"
 #import "NSString+ZJ.h"
-@interface ATQTongchengViewController ()<UITableViewDataSource,UITableViewDelegate,ATQDTTableViewCellDelegate>
+@interface ATQTongchengViewController ()<UITableViewDataSource,UITableViewDelegate,ATQDTTableViewCellDelegate,UIScrollViewDelegate,UITextFieldDelegate>{
+    UITextField *text;
+    UIView *Bview;
+}
 
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,strong)NSMutableArray *DTArr;
@@ -31,6 +34,18 @@ static NSInteger page = 1;
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setTableView];
+    Bview = [[UIView alloc] initWithFrame:CGRectZero];
+    Bview.backgroundColor = [UIColor yellowColor];
+    [self.view addSubview:Bview];
+    text = [[UITextField alloc] initWithFrame:CGRectMake(40, 10, 200, 30)];
+    text.placeholder = @"回复。。。";
+    text.delegate = self;
+    [Bview addSubview:text];
+    [Bview mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.height.offset(50);
+        make.left.right.equalTo(self.view);
+        make.bottom.equalTo(self.view).offset(-49);
+    }];
 }
 
 -(void)loadData{
@@ -259,6 +274,24 @@ static NSInteger page = 1;
 #pragma mark -- 评论
 -(void)didClickCommentWithIndexPath:(NSIndexPath *)indexPath{
     
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+//    self.tabBarController.tabBar.hidden = YES;
+}
+
+-(void)textFieldDidBeginEditing:(UITextField *)textField{
+    NSLog(@"--------");
+    Bview.frame = CGRectMake(0, ScreenHeight-450, ScreenWidth, 50);
+    [UIView animateWithDuration:0.5 animations:^{
+//        if (keyboardSize.height == 292.0 || keyboardSize.height == 282.0) {
+//            // 适配搜狗输入法 分别在6p  6/5s 高度
+//            self.y = SCREEN_HEIGHT - keyboardSize.height - ConvertTo6_H(316)*CT_SCALE_Y + 26.0;
+//        }else{
+//            self.y = SCREEN_HEIGHT - keyboardSize.height - ConvertTo6_H(316)*CT_SCALE_Y ;
+//        }
+        Bview.frame = CGRectMake(0, ScreenHeight-305, ScreenWidth, 50);
+    }];
 }
 
 -(void)songHuaClick:(NSString*)cid{

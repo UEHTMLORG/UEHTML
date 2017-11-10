@@ -287,7 +287,19 @@
                                                                          }];
     rowAction.backgroundColor = [UIColor colorWithHexString:UIColorStr];
     
-    NSArray *arr = @[rowAction];
+    UITableViewRowAction *rowAction1 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault
+                                                                         title:@"拉黑" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+                                                                             if (_secArr.count>0) {
+                                                                                 NSArray *arr = _secDic[_secArr[indexPath.section]];
+                                                                                 NSArray *tempArr = [ATQFriModel mj_objectArrayWithKeyValuesArray:arr];
+                                                                                 ATQFriModel *model = tempArr[indexPath.row];
+                                                                                 [self laheiFri:model.user_id];
+                                                                             }
+                                                                             
+                                                                         }];
+    rowAction1.backgroundColor = [UIColor colorWithHexString:UIColorStr];
+    
+    NSArray *arr = @[rowAction,rowAction1];
     return arr;
 }
 
@@ -344,6 +356,46 @@
     
     [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
         NSLog(@"-----delete=%@",responseObject);
+        
+        if ([responseObject[@"status"] isEqualToString:@"1"]) {
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+            [self loadData];
+        }else if ([responseObject[@"status"] isEqualToString:@"302"]){
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self login];
+            });
+        }else{
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+        }
+        
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+}
+
+-(void)laheiFri:(NSString*)delID{
+    
+    NSMutableDictionary *params = [NSMutableDictionary  dictionary];
+    NSString *user_id = [[NSUserDefaults standardUserDefaults] objectForKey:USER_ID_AOTU_ZL];
+    NSString *user_token = [[NSUserDefaults standardUserDefaults] objectForKey:USER_TOEKN_AOTU_ZL];
+    params[@"black_user_id"] = delID;
+    params[@"user_id"] = user_id;
+    params[@"user_token"] = user_token;
+    params[@"apptype"] = @"ios";
+    params[@"appversion"] = APPVERSION_AOTU_ZL;
+    NSString *random_str = [LhkhHttpsManager getNowTimeTimestamp];
+    params[@"random_str"] = random_str;
+    NSString *app_token = APP_TOKEN;
+    NSString *signStr = [NSString stringWithFormat:@"%@%@",app_token,random_str];
+    NSString *sign1 = [LhkhHttpsManager md5:signStr];
+    NSString *sign2 = [LhkhHttpsManager md5:sign1];
+    NSString *sign = [LhkhHttpsManager md5:sign2];
+    params[@"sign"] = sign;
+    NSString *url = [NSString stringWithFormat:@"%@/api/friend/black",ATQBaseUrl];
+    
+    [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
+        NSLog(@"-----black=%@",responseObject);
         
         if ([responseObject[@"status"] isEqualToString:@"1"]) {
             [MBProgressHUD show:responseObject[@"message"] view:self.view];

@@ -168,6 +168,7 @@
         titleValue = [NSString stringWithFormat:@"%.0f%%",[self ratioForItemAtIndex:index] * 100];
     }
     
+    
     if (self.hideValues)
         descriptionLabel.text = titleText;
     else if(!titleText || self.showOnlyValues)
@@ -175,6 +176,9 @@
     else {
         NSString* str = [titleValue stringByAppendingString:[NSString stringWithFormat:@"\n%@",titleText]];
         descriptionLabel.text = str ;
+    }
+    if ([self ratioForItemAtIndex:index] * 100 ==0 || currentDataItem.value == 0) {
+        descriptionLabel.text = nil;
     }
     
     //If value is less than cutoff, show no label

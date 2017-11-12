@@ -32,6 +32,8 @@
     NSString *shengao;
     NSString *tizhong;
     NSString *nianling;
+    NSString *card_level;
+    NSString *deposit_auth;
 }
 @property(nonatomic,strong)UITableView *tableView;
 @end
@@ -42,13 +44,56 @@
     [super viewDidLoad];
     self.navigationItem.title = @"用户信息";
     self.view.backgroundColor = [UIColor whiteColor];
-    avatarstr = _dic[@"avatar"];
-    nicheng = _dic[@"nick_name"];
-    zhanghu = @"123121241";
-    shengao = @"165cm";
-    tizhong = @"45kg";
-    nianling = @"22岁";
+    
     [self setTableView];
+    [self loadData];
+}
+
+-(void)loadData{
+    NSMutableDictionary *params = [NSMutableDictionary  dictionary];
+    NSString *user_id = [[NSUserDefaults standardUserDefaults] objectForKey:USER_ID_AOTU_ZL];
+    NSString *user_token = [[NSUserDefaults standardUserDefaults] objectForKey:USER_TOEKN_AOTU_ZL];
+    params[@"user_id"] = user_id;
+    params[@"user_token"] = user_token;
+    params[@"apptype"] = @"ios";
+    params[@"appversion"] = APPVERSION_AOTU_ZL;
+    NSString *random_str = [LhkhHttpsManager getNowTimeTimestamp];
+    params[@"random_str"] = random_str;
+    NSString *app_token = APP_TOKEN;
+    NSString *signStr = [NSString stringWithFormat:@"%@%@",app_token,random_str];
+    NSString *sign1 = [LhkhHttpsManager md5:signStr];
+    NSString *sign2 = [LhkhHttpsManager md5:sign1];
+    NSString *sign = [LhkhHttpsManager md5:sign2];
+    params[@"sign"] = sign;
+    NSString *url = [NSString stringWithFormat:@"%@/api/user/base_info",ATQBaseUrl];
+    
+    [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
+        NSLog(@"-----base_info=%@",responseObject);
+     
+        if ([responseObject[@"status"] isEqualToString:@"1"]) {
+            NSDictionary  *dic = responseObject[@"data"];
+            avatarstr = dic[@"avatar"];
+            nicheng = dic[@"nick_name"];
+            zhanghu = dic[@"phone"];
+            shengao = dic[@"height"];
+            tizhong = dic[@"weight"];
+            nianling = dic[@"age"];
+            card_level = dic[@"card_level"];
+            deposit_auth = dic[@"deposit_auth"];
+            [self.tableView reloadData];
+            
+        }else if ([responseObject[@"status"] isEqualToString:@"302"]){
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self login];
+            });
+        } else{
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+        }
+        
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
 }
 
 -(void)setTableView{
@@ -142,10 +187,33 @@
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             if (indexPath.row == 1) {
                 cell.titleLab.text = @"会员等级";
-                cell.cacheLab.text = @"普通会员";
+                if ([card_level isEqualToString:@"0"]) {
+                    cell.cacheLab.text = @"您还不是会员额";
+                }else if ([card_level isEqualToString:@"1"]){
+                    cell.cacheLab.text = @"黄金会员";
+                }else if ([card_level isEqualToString:@"2"]){
+                    cell.cacheLab.text = @"铂金会员";
+                }else if ([card_level isEqualToString:@"3"]){
+                    cell.cacheLab.text = @"钻石会员";
+                }
+                
             }else{
                 cell.titleLab.text = @"押金认证";
-                cell.cacheLab.text = @"贫农";
+                if ([deposit_auth isEqualToString:@"0"]) {
+                    cell.cacheLab.text = @"您还没有认证额";
+                }else if ([deposit_auth isEqualToString:@"1"]){
+                    cell.cacheLab.text = @"平民";
+                }else if ([deposit_auth isEqualToString:@"2"]){
+                    cell.cacheLab.text = @"商人";
+                }else if ([deposit_auth isEqualToString:@"3"]){
+                    cell.cacheLab.text = @"财主";
+                }else if ([deposit_auth isEqualToString:@"4"]){
+                    cell.cacheLab.text = @"知县";
+                }else if ([deposit_auth isEqualToString:@"5"]){
+                    cell.cacheLab.text = @"总督";
+                }else if ([deposit_auth isEqualToString:@"6"]){
+                    cell.cacheLab.text = @"帝王";
+                }
             }
             return cell;
         }
@@ -181,8 +249,10 @@
             cell.titleLab.text = @"性别";
             if ([sexstr isEqualToString:@"1"]) {
                 cell.cacheLab.text = @"男";
-            }else{
+            }else if([sexstr isEqualToString:@"2"]){
                 cell.cacheLab.text = @"女";
+            }else{
+                cell.cacheLab.text = @"";
             }
             
         }

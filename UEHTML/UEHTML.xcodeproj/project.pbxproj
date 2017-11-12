@@ -166,6 +166,8 @@
 		18F9887A1FB0A70300335E5D /* DetailSubPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F988781FB0A70300335E5D /* DetailSubPublishViewController.xib */; };
 		18F9887E1FB0A78400335E5D /* DetailSubPublishCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F9887C1FB0A78400335E5D /* DetailSubPublishCell.m */; };
 		18F9887F1FB0A78400335E5D /* DetailSubPublishCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F9887D1FB0A78400335E5D /* DetailSubPublishCell.xib */; };
+		4000B5B11FB8703E00118676 /* ATQYJBuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4000B5AF1FB8703E00118676 /* ATQYJBuyViewController.m */; };
+		4000B5B21FB8703E00118676 /* ATQYJBuyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4000B5B01FB8703E00118676 /* ATQYJBuyViewController.xib */; };
 		40019C321F7F6BF600E11331 /* ATQCheckTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40019C301F7F6BF600E11331 /* ATQCheckTableViewCell.m */; };
 		40019C331F7F6BF600E11331 /* ATQCheckTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40019C311F7F6BF600E11331 /* ATQCheckTableViewCell.xib */; };
 		40056E171FA5873A0069DEF4 /* ATQVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 40056E161FA5873A0069DEF4 /* ATQVideoModel.m */; };
@@ -1046,6 +1048,9 @@
 		18F9887B1FB0A78400335E5D /* DetailSubPublishCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailSubPublishCell.h; sourceTree = "<group>"; };
 		18F9887C1FB0A78400335E5D /* DetailSubPublishCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailSubPublishCell.m; sourceTree = "<group>"; };
 		18F9887D1FB0A78400335E5D /* DetailSubPublishCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailSubPublishCell.xib; sourceTree = "<group>"; };
+		4000B5AE1FB8703E00118676 /* ATQYJBuyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATQYJBuyViewController.h; sourceTree = "<group>"; };
+		4000B5AF1FB8703E00118676 /* ATQYJBuyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATQYJBuyViewController.m; sourceTree = "<group>"; };
+		4000B5B01FB8703E00118676 /* ATQYJBuyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ATQYJBuyViewController.xib; sourceTree = "<group>"; };
 		40019C2F1F7F6BF600E11331 /* ATQCheckTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQCheckTableViewCell.h; path = UEHTML/Me/View/ATQCheckTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		40019C301F7F6BF600E11331 /* ATQCheckTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQCheckTableViewCell.m; path = UEHTML/Me/View/ATQCheckTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		40019C311F7F6BF600E11331 /* ATQCheckTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQCheckTableViewCell.xib; path = UEHTML/Me/View/ATQCheckTableViewCell.xib; sourceTree = SOURCE_ROOT; };
@@ -3199,6 +3204,9 @@
 				408AE81A1F862AFE004A824C /* ATQRZCenterViewController.m */,
 				40E0F2341F78A1FA0074B064 /* ATQYajinRZViewController.h */,
 				40E0F2351F78A1FA0074B064 /* ATQYajinRZViewController.m */,
+				4000B5AE1FB8703E00118676 /* ATQYJBuyViewController.h */,
+				4000B5AF1FB8703E00118676 /* ATQYJBuyViewController.m */,
+				4000B5B01FB8703E00118676 /* ATQYJBuyViewController.xib */,
 				407193D01F8B028E00B9F162 /* ATQSPRZViewController.h */,
 				407193D11F8B028E00B9F162 /* ATQSPRZViewController.m */,
 				407193D21F8B028E00B9F162 /* ATQSPRZViewController.xib */,
@@ -4966,6 +4974,7 @@
 				40F5E57F1F91AFAC0077A574 /* f_static_023@2x.png in Resources */,
 				40F5E59A1F91AFAC0077A574 /* f_static_036@3x.png in Resources */,
 				40F5E57E1F91AFAC0077A574 /* f_static_022@3x.png in Resources */,
+				4000B5B21FB8703E00118676 /* ATQYJBuyViewController.xib in Resources */,
 				188E19B71F91A6FB007F56E4 /* JianZhiPingJiaViewController.xib in Resources */,
 				402D5C4F1FB47550006C666D /* ATQSZUserHeaderCell.xib in Resources */,
 				185D78661F8DF13900DA8849 /* Loading0013.png in Resources */,
@@ -5595,6 +5604,7 @@
 				40EA93211F7BBAD3005A0E50 /* bitstream.c in Sources */,
 				40F5E6381F91AFAC0077A574 /* FaceSourceManager.m in Sources */,
 				185D78831F8DF13A00DA8849 /* GCDGroup.m in Sources */,
+				4000B5B11FB8703E00118676 /* ATQYJBuyViewController.m in Sources */,
 				18D16EAF1F8F579900D8DF79 /* JianZhiShenHeViewController.m in Sources */,
 				40F5E34C1F919DBD0077A574 /* UITableViewCell+HYBMasonryAutoCellHeight.m in Sources */,
 				185D78901F8DF13A00DA8849 /* NavTopCommonImage.m in Sources */,

@@ -10,7 +10,13 @@
 #import "ATQLiftCollectionViewCell.h"
 #import "JSBadgeView.h"
 #import "UIColor+LhkhColor.h"
+#import "LhkhHttpsManager.h"
+#import "MBProgressHUD+Add.h"
+#import "MJExtension.h"
+#import "MJRefresh.h"
+#import "UIImageView+WebCache.h"
 @interface ATQMyliftViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
+@property(strong ,nonatomic)NSMutableArray *liftArr;
 
 @end
 
@@ -20,25 +26,70 @@
     [super viewDidLoad];
     self.navigationItem.title = @"我的礼物";
     [self.liftCollectionView registerNib:[UINib  nibWithNibName:@"ATQLiftCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"ATQLiftCollectionViewCell"];
+
+    self.liftCollectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadData)];
+    self.liftCollectionView.mj_header.automaticallyChangeAlpha = YES;
+    [self.liftCollectionView.mj_header beginRefreshing];
+}
+
+-(void)loadData{
+    NSMutableDictionary *params = [NSMutableDictionary  dictionary];
+    NSString *user_id = [[NSUserDefaults standardUserDefaults] objectForKey:USER_ID_AOTU_ZL];
+    NSString *user_token = [[NSUserDefaults standardUserDefaults] objectForKey:USER_TOEKN_AOTU_ZL];
+    params[@"user_id"] = user_id;
+    params[@"user_token"] = user_token;
+    params[@"apptype"] = @"ios";
+    params[@"appversion"] = APPVERSION_AOTU_ZL;
+    NSString *random_str = [LhkhHttpsManager getNowTimeTimestamp];
+    params[@"random_str"] = random_str;
+    NSString *app_token = APP_TOKEN;
+    NSString *signStr = [NSString stringWithFormat:@"%@%@",app_token,random_str];
+    NSString *sign1 = [LhkhHttpsManager md5:signStr];
+    NSString *sign2 = [LhkhHttpsManager md5:sign1];
+    NSString *sign = [LhkhHttpsManager md5:sign2];
+    params[@"sign"] = sign;
+    NSString *url = [NSString stringWithFormat:@"%@/api/user/gift",ATQBaseUrl];
+    
+    [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
+        NSLog(@"---gift--%@",responseObject[@"data"]);
+        [self.liftCollectionView.mj_header endRefreshing];
+        if ([responseObject[@"status"] isEqualToString:@"1"]) {
+            if (responseObject[@"data"]) {
+                self.liftArr = responseObject[@"data"];
+            }
+            [self.liftCollectionView reloadData];
+        }else if ([responseObject[@"status"] isEqualToString:@"302"]){
+            [self.liftCollectionView.mj_header endRefreshing];
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self login];
+            });
+        }else{
+            [self.liftCollectionView.mj_header endRefreshing];
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+        }
+        
+    } failure:^(NSError *error) {
+        [self.liftCollectionView.mj_header endRefreshing];
+        NSLog(@"%@",error);
+    }];
 }
 
 #pragma mark - UICollectionViewDataSource
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 9;
+    return self.liftArr.count;
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSArray *imgarr = @[@"liwu-tang",@"liwu-coffee",@"liwu-cake",@"liwu-chocolate",@"liwu-rose",@"liwu-flower",@"liwu-toys",@"liwu-Versace",@"liwu-iwatch"];
-    NSArray *namearr = @[@"棒棒糖",@"咖啡",@"蛋糕",@"巧克力",@"粉玫瑰",@"花束",@"毛绒玩具",@"范思哲",@"IWatch"];
-    NSArray *badgearr = @[@"25",@"4",@"56",@"12",@"9",@"4",@"100",@"45",@"7"];
+    NSDictionary *tempDic = self.liftArr[indexPath.row];
     ATQLiftCollectionViewCell *cell = (ATQLiftCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"ATQLiftCollectionViewCell" forIndexPath:indexPath];
     cell.layer.cornerRadius = 4.f;
     cell.layer.masksToBounds = YES;
-    cell.liftImg.image = [UIImage imageNamed:imgarr[indexPath.row]];
-    cell.liftName.text = namearr[indexPath.row];
+    [cell.liftImg sd_setImageWithURL:[NSURL URLWithString:tempDic[@"gift_picture"]]];
+    cell.liftName.text = tempDic[@"gift_title"];
     JSBadgeView *Badge = [[JSBadgeView alloc]initWithParentView:cell.badgeview alignment:JSBadgeViewAlignmentCenter];
-    Badge.badgeText = badgearr[indexPath.row];
+    Badge.badgeText = tempDic[@"gift_num"];
     
     if (Badge.badgeText.floatValue >9) {
         cell.badgeViewW.constant = 30;
@@ -80,6 +131,14 @@ minimumLineSpacingForSectionAtIndex:(NSInteger)section
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
 {
     return 0.f;
+}
+
+
+-(NSMutableArray *)liftArr{
+    if (_liftArr == nil) {
+        _liftArr = [NSMutableArray array];
+    }
+    return _liftArr;
 }
 
 - (void)didReceiveMemoryWarning {

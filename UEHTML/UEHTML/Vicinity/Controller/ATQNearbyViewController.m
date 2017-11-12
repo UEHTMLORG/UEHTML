@@ -55,8 +55,6 @@
     leftArray = [NSMutableArray array];
     midArray = [NSMutableArray array];
     rightArray = [NSMutableArray array];
-//    NSArray *array = @[@"http://img5.imgtn.bdimg.com/it/u=503735038,481712869&fm=200&gp=0.jpg",@"http://img2.imgtn.bdimg.com/it/u=3438207759,2243402979&fm=200&gp=0.jpg",@"http://img3.imgtn.bdimg.com/it/u=742446113,121668976&fm=200&gp=0.jpg"];
-//    [_imageArray addObjectsFromArray:array];
     _locService = [[BMKLocationService alloc]init];
     [_locService startUserLocationService];
     [self buildheadView];
@@ -494,9 +492,10 @@
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"----->%ld",indexPath.row);
     if (collectionView.tag == 0) {
-        NSArray *namearr = @[@"陪聊天",@"按摩",@"送红酒",@"吃饭",@"看电影",@"唱歌",@"旅游",@"打游戏",@"运动",@"其他",];
+        ATQHomeModel *model = self.job_classArr[indexPath.row];
         ATQJZTypeListViewController *vc = [[ATQJZTypeListViewController alloc] init];
-        vc.navigationItem.title = namearr[indexPath.row];
+        vc.navigationItem.title = model.title;
+        vc.jobID = model.ID;
         [self.navigationController pushViewController:vc animated:YES];
     }else{
         ATQTypeListInviteDetailViewController *vc = [[ATQTypeListInviteDetailViewController alloc] init];

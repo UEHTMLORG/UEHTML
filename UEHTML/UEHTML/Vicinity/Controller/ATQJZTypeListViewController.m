@@ -12,11 +12,17 @@
 #import "UIButton+Lhkh.h"
 #import "UIColor+LhkhColor.h"
 #import "ATQTypePeoDetailViewController.h"
+#import "MJExtension.h"
+#import "MJRefresh.h"
+#import "UIImageView+WebCache.h"
+#import "LhkhHttpsManager.h"
+#import "MBProgressHUD+Add.h"
 @interface ATQJZTypeListViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITableView *tableView;
+@property (strong,nonatomic)NSMutableArray *jobListArr;
 
 @end
-
+static NSInteger page = 1;
 @implementation ATQJZTypeListViewController
 
 - (void)viewDidLoad {
@@ -38,10 +44,10 @@
         tableView;
     });
     
-    //    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadData)];
-    //    self.tableView.mj_header.automaticallyChangeAlpha = YES;
-    //    [self.tableView.mj_header beginRefreshing];
-    //    self.tableView.mj_footer = [self loadMoreDataFooterWith:self.tableView];
+        self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadData)];
+        self.tableView.mj_header.automaticallyChangeAlpha = YES;
+        [self.tableView.mj_header beginRefreshing];
+        self.tableView.mj_footer = [self loadMoreDataFooterWith:self.tableView];
     
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.mas_equalTo(self.view);
@@ -51,8 +57,112 @@
     
 }
 
+-(MJRefreshAutoNormalFooter *)loadMoreDataFooterWith:(UIScrollView *)scrollView {
+    MJRefreshAutoNormalFooter *loadMoreFooter = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        [self loadMoreData];
+        page++;
+        [scrollView.mj_footer endRefreshing];
+    }];
+    
+    return loadMoreFooter;
+}
+
+-(void)loadData{
+    
+    NSMutableDictionary *params = [NSMutableDictionary  dictionary];
+    NSString *user_id = [[NSUserDefaults standardUserDefaults] objectForKey:USER_ID_AOTU_ZL];
+    NSString *user_token = [[NSUserDefaults standardUserDefaults] objectForKey:USER_TOEKN_AOTU_ZL];
+    params[@"job_class_id"] = self.jobID;
+    params[@"page_index"] = @"1";
+    params[@"user_id"] = user_id;
+    params[@"user_token"] = user_token;
+    params[@"apptype"] = @"ios";
+    params[@"appversion"] = APPVERSION_AOTU_ZL;
+    NSString *random_str = [LhkhHttpsManager getNowTimeTimestamp];
+    params[@"random_str"] = random_str;
+    NSString *app_token = APP_TOKEN;
+    NSString *signStr = [NSString stringWithFormat:@"%@%@",app_token,random_str];
+    NSString *sign1 = [LhkhHttpsManager md5:signStr];
+    NSString *sign2 = [LhkhHttpsManager md5:sign1];
+    NSString *sign = [LhkhHttpsManager md5:sign2];
+    params[@"sign"] = sign;
+    NSString *url = [NSString stringWithFormat:@"%@/api/home/job_list",ATQBaseUrl];
+    
+    [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
+        [self.tableView.mj_header endRefreshing];
+        NSLog(@"-----job_list=%@",responseObject);
+        if ([responseObject[@"status"] isEqualToString:@"1"]) {
+            [self.jobListArr removeAllObjects];
+            if(responseObject[@"data"]){
+                self.jobListArr = responseObject[@"data"];
+            }
+            page++;
+            [self.tableView reloadData];
+        }else if ([responseObject[@"status"] isEqualToString:@"302"]){
+            [self.tableView.mj_header endRefreshing];
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self login];
+            });
+        }else{
+            [self.tableView.mj_header endRefreshing];
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+        }
+        
+    } failure:^(NSError *error) {
+        [self.tableView.mj_header endRefreshing];
+        NSLog(@"%@",error);
+    }];
+}
+
+-(void)loadMoreData{
+    NSMutableDictionary *params = [NSMutableDictionary  dictionary];
+    NSString *user_id = [[NSUserDefaults standardUserDefaults] objectForKey:USER_ID_AOTU_ZL];
+    NSString *user_token = [[NSUserDefaults standardUserDefaults] objectForKey:USER_TOEKN_AOTU_ZL];
+    params[@"job_class_id"] = self.jobID;
+    params[@"page_index"] = [NSString stringWithFormat:@"%ld",page];
+    params[@"user_id"] = user_id;
+    params[@"user_token"] = user_token;
+    params[@"apptype"] = @"ios";
+    params[@"appversion"] = APPVERSION_AOTU_ZL;
+    NSString *random_str = [LhkhHttpsManager getNowTimeTimestamp];
+    params[@"random_str"] = random_str;
+    NSString *app_token = APP_TOKEN;
+    NSString *signStr = [NSString stringWithFormat:@"%@%@",app_token,random_str];
+    NSString *sign1 = [LhkhHttpsManager md5:signStr];
+    NSString *sign2 = [LhkhHttpsManager md5:sign1];
+    NSString *sign = [LhkhHttpsManager md5:sign2];
+    params[@"sign"] = sign;
+    NSString *url = [NSString stringWithFormat:@"%@/api/home/index",ATQBaseUrl];
+    
+    [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
+        [self.tableView.mj_header endRefreshing];
+        NSLog(@"-----home=%@",responseObject);
+        if ([responseObject[@"status"] isEqualToString:@"1"]) {
+            
+            if(responseObject[@"data"]){
+                [self.jobListArr addObjectsFromArray:responseObject[@"data"]];
+            }
+            [self.tableView reloadData];
+        }else if ([responseObject[@"status"] isEqualToString:@"302"]){
+            [self.tableView.mj_header endRefreshing];
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self login];
+            });
+        }else{
+            [self.tableView.mj_header endRefreshing];
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+        }
+        
+    } failure:^(NSError *error) {
+        [self.tableView.mj_header endRefreshing];
+        NSLog(@"%@",error);
+    }];
+}
+
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 10;
+    return self.jobListArr.count;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 1;
@@ -101,7 +211,12 @@
     }
 }
 
-
+-(NSMutableArray *)jobListArr{
+    if (_jobListArr == nil) {
+        _jobListArr = [NSMutableArray array];
+    }
+    return _jobListArr;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

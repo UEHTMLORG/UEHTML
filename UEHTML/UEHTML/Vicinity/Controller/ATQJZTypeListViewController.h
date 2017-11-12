@@ -11,5 +11,5 @@
 @interface ATQJZTypeListViewController : ATQBaseViewController
 @property (weak, nonatomic) IBOutlet UIButton *paixuBtn;
 @property (weak, nonatomic) IBOutlet UIButton *shaixuanBtn;
-
+@property (copy,nonatomic)NSString *jobID;
 @end

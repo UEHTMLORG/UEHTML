@@ -75,7 +75,7 @@
     NSString *url = [NSString stringWithFormat:@"%@/api/user/auth_list",ATQBaseUrl];
   
     [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
-        
+        NSLog(@"--auth_list--%@",responseObject[@"data"]);
         if ([responseObject[@"status"] isEqualToString:@"1"]) {
             if (responseObject[@"data"]) {
                 NSDictionary *tempdic = [NSDictionary dictionary];

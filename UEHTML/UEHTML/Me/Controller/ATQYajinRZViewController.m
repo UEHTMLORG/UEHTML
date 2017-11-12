@@ -15,6 +15,7 @@
 #import "UIColor+LhkhColor.h"
 #import "LhkhHttpsManager.h"
 #import "MBProgressHUD+Add.h"
+#import "ATQYJBuyViewController.h"
 @interface ATQYajinRZViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,strong)NSMutableArray *yajinArr;
@@ -135,16 +136,22 @@
             cell.lvMoney.text = [NSString stringWithFormat:@"￥%.0f",price.floatValue];
         }
     }
-    
+    __weak typeof(self) weakself = self;
     cell.renzhengblock = ^{
         NSLog(@"认证%ld",indexPath.row);
+        ATQYJBuyViewController *vc = [[ATQYJBuyViewController alloc] init];
+        NSDictionary *dic = _yajinArr[indexPath.row];
+        NSString *str = dic[@"price"];
+        NSString *price = [NSString stringWithFormat:@"%.f",str.floatValue];
+        vc.yajinStr = price;
+        [weakself.navigationController pushViewController:vc animated:NO];
     };
     return cell;
     
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+   
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

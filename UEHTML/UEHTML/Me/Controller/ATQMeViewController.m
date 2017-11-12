@@ -182,7 +182,7 @@
     }else if (section == 2){
         return 2;
     }else{
-        return 3;
+        return 4;
     }
 }
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -325,9 +325,12 @@
         }
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         if (indexPath.row == 0) {
+            cell.headImg.image = [UIImage imageNamed:@"order"];
+            cell.titleLab.text = @"我的订单";
+        }else if (indexPath.row == 1){
             cell.headImg.image = [UIImage imageNamed:@"my-laifang"];
             cell.titleLab.text = @"最近来访";
-        }else if (indexPath.row == 1){
+        }else if(indexPath.row == 2){
             cell.headImg.image = [UIImage imageNamed:@"my-haoyou"];
             cell.titleLab.text = @"好友";
         }else{
@@ -344,7 +347,6 @@
     if (indexPath.section == 2) {
         if (indexPath.row == 0) {
             ATQMyWechatViewController *vc = [[ATQMyWechatViewController alloc]init];
-//            [self presentViewController:vc animated:YES completion:nil];
             [self.navigationController pushViewController:vc animated:YES];
         }else if (indexPath.row == 1) {
             ATQYajinRZViewController *vc = [[ATQYajinRZViewController alloc]init];
@@ -352,12 +354,14 @@
         }
     }else if (indexPath.section == 3){
         if (indexPath.row == 0) {
+            self.tabBarController.selectedIndex = 2;
+        }else if (indexPath.row == 1) {
             ATQVisitorViewController *vc = [[ATQVisitorViewController alloc]init];
             [self.navigationController pushViewController:vc animated:YES];
-        }else if (indexPath.row == 1) {
+        }else if (indexPath.row == 2) {
             ATQMyFriendsViewController *vc = [[ATQMyFriendsViewController alloc]init];
             [self.navigationController pushViewController:vc animated:YES];
-        }else if (indexPath.row == 2) {
+        }else{
             ATQCollectViewController *vc = [[ATQCollectViewController alloc]init];
             [self.navigationController pushViewController:vc animated:YES];
         }

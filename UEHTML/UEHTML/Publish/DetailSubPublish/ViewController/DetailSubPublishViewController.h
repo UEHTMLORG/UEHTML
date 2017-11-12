@@ -15,5 +15,6 @@
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray  *modelArray;
+@property (nonatomic, strong) NSString *jobId;
 
 @end

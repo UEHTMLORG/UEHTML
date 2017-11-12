@@ -42,6 +42,7 @@
     });
     __weak typeof(self) weakself = self;
     [self.myViewModel getPublishModelArrayBlockAction:^(PublishNetWorking_enum typeEnum, NSMutableArray *array) {
+        weakself.currentListArray = array;
         weakself.listView.tableARR = array;
         [weakself.listView.tableview reloadData];
     }];
@@ -413,15 +414,35 @@
     switch (self.currentButtonIndex) {
         case ZHAOREN_FUWU_INDEX:
         {
+            NSString * jobID = nil;
+            if (self.currentPageType == FUWUFANG_TUIJIAN) {
+                FuWuFangTuiJianCellModel * model = self.currentListArray[indexPath.row];
+                jobID = model.id;
+            }
+            else{
+                FuWuFangMyListCellModel * model = self.currentListArray[indexPath.row];
+                jobID = model.id;
+            }
             //我是 服务方
             DetailXuQiuViewController * VC = [[DetailXuQiuViewController alloc]init];
+            VC.jobId = jobID;
             [self.navigationController pushViewController:VC animated:YES];
         }
             break;
         case WOYAO_ZHUANQIAN_INDEX:
         {
+            NSString * jobID = nil;
+            if (self.currentPageType == XUQIUFANG_TUIJIAN) {
+                XuQiuFangTuiJianCellModel * model = self.currentListArray[indexPath.row];
+                jobID = model.id;
+            }
+            else{
+                XuQiuFangMyListCellModel * model = self.currentListArray[indexPath.row];
+                jobID = model.id;
+            }
             //我是 需求方
             DetailSubPublishViewController * VC = [[DetailSubPublishViewController alloc]init];
+            VC.jobId = jobID;
             [self.navigationController pushViewController:VC animated:YES];
             
         }

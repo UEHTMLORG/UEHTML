@@ -18,6 +18,15 @@
     [super viewDidLoad];
     self.title = @"需求详情";
     [self settingTableView];
+    /** 开始请求数据并绑定数据 */
+    self.viewModel =  [DetailXuQiuViewModel shareInstance];
+    __weak typeof(self) weakself = self;
+    [self.viewModel startAFNetWorkingGetListWithJobID:self.jobId withController:self resultSuccessBlock:^(BOOL success, DetailXuQiuModel *model) {
+        weakself.currentModel = model;
+        [weakself.tabeView reloadData];
+    } withFailBlock:^(NSError *error) {
+        
+    }];
 }
 
 #pragma mark ===================关于TableView的所有方法 START==================
@@ -67,8 +76,10 @@
             if (cell == nil) {
                 cell = [[NSBundle mainBundle] loadNibNamed:@"DetailXuQiuViewCellTableViewCell" owner:self options:nil][0];
             }
-            
-            
+            [cell.avatarImage sd_setImageWithURL:[NSURL URLWithString:self.currentModel.user_profile.avatar] placeholderImage:[UIImage imageNamed:DEFAULT_HEADIMAGE]];
+            cell.nicknameLabel.text = self.currentModel.user_profile.nick_name;
+            cell.chengLabel.text = self.currentModel.user_profile.credit_num;
+            cell.juliLabel.text = self.currentModel.distance;
             
             return cell;
         }

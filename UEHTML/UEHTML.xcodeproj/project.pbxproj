@@ -162,6 +162,10 @@
 		18D93D891F95BF2C00D18418 /* MD5FilesZl.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D93D881F95BF2C00D18418 /* MD5FilesZl.m */; };
 		18D93D8D1F96E9CB00D18418 /* JianZhiTouSuCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D93D8B1F96E9CA00D18418 /* JianZhiTouSuCollectionViewCell.m */; };
 		18D93D8E1F96E9CB00D18418 /* JianZhiTouSuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D93D8C1F96E9CA00D18418 /* JianZhiTouSuCollectionViewCell.xib */; };
+		18E9BD5B1FB8764D00B93365 /* DetailXuQiuViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E9BD5A1FB8764D00B93365 /* DetailXuQiuViewModel.m */; };
+		18E9BD5E1FB8766500B93365 /* DetailXuQiuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E9BD5D1FB8766500B93365 /* DetailXuQiuModel.m */; };
+		18E9BD611FB876C000B93365 /* DetailSubPublishViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E9BD601FB876C000B93365 /* DetailSubPublishViewModel.m */; };
+		18E9BD641FB876D500B93365 /* DetailSubPublishModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E9BD631FB876D500B93365 /* DetailSubPublishModel.m */; };
 		18F988791FB0A70300335E5D /* DetailSubPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F988771FB0A70300335E5D /* DetailSubPublishViewController.m */; };
 		18F9887A1FB0A70300335E5D /* DetailSubPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F988781FB0A70300335E5D /* DetailSubPublishViewController.xib */; };
 		18F9887E1FB0A78400335E5D /* DetailSubPublishCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F9887C1FB0A78400335E5D /* DetailSubPublishCell.m */; };
@@ -1042,6 +1046,14 @@
 		18D93D8A1F96E9CA00D18418 /* JianZhiTouSuCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JianZhiTouSuCollectionViewCell.h; sourceTree = "<group>"; };
 		18D93D8B1F96E9CA00D18418 /* JianZhiTouSuCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JianZhiTouSuCollectionViewCell.m; sourceTree = "<group>"; };
 		18D93D8C1F96E9CA00D18418 /* JianZhiTouSuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JianZhiTouSuCollectionViewCell.xib; sourceTree = "<group>"; };
+		18E9BD591FB8764D00B93365 /* DetailXuQiuViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailXuQiuViewModel.h; sourceTree = "<group>"; };
+		18E9BD5A1FB8764D00B93365 /* DetailXuQiuViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailXuQiuViewModel.m; sourceTree = "<group>"; };
+		18E9BD5C1FB8766500B93365 /* DetailXuQiuModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailXuQiuModel.h; sourceTree = "<group>"; };
+		18E9BD5D1FB8766500B93365 /* DetailXuQiuModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailXuQiuModel.m; sourceTree = "<group>"; };
+		18E9BD5F1FB876C000B93365 /* DetailSubPublishViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailSubPublishViewModel.h; sourceTree = "<group>"; };
+		18E9BD601FB876C000B93365 /* DetailSubPublishViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailSubPublishViewModel.m; sourceTree = "<group>"; };
+		18E9BD621FB876D500B93365 /* DetailSubPublishModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailSubPublishModel.h; sourceTree = "<group>"; };
+		18E9BD631FB876D500B93365 /* DetailSubPublishModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailSubPublishModel.m; sourceTree = "<group>"; };
 		18F988761FB0A70300335E5D /* DetailSubPublishViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailSubPublishViewController.h; sourceTree = "<group>"; };
 		18F988771FB0A70300335E5D /* DetailSubPublishViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailSubPublishViewController.m; sourceTree = "<group>"; };
 		18F988781FB0A70300335E5D /* DetailSubPublishViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailSubPublishViewController.xib; sourceTree = "<group>"; };
@@ -2549,22 +2561,37 @@
 			path = DB;
 			sourceTree = "<group>";
 		};
+		18E9BD571FB8763100B93365 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				18E9BD591FB8764D00B93365 /* DetailXuQiuViewModel.h */,
+				18E9BD5A1FB8764D00B93365 /* DetailXuQiuViewModel.m */,
+				18E9BD5F1FB876C000B93365 /* DetailSubPublishViewModel.h */,
+				18E9BD601FB876C000B93365 /* DetailSubPublishViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		18E9BD581FB8763100B93365 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18E9BD5C1FB8766500B93365 /* DetailXuQiuModel.h */,
+				18E9BD5D1FB8766500B93365 /* DetailXuQiuModel.m */,
+				18E9BD621FB876D500B93365 /* DetailSubPublishModel.h */,
+				18E9BD631FB876D500B93365 /* DetailSubPublishModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		18F988711FB0A6C700335E5D /* DetailSubPublish */ = {
 			isa = PBXGroup;
 			children = (
-				18F988721FB0A6C700335E5D /* Model */,
+				18E9BD581FB8763100B93365 /* Model */,
+				18E9BD571FB8763100B93365 /* ViewModel */,
 				18F988731FB0A6C700335E5D /* View */,
 				18F988741FB0A6C700335E5D /* ViewController */,
-				18F988751FB0A6C700335E5D /* ViewModel */,
 			);
 			path = DetailSubPublish;
-			sourceTree = "<group>";
-		};
-		18F988721FB0A6C700335E5D /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		18F988731FB0A6C700335E5D /* View */ = {
@@ -2591,13 +2618,6 @@
 				18B2D8A61FB404FD00C59550 /* DetailXuQiuViewController.xib */,
 			);
 			path = ViewController;
-			sourceTree = "<group>";
-		};
-		18F988751FB0A6C700335E5D /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		40076A031F95925A006839C7 /* View */ = {
@@ -5480,6 +5500,7 @@
 				18D93D771F939B8D00D18418 /* FMDatabaseQueue.m in Sources */,
 				18D93D781F939B8D00D18418 /* SortForTime.m in Sources */,
 				18D93D641F93998600D18418 /* RCDGroupInfo.m in Sources */,
+				18E9BD5E1FB8766500B93365 /* DetailXuQiuModel.m in Sources */,
 				18D93D651F93998600D18418 /* RCDHttpTool.m in Sources */,
 				18D93D661F93998600D18418 /* RCDataBaseManager.m in Sources */,
 				18D93D671F93998600D18418 /* RCDUserInfo.m in Sources */,
@@ -5641,6 +5662,7 @@
 				40DF4F771F81F81700EE6753 /* ATQTypeListViewController.m in Sources */,
 				407F9BD11F6634A70043A87A /* ATQBaseNavigationViewController.m in Sources */,
 				185D78961F8DF13A00DA8849 /* UIButton+Badge.m in Sources */,
+				18E9BD641FB876D500B93365 /* DetailSubPublishModel.m in Sources */,
 				185D78861F8DF13A00DA8849 /* GCDTimer.m in Sources */,
 				40C77E3D1FADA2A4000D8F70 /* ATQContentTableViewCell.m in Sources */,
 				185D785C1F8DF13900DA8849 /* AutoFitLabelView.m in Sources */,
@@ -5670,6 +5692,7 @@
 				18D93D8D1F96E9CB00D18418 /* JianZhiTouSuCollectionViewCell.m in Sources */,
 				40F5E3731F91A3820077A574 /* NSString+MLLabel.m in Sources */,
 				4027D80F1F79409900B45C8E /* ATQVisitorTableViewCell.m in Sources */,
+				18E9BD5B1FB8764D00B93365 /* DetailXuQiuViewModel.m in Sources */,
 				18B2D8A21FB3FD0400C59550 /* DetailXuQiuViewCellTableViewCell.m in Sources */,
 				40EA93251F7BBAD3005A0E50 /* qrinput.c in Sources */,
 				40FA89F01F749F7D0059A208 /* ATQHomeCollectionViewCell.m in Sources */,
@@ -5738,6 +5761,7 @@
 				406932171F90531200161167 /* NSSet+HYBUnicodeReadable.m in Sources */,
 				4067AEA61F98A54900553458 /* ATQMyAlumbSCFTableViewCell.m in Sources */,
 				40056E171FA5873A0069DEF4 /* ATQVideoModel.m in Sources */,
+				18E9BD611FB876C000B93365 /* DetailSubPublishViewModel.m in Sources */,
 				40FB16A31F80BB07001FC339 /* ATQLiftCollectionViewCell.m in Sources */,
 				40F5E63F1F91AFAC0077A574 /* RFTextView.m in Sources */,
 				407F9BE31F6636BF0043A87A /* ATQMeViewController.m in Sources */,

@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="131" id="KGk-i7-Jjw" customClass="DetailXuQiuViewCellTableViewCell">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JianZhiDetailFirstCellID" rowHeight="131" id="KGk-i7-Jjw" customClass="DetailXuQiuViewCellTableViewCell">
             <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -92,9 +92,19 @@
                     <constraint firstItem="3rD-bK-c0H" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="zaX-98-xab"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="ageLabel" destination="1dm-ot-Fiy" id="fRI-UD-y7c"/>
+                <outlet property="avatarImage" destination="k4e-6s-ghP" id="LMu-kg-LDj"/>
+                <outlet property="carImage" destination="rWH-Fc-zIP" id="8X4-6D-0Vg"/>
+                <outlet property="chengLabel" destination="3rD-bK-c0H" id="G5i-DW-mLX"/>
+                <outlet property="diWangImage" destination="3XE-eP-8HM" id="aqJ-IS-rP4"/>
+                <outlet property="juliLabel" destination="CUJ-sg-bbL" id="WVw-1S-tOj"/>
+                <outlet property="nicknameLabel" destination="X6p-U7-Vjc" id="n8u-uD-cs7"/>
+                <outlet property="vipImage" destination="N2l-eX-ggK" id="1tT-NM-Hep"/>
+            </connections>
             <point key="canvasLocation" x="-49.5" y="24"/>
         </tableViewCell>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="EIQ-Zd-vIj">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="JianZhiDetailSecondCellID" id="EIQ-Zd-vIj" customClass="DetailXuQiuViewJobNameCell">
             <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EIQ-Zd-vIj" id="5oQ-fX-Zrz">
@@ -146,16 +156,23 @@
                     <constraint firstItem="Nnt-q7-OVL" firstAttribute="leading" secondItem="rCb-AQ-O39" secondAttribute="trailing" constant="10" id="pdb-Af-ttT"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="jobNameLabel" destination="Nnt-q7-OVL" id="aeB-Rd-yWD"/>
+                <outlet property="leftImage" destination="dxa-if-qvh" id="QmB-3y-vEz"/>
+                <outlet property="priceLabel" destination="If0-zF-dSi" id="6Ep-aW-aN1"/>
+                <outlet property="shiChangLabel" destination="WB0-bW-Wlz" id="QWf-W9-EwX"/>
+                <outlet property="titleNameLabel" destination="rCb-AQ-O39" id="h6c-Tm-W7A"/>
+            </connections>
             <point key="canvasLocation" x="-46.5" y="131"/>
         </tableViewCell>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="NFX-5e-ejI">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="JianZhiDetailThirdCellID" id="NFX-5e-ejI" customClass="DetailXuQiuViewJobTimeCell">
             <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NFX-5e-ejI" id="usv-3S-m4k">
                 <rect key="frame" x="0.0" y="0.0" width="375" height="39.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="服务类型" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ew-Ff-9zn">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="开始时间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ew-Ff-9zn">
                         <rect key="frame" x="45" y="9" width="70" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
@@ -184,6 +201,11 @@
                     <constraint firstItem="nxI-0s-4uC" firstAttribute="leading" secondItem="usv-3S-m4k" secondAttribute="leading" constant="20" id="vZo-FW-oAU"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="letImage" destination="nxI-0s-4uC" id="H1q-0O-RiE"/>
+                <outlet property="timeLabel" destination="va6-Cq-xit" id="Dv4-Q3-EK8"/>
+                <outlet property="titleNameLabel" destination="6ew-Ff-9zn" id="sFH-Es-HUm"/>
+            </connections>
             <point key="canvasLocation" x="-46.5" y="213"/>
         </tableViewCell>
     </objects>

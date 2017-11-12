@@ -157,6 +157,7 @@
     
     
     self.listView = [[JianZhiListTableVIew alloc]init];
+    self.listView.delegate = self;
     [self.listView loadTableViewWith:nil withCellType:TIGONGCELLTYPE];
     [self.view addSubview:self.listView];
     [self.listView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -403,6 +404,35 @@
 }
 
 #pragma mark ===================懒加载结束==================
+
+#pragma mark ===================JianZhiListTableViewDelegate开始==================
+- (void)JianZhiListTableView:(JianZhiListTableVIew *)tableview tableviewSelectViewWith:(NSIndexPath *)indexPath{
+//    self.currentButtonIndex = ZHAOREN_FUWU_INDEX;
+//    self.listView.currentCellType = TIGONGCELLTYPE;
+//    self.currentPageType = FUWUFANG_TUIJIAN;
+    switch (self.currentButtonIndex) {
+        case ZHAOREN_FUWU_INDEX:
+        {
+            //我是 服务方
+            DetailXuQiuViewController * VC = [[DetailXuQiuViewController alloc]init];
+            [self.navigationController pushViewController:VC animated:YES];
+        }
+            break;
+        case WOYAO_ZHUANQIAN_INDEX:
+        {
+            //我是 需求方
+            DetailSubPublishViewController * VC = [[DetailSubPublishViewController alloc]init];
+            [self.navigationController pushViewController:VC animated:YES];
+            
+        }
+            break;
+        default:
+            break;
+    }
+    
+}
+
+#pragma mark ===================JianZhiListTableViewDelegate结束==================
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

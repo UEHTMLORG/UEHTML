@@ -12,7 +12,7 @@
 //第一行 Cell
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -27,7 +27,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -41,7 +41,7 @@
 //第三行 Cell
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+   self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -56,7 +56,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -72,7 +72,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -87,7 +87,21 @@
 //第六行 Cell
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+    
+    // Configure the view for the selected state
+}
+
+@end
+@implementation DetailSubPublishSevenCell
+//第七行 Cell
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

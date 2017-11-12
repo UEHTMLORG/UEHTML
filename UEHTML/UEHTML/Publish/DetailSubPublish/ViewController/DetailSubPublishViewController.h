@@ -7,10 +7,13 @@
 //
 
 #import "ATQBaseViewController.h"
+#import "DetailSubPublishCell.h"
+#import "DetailXuQiuViewCellTableViewCell.h"
+
 
 @interface DetailSubPublishViewController : ATQBaseViewController<UITableViewDelegate,UITableViewDataSource>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
-
+@property (nonatomic, strong) NSMutableArray  *modelArray;
 
 @end

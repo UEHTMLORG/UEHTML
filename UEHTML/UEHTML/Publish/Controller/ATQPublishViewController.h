@@ -22,12 +22,15 @@
 
 #import "PublishZLViewModel.h"
 
+#import "DetailXuQiuViewController.h"
+#import "DetailSubPublishViewController.h"
+
 typedef NS_ENUM(NSUInteger, CURRENTBUTTON_INDEX) {
     ZHAOREN_FUWU_INDEX,
     WOYAO_ZHUANQIAN_INDEX,
 };
 
-@interface ATQPublishViewController : ATQBaseViewController<DZNSegmentedControlDelegate,UIScrollViewDelegate,JianZhiHeaderViewDelegate>
+@interface ATQPublishViewController : ATQBaseViewController<DZNSegmentedControlDelegate,UIScrollViewDelegate,JianZhiHeaderViewDelegate,JianZhiListTableViewDelegate>
 
 @property (nonatomic, strong) UIView *tiGongView;
 @property (nonatomic, strong) UIView *tiGongSubView;

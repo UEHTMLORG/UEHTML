@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="DetailSubPublishCell">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailXuQiuFirstCellID" id="KGk-i7-Jjw" customClass="DetailSubPublishCell">
             <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -122,9 +122,20 @@
                     <constraint firstItem="jcG-kh-M5s" firstAttribute="centerY" secondItem="xHx-le-rAi" secondAttribute="centerY" id="ywh-Ma-Wfr"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="ageLabel" destination="2W5-Tn-2s8" id="yLj-yB-XdD"/>
+                <outlet property="genderImage" destination="hCH-it-gy9" id="Ghi-LW-ffE"/>
+                <outlet property="guanZhuButton" destination="KaC-0f-dTD" id="jCa-XW-M7b"/>
+                <outlet property="homeButton" destination="jqC-S9-oWM" id="jj9-oi-O2H"/>
+                <outlet property="juliLabel" destination="jcG-kh-M5s" id="bTC-oD-jYL"/>
+                <outlet property="leftBackButton" destination="r18-cW-2h4" id="JTQ-Ow-NkF"/>
+                <outlet property="nickNameLabel" destination="snD-pf-6Zu" id="AMX-uF-ccC"/>
+                <outlet property="rightButton" destination="JQh-iF-g9F" id="qcr-jv-NZK"/>
+                <outlet property="shouCangButton" destination="Az4-wT-wIA" id="av8-Yc-06X"/>
+            </connections>
             <point key="canvasLocation" x="152" y="3"/>
         </tableViewCell>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="137" id="YTE-fY-DMy">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailXuQiuSecondCellID" rowHeight="137" id="YTE-fY-DMy" customClass="DetailSubPublishSecondCell">
             <rect key="frame" x="0.0" y="0.0" width="375" height="135"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YTE-fY-DMy" id="UIh-w6-OBO">
@@ -270,9 +281,19 @@
                     <constraint firstAttribute="trailing" secondItem="mUl-sh-8xU" secondAttribute="trailing" id="tdr-dA-e3f"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="chaKanWeiXinButton" destination="SJE-ij-JJy" id="QFv-Yt-0zC"/>
+                <outlet property="chengLabel" destination="raQ-Lq-YVt" id="dX6-4O-RLe"/>
+                <outlet property="diWangImage" destination="L2Z-AE-3ba" id="JLH-OF-kjI"/>
+                <outlet property="jobNameLabel" destination="uI0-Pp-4AR" id="vxZ-Ca-aJY"/>
+                <outlet property="priceLabel" destination="9Hc-Mb-IgJ" id="SVu-BP-hfF"/>
+                <outlet property="vipImage" destination="ect-Du-HmA" id="01t-lx-QB4"/>
+                <outlet property="voiceButton" destination="dfi-9E-KKP" id="7WE-wO-4iX"/>
+                <outlet property="weiXinLabel" destination="kIk-7O-7vC" id="uYw-oa-H22"/>
+            </connections>
             <point key="canvasLocation" x="151.5" y="212.5"/>
         </tableViewCell>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="154" id="ShB-wa-kcI">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailXuQiuThirdCellID" rowHeight="154" id="ShB-wa-kcI" customClass="DetailSubPublishThirdCell">
             <rect key="frame" x="0.0" y="0.0" width="375" height="154"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ShB-wa-kcI" id="eQ2-Si-dPW">
@@ -322,9 +343,14 @@
                     <constraint firstItem="H4r-mD-IRa" firstAttribute="top" secondItem="eQ2-Si-dPW" secondAttribute="top" id="zOy-zi-7zr"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="contentLabel" destination="GsS-7A-Hhc" id="BS3-Da-3Xp"/>
+                <outlet property="leftImage" destination="Qzv-2l-KW0" id="1Z7-mm-Dyo"/>
+                <outlet property="titleNameLabel" destination="d1a-co-VqQ" id="9dI-n0-9ns"/>
+            </connections>
             <point key="canvasLocation" x="151.5" y="397"/>
         </tableViewCell>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="102" id="GmH-p3-4N4">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailXuQiuFourCellID" rowHeight="102" id="GmH-p3-4N4" customClass="DetailSubPublishFourCell">
             <rect key="frame" x="0.0" y="0.0" width="375" height="102"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GmH-p3-4N4" id="qgc-43-v6u">
@@ -380,9 +406,14 @@
                     <constraint firstItem="k2p-0V-lCt" firstAttribute="top" secondItem="qgc-43-v6u" secondAttribute="top" id="brV-hR-sy9"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="collectionView" destination="Su2-bb-yaf" id="aDc-hL-a7X"/>
+                <outlet property="leftImage" destination="Ehr-jw-XuC" id="uAC-w8-Unz"/>
+                <outlet property="titleNameLabel" destination="YyN-Ix-d6K" id="lyu-B9-eCR"/>
+            </connections>
             <point key="canvasLocation" x="151.5" y="565"/>
         </tableViewCell>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="120" id="zUu-lK-w47">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailXuQiuFiveCellID" rowHeight="120" id="zUu-lK-w47" customClass="DetailSubPublishFiveCell">
             <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zUu-lK-w47" id="jgA-hV-0Db">
@@ -439,9 +470,14 @@
                     <constraint firstItem="SRL-94-hwJ" firstAttribute="top" secondItem="jgA-hV-0Db" secondAttribute="top" constant="5" id="vwp-S5-pNo"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="collectionView" destination="ord-9N-380" id="unw-fF-xRq"/>
+                <outlet property="leftImage" destination="ir9-bF-sAw" id="Gb2-gY-5fy"/>
+                <outlet property="titleNameLabel" destination="tYA-6c-TGX" id="Pgq-C1-oh2"/>
+            </connections>
             <point key="canvasLocation" x="152" y="720"/>
         </tableViewCell>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="34" id="HL3-44-TuN">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailXuQiuSixCellID" rowHeight="34" id="HL3-44-TuN" customClass="DetailSubPublishSixCell">
             <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HL3-44-TuN" id="LQ5-96-EWP">
@@ -462,7 +498,7 @@
             </tableViewCellContentView>
             <point key="canvasLocation" x="151.5" y="837"/>
         </tableViewCell>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="83" id="uhr-Dn-UXC">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailXuQiuSevenCellID" rowHeight="83" id="uhr-Dn-UXC" customClass="DetailSubPublishSevenCell">
             <rect key="frame" x="0.0" y="0.0" width="375" height="83"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uhr-Dn-UXC" id="4dT-eY-mqY">
@@ -508,6 +544,12 @@
                     <constraint firstItem="WnN-5D-IXt" firstAttribute="centerY" secondItem="4MT-l6-wkb" secondAttribute="centerY" id="zir-D5-1g3"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="avatarImage" destination="8v9-lT-vEd" id="NSc-1j-IjQ"/>
+                <outlet property="contentLabel" destination="lis-CD-t7F" id="5kH-8T-SdM"/>
+                <outlet property="nickNameLabel" destination="4MT-l6-wkb" id="5rL-Zb-VUU"/>
+                <outlet property="timeLabel" destination="WnN-5D-IXt" id="mfn-nw-BzP"/>
+            </connections>
             <point key="canvasLocation" x="149.5" y="935.5"/>
         </tableViewCell>
     </objects>

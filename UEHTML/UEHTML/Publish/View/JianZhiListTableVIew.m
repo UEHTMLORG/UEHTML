@@ -134,6 +134,10 @@
             
             break;
     }
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(JianZhiListTableView:tableviewSelectViewWith:)]) {
+        [self.delegate JianZhiListTableView:self tableviewSelectViewWith:indexPath];
+    }
 }
 
 

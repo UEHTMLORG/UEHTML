@@ -7,8 +7,15 @@
 //
 
 #import "ATQBaseViewController.h"
+#import "DetailSubPublishCell.h"
+#import "DetailXuQiuViewCellTableViewCell.h"
 
-@interface DetailXuQiuViewController : ATQBaseViewController
+
+@interface DetailXuQiuViewController : ATQBaseViewController<UITableViewDelegate,UITableViewDataSource>
+
 @property (strong, nonatomic) IBOutlet UITableView *tabeView;
+
+@property (nonatomic, strong) NSMutableArray  *modelArray;
+
 
 @end

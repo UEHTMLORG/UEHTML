@@ -1917,6 +1917,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		182836C91FB808FC0080A1DD /* DetailVIew */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DetailVIew;
+			sourceTree = "<group>";
+		};
 		185D77931F8DB42800DA8849 /* CommonsZZL */ = {
 			isa = PBXGroup;
 			children = (
@@ -2333,6 +2340,7 @@
 		1866232A1F76A49A00E42290 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				182836C91FB808FC0080A1DD /* DetailVIew */,
 				185D778E1F8DA6AC00DA8849 /* ATQPHeaderView.h */,
 				185D778F1F8DA6AC00DA8849 /* ATQPHeaderView.m */,
 				185D77911F8DA6BD00DA8849 /* ATQPHeaderView.xib */,
@@ -4903,7 +4911,7 @@
 			attributes = {
 				CLASSPREFIX = ATQ;
 				LastUpgradeCheck = 0830;
-				ORGANIZATIONNAME = LHKH;
+				ORGANIZATIONNAME = ZL;
 				TargetAttributes = {
 					409E6D801F5003DA00E3BE49 = {
 						CreatedOnToolsVersion = 8.3.3;

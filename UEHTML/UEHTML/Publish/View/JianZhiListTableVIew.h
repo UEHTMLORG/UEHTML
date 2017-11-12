@@ -14,6 +14,13 @@ typedef NS_ENUM(NSUInteger, JianZhiCenterCellType) {
     JIANZHICELLTYPE,
     TIGONGCELLTYPE,
 };
+@class JianZhiListTableVIew;
+
+@protocol JianZhiListTableViewDelegate<NSObject>
+
+- (void)JianZhiListTableView:(JianZhiListTableVIew *)tableview tableviewSelectViewWith:(NSIndexPath *)indexPath;
+
+@end
 
 @interface JianZhiListTableVIew : UIView<UITableViewDelegate,UITableViewDataSource>
 
@@ -22,6 +29,7 @@ typedef NS_ENUM(NSUInteger, JianZhiCenterCellType) {
 @property (nonatomic, strong) NSMutableArray *tableARR;
 @property (nonatomic, assign) JianZhiCenterCellType currentCellType;
 @property (nonatomic, assign) PublishNetWorking_enum curPublishNetworkingType;
+@property (nonatomic, weak) id<JianZhiListTableViewDelegate> delegate;
 
 - (void)loadTableViewWith:(NSMutableArray *)arrary withCellType:(JianZhiCenterCellType)type;
 - (void)reloadTableViewWith:(NSMutableArray *)arrary withCellType:(JianZhiCenterCellType)type;

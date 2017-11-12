@@ -38,7 +38,7 @@
     self.myViewModel = [PublishZLViewModel shareInstance];
     /** 开始请求数据 */
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [self.myViewModel startAFNetWorkingGetListWithType:XUQIUFANG_TUIJIAN withPage:self.currentPage];
+        [self.myViewModel startAFNetWorkingGetListWithType:FUWUFANG_TUIJIAN withPage:self.currentPage];
     });
     __weak typeof(self) weakself = self;
     [self.myViewModel getPublishModelArrayBlockAction:^(PublishNetWorking_enum typeEnum, NSMutableArray *array) {
@@ -300,11 +300,15 @@
             if (control.selectedSegmentIndex == 0) {
                 self.currentButtonIndex = ZHAOREN_FUWU_INDEX;
                 self.listView.currentCellType = TIGONGCELLTYPE;
+                self.currentPageType = FUWUFANG_TUIJIAN;
+                self.listView.curPublishNetworkingType = FUWUFANG_TUIJIAN;
                 [self.tiGongSubControl setSelectedSegmentIndex:0];
             }
             else{
                 self.currentButtonIndex = WOYAO_ZHUANQIAN_INDEX;
                 self.listView.currentCellType = JIANZHICELLTYPE;
+                self.currentPageType = XUQIUFANG_TUIJIAN;
+                self.listView.curPublishNetworkingType = XUQIUFANG_TUIJIAN;
                  [self.tiGongSubControl setSelectedSegmentIndex:0];
                 
                 

@@ -53,7 +53,8 @@
              @"job_class_name":@"job_class_name",
              @"job_class_id":@"job_class_id",
              @"user_id":@"user_id",
-             @"id":@"id"
+             @"id":@"id",
+             @"price":@"price"
              };
 }
 @end

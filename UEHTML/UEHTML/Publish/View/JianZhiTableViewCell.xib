@@ -237,9 +237,9 @@
                             <constraint firstAttribute="width" constant="60" id="UqY-fB-afd"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                        <inset key="imageEdgeInsets" minX="10" minY="5" maxX="35" maxY="5"/>
+                        <inset key="imageEdgeInsets" minX="15" minY="5" maxX="35" maxY="5"/>
                         <state key="normal" title="10'" image="fabu-yuyin">
-                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jianzhi-dingwei2" translatesAutoresizingMaskIntoConstraints="NO" id="Z5e-z9-aEp">

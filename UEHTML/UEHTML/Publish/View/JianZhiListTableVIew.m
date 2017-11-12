@@ -91,13 +91,13 @@
             break;
         case TIGONGCELLTYPE:{
             if (self.curPublishNetworkingType == FUWUFANG_TUIJIAN) {
-                static NSString *rid=@"TiGongCellID";
-                TiGongTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:rid];
+                static NSString *rid=@"FUWUTUIJIANID";
+                FuWuFangTuiJianCell *cell=[tableView dequeueReusableCellWithIdentifier:rid];
                 if (cell == nil) {
-                    cell = [[NSBundle mainBundle] loadNibNamed:@"TiGongTableViewCell" owner:self options:nil][0];
+                    cell = [[NSBundle mainBundle] loadNibNamed:@"TiGongTableViewCell" owner:self options:nil][1];
                 }
                 
-                
+                [cell bindWithTuiJianModel:self.tableARR[indexPath.row]];
                 return cell;
             }
             else{
@@ -107,7 +107,7 @@
                     cell = [[NSBundle mainBundle] loadNibNamed:@"TiGongTableViewCell" owner:self options:nil][0];
                 }
                 
-                
+                [cell bindWithMyModel:self.tableARR[indexPath.row]];
                 return cell;
             }
         }

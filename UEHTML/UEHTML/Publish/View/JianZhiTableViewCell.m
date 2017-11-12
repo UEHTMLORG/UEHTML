@@ -41,6 +41,9 @@
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     [self.avatarImageView.layer setCornerRadius:30.0f];
     [self.avatarImageView.layer setMasksToBounds:YES];
+    
+    [self.voiceButton.layer setCornerRadius:11.0f];
+    [self.voiceButton.layer setMasksToBounds:YES];
     // Initialization code
 }
 
@@ -56,7 +59,6 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-    
     // Configure the view for the selected state
 }
 

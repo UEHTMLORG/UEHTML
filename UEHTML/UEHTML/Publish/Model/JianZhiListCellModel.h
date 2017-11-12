@@ -38,7 +38,7 @@
 @property (nonatomic, copy) NSString *lon;
 @property (nonatomic, copy) NSString *distance;
 @property (nonatomic, copy) NSString *car_logo;
-
+@property (nonatomic, copy) NSString *price;
 @end
 
 /** 我是需求方--系统推荐 */

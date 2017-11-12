@@ -41,7 +41,7 @@
         }
             break;
         case XUQIUFANG_MYLIST:{
-            urlString = [NSString stringWithFormat:@"%@/api/job/order_list/service",Common_URL_ZL];
+            urlString = [NSString stringWithFormat:@"%@/api/job/order_list/demand",Common_URL_ZL];
             param = @{
                       @"model":@"1",
                       @"page_index":pageString
@@ -69,7 +69,7 @@
         }
             break;
         case XUQIUFANG_DOING:{
-            urlString = [NSString stringWithFormat:@"%@/api/job/order_list/service",Common_URL_ZL];
+            urlString = [NSString stringWithFormat:@"%@/api/job/order_list/demand",Common_URL_ZL];
             param = @{
                       @"model":@"2",
                       @"page_index":pageString
@@ -77,7 +77,7 @@
         }
             break;
         case XUQIUFANG_FINISHED:{
-            urlString = [NSString stringWithFormat:@"%@/api/job/order_list/service",Common_URL_ZL];
+            urlString = [NSString stringWithFormat:@"%@/api/job/order_list/demand",Common_URL_ZL];
             param = @{
                       @"model":@"3",
                       @"page_index":pageString

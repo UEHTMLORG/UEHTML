@@ -25,6 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"账户安全";
+    self.phoneText.text = self.passStr;
     self.codeBtn.layer.borderColor = [UIColor colorWithHexString:UIColorStr].CGColor;
     self.codeBtn.layer.borderWidth = 1;
     self.codeBtn.layer.cornerRadius = 4;

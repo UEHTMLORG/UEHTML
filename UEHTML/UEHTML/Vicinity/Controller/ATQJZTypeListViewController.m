@@ -17,9 +17,14 @@
 #import "UIImageView+WebCache.h"
 #import "LhkhHttpsManager.h"
 #import "MBProgressHUD+Add.h"
+#import "ATQHomeItemListModel.h"
+#import "ATQPaixuView.h"
+#import "ATQShaixuanView.h"
 @interface ATQJZTypeListViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITableView *tableView;
 @property (strong,nonatomic)NSMutableArray *jobListArr;
+@property (strong,nonatomic)ATQPaixuView *PaixuView;
+@property (strong,nonatomic)ATQShaixuanView *ShaixuanView;
 
 @end
 static NSInteger page = 1;
@@ -30,7 +35,47 @@ static NSInteger page = 1;
     [self.paixuBtn changeImageAndTitle];
     [self.shaixuanBtn changeImageAndTitle];
     [self setTableView];
+    [self buildPaixuView];
+    [self buildShaixuanView];
 }
+
+-(void)buildPaixuView{
+    _PaixuView = ({
+        ATQPaixuView *PaixuView =[ATQPaixuView meHeadView];
+        [self.view addSubview:PaixuView];
+        [PaixuView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.view).offset(41);
+            make.left.right.mas_equalTo(self.view);
+            make.height.offset(120);
+        }];
+        PaixuView.hidden = YES;
+        
+//        __weak typeof(self) weakself = self;
+//        PaixuView.setupblock = ^{
+//            ATQSetupViewController *vc = [[ATQSetupViewController alloc]init];
+//            vc.dic = _MeDic;
+//            [weakself.navigationController pushViewController:vc animated:YES];
+//        };
+        
+        PaixuView;
+    });
+}
+
+-(void)buildShaixuanView{
+    _ShaixuanView = ({
+        ATQShaixuanView *ShaixuanView =[ATQShaixuanView meHeadView];
+        [self.view addSubview:ShaixuanView];
+        [ShaixuanView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.view).offset(41);
+            make.left.right.mas_equalTo(self.view);
+            make.height.offset(244);
+        }];
+        ShaixuanView.hidden = YES;
+        
+        ShaixuanView;
+    });
+}
+
 -(void)setTableView{
     _tableView = ({
         UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectZero];
@@ -67,6 +112,16 @@ static NSInteger page = 1;
     return loadMoreFooter;
 }
 
+- (IBAction)paixuClick:(id)sender {
+    self.PaixuView.hidden = NO;
+    self.ShaixuanView.hidden = YES;
+}
+
+- (IBAction)shaixuanClick:(id)sender {
+    self.PaixuView.hidden = YES;
+    self.ShaixuanView.hidden = NO;
+}
+
 -(void)loadData{
     
     NSMutableDictionary *params = [NSMutableDictionary  dictionary];
@@ -94,7 +149,7 @@ static NSInteger page = 1;
         if ([responseObject[@"status"] isEqualToString:@"1"]) {
             [self.jobListArr removeAllObjects];
             if(responseObject[@"data"]){
-                self.jobListArr = responseObject[@"data"];
+                self.jobListArr = [ATQHomeItemListModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"]] ;
             }
             page++;
             [self.tableView reloadData];
@@ -141,7 +196,7 @@ static NSInteger page = 1;
         if ([responseObject[@"status"] isEqualToString:@"1"]) {
             
             if(responseObject[@"data"]){
-                [self.jobListArr addObjectsFromArray:responseObject[@"data"]];
+                [self.jobListArr addObjectsFromArray:[ATQHomeItemListModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"]]];
             }
             [self.tableView reloadData];
         }else if ([responseObject[@"status"] isEqualToString:@"302"]){
@@ -175,7 +230,19 @@ static NSInteger page = 1;
         NSArray *array = [[NSBundle mainBundle]loadNibNamed: CellIdentifier owner:self options:nil];
         cell = [array objectAtIndex:0];
     }
+    ATQHomeItemListModel *model = self.jobListArr[indexPath.section];
+    [cell.userImg sd_setImageWithURL:[NSURL URLWithString:model.avatar]];
+    cell.userNameLab.text = model.nick_name;
+    if ([model.gender isEqualToString:@"1"]) {
+        cell.sexImg.image = [UIImage imageNamed:@"zhuce-nan"];
+    }else{
+        cell.sexImg.image = [UIImage imageNamed:@"zhuce-nv"];
+    }
     
+    NSString *texingStr = [NSString stringWithFormat:@"%@岁 %@cm %@kg",model.age,model.height,model.weight];
+    cell.texingLab.text = texingStr;
+    cell.disLab.text = model.distance;
+    cell.chengLab.text = model.credit_num;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
     

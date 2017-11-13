@@ -86,7 +86,7 @@
                     <rect key="frame" x="0.0" y="111" width="375" height="40"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入手机号码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vcd-9i-jhT">
-                            <rect key="frame" x="15" y="0.0" width="104" height="40"/>
+                            <rect key="frame" x="15" y="0.0" width="247" height="40"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
@@ -131,6 +131,7 @@
                         <constraint firstItem="vcd-9i-jhT" firstAttribute="top" secondItem="uhX-Y5-ioy" secondAttribute="top" id="EGn-5q-FjL"/>
                         <constraint firstAttribute="height" constant="40" id="I8C-Q5-Obj"/>
                         <constraint firstItem="axn-yF-cU7" firstAttribute="leading" secondItem="zGp-YV-p2X" secondAttribute="leading" id="Jdg-ba-5mT"/>
+                        <constraint firstItem="vcd-9i-jhT" firstAttribute="trailing" secondItem="zGp-YV-p2X" secondAttribute="leading" constant="-10" id="Ly7-qs-7HI"/>
                         <constraint firstItem="vcd-9i-jhT" firstAttribute="leading" secondItem="uhX-Y5-ioy" secondAttribute="leading" constant="15" id="RQQ-mB-pM3"/>
                         <constraint firstItem="axn-yF-cU7" firstAttribute="top" secondItem="zGp-YV-p2X" secondAttribute="top" id="Y9x-zm-i4Z"/>
                         <constraint firstItem="axn-yF-cU7" firstAttribute="trailing" secondItem="zGp-YV-p2X" secondAttribute="trailing" id="Yza-nE-uuH"/>

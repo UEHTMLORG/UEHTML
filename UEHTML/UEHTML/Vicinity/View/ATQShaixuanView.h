@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@protocol ATQShaixuanViewDelegate <NSObject>
+- (void)shaixuanViewClick:(NSString *)sexString age:(NSString *)ageString height:(NSString *)heightString distence:(NSString *)disString gongqiu:(NSString *)gqString;
+@end
 @interface ATQShaixuanView : UIView
+@property (weak,nonatomic)id<ATQShaixuanViewDelegate>delegate;
 + (ATQShaixuanView *)meHeadView;
 @end

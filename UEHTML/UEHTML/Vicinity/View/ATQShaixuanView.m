@@ -8,7 +8,18 @@
 
 #import "ATQShaixuanView.h"
 
-@interface ATQShaixuanView()
+@interface ATQShaixuanView()<ATQShaixuanViewDelegate>{
+    NSString *sexStr;
+    NSString *ageStr;
+    NSString *heightStr;
+    NSString *distenceStr;
+    NSString *gongqiuStr;
+    UIButton *selectSexBtn;
+    UIButton *selectAgeBtn;
+    UIButton *selectHeightBtn;
+    UIButton *selectDistenceBtn;
+    UIButton *selectGongqiuBtn;
+}
 
 @end
 
@@ -48,9 +59,51 @@
 
 
 #pragma mark - Network requests
+//性别
+- (IBAction)sexBXClick:(UIButton*)sender {
+    selectSexBtn.selected = !sender.selected;
+    selectSexBtn = sender;
+    sexStr = sender.titleLabel.text;
+}
+
+//年龄
+- (IBAction)ageBXClick:(UIButton*)sender {
+    selectAgeBtn.selected = !sender.selected;
+    selectAgeBtn = sender;
+    ageStr = sender.titleLabel.text;
+}
+
+//身高
+- (IBAction)heightClick:(UIButton*)sender {
+    selectHeightBtn.selected = !sender.selected;
+    selectHeightBtn = sender;
+    heightStr = sender.titleLabel.text;
+}
+
+//距离
+- (IBAction)distenseClick:(UIButton*)sender {
+    selectDistenceBtn.selected = !sender.selected;
+    selectDistenceBtn = sender;
+    distenceStr = sender.titleLabel.text;
+}
+
+//供求
+- (IBAction)xuqiuClick:(UIButton*)sender {
+    selectGongqiuBtn.selected = !sender.selected;
+    selectGongqiuBtn = sender;
+    gongqiuStr = sender.titleLabel.text;
+}
 
 
+- (IBAction)chongzhiClick:(UIButton*)sender {
+    
+}
 
+- (IBAction)sureClick:(UIButton*)sender {
+    if ([_delegate respondsToSelector:@selector(shaixuanViewClick:age:height:distence:gongqiu:)]) {
+        [_delegate shaixuanViewClick:sexStr age:ageStr height:heightStr distence:distenceStr gongqiu:gongqiuStr];
+    }
+}
 
 #pragma mark - Public Methods
 

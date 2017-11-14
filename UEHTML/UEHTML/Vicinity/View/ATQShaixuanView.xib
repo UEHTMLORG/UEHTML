@@ -39,6 +39,9 @@
                             <state key="selected" title="不限">
                                 <color key="titleColor" red="0.99305731060000002" green="0.45613801479999999" blue="0.73159998660000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
+                            <connections>
+                                <action selector="sexBXClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="UNi-lC-AsK"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yR2-Gt-wc8">
                             <rect key="frame" x="104" y="5" width="30" height="30"/>
@@ -52,6 +55,9 @@
                             <state key="selected" title="男">
                                 <color key="titleColor" red="0.99305731060000002" green="0.45613801479999999" blue="0.73159998660000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
+                            <connections>
+                                <action selector="sexBXClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="5rj-nK-Zst"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q99-2l-0xY">
                             <rect key="frame" x="144" y="5" width="30" height="30"/>
@@ -65,6 +71,9 @@
                             <state key="selected" title="女">
                                 <color key="titleColor" red="0.99305731060000002" green="0.45613801479999999" blue="0.73159998660000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
+                            <connections>
+                                <action selector="sexBXClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="XOf-g8-kW4"/>
+                            </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nik-tP-obB">
                             <rect key="frame" x="0.0" y="39" width="375" height="1"/>
@@ -114,6 +123,9 @@
                             <state key="selected" title="不限">
                                 <color key="titleColor" red="0.99305731060000002" green="0.45613801479999999" blue="0.73159998660000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
+                            <connections>
+                                <action selector="ageBXClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="H6f-H6-8nN"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3T8-C1-OJG">
                             <rect key="frame" x="104" y="5" width="52" height="30"/>
@@ -127,6 +139,9 @@
                             <state key="selected" title="25岁以下">
                                 <color key="titleColor" red="0.99305731060000002" green="0.45613801479999999" blue="0.73159998660000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
+                            <connections>
+                                <action selector="ageBXClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="eFL-YV-Uyh"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwC-o8-GWp">
                             <rect key="frame" x="166" y="5" width="62" height="30"/>
@@ -140,6 +155,9 @@
                             <state key="selected" title="25岁~35岁">
                                 <color key="titleColor" red="0.99305731060000002" green="0.45613801479999999" blue="0.73159998660000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
+                            <connections>
+                                <action selector="ageBXClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="NXK-hc-hDa"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="st8-iV-P55">
                             <rect key="frame" x="238" y="5" width="52" height="30"/>
@@ -153,6 +171,9 @@
                             <state key="selected" title="25岁以下">
                                 <color key="titleColor" red="0.99305731060000002" green="0.45613801479999999" blue="0.73159998660000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
+                            <connections>
+                                <action selector="ageBXClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="nc6-FN-FpO"/>
+                            </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yzn-4O-y9V">
                             <rect key="frame" x="0.0" y="39" width="375" height="1"/>
@@ -204,6 +225,9 @@
                             <state key="selected" title="不限">
                                 <color key="titleColor" red="0.99305731060000002" green="0.45613801479999999" blue="0.73159998660000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
+                            <connections>
+                                <action selector="heightClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="wqq-7m-tRH"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7y-f2-c0s">
                             <rect key="frame" x="104" y="5" width="63" height="30"/>
@@ -217,6 +241,9 @@
                             <state key="selected" title="160cm以下">
                                 <color key="titleColor" red="0.99305731060000002" green="0.45613801479999999" blue="0.73159998660000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
+                            <connections>
+                                <action selector="heightClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="u27-le-Yai"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXK-dV-5wb">
                             <rect key="frame" x="177" y="5" width="84" height="30"/>
@@ -230,6 +257,9 @@
                             <state key="selected" title="160cm~168cm">
                                 <color key="titleColor" red="0.99305731060000002" green="0.45613801479999999" blue="0.73159998660000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
+                            <connections>
+                                <action selector="heightClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="UdB-Ej-nKW"/>
+                            </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZxJ-cC-mxo">
                             <rect key="frame" x="0.0" y="39" width="375" height="1"/>
@@ -250,6 +280,9 @@
                             <state key="selected" title="160cm~168cm">
                                 <color key="titleColor" red="0.99305731060000002" green="0.45613801479999999" blue="0.73159998660000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
+                            <connections>
+                                <action selector="heightClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="YgI-pX-UVE"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -294,6 +327,9 @@
                             <state key="selected" title="不限">
                                 <color key="titleColor" red="0.99305731060000002" green="0.45613801479999999" blue="0.73159998660000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
+                            <connections>
+                                <action selector="distenseClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="qLU-sG-6Gt"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgL-DH-7zl">
                             <rect key="frame" x="104" y="5" width="57" height="30"/>
@@ -307,6 +343,9 @@
                             <state key="selected" title="5公里以内">
                                 <color key="titleColor" red="0.99305731060000002" green="0.45613801479999999" blue="0.73159998660000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
+                            <connections>
+                                <action selector="distenseClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="T4w-5F-Vct"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xRw-nL-iC2">
                             <rect key="frame" x="171" y="5" width="63" height="30"/>
@@ -320,6 +359,9 @@
                             <state key="selected" title="10公里以内">
                                 <color key="titleColor" red="0.99305731060000002" green="0.45613801479999999" blue="0.73159998660000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
+                            <connections>
+                                <action selector="distenseClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="eKf-KF-5w6"/>
+                            </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="59x-PE-j0r">
                             <rect key="frame" x="0.0" y="39" width="375" height="1"/>
@@ -369,6 +411,9 @@
                             <state key="selected" title="找服务方">
                                 <color key="titleColor" red="0.99305731060000002" green="0.45613801479999999" blue="0.73159998660000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
+                            <connections>
+                                <action selector="xuqiuClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="eZU-h9-DAj"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NdX-pb-btz">
                             <rect key="frame" x="124" y="5" width="50" height="30"/>
@@ -382,6 +427,9 @@
                             <state key="selected" title="找需求方">
                                 <color key="titleColor" red="0.99305731060000002" green="0.45613801479999999" blue="0.73159998660000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
+                            <connections>
+                                <action selector="xuqiuClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="A51-9R-rqB"/>
+                            </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wdt-gw-rFc">
                             <rect key="frame" x="0.0" y="39" width="375" height="1"/>
@@ -416,6 +464,9 @@
                     <state key="normal" title="重置">
                         <color key="titleColor" red="0.39200586079999999" green="0.39612069729999999" blue="0.39607340099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <connections>
+                        <action selector="chongzhiClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="zee-CQ-LKR"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XwF-xY-a1C">
                     <rect key="frame" x="225" y="210" width="80" height="24"/>
@@ -426,6 +477,9 @@
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <state key="normal" title="确定"/>
+                    <connections>
+                        <action selector="sureClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="x2e-Xx-KG7"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

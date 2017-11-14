@@ -63,10 +63,10 @@
                             <color key="textColor" red="0.39200586079999999" green="0.39612069729999999" blue="0.39607340099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ud-L2-djd">
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ud-L2-djd">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
                             <connections>
-                                <action selector="zuijinClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="vwl-Gp-phZ"/>
+                                <action selector="zuixinClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="zOw-8n-tzk"/>
                             </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fg5-a7-qP5">
@@ -102,10 +102,10 @@
                             <color key="textColor" red="0.39200586079999999" green="0.39612069729999999" blue="0.39607340099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWf-Ef-Fbu">
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWf-Ef-Fbu">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
                             <connections>
-                                <action selector="chengxinClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="p22-jm-SAp"/>
+                                <action selector="zuixinClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="Qv2-Pp-pnZ"/>
                             </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EJW-eP-wj2">

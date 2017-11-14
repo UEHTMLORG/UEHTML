@@ -20,7 +20,7 @@
 #import "ATQHomeItemListModel.h"
 #import "ATQPaixuView.h"
 #import "ATQShaixuanView.h"
-@interface ATQJZTypeListViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface ATQJZTypeListViewController ()<UITableViewDelegate,UITableViewDataSource,ATQPaixuViewDelegate,ATQShaixuanViewDelegate>
 @property (nonatomic,strong)UITableView *tableView;
 @property (strong,nonatomic)NSMutableArray *jobListArr;
 @property (strong,nonatomic)ATQPaixuView *PaixuView;
@@ -42,6 +42,7 @@ static NSInteger page = 1;
 -(void)buildPaixuView{
     _PaixuView = ({
         ATQPaixuView *PaixuView =[ATQPaixuView meHeadView];
+        PaixuView.delegate = self;
         [self.view addSubview:PaixuView];
         [PaixuView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.view).offset(41);
@@ -64,6 +65,7 @@ static NSInteger page = 1;
 -(void)buildShaixuanView{
     _ShaixuanView = ({
         ATQShaixuanView *ShaixuanView =[ATQShaixuanView meHeadView];
+        ShaixuanView.delegate = self;
         [self.view addSubview:ShaixuanView];
         [ShaixuanView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.view).offset(41);
@@ -110,6 +112,16 @@ static NSInteger page = 1;
     }];
     
     return loadMoreFooter;
+}
+
+- (void)paixuViewClick:(NSInteger)senderTag{
+    NSLog(@"---->%ld",senderTag);
+    self.PaixuView.hidden = YES;
+}
+
+- (void)shaixuanViewClick:(NSString *)sexString age:(NSString *)ageString height:(NSString *)heightString distence:(NSString *)disString gongqiu:(NSString *)gqString{
+    NSLog(@"--->%@-->%@-->%@-->%@-->%@",sexString,ageString,heightString,disString,gqString);
+    self.ShaixuanView.hidden = YES;
 }
 
 - (IBAction)paixuClick:(id)sender {

@@ -18,6 +18,9 @@
     self.tixianBtn.layer.borderColor = [UIColor colorWithHexString:UIColorStr].CGColor;
 }
 - (IBAction)tixianClick:(id)sender {
+    if (_tixianblock) {
+        _tixianblock();
+    }
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

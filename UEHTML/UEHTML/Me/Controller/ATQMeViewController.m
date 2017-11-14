@@ -102,7 +102,7 @@
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.mas_equalTo(self.view);
         make.top.mas_equalTo(self.view).offset(-20);
-        make.bottom.mas_equalTo(self.view).offset(0);
+        make.bottom.mas_equalTo(self.view);
     }];
     
 }

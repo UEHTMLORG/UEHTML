@@ -8,7 +8,7 @@
 
 #import "ATQPaixuView.h"
 
-@interface ATQPaixuView()
+@interface ATQPaixuView()<ATQPaixuViewDelegate>
 
 @end
 
@@ -45,14 +45,12 @@
 
 #pragma mark - Event Response
 
-- (IBAction)zuixinClick:(id)sender {
+- (IBAction)zuixinClick:(UIButton*)sender {
+    if ([_delegate respondsToSelector:@selector(paixuViewClick:)]) {
+        [_delegate paixuViewClick:sender.tag];
+    }
 }
 
-- (IBAction)zuijinClick:(id)sender {
-}
-
-- (IBAction)chengxinClick:(id)sender {
-}
 
 #pragma mark - Network requests
 

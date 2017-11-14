@@ -106,6 +106,8 @@
                 [[NSUserDefaults standardUserDefaults] setObject:user_id forKey:USER_ID_AOTU_ZL];
                 [[NSUserDefaults standardUserDefaults] setObject:user_token forKey:USER_TOEKN_AOTU_ZL];
                 [[NSUserDefaults standardUserDefaults] setObject:message_token forKey:MESSAGE_TOKEN_AOTU_ZL];
+                /** 登录融云 */
+                [[ZLRongYunManager shareInstance] rongYunLogin];
                 [(AppDelegate *)[UIApplication sharedApplication].delegate openTabHomeCtrl];
             }else{
                 [MBProgressHUD show:responseObject[@"message"] view:self.view];

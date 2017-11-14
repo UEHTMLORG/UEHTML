@@ -11,12 +11,14 @@
 #import "UIColor+ColorZL.h"
 #import "Masonry.h"
 #import <RongIMKit/RongIMKit.h>
+#import <RongIMLib/RongIMLib.h>
 #import "RCDRCIMDataSource.h"
 #import <AFNetworking.h>
 #import "ZLSecondAFNetworking.h"
 #import "MBManager.h"
 #import "UploadParam.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "ZLRongYunManager.h"
 
 ///////////////////////////////////
 #define Main_Purple_Color @"ff73ba"

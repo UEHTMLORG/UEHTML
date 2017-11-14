@@ -110,7 +110,7 @@
     [RCIMClient sharedRCIMClient].logLevel = RC_Log_Level_Info;
     
     
-    [[RCIM sharedRCIM] connectWithToken:ceToken    success:^(NSString *userId) {
+    [[RCIM sharedRCIM] connectWithToken:[kUserDefaults objectForKey:MESSAGE_TOKEN_AOTU_ZL]    success:^(NSString *userId) {
         NSLog(@"登陆成功。当前登录的用户ID：%@", userId);
         dispatch_async(dispatch_get_main_queue(), ^{
 //            [[RCIM sharedRCIM] setUserInfoDataSource:self];
@@ -145,6 +145,24 @@
         return completion(userInfo);
     }
     return completion(nil);
+}
+/** RCIMReceiveMessageDelegate方法 */
+- (void)onRCIMReceiveMessage:(RCMessage *)message
+                        left:(int)left{
+    
+}
+//APP处于后台，接收消息
+-(BOOL)onRCIMCustomLocalNotification:(RCMessage*)message
+                      withSenderName:(NSString *)senderName{
+    return YES;
+}
+
+/*!
+ 当App处于前台时，接收到消息并播放提示音的回调方法
+ */
+-(BOOL)onRCIMCustomAlertSound:(RCMessage*)message{
+    
+    return YES;
 }
 
 -(void)openLoginCtrl

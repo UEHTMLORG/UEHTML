@@ -125,6 +125,7 @@
 		18A946391FAA17EA007F8A1D /* FaBuXuQiuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A946371FAA17EA007F8A1D /* FaBuXuQiuTableViewCell.xib */; };
 		18A9463D1FAA1829007F8A1D /* FaJianZhiLVYouTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A9463B1FAA1829007F8A1D /* FaJianZhiLVYouTableViewCell.m */; };
 		18A9463E1FAA1829007F8A1D /* FaJianZhiLVYouTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A9463C1FAA1829007F8A1D /* FaJianZhiLVYouTableViewCell.xib */; };
+		18AC8F471FBB34CE00F4E265 /* ZLRongYunManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AC8F461FBB34CE00F4E265 /* ZLRongYunManager.m */; };
 		18B2D8A21FB3FD0400C59550 /* DetailXuQiuViewCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B2D8A01FB3FD0400C59550 /* DetailXuQiuViewCellTableViewCell.m */; };
 		18B2D8A31FB3FD0400C59550 /* DetailXuQiuViewCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B2D8A11FB3FD0400C59550 /* DetailXuQiuViewCellTableViewCell.xib */; };
 		18B2D8A71FB404FD00C59550 /* DetailXuQiuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B2D8A51FB404FD00C59550 /* DetailXuQiuViewController.m */; };
@@ -989,6 +990,8 @@
 		18A9463A1FAA1829007F8A1D /* FaJianZhiLVYouTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaJianZhiLVYouTableViewCell.h; sourceTree = "<group>"; };
 		18A9463B1FAA1829007F8A1D /* FaJianZhiLVYouTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaJianZhiLVYouTableViewCell.m; sourceTree = "<group>"; };
 		18A9463C1FAA1829007F8A1D /* FaJianZhiLVYouTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FaJianZhiLVYouTableViewCell.xib; sourceTree = "<group>"; };
+		18AC8F451FBB34CE00F4E265 /* ZLRongYunManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLRongYunManager.h; sourceTree = "<group>"; };
+		18AC8F461FBB34CE00F4E265 /* ZLRongYunManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLRongYunManager.m; sourceTree = "<group>"; };
 		18B2D89F1FB3FD0400C59550 /* DetailXuQiuViewCellTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailXuQiuViewCellTableViewCell.h; sourceTree = "<group>"; };
 		18B2D8A01FB3FD0400C59550 /* DetailXuQiuViewCellTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailXuQiuViewCellTableViewCell.m; sourceTree = "<group>"; };
 		18B2D8A11FB3FD0400C59550 /* DetailXuQiuViewCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailXuQiuViewCellTableViewCell.xib; sourceTree = "<group>"; };
@@ -2482,6 +2485,23 @@
 			path = FaBuViewController;
 			sourceTree = "<group>";
 		};
+		18AC8F431FBB34A100F4E265 /* RongYunVC */ = {
+			isa = PBXGroup;
+			children = (
+				18AC8F441FBB34A100F4E265 /* Model */,
+			);
+			path = RongYunVC;
+			sourceTree = "<group>";
+		};
+		18AC8F441FBB34A100F4E265 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18AC8F451FBB34CE00F4E265 /* ZLRongYunManager.h */,
+				18AC8F461FBB34CE00F4E265 /* ZLRongYunManager.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		18B2D8AA1FB423C100C59550 /* PublishViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -3084,6 +3104,7 @@
 				185D77931F8DB42800DA8849 /* CommonsZZL */,
 				409E6D871F5003DA00E3BE49 /* AppDelegate.h */,
 				409E6D881F5003DA00E3BE49 /* AppDelegate.m */,
+				18AC8F431FBB34A100F4E265 /* RongYunVC */,
 				409E6DBC1F50081200E3BE49 /* Main */,
 				409E6DCA1F50081200E3BE49 /* Vicinity */,
 				409E6DB71F50081200E3BE49 /* ATQ */,
@@ -4977,7 +4998,6 @@
 				TargetAttributes = {
 					409E6D801F5003DA00E3BE49 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 3GRH7F5C35;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -5518,6 +5538,7 @@
 				40509BB71FB9CFD200F68438 /* ATQHomeItemListModel.m in Sources */,
 				40473D3F1F962D9B00E6EE35 /* CalculatorTools.m in Sources */,
 				40473D3E1F962CDA00E6EE35 /* PermissionDetector.m in Sources */,
+				18AC8F471FBB34CE00F4E265 /* ZLRongYunManager.m in Sources */,
 				40473D3C1F962C5200E6EE35 /* CaptureManager.m in Sources */,
 				40473D3A1F962BAB00E6EE35 /* IFlyFaceImage.m in Sources */,
 				40473D3B1F962BAB00E6EE35 /* IFlyFaceResultKeys.m in Sources */,
@@ -6013,7 +6034,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = UEHTML/UEHTML.entitlements;
-				DEVELOPMENT_TEAM = 3GRH7F5C35;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				ENABLE_ONLY_ACTIVE_RESOURCES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -6040,7 +6061,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = UEHTML/UEHTML.entitlements;
-				DEVELOPMENT_TEAM = 3GRH7F5C35;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				ENABLE_ONLY_ACTIVE_RESOURCES = YES;
 				FRAMEWORK_SEARCH_PATHS = (

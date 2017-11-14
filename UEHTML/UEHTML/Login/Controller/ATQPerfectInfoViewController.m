@@ -120,7 +120,9 @@
      NSLog(@"-----register/step3=%@",responseObject);
      if ([responseObject[@"status"] isEqualToString:@"1"]) {
          [MBProgressHUD show:responseObject[@"message"] view:self.view];
-         
+         [[NSUserDefaults standardUserDefaults] setObject:responseObject[@"data"] forKey:MESSAGE_TOKEN_AOTU_ZL];
+         /** 融云登录 */
+         [[ZLRongYunManager shareInstance] rongYunLogin];
          [self performSelector:@selector(gotoHome) withObject:nil afterDelay:1];
                   
      }else{

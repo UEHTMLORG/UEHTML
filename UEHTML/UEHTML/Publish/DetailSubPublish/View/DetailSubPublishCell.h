@@ -19,6 +19,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *juliLabel;
 @property (strong, nonatomic) IBOutlet UIButton *guanZhuButton;
 @property (strong, nonatomic) IBOutlet UIButton *leftBackButton;
+@property (strong, nonatomic) IBOutlet UIImageView *backgroundImageView;
 
 
 @end

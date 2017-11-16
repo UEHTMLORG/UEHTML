@@ -23,24 +23,24 @@
              };
 }
 /** 解析嵌套单个模型  */
-- (NSValueTransformer *)jobJSONTransformer{
++ (NSValueTransformer *)jobJSONTransformer{
     return [MTLJSONAdapter dictionaryTransformerWithModelClass:[JobInfoMTLModel class]];
 }
-- (NSValueTransformer *)user_profileJSONTransformer{
++ (NSValueTransformer *)user_profileJSONTransformer{
     
     return [MTLJSONAdapter dictionaryTransformerWithModelClass:[UserProfileMTLModel class]];
 }
 /** 解析嵌套数组 模型 */
-- (NSValueTransformer *)album_listJSONTransformer{
++ (NSValueTransformer *)album_listJSONTransformer{
     return [MTLJSONAdapter arrayTransformerWithModelClass:[AlbumMTLModel class]];
 }
-- (NSValueTransformer *)skill_listJSONTransformer{
++ (NSValueTransformer *)skill_listJSONTransformer{
     return [MTLJSONAdapter arrayTransformerWithModelClass:[SkillMTLModel class]];
 }
-- (NSValueTransformer *)gift_listJSONTransformer{
++ (NSValueTransformer *)gift_listJSONTransformer{
     return [MTLJSONAdapter arrayTransformerWithModelClass:[GiftMTLModel class]];
 }
-- (NSValueTransformer *)evaluate_listJSONTransformer{
++ (NSValueTransformer *)evaluate_listJSONTransformer{
     return [MTLJSONAdapter arrayTransformerWithModelClass:[EvaluateMTLModel class]];
 }
 
@@ -103,7 +103,6 @@
              @"nick_name":@"nick_name",
              @"content":@"content"
              };
-    
 }
 
 @end

@@ -9,12 +9,14 @@
 #import "ATQBaseViewController.h"
 #import "DetailSubPublishCell.h"
 #import "DetailXuQiuViewCellTableViewCell.h"
-
+#import "DetailSubPublishViewModel.h"
+#import "ZJImageViewBrowser.h"
 
 @interface DetailSubPublishViewController : ATQBaseViewController<UITableViewDelegate,UITableViewDataSource>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray  *modelArray;
 @property (nonatomic, strong) NSString *jobId;
-
+@property (nonatomic, strong) DetailSubPublishViewModel *viewModel;
+@property (nonatomic, strong) DetailSubPublishModel *currentModel;
 @end

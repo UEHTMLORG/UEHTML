@@ -18,7 +18,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic02" translatesAutoresizingMaskIntoConstraints="NO" id="Nkh-lm-w6V">
+                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="Nkh-lm-w6V">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r18-cW-2h4">
@@ -124,6 +124,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="ageLabel" destination="2W5-Tn-2s8" id="yLj-yB-XdD"/>
+                <outlet property="backgroundImageView" destination="Nkh-lm-w6V" id="D9m-HQ-egW"/>
                 <outlet property="genderImage" destination="hCH-it-gy9" id="Ghi-LW-ffE"/>
                 <outlet property="guanZhuButton" destination="KaC-0f-dTD" id="jCa-XW-M7b"/>
                 <outlet property="homeButton" destination="jqC-S9-oWM" id="jj9-oi-O2H"/>
@@ -252,7 +253,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="500元/天" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Hc-Mb-IgJ">
-                                <rect key="frame" x="172" y="8" width="71" height="21"/>
+                                <rect key="frame" x="172" y="8" width="191" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.9807396531" green="0.72635114190000005" blue="0.34913885589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -505,7 +506,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="82.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon1" translatesAutoresizingMaskIntoConstraints="NO" id="8v9-lT-vEd">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jianzhi-car" translatesAutoresizingMaskIntoConstraints="NO" id="8v9-lT-vEd">
                         <rect key="frame" x="20" y="5" width="35" height="35"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="35" id="DM5-wZ-VnD"/>
@@ -554,6 +555,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="2" width="1026" height="681"/>
         <image name="fabu-Top zuo" width="27" height="27"/>
         <image name="fabu-chakan" width="95" height="45"/>
         <image name="fabu-cheng" width="27" height="27"/>
@@ -571,7 +573,6 @@
         <image name="fabu-weixin" width="47" height="47"/>
         <image name="fabu-yuyin" width="16" height="21"/>
         <image name="fabu-zhuye" width="45" height="45"/>
-        <image name="icon1" width="200" height="200"/>
-        <image name="pic02" width="548" height="240"/>
+        <image name="jianzhi-car" width="32" height="32"/>
     </resources>
 </document>

@@ -29,7 +29,7 @@
                                 };
     [[ZLSecondAFNetworking sharedInstance] postWithUSER_INFO_URLString:urlString parameters:parmaDic success:^(id responseObject) {
         NSDictionary * dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-//        NSLog(@"请求需求详情:%@",dic);
+        NSLog(@"请求需求详情:%@",dic);
         if ([dic[@"status"] isEqualToString:@"1"]) {
             self.currentModel = [MTLJSONAdapter modelOfClass:[DetailXuQiuModel class] fromJSONDictionary:dic[@"data"] error:nil];
             successBlock(YES,self.currentModel);

@@ -177,6 +177,8 @@
 		40019C331F7F6BF600E11331 /* ATQCheckTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40019C311F7F6BF600E11331 /* ATQCheckTableViewCell.xib */; };
 		40056E171FA5873A0069DEF4 /* ATQVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 40056E161FA5873A0069DEF4 /* ATQVideoModel.m */; };
 		400879CA1FA2E6E900272318 /* ATQFreshModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 400879C91FA2E6E900272318 /* ATQFreshModel.m */; };
+		401052AC1FBD59E4007EBA67 /* ATQChaWechatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 401052AA1FBD59E4007EBA67 /* ATQChaWechatViewController.m */; };
+		401052AD1FBD59E4007EBA67 /* ATQChaWechatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 401052AB1FBD59E4007EBA67 /* ATQChaWechatViewController.xib */; };
 		401640EC1F9D9EF700E3ED9E /* ATQSFShiLiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 401640EA1F9D9EF700E3ED9E /* ATQSFShiLiViewController.m */; };
 		401640ED1F9D9EF700E3ED9E /* ATQSFShiLiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 401640EB1F9D9EF700E3ED9E /* ATQSFShiLiViewController.xib */; };
 		401640F01F9DE8F500E3ED9E /* ATQHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 401640EF1F9DE8F500E3ED9E /* ATQHomeModel.m */; };
@@ -1082,6 +1084,9 @@
 		40076A0A1F95A9F5006839C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		400879C81FA2E6E900272318 /* ATQFreshModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATQFreshModel.h; sourceTree = "<group>"; };
 		400879C91FA2E6E900272318 /* ATQFreshModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATQFreshModel.m; sourceTree = "<group>"; };
+		401052A91FBD59E4007EBA67 /* ATQChaWechatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATQChaWechatViewController.h; sourceTree = "<group>"; };
+		401052AA1FBD59E4007EBA67 /* ATQChaWechatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATQChaWechatViewController.m; sourceTree = "<group>"; };
+		401052AB1FBD59E4007EBA67 /* ATQChaWechatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ATQChaWechatViewController.xib; sourceTree = "<group>"; };
 		401640E91F9D9EF700E3ED9E /* ATQSFShiLiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATQSFShiLiViewController.h; sourceTree = "<group>"; };
 		401640EA1F9D9EF700E3ED9E /* ATQSFShiLiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATQSFShiLiViewController.m; sourceTree = "<group>"; };
 		401640EB1F9D9EF700E3ED9E /* ATQSFShiLiViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ATQSFShiLiViewController.xib; sourceTree = "<group>"; };
@@ -3221,6 +3226,9 @@
 				40E0F23E1F78AE9F0074B064 /* ATQVisitorViewController.m */,
 				40E0F2471F78C8F60074B064 /* ATQMyWechatViewController.h */,
 				40E0F2481F78C8F60074B064 /* ATQMyWechatViewController.m */,
+				401052A91FBD59E4007EBA67 /* ATQChaWechatViewController.h */,
+				401052AA1FBD59E4007EBA67 /* ATQChaWechatViewController.m */,
+				401052AB1FBD59E4007EBA67 /* ATQChaWechatViewController.xib */,
 				40E0F2681F78FB290074B064 /* ATQMyAlbumViewController.h */,
 				40E0F2691F78FB290074B064 /* ATQMyAlbumViewController.m */,
 				4067AE9E1F9890EF00553458 /* ATQSCMyAlumbViewController.h */,
@@ -5387,6 +5395,7 @@
 				40D353C01F7F32F00017DA5C /* ATQAccountThiTableViewCell.xib in Resources */,
 				40F5E5641F91AFAC0077A574 /* f_static_009@3x.png in Resources */,
 				407193D91F8B07AC00B9F162 /* ATQSFRZViewController.xib in Resources */,
+				401052AD1FBD59E4007EBA67 /* ATQChaWechatViewController.xib in Resources */,
 				40F5E5701F91AFAC0077A574 /* f_static_015@3x.png in Resources */,
 				40F5E5601F91AFAC0077A574 /* f_static_007@3x.png in Resources */,
 				40F5E5551F91AFAC0077A574 /* f_static_002@3x.png in Resources */,
@@ -5698,6 +5707,7 @@
 				40EA93261F7BBAD3005A0E50 /* qrspec.c in Sources */,
 				40F5E64D1F91B2AD0077A574 /* UIImage+ZJ.m in Sources */,
 				40FEA5CA1F73B40000D6EB89 /* ATQNearbyViewController.m in Sources */,
+				401052AC1FBD59E4007EBA67 /* ATQChaWechatViewController.m in Sources */,
 				402D5C4E1FB47550006C666D /* ATQSZUserHeaderCell.m in Sources */,
 				185D78851F8DF13A00DA8849 /* GCDSemaphore.m in Sources */,
 				185D78AB1F8DF13A00DA8849 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,

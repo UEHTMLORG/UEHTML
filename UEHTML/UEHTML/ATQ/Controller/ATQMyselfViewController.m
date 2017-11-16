@@ -230,6 +230,8 @@ static NSInteger page = 1;
                 pinglunMsgH = [NSString stringHeightWithString:conmodel.message size:12 maxWidth: ScreenWidth-80];
                 pinglunHeight += pinglunMsgH+35;
             }
+        }else{
+            pinglunHeight = 10;
         }
         return 40+msgHeight+imageContainViewHeight+pinglunHeight+btnHeight;
     }

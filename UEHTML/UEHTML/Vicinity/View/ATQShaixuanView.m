@@ -7,7 +7,7 @@
 //
 
 #import "ATQShaixuanView.h"
-
+#import "UIColor+LhkhColor.h"
 @interface ATQShaixuanView()<ATQShaixuanViewDelegate>{
     NSString *sexStr;
     NSString *ageStr;
@@ -30,7 +30,11 @@
 - (id)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
-        
+        self.sexBXBtn.selected = YES;
+        self.ageBXBtn.selected = YES;
+        self.heightBXBtn.selected = YES;
+        self.disBXBtn.selected = YES;
+        self.fwBXBtn.selected = YES;
     }
     return self;
 }
@@ -61,36 +65,55 @@
 #pragma mark - Network requests
 //性别
 - (IBAction)sexBXClick:(UIButton*)sender {
-    selectSexBtn.selected = !sender.selected;
+    if (selectSexBtn) {
+        [selectSexBtn setTitleColor:[UIColor colorWithHexString:UIDeepToneTextColorStr] forState:UIControlStateNormal];
+    }
     selectSexBtn = sender;
+    [selectSexBtn setTitleColor:[UIColor colorWithHexString:UIColorStr] forState:UIControlStateNormal];
+
     sexStr = sender.titleLabel.text;
 }
 
 //年龄
 - (IBAction)ageBXClick:(UIButton*)sender {
-    selectAgeBtn.selected = !sender.selected;
+    
+    if (selectAgeBtn) {
+        [selectAgeBtn setTitleColor:[UIColor colorWithHexString:UIDeepToneTextColorStr] forState:UIControlStateNormal];
+    }
     selectAgeBtn = sender;
+    [selectAgeBtn setTitleColor:[UIColor colorWithHexString:UIColorStr] forState:UIControlStateNormal];
     ageStr = sender.titleLabel.text;
 }
 
 //身高
 - (IBAction)heightClick:(UIButton*)sender {
-    selectHeightBtn.selected = !sender.selected;
+
+    if (selectHeightBtn) {
+        [selectHeightBtn setTitleColor:[UIColor colorWithHexString:UIDeepToneTextColorStr] forState:UIControlStateNormal];
+    }
     selectHeightBtn = sender;
+    [selectHeightBtn setTitleColor:[UIColor colorWithHexString:UIColorStr] forState:UIControlStateNormal];
     heightStr = sender.titleLabel.text;
 }
 
 //距离
 - (IBAction)distenseClick:(UIButton*)sender {
-    selectDistenceBtn.selected = !sender.selected;
+   
+    if (selectDistenceBtn) {
+        [selectDistenceBtn setTitleColor:[UIColor colorWithHexString:UIDeepToneTextColorStr] forState:UIControlStateNormal];
+    }
     selectDistenceBtn = sender;
+    [selectDistenceBtn setTitleColor:[UIColor colorWithHexString:UIColorStr] forState:UIControlStateNormal];
     distenceStr = sender.titleLabel.text;
 }
 
 //供求
 - (IBAction)xuqiuClick:(UIButton*)sender {
-    selectGongqiuBtn.selected = !sender.selected;
+    if (selectGongqiuBtn) {
+        [selectGongqiuBtn setTitleColor:[UIColor colorWithHexString:UIDeepToneTextColorStr] forState:UIControlStateNormal];
+    }
     selectGongqiuBtn = sender;
+    [selectGongqiuBtn setTitleColor:[UIColor colorWithHexString:UIColorStr] forState:UIControlStateNormal];
     gongqiuStr = sender.titleLabel.text;
 }
 

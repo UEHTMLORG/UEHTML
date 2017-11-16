@@ -27,7 +27,7 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBQ-Gf-vhf">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBQ-Gf-vhf">
                             <rect key="frame" x="54" y="5" width="30" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="ujb-hH-R4F"/>
@@ -111,7 +111,7 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CbK-c4-iTx">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CbK-c4-iTx">
                             <rect key="frame" x="54" y="5" width="30" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="KWa-Z9-MXG"/>
@@ -213,7 +213,7 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSr-VR-8Oz">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSr-VR-8Oz">
                             <rect key="frame" x="54" y="5" width="30" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="scc-G3-jv4"/>
@@ -315,7 +315,7 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ikw-0M-KQE">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ikw-0M-KQE">
                             <rect key="frame" x="54" y="5" width="30" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="wux-Zu-HE9"/>
@@ -399,7 +399,7 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQI-aL-rrB">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQI-aL-rrB">
                             <rect key="frame" x="54" y="5" width="50" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="a7e-Wg-GWo"/>
@@ -505,6 +505,13 @@
                 <constraint firstItem="lZ0-SN-kkw" firstAttribute="top" secondItem="5Oe-5G-Rvh" secondAttribute="bottom" id="rTw-ys-cZ1"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="ageBXBtn" destination="CbK-c4-iTx" id="rR3-tn-4Fc"/>
+                <outlet property="disBXBtn" destination="ikw-0M-KQE" id="mro-jH-bOh"/>
+                <outlet property="fwBXBtn" destination="FQI-aL-rrB" id="ErZ-oS-qWH"/>
+                <outlet property="heightBXBtn" destination="cSr-VR-8Oz" id="9w9-tJ-xEj"/>
+                <outlet property="sexBXBtn" destination="qBQ-Gf-vhf" id="JSI-QP-2nS"/>
+            </connections>
             <point key="canvasLocation" x="48.5" y="85.5"/>
         </view>
     </objects>

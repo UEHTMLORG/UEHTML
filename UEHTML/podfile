@@ -23,5 +23,4 @@ pod 'SDAutoLayout', '~> 1.51'
 pod 'RongCloudIM', '~> 2.8'
 pod 'TZImagePickerController', '~> 1.9'
 pod 'BaiduMapKit','~> 3.4.2'
-pod 'DFPlayer', '~> 1.0'
 end

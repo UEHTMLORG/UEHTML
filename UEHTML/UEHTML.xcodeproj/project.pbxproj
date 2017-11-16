@@ -5485,7 +5485,6 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-UEHTML/Pods-UEHTML-resources.sh",
 				"${PODS_ROOT}/BaiduMapKit/BaiduMapKit/BaiduMapAPI_Map.framework/Resources/mapapi.bundle",
-				"${PODS_ROOT}/DFPlayer/DFPlayer/DFPlayer.bundle",
 				"${PODS_ROOT}/IDMPhotoBrowser/Classes/IDMPhotoBrowser.bundle",
 				"${PODS_ROOT}/IDMPhotoBrowser/Classes/IDMPBLocalizations.bundle",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",

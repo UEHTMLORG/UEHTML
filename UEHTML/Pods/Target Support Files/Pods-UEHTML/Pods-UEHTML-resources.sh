@@ -85,7 +85,6 @@ EOM
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_ROOT}/BaiduMapKit/BaiduMapKit/BaiduMapAPI_Map.framework/Resources/mapapi.bundle"
-  install_resource "${PODS_ROOT}/DFPlayer/DFPlayer/DFPlayer.bundle"
   install_resource "${PODS_ROOT}/IDMPhotoBrowser/Classes/IDMPhotoBrowser.bundle"
   install_resource "${PODS_ROOT}/IDMPhotoBrowser/Classes/IDMPBLocalizations.bundle"
   install_resource "${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle"
@@ -108,7 +107,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "${PODS_ROOT}/BaiduMapKit/BaiduMapKit/BaiduMapAPI_Map.framework/Resources/mapapi.bundle"
-  install_resource "${PODS_ROOT}/DFPlayer/DFPlayer/DFPlayer.bundle"
   install_resource "${PODS_ROOT}/IDMPhotoBrowser/Classes/IDMPhotoBrowser.bundle"
   install_resource "${PODS_ROOT}/IDMPhotoBrowser/Classes/IDMPBLocalizations.bundle"
   install_resource "${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle"

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -39,6 +39,17 @@
                             <constraint firstAttribute="height" constant="1" id="2sO-fQ-XRC"/>
                         </constraints>
                     </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8JF-fb-g54">
+                        <rect key="frame" x="290" y="17" width="15" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="fbX-3M-c0m"/>
+                            <constraint firstAttribute="width" secondItem="8JF-fb-g54" secondAttribute="height" multiplier="1:1" id="tac-au-Msc"/>
+                        </constraints>
+                        <state key="normal" image="zhanghu-dian02"/>
+                        <connections>
+                            <action selector="xuanzeClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="iz1-yD-WKH"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="saD-Vb-GQj" firstAttribute="leading" secondItem="GPt-6i-1UV" secondAttribute="trailing" constant="10" id="rab-gt-xMr"/>
@@ -51,16 +62,20 @@
                 <constraint firstItem="GPt-6i-1UV" firstAttribute="leading" secondItem="KGk-i7-Jjw" secondAttribute="leading" constant="10" id="SZM-9F-1tK"/>
                 <constraint firstItem="YBl-LE-naE" firstAttribute="leading" secondItem="KGk-i7-Jjw" secondAttribute="leading" id="UZy-9Z-9IE"/>
                 <constraint firstAttribute="bottom" secondItem="YBl-LE-naE" secondAttribute="bottom" id="e2A-2g-euw"/>
+                <constraint firstAttribute="trailing" secondItem="8JF-fb-g54" secondAttribute="trailing" constant="15" id="fmN-UO-UD5"/>
+                <constraint firstItem="8JF-fb-g54" firstAttribute="centerY" secondItem="KGk-i7-Jjw" secondAttribute="centerY" id="gyr-9E-3sw"/>
                 <constraint firstAttribute="bottom" secondItem="saD-Vb-GQj" secondAttribute="bottom" id="oQU-qv-wEa"/>
                 <constraint firstItem="saD-Vb-GQj" firstAttribute="top" secondItem="KGk-i7-Jjw" secondAttribute="top" id="yhd-Tf-PPg"/>
             </constraints>
             <connections>
                 <outlet property="userImg" destination="GPt-6i-1UV" id="3El-On-rge"/>
                 <outlet property="userNameLab" destination="saD-Vb-GQj" id="yDM-BF-u4k"/>
+                <outlet property="xuanzeBtn" destination="8JF-fb-g54" id="2Id-WT-K2s"/>
             </connections>
         </tableViewCell>
     </objects>
     <resources>
         <image name="1" width="690" height="920"/>
+        <image name="zhanghu-dian02" width="30" height="30"/>
     </resources>
 </document>

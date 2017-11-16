@@ -20,6 +20,7 @@
 #import "LhkhHttpsManager.h"
 #import "MBProgressHUD+Add.h"
 #import "ATQWechatModel.h"
+#import "ATQChaWechatViewController.h"
 @interface ATQMyWechatViewController ()<UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>{
     NSInteger b;
 }
@@ -99,6 +100,8 @@
         WechatView.frame = CGRectMake(0, 60, ScreenWidth, ScreenHeight);
         WechatView.searchblock = ^{
             NSLog(@"search");
+            ATQChaWechatViewController *vc = [[ATQChaWechatViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:NO];
         };
         WechatView.saveblock = ^{
             [weakself settingWechat];

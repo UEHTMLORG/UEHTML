@@ -12,6 +12,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ATQChaWechatViewController">
             <connections>
+                <outlet property="chakanBtn" destination="gwB-iQ-ul9" id="WHA-Lr-d52"/>
+                <outlet property="jineLab" destination="fkt-mO-8Sv" id="7Ve-JX-9HS"/>
+                <outlet property="renzhengBtn" destination="7Dg-lL-Hsa" id="aYO-j5-R6r"/>
+                <outlet property="renzhengLab" destination="bpf-d9-5r3" id="S91-zt-rof"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -60,25 +64,45 @@
                         <constraint firstItem="abV-sz-Bwi" firstAttribute="leading" secondItem="vHD-s0-Os1" secondAttribute="leading" constant="16" id="sun-Vv-P6i"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="您还没有进行押金认证" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpf-d9-5r3">
-                    <rect key="frame" x="49" y="136" width="187" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您还没有进行押金认证" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpf-d9-5r3">
+                    <rect key="frame" x="49" y="100" width="173.5" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="5Yb-wd-nhi"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Dg-lL-Hsa">
-                    <rect key="frame" x="233" y="131" width="92" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Dg-lL-Hsa">
+                    <rect key="frame" x="232.5" y="95.5" width="74" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="i2O-an-CTg"/>
+                    </constraints>
                     <state key="normal" title="押金认证">
                         <color key="titleColor" red="0.99305731060000002" green="0.45613801479999999" blue="0.73159998660000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <connections>
+                        <action selector="renzhengClick:" destination="-1" eventType="touchUpInside" id="PV2-yj-k2D"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwB-iQ-ul9">
+                    <rect key="frame" x="16" y="201" width="343" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.99305731060000002" green="0.45613801479999999" blue="0.73159998660000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="立即查看"/>
+                    <connections>
+                        <action selector="chakanClick:" destination="-1" eventType="touchUpInside" id="aFs-kP-v8p"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.92919379469999996" green="0.93333435060000003" blue="0.93734973669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="bpf-d9-5r3" firstAttribute="top" secondItem="vHD-s0-Os1" secondAttribute="bottom" constant="50" id="Cot-03-7EJ"/>
                 <constraint firstItem="vHD-s0-Os1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="E9f-FV-mJA"/>
+                <constraint firstItem="7Dg-lL-Hsa" firstAttribute="centerY" secondItem="bpf-d9-5r3" secondAttribute="centerY" id="bR0-Av-AB2"/>
+                <constraint firstItem="7Dg-lL-Hsa" firstAttribute="leading" secondItem="bpf-d9-5r3" secondAttribute="trailing" constant="10" id="idJ-dE-Ji7"/>
                 <constraint firstItem="vHD-s0-Os1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mD6-oM-EtR"/>
+                <constraint firstItem="bpf-d9-5r3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="49" id="ujX-cJ-a8E"/>
                 <constraint firstAttribute="trailing" secondItem="vHD-s0-Os1" secondAttribute="trailing" id="wHh-aN-Yeh"/>
             </constraints>
             <point key="canvasLocation" x="50.5" y="96.5"/>

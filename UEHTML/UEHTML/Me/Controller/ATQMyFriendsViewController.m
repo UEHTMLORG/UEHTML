@@ -235,6 +235,16 @@
     cell.userNameLab.text = model.nick_name;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
+    if ([self.selecttypeStr isEqualToString:@"select"]) {
+        if ([typeStr isEqualToString:@"1"]) {
+            cell.xuanzeBtn.hidden = NO;
+        }else{
+            cell.xuanzeBtn.hidden = YES;
+        }
+        
+    }else{
+        cell.xuanzeBtn.hidden = YES;
+    }
     return cell;
 }
 

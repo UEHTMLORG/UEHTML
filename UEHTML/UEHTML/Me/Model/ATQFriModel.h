@@ -12,5 +12,5 @@
 @property (nonatomic,copy)NSString *avatar;
 @property (nonatomic,copy)NSString *nick_name;
 @property (nonatomic,copy)NSString *user_id;
-
+@property (nonatomic) BOOL isSelected;
 @end

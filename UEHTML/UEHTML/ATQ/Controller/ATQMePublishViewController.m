@@ -26,8 +26,11 @@
 #import "ATQDTImageView.h"
 #import "ZJImageViewBrowser.h"
 #import "NSString+ZJ.h"
-@interface ATQMePublishViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate,MPMediaPickerControllerDelegate,UITextViewDelegate,UITableViewDelegate,UITableViewDataSource>{
+#import "ATQMyFriendsViewController.h"
+@interface ATQMePublishViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate,MPMediaPickerControllerDelegate,UITextViewDelegate,UITableViewDelegate,UITableViewDataSource,UIActionSheetDelegate>{
     float height;
+    NSString *selStr;
+    NSString *chakanStr;
 }
 @property (nonatomic,strong)UITableView *tableView;
 
@@ -186,6 +189,7 @@
                     cell.typeImg.image = [UIImage imageNamed:@"aotuquan-kejian"];
                     cell.typeTitleLab.text = @"谁可以看";
                     cell.subLab.hidden = NO;
+                    cell.subLab.text = chakanStr;
                 }else{
                     cell.typeImg.image = [UIImage imageNamed:@"aotuquan-"];
                     cell.typeTitleLab.text = @"提醒谁看";
@@ -217,6 +221,7 @@
             
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             cell.xuanZeTuPianBlock = ^(){//选择图片
+                selStr = @"image";
                 [KZPhotoManager getImage:^(UIImage *image) {
                     ATQMePublishPTableViewCell *cell  =[weakself.tableView cellForRowAtIndexPath:indexPath];
                     [cell.imgsArray insertObject:image atIndex:0];
@@ -263,6 +268,7 @@
                     cell.typeImg.image = [UIImage imageNamed:@"aotuquan-kejian"];
                     cell.typeTitleLab.text = @"谁可以看";
                     cell.subLab.hidden = NO;
+                    cell.subLab.text = chakanStr;
                 }else{
                     cell.typeImg.image = [UIImage imageNamed:@"aotuquan-"];
                     cell.typeTitleLab.text = @"提醒谁看";
@@ -272,6 +278,29 @@
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             return cell;
         }
+    }
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (self.typeStr != nil && [self.typeStr isEqualToString:@"2"]){
+        if (indexPath.section == 2) {
+            if (indexPath.row == 0) {
+                [self selectType];
+            }else{
+                ATQMyFriendsViewController *vc = [[ATQMyFriendsViewController alloc]init];
+                vc.selecttypeStr = @"select";
+                [self.navigationController pushViewController:vc animated:NO];
+            }
+        }
+    }else{
+        if (indexPath.section == 3) {
+            if (indexPath.row == 0) {
+                [self selectType];
+            }else{
+                ATQMyFriendsViewController *vc = [[ATQMyFriendsViewController alloc]init];
+                vc.selecttypeStr = @"select";
+                [self.navigationController pushViewController:vc animated:NO];
+            }        }
     }
 }
 
@@ -341,37 +370,56 @@
     
 }
 
+-(void)selectType{
+    selStr = @"chakan";
+    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:@"公开" otherButtonTitles:@"部分人可见",@"私密", nil];
+    [sheet showInView:self.view];
+}
 
 #pragma UIActionSheet delegate
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
-    NSInteger sourcetype = 0;
-    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-        switch (buttonIndex) {
-            case 2:
-                return;
-                break;
-            case 1:
-                sourcetype = UIImagePickerControllerSourceTypePhotoLibrary;
-                break;
-            case 0:
-                sourcetype = UIImagePickerControllerSourceTypeCamera;
-                break;
-            default:
-                break;
-        }
-    }else{
-        if (buttonIndex == 2) {
-            return;
+    if ([selStr isEqualToString:@"image"]) {
+        NSInteger sourcetype = 0;
+        if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+            switch (buttonIndex) {
+                case 2:
+                    return;
+                    break;
+                case 1:
+                    sourcetype = UIImagePickerControllerSourceTypePhotoLibrary;
+                    break;
+                case 0:
+                    sourcetype = UIImagePickerControllerSourceTypeCamera;
+                    break;
+                default:
+                    break;
+            }
         }else{
-            sourcetype = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+            if (buttonIndex == 2) {
+                return;
+            }else{
+                sourcetype = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+            }
         }
+        UIImagePickerController *imggePickerVc = [[UIImagePickerController alloc]init];
+        imggePickerVc.delegate = self;
+        //    imggePickerVc.allowsEditing = YES;
+        imggePickerVc.sourceType = sourcetype;
+        imggePickerVc.mediaTypes = @[(NSString *)kUTTypeMovie];
+        [self presentViewController:imggePickerVc animated:NO completion:nil];
+    }else if ([selStr isEqualToString:@"chakan"]){
+        if (buttonIndex == 0) {
+            chakanStr = @"公开";
+        }else if (buttonIndex == 1){
+            chakanStr = @"部分人可见";
+        }else if (buttonIndex == 2){
+            chakanStr = @"私密";
+        }else{
+            
+        }
+        [self.tableView reloadData];
     }
-    UIImagePickerController *imggePickerVc = [[UIImagePickerController alloc]init];
-    imggePickerVc.delegate = self;
-    //    imggePickerVc.allowsEditing = YES;
-    imggePickerVc.sourceType = sourcetype;
-    imggePickerVc.mediaTypes = @[(NSString *)kUTTypeMovie];
-    [self presentViewController:imggePickerVc animated:NO completion:nil];
+    
 }
 
 #pragma UIImagePickerController delegate

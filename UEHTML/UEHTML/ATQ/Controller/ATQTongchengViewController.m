@@ -19,33 +19,94 @@
 #import "ATQDTImageView.h"
 #import "ZJImageViewBrowser.h"
 #import "NSString+ZJ.h"
-@interface ATQTongchengViewController ()<UITableViewDataSource,UITableViewDelegate,ATQDTTableViewCellDelegate,UIScrollViewDelegate,UITextFieldDelegate>{
+
+#import "ChatKeyBoard.h"
+#import "FaceSourceManager.h"
+#import "MoreItem.h"
+#import "ChatToolBarItem.h"
+#import "FaceThemeModel.h"
+
+@interface ATQTongchengViewController ()<ChatKeyBoardDelegate, ChatKeyBoardDataSource,UITableViewDataSource,UITableViewDelegate,ATQDTTableViewCellDelegate,UIScrollViewDelegate,UITextFieldDelegate>{
     UITextField *text;
     UIView *Bview;
 }
 
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,strong)NSMutableArray *DTArr;
+@property (nonatomic, strong) ChatKeyBoard *chatKeyBoard;
+@property (nonatomic, assign) BOOL isShowKeyBoard;
 
 @end
 static NSInteger page = 1;
 @implementation ATQTongchengViewController
 
+- (NSArray<ChatToolBarItem *> *)chatKeyBoardToolbarItems
+{
+    ChatToolBarItem *item1 = [ChatToolBarItem barItemWithKind:kBarItemFace normal:@"face" high:@"face_HL" select:@"keyboard"];
+    return @[item1];
+}
+
+- (NSArray<FaceThemeModel *> *)chatKeyBoardFacePanelSubjectItems
+{
+    return [FaceSourceManager loadFaceSource];
+}
+-(ChatKeyBoard *)chatKeyBoard{
+    if (_chatKeyBoard==nil) {
+        _chatKeyBoard =[ChatKeyBoard keyBoardWithNavgationBarTranslucent:YES];
+        _chatKeyBoard.delegate = self;
+        _chatKeyBoard.dataSource = self;
+        _chatKeyBoard.keyBoardStyle = KeyBoardStyleComment;
+        _chatKeyBoard.allowVoice = NO;
+        _chatKeyBoard.allowMore = NO;
+        _chatKeyBoard.allowSwitchBar = NO;
+        _chatKeyBoard.placeHolder = @"评论";
+        [self.view addSubview:_chatKeyBoard];
+        [self.view bringSubviewToFront:_chatKeyBoard];
+    }
+    return _chatKeyBoard;
+}
+
+- (void)chatKeyBoardSendText:(NSString *)text{
+
+    [self.chatKeyBoard keyboardDownForComment];
+    self.chatKeyBoard.placeHolder = nil;
+    
+}
+- (void)chatKeyBoardFacePicked:(ChatKeyBoard *)chatKeyBoard faceStyle:(NSInteger)faceStyle faceName:(NSString *)faceName delete:(BOOL)isDeleteKey{
+    NSLog(@"%@",faceName);
+}
+- (void)chatKeyBoardAddFaceSubject:(ChatKeyBoard *)chatKeyBoard{
+    NSLog(@"%@",chatKeyBoard);
+}
+- (void)chatKeyBoardSetFaceSubject:(ChatKeyBoard *)chatKeyBoard{
+    NSLog(@"%@",chatKeyBoard);
+    
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //注册键盘出现NSNotification
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillShow:)
+                                                 name:UIKeyboardWillShowNotification object:nil];
+    //注册键盘隐藏NSNotification
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillHide:)
+                                                 name:UIKeyboardWillHideNotification object:nil];
     [self setTableView];
-    Bview = [[UIView alloc] initWithFrame:CGRectZero];
-    Bview.backgroundColor = [UIColor yellowColor];
-    [self.view addSubview:Bview];
-    text = [[UITextField alloc] initWithFrame:CGRectMake(40, 10, 200, 30)];
-    text.placeholder = @"回复。。。";
-    text.delegate = self;
-    [Bview addSubview:text];
-    [Bview mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.height.offset(50);
-        make.left.right.equalTo(self.view);
-        make.bottom.equalTo(self.view).offset(-49);
-    }];
+//    Bview = [[UIView alloc] initWithFrame:CGRectZero];
+//    Bview.backgroundColor = [UIColor yellowColor];
+//    [self.view addSubview:Bview];
+//    text = [[UITextField alloc] initWithFrame:CGRectMake(40, 10, 200, 30)];
+//    text.placeholder = @"回复。。。";
+//    text.delegate = self;
+//    [Bview addSubview:text];
+//    [Bview mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.height.offset(50);
+//        make.left.right.equalTo(self.view);
+//        make.bottom.equalTo(self.view).offset(-49);
+//    }];
 }
 
 -(void)loadData{
@@ -273,26 +334,26 @@ static NSInteger page = 1;
 
 #pragma mark -- 评论
 -(void)didClickCommentWithIndexPath:(NSIndexPath *)indexPath{
-    
+    [self.chatKeyBoard keyboardUpforComment];
 }
 
--(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+//-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
 //    self.tabBarController.tabBar.hidden = YES;
-}
+//}
 
--(void)textFieldDidBeginEditing:(UITextField *)textField{
-    NSLog(@"--------");
-    Bview.frame = CGRectMake(0, ScreenHeight-450, ScreenWidth, 50);
-    [UIView animateWithDuration:0.5 animations:^{
+//-(void)textFieldDidBeginEditing:(UITextField *)textField{
+//    NSLog(@"--------");
+//    Bview.frame = CGRectMake(0, ScreenHeight-450, ScreenWidth, 50);
+//    [UIView animateWithDuration:0.5 animations:^{
 //        if (keyboardSize.height == 292.0 || keyboardSize.height == 282.0) {
 //            // 适配搜狗输入法 分别在6p  6/5s 高度
 //            self.y = SCREEN_HEIGHT - keyboardSize.height - ConvertTo6_H(316)*CT_SCALE_Y + 26.0;
 //        }else{
 //            self.y = SCREEN_HEIGHT - keyboardSize.height - ConvertTo6_H(316)*CT_SCALE_Y ;
 //        }
-        Bview.frame = CGRectMake(0, ScreenHeight-305, ScreenWidth, 50);
-    }];
-}
+//        Bview.frame = CGRectMake(0, ScreenHeight-305, ScreenWidth, 50);
+//    }];
+//}
 
 -(void)songHuaClick:(NSString*)cid{
     NSMutableDictionary *params = [NSMutableDictionary  dictionary];
@@ -342,6 +403,50 @@ static NSInteger page = 1;
         _DTArr = [NSMutableArray array];
     }
     return _DTArr;
+}
+
+#pragma mark keyboardWillShow
+- (void)keyboardWillShow:(NSNotification *)notification
+{
+    self.isShowKeyBoard = YES;
+    NSDictionary *userInfo = [notification userInfo];
+    NSValue* aValue = [userInfo objectForKey:UIKeyboardFrameEndUserInfoKey];
+    __block  CGFloat keyboardHeight = [aValue CGRectValue].size.height;
+    if (keyboardHeight==0) {
+        //解决搜狗输入法三次调用此方法的bug、
+        //        IOS8.0之后可以安装第三方键盘，如搜狗输入法之类的。
+        //        获得的高度都为0.这是因为键盘弹出的方法:- (void)keyBoardWillShow:(NSNotification *)notification需要执行三次,你如果打印一下,你会发现键盘高度为:第一次:0;第二次:216:第三次:282.并不是获取不到高度,而是第三次才获取真正的高度.
+        return;
+    }
+    CGRect keyboardRect = [aValue CGRectValue];
+    keyboardRect = [self.view convertRect:keyboardRect fromView:nil];
+    CGFloat keyboardTop = keyboardRect.origin.y;
+    CGRect newTextViewFrame = self.view.bounds;
+    newTextViewFrame.size.height = keyboardTop - self.view.bounds.origin.y;
+    
+    NSValue *animationDurationValue = [userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey];
+    NSTimeInterval animationDuration;
+    [animationDurationValue getValue:&animationDuration];
+    CGFloat delta = 0.0;
+//    if (self.seletedCellHeight){//点击某行row，进行回复某人
+//        delta = self.history_Y_offset - ([UIApplication sharedApplication].keyWindow.bounds.size.height - keyboardHeight-self.seletedCellHeight-kChatToolBarHeight-2);
+//    }else{//点击评论按钮
+//        delta = self.history_Y_offset - ([UIApplication sharedApplication].keyWindow.bounds.size.height - keyboardHeight-kChatToolBarHeight-24-10);//24为评论按钮高度，10为评论按钮上部的5加评论按钮下部的5
+//    }
+//    CGPoint offset = self.tableView.contentOffset;
+//    offset.y += delta;
+//    if (offset.y < 0) {
+//        offset.y = 0;
+//    }
+//    if (self.needUpdateOffset) {
+//        [self.tableView setContentOffset:offset animated:YES];
+//    }
+}
+#pragma mark
+#pragma mark keyboardWillHide
+- (void)keyboardWillHide:(NSNotification *)notification {
+//    self.isShowKeyBoard = NO;
+//    self.needUpdateOffset = NO;
 }
 
 -(void)dealloc

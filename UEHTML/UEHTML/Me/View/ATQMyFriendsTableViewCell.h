@@ -11,5 +11,6 @@
 @interface ATQMyFriendsTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *userImg;
 @property (weak, nonatomic) IBOutlet UILabel *userNameLab;
+@property (weak, nonatomic) IBOutlet UIButton *xuanzeBtn;
 
 @end

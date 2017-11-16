@@ -9,5 +9,5 @@
 #import "ATQBaseViewController.h"
 
 @interface ATQMyFriendsViewController : ATQBaseViewController
-
+@property(copy,nonatomic)NSString *selecttypeStr;
 @end

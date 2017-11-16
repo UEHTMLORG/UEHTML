@@ -3398,15 +3398,15 @@
 				40FEA5CC1F73B41E00D6EB89 /* ATQRecommendViewController.m */,
 				40FEA5CE1F73B46700D6EB89 /* ATQVideoChatViewController.h */,
 				40FEA5CF1F73B46700D6EB89 /* ATQVideoChatViewController.m */,
-				40DF4F751F81F81700EE6753 /* ATQTypeListViewController.h */,
-				40DF4F761F81F81700EE6753 /* ATQTypeListViewController.m */,
-				40DF4F7A1F82102400EE6753 /* ATQTypeListViewController.xib */,
-				40DF4F841F825D0600EE6753 /* ATQTypePeoDetailViewController.h */,
-				40DF4F851F825D0600EE6753 /* ATQTypePeoDetailViewController.m */,
-				40DF4F861F825D0600EE6753 /* ATQTypePeoDetailViewController.xib */,
 				40F9EAD01F8B779E005B8EDE /* ATQJZTypeListViewController.h */,
 				40F9EAD11F8B779E005B8EDE /* ATQJZTypeListViewController.m */,
 				40F9EAD21F8B779E005B8EDE /* ATQJZTypeListViewController.xib */,
+				40DF4F841F825D0600EE6753 /* ATQTypePeoDetailViewController.h */,
+				40DF4F851F825D0600EE6753 /* ATQTypePeoDetailViewController.m */,
+				40DF4F861F825D0600EE6753 /* ATQTypePeoDetailViewController.xib */,
+				40DF4F751F81F81700EE6753 /* ATQTypeListViewController.h */,
+				40DF4F761F81F81700EE6753 /* ATQTypeListViewController.m */,
+				40DF4F7A1F82102400EE6753 /* ATQTypeListViewController.xib */,
 				4061BD991F8CB53B00F6EC30 /* ATQTypeListInviteDetailViewController.h */,
 				4061BD9A1F8CB53B00F6EC30 /* ATQTypeListInviteDetailViewController.m */,
 				4061BD9B1F8CB53B00F6EC30 /* ATQTypeListInviteDetailViewController.xib */,
@@ -4998,6 +4998,7 @@
 				TargetAttributes = {
 					409E6D801F5003DA00E3BE49 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 3GRH7F5C35;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -6036,7 +6037,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = UEHTML/UEHTML.entitlements;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 3GRH7F5C35;
 				ENABLE_BITCODE = NO;
 				ENABLE_ONLY_ACTIVE_RESOURCES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -6063,7 +6064,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = UEHTML/UEHTML.entitlements;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 3GRH7F5C35;
 				ENABLE_BITCODE = NO;
 				ENABLE_ONLY_ACTIVE_RESOURCES = YES;
 				FRAMEWORK_SEARCH_PATHS = (

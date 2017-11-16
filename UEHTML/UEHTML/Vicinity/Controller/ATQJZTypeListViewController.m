@@ -267,6 +267,8 @@ static NSInteger page = 1;
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     ATQTypePeoDetailViewController *vc = [[ATQTypePeoDetailViewController alloc] init];
+    ATQHomeItemListModel *model = self.jobListArr[indexPath.section];
+    vc.jobID = model.ID;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

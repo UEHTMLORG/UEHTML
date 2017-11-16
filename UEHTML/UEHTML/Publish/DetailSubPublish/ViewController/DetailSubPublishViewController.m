@@ -12,6 +12,7 @@
     
     /** 当前Model的相册图片数组 */
     NSMutableArray * _albumImageArray;
+    AVPlayer * _avPlayer;
 }
 
 @end
@@ -32,7 +33,7 @@
     }
     
     /** 开始请求数据并绑定数据 */
-    self.viewModel =  [DetailSubPublishViewModel shareInstance];
+    self.viewModel = [DetailSubPublishViewModel shareInstance];
     __weak typeof(self) weakself = self;
     [self.viewModel startAFNetWorkingGetListWithJobID:self.jobId resultSuccessBlock:^(BOOL success, DetailSubPublishModel *model) {
         weakself.currentModel = model;
@@ -54,7 +55,7 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 7;
+    return 6 + self.currentModel.evaluate_list.count;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     switch (indexPath.row) {
@@ -89,121 +90,113 @@
             return 30.0f;
         }
             break;
-        case 6:{
-            return 83.0f;
+        default:{
+            CGFloat curHeight = 0;
+            EvaluateMTLModel * evaModel = self.currentModel.evaluate_list[indexPath.row-6];
+            if ([self textHeight:evaModel.content] < 20.0) {
+                curHeight = 20.0;
+            }
+            else{
+                curHeight = [self textHeight:evaModel.content];
+            }
+            return 30.0 + 10.0 + curHeight;
         }
-            break;
-        default:
-            return 40.0f;
             break;
     }
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    switch (indexPath.row) {
-        case 0:{
-            static NSString * rid = @"DetailXuQiuFirstCellID";
-            DetailSubPublishCell * cell = [tableView dequeueReusableCellWithIdentifier:rid];
-            if (cell == nil) {
-                cell = [[NSBundle mainBundle] loadNibNamed:@"DetailSubPublishCell" owner:self options:nil][0];
-            }
-            [cell.leftBackButton addTarget:self action:@selector(leftBackButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-            [cell.shouCangButton addTarget:self action:@selector(shouCangButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-            [cell.guanZhuButton addTarget:self action:@selector(guanZhuButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-            [cell.homeButton addTarget:self action:@selector(homeButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-            [cell.rightButton addTarget:self action:@selector(rightButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-            /** 相册 */
-            if (self.currentModel.album_list.count > 0) {
-                _albumImageArray = [NSMutableArray new];
-                AlbumMTLModel * firstAlbumModel = self.currentModel.album_list[0];
-                [cell.backgroundImageView sd_setImageWithURL:[NSURL URLWithString:firstAlbumModel.picture] placeholderImage:[UIImage imageNamed:DEFAULT_BACKGROUND_IMAGE]];
-                /** 添加手势 */
-                UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapHeadAction:)];
-                [tap setNumberOfTapsRequired:1];
-                [cell.backgroundImageView addGestureRecognizer:tap];
-                
-                for (AlbumMTLModel * aModel in self.currentModel.album_list) {
-                    UIImageView * imageView = [[UIImageView alloc]init];
-                    [imageView sd_setImageWithURL:[NSURL URLWithString:aModel.picture] placeholderImage:[UIImage imageNamed:DEFAULT_BACKGROUND_IMAGE]];
-                    [_albumImageArray addObject:imageView];
-                }
-            }
-            /** 相册 结束 */
-            cell.juliLabel.text = [NSString stringWithFormat:@"%@km",self.currentModel.distance];
-            cell.ageLabel.text = [NSString stringWithFormat:@"%@  %@  %@",self.currentModel.user_profile.age,self.currentModel.user_profile.height,self.currentModel.user_profile.weight];
-
-            return cell;
+    if (indexPath.row == 0) {
+        static NSString * rid = @"DetailXuQiuFirstCellID";
+        DetailSubPublishCell * cell = [tableView dequeueReusableCellWithIdentifier:rid];
+        if (cell == nil) {
+            cell = [[NSBundle mainBundle] loadNibNamed:@"DetailSubPublishCell" owner:self options:nil][0];
         }
-            break;
-        case 1:{
-            static NSString * rid = @"DetailXuQiuSecondCellID";
-            DetailSubPublishSecondCell * cell = [tableView dequeueReusableCellWithIdentifier:rid];
-            if (cell == nil) {
-                cell = [[NSBundle mainBundle] loadNibNamed:@"DetailSubPublishCell" owner:self options:nil][1];
+        [cell.leftBackButton addTarget:self action:@selector(leftBackButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+        [cell.shouCangButton addTarget:self action:@selector(shouCangButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+        [cell.guanZhuButton addTarget:self action:@selector(guanZhuButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+        [cell.homeButton addTarget:self action:@selector(homeButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+        [cell.rightButton addTarget:self action:@selector(rightButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+        /** 相册 */
+        if (self.currentModel.album_list.count > 0) {
+            _albumImageArray = [NSMutableArray new];
+            AlbumMTLModel * firstAlbumModel = self.currentModel.album_list[0];
+            [cell.backgroundImageView sd_setImageWithURL:[NSURL URLWithString:firstAlbumModel.picture] placeholderImage:[UIImage imageNamed:DEFAULT_BACKGROUND_IMAGE]];
+            /** 添加手势 */
+            UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapHeadAction:)];
+            [tap setNumberOfTapsRequired:1];
+            [cell.backgroundImageView addGestureRecognizer:tap];
+            
+            for (AlbumMTLModel * aModel in self.currentModel.album_list) {
+                UIImageView * imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, cell.frame.size.width, cell.frame.size.height)];
+                [imageView sd_setImageWithURL:[NSURL URLWithString:aModel.picture] placeholderImage:[UIImage imageNamed:DEFAULT_BACKGROUND_IMAGE]];
+                [_albumImageArray addObject:imageView];
             }
-            [cell.chaKanWeiXinButton addTarget:self action:@selector(chaKanButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-            cell.chengLabel.text = self.currentModel.user_profile.credit_num;
-            [cell.voiceButton addTarget:self action:@selector(voiceButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-            cell.priceLabel.text = [NSString stringWithFormat:@"%@ 元/小时 %@小时起",self.currentModel.job.price,self.currentModel.job.service_hourse];
-            
-            
-            return cell;
         }
-            break;
-        case 2:{
-            static NSString * rid = @"DetailXuQiuThirdCellID";
-            DetailSubPublishThirdCell * cell = [tableView dequeueReusableCellWithIdentifier:rid];
-            if (cell == nil) {
-                cell = [[NSBundle mainBundle] loadNibNamed:@"DetailSubPublishCell" owner:self options:nil][2];
-            }
-            cell.contentLabel.text = self.currentModel.job.introduce;
-            return cell;
+        /** 相册 结束 */
+        cell.juliLabel.text = [NSString stringWithFormat:@"%@km",self.currentModel.distance];
+        cell.ageLabel.text = [NSString stringWithFormat:@"%@  %@  %@",self.currentModel.user_profile.age,self.currentModel.user_profile.height,self.currentModel.user_profile.weight];
+        
+        return cell;
+    }else if(indexPath.row == 1){
+        static NSString * rid = @"DetailXuQiuSecondCellID";
+        DetailSubPublishSecondCell * cell = [tableView dequeueReusableCellWithIdentifier:rid];
+        if (cell == nil) {
+            cell = [[NSBundle mainBundle] loadNibNamed:@"DetailSubPublishCell" owner:self options:nil][1];
         }
-            break;
-        case 3:{
-            static NSString * rid = @"DetailXuQiuFourCellID";
-            DetailSubPublishFourCell * cell = [tableView dequeueReusableCellWithIdentifier:rid];
-            if (cell == nil) {
-                cell = [[NSBundle mainBundle] loadNibNamed:@"DetailSubPublishCell" owner:self options:nil][3];
-            }
-            
-            return cell;
+        [cell.chaKanWeiXinButton addTarget:self action:@selector(chaKanButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+        cell.chengLabel.text = self.currentModel.user_profile.credit_num;
+        [cell.voiceButton addTarget:self action:@selector(voiceButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+        cell.priceLabel.text = [NSString stringWithFormat:@"%@ 元/小时 %@小时起",self.currentModel.job.price,self.currentModel.job.service_hourse];
+        
+        
+        return cell;
+    }else if(indexPath.row == 2){
+        static NSString * rid = @"DetailXuQiuThirdCellID";
+        DetailSubPublishThirdCell * cell = [tableView dequeueReusableCellWithIdentifier:rid];
+        if (cell == nil) {
+            cell = [[NSBundle mainBundle] loadNibNamed:@"DetailSubPublishCell" owner:self options:nil][2];
         }
-            break;
-        case 4:{
-            static NSString * rid = @"DetailXuQiuFiveCellID";
-            DetailSubPublishFiveCell * cell = [tableView dequeueReusableCellWithIdentifier:rid];
-            if (cell == nil) {
-                cell = [[NSBundle mainBundle] loadNibNamed:@"DetailSubPublishCell" owner:self options:nil][4];
-            }
-            
-            return cell;
+        cell.contentLabel.text = self.currentModel.job.introduce;
+        return cell;
+    }
+    else if(indexPath.row == 3){
+        static NSString * rid = @"DetailXuQiuFourCellID";
+        DetailSubPublishFourCell * cell = [tableView dequeueReusableCellWithIdentifier:rid];
+        if (cell == nil) {
+            cell = [[NSBundle mainBundle] loadNibNamed:@"DetailSubPublishCell" owner:self options:nil][3];
         }
-            break;
-        case 5:{
-            static NSString * rid = @"DetailXuQiuSixCellID";
-            DetailSubPublishSixCell * cell = [tableView dequeueReusableCellWithIdentifier:rid];
-            if (cell == nil) {
-                cell = [[NSBundle mainBundle] loadNibNamed:@"DetailSubPublishCell" owner:self options:nil][5];
-            }
-            
-            return cell;
+        
+        return cell;
+    }
+    else if(indexPath.row == 4){
+        static NSString * rid = @"DetailXuQiuFiveCellID";
+        DetailSubPublishFiveCell * cell = [tableView dequeueReusableCellWithIdentifier:rid];
+        if (cell == nil) {
+            cell = [[NSBundle mainBundle] loadNibNamed:@"DetailSubPublishCell" owner:self options:nil][4];
         }
-            break;
-        case 6:{
-            static NSString * rid = @"DetailXuQiuSevenCellID";
-            DetailSubPublishSevenCell * cell = [tableView dequeueReusableCellWithIdentifier:rid];
-            if (cell == nil) {
-                cell = [[NSBundle mainBundle] loadNibNamed:@"DetailSubPublishCell" owner:self options:nil][6];
-            }
-            
-            
-            
-            return cell;
+        
+        return cell;
+    }
+    else if(indexPath.row == 5){
+        static NSString * rid = @"DetailXuQiuSixCellID";
+        DetailSubPublishSixCell * cell = [tableView dequeueReusableCellWithIdentifier:rid];
+        if (cell == nil) {
+            cell = [[NSBundle mainBundle] loadNibNamed:@"DetailSubPublishCell" owner:self options:nil][5];
         }
-            break;
-        default:
-            return nil;
-            break;
+        
+        return cell;
+    }
+    else{
+        static NSString * rid = @"DetailXuQiuSevenCellID";
+        DetailSubPublishSevenCell * cell = [tableView dequeueReusableCellWithIdentifier:rid];
+        if (cell == nil) {
+            cell = [[NSBundle mainBundle] loadNibNamed:@"DetailSubPublishCell" owner:self options:nil][6];
+        }
+        EvaluateMTLModel * evaModel = self.currentModel.evaluate_list[indexPath.row - 6];
+        cell.contentLabel.text = evaModel.content;
+        [cell.avatarImage sd_setImageWithURL:[NSURL URLWithString:evaModel.avatar] placeholderImage:[UIImage imageNamed:DEFAULT_HEADIMAGE]];
+        cell.nickNameLabel.text = evaModel.nick_name;
+        return cell;
     }
 }
 #pragma mark ===================关于TableView的所有方法 END==================
@@ -243,7 +236,12 @@
 }
 - (void)voiceButtonAction:(UIButton *)sender{
     NSLog(@"点击了播放声音按钮");
-    
+    //创建URL
+    //http://218.76.27.57:8080/chinaschool_rs02/135275/153903/160861/160867/1370744550357.mp3
+    NSURL *url = [NSURL URLWithString:self.currentModel.job.voice];
+    //创建播放器
+    _avPlayer = [[AVPlayer alloc] initWithURL:url];
+    [_avPlayer play];
 }
 #pragma mark ===================底部按钮执行方法 START==================
 

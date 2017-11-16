@@ -11,6 +11,7 @@
 #import "DetailXuQiuViewCellTableViewCell.h"
 #import "DetailSubPublishViewModel.h"
 #import "ZJImageViewBrowser.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface DetailSubPublishViewController : ATQBaseViewController<UITableViewDelegate,UITableViewDataSource>
 

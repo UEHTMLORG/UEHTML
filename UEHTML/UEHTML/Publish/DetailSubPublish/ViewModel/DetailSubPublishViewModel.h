@@ -13,7 +13,7 @@
 
 @property (nonatomic, strong) DetailSubPublishModel *currentModel;
 /** 单例创建对象 */
-+ (DetailSubPublishModel *)shareInstance;
++ (DetailSubPublishViewModel *)shareInstance;
 /** 请求网络数据 */
 - (void)startAFNetWorkingGetListWithJobID:(NSString *)jobId resultSuccessBlock:(void (^)(BOOL success,DetailSubPublishModel * model))successBlock withFailBlock:(void (^)(NSError * error)) failBlock;
 

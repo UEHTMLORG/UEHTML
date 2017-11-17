@@ -116,7 +116,8 @@
              @"price":@"price",
              @"service_hourse":@"service_hourse",
              @"introduce":@"introduce",
-             @"voice":@"voice"
+             @"voice":@"voice",
+             @"job_class_name":@"job_class_name"
              };
     
 }

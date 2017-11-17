@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LiWuPublishCollectionViewCell.h"
+#import "SkillPublishCollectionViewCell.h"
+#import "DetailSubPublishModel.h"
 
 @interface DetailSubPublishCell : UITableViewCell
 
@@ -47,22 +50,25 @@
 
 @end
 
-@interface DetailSubPublishFourCell : UITableViewCell
+@interface DetailSubPublishFourCell : UITableViewCell<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
 @property (strong, nonatomic) IBOutlet UIImageView *leftImage;
 @property (strong, nonatomic) IBOutlet UILabel *titleNameLabel;
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (nonatomic, strong) NSArray *liWuArray;
 
-
+- (void)bindDataWithModel:(DetailSubPublishModel *)model;
 
 @end
 
-@interface DetailSubPublishFiveCell : UITableViewCell
+@interface DetailSubPublishFiveCell : UITableViewCell<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
 @property (strong, nonatomic) IBOutlet UIImageView *leftImage;
 @property (strong, nonatomic) IBOutlet UILabel *titleNameLabel;
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (nonatomic, strong) NSArray *skillArray;
 
+- (void)bindDataWithModel:(DetailSubPublishModel *)model;
 
 
 @end

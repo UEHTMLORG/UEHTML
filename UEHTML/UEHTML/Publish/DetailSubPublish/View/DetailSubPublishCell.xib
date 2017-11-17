@@ -232,7 +232,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="服务类型" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edN-Ya-ISZ">
-                                <rect key="frame" x="47" y="8" width="70" height="21"/>
+                                <rect key="frame" x="44" y="8" width="70" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -305,7 +305,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="陪同说明" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1a-co-VqQ">
-                                <rect key="frame" x="43" y="5" width="70" height="21"/>
+                                <rect key="frame" x="45" y="5" width="70" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -324,7 +324,7 @@
                             <constraint firstItem="Qzv-2l-KW0" firstAttribute="centerY" secondItem="H4r-mD-IRa" secondAttribute="centerY" id="h3I-6A-OWe"/>
                             <constraint firstItem="d1a-co-VqQ" firstAttribute="centerY" secondItem="Qzv-2l-KW0" secondAttribute="centerY" id="lDw-Rp-LmC"/>
                             <constraint firstItem="Qzv-2l-KW0" firstAttribute="leading" secondItem="H4r-mD-IRa" secondAttribute="leading" constant="20" id="rtw-Xv-Yhg"/>
-                            <constraint firstItem="d1a-co-VqQ" firstAttribute="leading" secondItem="Qzv-2l-KW0" secondAttribute="trailing" constant="3" id="sz2-Pl-wx2"/>
+                            <constraint firstItem="d1a-co-VqQ" firstAttribute="leading" secondItem="Qzv-2l-KW0" secondAttribute="trailing" constant="5" id="sz2-Pl-wx2"/>
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手法柔软，全身进行按摩，能够消除疲劳，缓解紧张，数落筋骨，束身提神，经过按摩，可使人感觉全身轻松" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GsS-7A-Hhc">

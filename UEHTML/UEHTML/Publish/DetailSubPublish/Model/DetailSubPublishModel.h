@@ -23,6 +23,7 @@
 @property (nonatomic, strong) NSArray<EvaluateMTLModel *> *evaluate_list;
 @property (nonatomic, copy) NSString *distance;
 @property (nonatomic, strong) JobInfoMTLModel *job;
+
 @end
 /** 相册模型 */
 @interface AlbumMTLModel : MTLModel<MTLJSONSerializing>
@@ -73,5 +74,6 @@
 @property (nonatomic, copy) NSString *service_hourse;
 @property (nonatomic, copy) NSString *introduce;
 @property (nonatomic, copy) NSString *voice;
+@property (nonatomic, copy) NSString *job_class_name;
 
 @end

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180C18381FBF201C00BF4810 /* LiWuPublishCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 180C18361FBF201C00BF4810 /* LiWuPublishCollectionViewCell.m */; };
+		180C18391FBF201C00BF4810 /* LiWuPublishCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180C18371FBF201C00BF4810 /* LiWuPublishCollectionViewCell.xib */; };
+		180C183D1FBF206600BF4810 /* SkillPublishCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 180C183B1FBF206600BF4810 /* SkillPublishCollectionViewCell.m */; };
+		180C183E1FBF206600BF4810 /* SkillPublishCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180C183C1FBF206600BF4810 /* SkillPublishCollectionViewCell.xib */; };
 		183D18F21F9053A00093A982 /* JianZhiChuFaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183D18F01F9053A00093A982 /* JianZhiChuFaViewController.m */; };
 		183D18F31F9053A00093A982 /* JianZhiChuFaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183D18F11F9053A00093A982 /* JianZhiChuFaViewController.xib */; };
 		183D18F71F90570D0093A982 /* JianZhiChuFaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 183D18F51F90570D0093A982 /* JianZhiChuFaTableViewCell.m */; };
@@ -792,6 +796,12 @@
 /* Begin PBXFileReference section */
 		01FD494EE7C5F40277EC06F8 /* libPods-UEHTML.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UEHTML.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		142FBB3363225B85BA8CC82E /* Pods-UEHTML.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UEHTML.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UEHTML/Pods-UEHTML.debug.xcconfig"; sourceTree = "<group>"; };
+		180C18351FBF201C00BF4810 /* LiWuPublishCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiWuPublishCollectionViewCell.h; sourceTree = "<group>"; };
+		180C18361FBF201C00BF4810 /* LiWuPublishCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiWuPublishCollectionViewCell.m; sourceTree = "<group>"; };
+		180C18371FBF201C00BF4810 /* LiWuPublishCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiWuPublishCollectionViewCell.xib; sourceTree = "<group>"; };
+		180C183A1FBF206500BF4810 /* SkillPublishCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SkillPublishCollectionViewCell.h; sourceTree = "<group>"; };
+		180C183B1FBF206600BF4810 /* SkillPublishCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SkillPublishCollectionViewCell.m; sourceTree = "<group>"; };
+		180C183C1FBF206600BF4810 /* SkillPublishCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkillPublishCollectionViewCell.xib; sourceTree = "<group>"; };
 		183D18EF1F9053A00093A982 /* JianZhiChuFaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JianZhiChuFaViewController.h; sourceTree = "<group>"; };
 		183D18F01F9053A00093A982 /* JianZhiChuFaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JianZhiChuFaViewController.m; sourceTree = "<group>"; };
 		183D18F11F9053A00093A982 /* JianZhiChuFaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JianZhiChuFaViewController.xib; sourceTree = "<group>"; };
@@ -2654,6 +2664,12 @@
 				18B2D89F1FB3FD0400C59550 /* DetailXuQiuViewCellTableViewCell.h */,
 				18B2D8A01FB3FD0400C59550 /* DetailXuQiuViewCellTableViewCell.m */,
 				18B2D8A11FB3FD0400C59550 /* DetailXuQiuViewCellTableViewCell.xib */,
+				180C18351FBF201C00BF4810 /* LiWuPublishCollectionViewCell.h */,
+				180C18361FBF201C00BF4810 /* LiWuPublishCollectionViewCell.m */,
+				180C18371FBF201C00BF4810 /* LiWuPublishCollectionViewCell.xib */,
+				180C183A1FBF206500BF4810 /* SkillPublishCollectionViewCell.h */,
+				180C183B1FBF206600BF4810 /* SkillPublishCollectionViewCell.m */,
+				180C183C1FBF206600BF4810 /* SkillPublishCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -5208,6 +5224,7 @@
 				40F5E5FB1F91AFAC0077A574 /* f_static_085@2x.png in Resources */,
 				40F5E5B11F91AFAC0077A574 /* f_static_048@2x.png in Resources */,
 				40F5E5591F91AFAC0077A574 /* f_static_004@3x.png in Resources */,
+				180C18391FBF201C00BF4810 /* LiWuPublishCollectionViewCell.xib in Resources */,
 				4024D66A1F7E3D4E006E56C1 /* ATQEditPhotoViewController.xib in Resources */,
 				40509BC11FB9DD0800F68438 /* ATQShaixuanView.xib in Resources */,
 				4067AEA71F98A54900553458 /* ATQMyAlumbSCFTableViewCell.xib in Resources */,
@@ -5412,6 +5429,7 @@
 				40F9F22A1F7A30BE00F5A42B /* ATQWechatTableViewCell.xib in Resources */,
 				40F5E5971F91AFAC0077A574 /* f_static_035@2x.png in Resources */,
 				40F5E5721F91AFAC0077A574 /* f_static_016@3x.png in Resources */,
+				180C183E1FBF206600BF4810 /* SkillPublishCollectionViewCell.xib in Resources */,
 				185D786C1F8DF13900DA8849 /* Loading0019.png in Resources */,
 				40F5E5A21F91AFAC0077A574 /* f_static_040@3x.png in Resources */,
 				40F5E6111F91AFAC0077A574 /* f_static_096@2x.png in Resources */,
@@ -5772,6 +5790,7 @@
 				40E0F24D1F78D0400074B064 /* ATQSZFirTableViewCell.m in Sources */,
 				40EA93541F7BBC4D005A0E50 /* PNLineChartDataItem.m in Sources */,
 				18D93D8D1F96E9CB00D18418 /* JianZhiTouSuCollectionViewCell.m in Sources */,
+				180C18381FBF201C00BF4810 /* LiWuPublishCollectionViewCell.m in Sources */,
 				40F5E3731F91A3820077A574 /* NSString+MLLabel.m in Sources */,
 				4027D80F1F79409900B45C8E /* ATQVisitorTableViewCell.m in Sources */,
 				18E9BD5B1FB8764D00B93365 /* DetailXuQiuViewModel.m in Sources */,
@@ -5795,6 +5814,7 @@
 				40260D1F1F71FEF400ED8CF1 /* ATQPerfectInfoViewController.m in Sources */,
 				40EA93521F7BBC4D005A0E50 /* PNLineChart.m in Sources */,
 				4067AE9D1F987C0300553458 /* ATQMeModel.m in Sources */,
+				180C183D1FBF206600BF4810 /* SkillPublishCollectionViewCell.m in Sources */,
 				4061BDA11F8CBED600F6EC30 /* ATQMyFriendsViewController.m in Sources */,
 				185D789C1F8DF13A00DA8849 /* UIView+HeinQi.m in Sources */,
 				40236C551F7B9499004AE37B /* ATQUserInfoViewController.m in Sources */,

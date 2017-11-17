@@ -133,9 +133,9 @@
             }
         }
         /** 相册 结束 */
-        cell.juliLabel.text = [NSString stringWithFormat:@"%@km",self.currentModel.distance];
+        cell.juliLabel.text = [NSString stringWithFormat:@"%@",self.currentModel.distance];
         cell.ageLabel.text = [NSString stringWithFormat:@"%@  %@  %@",self.currentModel.user_profile.age,self.currentModel.user_profile.height,self.currentModel.user_profile.weight];
-        
+        cell.nickNameLabel.text = self.currentModel.user_profile.nick_name;
         return cell;
     }else if(indexPath.row == 1){
         static NSString * rid = @"DetailXuQiuSecondCellID";
@@ -147,7 +147,7 @@
         cell.chengLabel.text = self.currentModel.user_profile.credit_num;
         [cell.voiceButton addTarget:self action:@selector(voiceButtonAction:) forControlEvents:UIControlEventTouchUpInside];
         cell.priceLabel.text = [NSString stringWithFormat:@"%@ 元/小时 %@小时起",self.currentModel.job.price,self.currentModel.job.service_hourse];
-        
+        cell.jobNameLabel.text = self.currentModel.job.job_class_name;
         
         return cell;
     }else if(indexPath.row == 2){
@@ -165,7 +165,7 @@
         if (cell == nil) {
             cell = [[NSBundle mainBundle] loadNibNamed:@"DetailSubPublishCell" owner:self options:nil][3];
         }
-        
+        [cell bindDataWithModel:self.currentModel];
         return cell;
     }
     else if(indexPath.row == 4){
@@ -174,7 +174,7 @@
         if (cell == nil) {
             cell = [[NSBundle mainBundle] loadNibNamed:@"DetailSubPublishCell" owner:self options:nil][4];
         }
-        
+        [cell bindDataWithModel:self.currentModel];
         return cell;
     }
     else if(indexPath.row == 5){
@@ -237,14 +237,13 @@
 - (void)voiceButtonAction:(UIButton *)sender{
     NSLog(@"点击了播放声音按钮");
     //创建URL
-    //http://218.76.27.57:8080/chinaschool_rs02/135275/153903/160861/160867/1370744550357.mp3
     NSURL *url = [NSURL URLWithString:self.currentModel.job.voice];
+    //NSURL * url = [NSURL URLWithString:@"http://218.76.27.57:8080/chinaschool_rs02/135275/153903/160861/160867/1370744550357.mp3"];
     //创建播放器
     _avPlayer = [[AVPlayer alloc] initWithURL:url];
     [_avPlayer play];
 }
 #pragma mark ===================底部按钮执行方法 START==================
-
 - (IBAction)songLiBtnAction:(id)sender {
 }
 - (IBAction)shipinBtnAction:(id)sender {

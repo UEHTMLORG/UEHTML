@@ -45,6 +45,7 @@
 
 #define DEFAULT_HEADIMAGE @"jianzhi-car"
 #define DEFAULT_BACKGROUND_IMAGE @"2"
+#define DEFAULT_GIFTIMAGE @"jianzhi-car"
 
 /** mansory全局宏 */
 #define MAS_SHORTHAND_GLOBALS

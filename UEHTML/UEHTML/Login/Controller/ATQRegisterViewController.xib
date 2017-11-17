@@ -196,10 +196,10 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9W-9K-Wty">
-                    <rect key="frame" x="15" y="354" width="345" height="30"/>
+                    <rect key="frame" x="15" y="354" width="345" height="40"/>
                     <color key="backgroundColor" red="0.88627450980392153" green="0.45098039215686275" blue="0.71372549019607845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="P6s-0N-2D2"/>
+                        <constraint firstAttribute="height" constant="40" id="P6s-0N-2D2"/>
                     </constraints>
                     <state key="normal" title="立即注册"/>
                     <connections>
@@ -207,7 +207,7 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="注册表示同意遵守《凹凸圈使用协议》" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Zt-0t-26J">
-                    <rect key="frame" x="15" y="389" width="345" height="20"/>
+                    <rect key="frame" x="15" y="399" width="345" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="jqm-x4-Xsp"/>
                     </constraints>

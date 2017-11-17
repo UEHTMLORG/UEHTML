@@ -36,9 +36,6 @@
                             <state key="normal" title="不限">
                                 <color key="titleColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
-                            <state key="selected" title="不限">
-                                <color key="titleColor" red="0.99305731060000002" green="0.45613801479999999" blue="0.73159998660000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </state>
                             <connections>
                                 <action selector="sexBXClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="UNi-lC-AsK"/>
                             </connections>
@@ -464,6 +461,12 @@
                     <state key="normal" title="重置">
                         <color key="titleColor" red="0.39200586079999999" green="0.39612069729999999" blue="0.39607340099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="chongzhiClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="zee-CQ-LKR"/>
                     </connections>
@@ -477,6 +480,12 @@
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <state key="normal" title="确定"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="sureClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="x2e-Xx-KG7"/>
                     </connections>
@@ -507,10 +516,12 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="ageBXBtn" destination="CbK-c4-iTx" id="rR3-tn-4Fc"/>
+                <outlet property="chongzhiBtn" destination="8H2-HS-Z2w" id="Toq-lQ-XbQ"/>
                 <outlet property="disBXBtn" destination="ikw-0M-KQE" id="mro-jH-bOh"/>
                 <outlet property="fwBXBtn" destination="FQI-aL-rrB" id="ErZ-oS-qWH"/>
                 <outlet property="heightBXBtn" destination="cSr-VR-8Oz" id="9w9-tJ-xEj"/>
                 <outlet property="sexBXBtn" destination="qBQ-Gf-vhf" id="JSI-QP-2nS"/>
+                <outlet property="sureBtn" destination="XwF-xY-a1C" id="d1g-mc-PlB"/>
             </connections>
             <point key="canvasLocation" x="48.5" y="85.5"/>
         </view>

@@ -51,7 +51,19 @@
         NSLog(@"-----work_about_her=%@",responseObject);
         if ([responseObject[@"status"] isEqualToString:@"1"]) {
             if(responseObject[@"data"]){
-                
+                NSDictionary *user_profile = responseObject[@"data"][@"user_profile"];
+                [self.userImg sd_setImageWithURL:[NSURL URLWithString:user_profile[@"avatar"]] placeholderImage:[UIImage imageNamed:@""]];
+                self.userNameLab.text = user_profile[@"nick_name"];
+                self.chengLab.text = user_profile[@"credit_num"];
+                self.ageLab.text = user_profile[@"age"];
+                if ([user_profile[@"gender"] isEqualToString:@"1"]) {
+                    self.sexImg.image = [UIImage imageNamed:@"jianzhi-button-nan02"];
+                }else{
+                    self.sexImg.image = [UIImage imageNamed:@"fujin-nv03"];
+                }
+                self.disLab.text = responseObject[@"data"][@"distance"];
+             
+                self.tagLab.text = [NSString stringWithFormat:@"%@cm %@kg",user_profile[@"height"],user_profile[@"weight"]];
             }
 
         }else if ([responseObject[@"status"] isEqualToString:@"302"]){

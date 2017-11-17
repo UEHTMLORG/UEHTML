@@ -11,6 +11,8 @@
 - (void)shaixuanViewClick:(NSString *)sexString age:(NSString *)ageString height:(NSString *)heightString distence:(NSString *)disString gongqiu:(NSString *)gqString;
 @end
 @interface ATQShaixuanView : UIView
+@property (weak, nonatomic) IBOutlet UIButton *sureBtn;
+@property (weak, nonatomic) IBOutlet UIButton *chongzhiBtn;
 @property (weak, nonatomic) IBOutlet UIButton *sexBXBtn;
 @property (weak, nonatomic) IBOutlet UIButton *ageBXBtn;
 @property (weak, nonatomic) IBOutlet UIButton *heightBXBtn;

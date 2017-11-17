@@ -28,6 +28,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *tarenzhengLab;
 @property (weak, nonatomic) IBOutlet UILabel *merenzhengLab;
 @property (weak, nonatomic) IBOutlet UIButton *yajinBtn;
+@property (weak, nonatomic) IBOutlet UIImageView *sexImg;
 
 @property (copy, nonatomic)NSString *jobID;
 

@@ -31,7 +31,7 @@
                                 <constraint firstAttribute="height" constant="1" id="Mbp-uu-pV3"/>
                             </constraints>
                         </view>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUu-lp-wUz">
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUu-lp-wUz">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
                             <connections>
                                 <action selector="zuixinClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="O3m-sS-Fgj"/>
@@ -63,7 +63,7 @@
                             <color key="textColor" red="0.39200586079999999" green="0.39612069729999999" blue="0.39607340099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ud-L2-djd">
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ud-L2-djd">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
                             <connections>
                                 <action selector="zuixinClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="zOw-8n-tzk"/>
@@ -102,7 +102,7 @@
                             <color key="textColor" red="0.39200586079999999" green="0.39612069729999999" blue="0.39607340099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWf-Ef-Fbu">
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWf-Ef-Fbu">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
                             <connections>
                                 <action selector="zuixinClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="Qv2-Pp-pnZ"/>

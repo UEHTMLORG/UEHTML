@@ -30,13 +30,21 @@
 - (id)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
-        self.sexBXBtn.selected = YES;
-        self.ageBXBtn.selected = YES;
-        self.heightBXBtn.selected = YES;
-        self.disBXBtn.selected = YES;
-        self.fwBXBtn.selected = YES;
+//        self.chongzhiBtn.layer.cornerRadius = 4.f;
+//        self.chongzhiBtn.layer.masksToBounds = YES;
+//        self.sureBtn.layer.cornerRadius = 4.f;
+//        self.sureBtn.layer.masksToBounds = YES;
     }
     return self;
+}
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+//    [self.sexBXBtn setTitleColor:[UIColor colorWithHexString:UIColorStr] forState:UIControlStateNormal];
+//    [self.ageBXBtn setTitleColor:[UIColor colorWithHexString:UIColorStr] forState:UIControlStateNormal];
+//    [self.heightBXBtn setTitleColor:[UIColor colorWithHexString:UIColorStr] forState:UIControlStateNormal];
+//    [self.disBXBtn setTitleColor:[UIColor colorWithHexString:UIColorStr] forState:UIControlStateNormal];
+//    [self.fwBXBtn setTitleColor:[UIColor colorWithHexString:UIColorStr] forState:UIControlStateNormal];
 }
 
 + (ATQShaixuanView *)meHeadView{
@@ -65,12 +73,14 @@
 #pragma mark - Network requests
 //性别
 - (IBAction)sexBXClick:(UIButton*)sender {
-    if (selectSexBtn) {
-        [selectSexBtn setTitleColor:[UIColor colorWithHexString:UIDeepToneTextColorStr] forState:UIControlStateNormal];
-    }
-    selectSexBtn = sender;
-    [selectSexBtn setTitleColor:[UIColor colorWithHexString:UIColorStr] forState:UIControlStateNormal];
-
+  
+        [self.sexBXBtn setTitleColor:[UIColor colorWithHexString:UIDeepToneTextColorStr] forState:UIControlStateNormal];
+        if (selectSexBtn) {
+            [selectSexBtn setTitleColor:[UIColor colorWithHexString:UIDeepToneTextColorStr] forState:UIControlStateNormal];
+        }
+        selectSexBtn = sender;
+        [selectSexBtn setTitleColor:[UIColor colorWithHexString:UIColorStr] forState:UIControlStateNormal];
+    
     sexStr = sender.titleLabel.text;
 }
 
@@ -119,7 +129,26 @@
 
 
 - (IBAction)chongzhiClick:(UIButton*)sender {
-    
+    if (selectSexBtn) {
+        [selectSexBtn setTitleColor:[UIColor colorWithHexString:UIDeepToneTextColorStr] forState:UIControlStateNormal];
+    }
+    if (selectAgeBtn) {
+        [selectAgeBtn setTitleColor:[UIColor colorWithHexString:UIDeepToneTextColorStr] forState:UIControlStateNormal];
+    }
+    if (selectHeightBtn) {
+        [selectHeightBtn setTitleColor:[UIColor colorWithHexString:UIDeepToneTextColorStr] forState:UIControlStateNormal];
+    }
+    if (selectDistenceBtn) {
+        [selectDistenceBtn setTitleColor:[UIColor colorWithHexString:UIDeepToneTextColorStr] forState:UIControlStateNormal];
+    }
+    if (selectGongqiuBtn) {
+        [selectGongqiuBtn setTitleColor:[UIColor colorWithHexString:UIDeepToneTextColorStr] forState:UIControlStateNormal];
+    }
+//    [self.sexBXBtn setTitleColor:[UIColor colorWithHexString:UIColorStr] forState:UIControlStateNormal];
+//    [self.ageBXBtn setTitleColor:[UIColor colorWithHexString:UIColorStr] forState:UIControlStateNormal];
+//    [self.heightBXBtn setTitleColor:[UIColor colorWithHexString:UIColorStr] forState:UIControlStateNormal];
+//    [self.disBXBtn setTitleColor:[UIColor colorWithHexString:UIColorStr] forState:UIControlStateNormal];
+//    [self.fwBXBtn setTitleColor:[UIColor colorWithHexString:UIColorStr] forState:UIControlStateNormal];
 }
 
 - (IBAction)sureClick:(UIButton*)sender {

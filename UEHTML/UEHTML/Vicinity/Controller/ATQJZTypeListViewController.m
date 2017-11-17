@@ -20,7 +20,15 @@
 #import "ATQHomeItemListModel.h"
 #import "ATQPaixuView.h"
 #import "ATQShaixuanView.h"
-@interface ATQJZTypeListViewController ()<UITableViewDelegate,UITableViewDataSource,ATQPaixuViewDelegate,ATQShaixuanViewDelegate>
+#import "ATQlvyouDetailViewController.h"
+@interface ATQJZTypeListViewController ()<UITableViewDelegate,UITableViewDataSource,ATQPaixuViewDelegate,ATQShaixuanViewDelegate>{
+    NSString *_model;
+    NSString *_paixuStr;
+    NSString *_gender;
+    NSString *_age;
+    NSString *_height;
+    NSString *_distance;
+}
 @property (nonatomic,strong)UITableView *tableView;
 @property (strong,nonatomic)NSMutableArray *jobListArr;
 @property (strong,nonatomic)ATQPaixuView *PaixuView;
@@ -50,14 +58,6 @@ static NSInteger page = 1;
             make.height.offset(120);
         }];
         PaixuView.hidden = YES;
-        
-//        __weak typeof(self) weakself = self;
-//        PaixuView.setupblock = ^{
-//            ATQSetupViewController *vc = [[ATQSetupViewController alloc]init];
-//            vc.dic = _MeDic;
-//            [weakself.navigationController pushViewController:vc animated:YES];
-//        };
-        
         PaixuView;
     });
 }
@@ -106,7 +106,7 @@ static NSInteger page = 1;
 
 -(MJRefreshAutoNormalFooter *)loadMoreDataFooterWith:(UIScrollView *)scrollView {
     MJRefreshAutoNormalFooter *loadMoreFooter = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
-        [self loadMoreData];
+        [self loadMoreDataWithmodel:_model sort:_paixuStr gender:_gender age:_age height:_height distance:_distance];
         page++;
         [scrollView.mj_footer endRefreshing];
     }];
@@ -116,11 +116,21 @@ static NSInteger page = 1;
 
 - (void)paixuViewClick:(NSInteger)senderTag{
     NSLog(@"---->%ld",senderTag);
+    NSString *paixuStr = [NSString stringWithFormat:@"%ld",senderTag];
+    _paixuStr = paixuStr;
+    [self loadDataWithmodel:@"" sort:paixuStr gender:@"" age:@"" height:@"" distance:@""];
     self.PaixuView.hidden = YES;
 }
 
 - (void)shaixuanViewClick:(NSString *)sexString age:(NSString *)ageString height:(NSString *)heightString distence:(NSString *)disString gongqiu:(NSString *)gqString{
     NSLog(@"--->%@-->%@-->%@-->%@-->%@",sexString,ageString,heightString,disString,gqString);
+    _model = gqString;
+    _gender = sexString;
+    _age = ageString;
+    _height = heightString;
+    _distance = disString;
+    
+    [self loadDataWithmodel:gqString sort:@"" gender:sexString age:ageString height:heightString distance:disString];
     self.ShaixuanView.hidden = YES;
 }
 
@@ -136,9 +146,21 @@ static NSInteger page = 1;
 
 -(void)loadData{
     
+    [self loadDataWithmodel:@"" sort:@"" gender:@"" age:@"" height:@"" distance:@""];
+}
+
+
+-(void)loadDataWithmodel:(NSString*)model sort:(NSString*)sort gender:(NSString*)gender age:(NSString*)age height:(NSString *)height distance:(NSString*)distance{
+    
     NSMutableDictionary *params = [NSMutableDictionary  dictionary];
     NSString *user_id = [[NSUserDefaults standardUserDefaults] objectForKey:USER_ID_AOTU_ZL];
     NSString *user_token = [[NSUserDefaults standardUserDefaults] objectForKey:USER_TOEKN_AOTU_ZL];
+    params[@"model"] = model?:@"";
+    params[@"sort"] = sort?:@"";
+    params[@"gender"] = gender?:@"";
+    params[@"age"] = age?:@"";
+    params[@"height"] = height?:@"";
+    params[@"distance"] = distance?:@"";
     params[@"job_class_id"] = self.jobID;
     params[@"page_index"] = @"1";
     params[@"user_id"] = user_id;
@@ -182,10 +204,17 @@ static NSInteger page = 1;
     }];
 }
 
--(void)loadMoreData{
+
+-(void)loadMoreDataWithmodel:(NSString*)model sort:(NSString*)sort gender:(NSString*)gender age:(NSString*)age height:(NSString *)height distance:(NSString*)distance{
     NSMutableDictionary *params = [NSMutableDictionary  dictionary];
     NSString *user_id = [[NSUserDefaults standardUserDefaults] objectForKey:USER_ID_AOTU_ZL];
     NSString *user_token = [[NSUserDefaults standardUserDefaults] objectForKey:USER_TOEKN_AOTU_ZL];
+    params[@"model"] = model?:@"";
+    params[@"sort"] = sort?:@"";
+    params[@"gender"] = gender?:@"";
+    params[@"age"] = age?:@"";
+    params[@"height"] = height?:@"";
+    params[@"distance"] = distance?:@"";
     params[@"job_class_id"] = self.jobID;
     params[@"page_index"] = [NSString stringWithFormat:@"%ld",page];
     params[@"user_id"] = user_id;
@@ -200,11 +229,11 @@ static NSInteger page = 1;
     NSString *sign2 = [LhkhHttpsManager md5:sign1];
     NSString *sign = [LhkhHttpsManager md5:sign2];
     params[@"sign"] = sign;
-    NSString *url = [NSString stringWithFormat:@"%@/api/home/index",ATQBaseUrl];
+    NSString *url = [NSString stringWithFormat:@"%@/api/home/job_list",ATQBaseUrl];
     
     [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
         [self.tableView.mj_header endRefreshing];
-        NSLog(@"-----home=%@",responseObject);
+        NSLog(@"-----job_list=%@",responseObject);
         if ([responseObject[@"status"] isEqualToString:@"1"]) {
             
             if(responseObject[@"data"]){
@@ -266,10 +295,18 @@ static NSInteger page = 1;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    ATQTypePeoDetailViewController *vc = [[ATQTypePeoDetailViewController alloc] init];
-    ATQHomeItemListModel *model = self.jobListArr[indexPath.section];
-    vc.jobID = model.ID;
-    [self.navigationController pushViewController:vc animated:YES];
+    if ([self.jobID isEqualToString:@"7"]) {
+        ATQlvyouDetailViewController *vc = [[ATQlvyouDetailViewController alloc] init];
+        ATQHomeItemListModel *model = self.jobListArr[indexPath.section];
+        vc.jobID = model.ID;
+        [self.navigationController pushViewController:vc animated:YES];
+    }else{
+        ATQTypePeoDetailViewController *vc = [[ATQTypePeoDetailViewController alloc] init];
+        ATQHomeItemListModel *model = self.jobListArr[indexPath.section];
+        vc.jobID = model.ID;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    
 }
 
 -(UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{

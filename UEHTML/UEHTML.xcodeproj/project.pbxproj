@@ -758,6 +758,8 @@
 		40FA8A0D1F74E81E0059A208 /* ATQTagTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FA8A0B1F74E81E0059A208 /* ATQTagTableViewCell.m */; };
 		40FA8A0E1F74E81E0059A208 /* ATQTagTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40FA8A0C1F74E81E0059A208 /* ATQTagTableViewCell.xib */; };
 		40FA8A111F74EB6A0059A208 /* XHHPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FA8A101F74EB6A0059A208 /* XHHPageControl.m */; };
+		40FB16081FBF1E7A00201DB4 /* ATQlvyouDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FB16061FBF1E7A00201DB4 /* ATQlvyouDetailViewController.m */; };
+		40FB16091FBF1E7A00201DB4 /* ATQlvyouDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40FB16071FBF1E7A00201DB4 /* ATQlvyouDetailViewController.xib */; };
 		40FB16A31F80BB07001FC339 /* ATQLiftCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FB16A11F80BB07001FC339 /* ATQLiftCollectionViewCell.m */; };
 		40FB16A41F80BB07001FC339 /* ATQLiftCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40FB16A21F80BB07001FC339 /* ATQLiftCollectionViewCell.xib */; };
 		40FB16A81F80BC03001FC339 /* JSBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FB16A71F80BC03001FC339 /* JSBadgeView.m */; };
@@ -1906,6 +1908,9 @@
 		40FA8A0C1F74E81E0059A208 /* ATQTagTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQTagTableViewCell.xib; path = UEHTML/Vicinity/View/ATQTagTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		40FA8A0F1F74EB6A0059A208 /* XHHPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XHHPageControl.h; path = ../XHHPageControl.h; sourceTree = "<group>"; };
 		40FA8A101F74EB6A0059A208 /* XHHPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XHHPageControl.m; path = ../XHHPageControl.m; sourceTree = "<group>"; };
+		40FB16051FBF1E7A00201DB4 /* ATQlvyouDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATQlvyouDetailViewController.h; sourceTree = "<group>"; };
+		40FB16061FBF1E7A00201DB4 /* ATQlvyouDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATQlvyouDetailViewController.m; sourceTree = "<group>"; };
+		40FB16071FBF1E7A00201DB4 /* ATQlvyouDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ATQlvyouDetailViewController.xib; sourceTree = "<group>"; };
 		40FB16A01F80BB07001FC339 /* ATQLiftCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATQLiftCollectionViewCell.h; path = UEHTML/Me/View/ATQLiftCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
 		40FB16A11F80BB07001FC339 /* ATQLiftCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATQLiftCollectionViewCell.m; path = UEHTML/Me/View/ATQLiftCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
 		40FB16A21F80BB07001FC339 /* ATQLiftCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATQLiftCollectionViewCell.xib; path = UEHTML/Me/View/ATQLiftCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
@@ -3412,6 +3417,9 @@
 				40DF4F841F825D0600EE6753 /* ATQTypePeoDetailViewController.h */,
 				40DF4F851F825D0600EE6753 /* ATQTypePeoDetailViewController.m */,
 				40DF4F861F825D0600EE6753 /* ATQTypePeoDetailViewController.xib */,
+				40FB16051FBF1E7A00201DB4 /* ATQlvyouDetailViewController.h */,
+				40FB16061FBF1E7A00201DB4 /* ATQlvyouDetailViewController.m */,
+				40FB16071FBF1E7A00201DB4 /* ATQlvyouDetailViewController.xib */,
 				40DF4F751F81F81700EE6753 /* ATQTypeListViewController.h */,
 				40DF4F761F81F81700EE6753 /* ATQTypeListViewController.m */,
 				40DF4F7A1F82102400EE6753 /* ATQTypeListViewController.xib */,
@@ -5265,6 +5273,7 @@
 				40F5E6241F91AFAC0077A574 /* f_static_105@3x.png in Resources */,
 				40F5E62D1F91AFAC0077A574 /* sp@2x.png in Resources */,
 				40F5E58E1F91AFAC0077A574 /* f_static_030@3x.png in Resources */,
+				40FB16091FBF1E7A00201DB4 /* ATQlvyouDetailViewController.xib in Resources */,
 				401D68FA1F94836A00329D1B /* ATQMepublishTTableViewCell.xib in Resources */,
 				18A946391FAA17EA007F8A1D /* FaBuXuQiuTableViewCell.xib in Resources */,
 				40E084781F80845700FD1AA3 /* ATQBuyVipViewController.xib in Resources */,
@@ -5721,6 +5730,7 @@
 				40C77E3A1FADA03D000D8F70 /* ATQDTContentView.m in Sources */,
 				40D353C91F7F44140017DA5C /* ATQChongzhiViewController.m in Sources */,
 				40509BBA1FB9D5AF00F68438 /* ATQPaixuView.m in Sources */,
+				40FB16081FBF1E7A00201DB4 /* ATQlvyouDetailViewController.m in Sources */,
 				407F9BD71F66364C0043A87A /* ATQVicintyViewController.m in Sources */,
 				40DF4F8B1F8269CD00EE6753 /* CPStepper.m in Sources */,
 				185D78611F8DF13900DA8849 /* UIColor+KSString.m in Sources */,

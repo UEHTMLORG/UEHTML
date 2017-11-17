@@ -162,10 +162,10 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z51-Y7-5pE">
-                    <rect key="frame" x="15" y="324" width="345" height="30"/>
+                    <rect key="frame" x="15" y="324" width="345" height="40"/>
                     <color key="backgroundColor" red="0.8862745098" green="0.45098039220000002" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="xRc-RM-WuY"/>
+                        <constraint firstAttribute="height" constant="40" id="xRc-RM-WuY"/>
                     </constraints>
                     <state key="normal" title="登录"/>
                     <connections>

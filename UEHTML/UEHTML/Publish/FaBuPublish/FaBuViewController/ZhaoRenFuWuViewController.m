@@ -17,8 +17,43 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"发布需求";
-    // Do any additional setup after loading the view from its nib.
+   /** UITableView注册方法 */
+    self.tableview.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [self.tableview registerNib:[UINib nibWithNibName:@"FaBuFirstTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"FaBuTableVIewCellID"];
+    [self.tableview registerNib:[UINib nibWithNibName:@"FaBuJianZhiTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"FaBuJianZhiTableVIewSecCellID"];
+    
 }
+
+#pragma mark ===================UITableView 代理方法实现 START==================
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 2;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row == 0) {
+        return 180.0f;
+    }
+    else{
+        return 450.0f;
+    }
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row == 0) {
+        static NSString * cellID = @"FaBuTableVIewCellID";
+        FaBuFirstTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
+        
+        return cell;
+    }
+    else{
+        static NSString * cellID = @"FaBuJianZhiTableVIewSecCellID";
+        FaBuJianZhiTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
+        
+        return cell;
+    }
+}
+
+
+
+#pragma mark ===================UITableView 代理方法实现 END==================
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

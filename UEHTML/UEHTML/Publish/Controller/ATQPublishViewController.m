@@ -312,10 +312,7 @@
                 self.currentPageType = XUQIUFANG_TUIJIAN;
                 self.listView.curPublishNetworkingType = XUQIUFANG_TUIJIAN;
                  [self.tiGongSubControl setSelectedSegmentIndex:0];
-                
-                
             }
-            
         }
             break;
         case 3:{
@@ -323,46 +320,36 @@
                 if (control.selectedSegmentIndex == 0) {
                     self.currentPageType = FUWUFANG_TUIJIAN;
                     self.listView.curPublishNetworkingType = FUWUFANG_TUIJIAN;
-                    
                 }
                 else if(control.selectedSegmentIndex == 1){
                     self.currentPageType = FUWUFANG_MYLIST;
                     self.listView.curPublishNetworkingType = FUWUFANG_MYLIST;
-                    
                 }
                 else if(control.selectedSegmentIndex == 2){
                     self.currentPageType = FUWUFANG_DOING;
                     self.listView.curPublishNetworkingType = FUWUFANG_DOING;
-                    
                 }
                 else if(control.selectedSegmentIndex == 3){
                     self.currentPageType = FUWUFANG_FINISHED;
                     self.listView.curPublishNetworkingType = FUWUFANG_FINISHED;
-                    
                 }
-                
             }else{
                 if (control.selectedSegmentIndex == 0) {
                     self.currentPageType = XUQIUFANG_TUIJIAN;
                     self.listView.curPublishNetworkingType = XUQIUFANG_TUIJIAN;
-                    
                 }
                 else if(control.selectedSegmentIndex == 1){
                     self.currentPageType = XUQIUFANG_MYLIST;
                     self.listView.curPublishNetworkingType = XUQIUFANG_MYLIST;
-                    
                 }
                 else if(control.selectedSegmentIndex == 2){
                     self.currentPageType = XUQIUFANG_DOING;
                     self.listView.curPublishNetworkingType = XUQIUFANG_DOING;
-                    
                 }
                 else if(control.selectedSegmentIndex == 3){
                     self.currentPageType = XUQIUFANG_FINISHED;
                     self.listView.curPublishNetworkingType = XUQIUFANG_FINISHED;
-                    
                 }
-                
             }
         }
             

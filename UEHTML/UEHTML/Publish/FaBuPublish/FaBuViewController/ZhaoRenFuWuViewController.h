@@ -7,7 +7,12 @@
 //
 
 #import "ATQBaseViewController.h"
+#import "FaBuFirstTableViewCell.h"
+#import "FaBuJianZhiTableViewCell.h"
 
-@interface ZhaoRenFuWuViewController : ATQBaseViewController
+@interface ZhaoRenFuWuViewController : ATQBaseViewController<UITableViewDelegate,UITableViewDataSource>
+
+@property (strong, nonatomic) IBOutlet UITableView *tableview;
+
 
 @end

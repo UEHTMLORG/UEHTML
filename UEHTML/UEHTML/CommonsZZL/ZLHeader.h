@@ -18,6 +18,7 @@
 #import "MBManager.h"
 #import "UploadParam.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import <SDWebImage/UIButton+WebCache.h>
 #import "ZLRongYunManager.h"
 
 ///////////////////////////////////

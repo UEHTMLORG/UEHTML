@@ -196,7 +196,7 @@
                                 <color key="textColor" red="0.9491189122" green="0.61768478159999995" blue="0.2001742125" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pwg-0Y-M8v">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pwg-0Y-M8v">
                                 <rect key="frame" x="157.5" y="64" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="1Go-iU-9E6"/>
@@ -228,16 +228,23 @@
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fabu-luyin" translatesAutoresizingMaskIntoConstraints="NO" id="mb3-RR-MX2">
+                                <rect key="frame" x="157.5" y="64" width="60" height="60"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="W8q-e2-bID" secondAttribute="trailing" constant="20" id="21c-88-NCF"/>
                             <constraint firstItem="Tcy-Lw-Ir0" firstAttribute="leading" secondItem="l2P-Tu-xhW" secondAttribute="leading" constant="20" id="8Bd-UX-aN6"/>
+                            <constraint firstItem="mb3-RR-MX2" firstAttribute="trailing" secondItem="Pwg-0Y-M8v" secondAttribute="trailing" id="9BH-Dn-rTZ"/>
                             <constraint firstItem="Tcy-Lw-Ir0" firstAttribute="top" secondItem="l2P-Tu-xhW" secondAttribute="top" constant="10" id="HMZ-cO-UUh"/>
                             <constraint firstItem="Pwg-0Y-M8v" firstAttribute="top" secondItem="esx-v0-TX3" secondAttribute="bottom" constant="15" id="QmW-SB-Hqe"/>
                             <constraint firstItem="Pwg-0Y-M8v" firstAttribute="centerX" secondItem="l2P-Tu-xhW" secondAttribute="centerX" id="Sn5-t6-7Yw"/>
+                            <constraint firstItem="mb3-RR-MX2" firstAttribute="top" secondItem="Pwg-0Y-M8v" secondAttribute="top" id="W6G-zw-Yjb"/>
+                            <constraint firstItem="mb3-RR-MX2" firstAttribute="bottom" secondItem="Pwg-0Y-M8v" secondAttribute="bottom" id="X9c-7N-dae"/>
                             <constraint firstItem="esx-v0-TX3" firstAttribute="leading" secondItem="l2P-Tu-xhW" secondAttribute="leading" constant="20" id="crs-M1-EQZ"/>
                             <constraint firstItem="W8q-e2-bID" firstAttribute="leading" secondItem="l2P-Tu-xhW" secondAttribute="leading" constant="20" id="e70-th-yzw"/>
+                            <constraint firstItem="mb3-RR-MX2" firstAttribute="leading" secondItem="Pwg-0Y-M8v" secondAttribute="leading" id="eCg-by-UgK"/>
                             <constraint firstItem="RiF-vG-1ui" firstAttribute="top" secondItem="Pwg-0Y-M8v" secondAttribute="bottom" constant="10" id="fVM-Gs-l5G"/>
                             <constraint firstAttribute="height" constant="180" id="gCa-s5-0Hf"/>
                             <constraint firstItem="esx-v0-TX3" firstAttribute="top" secondItem="Tcy-Lw-Ir0" secondAttribute="bottom" constant="4" id="hX7-Dh-BPo"/>
@@ -285,6 +292,7 @@
                 <outlet property="fuWuJieShaoTextField" destination="K87-1j-nZK" id="pqn-KF-SK9"/>
                 <outlet property="fuWuShiChangTextField" destination="saU-gQ-mTe" id="TJj-t5-Vbv"/>
                 <outlet property="luYinButton" destination="Pwg-0Y-M8v" id="XXz-Sh-yvk"/>
+                <outlet property="luYinImageView" destination="mb3-RR-MX2" id="syI-uc-SZW"/>
                 <outlet property="shiLiButton" destination="wEs-qy-iwF" id="H1o-bO-8Py"/>
                 <outlet property="tiJiaoShenHeButton" destination="iW3-0G-42Z" id="ai5-ar-TcT"/>
             </connections>

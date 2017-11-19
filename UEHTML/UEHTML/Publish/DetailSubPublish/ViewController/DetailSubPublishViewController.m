@@ -237,8 +237,8 @@
 - (void)voiceButtonAction:(UIButton *)sender{
     NSLog(@"点击了播放声音按钮");
     //创建URL
-    NSURL *url = [NSURL URLWithString:self.currentModel.job.voice];
-    //NSURL * url = [NSURL URLWithString:@"http://218.76.27.57:8080/chinaschool_rs02/135275/153903/160861/160867/1370744550357.mp3"];
+    //NSURL *url = [NSURL URLWithString:self.currentModel.job.voice];
+    NSURL * url = [NSURL URLWithString:@"http://218.76.27.57:8080/chinaschool_rs02/135275/153903/160861/160867/1370744550357.mp3"];
     //创建播放器
     _avPlayer = [[AVPlayer alloc] initWithURL:url];
     [_avPlayer play];

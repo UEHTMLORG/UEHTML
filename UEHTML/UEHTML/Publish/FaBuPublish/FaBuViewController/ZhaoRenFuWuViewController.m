@@ -46,18 +46,34 @@
     else{
         static NSString * cellID = @"FaBuJianZhiTableVIewSecCellID";
         FaBuJianZhiTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
-        [cell.luYinButton addTarget:self action:@selector(luYinButtonAction:) forControlEvents:UIControlEventTouchUpInside];
         [cell.shiLiButton addTarget:self action:@selector(shiLiButtonAction:) forControlEvents:UIControlEventTouchUpInside];
         [cell.tiJiaoShenHeButton addTarget:self action:@selector(tiJiaoShenHeButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+        //实例化长按手势监听
+        UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(luYinButtonAction:)];
+        //代理
+        longPress.delegate = self;
+        longPress.minimumPressDuration = 1.0;
+        [cell.luYinImageView addGestureRecognizer:longPress];
         return cell;
     }
 }
 #pragma mark ===================UITableView 代理方法实现 END==================
 #pragma mark ===================Cell的按钮执行方法实现==================
+/* 录音ImageView执行方法*/
 /** 录音按钮 */
-- (void)luYinButtonAction:(UIButton *)sender{
-    
-    
+- (void)luYinButtonAction:(UILongPressGestureRecognizer *)gestureRecognizer{
+    NSLog(@"长按执行方法");
+    if (gestureRecognizer.state ==  UIGestureRecognizerStateBegan) {
+        NSLog(@"UIGestureRecognizerStateBegan");
+        [[ZLLuYinManager shareInstance] startRecord];
+    }
+    if (gestureRecognizer.state == UIGestureRecognizerStateChanged) {
+        
+    }
+    if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
+        NSLog(@"UIGestureRecognizerStateEnded");
+        [[ZLLuYinManager shareInstance] stopRecord];
+    }
 }
 /** 示例按钮 */
 - (void)shiLiButtonAction:(UIButton *)sender{
@@ -71,8 +87,15 @@
 }
 /** 提交审核 */
 - (void)tiJiaoShenHeButtonAction:(UIButton *)sender{
-    
-    
+    //创建URL
+    NSString * urlstring = [ZLLuYinManager shareInstance].cafPathStr;
+    NSLog(@"录音播放地址：%@",urlstring);
+    //NSURL * url = [NSURL fileURLWithPath:urlstring];
+    //NSURL *url = [NSURL URLWithString:urlstring];
+    NSURL * url = [NSURL URLWithString:@"http://218.76.27.57:8080/chinaschool_rs02/135275/153903/160861/160867/1370744550357.mp3"];
+    //创建播放器
+   AVPlayer *avPlayer = [[AVPlayer alloc] initWithURL:url];
+   [avPlayer play];
 }
 
 

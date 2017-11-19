@@ -15,6 +15,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *fuWuShiChangTextField;
 @property (strong, nonatomic) IBOutlet UITextView *fuWuBeiZhuTextField;
 @property (strong, nonatomic) IBOutlet UIButton *luYinButton;
+@property (strong, nonatomic) IBOutlet UIImageView *luYinImageView;
 @property (strong, nonatomic) IBOutlet UIButton *tiJiaoShenHeButton;
 @property (strong, nonatomic) IBOutlet UIButton *shiLiButton;
 

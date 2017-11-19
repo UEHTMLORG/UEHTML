@@ -15,9 +15,10 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         instance = [[[self class] alloc] init];
-        /*
+        
         // 0.1 创建录音文件存放路径
-        NSString *path = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"test.caf"];
+        instance.cafPathStr = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"test.caf"];
+        /*
         NSLog(@"%@", path);
         NSURL *url = [NSURL URLWithString:path];
         // 0.2 创建录音设置
@@ -38,6 +39,17 @@
     });
     return instance;
 }
+
+- (void)startRecord{
+    [self startRecordNotice];
+}
+- (void)pauseRecord{
+    [self.audioRecorder pause];
+}
+- (void)stopRecord{
+    [self stopRecordNotice];
+}
+
 #pragma mark ===================录音机设置   开始==================
 /**
  *  获得录音机对象
@@ -85,30 +97,29 @@
     
     return recordSettings;
 }
-
+/** 开始录音 */
 - (void)startRecordNotice{
-    
-     if ([self.audioRecorder isRecording]) {
+    if ([self.audioRecorder isRecording]) {
         [self.audioRecorder stop];
     }
-    
-     //[self deleteOldRecordFile];  //如果不删掉，会在原文件基础上录制；虽然不会播放原来的声音，但是音频长度会是录制的最大长度。
-    
+    //[self deleteOldRecordFile];  //如果不删掉，会在原文件基础上录制；虽然不会播放原来的声音，但是音频长度会是录制的最大长度。
     AVAudioSession *audioSession=[AVAudioSession sharedInstance];
     [audioSession setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
-    
-    
     if (![self.audioRecorder isRecording]) {//0--停止、暂停，1-录制中
-        
         [self.audioRecorder record];//首次使用应用时如果调用record方法会询问用户是否允许使用麦克风
         self.countNum = 0;
-        NSTimeInterval timeInterval =1 ; //0.1s
+        NSTimeInterval timeInterval = 1; //0.1s
         self.timer1 = [NSTimer scheduledTimerWithTimeInterval:timeInterval  target:self selector:@selector(changeRecordTime)  userInfo:nil  repeats:YES];
-        
         [self.timer1 fire];
     }
     //[self starAnimalWithTime:2.0];
 }
+
+/** 改变录音时间 */
+- (void)changeRecordTime{
+    
+}
+/** 停止录音 */
 - (void)stopRecordNotice
 {
     NSLog(@"----------结束录音----------");

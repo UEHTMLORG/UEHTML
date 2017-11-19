@@ -25,7 +25,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ijJ-E0-xlb">
-                        <rect key="frame" x="20" y="41" width="418" height="165.5"/>
+                        <rect key="frame" x="20" y="41" width="418" height="161.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Sxx-uF-r2S">
                             <size key="itemSize" width="50" height="50"/>
@@ -34,11 +34,11 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                     </collectionView>
-                    <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="esV-tf-oH0">
-                        <rect key="frame" x="0.0" y="206.5" width="458" height="1"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="esV-tf-oH0">
+                        <rect key="frame" x="0.0" y="202.5" width="458" height="5"/>
+                        <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="1" id="5oo-Wl-VYU"/>
+                            <constraint firstAttribute="height" constant="5" id="5oo-Wl-VYU"/>
                         </constraints>
                     </view>
                 </subviews>

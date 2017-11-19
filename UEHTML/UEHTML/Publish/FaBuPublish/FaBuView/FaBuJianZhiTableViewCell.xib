@@ -279,7 +279,16 @@
                     <constraint firstItem="NvI-lA-bG5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="zEj-jO-B9Y"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="-114" y="-155"/>
+            <connections>
+                <outlet property="fuWuBeiZhuTextField" destination="w3e-bG-2fl" id="viF-Gd-cXv"/>
+                <outlet property="fuWuJiaGeTextField" destination="NMh-Cm-qEE" id="MIK-Hi-wT6"/>
+                <outlet property="fuWuJieShaoTextField" destination="K87-1j-nZK" id="pqn-KF-SK9"/>
+                <outlet property="fuWuShiChangTextField" destination="saU-gQ-mTe" id="TJj-t5-Vbv"/>
+                <outlet property="luYinButton" destination="Pwg-0Y-M8v" id="XXz-Sh-yvk"/>
+                <outlet property="shiLiButton" destination="wEs-qy-iwF" id="H1o-bO-8Py"/>
+                <outlet property="tiJiaoShenHeButton" destination="iW3-0G-42Z" id="ai5-ar-TcT"/>
+            </connections>
+            <point key="canvasLocation" x="48" y="-138"/>
         </tableViewCell>
     </objects>
     <resources>

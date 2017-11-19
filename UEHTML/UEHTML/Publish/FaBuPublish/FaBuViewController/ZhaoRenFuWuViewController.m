@@ -46,14 +46,35 @@
     else{
         static NSString * cellID = @"FaBuJianZhiTableVIewSecCellID";
         FaBuJianZhiTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
-        
+        [cell.luYinButton addTarget:self action:@selector(luYinButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+        [cell.shiLiButton addTarget:self action:@selector(shiLiButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+        [cell.tiJiaoShenHeButton addTarget:self action:@selector(tiJiaoShenHeButtonAction:) forControlEvents:UIControlEventTouchUpInside];
         return cell;
     }
 }
-
-
-
 #pragma mark ===================UITableView 代理方法实现 END==================
+#pragma mark ===================Cell的按钮执行方法实现==================
+/** 录音按钮 */
+- (void)luYinButtonAction:(UIButton *)sender{
+    
+    
+}
+/** 示例按钮 */
+- (void)shiLiButtonAction:(UIButton *)sender{
+    
+    
+}
+/** 押金认证 */
+- (void)yaJinRenZhengAction:(id )sender{
+    
+    
+}
+/** 提交审核 */
+- (void)tiJiaoShenHeButtonAction:(UIButton *)sender{
+    
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

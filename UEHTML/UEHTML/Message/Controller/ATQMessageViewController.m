@@ -46,6 +46,9 @@
         make.bottom.mas_equalTo(self.view);
         make.top.mas_equalTo(self.view).mas_offset(195);
     }];
+    /** tableviews设置 */
+    self.conversationListTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.emptyConversationView = [[UIView alloc]init];
 }
 
 
@@ -120,7 +123,7 @@
     UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [leftBtn setFrame:CGRectMake(0, 0, 19, 19)];
     [leftBtn addTarget:self action:@selector(leftButtonAction) forControlEvents:UIControlEventTouchUpInside];
-    [leftBtn setImage:[UIImage imageNamed:@"xiaoxi-ling"] forState:UIControlStateNormal];
+    [leftBtn setBackgroundImage:[UIImage imageNamed:@"xiaoxi-ling"] forState:UIControlStateNormal];
     //[leftBtn setImageEdgeInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
     leftBtn.badgeValue = @"5";
     leftBtn.badgeBGColor = [UIColor whiteColor];
@@ -133,7 +136,7 @@
     UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [rightBtn setFrame:CGRectMake(0, 0, 19, 19)];
     [rightBtn addTarget:self action:@selector(rightButtonAction) forControlEvents:UIControlEventTouchUpInside];
-    [rightBtn setImage:[UIImage imageNamed:@"xiaoxi-ren"] forState:UIControlStateNormal];
+    [rightBtn setBackgroundImage:[UIImage imageNamed:@"xiaoxi-ren"] forState:UIControlStateNormal];
     //[rightBtn setImageEdgeInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
     UIBarButtonItem * rightItem = [[UIBarButtonItem alloc]initWithCustomView:rightBtn];
     self.navigationItem.rightBarButtonItem = rightItem;

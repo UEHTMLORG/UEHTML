@@ -20,21 +20,22 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <SDWebImage/UIButton+WebCache.h>
 #import "ZLRongYunManager.h"
+#import "PrivatyJianCeTool.h"
+
 
 ///////////////////////////////////
 #define Main_Purple_Color @"ff73ba"
 #define Light_Gray_Color @"f3f3f3"
 #define Main_Blue_Color @"78caf2"
 #define Main_Orange_Color @"ffab3b"
+#define Main_Light_Gray_Color @"F3F3F3"
 
 //融云app
 #define RONGYUN_APPKEY @"3argexb6301de"
 #define RONGYUN_APPSECRET @"HjcKRxdIQSIYg"
 
-
+/** 服务器基地址 */
 #define Common_URL_ZL @"http://atapi.dotry.cn"
-
-
 
 //用户信息
 #define USER_ID_AOTU_ZL @"USER_ID"

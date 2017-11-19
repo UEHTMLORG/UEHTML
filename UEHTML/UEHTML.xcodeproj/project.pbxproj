@@ -15,6 +15,8 @@
 		183D18F31F9053A00093A982 /* JianZhiChuFaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183D18F11F9053A00093A982 /* JianZhiChuFaViewController.xib */; };
 		183D18F71F90570D0093A982 /* JianZhiChuFaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 183D18F51F90570D0093A982 /* JianZhiChuFaTableViewCell.m */; };
 		183D18F81F90570D0093A982 /* JianZhiChuFaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183D18F61F90570D0093A982 /* JianZhiChuFaTableViewCell.xib */; };
+		1853C0E41FC1BE910054A9A2 /* ZLLuYinManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1853C0E31FC1BE910054A9A2 /* ZLLuYinManager.m */; };
+		1853C0E71FC1C2220054A9A2 /* PrivatyJianCeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1853C0E61FC1C2210054A9A2 /* PrivatyJianCeTool.m */; };
 		185D77901F8DA6AC00DA8849 /* ATQPHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D778F1F8DA6AC00DA8849 /* ATQPHeaderView.m */; };
 		185D77921F8DA6BD00DA8849 /* ATQPHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185D77911F8DA6BD00DA8849 /* ATQPHeaderView.xib */; };
 		185D785C1F8DF13900DA8849 /* AutoFitLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D77991F8DF13900DA8849 /* AutoFitLabelView.m */; };
@@ -810,6 +812,10 @@
 		183D18F41F90570D0093A982 /* JianZhiChuFaTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JianZhiChuFaTableViewCell.h; sourceTree = "<group>"; };
 		183D18F51F90570D0093A982 /* JianZhiChuFaTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JianZhiChuFaTableViewCell.m; sourceTree = "<group>"; };
 		183D18F61F90570D0093A982 /* JianZhiChuFaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JianZhiChuFaTableViewCell.xib; sourceTree = "<group>"; };
+		1853C0E21FC1BE910054A9A2 /* ZLLuYinManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLLuYinManager.h; sourceTree = "<group>"; };
+		1853C0E31FC1BE910054A9A2 /* ZLLuYinManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLLuYinManager.m; sourceTree = "<group>"; };
+		1853C0E51FC1C2210054A9A2 /* PrivatyJianCeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivatyJianCeTool.h; sourceTree = "<group>"; };
+		1853C0E61FC1C2210054A9A2 /* PrivatyJianCeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivatyJianCeTool.m; sourceTree = "<group>"; };
 		185D778E1F8DA6AC00DA8849 /* ATQPHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATQPHeaderView.h; sourceTree = "<group>"; };
 		185D778F1F8DA6AC00DA8849 /* ATQPHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATQPHeaderView.m; sourceTree = "<group>"; };
 		185D77911F8DA6BD00DA8849 /* ATQPHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATQPHeaderView.xib; sourceTree = "<group>"; };
@@ -1990,6 +1996,17 @@
 			path = DetailVIew;
 			sourceTree = "<group>";
 		};
+		1853C0E11FC1BE670054A9A2 /* LuYinTool */ = {
+			isa = PBXGroup;
+			children = (
+				1853C0E21FC1BE910054A9A2 /* ZLLuYinManager.h */,
+				1853C0E31FC1BE910054A9A2 /* ZLLuYinManager.m */,
+				1853C0E51FC1C2210054A9A2 /* PrivatyJianCeTool.h */,
+				1853C0E61FC1C2210054A9A2 /* PrivatyJianCeTool.m */,
+			);
+			path = LuYinTool;
+			sourceTree = "<group>";
+		};
 		185D77931F8DB42800DA8849 /* CommonsZZL */ = {
 			isa = PBXGroup;
 			children = (
@@ -2002,6 +2019,7 @@
 		185D77961F8DF13900DA8849 /* ALLSourceFile */ = {
 			isa = PBXGroup;
 			children = (
+				1853C0E11FC1BE670054A9A2 /* LuYinTool */,
 				188E19A91F91A6C9007F56E4 /* PingJiaView */,
 				185D77971F8DF13900DA8849 /* AutoFitLabel */,
 				185D77A21F8DF13900DA8849 /* Category */,
@@ -5669,6 +5687,7 @@
 				40FA8A031F74CD7E0059A208 /* ATQNewPCollectionViewCell.m in Sources */,
 				40C77E341FAD9F1E000D8F70 /* ATQDTImageView.m in Sources */,
 				40FA8A0D1F74E81E0059A208 /* ATQTagTableViewCell.m in Sources */,
+				1853C0E71FC1C2220054A9A2 /* PrivatyJianCeTool.m in Sources */,
 				40E0F2731F78FE480074B064 /* ATQPhotoCollectionViewCell.m in Sources */,
 				40E93DE91F7775630018C3F5 /* ATQFourTableViewCell.m in Sources */,
 				40F5E64C1F91B2AD0077A574 /* UIDevice+ZJ.m in Sources */,
@@ -5898,6 +5917,7 @@
 				40E0F2391F78A2470074B064 /* ATQSetupViewController.m in Sources */,
 				40DF89AB1F8B1CA9008247F9 /* ATQCarRZSuccessViewController.m in Sources */,
 				185D78BC1F8E0CED00DA8849 /* JianZhiTableViewCell.m in Sources */,
+				1853C0E41FC1BE910054A9A2 /* ZLLuYinManager.m in Sources */,
 				406932151F90531200161167 /* NSArray+HYBUnicodeReadable.m in Sources */,
 				40236C521F7B8ED6004AE37B /* ATQUseNoteViewController.m in Sources */,
 				185D78A11F8DF13A00DA8849 /* NSString+URLZL.m in Sources */,

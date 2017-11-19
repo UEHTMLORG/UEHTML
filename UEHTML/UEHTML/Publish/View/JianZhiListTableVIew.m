@@ -17,7 +17,7 @@
         self.tableview = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStylePlain];
         self.tableview.delegate = self;
         self.tableview.dataSource = self;
-        
+        self.tableview.separatorStyle = UITableViewCellSeparatorStyleNone;
         [self addSubview:self.tableview];
         [self.tableview mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.mas_equalTo(self);

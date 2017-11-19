@@ -9,10 +9,7 @@
 #import "CPStepper.h"
 #import "UIColor+LhkhColor.h"
 
-
-@class MLProlistModel;
-
-@interface CPStepper () <UITextFieldDelegate,UIAlertViewDelegate> {
+@interface CPStepper () <UITextFieldDelegate,UIAlertViewDelegate,CPStepperDelegate> {
     
 }
 
@@ -20,11 +17,8 @@
 
 @implementation CPStepper
 
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
-    // Drawing code
-    
+
     _minValue = 0;
     _maxValue = 100000;
     
@@ -34,13 +28,6 @@
     self.rightViewMode = UITextFieldViewModeAlways;
     self.layer.borderColor = [UIColor colorWithHexString:UIBgColorStr].CGColor;
     self.layer.borderWidth = 1.f;
-    
-//    UIView *Lview = [[UIView alloc ]initWithFrame:CGRectMake(26, 0, 1, rect.size.height)];
-//    Lview.backgroundColor = RGBA(230, 230, 230, 1);
-//    [self addSubview:Lview];
-//    UIView *Rview = [[UIView alloc ]initWithFrame:CGRectMake(71, 0, 1, rect.size.height)];
-//    Rview.backgroundColor = RGBA(230, 230, 230, 1);
-//    [self addSubview:Rview];
     
     UIButton *subButton = [UIButton buttonWithType:UIButtonTypeSystem];
     subButton.frame = CGRectMake(0, 0, 20, rect.size.height);
@@ -83,8 +70,7 @@
 }
 
 -(void)sub:(UIButton *)sender {
-//    _value = [self.text integerValue];
-    
+
     if (_value <= _minValue) {
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:nil message:@"已经是最小数量了" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
         [alert show];
@@ -104,8 +90,6 @@
 }
 
 -(void)add: (UIButton *)sender {
-//    _value = [self.text integerValue];
-    
     if (_value >= _maxValue) {
         
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:nil message:@"已经是最大数量了" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
@@ -115,25 +99,7 @@
     }
 
     _value++;
-    
-    /*
-    if ([self.proList isKindOfClass:[MLProlistModel class]]) {
-        MLProlistModel *model = (MLProlistModel *)self.proList;
-        if (model.amount&&model.amount > 0) {
-            if (_value > model.amount) {//提示
-                _value --;
-               self.text = [NSString stringWithFormat:@"%lu", (unsigned long)_value];
-                
-                if ([self.stepperDelegate respondsToSelector:@selector(showFieldErrorMessage)]) {
-                    [self.stepperDelegate showFieldErrorMessage];
-                }
-                return;
-            }
-        }
-        
-    }
-     */
-    
+
     self.text = [NSString stringWithFormat:@"%lu", (unsigned long)_value];
     
     if (self.stepperDelegate && [self.stepperDelegate respondsToSelector:@selector(addField:ButtonClick:count:)] ) {
@@ -168,6 +134,11 @@
     if (self.stepperDelegate && [self.stepperDelegate respondsToSelector:@selector(subButtonClick: count:)]) {
         [self.stepperDelegate subButtonClick:self.proList count:self.text.intValue];
     }
+}
+
+-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    NSLog(@"----->%@",textField.text);
+    return YES;
 }
 
 @end

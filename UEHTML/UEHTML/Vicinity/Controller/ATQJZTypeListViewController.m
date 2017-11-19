@@ -21,6 +21,8 @@
 #import "ATQPaixuView.h"
 #import "ATQShaixuanView.h"
 #import "ATQlvyouDetailViewController.h"
+#import "DetailSubPublishViewController.h"
+#import <AVFoundation/AVFoundation.h>
 @interface ATQJZTypeListViewController ()<UITableViewDelegate,UITableViewDataSource,ATQPaixuViewDelegate,ATQShaixuanViewDelegate>{
     NSString *_model;
     NSString *_paixuStr;
@@ -28,11 +30,13 @@
     NSString *_age;
     NSString *_height;
     NSString *_distance;
+    NSString *audioURL;
 }
 @property (nonatomic,strong)UITableView *tableView;
 @property (strong,nonatomic)NSMutableArray *jobListArr;
 @property (strong,nonatomic)ATQPaixuView *PaixuView;
 @property (strong,nonatomic)ATQShaixuanView *ShaixuanView;
+@property (strong,nonatomic)AVAudioPlayer *audioPlayer;
 
 @end
 static NSInteger page = 1;
@@ -279,11 +283,27 @@ static NSInteger page = 1;
     }else{
         cell.sexImg.image = [UIImage imageNamed:@"zhuce-nv"];
     }
-    
+    if ([model.deposit_auth isEqualToString:@"0"]) {
+        cell.rzImg.hidden = YES;
+    }else{
+        cell.rzImg.hidden = NO;
+    }
+    if ([model.card_level isEqualToString:@"0"]) {
+        cell.vipImg.hidden = YES;
+        cell.shipingImg.hidden = YES;
+    }else{
+        cell.vipImg.hidden = NO;
+        cell.shipingImg.hidden = NO;
+    }
     NSString *texingStr = [NSString stringWithFormat:@"%@岁 %@cm %@kg",model.age,model.height,model.weight];
     cell.texingLab.text = texingStr;
     cell.disLab.text = model.distance;
     cell.chengLab.text = model.credit_num;
+    audioURL = model.voice;
+    cell.audioblock = ^{
+        NSLog(@"audio");
+        [self.audioPlayer play];
+    };
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
     
@@ -301,9 +321,9 @@ static NSInteger page = 1;
         vc.jobID = model.ID;
         [self.navigationController pushViewController:vc animated:YES];
     }else{
-        ATQTypePeoDetailViewController *vc = [[ATQTypePeoDetailViewController alloc] init];
+        DetailSubPublishViewController *vc = [[DetailSubPublishViewController alloc] init];
         ATQHomeItemListModel *model = self.jobListArr[indexPath.section];
-        vc.jobID = model.ID;
+        vc.jobId = model.ID;
         [self.navigationController pushViewController:vc animated:YES];
     }
     
@@ -335,6 +355,16 @@ static NSInteger page = 1;
     }
     return _jobListArr;
 }
+
+-(AVAudioPlayer *)audioPlayer
+{
+    if (_audioPlayer == nil) {
+        _audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:[NSURL URLWithString:audioURL] error:nil];
+        [self.audioPlayer prepareToPlay];
+    }
+   return _audioPlayer;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

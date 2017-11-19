@@ -256,7 +256,7 @@
     NSString *sign2 = [LhkhHttpsManager md5:sign1];
     NSString *sign = [LhkhHttpsManager md5:sign2];
     params[@"sign"] = sign;
-    NSString *url = [NSString stringWithFormat:@"%@/user/wechat/setting",ATQBaseUrl];
+    NSString *url = [NSString stringWithFormat:@"%@/api/user/wechat/setting",ATQBaseUrl];
     
     [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
         NSLog(@"-----setwechat=%@",responseObject);

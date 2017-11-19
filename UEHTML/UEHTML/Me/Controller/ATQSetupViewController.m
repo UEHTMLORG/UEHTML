@@ -68,16 +68,14 @@
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 5;
+    return 4;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (section == 0) {
         return 1;
     }else if (section == 1){
         return 2;
-    }else if (section == 2){
-        return 2;
-    }else if(section == 3){
+    }else if(section == 2){
         return 4;
     }else{
         return 1;
@@ -96,29 +94,31 @@
         [cell.userImg sd_setImageWithURL:[NSURL URLWithString:_dic[@"avatar"]] placeholderImage:[UIImage imageNamed:@""]];
         cell.userName.text = _dic[@"nick_name"];
             return cell;
-    }else if (indexPath.section == 1){
-        if (indexPath.row == 0) {
-            static NSString *CellIdentifier = @"ATQSZSecTableViewCell" ;
-            ATQSZSecTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-            if (cell == nil) {
-                NSArray *array = [[NSBundle mainBundle]loadNibNamed: CellIdentifier owner:self options:nil];
-                cell = [array objectAtIndex:0];
-            }
-            cell.selectionStyle = UITableViewCellSelectionStyleNone;
-            cell.titleLab.text = @"设置支付密码";
-            return cell;
-        }else{
-            static NSString *CellIdentifier = @"ATQSZThiTableViewCell" ;
-            ATQSZThiTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-            if (cell == nil) {
-                NSArray *array = [[NSBundle mainBundle]loadNibNamed: CellIdentifier owner:self options:nil];
-                cell = [array objectAtIndex:0];
-            }
-            cell.selectionStyle = UITableViewCellSelectionStyleNone;
-            cell.titleLab.text = @"设置无痕浏览";
-            return cell;
-        }
-    }else if(indexPath.section == 2){
+    }
+//    else if (indexPath.section == 1){
+//        if (indexPath.row == 0) {
+//            static NSString *CellIdentifier = @"ATQSZSecTableViewCell" ;
+//            ATQSZSecTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+//            if (cell == nil) {
+//                NSArray *array = [[NSBundle mainBundle]loadNibNamed: CellIdentifier owner:self options:nil];
+//                cell = [array objectAtIndex:0];
+//            }
+//            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+//            cell.titleLab.text = @"设置支付密码";
+//            return cell;
+//        }else{
+//            static NSString *CellIdentifier = @"ATQSZThiTableViewCell" ;
+//            ATQSZThiTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+//            if (cell == nil) {
+//                NSArray *array = [[NSBundle mainBundle]loadNibNamed: CellIdentifier owner:self options:nil];
+//                cell = [array objectAtIndex:0];
+//            }
+//            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+//            cell.titleLab.text = @"设置无痕浏览";
+//            return cell;
+//        }
+//    }
+    else if(indexPath.section == 1){
         static NSString *CellIdentifier = @"ATQSZSecTableViewCell" ;
         ATQSZSecTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         if (cell == nil) {
@@ -132,7 +132,7 @@
             cell.titleLab.text = @"意见反馈";
         }
         return cell;
-    }else if(indexPath.section == 3){
+    }else if(indexPath.section == 2){
         if (indexPath.row == 1 || indexPath.row == 3) {
             static NSString *CellIdentifier = @"ATQSZFourTableViewCell" ;
             ATQSZFourTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -190,12 +190,14 @@
         ATQUserInfoViewController *vc = [[ATQUserInfoViewController alloc] init];
         vc.dic = _dic;
         [self.navigationController pushViewController:vc animated:YES];
-    }else if (indexPath.section == 1) {
-        if (indexPath.row == 0) {
-            ATQSetupSecrityViewController *vc = [[ATQSetupSecrityViewController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-        }
-    }else if (indexPath.section == 2){
+    }
+//    else if (indexPath.section == 1) {
+//        if (indexPath.row == 0) {
+//            ATQSetupSecrityViewController *vc = [[ATQSetupSecrityViewController alloc] init];
+//            [self.navigationController pushViewController:vc animated:YES];
+//        }
+//    }
+    else if (indexPath.section == 1){
         if (indexPath.row == 0) {
             ATQUserManualViewController *vc = [[ATQUserManualViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
@@ -252,16 +254,18 @@
     if (section == 0 || section == 4) {
         
         return nil;
-    }else if(section == 1){
-        UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 40)];
-        UILabel *lab = [[UILabel alloc]initWithFrame:CGRectMake(20, 0, ScreenWidth-20, 40)];
-        lab.text = @"账户安全";
-        lab.font = [UIFont systemFontOfSize:14];
-        lab.textColor = [UIColor colorWithHexString:@"8B8B8B"];
-        [view addSubview:lab];
-        view.backgroundColor = [UIColor colorWithHexString:UIBgColorStr];
-        return view;
-    }else if (section == 2){
+    }
+//    else if(section == 1){
+//        UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 40)];
+//        UILabel *lab = [[UILabel alloc]initWithFrame:CGRectMake(20, 0, ScreenWidth-20, 40)];
+//        lab.text = @"账户安全";
+//        lab.font = [UIFont systemFontOfSize:14];
+//        lab.textColor = [UIColor colorWithHexString:@"8B8B8B"];
+//        [view addSubview:lab];
+//        view.backgroundColor = [UIColor colorWithHexString:UIBgColorStr];
+//        return view;
+//    }
+    else if (section == 1){
         UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 40)];
         UILabel *lab = [[UILabel alloc]initWithFrame:CGRectMake(20, 0, ScreenWidth-20, 40)];
         lab.text = @"帮助与反馈";
@@ -279,9 +283,9 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    if (section == 0 || section == 4) {
+    if (section == 0 || section == 3) {
         return 0;
-    }else if (section == 1 || section == 2){
+    }else if (section == 1){
         return 40;
     }else{
         return 10;

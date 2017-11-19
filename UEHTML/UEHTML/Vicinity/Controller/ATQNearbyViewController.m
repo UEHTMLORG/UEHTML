@@ -26,6 +26,7 @@
 #import <BaiduMapAPI_Location/BMKLocationComponent.h>
 #import "ATQHomeModel.h"
 #import "ATQRecModel.h"
+#import "DetailXuQiuViewController.h"
 @interface ATQNearbyViewController ()<UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource,UIScrollViewDelegate,BMKLocationServiceDelegate>{
     UIView *headView;
     NSMutableArray *_imageArray;//滚动图数组
@@ -499,9 +500,26 @@
         vc.jobID = model.ID;
         [self.navigationController pushViewController:vc animated:YES];
     }else{
-        ATQTypeListInviteDetailViewController *vc = [[ATQTypeListInviteDetailViewController alloc] init];
+//        ATQTypeListInviteDetailViewController *vc = [[ATQTypeListInviteDetailViewController alloc] init];
+        ATQRecModel *model = nil;
+        if (collectionView.tag == 1) {
+            if (leftArray.count>0) {
+                model = leftArray[indexPath.row];
+            }
+        }else if (collectionView.tag == 2){
+            if (midArray.count>0) {
+                model = midArray[indexPath.row];
+            }
+        }else{
+            if (rightArray.count>0) {
+                model = rightArray[indexPath.row];
+            }
+        }
+        DetailXuQiuViewController *vc = [[DetailXuQiuViewController alloc] init];
+            vc.jobId = model.ID;
         [self.navigationController pushViewController:vc animated:YES];
     }
+
 }
 
 #pragma mark - UICollectionViewDelegateFlowLayout

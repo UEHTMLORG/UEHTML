@@ -14,6 +14,11 @@
     [super awakeFromNib];
     // Initialization code
 }
+- (IBAction)audioClick:(id)sender {
+    if (_audioblock) {
+        _audioblock();
+    }
+}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

@@ -71,7 +71,35 @@
 //获取验证码
 - (IBAction)getCode:(id)sender {
     NSLog(@"getCode");
-    [self startTimer];
+    
+    NSMutableDictionary *params = [NSMutableDictionary  dictionary];
+    params[@"phone"] = self.userText.text;
+    params[@"code_type"] = @"login";
+    params[@"apptype"] = @"ios";
+    params[@"appversion"] = APPVERSION_AOTU_ZL;
+    NSString *random_str = [ZLSecondAFNetworking getNowTime];
+    params[@"random_str"] = random_str;
+    NSString *app_token = APP_TOKEN;
+    NSString *signStr = [NSString stringWithFormat:@"%@%@",app_token,random_str];
+    NSString *sign1 = [ZLSecondAFNetworking getMD5fromString:signStr];
+    NSString *sign2 = [ZLSecondAFNetworking getMD5fromString:sign1];
+    NSString *sign = [ZLSecondAFNetworking getMD5fromString:sign2];
+    params[@"sign"] = sign;
+    NSString *url = [NSString stringWithFormat:@"%@/api/user/sms_check_code",ATQBaseUrl];
+    
+    [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
+        NSLog(@"-----sms_check_code=%@",responseObject);
+        if ([responseObject[@"status"] isEqualToString:@"1"]) {
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+            [self startTimer];
+        }else{
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+        }
+        
+    } failure:^(NSError *error) {
+        NSLog(@"登录失败：%@",error);
+    }];
+
 }
 
 //登录

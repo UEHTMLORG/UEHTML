@@ -12,8 +12,14 @@
 #import "LhkhHttpsManager.h"
 #import "MBProgressHUD+Add.h"
 #import "UIImageView+WebCache.h"
-@interface ATQTypePeoDetailViewController ()<UITextViewDelegate>
-
+@interface ATQTypePeoDetailViewController ()<UITextViewDelegate,CPStepperDelegate>{
+    UIControl *_blackView;
+    NSDictionary *job;
+    NSDictionary *user_profile;
+    
+}
+@property (nonatomic,strong)UIView *datePickerView;
+@property (nonatomic,strong)UIDatePicker *datePicker;
 @end
 
 @implementation ATQTypePeoDetailViewController
@@ -21,7 +27,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"下单约TA";
+    self.textField.stepperDelegate = self;
     [self buildTextView];
+    [self setblackView];
+    [self setDatePickerView];
     [self loadData];
 }
 
@@ -51,7 +60,8 @@
         NSLog(@"-----work_about_her=%@",responseObject);
         if ([responseObject[@"status"] isEqualToString:@"1"]) {
             if(responseObject[@"data"]){
-                NSDictionary *user_profile = responseObject[@"data"][@"user_profile"];
+                user_profile = responseObject[@"data"][@"user_profile"];
+                job = responseObject[@"data"][@"job"];
                 [self.userImg sd_setImageWithURL:[NSURL URLWithString:user_profile[@"avatar"]] placeholderImage:[UIImage imageNamed:@""]];
                 self.userNameLab.text = user_profile[@"nick_name"];
                 self.chengLab.text = user_profile[@"credit_num"];
@@ -64,6 +74,19 @@
                 self.disLab.text = responseObject[@"data"][@"distance"];
              
                 self.tagLab.text = [NSString stringWithFormat:@"%@cm %@kg",user_profile[@"height"],user_profile[@"weight"]];
+                if ([user_profile[@"deposit_auth"] isEqualToString:@"0"]) {
+                    self.rzImg.hidden = YES;
+                }else{
+                    self.rzImg.hidden = NO;
+                }
+                
+                if ([user_profile[@"card_level"] isEqualToString:@"0"]) {
+                    self.vipImg.hidden = YES;
+                }else{
+                    self.vipImg.hidden = NO;
+                }
+                NSString *price = job[@"price"];
+                self.jiageLab.text = [NSString stringWithFormat:@"线下服务 %.f元/小时",price.floatValue];
             }
 
         }else if ([responseObject[@"status"] isEqualToString:@"302"]){
@@ -101,12 +124,132 @@
     [self.yajinBtn setAttributedTitle:str forState:UIControlStateNormal];
 }
 
+-(void)setblackView{
+    _blackView = [[UIControl alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight -  260)];
+    [_blackView addTarget:self action:@selector(cancelButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    _blackView.backgroundColor = [UIColor blackColor];
+    _blackView.alpha = 0.4;
+    _blackView.hidden = YES;
+    UIWindow* currentWindow = [UIApplication sharedApplication].keyWindow;
+    [currentWindow addSubview:_blackView];
+    
+}
+
+-(void)setDatePickerView{
+    
+    _datePickerView = [[UIView alloc]initWithFrame:CGRectZero];
+    _datePickerView.backgroundColor = [UIColor whiteColor];
+    _datePickerView.hidden = YES;
+    [self.view addSubview:_datePickerView];
+    UIButton *cancelBtn = [[UIButton alloc] initWithFrame:CGRectZero];
+    cancelBtn.layer.cornerRadius = 4.f;
+    cancelBtn.layer.masksToBounds = YES;
+    [cancelBtn setTitle:@"取消" forState:UIControlStateNormal];
+    cancelBtn.backgroundColor = [UIColor colorWithHexString:UIColorStr];
+    [cancelBtn addTarget:self action:@selector(cancelButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    [cancelBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    cancelBtn.titleLabel.font = [UIFont systemFontOfSize:12];
+    UIButton *sureBtn = [[UIButton alloc] initWithFrame:CGRectZero];
+    sureBtn.layer.cornerRadius = 4.f;
+    sureBtn.layer.masksToBounds = YES;
+    [sureBtn setTitle:@"确认" forState:UIControlStateNormal];
+    sureBtn.backgroundColor = [UIColor colorWithHexString:UIColorStr];
+    [sureBtn addTarget:self action:@selector(sureButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    [sureBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    sureBtn.titleLabel.font = [UIFont systemFontOfSize:12];
+    [_datePickerView addSubview:cancelBtn];
+    [_datePickerView addSubview:sureBtn];
+    
+    [cancelBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(_datePickerView).offset(15);
+        make.top.mas_equalTo(_datePickerView).offset(10);
+        make.width.mas_equalTo(50);
+        make.height.mas_equalTo(30);
+    }];
+    [sureBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.mas_equalTo(_datePickerView).offset(-15);
+        make.top.mas_equalTo(_datePickerView).offset(10);
+        make.width.mas_equalTo(50);
+        make.height.mas_equalTo(30);
+    }];
+    self.datePicker = [[UIDatePicker alloc]initWithFrame:CGRectZero];
+    self.datePicker.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    [_datePickerView addSubview:self.datePicker];
+    [self.datePicker addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventValueChanged ];
+    
+    //设置显示格式
+    //默认根据手机本地设置显示为中文还是其他语言
+    NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"];//设置为中文显示
+    self.datePicker.locale = locale;
+    [_datePickerView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.mas_equalTo(self.view).offset(0);
+        make.height.mas_equalTo(260);
+    }];
+    [self.datePicker mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.mas_equalTo(_datePickerView).offset(0);
+        make.height.mas_equalTo(216);
+    }];
+    
+    
+    //当前时间创建NSDate
+    NSDate *localDate = [NSDate date];
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *offsetComponents = [[NSDateComponents alloc] init];
+    //设置时间
+    [offsetComponents setYear:0];
+    [offsetComponents setMonth:0];
+    [offsetComponents setDay:0];
+    NSDate *maxDate = [gregorian dateByAddingComponents:offsetComponents toDate:localDate options:0];
+    self.datePicker.datePickerMode = UIDatePickerModeDateAndTime;
+    self.datePicker.maximumDate = maxDate;
+    
+}
+
+-(void)dateChanged:(id)sender{
+    UIDatePicker *control = (UIDatePicker*)sender;
+    NSDate* date = control.date;
+    NSLog(@"dateChanged响应事件：%@",date);
+    NSDate *pickerDate = [self.datePicker date];
+    NSDateFormatter *pickerFormatter = [[NSDateFormatter alloc] init];
+    [pickerFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+    NSString *dateString = [pickerFormatter stringFromDate:pickerDate];
+    NSLog(@"格式化显示时间：%@",dateString);
+    self.yuyueTimeLab.text = dateString;
+}
+
+-(void)cancelButtonAction:(id)sender{
+    
+    _blackView.hidden = _datePickerView.hidden = YES;
+}
+
+-(void)sureButtonAction:(id)sender{
+    
+    _blackView.hidden = _datePickerView.hidden = YES;
+}
+- (IBAction)timeClick:(id)sender {
+    _blackView.hidden = _datePickerView.hidden = NO;
+}
+
 //押金认证
 - (IBAction)yajinClick:(id)sender {
     ATQYajinRZViewController *vc = [[ATQYajinRZViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+- (void)addField:(CPStepper *)field ButtonClick:(id)prolist count:(int)textCount{
+    NSLog(@"----------%d",textCount);
+    NSString *price = job[@"price"];
+    
+    self.shijineLab.text = [NSString stringWithFormat:@"共：%.f元",price.floatValue*textCount];
+}
+
+-(void)subButtonClicked:(NSDictionary *)param count:(int)textCount{
+    NSLog(@"++++++++++%d",textCount);
+    NSString *price = job[@"price"];
+    self.shijineLab.text = [NSString stringWithFormat:@"共：%.f元",price.floatValue*textCount];
+}
+- (IBAction)anbaoClick:(id)sender {
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

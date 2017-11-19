@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qf8-Kk-dsl" id="tIN-bd-74b">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ei6-9O-Dg5">
@@ -138,6 +138,12 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Upo-FR-PFt">
+                        <rect key="frame" x="260" y="50" width="50" height="20"/>
+                        <connections>
+                            <action selector="audioClick:" destination="qf8-Kk-dsl" eventType="touchUpInside" id="Df5-ek-M5M"/>
+                        </connections>
+                    </button>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fujin-shiping" translatesAutoresizingMaskIntoConstraints="NO" id="C4X-ut-iMd">
                         <rect key="frame" x="60" y="50" width="20" height="20"/>
                         <constraints>
@@ -148,6 +154,7 @@
                 <constraints>
                     <constraint firstItem="C4X-ut-iMd" firstAttribute="bottom" secondItem="Ei6-9O-Dg5" secondAttribute="bottom" id="2aw-RV-N6b"/>
                     <constraint firstItem="ahH-W2-WhF" firstAttribute="trailing" secondItem="Mc2-lf-H4b" secondAttribute="leading" constant="-5" id="6dF-4U-g5r"/>
+                    <constraint firstItem="Upo-FR-PFt" firstAttribute="bottom" secondItem="5ga-TE-qzD" secondAttribute="bottom" id="7O7-xa-jZg"/>
                     <constraint firstItem="zv3-d3-Ghx" firstAttribute="top" secondItem="aTX-Yg-bJj" secondAttribute="bottom" constant="3" id="90N-K5-aHq"/>
                     <constraint firstItem="jNH-dY-oqw" firstAttribute="leading" secondItem="zv3-d3-Ghx" secondAttribute="trailing" constant="5" id="9Bx-gH-d40"/>
                     <constraint firstItem="zv3-d3-Ghx" firstAttribute="leading" secondItem="aTX-Yg-bJj" secondAttribute="leading" id="9nt-yY-Rc5"/>
@@ -156,10 +163,13 @@
                     <constraint firstItem="kai-0Q-Ilv" firstAttribute="leading" secondItem="aTX-Yg-bJj" secondAttribute="leading" id="Sfw-4P-3i8"/>
                     <constraint firstItem="aTX-Yg-bJj" firstAttribute="leading" secondItem="Ei6-9O-Dg5" secondAttribute="trailing" constant="10" id="UXX-Pg-lbm"/>
                     <constraint firstItem="ahH-W2-WhF" firstAttribute="top" secondItem="jNH-dY-oqw" secondAttribute="top" id="Vnc-rd-8Iq"/>
+                    <constraint firstItem="Upo-FR-PFt" firstAttribute="leading" secondItem="5ga-TE-qzD" secondAttribute="leading" id="W3b-yd-JPO"/>
                     <constraint firstItem="C4X-ut-iMd" firstAttribute="trailing" secondItem="Ei6-9O-Dg5" secondAttribute="trailing" id="jCI-mw-UMC"/>
                     <constraint firstItem="riy-K6-3KX" firstAttribute="leading" secondItem="kai-0Q-Ilv" secondAttribute="trailing" constant="5" id="jDt-1T-H8o"/>
                     <constraint firstItem="ahH-W2-WhF" firstAttribute="centerY" secondItem="Mc2-lf-H4b" secondAttribute="centerY" id="jdM-zg-T12"/>
+                    <constraint firstItem="Upo-FR-PFt" firstAttribute="trailing" secondItem="5ga-TE-qzD" secondAttribute="trailing" id="mCq-Yd-rp6"/>
                     <constraint firstItem="5ga-TE-qzD" firstAttribute="top" secondItem="Mc2-lf-H4b" secondAttribute="bottom" id="pPI-lH-ISq"/>
+                    <constraint firstItem="Upo-FR-PFt" firstAttribute="top" secondItem="5ga-TE-qzD" secondAttribute="top" id="peg-ym-W6m"/>
                     <constraint firstItem="jNH-dY-oqw" firstAttribute="centerY" secondItem="zv3-d3-Ghx" secondAttribute="centerY" id="qCp-9r-amA"/>
                     <constraint firstItem="kai-0Q-Ilv" firstAttribute="top" secondItem="zv3-d3-Ghx" secondAttribute="bottom" constant="5" id="sAx-bE-HtR"/>
                     <constraint firstItem="riy-K6-3KX" firstAttribute="centerY" secondItem="kai-0Q-Ilv" secondAttribute="centerY" id="xsE-pO-ykP"/>
@@ -178,10 +188,13 @@
             <connections>
                 <outlet property="chengLab" destination="AtZ-6F-hbY" id="7vK-O2-FSe"/>
                 <outlet property="disLab" destination="Mc2-lf-H4b" id="Nxz-2n-69I"/>
+                <outlet property="rzImg" destination="zv3-d3-Ghx" id="pVK-0Z-VeT"/>
                 <outlet property="sexImg" destination="kai-0Q-Ilv" id="jvy-kT-XOg"/>
+                <outlet property="shipingImg" destination="C4X-ut-iMd" id="Oji-70-xJ2"/>
                 <outlet property="texingLab" destination="riy-K6-3KX" id="t5a-Gm-MRd"/>
                 <outlet property="userImg" destination="Ei6-9O-Dg5" id="9v2-SM-Zgj"/>
                 <outlet property="userNameLab" destination="aTX-Yg-bJj" id="bRH-Lp-pC6"/>
+                <outlet property="vipImg" destination="jNH-dY-oqw" id="rPZ-BS-eXn"/>
                 <outlet property="yuyinLab" destination="KnF-fw-lva" id="6V3-2O-Aqf"/>
             </connections>
         </tableViewCell>

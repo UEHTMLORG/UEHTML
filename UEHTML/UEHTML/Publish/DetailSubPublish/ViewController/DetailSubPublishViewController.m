@@ -7,7 +7,7 @@
 //
 
 #import "DetailSubPublishViewController.h"
-
+#import "ATQTypePeoDetailViewController.h"
 @interface DetailSubPublishViewController (){
     
     /** 当前Model的相册图片数组 */
@@ -251,6 +251,9 @@
 - (IBAction)liaotianBtnAction:(id)sender {
 }
 - (IBAction)yueTaBtnAction:(id)sender {
+    ATQTypePeoDetailViewController *vc = [[ATQTypePeoDetailViewController alloc] init];
+    vc.jobID = self.jobId;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 #pragma mark ===================底部按钮执行方法 END==================
 #pragma mark ===================懒加载==================

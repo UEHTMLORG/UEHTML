@@ -100,6 +100,7 @@
                 }
                 NSString *price = job[@"price"];
                 self.jiageLab.text = [NSString stringWithFormat:@"线下服务 %.f元/小时",price.floatValue];
+                self.zongjineLab.text = @"本单总金额：0元";
             }
 
         }else if ([responseObject[@"status"] isEqualToString:@"302"]){

@@ -121,20 +121,18 @@
 /** 创建左边按钮 右边 */
 - (void)loadLeftRightButton{
     UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [leftBtn setFrame:CGRectMake(0, 0, 19, 19)];
     [leftBtn addTarget:self action:@selector(leftButtonAction) forControlEvents:UIControlEventTouchUpInside];
     [leftBtn setBackgroundImage:[UIImage imageNamed:@"xiaoxi-ling"] forState:UIControlStateNormal];
     //[leftBtn setImageEdgeInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
     leftBtn.badgeValue = @"5";
     leftBtn.badgeBGColor = [UIColor whiteColor];
     leftBtn.badgeTextColor = [UIColor colorWithhex16stringToColor:Main_Purple_Color];
-    leftBtn.badgeOriginX = 5.0f;
+    leftBtn.badgeOriginX = 10.f;
     UIBarButtonItem * leftItem = [[UIBarButtonItem alloc]initWithCustomView:leftBtn];
     [leftItem setStyle:UIBarButtonItemStyleDone];
     self.navigationItem.leftBarButtonItem = leftItem;
     
     UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [rightBtn setFrame:CGRectMake(0, 0, 19, 19)];
     [rightBtn addTarget:self action:@selector(rightButtonAction) forControlEvents:UIControlEventTouchUpInside];
     [rightBtn setBackgroundImage:[UIImage imageNamed:@"xiaoxi-ren"] forState:UIControlStateNormal];
     //[rightBtn setImageEdgeInsets:UIEdgeInsetsMake(5, 5, 5, 5)];

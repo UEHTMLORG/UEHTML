@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -120,6 +120,13 @@
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hlk-Zl-lbc">
+                        <rect key="frame" x="0.0" y="111" width="375" height="1"/>
+                        <color key="backgroundColor" red="0.92919379469999996" green="0.93333435060000003" blue="0.93734973669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="GL1-48-5Yd"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="WgB-Sg-YRz" firstAttribute="leading" secondItem="5PP-fV-LQl" secondAttribute="trailing" constant="8" id="5oE-5z-W0j"/>
@@ -152,6 +159,11 @@
                     <constraint firstItem="aye-lk-cja" firstAttribute="centerX" secondItem="MY7-WN-dAB" secondAttribute="centerX" constant="7" id="ygP-bJ-1wo"/>
                 </constraints>
             </tableViewCellContentView>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Hlk-Zl-lbc" secondAttribute="trailing" id="69X-Fi-1Ap"/>
+                <constraint firstAttribute="bottom" secondItem="Hlk-Zl-lbc" secondAttribute="bottom" id="D7t-Xp-WLo"/>
+                <constraint firstItem="Hlk-Zl-lbc" firstAttribute="leading" secondItem="KGk-i7-Jjw" secondAttribute="leading" id="jSR-Vl-Mku"/>
+            </constraints>
             <connections>
                 <outlet property="ageLabel" destination="aye-lk-cja" id="pUu-pD-7FR"/>
                 <outlet property="avatarImage" destination="5PP-fV-LQl" id="V21-T1-NAM"/>
@@ -167,7 +179,7 @@
                 <outlet property="statusLabel" destination="sP7-yh-bMG" id="RPs-0K-Udq"/>
                 <outlet property="vipImage" destination="l8j-z4-Sqe" id="YzL-8a-yed"/>
             </connections>
-            <point key="canvasLocation" x="174" y="35"/>
+            <point key="canvasLocation" x="280.5" y="29"/>
         </tableViewCell>
         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FUWUTUIJIANID" id="Hzb-3J-Rhr" customClass="FuWuFangTuiJianCell">
             <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
@@ -276,6 +288,13 @@
                             <constraint firstAttribute="width" constant="17" id="Icx-RR-sTp"/>
                         </constraints>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YR3-cL-Mrw">
+                        <rect key="frame" x="0.0" y="111" width="375" height="1"/>
+                        <color key="backgroundColor" red="0.92919379469999996" green="0.93333435060000003" blue="0.93734973669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="psX-G3-Sro"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="4dY-cG-Nez" firstAttribute="centerY" secondItem="Tyn-7k-8vZ" secondAttribute="centerY" id="0Cu-tf-6Bh"/>
@@ -308,6 +327,11 @@
                     <constraint firstItem="Ih0-FH-Maw" firstAttribute="leading" secondItem="lhw-hq-lIa" secondAttribute="leading" constant="10" id="wzM-Db-GZb"/>
                 </constraints>
             </tableViewCellContentView>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="YR3-cL-Mrw" secondAttribute="trailing" id="GBE-W8-jE0"/>
+                <constraint firstAttribute="bottom" secondItem="YR3-cL-Mrw" secondAttribute="bottom" id="O4t-26-OCr"/>
+                <constraint firstItem="YR3-cL-Mrw" firstAttribute="leading" secondItem="Hzb-3J-Rhr" secondAttribute="leading" id="Tco-TZ-hbI"/>
+            </constraints>
             <connections>
                 <outlet property="ageLabel" destination="R1t-Um-KW3" id="Qju-jz-XKc"/>
                 <outlet property="avatarImage" destination="bsd-b1-g32" id="gaQ-Co-sVX"/>

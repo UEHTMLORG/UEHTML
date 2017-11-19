@@ -40,7 +40,7 @@
     [super viewDidLoad];
     self.navigationItem.title = @"好友345";
     
-    if ([self.selecttypeStr isEqualToString:@"select"]) {
+    if ([self.selecttypeStr isEqualToString:@"select1"] || [self.selecttypeStr isEqualToString:@"select2"]) {
         UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithTitle:@"确定" style:UIBarButtonItemStylePlain target:self action:@selector(sureClick)];
         self.navigationItem.rightBarButtonItem = right;
         
@@ -119,8 +119,8 @@
 
 -(void)sureClick{
     NSLog(@"");
-    if ([_delegate respondsToSelector:@selector(ATQMyFriendsViewControllerDelegate:)]) {
-        [_delegate ATQMyFriendsViewControllerDelegate:selectUseridStr];
+    if ([_delegate respondsToSelector:@selector(ATQMyFriendsViewControllerDelegate:seleType:)]) {
+        [_delegate ATQMyFriendsViewControllerDelegate:selectUseridStr seleType:self.selecttypeStr];
     }
     [self.navigationController popViewControllerAnimated:NO];
 }
@@ -252,7 +252,7 @@
     cell.userNameLab.text = model.nick_name;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    if ([self.selecttypeStr isEqualToString:@"select"]) {
+    if ([self.selecttypeStr isEqualToString:@"select1"]||[self.selecttypeStr isEqualToString:@"select2"]) {
         if ([typeStr isEqualToString:@"1"]) {
             cell.xuanzeBtn.hidden = NO;
         }else{

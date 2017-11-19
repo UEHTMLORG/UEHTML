@@ -37,7 +37,8 @@
     NSString *selStr;
     NSString *chakanStr;
     NSString *_addrStr;
-    NSString *_useridStr;
+    NSString *_useridStr1;
+    NSString *_useridStr2;
     NSString *_lat;
     NSString *_lon;
     NSString *_picStr;
@@ -102,10 +103,10 @@
     params[@"lon"] = _lon;
     params[@"desc"] = _publishStr;
     params[@"who_see"] = who_see;
-    params[@"who_see_list"] = @"";
+    params[@"who_see_list"] = _useridStr1;
     params[@"pictures"] = @"";
     params[@"video"] = @"";
-    params[@"remind_see_list"] = _useridStr;
+    params[@"remind_see_list"] = _useridStr2;
     params[@"user_id"] = user_id;
     params[@"user_token"] = user_token;
     params[@"apptype"] = @"ios";
@@ -354,7 +355,7 @@
             }else{
                 ATQMyFriendsViewController *vc = [[ATQMyFriendsViewController alloc]init];
                 vc.delegate = self;
-                vc.selecttypeStr = @"select";
+                vc.selecttypeStr = @"select2";
                 [self.navigationController pushViewController:vc animated:NO];
             }
         }
@@ -372,7 +373,7 @@
             }else{
                 ATQMyFriendsViewController *vc = [[ATQMyFriendsViewController alloc]init];
                 vc.delegate = self;
-                vc.selecttypeStr = @"select";
+                vc.selecttypeStr = @"select2";
                 [self.navigationController pushViewController:vc animated:NO];
             }        }
     }
@@ -494,6 +495,11 @@
             chakanStr = @"公开";
         }else if (buttonIndex == 1){
             chakanStr = @"部分人可见";
+            ATQMyFriendsViewController *vc = [[ATQMyFriendsViewController alloc]init];
+            vc.delegate = self;
+            vc.selecttypeStr = @"select1";
+            [self.navigationController pushViewController:vc animated:NO];
+            
         }else if (buttonIndex == 2){
             chakanStr = @"私密";
         }else{
@@ -657,9 +663,14 @@
     [self.tableView reloadData];
 }
 
--(void)ATQMyFriendsViewControllerDelegate:(NSString *)addrStr{
+-(void)ATQMyFriendsViewControllerDelegate:(NSString *)addrStr seleType:(NSString*)seletype{
     NSLog(@"----%@",addrStr);
-    _useridStr = addrStr;
+    if ([seletype isEqualToString:@"select1"]) {
+        _useridStr1 = addrStr;
+    }else{
+        _useridStr2 = addrStr;
+    }
+    
 }
 
 #pragma mark ----反向地理编码

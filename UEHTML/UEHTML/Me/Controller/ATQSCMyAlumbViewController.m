@@ -30,8 +30,19 @@
     self.navigationItem.title = @"我的相册";
      height = 180;
      _imageArr = [NSMutableArray array];
+    UIBarButtonItem *right = [[UIBarButtonItem alloc]initWithTitle:@"保存" style:UIBarButtonItemStylePlain target:self action:@selector(save)];
+    right.tintColor = [UIColor colorWithHexString:UISelTextColorStr];
+    self.navigationItem.rightBarButtonItem = right;
     [self setTableView];
 }
+
+-(void)save{
+    [MBProgressHUD show:@"保存成功" view:self.view];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.75 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.navigationController popViewControllerAnimated:NO];
+    });
+}
+
 -(void)setTableView{
     _tableView = ({
         UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectZero];

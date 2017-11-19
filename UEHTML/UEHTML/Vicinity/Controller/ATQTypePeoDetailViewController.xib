@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ATQTypePeoDetailViewController">
             <connections>
                 <outlet property="addrText" destination="5ez-2q-5CZ" id="mfA-Pi-OWM"/>
+                <outlet property="addressLab" destination="2Ol-gM-sAw" id="6Is-3n-MuP"/>
                 <outlet property="ageLab" destination="acU-8B-Wcr" id="q6C-MF-AsA"/>
                 <outlet property="baojiaLab" destination="n9f-15-Q6H" id="qHd-nW-HA1"/>
                 <outlet property="chengLab" destination="3M6-Yh-Bsz" id="sOl-mW-lzb"/>
@@ -336,6 +337,15 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ol-gM-sAw">
+                                                            <rect key="frame" x="347" y="10" width="0.0" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="vxg-3Q-mRp"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" red="0.39200586079999999" green="0.39612069729999999" blue="0.39607340099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xiayiye_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="1Gh-sY-GVi">
                                                             <rect key="frame" x="357" y="12.5" width="8" height="15"/>
                                                             <constraints>
@@ -344,6 +354,9 @@
                                                         </imageView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edh-Yl-i49">
                                                             <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                                                            <connections>
+                                                                <action selector="addrClick:" destination="-1" eventType="touchUpInside" id="XPD-mH-3KK"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -354,7 +367,9 @@
                                                         <constraint firstAttribute="trailing" secondItem="edh-Yl-i49" secondAttribute="trailing" id="HS7-P1-UrF"/>
                                                         <constraint firstAttribute="height" constant="40" id="S0Q-Iq-Jui"/>
                                                         <constraint firstAttribute="trailing" secondItem="1Gh-sY-GVi" secondAttribute="trailing" constant="10" id="SzA-0d-HQE"/>
+                                                        <constraint firstItem="2Ol-gM-sAw" firstAttribute="trailing" secondItem="1Gh-sY-GVi" secondAttribute="leading" constant="-10" id="Y5I-3B-7HP"/>
                                                         <constraint firstAttribute="bottom" secondItem="rzM-Wk-Ey4" secondAttribute="bottom" id="gAo-pH-8Yt"/>
+                                                        <constraint firstItem="2Ol-gM-sAw" firstAttribute="centerY" secondItem="rzM-Wk-Ey4" secondAttribute="centerY" id="jUe-w7-Q54"/>
                                                         <constraint firstItem="1Gh-sY-GVi" firstAttribute="centerY" secondItem="0pl-XG-RQT" secondAttribute="centerY" id="tkV-Uz-h4b"/>
                                                         <constraint firstAttribute="bottom" secondItem="edh-Yl-i49" secondAttribute="bottom" id="va5-Kw-jST"/>
                                                         <constraint firstItem="edh-Yl-i49" firstAttribute="leading" secondItem="0pl-XG-RQT" secondAttribute="leading" id="yKF-Gg-3bE"/>
@@ -511,6 +526,9 @@
                                                             <integer key="value" value="4"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="sureOrderClick:" destination="-1" eventType="touchUpInside" id="mee-hP-8HY"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

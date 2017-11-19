@@ -7,7 +7,7 @@
 //
 
 #import "ATQMePublishFTableViewCell.h"
-@interface ATQMePublishFTableViewCell()<UITextViewDelegate>
+@interface ATQMePublishFTableViewCell()<UITextViewDelegate,ATQMePublishFTableViewCellDelegate>
 @end
 @implementation ATQMePublishFTableViewCell
 
@@ -15,6 +15,15 @@
     [super awakeFromNib];
     self.publishTextView.placeholder = @"这一刻的想法...";
     self.publishTextView.delegate = self;
+}
+
+
+-(BOOL)textViewShouldEndEditing:(UITextView *)textView{
+    [self.publishTextView endEditing:YES];
+    if ([_delegate respondsToSelector:@selector(ATQMePublishFTableViewCellDelegate:)]) {
+        [_delegate ATQMePublishFTableViewCellDelegate:self.publishTextView.text];
+    }
+    return YES;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

@@ -17,6 +17,8 @@
 #import "MBProgressHUD+Add.h"
 #import "UIImageView+WebCache.h"
 #import "ATQVideoModel.h"
+#import "DetailSubPublishViewController.h"
+#import "JianZhiVideoViewController.h"
 @interface ATQVideoChatViewController ()<UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,strong)NSMutableArray *videoArr;
@@ -160,8 +162,9 @@
     
     collectionView.scrollEnabled = NO;
     cell.chatClick = ^(){
-    
         NSLog(@"点击了立即聊天");
+        JianZhiVideoViewController *vc = [[JianZhiVideoViewController alloc]init];
+        [self.navigationController pushViewController:vc animated:YES];
     };
     
     return cell;
@@ -170,7 +173,10 @@
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"----->%ld",indexPath.row);
-   
+    DetailSubPublishViewController *vc = [[DetailSubPublishViewController alloc] init];
+    ATQVideoModel *model = self.videoArr[indexPath.section];
+    vc.jobId = @"2089";
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - UICollectionViewDelegateFlowLayout

@@ -7,6 +7,7 @@
 //
 
 #import "ATQMyFriendsTableViewCell.h"
+#import "ATQFriModel.h"
 
 @implementation ATQMyFriendsTableViewCell
 
@@ -15,6 +16,17 @@
     // Initialization code
 }
 - (IBAction)xuanzeClick:(id)sender {
+    if (_selectblock) {
+        _selectblock();
+    }
+}
+
+-(void)configCellWithModel:(ATQFriModel *)model{
+    if (model.isSelected) {
+        [self.xuanzeBtn setImage:[UIImage imageNamed:@"zhanghu-dian"] forState:UIControlStateNormal];
+    }else{
+        [self.xuanzeBtn setImage:[UIImage imageNamed:@"zhanghu-dian02"] forState:UIControlStateNormal];
+    }
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

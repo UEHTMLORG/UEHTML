@@ -19,6 +19,7 @@
 #import "ATQRecModel.h"
 #import "ATQFreshModel.h"
 #import "UIImageView+WebCache.h"
+#import "DetailSubPublishViewController.h"
 @interface ATQRecommendViewController ()<UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,strong)NSMutableArray *freshArr;
@@ -215,7 +216,16 @@
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"----->%ld",indexPath.row);
+    DetailSubPublishViewController *vc = [[DetailSubPublishViewController alloc] init];
+    if (collectionView.tag == 0) {
+        ATQFreshModel *model = self.freshArr[indexPath.row];
+        vc.jobId = model.ID;
+    }else{
+        ATQRecModel *model = self.recArr[indexPath.row];
+        vc.jobId = model.ID;
+    }
     
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - UICollectionViewDelegateFlowLayout

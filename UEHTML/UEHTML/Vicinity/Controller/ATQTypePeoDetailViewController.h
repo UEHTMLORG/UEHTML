@@ -31,6 +31,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *sexImg;
 @property (weak, nonatomic) IBOutlet UIImageView *rzImg;
 @property (weak, nonatomic) IBOutlet UIImageView *vipImg;
+@property (weak, nonatomic) IBOutlet UILabel *addressLab;
 
 @property (copy, nonatomic)NSString *jobID;
 

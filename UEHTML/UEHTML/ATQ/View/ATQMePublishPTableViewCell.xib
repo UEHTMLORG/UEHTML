@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -28,18 +29,44 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                     </collectionView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aotuquan-tianjia01" translatesAutoresizingMaskIntoConstraints="NO" id="9Ao-eK-J4z">
+                        <rect key="frame" x="10" y="10" width="70" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="9Ao-eK-J4z" secondAttribute="height" multiplier="1:1" id="6i9-em-8bb"/>
+                            <constraint firstAttribute="height" constant="70" id="d4a-Wu-ZPX"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5NX-cy-wMJ">
+                        <rect key="frame" x="10" y="10" width="70" height="70"/>
+                        <connections>
+                            <action selector="vedioClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Fqk-nH-Hsw"/>
+                        </connections>
+                    </button>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="5NX-cy-wMJ" firstAttribute="trailing" secondItem="9Ao-eK-J4z" secondAttribute="trailing" id="J0s-kg-aRM"/>
+                    <constraint firstItem="5NX-cy-wMJ" firstAttribute="top" secondItem="9Ao-eK-J4z" secondAttribute="top" id="VPf-tV-asQ"/>
+                    <constraint firstItem="5NX-cy-wMJ" firstAttribute="leading" secondItem="9Ao-eK-J4z" secondAttribute="leading" id="YU5-cC-r3s"/>
+                    <constraint firstItem="5NX-cy-wMJ" firstAttribute="bottom" secondItem="9Ao-eK-J4z" secondAttribute="bottom" id="eHc-1O-iiS"/>
+                </constraints>
             </tableViewCellContentView>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="mlA-ek-GQk" secondAttribute="trailing" constant="10" id="5M5-iy-k2s"/>
+                <constraint firstItem="9Ao-eK-J4z" firstAttribute="centerY" secondItem="KGk-i7-Jjw" secondAttribute="centerY" id="HdN-H7-2f6"/>
+                <constraint firstItem="9Ao-eK-J4z" firstAttribute="leading" secondItem="KGk-i7-Jjw" secondAttribute="leading" constant="10" id="X3A-pN-Sn0"/>
                 <constraint firstAttribute="bottom" secondItem="mlA-ek-GQk" secondAttribute="bottom" constant="10" id="a09-gs-kE2"/>
                 <constraint firstItem="mlA-ek-GQk" firstAttribute="top" secondItem="KGk-i7-Jjw" secondAttribute="top" constant="10" id="s5p-BQ-FD9"/>
                 <constraint firstItem="mlA-ek-GQk" firstAttribute="leading" secondItem="KGk-i7-Jjw" secondAttribute="leading" constant="10" id="yJ3-FU-lq8"/>
             </constraints>
             <connections>
                 <outlet property="publishCollectionView" destination="mlA-ek-GQk" id="Kjg-Q3-g51"/>
+                <outlet property="vedioBtn" destination="5NX-cy-wMJ" id="1xo-FY-tdq"/>
+                <outlet property="vedioImg" destination="9Ao-eK-J4z" id="Qyq-aW-sFx"/>
             </connections>
             <point key="canvasLocation" x="54" y="136"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="aotuquan-tianjia01" width="122" height="122"/>
+    </resources>
 </document>

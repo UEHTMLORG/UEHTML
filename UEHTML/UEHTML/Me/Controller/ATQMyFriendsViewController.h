@@ -7,7 +7,10 @@
 //
 
 #import "ATQBaseViewController.h"
-
+@protocol ATQMyFriendsViewControllerDelegate <NSObject>
+- (void)ATQMyFriendsViewControllerDelegate:(NSString*)addrStr;
+@end
 @interface ATQMyFriendsViewController : ATQBaseViewController
 @property(copy,nonatomic)NSString *selecttypeStr;
+@property(weak,nonatomic)id<ATQMyFriendsViewControllerDelegate>delegate;
 @end

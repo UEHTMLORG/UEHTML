@@ -22,6 +22,11 @@
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     [self.publishCollectionView registerNib:[UINib nibWithNibName:@"ATQAddImgCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"ATQAddImgCollectionViewCell"];
 }
+- (IBAction)vedioClick:(id)sender {
+    if (_vedioselectBlock) {
+        _vedioselectBlock();
+    }
+}
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return self.imgsArray.count;

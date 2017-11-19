@@ -12,14 +12,23 @@
 #import "LhkhHttpsManager.h"
 #import "MBProgressHUD+Add.h"
 #import "UIImageView+WebCache.h"
-@interface ATQTypePeoDetailViewController ()<UITextViewDelegate,CPStepperDelegate>{
+#import <BaiduMapAPI_Map/BMKMapComponent.h>
+#import <BaiduMapAPI_Location/BMKLocationComponent.h>
+#import <BaiduMapAPI_Search/BMKSearchComponent.h>
+#import "ATQPublishAddrViewController.h"
+@interface ATQTypePeoDetailViewController ()<UITextViewDelegate,CPStepperDelegate,CLLocationManagerDelegate,BMKGeneralDelegate,BMKLocationServiceDelegate,BMKGeoCodeSearchDelegate,ATQPublishAddrViewControllerDelegate>{
     UIControl *_blackView;
     NSDictionary *job;
     NSDictionary *user_profile;
+    NSString *_addrStr;
     
 }
 @property (nonatomic,strong)UIView *datePickerView;
 @property (nonatomic,strong)UIDatePicker *datePicker;
+@property (nonatomic, strong)BMKLocationService *locService;
+@property (nonatomic, strong)BMKGeoCodeSearch *geocodesearch;
+@property BOOL isGeoSearch;
+@property (nonatomic, strong)NSMutableArray *addressArr;
 @end
 
 @implementation ATQTypePeoDetailViewController
@@ -32,6 +41,10 @@
     [self setblackView];
     [self setDatePickerView];
     [self loadData];
+    //启动LocationService
+    _locService = [[BMKLocationService alloc]init];//定位功能的初始化
+    _locService.delegate = self;//设置代理位self
+    [_locService startUserLocationService];//启动定位服务
 }
 
 -(void)loadData{
@@ -241,14 +254,139 @@
     NSString *price = job[@"price"];
     
     self.shijineLab.text = [NSString stringWithFormat:@"共：%.f元",price.floatValue*textCount];
+    self.zongjineLab.text = [NSString stringWithFormat:@"本单总金额：%.f元",price.floatValue*textCount];
 }
 
 -(void)subButtonClicked:(NSDictionary *)param count:(int)textCount{
     NSLog(@"++++++++++%d",textCount);
     NSString *price = job[@"price"];
     self.shijineLab.text = [NSString stringWithFormat:@"共：%.f元",price.floatValue*textCount];
+    self.zongjineLab.text = [NSString stringWithFormat:@"本单总金额：%.f元",price.floatValue*textCount];
 }
+- (IBAction)addrClick:(id)sender {
+    ATQPublishAddrViewController *vc = [[ATQPublishAddrViewController alloc] init];
+    vc.delegate = self;
+    vc.addrArr = self.addressArr;
+    [self.navigationController pushViewController:vc animated:NO];
+}
+
+-(void)ATQPublishAddrViewControllerDelegate:(NSString *)addrStr{
+    _addrStr = addrStr;
+    self.addressLab.text = addrStr;
+}
+
 - (IBAction)anbaoClick:(id)sender {
+}
+
+- (IBAction)sureOrderClick:(id)sender {
+    
+}
+
+- (void)didFailToLocateUserWithError:(NSError *)error
+{
+    NSLog(@"地图定位失败======%@",error);
+}
+
+//处理位置坐标更新
+- (void)didUpdateBMKUserLocation:(BMKUserLocation *)userLocation
+{
+    NSLog(@"didUpdateUserLocation lat %f,long %f",userLocation.location.coordinate.latitude,
+          userLocation.location.coordinate.longitude);
+    
+    //    //从manager获取左边
+    //    CLLocationCoordinate2D coordinate = userLocation.location.coordinate;//位置坐标
+    
+    if ((userLocation.location.coordinate.latitude != 0 || userLocation.location.coordinate.longitude != 0))
+    {
+        
+        [self sendBMKReverseGeoCodeOptionRequest];
+        NSString *latitude = [NSString stringWithFormat:@"%f",userLocation.location.coordinate.latitude];
+        NSString *longitude = [NSString stringWithFormat:@"%f",userLocation.location.coordinate.longitude];
+        
+    }else{
+        NSLog(@"位置为空");
+    }
+    
+    //关闭坐标更新
+    [self.locService stopUserLocationService];
+}
+#pragma mark ----反向地理编码
+//发送反编码请求
+- (void)sendBMKReverseGeoCodeOptionRequest{
+    
+    self.isGeoSearch = false;
+    CLLocationCoordinate2D pt = (CLLocationCoordinate2D){0, 0};//初始化
+    if (_locService.userLocation.location.coordinate.longitude!= 0
+        && _locService.userLocation.location.coordinate.latitude!= 0) {
+        //如果还没有给pt赋值,那就将当前的经纬度赋值给pt
+        pt = (CLLocationCoordinate2D){_locService.userLocation.location.coordinate.latitude,
+            _locService.userLocation.location.coordinate.longitude};
+    }
+    
+    BMKReverseGeoCodeOption *reverseGeocodeSearchOption = [[BMKReverseGeoCodeOption alloc]init];//初始化反编码请求
+    reverseGeocodeSearchOption.reverseGeoPoint = pt;//设置反编码的店为pt
+    BOOL flag = [self.geocodesearch reverseGeoCode:reverseGeocodeSearchOption];//发送反编码请求.并返回是否成功
+    if(flag)
+    {
+        NSLog(@"反geo检索发送成功");
+    }
+    else
+    {
+        NSLog(@"反geo检索发送失败");
+    }
+}
+
+//发送成功,百度将会返回东西给你
+-(void)onGetReverseGeoCodeResult:(BMKGeoCodeSearch *)searcher
+                          result:(BMKReverseGeoCodeResult *)result
+                       errorCode:(BMKSearchErrorCode)error
+{
+    
+    if (error == BMK_SEARCH_NO_ERROR) {
+        
+        NSLog(@"-----%@----%@----%@----%@",result.addressDetail.province,result.addressDetail.city,result.addressDetail.district,result.addressDetail.streetName);
+        for(BMKPoiInfo *poiInfo in result.poiList)
+        {
+            NSLog(@"我的位置在%@",poiInfo);
+            [self.addressArr addObject:poiInfo.address];
+        }
+        //        NSLog(@"我的位置在 %@",result);
+        
+        //保存位置信息到模型
+        //        [self.userLocationInfoModel saveLocationInfoWithBMKReverseGeoCodeResult:result];
+        
+        //进行缓存处理，上传到服务器等操作
+    }
+}
+
+//地图定位
+- (BMKLocationService *)locService
+{
+    if (!_locService)
+    {
+        _locService = [[BMKLocationService alloc] init];
+        _locService.delegate = self;
+    }
+    return _locService;
+}
+
+//检索对象
+- (BMKGeoCodeSearch *)geocodesearch
+{
+    if (!_geocodesearch)
+    {
+        _geocodesearch = [[BMKGeoCodeSearch alloc] init];
+        _geocodesearch.delegate = self;
+    }
+    return _geocodesearch;
+}
+
+
+-(NSMutableArray*)addressArr{
+    if (_addressArr == nil) {
+        _addressArr = [NSMutableArray array];
+    }
+    return _addressArr;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -19,9 +19,10 @@
 #import "MJRefresh.h"
 #import "ATQFriModel.h"
 #import "UIImageView+WebCache.h"
-@interface ATQMyFriendsViewController ()<UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>{
+@interface ATQMyFriendsViewController ()<UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource,ATQMyFriendsViewControllerDelegate>{
     NSInteger b;
     NSString *typeStr;
+    NSString *selectUseridStr;
 }
 @property (weak, nonatomic) UIView *titlesView;
 @property (weak, nonatomic) LhkhButton *selectedButton;
@@ -30,6 +31,7 @@
 @property (strong,nonatomic)NSMutableArray *secArr;
 @property (strong,nonatomic)NSDictionary *secDic;
 @property (strong,nonatomic)NSMutableArray *friArr;
+@property (strong,nonatomic)NSMutableArray *seleArr;
 @end
 
 @implementation ATQMyFriendsViewController
@@ -37,8 +39,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"好友345";
-    UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"haoyou-Top tianjia"] style:UIBarButtonItemStylePlain target:self action:@selector(addFriendClick)];
-    self.navigationItem.rightBarButtonItem = right;
+    
+    if ([self.selecttypeStr isEqualToString:@"select"]) {
+        UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithTitle:@"确定" style:UIBarButtonItemStylePlain target:self action:@selector(sureClick)];
+        self.navigationItem.rightBarButtonItem = right;
+        
+    }else{
+        UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"haoyou-Top tianjia"] style:UIBarButtonItemStylePlain target:self action:@selector(addFriendClick)];
+        self.navigationItem.rightBarButtonItem = right;
+    }
     typeStr = @"1";
     _secArr = [NSMutableArray array];
     _secDic = [NSDictionary dictionary];
@@ -106,6 +115,14 @@
     NSLog(@"---");
     ATQAddFriendsViewController *vc = [[ATQAddFriendsViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+-(void)sureClick{
+    NSLog(@"");
+    if ([_delegate respondsToSelector:@selector(ATQMyFriendsViewControllerDelegate:)]) {
+        [_delegate ATQMyFriendsViewControllerDelegate:selectUseridStr];
+    }
+    [self.navigationController popViewControllerAnimated:NO];
 }
 
 -(void)setupTitlesView{
@@ -245,6 +262,27 @@
     }else{
         cell.xuanzeBtn.hidden = YES;
     }
+    __weak typeof(cell) weakcell = cell;
+    cell.selectblock = ^{
+        model.isSelected = !model.isSelected;
+        [weakcell configCellWithModel:model];
+        if (model.isSelected) {
+            [self.seleArr addObject:model.user_id];
+        }else{
+            [self.seleArr removeObject:model.user_id];
+        }
+        NSLog(@"----%ld",self.seleArr.count);
+        if (self.seleArr.count>0) {
+            for (NSString *userid in self.seleArr) {
+                if (selectUseridStr == nil) {
+                    selectUseridStr = userid;
+                }else{
+                    selectUseridStr = [NSString stringWithFormat:@"%@,%@",selectUseridStr,userid];
+                }
+            }
+        }
+        NSLog(@"----%@",selectUseridStr);
+    };
     return cell;
 }
 
@@ -429,6 +467,13 @@
         _friArr = [NSMutableArray array];
     }
     return _friArr;
+}
+
+-(NSMutableArray *)seleArr{
+    if (_seleArr == nil) {
+        _seleArr = [[NSMutableArray alloc] init];
+    }
+    return _seleArr;
 }
 
 - (void)didReceiveMemoryWarning {

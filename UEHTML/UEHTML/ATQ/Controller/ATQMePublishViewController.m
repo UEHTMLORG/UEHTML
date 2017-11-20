@@ -104,8 +104,8 @@
     params[@"desc"] = _publishStr;
     params[@"who_see"] = who_see;
     params[@"who_see_list"] = _useridStr1;
-    params[@"pictures"] = @"";
-    params[@"video"] = @"";
+    params[@"pictures"] = _picStr;
+    params[@"video"] = _vedioStr;
     params[@"remind_see_list"] = _useridStr2;
     params[@"user_id"] = user_id;
     params[@"user_token"] = user_token;
@@ -322,7 +322,7 @@
             if (indexPath.section == 2) {
                 cell.typeImg.image = [UIImage imageNamed:@"aotuquan-dingwei"];
                 cell.typeTitleLab.text = @"所在位置";
-                cell.subLab.hidden = YES;
+                cell.subLab.text = _addrStr;
             }else{
                 if (indexPath.row == 0) {
                     cell.typeImg.image = [UIImage imageNamed:@"aotuquan-kejian"];

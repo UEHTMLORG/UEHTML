@@ -16,11 +16,13 @@
 #import <BaiduMapAPI_Location/BMKLocationComponent.h>
 #import <BaiduMapAPI_Search/BMKSearchComponent.h>
 #import "ATQPublishAddrViewController.h"
-@interface ATQTypePeoDetailViewController ()<UITextViewDelegate,CPStepperDelegate,CLLocationManagerDelegate,BMKGeneralDelegate,BMKLocationServiceDelegate,BMKGeoCodeSearchDelegate,ATQPublishAddrViewControllerDelegate>{
+@interface ATQTypePeoDetailViewController ()<UITextViewDelegate,CPStepperDelegate,CLLocationManagerDelegate,BMKGeneralDelegate,BMKLocationServiceDelegate,BMKGeoCodeSearchDelegate,ATQPublishAddrViewControllerDelegate,UIScrollViewDelegate>{
     UIControl *_blackView;
     NSDictionary *job;
     NSDictionary *user_profile;
     NSString *_addrStr;
+    NSString *_lat;
+    NSString *_lon;
     
 }
 @property (nonatomic,strong)UIView *datePickerView;
@@ -53,7 +55,6 @@
     NSString *user_id = [[NSUserDefaults standardUserDefaults] objectForKey:USER_ID_AOTU_ZL];
     NSString *user_token = [[NSUserDefaults standardUserDefaults] objectForKey:USER_TOEKN_AOTU_ZL];
     params[@"job_id"] = self.jobID;
-    params[@"page_index"] = @"1";
     params[@"user_id"] = user_id;
     params[@"user_token"] = user_token;
     params[@"apptype"] = @"ios";
@@ -213,9 +214,9 @@
     [offsetComponents setYear:0];
     [offsetComponents setMonth:0];
     [offsetComponents setDay:0];
-    NSDate *maxDate = [gregorian dateByAddingComponents:offsetComponents toDate:localDate options:0];
+//    NSDate *maxDate = [gregorian dateByAddingComponents:offsetComponents toDate:localDate options:0];
     self.datePicker.datePickerMode = UIDatePickerModeDateAndTime;
-    self.datePicker.maximumDate = maxDate;
+//    self.datePicker.maximumDate = maxDate;
     
 }
 
@@ -280,7 +281,55 @@
 }
 
 - (IBAction)sureOrderClick:(id)sender {
+    NSMutableDictionary *params = [NSMutableDictionary  dictionary];
+    NSString *user_id = [[NSUserDefaults standardUserDefaults] objectForKey:USER_ID_AOTU_ZL];
+    NSString *user_token = [[NSUserDefaults standardUserDefaults] objectForKey:USER_TOEKN_AOTU_ZL];
+    params[@"job_id"] = self.jobID;
+    params[@"service_address"] = [NSString stringWithFormat:@"%@%@",_addrStr,self.addrText.text];
+    params[@"service_time"] = self.textField.text;
+    params[@"start_time"] = self.yuyueTimeLab.text;
+    params[@"remark"] = self.xuqiuText.text;
+    params[@"trip_mode"] = @"";
+    params[@"lon"] = _lon;
+    params[@"lat"] = _lat;
     
+    params[@"user_id"] = user_id;
+    params[@"user_token"] = user_token;
+    params[@"apptype"] = @"ios";
+    params[@"appversion"] = APPVERSION_AOTU_ZL;
+    NSString *random_str = [LhkhHttpsManager getNowTimeTimestamp];
+    params[@"random_str"] = random_str;
+    NSString *app_token = APP_TOKEN;
+    NSString *signStr = [NSString stringWithFormat:@"%@%@",app_token,random_str];
+    NSString *sign1 = [LhkhHttpsManager md5:signStr];
+    NSString *sign2 = [LhkhHttpsManager md5:sign1];
+    NSString *sign = [LhkhHttpsManager md5:sign2];
+    params[@"sign"] = sign;
+    NSString *url = [NSString stringWithFormat:@"%@/api/job/sub_order/work",ATQBaseUrl];
+    
+    [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
+        
+        NSLog(@"-----sub_order/work=%@",responseObject);
+        if ([responseObject[@"status"] isEqualToString:@"1"]) {
+            if(responseObject[@"data"]){
+                
+            }
+            
+        }else if ([responseObject[@"status"] isEqualToString:@"302"]){
+            
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self login];
+            });
+        }else{
+            
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+        }
+        
+    } failure:^(NSError *error) {
+        
+        NSLog(@"%@",error);
+    }];
 }
 
 - (void)didFailToLocateUserWithError:(NSError *)error
@@ -303,6 +352,8 @@
         [self sendBMKReverseGeoCodeOptionRequest];
         NSString *latitude = [NSString stringWithFormat:@"%f",userLocation.location.coordinate.latitude];
         NSString *longitude = [NSString stringWithFormat:@"%f",userLocation.location.coordinate.longitude];
+        _lat = latitude;
+        _lon = longitude;
         
     }else{
         NSLog(@"位置为空");
@@ -388,6 +439,11 @@
         _addressArr = [NSMutableArray array];
     }
     return _addressArr;
+}
+
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    [self.view endEditing:YES];
 }
 
 - (void)didReceiveMemoryWarning {

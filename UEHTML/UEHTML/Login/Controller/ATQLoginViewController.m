@@ -26,9 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"登录";
-//    UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithImage: [UIImage imageNamed:@"back_more"] style:UIBarButtonItemStylePlain target:self action:@selector(back:)];
     UIBarButtonItem *right = [[UIBarButtonItem alloc ]initWithTitle:@"注册" style:UIBarButtonItemStylePlain target:self action:@selector(RegisterClick:)];
-//    self.navigationItem.leftBarButtonItem = left;
     self.navigationItem.rightBarButtonItem = right;
     [self buildView];
 }
@@ -49,25 +47,14 @@
     self.codeLab.layer.borderWidth = 1.f;
     
 }
-//返回
-//- (void)back:(id)sender {
-//    NSLog(@"back");
-//    [(AppDelegate *)[UIApplication sharedApplication].delegate openTabHomeCtrl];
-//}
+
 //注册
 - (void)RegisterClick:(id)sender {
     NSLog(@"RegisterClick");
     ATQRegisterViewController *vc = [[ATQRegisterViewController  alloc]init];
     [self.navigationController pushViewController:vc animated:YES];
 }
-////隐藏密码
-//- (IBAction)hide:(id)sender {
-//    NSLog(@"hide");
-//}
-////忘记密码
-//- (IBAction)forgetPwd:(id)sender {
-//    NSLog(@"forgetPwd");
-//}
+
 //获取验证码
 - (IBAction)getCode:(id)sender {
     NSLog(@"getCode");

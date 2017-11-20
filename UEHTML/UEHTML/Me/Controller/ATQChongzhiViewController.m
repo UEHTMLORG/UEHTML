@@ -30,8 +30,16 @@
     self.scrollView.contentSize = CGSizeMake(ScreenWidth, 667);
     _priceArr = [NSMutableArray array];
     payStr = @"wechatPay";
-    [self loadData];
-    
+    if ([self.chongzhiType isEqualToString:@"buyjinbi"]) {
+        self.view1.hidden = NO;
+        self.view2.hidden = YES;
+        self.jineLab.text = self.chongzhijine;
+    }else{
+        self.view1.hidden = YES;
+        self.view2.hidden = NO;
+        [self loadData];
+    }
+
 }
 
 -(void)loadData{
@@ -57,7 +65,7 @@
        
         if ([responseObject[@"status"] isEqualToString:@"1"]) {
             if (responseObject[@"data"]) {
-                _priceArr = responseObject[@"data"];
+                _priceArr = responseObject[@"data"][@"list"];
                 [self buildJineView];
             }
            
@@ -95,7 +103,7 @@
             [btn addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchUpInside];
             if (k<_priceArr.count) {
                 btn.tag = 100+k;
-                NSString *price = _priceArr[k][@"price"];
+                NSString *price = _priceArr[k][@"gold"];
                 [btn setTitle:[NSString stringWithFormat:@"%.f元",price.floatValue] forState:UIControlStateNormal];
             }
             if ((k) == _priceArr.count) {

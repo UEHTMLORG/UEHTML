@@ -188,6 +188,7 @@
         }
         cell.tixianblock = ^{
             ATQTixianViewController *vc = [[ATQTixianViewController alloc] init];
+            vc.tixianJine = self.accountDic[@"can_withdraw_rmb"];
             [weakself.navigationController pushViewController:vc animated:YES];
         };
         cell.zongLab.text = self.accountDic[@"balance_rmb"];

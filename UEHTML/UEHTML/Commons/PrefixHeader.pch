@@ -11,7 +11,8 @@
 #import "Common.h"
 #define ATQBaseUrl  @"http://atapi.dotry.cn"
 #define APP_TOKEN  @"apptest"
-#define APP_KEY  @"YsS57xZIgTwvThQuCcOs2wcNxPiQ2MGm"//百度地图AppKey
+#define BMKAPP_KEY  @"YsS57xZIgTwvThQuCcOs2wcNxPiQ2MGm"//百度地图AppKey
+#define SinaAPP_KEY  @"20639143"//微博AppKey
 #ifdef __OBJC__
 #import "ZLHeader.h"
 #import "CommonHeaderZl.h"

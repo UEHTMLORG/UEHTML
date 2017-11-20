@@ -29,6 +29,9 @@
         make.left.top.equalTo(self.view).offset(15);
         make.right.equalTo(self.view).offset(-15);
     }];
+    if ([_idStr isEqualToString:@"11"]) {
+        self.navigationItem.title = @"如何查找微信号";
+    }
 //    _webView = ({
 //        UIWebView *webView = [[UIWebView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-64)];
 //        webView.delegate = self;

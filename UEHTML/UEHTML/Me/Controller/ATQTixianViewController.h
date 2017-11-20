@@ -9,5 +9,5 @@
 #import "ATQBaseViewController.h"
 
 @interface ATQTixianViewController : ATQBaseViewController
-
+@property (copy,nonatomic)NSString *tixianJine;
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "DetailXuQiuViewController.h"
-
+#import "ATQTypeListInviteDetailViewController.h"
 @interface DetailXuQiuViewController ()
 
 @end
@@ -183,6 +183,9 @@
 - (IBAction)liaoTianButtonAction:(id)sender {
 }
 - (IBAction)yingYaoButtonAction:(id)sender {
+    ATQTypeListInviteDetailViewController *vc = [[ATQTypeListInviteDetailViewController alloc] init];
+    vc.jobID = self.jobId;
+    [self.navigationController pushViewController:vc animated:NO];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

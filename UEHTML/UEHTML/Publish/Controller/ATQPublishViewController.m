@@ -9,7 +9,7 @@
 #import "ATQPublishViewController.h"
 #import "AppDelegate.h"
 #import "Masonry.h"
-
+#import "ATQCollectViewController.h"
 @interface ATQPublishViewController (){
 
     ATQPHeaderView * _headView;
@@ -91,7 +91,7 @@
             break;
         case 3:
         {
-            JianZhiTouSuViewController * VC = [[JianZhiTouSuViewController alloc]init];
+            ATQCollectViewController * VC = [[ATQCollectViewController alloc]init];
             [self.navigationController pushViewController:VC animated:YES];
         }
             break;

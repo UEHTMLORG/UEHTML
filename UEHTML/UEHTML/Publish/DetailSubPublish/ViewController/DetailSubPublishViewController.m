@@ -8,6 +8,7 @@
 
 #import "DetailSubPublishViewController.h"
 #import "ATQTypePeoDetailViewController.h"
+#import "ATQChaWechatViewController.h"
 @interface DetailSubPublishViewController (){
     
     /** 当前Model的相册图片数组 */
@@ -134,7 +135,7 @@
         }
         /** 相册 结束 */
         cell.juliLabel.text = [NSString stringWithFormat:@"%@",self.currentModel.distance];
-        cell.ageLabel.text = [NSString stringWithFormat:@"%@  %@  %@",self.currentModel.user_profile.age,self.currentModel.user_profile.height,self.currentModel.user_profile.weight];
+        cell.ageLabel.text = [NSString stringWithFormat:@"%@岁  %@cm  %@kg",self.currentModel.user_profile.age,self.currentModel.user_profile.height,self.currentModel.user_profile.weight];
         cell.nickNameLabel.text = self.currentModel.user_profile.nick_name;
         return cell;
     }else if(indexPath.row == 1){
@@ -232,7 +233,9 @@
 - (void)chaKanButtonAction:(UIButton *)sender{
     NSLog(@"点击查看微信");
     //self.currentModel
-    [MBManager showBriefAlert:@"微信号数据未提供"];
+    ATQChaWechatViewController *vc = [[ATQChaWechatViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:NO];
+//    [MBManager showBriefAlert:@"微信号数据未提供"];
 }
 - (void)voiceButtonAction:(UIButton *)sender{
     NSLog(@"点击了播放声音按钮");

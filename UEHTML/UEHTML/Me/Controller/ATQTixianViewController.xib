@@ -16,6 +16,7 @@
                 <outlet property="bankNumText" destination="bRg-Wf-egv" id="94q-T3-9iV"/>
                 <outlet property="bankView" destination="HwB-5d-412" id="Qnx-Xy-Umw"/>
                 <outlet property="ketixianJine" destination="Iig-Jd-q9p" id="7Cc-7g-lMN"/>
+                <outlet property="tableView" destination="obN-RW-DHU" id="6Oc-nk-Dup"/>
                 <outlet property="tixianJineText" destination="jTu-hL-FOo" id="t7C-cO-yjb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -201,6 +202,17 @@
                         <constraint firstItem="Afy-vI-o5j" firstAttribute="top" secondItem="HbA-wV-VaG" secondAttribute="bottom" constant="15" id="yzp-Sb-sbu"/>
                     </constraints>
                 </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="obN-RW-DHU">
+                    <rect key="frame" x="77.5" y="45" width="282.5" height="120"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="sgd-Jy-McC"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Uge-JU-dlI"/>
+                        <outlet property="delegate" destination="-1" id="fP5-Uu-iuG"/>
+                    </connections>
+                </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vs8-2S-2PC">
                     <rect key="frame" x="15" y="330" width="345" height="40"/>
                     <color key="backgroundColor" red="0.99305731060000002" green="0.45613801479999999" blue="0.73159998660000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -224,10 +236,13 @@
                 <constraint firstItem="gfo-sM-SXL" firstAttribute="top" secondItem="6Ik-Mg-6K2" secondAttribute="bottom" constant="20" id="9hS-kg-8SD"/>
                 <constraint firstItem="vs8-2S-2PC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="ISl-KE-5Op"/>
                 <constraint firstAttribute="trailing" secondItem="bRg-Wf-egv" secondAttribute="trailing" constant="15" id="Itv-o7-tAz"/>
+                <constraint firstItem="obN-RW-DHU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="45" id="RP1-Y5-40x"/>
+                <constraint firstItem="obN-RW-DHU" firstAttribute="trailing" secondItem="HwB-5d-412" secondAttribute="trailing" id="YgO-Mb-uVq"/>
                 <constraint firstItem="6Ik-Mg-6K2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="bhg-ds-EP4"/>
                 <constraint firstAttribute="trailing" secondItem="6Ik-Mg-6K2" secondAttribute="trailing" id="q5d-C9-PDS"/>
                 <constraint firstItem="6Ik-Mg-6K2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qut-Px-e2F"/>
                 <constraint firstItem="vs8-2S-2PC" firstAttribute="top" secondItem="gfo-sM-SXL" secondAttribute="bottom" constant="100" id="tno-6O-pUg"/>
+                <constraint firstItem="obN-RW-DHU" firstAttribute="leading" secondItem="HwB-5d-412" secondAttribute="leading" id="zlC-Hd-iWj"/>
             </constraints>
             <point key="canvasLocation" x="25.5" y="51.5"/>
         </view>

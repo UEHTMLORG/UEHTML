@@ -10,8 +10,12 @@
 #import "ATQBusinessTableViewCell.h"
 #import "ATQBillTableViewCell.h"
 #import "Masonry.h"
+#import "UIColor+LhkhColor.h"
+#import "LhkhHttpsManager.h"
+#import "MBProgressHUD+Add.h"
 @interface ATQBusinessViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITableView *tableView;
+@property (strong,nonatomic)NSDictionary *dataDic;
 
 @end
 
@@ -21,6 +25,49 @@
     [super viewDidLoad];
     self.navigationItem.title = @"我是代理商";
     [self setTableView];
+    [self loadData];
+}
+
+-(void)loadData{
+    NSMutableDictionary *params = [NSMutableDictionary  dictionary];
+    NSString *user_id = [[NSUserDefaults standardUserDefaults] objectForKey:USER_ID_AOTU_ZL];
+    NSString *user_token = [[NSUserDefaults standardUserDefaults] objectForKey:USER_TOEKN_AOTU_ZL];
+    params[@"user_id"] = user_id;
+    params[@"user_token"] = user_token;
+    params[@"apptype"] = @"ios";
+    params[@"appversion"] = APPVERSION_AOTU_ZL;
+    NSString *random_str = [LhkhHttpsManager getNowTimeTimestamp];
+    params[@"random_str"] = random_str;
+    NSString *app_token = APP_TOKEN;
+    NSString *signStr = [NSString stringWithFormat:@"%@%@",app_token,random_str];
+    NSString *sign1 = [LhkhHttpsManager md5:signStr];
+    NSString *sign2 = [LhkhHttpsManager md5:sign1];
+    NSString *sign = [LhkhHttpsManager md5:sign2];
+    params[@"sign"] = sign;
+    NSString *url = [NSString stringWithFormat:@"%@/api/user/agent/data",ATQBaseUrl];
+    
+    [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
+        NSLog(@"-----agent=%@",responseObject);
+        if ([responseObject[@"status"] isEqualToString:@"1"]) {
+            
+            if (responseObject[@"data"]) {
+                self.dataDic = responseObject[@"data"];
+            }
+            [self.tableView reloadData];
+        }else if ([responseObject[@"status"] isEqualToString:@"302"]){
+            
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self login];
+            });
+            
+        }else{
+            
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+        }
+        
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
 }
 
 -(void)setTableView{
@@ -53,7 +100,6 @@
     return 1;
 }
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    __weak typeof(self) weakself = self;
     if (indexPath.section == 0) {
         static NSString *CellIdentifier = @"ATQBusinessTableViewCell" ;
         ATQBusinessTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -61,20 +107,41 @@
             NSArray *array = [[NSBundle mainBundle]loadNibNamed: CellIdentifier owner:self options:nil];
             cell = [array objectAtIndex:0];
         }
+        cell.zongshouruLab.text = self.dataDic[@"agent_income"];
+        cell.dailiAreaLab.text = [NSString stringWithFormat:@"您所在的代理区域：%@",self.dataDic[@"area"]];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
         return cell;
-    }else{
+    }else if(indexPath.section == 1){
         static NSString *CellIdentifier = @"ATQBillTableViewCell" ;
         ATQBillTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         if (cell == nil) {
             NSArray *array = [[NSBundle mainBundle]loadNibNamed: CellIdentifier owner:self options:nil];
             cell = [array objectAtIndex:0];
         }
-        
+        cell.backgroundColor = RGBA(236, 199, 114, 1);
+        cell.typeLab.text = @"当日账单";
+        cell.billImg.image = [UIImage imageNamed:@"zhanghu-daili"];
+        cell.billSRLab.text = [NSString stringWithFormat:@"当日收入：%@元",self.dataDic[@"today_income"]];
+        cell.billJYLab.text = [NSString stringWithFormat:@"当日交易量：%@单",self.dataDic[@"today_order_num"]];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
         return cell;
+    }else{
+            static NSString *CellIdentifier = @"ATQBillTableViewCell" ;
+            ATQBillTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+            if (cell == nil) {
+                NSArray *array = [[NSBundle mainBundle]loadNibNamed: CellIdentifier owner:self options:nil];
+                cell = [array objectAtIndex:0];
+            }
+            cell.backgroundColor = RGBA(137, 188, 248, 1);
+        cell.typeLab.text = @"当月账单";
+            cell.billImg.image = [UIImage imageNamed:@"zhanghu-daili02"];
+            cell.billSRLab.text = [NSString stringWithFormat:@"当月收入：%@元",self.dataDic[@"month_income"]];
+            cell.billJYLab.text = [NSString stringWithFormat:@"当月交易量：%@单",self.dataDic[@"month_order_num"]];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            
+            return cell;
     }
 }
 
@@ -108,6 +175,13 @@
     }else{
         return 5;
     }
+}
+
+-(NSDictionary*)dataDic{
+    if (_dataDic == nil) {
+        _dataDic = [NSDictionary dictionary];
+    }
+    return _dataDic;
 }
 
 - (void)didReceiveMemoryWarning {

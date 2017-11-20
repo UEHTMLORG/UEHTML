@@ -16,6 +16,7 @@
 #import <BaiduMapAPI_Location/BMKLocationComponent.h>
 #import <BaiduMapAPI_Search/BMKSearchComponent.h>
 #import "ATQPublishAddrViewController.h"
+#import "ATQAnBYViewController.h"
 @interface ATQTypePeoDetailViewController ()<UITextViewDelegate,CPStepperDelegate,CLLocationManagerDelegate,BMKGeneralDelegate,BMKLocationServiceDelegate,BMKGeoCodeSearchDelegate,ATQPublishAddrViewControllerDelegate,UIScrollViewDelegate>{
     UIControl *_blackView;
     NSDictionary *job;
@@ -278,6 +279,8 @@
 }
 
 - (IBAction)anbaoClick:(id)sender {
+    ATQAnBYViewController *vc = [[ATQAnBYViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:NO];
 }
 
 - (IBAction)sureOrderClick:(id)sender {

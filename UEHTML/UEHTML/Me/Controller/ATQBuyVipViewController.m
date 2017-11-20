@@ -51,7 +51,7 @@
         if ([responseObject[@"status"] isEqualToString:@"1"]) {
             if (responseObject[@"data"]) {
                 _userDic = responseObject[@"data"][@"user"];
-                _packageArr = responseObject[@"data"][@"package"];
+                _packageArr = responseObject[@"data"][@"packagelist"];
                 [self.userImg sd_setImageWithURL:[NSURL URLWithString:_userDic[@"avatar"]] placeholderImage:[UIImage imageNamed:@""]];
                 self.userNameLab.text = _userDic[@"nick_name"];
                 NSString *card_level = _userDic[@"card_level"];

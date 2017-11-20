@@ -345,6 +345,10 @@
 		40C77E3D1FADA2A4000D8F70 /* ATQContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C77E3C1FADA2A4000D8F70 /* ATQContentTableViewCell.m */; };
 		40C77E5F1FAE0F39000D8F70 /* ATQContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C77E5E1FAE0F39000D8F70 /* ATQContentModel.m */; };
 		40CB01FA1F7FFCD0000E82A5 /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 40CB01F91F7FFCD0000E82A5 /* MBProgressHUD+Add.m */; };
+		40CCEBF71FC304EF002AEFC3 /* ATQAnBYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40CCEBF61FC304EF002AEFC3 /* ATQAnBYViewController.m */; };
+		40CCEBFB1FC3079E002AEFC3 /* ATQAnbyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40CCEBF91FC3079E002AEFC3 /* ATQAnbyCell.m */; };
+		40CCEBFC1FC3079E002AEFC3 /* ATQAnbyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40CCEBFA1FC3079E002AEFC3 /* ATQAnbyCell.xib */; };
+		40CCEBFF1FC3144C002AEFC3 /* ATQABYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 40CCEBFE1FC3144C002AEFC3 /* ATQABYModel.m */; };
 		40D1E79A1FAB244000276DFC /* ATQFriModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D1E7991FAB244000276DFC /* ATQFriModel.m */; };
 		40D1E79D1FAB4D6500276DFC /* ATQAddFriListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D1E79C1FAB4D6500276DFC /* ATQAddFriListModel.m */; };
 		40D353B11F7F26B90017DA5C /* ATQMyAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D353B01F7F26B90017DA5C /* ATQMyAccountViewController.m */; };
@@ -1382,6 +1386,13 @@
 		40C77E5E1FAE0F39000D8F70 /* ATQContentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATQContentModel.m; sourceTree = "<group>"; };
 		40CB01F81F7FFCD0000E82A5 /* MBProgressHUD+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MBProgressHUD+Add.h"; path = "../MBProgressHUD+Add.h"; sourceTree = "<group>"; };
 		40CB01F91F7FFCD0000E82A5 /* MBProgressHUD+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MBProgressHUD+Add.m"; path = "../MBProgressHUD+Add.m"; sourceTree = "<group>"; };
+		40CCEBF51FC304EF002AEFC3 /* ATQAnBYViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATQAnBYViewController.h; sourceTree = "<group>"; };
+		40CCEBF61FC304EF002AEFC3 /* ATQAnBYViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATQAnBYViewController.m; sourceTree = "<group>"; };
+		40CCEBF81FC3079E002AEFC3 /* ATQAnbyCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATQAnbyCell.h; sourceTree = "<group>"; };
+		40CCEBF91FC3079E002AEFC3 /* ATQAnbyCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATQAnbyCell.m; sourceTree = "<group>"; };
+		40CCEBFA1FC3079E002AEFC3 /* ATQAnbyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ATQAnbyCell.xib; sourceTree = "<group>"; };
+		40CCEBFD1FC3144C002AEFC3 /* ATQABYModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATQABYModel.h; sourceTree = "<group>"; };
+		40CCEBFE1FC3144C002AEFC3 /* ATQABYModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATQABYModel.m; sourceTree = "<group>"; };
 		40D1E7981FAB244000276DFC /* ATQFriModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATQFriModel.h; sourceTree = "<group>"; };
 		40D1E7991FAB244000276DFC /* ATQFriModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATQFriModel.m; sourceTree = "<group>"; };
 		40D1E79B1FAB4D6500276DFC /* ATQAddFriListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATQAddFriListModel.h; sourceTree = "<group>"; };
@@ -2922,6 +2933,9 @@
 				402D5C4B1FB47550006C666D /* ATQSZUserHeaderCell.h */,
 				402D5C4C1FB47550006C666D /* ATQSZUserHeaderCell.m */,
 				402D5C4D1FB47550006C666D /* ATQSZUserHeaderCell.xib */,
+				40CCEBF81FC3079E002AEFC3 /* ATQAnbyCell.h */,
+				40CCEBF91FC3079E002AEFC3 /* ATQAnbyCell.m */,
+				40CCEBFA1FC3079E002AEFC3 /* ATQAnbyCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2945,6 +2959,8 @@
 				40D1E79C1FAB4D6500276DFC /* ATQAddFriListModel.m */,
 				40185ED91FBB2562007F6F5F /* ATQBillModel.h */,
 				40185EDA1FBB2562007F6F5F /* ATQBillModel.m */,
+				40CCEBFD1FC3144C002AEFC3 /* ATQABYModel.h */,
+				40CCEBFE1FC3144C002AEFC3 /* ATQABYModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -3382,6 +3398,8 @@
 				40C224421F8D06F700853B17 /* ATQSearchFriendsViewController.h */,
 				40C224431F8D06F700853B17 /* ATQSearchFriendsViewController.m */,
 				40C224441F8D06F700853B17 /* ATQSearchFriendsViewController.xib */,
+				40CCEBF51FC304EF002AEFC3 /* ATQAnBYViewController.h */,
+				40CCEBF61FC304EF002AEFC3 /* ATQAnBYViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -5293,6 +5311,7 @@
 				40F5E5991F91AFAC0077A574 /* f_static_036@2x.png in Resources */,
 				185D786A1F8DF13900DA8849 /* Loading0017.png in Resources */,
 				40F5E6291F91AFAC0077A574 /* sharemore_pic@2x.png in Resources */,
+				40CCEBFC1FC3079E002AEFC3 /* ATQAnbyCell.xib in Resources */,
 				40F5E5A91F91AFAC0077A574 /* f_static_044@2x.png in Resources */,
 				185D78741F8DF13A00DA8849 /* Loading008.png in Resources */,
 				40F5E6271F91AFAC0077A574 /* sharemore_location@2x.png in Resources */,
@@ -5640,6 +5659,7 @@
 				18D93D7F1F93A4BB00D18418 /* FMDatabaseQueue.h in Sources */,
 				18D93D801F93A4BB00D18418 /* DefaultPortraitView.m in Sources */,
 				40C63BB31FB1DA5B00A4DD13 /* ATQMeDTTableViewCell.m in Sources */,
+				40CCEBFB1FC3079E002AEFC3 /* ATQAnbyCell.m in Sources */,
 				18D93D7E1F93A46300D18418 /* RCDUserInfoManager.m in Sources */,
 				18D93D791F939D3500D18418 /* AFHttpTool.m in Sources */,
 				18D93D7A1F939D3500D18418 /* RCDUtilities.m in Sources */,
@@ -5881,6 +5901,7 @@
 				40E0F25C1F78D0DD0074B064 /* ATQSZFourTableViewCell.m in Sources */,
 				40E084771F80845700FD1AA3 /* ATQBuyVipViewController.m in Sources */,
 				185D78A61F8DF13A00DA8849 /* UIScrollView+WHC_PullRefresh.m in Sources */,
+				40CCEBFF1FC3144C002AEFC3 /* ATQABYModel.m in Sources */,
 				40C77E5F1FAE0F39000D8F70 /* ATQContentModel.m in Sources */,
 				185D78881F8DF13A00DA8849 /* iCarousel.m in Sources */,
 				185D78C01F8E1CBA00DA8849 /* JianZhiListTableVIew.m in Sources */,
@@ -5902,6 +5923,7 @@
 				40C77E2E1FAD9991000D8F70 /* ATQDTModel.m in Sources */,
 				40E569F91F977864006F450F /* CaptureSessionManager.m in Sources */,
 				40F5E5311F91AFAC0077A574 /* ChatKeyBoard.m in Sources */,
+				40CCEBF71FC304EF002AEFC3 /* ATQAnBYViewController.m in Sources */,
 				185D78AA1F8DF13A00DA8849 /* ZLPageControl.m in Sources */,
 				40F5E6371F91AFAC0077A574 /* FacePanel.m in Sources */,
 				4067ECFF1F79F58F0051173D /* ATQWechatView.m in Sources */,

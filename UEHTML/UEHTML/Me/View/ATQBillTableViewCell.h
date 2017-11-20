@@ -12,5 +12,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *billImg;
 @property (weak, nonatomic) IBOutlet UILabel *billSRLab;
 @property (weak, nonatomic) IBOutlet UILabel *billJYLab;
+@property (weak, nonatomic) IBOutlet UILabel *typeLab;
 
 @end

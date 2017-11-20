@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ATQBusinessTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *zongshouruLab;
+@property (weak, nonatomic) IBOutlet UILabel *dailiAreaLab;
 
 @end

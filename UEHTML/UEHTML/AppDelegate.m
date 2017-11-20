@@ -63,7 +63,6 @@
      *3.
      *4.测试用户userID ：123456 测试token  OHlSp+amcIt58AxlcDfLzVC0fO+o1gwgo3K8JJIiWcl47Aw0JaPFlBwIwzmForSmn9Lit6Rj5XHXLm7n5dLStQ==
      ===========ZL注释end==========*/
-    NSString * ceToken = @"OHlSp+amcIt58AxlcDfLzVC0fO+o1gwgo3K8JJIiWcl47Aw0JaPFlBwIwzmForSmn9Lit6Rj5XHXLm7n5dLStQ==";
     [[RCIM sharedRCIM] initWithAppKey:RONGYUN_APPKEY];
     [[RCIM sharedRCIM] setEnablePersistentUserInfoCache:YES];//用户信息保存到本地缓存中
     //设置用户信息源和群组信息源
@@ -111,7 +110,10 @@
     
     
     [[RCIM sharedRCIM] connectWithToken:[kUserDefaults objectForKey:MESSAGE_TOKEN_AOTU_ZL]    success:^(NSString *userId) {
-        NSLog(@"登陆成功。当前登录的用户ID：%@", userId);
+        
+        NSLog(@"登陆成功。当前登录的用户融云ID：%@----凹凸圈ID：%@", userId,[kUserDefaults objectForKey:USER_ID_AOTU_ZL]);
+        [kUserDefaults setObject:userId forKey:RONGYUN_USER_ID];
+        
         dispatch_async(dispatch_get_main_queue(), ^{
 //            [[RCIM sharedRCIM] setUserInfoDataSource:self];
         });

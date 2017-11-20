@@ -41,6 +41,7 @@
 #define USER_ID_AOTU_ZL @"USER_ID"
 #define USER_TOEKN_AOTU_ZL @"USER_TOKEN"
 #define MESSAGE_TOKEN_AOTU_ZL @"message_token"
+#define RONGYUN_USER_ID  @"rongyun_user_id"
 #define CARD_LEVEL_AOTU_ZL @"card_level"
 #define APPVERSION_AOTU_ZL @"1.0.0"
 

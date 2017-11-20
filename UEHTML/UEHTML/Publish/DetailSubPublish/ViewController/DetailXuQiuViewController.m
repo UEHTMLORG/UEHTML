@@ -177,10 +177,14 @@
     }
 }
 #pragma mark ===================关于TableView的所有方法 END==================
-
 #pragma mark ===================底部按钮执行方法==================
 
 - (IBAction)liaoTianButtonAction:(id)sender {
+    RCConversationViewController *conversationVC = [[RCConversationViewController alloc]init];
+    conversationVC.conversationType = ConversationType_PRIVATE;
+    conversationVC.targetId = self.currentModel.job.user_id;
+    conversationVC.title = self.currentModel.user_profile.nick_name;
+    [self.navigationController pushViewController:conversationVC animated:YES];
 }
 - (IBAction)yingYaoButtonAction:(id)sender {
     ATQTypeListInviteDetailViewController *vc = [[ATQTypeListInviteDetailViewController alloc] init];
@@ -189,14 +193,12 @@
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 -(CGFloat)textHeight:(NSString *)string{
     //传字符串返回高度
     CGRect rect =[string boundingRectWithSize:CGSizeMake(SIZE_WIDTH-50.0, 9999) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil];//计算字符串所占的矩形区域的大小
     return rect.size.height;//返回高度
-    
 }
 
 #pragma mark ===================懒加载==================
@@ -208,7 +210,6 @@
 }
 /*
 #pragma mark - Navigation
-
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].

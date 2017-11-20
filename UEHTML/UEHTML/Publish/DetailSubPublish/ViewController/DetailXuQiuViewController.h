@@ -11,6 +11,7 @@
 #import "DetailXuQiuViewCellTableViewCell.h"
 #import "DetailXuQiuViewModel.h"
 
+
 @interface DetailXuQiuViewController : ATQBaseViewController<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, copy) NSString *jobId;
 @property (strong, nonatomic) IBOutlet UITableView *tabeView;

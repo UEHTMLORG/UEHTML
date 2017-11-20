@@ -23,6 +23,7 @@
 - (void)rongYunLogin{
     [[RCIM sharedRCIM] connectWithToken:[kUserDefaults objectForKey:MESSAGE_TOKEN_AOTU_ZL]    success:^(NSString *userId) {
         NSLog(@"登陆成功。当前登录的用户ID：%@", userId);
+         [kUserDefaults setObject:userId forKey:RONGYUN_USER_ID];
         dispatch_async(dispatch_get_main_queue(), ^{
             //            [[RCIM sharedRCIM] setUserInfoDataSource:self];
         });

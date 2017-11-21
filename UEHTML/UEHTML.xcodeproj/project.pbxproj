@@ -132,6 +132,9 @@
 		18A9463D1FAA1829007F8A1D /* FaJianZhiLVYouTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A9463B1FAA1829007F8A1D /* FaJianZhiLVYouTableViewCell.m */; };
 		18A9463E1FAA1829007F8A1D /* FaJianZhiLVYouTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A9463C1FAA1829007F8A1D /* FaJianZhiLVYouTableViewCell.xib */; };
 		18AC8F471FBB34CE00F4E265 /* ZLRongYunManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AC8F461FBB34CE00F4E265 /* ZLRongYunManager.m */; };
+		18B2B7751FC46FB0001B14F1 /* JZMp3EncodeOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B2B7701FC46FB0001B14F1 /* JZMp3EncodeOperation.m */; };
+		18B2B7761FC46FB0001B14F1 /* JZMp3RecordingClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B2B7721FC46FB0001B14F1 /* JZMp3RecordingClient.m */; };
+		18B2B7771FC46FB0001B14F1 /* JZRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B2B7741FC46FB0001B14F1 /* JZRecorder.m */; };
 		18B2D8A21FB3FD0400C59550 /* DetailXuQiuViewCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B2D8A01FB3FD0400C59550 /* DetailXuQiuViewCellTableViewCell.m */; };
 		18B2D8A31FB3FD0400C59550 /* DetailXuQiuViewCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B2D8A11FB3FD0400C59550 /* DetailXuQiuViewCellTableViewCell.xib */; };
 		18B2D8A71FB404FD00C59550 /* DetailXuQiuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B2D8A51FB404FD00C59550 /* DetailXuQiuViewController.m */; };
@@ -1021,6 +1024,12 @@
 		18A9463C1FAA1829007F8A1D /* FaJianZhiLVYouTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FaJianZhiLVYouTableViewCell.xib; sourceTree = "<group>"; };
 		18AC8F451FBB34CE00F4E265 /* ZLRongYunManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLRongYunManager.h; sourceTree = "<group>"; };
 		18AC8F461FBB34CE00F4E265 /* ZLRongYunManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLRongYunManager.m; sourceTree = "<group>"; };
+		18B2B76F1FC46FB0001B14F1 /* JZMp3EncodeOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZMp3EncodeOperation.h; sourceTree = "<group>"; };
+		18B2B7701FC46FB0001B14F1 /* JZMp3EncodeOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZMp3EncodeOperation.m; sourceTree = "<group>"; };
+		18B2B7711FC46FB0001B14F1 /* JZMp3RecordingClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZMp3RecordingClient.h; sourceTree = "<group>"; };
+		18B2B7721FC46FB0001B14F1 /* JZMp3RecordingClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZMp3RecordingClient.m; sourceTree = "<group>"; };
+		18B2B7731FC46FB0001B14F1 /* JZRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZRecorder.h; sourceTree = "<group>"; };
+		18B2B7741FC46FB0001B14F1 /* JZRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZRecorder.m; sourceTree = "<group>"; };
 		18B2D89F1FB3FD0400C59550 /* DetailXuQiuViewCellTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailXuQiuViewCellTableViewCell.h; sourceTree = "<group>"; };
 		18B2D8A01FB3FD0400C59550 /* DetailXuQiuViewCellTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailXuQiuViewCellTableViewCell.m; sourceTree = "<group>"; };
 		18B2D8A11FB3FD0400C59550 /* DetailXuQiuViewCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailXuQiuViewCellTableViewCell.xib; sourceTree = "<group>"; };
@@ -2018,6 +2027,7 @@
 		1853C0E11FC1BE670054A9A2 /* LuYinTool */ = {
 			isa = PBXGroup;
 			children = (
+				18B2B76E1FC46FB0001B14F1 /* JZMp3Recording */,
 				1853C0E21FC1BE910054A9A2 /* ZLLuYinManager.h */,
 				1853C0E31FC1BE910054A9A2 /* ZLLuYinManager.m */,
 				1853C0E51FC1C2210054A9A2 /* PrivatyJianCeTool.h */,
@@ -2559,6 +2569,19 @@
 				18AC8F461FBB34CE00F4E265 /* ZLRongYunManager.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		18B2B76E1FC46FB0001B14F1 /* JZMp3Recording */ = {
+			isa = PBXGroup;
+			children = (
+				18B2B76F1FC46FB0001B14F1 /* JZMp3EncodeOperation.h */,
+				18B2B7701FC46FB0001B14F1 /* JZMp3EncodeOperation.m */,
+				18B2B7711FC46FB0001B14F1 /* JZMp3RecordingClient.h */,
+				18B2B7721FC46FB0001B14F1 /* JZMp3RecordingClient.m */,
+				18B2B7731FC46FB0001B14F1 /* JZRecorder.h */,
+				18B2B7741FC46FB0001B14F1 /* JZRecorder.m */,
+			);
+			path = JZMp3Recording;
 			sourceTree = "<group>";
 		};
 		18B2D8AA1FB423C100C59550 /* PublishViewModel */ = {
@@ -5661,6 +5684,7 @@
 				40C63BB31FB1DA5B00A4DD13 /* ATQMeDTTableViewCell.m in Sources */,
 				40CCEBFB1FC3079E002AEFC3 /* ATQAnbyCell.m in Sources */,
 				18D93D7E1F93A46300D18418 /* RCDUserInfoManager.m in Sources */,
+				18B2B7751FC46FB0001B14F1 /* JZMp3EncodeOperation.m in Sources */,
 				18D93D791F939D3500D18418 /* AFHttpTool.m in Sources */,
 				18D93D7A1F939D3500D18418 /* RCDUtilities.m in Sources */,
 				18D93D771F939B8D00D18418 /* FMDatabaseQueue.m in Sources */,
@@ -5903,6 +5927,7 @@
 				185D78A61F8DF13A00DA8849 /* UIScrollView+WHC_PullRefresh.m in Sources */,
 				40CCEBFF1FC3144C002AEFC3 /* ATQABYModel.m in Sources */,
 				40C77E5F1FAE0F39000D8F70 /* ATQContentModel.m in Sources */,
+				18B2B7771FC46FB0001B14F1 /* JZRecorder.m in Sources */,
 				185D78881F8DF13A00DA8849 /* iCarousel.m in Sources */,
 				185D78C01F8E1CBA00DA8849 /* JianZhiListTableVIew.m in Sources */,
 				40DF89A61F8B18FA008247F9 /* ATQCarRZViewController.m in Sources */,
@@ -5972,6 +5997,7 @@
 				40F5E64F1F91B2AD0077A574 /* ZJDataSaver.m in Sources */,
 				40E0F23C1F78ABB60074B064 /* ATQCollectViewController.m in Sources */,
 				40EA93281F7BBAD3005A0E50 /* split.c in Sources */,
+				18B2B7761FC46FB0001B14F1 /* JZMp3RecordingClient.m in Sources */,
 				40F5E64E1F91B2AD0077A574 /* UIView+ZJ.m in Sources */,
 				40019C321F7F6BF600E11331 /* ATQCheckTableViewCell.m in Sources */,
 				185D787B1F8DF13A00DA8849 /* UIView+NFLayout.m in Sources */,

@@ -54,6 +54,28 @@
         longPress.delegate = self;
         longPress.minimumPressDuration = 1.0;
         [cell.luYinImageView addGestureRecognizer:longPress];
+        
+        cell.yaJinLabel.linkTextAttributes =@{
+                                              NSUnderlineStyleAttributeName:[NSNumber numberWithInteger:NSUnderlineStyleSingle],
+                                              NSForegroundColorAttributeName:[UIColor colorWithhex16stringToColor:UIColorStr] ,
+                                              NSUnderlineColorAttributeName:[UIColor colorWithhex16stringToColor:UIColorStr],
+                                              NSFontAttributeName:[UIFont systemFontOfSize:17.0f]
+                                              };
+        [cell.yaJinLabel addLinkWithType:MLLinkTypeNone value:@"押金认证" range:NSMakeRange(20, 4)];
+        __weak typeof(self) weakSelf = self;
+        [cell.yaJinLabel setDidClickLinkBlock:^(MLLink *link, NSString *linkText, MLLinkLabel *label) {
+            /** 押金认证执行方法 */
+            ATQYajinRZViewController *vc = [[ATQYajinRZViewController alloc] init];
+            [weakSelf.navigationController pushViewController:vc animated:YES];
+            NSLog(@"点击了押金认证");
+        }];
+        /*
+         NSMutableAttributedString *str = [[NSMutableAttributedString alloc] initWithString:@"押金认证"];
+         NSRange strRange = {0,[str length]};
+         [str addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInteger:NSUnderlineStyleSingle] range:strRange];
+         [str addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithHexString:UIColorStr]  range:strRange];
+         [str addAttribute:NSUnderlineColorAttributeName value:[UIColor colorWithHexString:UIColorStr] range:strRange];
+         */
         return cell;
     }
 }
@@ -87,15 +109,7 @@
 }
 /** 提交审核 */
 - (void)tiJiaoShenHeButtonAction:(UIButton *)sender{
-    //创建URL
-    NSString * urlstring = [ZLLuYinManager shareInstance].cafPathStr;
-    NSLog(@"录音播放地址：%@",urlstring);
-    //NSURL * url = [NSURL fileURLWithPath:urlstring];
-    //NSURL *url = [NSURL URLWithString:urlstring];
-    NSURL * url = [NSURL URLWithString:@"http://218.76.27.57:8080/chinaschool_rs02/135275/153903/160861/160867/1370744550357.mp3"];
-    //创建播放器
-   AVPlayer *avPlayer = [[AVPlayer alloc] initWithURL:url];
-   [avPlayer play];
+
 }
 
 - (void)didReceiveMemoryWarning {

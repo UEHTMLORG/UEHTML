@@ -11,7 +11,7 @@
 #import "FaBuJianZhiTableViewCell.h"
 #import "ZLLuYinManager.h"
 #import <AVFoundation/AVFoundation.h>
-
+#import "ATQYajinRZViewController.h"
 @interface ZhaoRenFuWuViewController : ATQBaseViewController<UITableViewDelegate,UITableViewDataSource,UIGestureRecognizerDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableview;

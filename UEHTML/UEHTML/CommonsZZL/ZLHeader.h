@@ -21,7 +21,9 @@
 #import <SDWebImage/UIButton+WebCache.h>
 #import "ZLRongYunManager.h"
 #import "PrivatyJianCeTool.h"
-
+#import <YYLabel.h>
+#import "MLLinkLabel.h"
+//#import <TTTAttributedLabel.h>
 
 ///////////////////////////////////
 #define Main_Purple_Color @"ff73ba"

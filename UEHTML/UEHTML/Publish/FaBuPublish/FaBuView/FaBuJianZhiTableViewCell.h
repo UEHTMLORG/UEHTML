@@ -18,6 +18,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *luYinImageView;
 @property (strong, nonatomic) IBOutlet UIButton *tiJiaoShenHeButton;
 @property (strong, nonatomic) IBOutlet UIButton *shiLiButton;
+@property (strong, nonatomic) IBOutlet MLLinkLabel *yaJinLabel;
 
 
 

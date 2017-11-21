@@ -210,7 +210,7 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="押金认证:(贫农)您还没有进行押金认证  押金认证" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8q-e2-bID">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="押金认证:(贫农)您还没有进行押金认证 押金认证" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8q-e2-bID" customClass="MLLinkLabel">
                                 <rect key="frame" x="20" y="164" width="335" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
@@ -295,6 +295,7 @@
                 <outlet property="luYinImageView" destination="mb3-RR-MX2" id="syI-uc-SZW"/>
                 <outlet property="shiLiButton" destination="wEs-qy-iwF" id="H1o-bO-8Py"/>
                 <outlet property="tiJiaoShenHeButton" destination="iW3-0G-42Z" id="ai5-ar-TcT"/>
+                <outlet property="yaJinLabel" destination="W8q-e2-bID" id="rUS-Z2-K69"/>
             </connections>
             <point key="canvasLocation" x="48" y="-138"/>
         </tableViewCell>

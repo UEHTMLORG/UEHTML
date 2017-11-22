@@ -36,7 +36,7 @@
     self.bankNumText.delegate = self;
     self.tixianJineText.keyboardType = UIKeyboardTypeDecimalPad;
     self.tixianJineText.delegate = self;
-    self.ketixianJine.text = [NSString stringWithFormat:@"￥%@",self.tixianJine];
+    self.ketixianJine.text = [NSString stringWithFormat:@"可提现金额￥%@",self.tixianJine];
     self.tableView.hidden = YES;
 }
 - (IBAction)bankClick:(id)sender {

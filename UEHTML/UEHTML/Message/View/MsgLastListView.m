@@ -37,15 +37,15 @@
         make.left.mas_equalTo(self).mas_offset(20);
     }];
     
-    UIButton * moreBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [moreBtn setImage:[UIImage imageNamed:@"xiaoxi-dian03"] forState:UIControlStateNormal];
-    [moreBtn addTarget:self action:@selector(moreButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-    [self addSubview:moreBtn];
-    [moreBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.mas_equalTo(self).mas_offset(-20);
-        make.top.mas_equalTo(self).mas_offset(10);
-        make.size.mas_equalTo(CGSizeMake(30, 15));
-    }];
+//    UIButton * moreBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+//    [moreBtn setImage:[UIImage imageNamed:@"xiaoxi-dian03"] forState:UIControlStateNormal];
+//    [moreBtn addTarget:self action:@selector(moreButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+//    [self addSubview:moreBtn];
+//    [moreBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.right.mas_equalTo(self).mas_offset(-20);
+//        make.top.mas_equalTo(self).mas_offset(10);
+//        make.size.mas_equalTo(CGSizeMake(30, 15));
+//    }];
     
     //创建一个Layout布局
     UICollectionViewFlowLayout * layout = [[UICollectionViewFlowLayout alloc]init];

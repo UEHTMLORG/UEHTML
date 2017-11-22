@@ -95,6 +95,7 @@
     if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
         NSLog(@"UIGestureRecognizerStateEnded");
         [[ZLLuYinManager shareInstance] stopRecord];
+        NSString * base64Data = [[ZLLuYinManager shareInstance] base64FromRecordNSData];
     }
 }
 /** 示例按钮 */

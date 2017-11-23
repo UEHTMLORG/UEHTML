@@ -65,28 +65,38 @@ static  NSInteger page = 1;
     cell.disLab.text = model.distance;
     if ([model.phone_auth isEqualToString:@"1"]) {
         cell.phoneImg.hidden = NO;
+        cell.phoneH.constant = 15;
     }else{
         cell.phoneImg.hidden = YES;
+        cell.phoneH.constant = 0;
     }
     if ([model.id_info_auth isEqualToString:@"1"]) {
         cell.idcardImg.hidden = NO;
+        cell.idcardH.constant = 15;
     }else{
         cell.idcardImg.hidden = YES;
+        cell.idcardH.constant = 0;
     }
     if ([model.video_auth isEqualToString:@"1"]) {
         cell.vedioImg.hidden = NO;
+        cell.vedioH.constant = 15;
     }else{
         cell.vedioImg.hidden = YES;
+        cell.vedioH.constant = 0;
     }
     if ([model.car_auth isEqualToString:@"1"]) {
         cell.carImg.hidden = NO;
+        cell.carH.constant = 15;
     }else{
         cell.carImg.hidden = YES;
+        cell.carH.constant = 0;
     }
     if ([model.face_auth isEqualToString:@"1"]) {
-        cell.carImg.hidden = NO;
+        cell.sfImg.hidden = NO;
+        cell.sfH.constant = 15;
     }else{
-        cell.carImg.hidden = YES;
+        cell.sfImg.hidden = YES;
+        cell.sfH.constant = 0;
     }
     if ([model.gender isEqualToString:@"1"]) {
         cell.sexImg.image = [UIImage imageNamed:@"zhanghu-sex"];

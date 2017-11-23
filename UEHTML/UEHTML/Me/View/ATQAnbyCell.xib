@@ -234,16 +234,21 @@
                 <outlet property="addrLab" destination="UjF-wU-OGr" id="VUf-Oo-OWv"/>
                 <outlet property="ageLab" destination="khl-bv-pPk" id="MU2-YI-xo3"/>
                 <outlet property="cancelBtn" destination="GEA-Vb-e6W" id="Ntx-ZV-eKT"/>
+                <outlet property="carH" destination="LUp-jR-NwH" id="bTh-Ue-Afh"/>
                 <outlet property="carImg" destination="1YG-e7-bFL" id="zkg-hg-TIj"/>
                 <outlet property="disLab" destination="QfZ-UX-iDk" id="pGV-Lo-9Og"/>
+                <outlet property="idcardH" destination="sju-9T-cBN" id="Rlc-IZ-4CQ"/>
                 <outlet property="idcardImg" destination="WTJ-eE-SwJ" id="YxS-aS-71g"/>
                 <outlet property="outDataLab" destination="7Gy-aY-2bH" id="bUC-9k-RkX"/>
+                <outlet property="phoneH" destination="Pds-he-UMI" id="GE4-Fi-ezx"/>
                 <outlet property="phoneImg" destination="WP3-9U-0xX" id="iTA-Ga-1rr"/>
                 <outlet property="sexImg" destination="IcC-RZ-4ep" id="WjZ-tc-mEE"/>
+                <outlet property="sfH" destination="FCr-CD-xlG" id="mXJ-Gs-orQ"/>
                 <outlet property="sfImg" destination="Xn5-Xr-kg6" id="VZH-nk-WUA"/>
                 <outlet property="sureBtn" destination="ERf-rj-Xm7" id="LtL-92-Uj5"/>
                 <outlet property="timeLab" destination="89I-b8-0sZ" id="yqu-UM-eUq"/>
                 <outlet property="txLab" destination="Boa-Ac-RKJ" id="Hy3-N5-dqM"/>
+                <outlet property="vedioH" destination="Mgf-xD-dTS" id="2eW-qy-G2Q"/>
                 <outlet property="vedioImg" destination="HAS-HE-1A1" id="TA3-nd-gud"/>
             </connections>
             <point key="canvasLocation" x="147" y="-28"/>

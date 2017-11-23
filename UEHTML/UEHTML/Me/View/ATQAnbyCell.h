@@ -27,4 +27,9 @@ typedef void (^SureBlock)();
 @property (weak, nonatomic) IBOutlet UILabel *disLab;
 @property (weak, nonatomic) IBOutlet UILabel *outDataLab;
 @property (copy,nonatomic)CancelBlock cancelblock;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *idcardH;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *phoneH;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *vedioH;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *carH;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *sfH;
 @end

@@ -15,9 +15,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         instance = [[[self class] alloc] init];
-        
         // 0.1 创建录音文件存放路径
-        instance.mp3PathStr = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"auto.mp3"];
 //        NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
 //        NSString *mp3 = [path stringByAppendingPathComponent:@"test.mp3"];
         instance.recordClient = [JZMp3RecordingClient sharedClient];
@@ -54,6 +52,11 @@
 }
 /** 开始录音 */
 - (void)startRecordNotice{
+    NSDate * nowDate = [NSDate date];
+    NSTimeInterval timeIntervals = [nowDate timeIntervalSince1970];
+    NSString * houZhuiString = [NSString stringWithFormat:@"%.0f.mp3",timeIntervals];
+    self.mp3PathStr = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:houZhuiString];
+    NSLog(@"录音文件的路劲：%@",self.mp3PathStr);
         [self.recordClient setCurrentMp3File:self.mp3PathStr];
         [self.recordClient start];
 }
@@ -98,6 +101,11 @@
 /** base64转化为NSData */
 - (NSData *)dataFromBase64String{
     return nil;
+}
+/** 获取NSdata */
+- (NSData *)dataFromMp3Path{
+    NSData * mp3Data = [NSData dataWithContentsOfFile:self.mp3PathStr];
+    return mp3Data;
 }
 /** 删除录音文件 */
 -(void)deleteOldRecordFile{

@@ -30,7 +30,7 @@
                                 <constraint firstAttribute="width" constant="18" id="y00-rz-n62"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请不要在服务介绍中泄漏联系方式和微信(发布时如有疑问请联系我们)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j46-uG-hNm">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请不要在服务介绍中泄漏联系方式和微信(发现后封号)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j46-uG-hNm">
                             <rect key="frame" x="22" y="0.0" width="353" height="20"/>
                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                             <color key="textColor" red="0.96787184476852417" green="0.450145423412323" blue="0.73122376203536987" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

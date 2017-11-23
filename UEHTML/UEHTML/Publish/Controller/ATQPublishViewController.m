@@ -110,15 +110,12 @@
     
 }
 - (void)zhaoRenFuWuButtonAction{
-    
-    ZhaoRenFuWuViewController * VC = [ZhaoRenFuWuViewController new];
-    [self.navigationController pushViewController:VC animated:YES];
-
-}
-- (void)woYaoZhuanQianButtonAction{
     WoYaoZhuanViewController * VC = [WoYaoZhuanViewController new];
     [self.navigationController pushViewController:VC animated:YES];
-
+}
+- (void)woYaoZhuanQianButtonAction{
+    ZhaoRenFuWuViewController * VC = [ZhaoRenFuWuViewController new];
+    [self.navigationController pushViewController:VC animated:YES];
 }
 - (void)updateViewConstraints{
     [super updateViewConstraints];

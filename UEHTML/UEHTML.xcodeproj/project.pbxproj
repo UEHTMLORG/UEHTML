@@ -140,6 +140,8 @@
 		18B2D8A71FB404FD00C59550 /* DetailXuQiuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B2D8A51FB404FD00C59550 /* DetailXuQiuViewController.m */; };
 		18B2D8A81FB404FD00C59550 /* DetailXuQiuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B2D8A61FB404FD00C59550 /* DetailXuQiuViewController.xib */; };
 		18B2D8AD1FB423E800C59550 /* PublishZLViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B2D8AC1FB423E800C59550 /* PublishZLViewModel.m */; };
+		18B7F4EF1FC6FA900096C21C /* ZhaoRenFuWuViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B7F4EE1FC6FA900096C21C /* ZhaoRenFuWuViewModel.m */; };
+		18B7F4F21FC6FABB0096C21C /* WoYaoZhuanViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B7F4F11FC6FABB0096C21C /* WoYaoZhuanViewModel.m */; };
 		18C166EB1FBFDBE90058CBCC /* FaBuFirstTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C166E91FBFDBE90058CBCC /* FaBuFirstTableViewCell.m */; };
 		18C166EC1FBFDBE90058CBCC /* FaBuFirstTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C166EA1FBFDBE90058CBCC /* FaBuFirstTableViewCell.xib */; };
 		18D16EA21F8F150400D8DF79 /* JZVideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D16EA01F8F150400D8DF79 /* JZVideoTableViewCell.m */; };
@@ -1038,6 +1040,10 @@
 		18B2D8A61FB404FD00C59550 /* DetailXuQiuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailXuQiuViewController.xib; sourceTree = "<group>"; };
 		18B2D8AB1FB423E800C59550 /* PublishZLViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublishZLViewModel.h; sourceTree = "<group>"; };
 		18B2D8AC1FB423E800C59550 /* PublishZLViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublishZLViewModel.m; sourceTree = "<group>"; };
+		18B7F4ED1FC6FA900096C21C /* ZhaoRenFuWuViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZhaoRenFuWuViewModel.h; sourceTree = "<group>"; };
+		18B7F4EE1FC6FA900096C21C /* ZhaoRenFuWuViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZhaoRenFuWuViewModel.m; sourceTree = "<group>"; };
+		18B7F4F01FC6FABA0096C21C /* WoYaoZhuanViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WoYaoZhuanViewModel.h; sourceTree = "<group>"; };
+		18B7F4F11FC6FABB0096C21C /* WoYaoZhuanViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WoYaoZhuanViewModel.m; sourceTree = "<group>"; };
 		18C166E81FBFDBE90058CBCC /* FaBuFirstTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaBuFirstTableViewCell.h; sourceTree = "<group>"; };
 		18C166E91FBFDBE90058CBCC /* FaBuFirstTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaBuFirstTableViewCell.m; sourceTree = "<group>"; };
 		18C166EA1FBFDBE90058CBCC /* FaBuFirstTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FaBuFirstTableViewCell.xib; sourceTree = "<group>"; };
@@ -2603,6 +2609,10 @@
 		18C166E71FBFDB430058CBCC /* FaBuViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				18B7F4ED1FC6FA900096C21C /* ZhaoRenFuWuViewModel.h */,
+				18B7F4EE1FC6FA900096C21C /* ZhaoRenFuWuViewModel.m */,
+				18B7F4F01FC6FABA0096C21C /* WoYaoZhuanViewModel.h */,
+				18B7F4F11FC6FABB0096C21C /* WoYaoZhuanViewModel.m */,
 			);
 			path = FaBuViewModel;
 			sourceTree = "<group>";
@@ -5673,6 +5683,7 @@
 				40473D3B1F962BAB00E6EE35 /* IFlyFaceResultKeys.m in Sources */,
 				40473D391F962AFB00E6EE35 /* CanvasView.m in Sources */,
 				18D93D861F93A5EB00D18418 /* pinyin.c in Sources */,
+				18B7F4F21FC6FABB0096C21C /* WoYaoZhuanViewModel.m in Sources */,
 				18B2D8AD1FB423E800C59550 /* PublishZLViewModel.m in Sources */,
 				18D93D831F93A56800D18418 /* FMDatabaseAdditions.m in Sources */,
 				18D93D841F93A56800D18418 /* FMDatabasePool.m in Sources */,
@@ -5778,6 +5789,7 @@
 				185D78761F8DF13A00DA8849 /* MLAnimationViewController.m in Sources */,
 				18A9462E1FAA1765007F8A1D /* FuWuTypeCollectionViewCell.m in Sources */,
 				18A946291FAA1576007F8A1D /* WoYaoZhuanViewController.m in Sources */,
+				18B7F4EF1FC6FA900096C21C /* ZhaoRenFuWuViewModel.m in Sources */,
 				185D788B1F8DF13A00DA8849 /* MBManager.m in Sources */,
 				40EA93531F7BBC4D005A0E50 /* PNLineChartData.m in Sources */,
 				40E0847F1F80A54700FD1AA3 /* ATQBuyjbFirTableViewCell.m in Sources */,
@@ -6197,6 +6209,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aotuquan.phone.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

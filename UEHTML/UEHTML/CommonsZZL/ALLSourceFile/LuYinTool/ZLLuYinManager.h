@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import "JZMp3RecordingClient.h"
+#import "NSDatezlModel.h"
 
 @interface ZLLuYinManager : NSObject<AVAudioRecorderDelegate,AVAudioPlayerDelegate>
 
@@ -45,7 +46,8 @@
 - (NSData *)dataFromBase64String;
 /** 删除录音文件 */
 -(void)deleteOldRecordFile;
-
+/** 获取NSdata */
+- (NSData *)dataFromMp3Path;
 
 
 @end

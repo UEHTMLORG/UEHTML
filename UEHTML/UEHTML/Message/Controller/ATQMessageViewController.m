@@ -121,6 +121,7 @@
 /** 创建左边按钮 右边 */
 - (void)loadLeftRightButton{
     UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [leftBtn setFrame:CGRectMake(0, 0, 20, 20)];
     [leftBtn addTarget:self action:@selector(leftButtonAction) forControlEvents:UIControlEventTouchUpInside];
     [leftBtn setBackgroundImage:[UIImage imageNamed:@"xiaoxi-ling"] forState:UIControlStateNormal];
     //[leftBtn setImageEdgeInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
@@ -133,6 +134,7 @@
     self.navigationItem.leftBarButtonItem = leftItem;
     
     UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [rightBtn setFrame:CGRectMake(0, 0, 20, 20)];
     [rightBtn addTarget:self action:@selector(rightButtonAction) forControlEvents:UIControlEventTouchUpInside];
     [rightBtn setBackgroundImage:[UIImage imageNamed:@"xiaoxi-ren"] forState:UIControlStateNormal];
     //[rightBtn setImageEdgeInsets:UIEdgeInsetsMake(5, 5, 5, 5)];

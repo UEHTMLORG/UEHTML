@@ -142,6 +142,8 @@
         self.currentButton = sender;
         [self.currentButton setSelected:YES];
         self.currentType = self.typeArray[sender.tag];
+        
+        self.block(sender.tag, self.currentType);
     }
 }
 
@@ -151,6 +153,10 @@
         [_typeArray addObjectsFromArray:@[@"陪聊天",@"按摩",@"送红酒",@"吃饭",@"看电影",@"唱歌",@"旅游",@"打游戏",@"运动",@"其他"]];
     }
     return _typeArray;
+}
+
+- (void)cellBlockAction:(CellButtonBlock)block{
+    self.block = block;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

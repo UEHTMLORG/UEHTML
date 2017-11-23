@@ -52,6 +52,10 @@
 #define DEFAULT_BACKGROUND_IMAGE @"2"
 #define DEFAULT_GIFTIMAGE @"jianzhi-car"
 
+#define DEFAULT_MESSAGE_FAIL_CONECT @"网络连接失败"
+#define DEFAULT_MESSAGE_SUCCESS_LOAD @"加载成功"
+#define DEFAULT_MESSAGE_FAIL_LOAD  @"加载失败"
+
 /** mansory全局宏 */
 #define MAS_SHORTHAND_GLOBALS
 //#define MAS_SHORTHAND

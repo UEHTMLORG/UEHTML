@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"发布兼职";
+    self.title = @"发布需求";
     // Do any additional setup after loading the view from its nib.
 }
 

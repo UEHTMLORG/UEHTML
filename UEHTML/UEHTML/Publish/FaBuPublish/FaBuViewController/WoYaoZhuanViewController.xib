@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WoYaoZhuanViewController">
             <connections>
+                <outlet property="tableview" destination="sbd-99-8n3" id="NvY-sq-w7p"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,7 +19,56 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tTx-ZX-qPi">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fabu-!" translatesAutoresizingMaskIntoConstraints="NO" id="o7c-Bs-YLe">
+                            <rect key="frame" x="20" y="1" width="18" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="18" id="6n7-2A-6SM"/>
+                                <constraint firstAttribute="height" constant="18" id="grT-Os-zCv"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请不要在服务介绍中泄漏联系方式和微信(如有疑问联系我们)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwn-j6-dUI">
+                            <rect key="frame" x="43" y="4" width="274" height="12"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                            <color key="textColor" red="0.96862745098039216" green="0.45098039215686275" blue="0.72941176470588232" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="1yZ-oT-uIW"/>
+                        <constraint firstItem="o7c-Bs-YLe" firstAttribute="top" secondItem="tTx-ZX-qPi" secondAttribute="top" constant="1" id="F64-BG-giW"/>
+                        <constraint firstItem="vwn-j6-dUI" firstAttribute="leading" secondItem="o7c-Bs-YLe" secondAttribute="trailing" constant="5" id="TVj-9H-DHD"/>
+                        <constraint firstItem="o7c-Bs-YLe" firstAttribute="leading" secondItem="tTx-ZX-qPi" secondAttribute="leading" constant="20" id="bjE-ky-WxI"/>
+                        <constraint firstItem="vwn-j6-dUI" firstAttribute="centerY" secondItem="o7c-Bs-YLe" secondAttribute="centerY" id="hgR-3m-7Ko"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sbd-99-8n3">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="dvd-Q7-PKg"/>
+                        <outlet property="delegate" destination="-1" id="QbZ-DM-dx0"/>
+                    </connections>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="sbd-99-8n3" secondAttribute="trailing" id="0b0-AT-aak"/>
+                <constraint firstItem="sbd-99-8n3" firstAttribute="top" secondItem="tTx-ZX-qPi" secondAttribute="bottom" id="BjL-v3-1bJ"/>
+                <constraint firstItem="tTx-ZX-qPi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="EF1-L3-ARX"/>
+                <constraint firstAttribute="bottom" secondItem="sbd-99-8n3" secondAttribute="bottom" id="GtI-bF-xdj"/>
+                <constraint firstAttribute="trailing" secondItem="tTx-ZX-qPi" secondAttribute="trailing" id="sC5-VZ-WUz"/>
+                <constraint firstItem="sbd-99-8n3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="wP2-z1-t9u"/>
+                <constraint firstItem="tTx-ZX-qPi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="y17-Ez-NXE"/>
+            </constraints>
+            <point key="canvasLocation" x="26.5" y="51.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="fabu-!" width="24" height="24"/>
+    </resources>
 </document>

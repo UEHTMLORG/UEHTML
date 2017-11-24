@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="602" id="KGk-i7-Jjw" customClass="FaBuXuQiuTableViewCell">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FaBuXuQiuCellID" rowHeight="602" id="KGk-i7-Jjw" customClass="FaBuXuQiuTableViewCell">
             <rect key="frame" x="0.0" y="0.0" width="375" height="598"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -56,7 +56,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="元/小时" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvf-ro-hV0">
                                 <rect key="frame" x="307.5" y="11.5" width="47.5" height="17"/>
@@ -103,7 +103,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小时" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2n-3t-HED">
                                 <rect key="frame" x="326" y="11.5" width="29" height="17"/>
@@ -316,7 +316,7 @@
                         <color key="textColor" red="0.9807396531" green="0.72635114190000005" blue="0.34913885589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的押金认证:(贫农)您还没有进行押金认证" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0D-IB-753">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="押金认证:(贫农)您还没有进行押金认证 押金认证" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0D-IB-753" customClass="MLLinkLabel">
                         <rect key="frame" x="20" y="494.5" width="335" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -378,9 +378,25 @@
                     <constraint firstAttribute="trailing" secondItem="xjW-RG-4UX" secondAttribute="trailing" id="v05-c7-d7V"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="age01Button" destination="LvU-4r-haV" id="yBs-fG-cAW"/>
+                <outlet property="age02Button" destination="AiY-5R-S9z" id="9FC-KA-sIP"/>
+                <outlet property="age03Button" destination="r03-8j-Zxo" id="IfJ-45-lgd"/>
+                <outlet property="allPriceLabel" destination="ovO-XU-VQh" id="Mbt-7h-gP5"/>
+                <outlet property="fuWuDiZhiTextField" destination="y3g-84-wDI" id="ExP-Td-TgS"/>
+                <outlet property="jinEField" destination="7AI-c5-FtV" id="uC1-lu-2dY"/>
+                <outlet property="sex01Button" destination="5PP-aH-27C" id="hVt-Aw-UZn"/>
+                <outlet property="sex02button" destination="lQS-Fv-d2a" id="aYK-Bf-Wj5"/>
+                <outlet property="sexNOButton" destination="5Ip-yD-dlm" id="5yl-6L-Y1J"/>
+                <outlet property="shiChangField" destination="Bgr-xT-iGt" id="pAb-6z-4GV"/>
+                <outlet property="shuoMingField" destination="Fu2-3e-xCU" id="Oiy-m7-NlS"/>
+                <outlet property="tijiaoButton" destination="oCK-1U-GAI" id="eEG-YP-1G5"/>
+                <outlet property="timeButton" destination="auC-6R-hWX" id="lby-z6-CU2"/>
+                <outlet property="yaJinLabel" destination="V0D-IB-753" id="9AC-eb-nVK"/>
+            </connections>
             <point key="canvasLocation" x="-827" y="-113"/>
         </tableViewCell>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="598" id="IoW-ez-P46">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FaBuXuQiuCellIDLvYou" rowHeight="598" id="IoW-ez-P46" customClass="FaBuXuQiuLvYouCell">
             <rect key="frame" x="0.0" y="0.0" width="375" height="598"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IoW-ez-P46" id="Kyn-Pm-kc7">
@@ -807,8 +823,8 @@
                         <color key="textColor" red="0.9807396531" green="0.72635114190000005" blue="0.34913885589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的押金认证:(贫农)您还没有进行押金认证" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tS-tM-Lyd">
-                        <rect key="frame" x="52" y="486" width="271.5" height="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="押金认证:(贫农)您还没有进行押金认证 押金认证" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tS-tM-Lyd" customClass="MLLinkLabel">
+                        <rect key="frame" x="36" y="486" width="304" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -867,6 +883,23 @@
                     <constraint firstItem="ADS-QV-2Uf" firstAttribute="top" secondItem="Csp-j3-RFF" secondAttribute="bottom" id="xuq-lC-QGJ"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="age01button" destination="tZ7-b8-F7N" id="6wS-pJ-jVa"/>
+                <outlet property="age02Button" destination="Vnn-zf-c9h" id="0Sn-md-VLV"/>
+                <outlet property="age03Button" destination="F7E-Z8-ecB" id="djm-ix-fbo"/>
+                <outlet property="allPriceLabel" destination="gYY-wY-WCe" id="9y0-nb-gnC"/>
+                <outlet property="chuFaTimeButton" destination="ST9-2W-uGO" id="pB9-rg-4Yx"/>
+                <outlet property="chuXingButton" destination="5XE-CY-oVS" id="bv1-h8-DW6"/>
+                <outlet property="mudiButton" destination="yVZ-gq-360" id="ozr-H0-P8G"/>
+                <outlet property="priceButton" destination="2ml-9X-A7u" id="NWP-9I-o58"/>
+                <outlet property="sexNOButton" destination="CXK-xB-WsU" id="8E3-Gs-owT"/>
+                <outlet property="sexNanButton" destination="nmf-7t-bEb" id="npP-xe-EOb"/>
+                <outlet property="sexNvButton" destination="P3R-K9-MWf" id="j1J-O2-Ill"/>
+                <outlet property="shuoMingTextField" destination="Iwf-bU-6cC" id="iCy-xe-xhD"/>
+                <outlet property="tiJiaoButton" destination="KhM-N0-3Fw" id="k8N-sA-hVL"/>
+                <outlet property="yaJinLabel" destination="3tS-tM-Lyd" id="vKI-1g-Wa8"/>
+                <outlet property="yujiTimeButton" destination="36R-5X-b0S" id="0Mt-bW-aNC"/>
+            </connections>
             <point key="canvasLocation" x="-414.5" y="-113"/>
         </tableViewCell>
     </objects>

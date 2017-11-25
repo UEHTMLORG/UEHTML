@@ -22,6 +22,7 @@
                                       withGender:(NSString *)gender
                                          withLon:(NSString *)lon
                                          withLat:(NSString *)lat
+                                    withTripType:(NSString *)trip_mode
                                    withBackBlock:(void (^)(BOOL success))backBlock;
 
 /** 非旅游设置开始时间 Picker */

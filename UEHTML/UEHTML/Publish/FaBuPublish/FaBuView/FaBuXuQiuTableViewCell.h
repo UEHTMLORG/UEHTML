@@ -48,5 +48,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *allPriceLabel;
 @property (strong, nonatomic) IBOutlet MLLinkLabel *yaJinLabel;
 @property (strong, nonatomic) IBOutlet UIButton *tiJiaoButton;
-
+@property (nonatomic, strong) NSArray *ageButtonArr;
+@property (nonatomic, strong) NSArray *sexButtonArr;
 @end

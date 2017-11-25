@@ -30,6 +30,7 @@
                                       withGender:(NSString *)gender
                                          withLon:(NSString *)lon
                                          withLat:(NSString *)lat
+                                    withTripType:(NSString *)trip_mode
                                    withBackBlock:(void (^)(BOOL))backBlock{
     NSDictionary * prama = @{
                              @"class_id":class_id,
@@ -41,9 +42,9 @@
                              @"gender":gender,
                              @"lon":lon,
                              @"lat":lat,
-                             @"trip_mode":@"飞机"
+                             @"trip_mode":trip_mode
                              };
-    NSLog(@"发布非旅游：%@",prama);
+    NSLog(@"发布需求参数：%@",prama);
     NSString * urlString = [NSString stringWithFormat:@"%@/api/job/send/demand",Common_URL_ZL];
     [[ZLSecondAFNetworking sharedInstance] postWithUSER_INFO_URLString:urlString parameters:prama success:^(id responseObject) {
         NSDictionary * dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
@@ -53,9 +54,11 @@
             backBlock(YES);
         }
         else{
+            backBlock(NO);
             [MBManager showBriefAlert:@"提交失败"];
         }
     } failure:^(NSError *error) {
+        backBlock(NO);
         [MBManager showBriefAlert:DEFAULT_MESSAGE_FAIL_CONECT];
     }];
     

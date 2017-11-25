@@ -98,4 +98,13 @@
     
 }
 
+#pragma 判断是数字
++ (BOOL)checkShuZi:(NSString *)number{
+    /*^[0-9]*$*/
+    NSString *pattern = @"^[0-9]*$";
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", pattern];
+    BOOL isMatch = [pred evaluateWithObject:number];
+    return isMatch;
+}
+
 @end

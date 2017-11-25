@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9744FC0E6118E18394E0F04B8464F978"
+               BlueprintIdentifier = "4AFA91B5F47A431ABFC2B5FF2B655C60"
                BuildableName = "YSMChineseSort.bundle"
                BlueprintName = "YSMChineseSort-YSMChineseSort"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9744FC0E6118E18394E0F04B8464F978"
+            BlueprintIdentifier = "4AFA91B5F47A431ABFC2B5FF2B655C60"
             BuildableName = "YSMChineseSort.bundle"
             BlueprintName = "YSMChineseSort-YSMChineseSort"
             ReferencedContainer = "container:Pods.xcodeproj">

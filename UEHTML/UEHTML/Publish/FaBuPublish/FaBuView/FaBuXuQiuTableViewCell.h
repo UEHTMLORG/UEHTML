@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+//typedef void(^AllPri)(<#arguments#>);
+
 @interface FaBuXuQiuTableViewCell : UITableViewCell
 
 @property (strong, nonatomic) IBOutlet UITextField *fuWuDiZhiTextField;
@@ -24,7 +26,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *allPriceLabel;
 @property (strong, nonatomic) IBOutlet MLLinkLabel *yaJinLabel;
 @property (strong, nonatomic) IBOutlet UIButton *tijiaoButton;
-
+@property (nonatomic, strong) NSArray *ageButtonArr;
+@property (nonatomic, strong) NSArray *sexButtonArr;
 
 @end
 

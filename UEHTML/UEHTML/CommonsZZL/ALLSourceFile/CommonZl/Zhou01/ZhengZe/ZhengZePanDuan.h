@@ -27,4 +27,7 @@
 + (BOOL)checkEnglishZiMu:(NSString *)string;
 #pragma 中文判断
 + (BOOL)checkZhongWen:(NSString *)zhongWen;
+#pragma 判断是否是数字
++ (BOOL)checkShuZi:(NSString *)number;
+
 @end

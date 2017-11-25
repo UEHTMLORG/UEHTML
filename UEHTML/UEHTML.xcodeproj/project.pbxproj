@@ -176,6 +176,13 @@
 		18D93D891F95BF2C00D18418 /* MD5FilesZl.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D93D881F95BF2C00D18418 /* MD5FilesZl.m */; };
 		18D93D8D1F96E9CB00D18418 /* JianZhiTouSuCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D93D8B1F96E9CA00D18418 /* JianZhiTouSuCollectionViewCell.m */; };
 		18D93D8E1F96E9CB00D18418 /* JianZhiTouSuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D93D8C1F96E9CA00D18418 /* JianZhiTouSuCollectionViewCell.xib */; };
+		18DA193C1FC935EE008B945F /* BRAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA192E1FC935ED008B945F /* BRAddressModel.m */; };
+		18DA193D1FC935EE008B945F /* BRAddressPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA19301FC935ED008B945F /* BRAddressPickerView.m */; };
+		18DA193E1FC935EE008B945F /* BRCity.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18DA19311FC935ED008B945F /* BRCity.plist */; };
+		18DA193F1FC935EE008B945F /* BRBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA19341FC935ED008B945F /* BRBaseView.m */; };
+		18DA19401FC935EE008B945F /* BRDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA19381FC935ED008B945F /* BRDatePickerView.m */; };
+		18DA19411FC935EE008B945F /* BRStringPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA193B1FC935ED008B945F /* BRStringPickerView.m */; };
+		18DA19441FC93609008B945F /* NSDate+BRAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA19431FC93609008B945F /* NSDate+BRAdd.m */; };
 		18E9BD5B1FB8764D00B93365 /* DetailXuQiuViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E9BD5A1FB8764D00B93365 /* DetailXuQiuViewModel.m */; };
 		18E9BD5E1FB8766500B93365 /* DetailXuQiuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E9BD5D1FB8766500B93365 /* DetailXuQiuModel.m */; };
 		18E9BD611FB876C000B93365 /* DetailSubPublishViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E9BD601FB876C000B93365 /* DetailSubPublishViewModel.m */; };
@@ -1104,6 +1111,20 @@
 		18D93D8A1F96E9CA00D18418 /* JianZhiTouSuCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JianZhiTouSuCollectionViewCell.h; sourceTree = "<group>"; };
 		18D93D8B1F96E9CA00D18418 /* JianZhiTouSuCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JianZhiTouSuCollectionViewCell.m; sourceTree = "<group>"; };
 		18D93D8C1F96E9CA00D18418 /* JianZhiTouSuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JianZhiTouSuCollectionViewCell.xib; sourceTree = "<group>"; };
+		18DA192D1FC935ED008B945F /* BRAddressModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRAddressModel.h; sourceTree = "<group>"; };
+		18DA192E1FC935ED008B945F /* BRAddressModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRAddressModel.m; sourceTree = "<group>"; };
+		18DA192F1FC935ED008B945F /* BRAddressPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRAddressPickerView.h; sourceTree = "<group>"; };
+		18DA19301FC935ED008B945F /* BRAddressPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRAddressPickerView.m; sourceTree = "<group>"; };
+		18DA19311FC935ED008B945F /* BRCity.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BRCity.plist; sourceTree = "<group>"; };
+		18DA19331FC935ED008B945F /* BRBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRBaseView.h; sourceTree = "<group>"; };
+		18DA19341FC935ED008B945F /* BRBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRBaseView.m; sourceTree = "<group>"; };
+		18DA19351FC935ED008B945F /* BRPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRPickerView.h; sourceTree = "<group>"; };
+		18DA19371FC935ED008B945F /* BRDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRDatePickerView.h; sourceTree = "<group>"; };
+		18DA19381FC935ED008B945F /* BRDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRDatePickerView.m; sourceTree = "<group>"; };
+		18DA193A1FC935ED008B945F /* BRStringPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRStringPickerView.h; sourceTree = "<group>"; };
+		18DA193B1FC935ED008B945F /* BRStringPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRStringPickerView.m; sourceTree = "<group>"; };
+		18DA19421FC93609008B945F /* NSDate+BRAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+BRAdd.h"; sourceTree = "<group>"; };
+		18DA19431FC93609008B945F /* NSDate+BRAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+BRAdd.m"; sourceTree = "<group>"; };
 		18E9BD591FB8764D00B93365 /* DetailXuQiuViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailXuQiuViewModel.h; sourceTree = "<group>"; };
 		18E9BD5A1FB8764D00B93365 /* DetailXuQiuViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailXuQiuViewModel.m; sourceTree = "<group>"; };
 		18E9BD5C1FB8766500B93365 /* DetailXuQiuModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailXuQiuModel.h; sourceTree = "<group>"; };
@@ -2054,6 +2075,7 @@
 		185D77961F8DF13900DA8849 /* ALLSourceFile */ = {
 			isa = PBXGroup;
 			children = (
+				18DA192B1FC935ED008B945F /* BRPickerView */,
 				1853C0E11FC1BE670054A9A2 /* LuYinTool */,
 				188E19A91F91A6C9007F56E4 /* PingJiaView */,
 				185D77971F8DF13900DA8849 /* AutoFitLabel */,
@@ -2706,6 +2728,59 @@
 				18D93D741F939B1D00D18418 /* FMResultSet.m */,
 			);
 			path = DB;
+			sourceTree = "<group>";
+		};
+		18DA192B1FC935ED008B945F /* BRPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				18DA19421FC93609008B945F /* NSDate+BRAdd.h */,
+				18DA19431FC93609008B945F /* NSDate+BRAdd.m */,
+				18DA192C1FC935ED008B945F /* AddressPickerView */,
+				18DA19321FC935ED008B945F /* Base */,
+				18DA19351FC935ED008B945F /* BRPickerView.h */,
+				18DA19361FC935ED008B945F /* DatePickerView */,
+				18DA19391FC935ED008B945F /* StringPickerView */,
+			);
+			path = BRPickerView;
+			sourceTree = "<group>";
+		};
+		18DA192C1FC935ED008B945F /* AddressPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				18DA192D1FC935ED008B945F /* BRAddressModel.h */,
+				18DA192E1FC935ED008B945F /* BRAddressModel.m */,
+				18DA192F1FC935ED008B945F /* BRAddressPickerView.h */,
+				18DA19301FC935ED008B945F /* BRAddressPickerView.m */,
+				18DA19311FC935ED008B945F /* BRCity.plist */,
+			);
+			path = AddressPickerView;
+			sourceTree = "<group>";
+		};
+		18DA19321FC935ED008B945F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				18DA19331FC935ED008B945F /* BRBaseView.h */,
+				18DA19341FC935ED008B945F /* BRBaseView.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		18DA19361FC935ED008B945F /* DatePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				18DA19371FC935ED008B945F /* BRDatePickerView.h */,
+				18DA19381FC935ED008B945F /* BRDatePickerView.m */,
+			);
+			path = DatePickerView;
+			sourceTree = "<group>";
+		};
+		18DA19391FC935ED008B945F /* StringPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				18DA193A1FC935ED008B945F /* BRStringPickerView.h */,
+				18DA193B1FC935ED008B945F /* BRStringPickerView.m */,
+			);
+			path = StringPickerView;
 			sourceTree = "<group>";
 		};
 		18E9BD571FB8763100B93365 /* ViewModel */ = {
@@ -5408,6 +5483,7 @@
 				40F5E5AD1F91AFAC0077A574 /* f_static_046@2x.png in Resources */,
 				40F5E5541F91AFAC0077A574 /* f_static_002@2x.png in Resources */,
 				40F5E5531F91AFAC0077A574 /* f_static_001@3x.png in Resources */,
+				18DA193E1FC935EE008B945F /* BRCity.plist in Resources */,
 				40185EE01FBB2BC7007F6F5F /* ATQTixianViewController.xib in Resources */,
 				40E93DEF1F77946E0018C3F5 /* ATQFristTableViewCell.xib in Resources */,
 				40F5E5CD1F91AFAC0077A574 /* f_static_062@2x.png in Resources */,
@@ -5700,6 +5776,7 @@
 				18D93D7A1F939D3500D18418 /* RCDUtilities.m in Sources */,
 				18D93D771F939B8D00D18418 /* FMDatabaseQueue.m in Sources */,
 				18D93D781F939B8D00D18418 /* SortForTime.m in Sources */,
+				18DA19411FC935EE008B945F /* BRStringPickerView.m in Sources */,
 				18D93D641F93998600D18418 /* RCDGroupInfo.m in Sources */,
 				18E9BD5E1FB8766500B93365 /* DetailXuQiuModel.m in Sources */,
 				18D93D651F93998600D18418 /* RCDHttpTool.m in Sources */,
@@ -5724,6 +5801,7 @@
 				40F5E63B1F91AFAC0077A574 /* MorePanel.m in Sources */,
 				40236C6B1F7BA49F004AE37B /* ATQSpreadMoenyViewController.m in Sources */,
 				40E061C01F7689100072596D /* ATQItemTableViewCell.m in Sources */,
+				18DA19441FC93609008B945F /* NSDate+BRAdd.m in Sources */,
 				407193D81F8B07AC00B9F162 /* ATQSFRZViewController.m in Sources */,
 				40F5E38C1F91AB7A0077A574 /* NSString+ZJ.m in Sources */,
 				40E0847B1F80A45F00FD1AA3 /* ATQBuyJinbiViewController.m in Sources */,
@@ -5807,6 +5885,7 @@
 				40D353BA1F7F32D10017DA5C /* ATQAccountSecTableViewCell.m in Sources */,
 				18C166EB1FBFDBE90058CBCC /* FaBuFirstTableViewCell.m in Sources */,
 				18F9887E1FB0A78400335E5D /* DetailSubPublishCell.m in Sources */,
+				18DA193C1FC935EE008B945F /* BRAddressModel.m in Sources */,
 				40EC722D1F9F31D600412871 /* ATQCollectModel.m in Sources */,
 				4061BD9C1F8CB53B00F6EC30 /* ATQTypeListInviteDetailViewController.m in Sources */,
 				185D78AD1F8DF13A00DA8849 /* KSNavigationController.m in Sources */,
@@ -5858,6 +5937,7 @@
 				40FB16081FBF1E7A00201DB4 /* ATQlvyouDetailViewController.m in Sources */,
 				407F9BD71F66364C0043A87A /* ATQVicintyViewController.m in Sources */,
 				40DF4F8B1F8269CD00EE6753 /* CPStepper.m in Sources */,
+				18DA193D1FC935EE008B945F /* BRAddressPickerView.m in Sources */,
 				185D78611F8DF13900DA8849 /* UIColor+KSString.m in Sources */,
 				40F5E3951F91AF920077A574 /* ZJCustomScrollView.m in Sources */,
 				18D16EA21F8F150400D8DF79 /* JZVideoTableViewCell.m in Sources */,
@@ -5962,6 +6042,7 @@
 				40F5E5311F91AFAC0077A574 /* ChatKeyBoard.m in Sources */,
 				40CCEBF71FC304EF002AEFC3 /* ATQAnBYViewController.m in Sources */,
 				185D78AA1F8DF13A00DA8849 /* ZLPageControl.m in Sources */,
+				18DA193F1FC935EE008B945F /* BRBaseView.m in Sources */,
 				40F5E6371F91AFAC0077A574 /* FacePanel.m in Sources */,
 				4067ECFF1F79F58F0051173D /* ATQWechatView.m in Sources */,
 				408AE81B1F862AFE004A824C /* ATQRZCenterViewController.m in Sources */,
@@ -6022,6 +6103,7 @@
 				407F9BCE1F6634360043A87A /* ATQBaseViewController.m in Sources */,
 				40D1E79A1FAB244000276DFC /* ATQFriModel.m in Sources */,
 				40C224401F8CFC3300853B17 /* ATQAddFriendsViewController.m in Sources */,
+				18DA19401FC935EE008B945F /* BRDatePickerView.m in Sources */,
 				40C77E2B1FAD96A2000D8F70 /* ATQTongchengViewController.m in Sources */,
 				40E0F2571F78D0BB0074B064 /* ATQSZThiTableViewCell.m in Sources */,
 				4024D6641F7E1B81006E56C1 /* PZXVerificationCodeView.m in Sources */,

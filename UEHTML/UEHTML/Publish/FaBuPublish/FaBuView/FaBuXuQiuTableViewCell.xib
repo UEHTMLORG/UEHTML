@@ -155,11 +155,12 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auC-6R-hWX">
-                                <rect key="frame" x="253" y="5" width="100" height="30"/>
+                                <rect key="frame" x="203" y="5" width="150" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="OxS-cC-MBT"/>
+                                    <constraint firstAttribute="width" constant="150" id="OxS-cC-MBT"/>
                                     <constraint firstAttribute="height" constant="30" id="zr3-V9-m8L"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="2017-10-10">
                                     <color key="titleColor" red="0.97700208430000002" green="0.66826802490000003" blue="0.83572024109999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -213,33 +214,33 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LvU-4r-haV">
-                                <rect key="frame" x="52.5" y="34" width="70" height="25"/>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LvU-4r-haV">
+                                <rect key="frame" x="30" y="34" width="85" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="MUA-rf-gUY"/>
-                                    <constraint firstAttribute="width" constant="70" id="rsX-Mp-XI1"/>
+                                    <constraint firstAttribute="width" constant="85" id="rsX-Mp-XI1"/>
                                 </constraints>
-                                <state key="normal" title="18-25岁">
+                                <state key="normal" backgroundImage="fabu-button-age">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AiY-5R-S9z">
-                                <rect key="frame" x="152.5" y="34" width="70" height="25"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AiY-5R-S9z">
+                                <rect key="frame" x="145" y="34" width="85" height="25"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="3R5-Wo-p0F"/>
+                                    <constraint firstAttribute="width" constant="85" id="3R5-Wo-p0F"/>
                                     <constraint firstAttribute="height" constant="25" id="POu-d6-TIa"/>
                                 </constraints>
-                                <state key="normal" title="25-30岁">
+                                <state key="normal" backgroundImage="fabu-button-age03">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r03-8j-Zxo">
-                                <rect key="frame" x="252.5" y="34" width="70" height="25"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r03-8j-Zxo">
+                                <rect key="frame" x="260" y="34" width="85" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="3lE-V3-3wS"/>
-                                    <constraint firstAttribute="width" constant="70" id="4xo-fc-ksF"/>
+                                    <constraint firstAttribute="width" constant="85" id="4xo-fc-ksF"/>
                                 </constraints>
-                                <state key="normal" title="30岁以上">
+                                <state key="normal" backgroundImage="fabu-button-age05">
                                     <color key="titleColor" red="0.96787184479999999" green="0.45014542340000002" blue="0.73122376200000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
@@ -266,33 +267,33 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5PP-aH-27C">
-                                <rect key="frame" x="47.5" y="34" width="70" height="25"/>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5PP-aH-27C">
+                                <rect key="frame" x="25" y="34" width="85" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="2Pq-WH-fyx"/>
-                                    <constraint firstAttribute="width" constant="70" id="kcZ-OR-LYM"/>
+                                    <constraint firstAttribute="width" constant="85" id="kcZ-OR-LYM"/>
                                 </constraints>
-                                <state key="normal" title="男">
+                                <state key="normal">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQS-Fv-d2a">
-                                <rect key="frame" x="152.5" y="34" width="70" height="25"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQS-Fv-d2a">
+                                <rect key="frame" x="145" y="34" width="85" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="DeZ-ia-cba"/>
-                                    <constraint firstAttribute="width" constant="70" id="oYG-iB-dSV"/>
+                                    <constraint firstAttribute="width" constant="85" id="oYG-iB-dSV"/>
                                 </constraints>
-                                <state key="normal" title="女">
+                                <state key="normal">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ip-yD-dlm">
-                                <rect key="frame" x="252.5" y="34" width="70" height="25"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ip-yD-dlm">
+                                <rect key="frame" x="260" y="34" width="85" height="25"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="2Sg-Ah-vMP"/>
+                                    <constraint firstAttribute="width" constant="85" id="2Sg-Ah-vMP"/>
                                     <constraint firstAttribute="height" constant="25" id="vi2-Vu-yr2"/>
                                 </constraints>
-                                <state key="normal" title="不限">
+                                <state key="normal">
                                     <color key="titleColor" red="0.96787184479999999" green="0.45014542340000002" blue="0.73122376200000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
@@ -310,8 +311,8 @@
                             <constraint firstAttribute="height" constant="60" id="xF9-IF-1ag"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="本单金额：2500元" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovO-XU-VQh">
-                        <rect key="frame" x="115" y="453.5" width="145" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="本单金额：0元" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovO-XU-VQh">
+                        <rect key="frame" x="130.5" y="453.5" width="114.5" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.9807396531" green="0.72635114190000005" blue="0.34913885589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
@@ -439,6 +440,7 @@
                                     <constraint firstAttribute="height" constant="30" id="G8t-VI-vVH"/>
                                     <constraint firstAttribute="width" constant="123" id="TjB-g7-zxx"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="请选择">
                                     <color key="titleColor" red="0.97700208430000002" green="0.66826802490000003" blue="0.83572024109999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -489,11 +491,12 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ST9-2W-uGO">
-                                <rect key="frame" x="226" y="5" width="123" height="30"/>
+                                <rect key="frame" x="199" y="5" width="150" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="123" id="3Jv-wi-IB1"/>
+                                    <constraint firstAttribute="width" constant="150" id="3Jv-wi-IB1"/>
                                     <constraint firstAttribute="height" constant="30" id="gLS-Wn-RrJ"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="请选择">
                                     <color key="titleColor" red="0.97700208430000002" green="0.66826802490000003" blue="0.83572024109999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -543,11 +546,12 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="36R-5X-b0S">
-                                <rect key="frame" x="226" y="5" width="123" height="30"/>
+                                <rect key="frame" x="199" y="5" width="150" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="4GI-7O-TyJ"/>
-                                    <constraint firstAttribute="width" constant="123" id="bo2-c2-9pz"/>
+                                    <constraint firstAttribute="width" constant="150" id="bo2-c2-9pz"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="请选择">
                                     <color key="titleColor" red="0.97700208430000002" green="0.66826802490000003" blue="0.83572024109999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -605,6 +609,7 @@
                                     <constraint firstAttribute="height" constant="30" id="CNP-wr-yyL"/>
                                     <constraint firstAttribute="width" constant="123" id="S5z-7U-hWP"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="请选择">
                                     <color key="titleColor" red="0.97700208430000002" green="0.66826802490000003" blue="0.83572024109999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -662,6 +667,7 @@
                                     <constraint firstAttribute="width" constant="123" id="SiJ-ZS-kK1"/>
                                     <constraint firstAttribute="height" constant="30" id="iBR-sh-sb0"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="请选择">
                                     <color key="titleColor" red="0.97700208430000002" green="0.66826802490000003" blue="0.83572024109999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -720,33 +726,33 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZ7-b8-F7N">
-                                <rect key="frame" x="52.5" y="33.5" width="70" height="25"/>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZ7-b8-F7N">
+                                <rect key="frame" x="30" y="33.5" width="85" height="25"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="cxY-eV-IRx"/>
+                                    <constraint firstAttribute="width" constant="85" id="cxY-eV-IRx"/>
                                     <constraint firstAttribute="height" constant="25" id="mcD-6k-lnl"/>
                                 </constraints>
-                                <state key="normal" title="18-25岁">
+                                <state key="normal">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vnn-zf-c9h">
-                                <rect key="frame" x="152.5" y="33.5" width="70" height="25"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vnn-zf-c9h">
+                                <rect key="frame" x="145" y="33.5" width="85" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="GXw-5B-qV9"/>
-                                    <constraint firstAttribute="width" constant="70" id="fKg-0w-Rvu"/>
+                                    <constraint firstAttribute="width" constant="85" id="fKg-0w-Rvu"/>
                                 </constraints>
-                                <state key="normal" title="25-30岁">
+                                <state key="normal">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7E-Z8-ecB">
-                                <rect key="frame" x="252.5" y="33" width="70" height="25"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7E-Z8-ecB">
+                                <rect key="frame" x="260" y="33" width="85" height="25"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="KGD-2K-1Ar"/>
+                                    <constraint firstAttribute="width" constant="85" id="KGD-2K-1Ar"/>
                                     <constraint firstAttribute="height" constant="25" id="yGa-XR-XhH"/>
                                 </constraints>
-                                <state key="normal" title="30岁以上">
+                                <state key="normal">
                                     <color key="titleColor" red="0.96787184479999999" green="0.45014542340000002" blue="0.73122376200000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
@@ -773,33 +779,33 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmf-7t-bEb">
-                                <rect key="frame" x="52.5" y="34" width="70" height="25"/>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmf-7t-bEb">
+                                <rect key="frame" x="30" y="34" width="85" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="uGJ-fz-ufT"/>
-                                    <constraint firstAttribute="width" constant="70" id="vR0-Yb-7dK"/>
+                                    <constraint firstAttribute="width" constant="85" id="vR0-Yb-7dK"/>
                                 </constraints>
-                                <state key="normal" title="男">
+                                <state key="normal">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P3R-K9-MWf">
-                                <rect key="frame" x="152.5" y="34" width="70" height="25"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P3R-K9-MWf">
+                                <rect key="frame" x="145" y="34" width="85" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="Nro-rm-vvs"/>
-                                    <constraint firstAttribute="width" constant="70" id="PeQ-SA-9sq"/>
+                                    <constraint firstAttribute="width" constant="85" id="PeQ-SA-9sq"/>
                                 </constraints>
-                                <state key="normal" title="女">
+                                <state key="normal">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXK-xB-WsU">
-                                <rect key="frame" x="252.5" y="34" width="70" height="25"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXK-xB-WsU">
+                                <rect key="frame" x="260" y="34" width="85" height="25"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="TdY-Rd-h07"/>
+                                    <constraint firstAttribute="width" constant="85" id="TdY-Rd-h07"/>
                                     <constraint firstAttribute="height" constant="25" id="mSr-ZG-qYq"/>
                                 </constraints>
-                                <state key="normal" title="不限">
+                                <state key="normal">
                                     <color key="titleColor" red="0.96787184479999999" green="0.45014542340000002" blue="0.73122376200000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
@@ -817,8 +823,8 @@
                             <constraint firstItem="nmf-7t-bEb" firstAttribute="top" secondItem="jhz-dx-Bf5" secondAttribute="bottom" constant="3.5" id="uXZ-Sw-cCr"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="本单金额：2500元" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYY-wY-WCe">
-                        <rect key="frame" x="115" y="445" width="145" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="本单金额：0元" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYY-wY-WCe">
+                        <rect key="frame" x="130.5" y="445" width="114.5" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.9807396531" green="0.72635114190000005" blue="0.34913885589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
@@ -904,6 +910,9 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="fabu-button-age" width="180" height="45"/>
+        <image name="fabu-button-age03" width="180" height="45"/>
+        <image name="fabu-button-age05" width="180" height="45"/>
         <image name="fabu-dingwei3-1" width="15" height="18"/>
         <image name="fabu-plane" width="30" height="30"/>
         <image name="fabu-purse" width="30" height="36"/>

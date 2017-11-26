@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "MsgLastZaiXianModel.h"
 @interface MsgLastCollectionViewCell : UICollectionViewCell
+@property (strong, nonatomic) IBOutlet UIImageView *avatarImage;
+@property (strong, nonatomic) IBOutlet UILabel *avtiveTimeLabel;
+@property (strong, nonatomic) IBOutlet UILabel *statueLabel;
 
 - (void)bindDataWith:(MsgLastZaiXianModel *)model;
 

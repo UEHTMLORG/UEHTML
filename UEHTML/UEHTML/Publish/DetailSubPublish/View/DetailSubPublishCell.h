@@ -37,6 +37,8 @@
 @property (strong, nonatomic) IBOutlet UIButton *voiceButton;
 @property (strong, nonatomic) IBOutlet UILabel *jobNameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *priceLabel;
+@property (strong, nonatomic) IBOutlet UILabel *fuWuTypeLabel;
+
 
 @end
 

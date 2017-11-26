@@ -10,10 +10,10 @@
 #import "UIButton+Badge.h"
 #import "XiTongMsgViewController.h"
 #import "MsgLastListView.h"
-
+#import "MessageControllerViewModel.h"
 
 @interface ATQMessageViewController : RCConversationListViewController
 
-
+@property (nonatomic, strong) NSArray<MsgLastZaiXianModel *> *zaiXianArr;
 
 @end

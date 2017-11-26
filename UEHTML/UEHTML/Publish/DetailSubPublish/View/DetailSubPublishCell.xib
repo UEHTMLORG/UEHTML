@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="Nkh-lm-w6V">
@@ -140,7 +140,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="135"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YTE-fY-DMy" id="UIh-w6-OBO">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="134.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="135"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mUl-sh-8xU" userLabel="View0 ">
@@ -286,6 +286,7 @@
                 <outlet property="chaKanWeiXinButton" destination="SJE-ij-JJy" id="QFv-Yt-0zC"/>
                 <outlet property="chengLabel" destination="raQ-Lq-YVt" id="dX6-4O-RLe"/>
                 <outlet property="diWangImage" destination="L2Z-AE-3ba" id="JLH-OF-kjI"/>
+                <outlet property="fuWuTypeLabel" destination="edN-Ya-ISZ" id="6Ah-g7-Xy5"/>
                 <outlet property="jobNameLabel" destination="uI0-Pp-4AR" id="vxZ-Ca-aJY"/>
                 <outlet property="priceLabel" destination="9Hc-Mb-IgJ" id="SVu-BP-hfF"/>
                 <outlet property="vipImage" destination="ect-Du-HmA" id="01t-lx-QB4"/>
@@ -298,7 +299,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="154"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ShB-wa-kcI" id="eQ2-Si-dPW">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="153.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="154"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H4r-mD-IRa">
@@ -365,7 +366,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="102"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GmH-p3-4N4" id="qgc-43-v6u">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="101.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="102"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k2p-0V-lCt">
@@ -438,7 +439,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zUu-lK-w47" id="jgA-hV-0Db">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SRL-94-hwJ">
@@ -512,7 +513,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HL3-44-TuN" id="LQ5-96-EWP">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="29.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TA的评价" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pO4-Xy-DSg">
@@ -533,7 +534,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="83"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uhr-Dn-UXC" id="4dT-eY-mqY">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="82.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="83"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jianzhi-car" translatesAutoresizingMaskIntoConstraints="NO" id="8v9-lT-vEd">

@@ -1,24 +1,23 @@
 //
-//  DetailSubPublishViewController.m
+//  DetailShiPinPublishViewController.m
 //  UEHTML
 //
-//  Created by apple on 2017/11/6.
-//  Copyright © 2017年 LHKH. All rights reserved.
+//  Created by apple on 2017/11/26.
+//  Copyright © 2017年 ZL. All rights reserved.
 //
 
-#import "DetailSubPublishViewController.h"
+#import "DetailShiPinPublishViewController.h"
 #import "ATQTypePeoDetailViewController.h"
 #import "ATQChaWechatViewController.h"
-@interface DetailSubPublishViewController (){
-    
-    /** 当前Model的相册图片数组 */
-    NSMutableArray * _albumImageArray;
-    AVPlayer * _avPlayer;
+@interface DetailShiPinPublishViewController (){
+/** 当前Model的相册图片数组 */
+NSMutableArray * _albumImageArray;
+AVPlayer * _avPlayer;
 }
 
 @end
 
-@implementation DetailSubPublishViewController
+@implementation DetailShiPinPublishViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -46,7 +45,7 @@
 }
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-     [self.navigationController setNavigationBarHidden:YES];
+    [self.navigationController setNavigationBarHidden:YES];
 }
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
@@ -147,9 +146,9 @@
         [cell.chaKanWeiXinButton addTarget:self action:@selector(chaKanButtonAction:) forControlEvents:UIControlEventTouchUpInside];
         cell.chengLabel.text = self.currentModel.user_profile.credit_num;
         [cell.voiceButton addTarget:self action:@selector(voiceButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-        cell.priceLabel.text = [NSString stringWithFormat:@"%@ 元/小时 %@小时起",self.currentModel.job.price,self.currentModel.job.service_hourse];
-        cell.jobNameLabel.text = self.currentModel.job.job_class_name;
-        
+        cell.priceLabel.text = @"15元/分钟";
+        cell.jobNameLabel.text = @"";
+        cell.fuWuTypeLabel.text = @"视频聊天";
         return cell;
     }else if(indexPath.row == 2){
         static NSString * rid = @"DetailXuQiuThirdCellID";
@@ -235,7 +234,7 @@
     //self.currentModel
     ATQChaWechatViewController *vc = [[ATQChaWechatViewController alloc] init];
     [self.navigationController pushViewController:vc animated:NO];
-//    [MBManager showBriefAlert:@"微信号数据未提供"];
+    //    [MBManager showBriefAlert:@"微信号数据未提供"];
 }
 - (void)voiceButtonAction:(UIButton *)sender{
     NSLog(@"点击了播放声音按钮");
@@ -246,29 +245,6 @@
     _avPlayer = [[AVPlayer alloc] initWithURL:url];
     [_avPlayer play];
 }
-#pragma mark ===================底部按钮执行方法 START==================
-- (IBAction)songLiBtnAction:(id)sender {
-    
-}
-- (IBAction)shipinBtnAction:(id)sender {
-    //我是 需求方
-    DetailShiPinPublishViewController * VC = [[DetailShiPinPublishViewController alloc]init];
-    VC.jobId = self.jobId;
-    [self.navigationController pushViewController:VC animated:YES];
-}
-- (IBAction)liaotianBtnAction:(id)sender {
-    RCConversationViewController *conversationVC = [[RCConversationViewController alloc]init];
-    conversationVC.conversationType = ConversationType_PRIVATE;
-    conversationVC.targetId = self.currentModel.job.user_id;
-    conversationVC.title = self.currentModel.user_profile.nick_name;
-    [self.navigationController pushViewController:conversationVC animated:YES];
-}
-- (IBAction)yueTaBtnAction:(id)sender {
-    ATQTypePeoDetailViewController *vc = [[ATQTypePeoDetailViewController alloc] init];
-    vc.jobID = self.jobId;
-    [self.navigationController pushViewController:vc animated:YES];
-}
-#pragma mark ===================底部按钮执行方法 END==================
 #pragma mark ===================懒加载==================
 - (NSMutableArray *)modelArray{
     if (!_modelArray) {
@@ -296,6 +272,20 @@
     return rect.size.height;//返回高度
     
 }
+
+#pragma mark ===================底部按钮执行方法==================
+
+- (IBAction)songLiWuButtonAction:(UIButton *)sender {
+}
+- (IBAction)daGeiTaButtonAction:(UIButton *)sender {
+    RCConversationViewController *conversationVC = [[RCConversationViewController alloc]init];
+    conversationVC.conversationType = ConversationType_PRIVATE;
+    conversationVC.targetId = self.currentModel.job.user_id;
+    conversationVC.title = self.currentModel.user_profile.nick_name;
+    [self.navigationController pushViewController:conversationVC animated:YES];
+}
+
+#pragma mark ===================底部按钮执行方法==================
 /*
 #pragma mark - Navigation
 

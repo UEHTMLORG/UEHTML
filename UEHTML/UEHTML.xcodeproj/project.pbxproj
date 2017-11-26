@@ -109,6 +109,9 @@
 		185D78C81F8E245B00DA8849 /* TiGongTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185D78C61F8E245B00DA8849 /* TiGongTableViewCell.xib */; };
 		185D78CC1F8E3BCC00DA8849 /* JianZhiVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D78CA1F8E3BCC00DA8849 /* JianZhiVideoViewController.m */; };
 		185D78CD1F8E3BCC00DA8849 /* JianZhiVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185D78CB1F8E3BCC00DA8849 /* JianZhiVideoViewController.xib */; };
+		186A0B2E1FCAEE3800F5EE73 /* DetailShiPinPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186A0B2C1FCAEE3800F5EE73 /* DetailShiPinPublishViewController.m */; };
+		186A0B2F1FCAEE3800F5EE73 /* DetailShiPinPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186A0B2D1FCAEE3800F5EE73 /* DetailShiPinPublishViewController.xib */; };
+		186A0B331FCAF9B100F5EE73 /* MessageControllerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 186A0B321FCAF9B100F5EE73 /* MessageControllerViewModel.m */; };
 		188E19A71F90B11E007F56E4 /* MessageSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188E19A61F90B11E007F56E4 /* MessageSubViewController.m */; };
 		188E19B61F91A6FB007F56E4 /* JianZhiPingJiaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188E19B41F91A6FB007F56E4 /* JianZhiPingJiaViewController.m */; };
 		188E19B71F91A6FB007F56E4 /* JianZhiPingJiaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188E19B51F91A6FB007F56E4 /* JianZhiPingJiaViewController.xib */; };
@@ -995,6 +998,11 @@
 		185D78C91F8E3BCC00DA8849 /* JianZhiVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JianZhiVideoViewController.h; sourceTree = "<group>"; };
 		185D78CA1F8E3BCC00DA8849 /* JianZhiVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JianZhiVideoViewController.m; sourceTree = "<group>"; };
 		185D78CB1F8E3BCC00DA8849 /* JianZhiVideoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JianZhiVideoViewController.xib; sourceTree = "<group>"; };
+		186A0B2B1FCAEE3800F5EE73 /* DetailShiPinPublishViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailShiPinPublishViewController.h; sourceTree = "<group>"; };
+		186A0B2C1FCAEE3800F5EE73 /* DetailShiPinPublishViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailShiPinPublishViewController.m; sourceTree = "<group>"; };
+		186A0B2D1FCAEE3800F5EE73 /* DetailShiPinPublishViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailShiPinPublishViewController.xib; sourceTree = "<group>"; };
+		186A0B311FCAF9B100F5EE73 /* MessageControllerViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageControllerViewModel.h; sourceTree = "<group>"; };
+		186A0B321FCAF9B100F5EE73 /* MessageControllerViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageControllerViewModel.m; sourceTree = "<group>"; };
 		188E19A51F90B11E007F56E4 /* MessageSubViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageSubViewController.h; sourceTree = "<group>"; };
 		188E19A61F90B11E007F56E4 /* MessageSubViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageSubViewController.m; sourceTree = "<group>"; };
 		188E19A81F90EB5C007F56E4 /* UEHTML.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UEHTML.entitlements; sourceTree = "<group>"; };
@@ -2527,6 +2535,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		186A0B301FCAF8AE00F5EE73 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				186A0B311FCAF9B100F5EE73 /* MessageControllerViewModel.h */,
+				186A0B321FCAF9B100F5EE73 /* MessageControllerViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		188E19A91F91A6C9007F56E4 /* PingJiaView */ = {
 			isa = PBXGroup;
 			children = (
@@ -2841,6 +2858,9 @@
 				18F988761FB0A70300335E5D /* DetailSubPublishViewController.h */,
 				18F988771FB0A70300335E5D /* DetailSubPublishViewController.m */,
 				18F988781FB0A70300335E5D /* DetailSubPublishViewController.xib */,
+				186A0B2B1FCAEE3800F5EE73 /* DetailShiPinPublishViewController.h */,
+				186A0B2C1FCAEE3800F5EE73 /* DetailShiPinPublishViewController.m */,
+				186A0B2D1FCAEE3800F5EE73 /* DetailShiPinPublishViewController.xib */,
 				18B2D8A41FB404FD00C59550 /* DetailXuQiuViewController.h */,
 				18B2D8A51FB404FD00C59550 /* DetailXuQiuViewController.m */,
 				18B2D8A61FB404FD00C59550 /* DetailXuQiuViewController.xib */,
@@ -3515,6 +3535,7 @@
 		409E6DC11F50081200E3BE49 /* Message */ = {
 			isa = PBXGroup;
 			children = (
+				186A0B301FCAF8AE00F5EE73 /* ViewModel */,
 				1866232B1F76A4AB00E42290 /* Model */,
 				1866232C1F76A4AB00E42290 /* View */,
 				409E6DC21F50081200E3BE49 /* Controller */,
@@ -5576,6 +5597,7 @@
 				40DF89AC1F8B1CA9008247F9 /* ATQCarRZSuccessViewController.xib in Resources */,
 				40F5E5C41F91AFAC0077A574 /* f_static_057@3x.png in Resources */,
 				40F5E5C51F91AFAC0077A574 /* f_static_058@2x.png in Resources */,
+				186A0B2F1FCAEE3800F5EE73 /* DetailShiPinPublishViewController.xib in Resources */,
 				185D78C81F8E245B00DA8849 /* TiGongTableViewCell.xib in Resources */,
 				40F5E5451F91AFAC0077A574 /* section0_emotion14@2x.png in Resources */,
 				40F5E60B1F91AFAC0077A574 /* f_static_093@2x.png in Resources */,
@@ -5998,6 +6020,7 @@
 				40236C261F7B48A8004AE37B /* ATQBlacklistTableViewCell.m in Sources */,
 				183D18F21F9053A00093A982 /* JianZhiChuFaViewController.m in Sources */,
 				188E19BE1F91E32A007F56E4 /* MsgLastListView.m in Sources */,
+				186A0B331FCAF9B100F5EE73 /* MessageControllerViewModel.m in Sources */,
 				185D78A21F8DF13A00DA8849 /* UIButton+ZLWebPSetImage.m in Sources */,
 				40260D1F1F71FEF400ED8CF1 /* ATQPerfectInfoViewController.m in Sources */,
 				40EA93521F7BBC4D005A0E50 /* PNLineChart.m in Sources */,
@@ -6089,6 +6112,7 @@
 				185D788F1F8DF13A00DA8849 /* UIView+MJAlertView.m in Sources */,
 				40F5E64F1F91B2AD0077A574 /* ZJDataSaver.m in Sources */,
 				40E0F23C1F78ABB60074B064 /* ATQCollectViewController.m in Sources */,
+				186A0B2E1FCAEE3800F5EE73 /* DetailShiPinPublishViewController.m in Sources */,
 				40EA93281F7BBAD3005A0E50 /* split.c in Sources */,
 				18B2B7761FC46FB0001B14F1 /* JZMp3RecordingClient.m in Sources */,
 				40F5E64E1F91B2AD0077A574 /* UIView+ZJ.m in Sources */,

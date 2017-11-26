@@ -15,4 +15,10 @@
     // Initialization code
 }
 
+- (void)bindDataWith:(MsgLastZaiXianModel *)model{
+    [self.avatarImage sd_setImageWithURL:[NSURL URLWithString:model.avatar] placeholderImage:[UIImage imageNamed:@"jianzhi-car"]];
+    self.statueLabel.text = model.login_status;
+    self.avtiveTimeLabel.text = model.actived_at;
+}
+
 @end

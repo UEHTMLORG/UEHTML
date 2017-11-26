@@ -83,7 +83,7 @@
 
 #pragma mark CollectionView  的  dataSource方法
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 10;
+    return self.aaray.count;
 }
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
     return 1;
@@ -93,12 +93,26 @@
     
     static NSString * cellId = @"CollectionID";
     MsgLastCollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellId forIndexPath:indexPath];
-    
+    MsgLastZaiXianModel * model = [self.aaray objectAtIndex:indexPath.row];
+    [cell bindDataWith:model];
     return cell;
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    MsgLastZaiXianModel * model = [self.aaray objectAtIndex:indexPath.row];
+    if (self.cBlock) {
+        self.cBlock(model.id, model.avatar);
+    }
+}
+
+- (void)loadClickBlock:(ClickBlock)block{
     
-    
+    self.cBlock = block;
+}
+- (NSArray *)aaray{
+    if (!_aaray) {
+        _aaray = [NSArray new];
+    }
+    return _aaray;
 }
 
 @end

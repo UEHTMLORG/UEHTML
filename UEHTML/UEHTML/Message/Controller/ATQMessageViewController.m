@@ -49,8 +49,24 @@
     /** tableviews设置 */
     self.conversationListTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.emptyConversationView = [[UIView alloc]init];
+    
+    /** 最近在线网络请求 */
+    self.zaiXianArr = [NSArray new];
+    [self zuiJinZaiStartNetWorking];
 }
 
+/** 最近在线网络请求 */
+- (void)zuiJinZaiStartNetWorking{
+    [[MessageControllerViewModel shareInstance] startZuiJinOnlineNetWork:^(BOOL success, NSArray<MsgLastZaiXianModel *> *modelArr) {
+        if (success == YES) {
+            _lastView.aaray = modelArr;
+            [_lastView.collectionView reloadData];
+        }
+        
+    } failBlock:^(BOOL result) {
+        
+    }];
+}
 
 
 //cell即将显示的方法
@@ -109,7 +125,14 @@
 - (void)loadLastZaiXianView{
     
     _lastView = [[MsgLastListView alloc]init];
-
+    __weak typeof(self) weakSelf = self;
+    [_lastView loadClickBlock:^(NSString *id, NSString *avatarString) {
+        RCConversationViewController *conversationVC = [[RCConversationViewController alloc]init];
+        conversationVC.conversationType = ConversationType_PRIVATE;
+        conversationVC.targetId = id;
+        conversationVC.title = id;
+        [weakSelf.navigationController pushViewController:conversationVC animated:YES];
+    }];
     [self.view addSubview:_lastView];
     [_lastView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(65);

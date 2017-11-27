@@ -25,7 +25,7 @@
         NSLog(@"登陆成功。当前登录的用户ID：%@", userId);
          [kUserDefaults setObject:userId forKey:RONGYUN_USER_ID];
         dispatch_async(dispatch_get_main_queue(), ^{
-            //            [[RCIM sharedRCIM] setUserInfoDataSource:self];
+                        [[RCIM sharedRCIM] setUserInfoDataSource:self];
         });
         
     } error:^(RCConnectErrorCode status) {
@@ -37,6 +37,25 @@
         NSLog(@"token错误");
     }];
 }
-
+/**
+ *==========ZL注释start===========
+ *1.融云  用户信息类 获取用户信息代理方法实现
+ *
+ *2.返回用户信息  头像 昵称
+ *3.
+ *4.
+ ===========ZL注释end==========*/
+- (void)getUserInfoWithUserId:(NSString *)userId
+                   completion:(void (^)(RCUserInfo *userInfo))completion{
+    NSLog(@"在APPdelegate中获取用户信息：%@",userId);
+    if ([userId isEqualToString:@"2089"]) {
+        RCUserInfo *userInfo = [[RCUserInfo alloc]init];
+        userInfo.userId = userId;
+        userInfo.name = @"测试2用户名";
+        userInfo.portraitUri = @"https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=3b03c837572c11dfcadcb771024e09b5/ae51f3deb48f8c54cd34cafb3a292df5e1fe7f7a.jpg";
+        return completion(userInfo);
+    }
+    return completion(nil);
+}
 
 @end

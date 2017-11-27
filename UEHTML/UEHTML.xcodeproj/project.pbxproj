@@ -11,6 +11,12 @@
 		180C18391FBF201C00BF4810 /* LiWuPublishCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180C18371FBF201C00BF4810 /* LiWuPublishCollectionViewCell.xib */; };
 		180C183D1FBF206600BF4810 /* SkillPublishCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 180C183B1FBF206600BF4810 /* SkillPublishCollectionViewCell.m */; };
 		180C183E1FBF206600BF4810 /* SkillPublishCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180C183C1FBF206600BF4810 /* SkillPublishCollectionViewCell.xib */; };
+		181D51801FCC59B1004BC592 /* XiTongZLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181D517E1FCC59B1004BC592 /* XiTongZLViewController.m */; };
+		181D51811FCC59B1004BC592 /* XiTongZLViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181D517F1FCC59B1004BC592 /* XiTongZLViewController.xib */; };
+		181D51851FCC5A1C004BC592 /* XiTongMsgTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 181D51831FCC5A1C004BC592 /* XiTongMsgTableViewCell.m */; };
+		181D51861FCC5A1C004BC592 /* XiTongMsgTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181D51841FCC5A1C004BC592 /* XiTongMsgTableViewCell.xib */; };
+		181D51891FCC5C81004BC592 /* XiTongViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 181D51881FCC5C81004BC592 /* XiTongViewModel.m */; };
+		181D518C1FCC5D81004BC592 /* XiTongMsgModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 181D518B1FCC5D81004BC592 /* XiTongMsgModel.m */; };
 		183D18F21F9053A00093A982 /* JianZhiChuFaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183D18F01F9053A00093A982 /* JianZhiChuFaViewController.m */; };
 		183D18F31F9053A00093A982 /* JianZhiChuFaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183D18F11F9053A00093A982 /* JianZhiChuFaViewController.xib */; };
 		183D18F71F90570D0093A982 /* JianZhiChuFaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 183D18F51F90570D0093A982 /* JianZhiChuFaTableViewCell.m */; };
@@ -828,6 +834,16 @@
 		180C183A1FBF206500BF4810 /* SkillPublishCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SkillPublishCollectionViewCell.h; sourceTree = "<group>"; };
 		180C183B1FBF206600BF4810 /* SkillPublishCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SkillPublishCollectionViewCell.m; sourceTree = "<group>"; };
 		180C183C1FBF206600BF4810 /* SkillPublishCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkillPublishCollectionViewCell.xib; sourceTree = "<group>"; };
+		181D517D1FCC59B1004BC592 /* XiTongZLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XiTongZLViewController.h; sourceTree = "<group>"; };
+		181D517E1FCC59B1004BC592 /* XiTongZLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XiTongZLViewController.m; sourceTree = "<group>"; };
+		181D517F1FCC59B1004BC592 /* XiTongZLViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XiTongZLViewController.xib; sourceTree = "<group>"; };
+		181D51821FCC5A1C004BC592 /* XiTongMsgTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XiTongMsgTableViewCell.h; sourceTree = "<group>"; };
+		181D51831FCC5A1C004BC592 /* XiTongMsgTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XiTongMsgTableViewCell.m; sourceTree = "<group>"; };
+		181D51841FCC5A1C004BC592 /* XiTongMsgTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XiTongMsgTableViewCell.xib; sourceTree = "<group>"; };
+		181D51871FCC5C81004BC592 /* XiTongViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XiTongViewModel.h; sourceTree = "<group>"; };
+		181D51881FCC5C81004BC592 /* XiTongViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XiTongViewModel.m; sourceTree = "<group>"; };
+		181D518A1FCC5D81004BC592 /* XiTongMsgModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XiTongMsgModel.h; sourceTree = "<group>"; };
+		181D518B1FCC5D81004BC592 /* XiTongMsgModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XiTongMsgModel.m; sourceTree = "<group>"; };
 		183D18EF1F9053A00093A982 /* JianZhiChuFaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JianZhiChuFaViewController.h; sourceTree = "<group>"; };
 		183D18F01F9053A00093A982 /* JianZhiChuFaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JianZhiChuFaViewController.m; sourceTree = "<group>"; };
 		183D18F11F9053A00093A982 /* JianZhiChuFaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JianZhiChuFaViewController.xib; sourceTree = "<group>"; };
@@ -2519,6 +2535,8 @@
 			children = (
 				18D93D461F922F2B00D18418 /* MsgLastZaiXianModel.h */,
 				18D93D471F922F2B00D18418 /* MsgLastZaiXianModel.m */,
+				181D518A1FCC5D81004BC592 /* XiTongMsgModel.h */,
+				181D518B1FCC5D81004BC592 /* XiTongMsgModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2531,6 +2549,9 @@
 				188E19C11F91F812007F56E4 /* MsgLastCollectionViewCell.h */,
 				188E19C21F91F812007F56E4 /* MsgLastCollectionViewCell.m */,
 				188E19C31F91F812007F56E4 /* MsgLastCollectionViewCell.xib */,
+				181D51821FCC5A1C004BC592 /* XiTongMsgTableViewCell.h */,
+				181D51831FCC5A1C004BC592 /* XiTongMsgTableViewCell.m */,
+				181D51841FCC5A1C004BC592 /* XiTongMsgTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2540,6 +2561,8 @@
 			children = (
 				186A0B311FCAF9B100F5EE73 /* MessageControllerViewModel.h */,
 				186A0B321FCAF9B100F5EE73 /* MessageControllerViewModel.m */,
+				181D51871FCC5C81004BC592 /* XiTongViewModel.h */,
+				181D51881FCC5C81004BC592 /* XiTongViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -3553,6 +3576,9 @@
 				188E19A61F90B11E007F56E4 /* MessageSubViewController.m */,
 				188E19B91F91DEB5007F56E4 /* XiTongMsgViewController.h */,
 				188E19BA1F91DEB5007F56E4 /* XiTongMsgViewController.m */,
+				181D517D1FCC59B1004BC592 /* XiTongZLViewController.h */,
+				181D517E1FCC59B1004BC592 /* XiTongZLViewController.m */,
+				181D517F1FCC59B1004BC592 /* XiTongZLViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -5464,6 +5490,7 @@
 				40F9F22F1F7A32C000F5A42B /* ATQAWechatTableViewCell.xib in Resources */,
 				40F9F2341F7A3E6E00F5A42B /* ATQSetupSecrityViewController.xib in Resources */,
 				18A9462A1FAA1576007F8A1D /* WoYaoZhuanViewController.xib in Resources */,
+				181D51861FCC5A1C004BC592 /* XiTongMsgTableViewCell.xib in Resources */,
 				40236C441F7B8094004AE37B /* ATQOpinionPhotoTableViewCell.xib in Resources */,
 				40F5E6171F91AFAC0077A574 /* f_static_099@2x.png in Resources */,
 				185D78691F8DF13900DA8849 /* Loading0016.png in Resources */,
@@ -5572,6 +5599,7 @@
 				40F5E5C71F91AFAC0077A574 /* f_static_059@2x.png in Resources */,
 				40F5E6051F91AFAC0077A574 /* f_static_090@2x.png in Resources */,
 				40F5E59C1F91AFAC0077A574 /* f_static_037@3x.png in Resources */,
+				181D51811FCC59B1004BC592 /* XiTongZLViewController.xib in Resources */,
 				40F5E5E91F91AFAC0077A574 /* f_static_076@2x.png in Resources */,
 				40F5E5501F91AFAC0077A574 /* f_static_000@2x.png in Resources */,
 				4048AE051F8DA75900F6B928 /* ATQNewFriendsTableViewCell.xib in Resources */,
@@ -5850,8 +5878,10 @@
 				18A946241FAA1513007F8A1D /* ZhaoRenFuWuViewController.m in Sources */,
 				185D787C1F8DF13A00DA8849 /* CoreNewFeatureVC.m in Sources */,
 				40E061D21F76A5EB0072596D /* ATQMeHeadView.m in Sources */,
+				181D51891FCC5C81004BC592 /* XiTongViewModel.m in Sources */,
 				40EA93271F7BBAD3005A0E50 /* rscode.c in Sources */,
 				401D68F91F94836A00329D1B /* ATQMepublishTTableViewCell.m in Sources */,
+				181D51801FCC59B1004BC592 /* XiTongZLViewController.m in Sources */,
 				185D785D1F8DF13900DA8849 /* MSSAutoresizeLabelFlow.m in Sources */,
 				40FA8A031F74CD7E0059A208 /* ATQNewPCollectionViewCell.m in Sources */,
 				40C77E341FAD9F1E000D8F70 /* ATQDTImageView.m in Sources */,
@@ -5912,6 +5942,7 @@
 				4061BD9C1F8CB53B00F6EC30 /* ATQTypeListInviteDetailViewController.m in Sources */,
 				185D78AD1F8DF13A00DA8849 /* KSNavigationController.m in Sources */,
 				403458DD1F8F6781007993F3 /* WeChatHelper.m in Sources */,
+				181D51851FCC5A1C004BC592 /* XiTongMsgTableViewCell.m in Sources */,
 				40EA93221F7BBAD3005A0E50 /* mask.c in Sources */,
 				185D78941F8DF13A00DA8849 /* NSValueTransformer+HeinQi.m in Sources */,
 				40E93DE41F7775490018C3F5 /* ATQThirdTableViewCell.m in Sources */,
@@ -6090,6 +6121,7 @@
 				185D78B51F8DF13A00DA8849 /* ZLAFNetworking.m in Sources */,
 				185D78A81F8DF13A00DA8849 /* UIView+WHC_Toast.m in Sources */,
 				40FEA5D01F73B46700D6EB89 /* ATQVideoChatViewController.m in Sources */,
+				181D518C1FCC5D81004BC592 /* XiTongMsgModel.m in Sources */,
 				185D78971F8DF13A00DA8849 /* UIButton+HeinQi.m in Sources */,
 				40F5E3711F91A3820077A574 /* NSAttributedString+MLLabel.m in Sources */,
 				185D787D1F8DF13A00DA8849 /* NewFeatureModel.m in Sources */,

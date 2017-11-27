@@ -114,9 +114,9 @@
         NSLog(@"登陆成功。当前登录的用户融云ID：%@----凹凸圈ID：%@", userId,[kUserDefaults objectForKey:USER_ID_AOTU_ZL]);
         [kUserDefaults setObject:userId forKey:RONGYUN_USER_ID];
         
-        dispatch_async(dispatch_get_main_queue(), ^{
-//            [[RCIM sharedRCIM] setUserInfoDataSource:self];
-        });
+        //dispatch_async(dispatch_get_main_queue(), ^{
+            [[RCIM sharedRCIM] setUserInfoDataSource:self];
+        //});
         
     } error:^(RCConnectErrorCode status) {
         NSLog(@"登陆的错误码为:%ld", status);
@@ -139,7 +139,7 @@
 - (void)getUserInfoWithUserId:(NSString *)userId
                    completion:(void (^)(RCUserInfo *userInfo))completion{
     NSLog(@"在APPdelegate中获取用户信息：%@",userId);
-    if ([userId isEqualToString:@"test02"]) {
+    if ([userId isEqualToString:@"2089"]) {
         RCUserInfo *userInfo = [[RCUserInfo alloc]init];
         userInfo.userId = userId;
         userInfo.name = @"测试2用户名";

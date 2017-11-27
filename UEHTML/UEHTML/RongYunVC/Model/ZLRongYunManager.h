@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ZLRongYunManager : NSObject
+@interface ZLRongYunManager : NSObject<RCIMUserInfoDataSource>
 
 
 + (ZLRongYunManager *)shareInstance;

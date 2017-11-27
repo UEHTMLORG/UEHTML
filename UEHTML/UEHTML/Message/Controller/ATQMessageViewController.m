@@ -99,7 +99,8 @@
         RCConversationViewController *conversationVC = [[RCConversationViewController alloc]init];
         conversationVC.conversationType = model.conversationType;
         conversationVC.targetId = model.targetId;
-        conversationVC.title = @"用户名2";
+        RCUserInfo * userInfo = [[RCIM sharedRCIM] getUserInfoCache:model.targetId];
+        conversationVC.title = userInfo.name;
         [self.navigationController pushViewController:conversationVC animated:YES];
         
     }
@@ -166,11 +167,12 @@
     
 }
 - (void)leftButtonAction{
-    
-    
+    XiTongZLViewController * vc = [XiTongZLViewController new];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 - (void)rightButtonAction{
-    
+    ATQMyFriendsViewController *vc = [[ATQMyFriendsViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
     
 }
 - (void)didReceiveMemoryWarning {

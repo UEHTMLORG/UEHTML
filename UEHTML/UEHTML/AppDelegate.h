@@ -10,7 +10,7 @@
 #import "ATQBaseTabBarViewController.h"
 #import "ATQBaseNavigationViewController.h"
 #import <BaiduMapAPI_Base/BMKBaseComponent.h>
-@interface AppDelegate : UIResponder <UIApplicationDelegate,BMKGeneralDelegate,RCIMReceiveMessageDelegate,RCIMUserInfoDataSource>
+@interface AppDelegate : UIResponder <UIApplicationDelegate,BMKGeneralDelegate,RCIMReceiveMessageDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic)  ATQBaseTabBarViewController*BaseTabBarController;

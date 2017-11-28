@@ -68,7 +68,7 @@
     //设置用户信息源和群组信息源
     [RCIM sharedRCIM].userInfoDataSource = RCDDataSource;
     [RCIM sharedRCIM].groupInfoDataSource = RCDDataSource;
-    
+    [RCIM sharedRCIM].enableMessageAttachUserInfo = YES;
     //设置接收消息代理
     [RCIM sharedRCIM].receiveMessageDelegate = self;
     //    [RCIM sharedRCIM].globalMessagePortraitSize = CGSizeMake(46, 46);
@@ -114,9 +114,9 @@
         NSLog(@"登陆成功。当前登录的用户融云ID：%@----凹凸圈ID：%@", userId,[kUserDefaults objectForKey:USER_ID_AOTU_ZL]);
         [kUserDefaults setObject:userId forKey:RONGYUN_USER_ID];
         
-        //dispatch_async(dispatch_get_main_queue(), ^{
-            [[RCIM sharedRCIM] setUserInfoDataSource:self];
-        //});
+        dispatch_async(dispatch_get_main_queue(), ^{
+           // [[RCIM sharedRCIM] setUserInfoDataSource:self];
+        });
         
     } error:^(RCConnectErrorCode status) {
         NSLog(@"登陆的错误码为:%ld", status);
@@ -136,18 +136,18 @@
  *3.
  *4.
  ===========ZL注释end==========*/
-- (void)getUserInfoWithUserId:(NSString *)userId
-                   completion:(void (^)(RCUserInfo *userInfo))completion{
-    NSLog(@"在APPdelegate中获取用户信息：%@",userId);
-    if ([userId isEqualToString:@"2089"]) {
-        RCUserInfo *userInfo = [[RCUserInfo alloc]init];
-        userInfo.userId = userId;
-        userInfo.name = @"测试2用户名";
-        userInfo.portraitUri = @"https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=3b03c837572c11dfcadcb771024e09b5/ae51f3deb48f8c54cd34cafb3a292df5e1fe7f7a.jpg";
-        return completion(userInfo);
-    }
-    return completion(nil);
-}
+//- (void)getUserInfoWithUserId:(NSString *)userId
+//                   completion:(void (^)(RCUserInfo *userInfo))completion{
+//    NSLog(@"在APPdelegate中获取用户信息：%@",userId);
+//    if ([userId isEqualToString:@"2089"]) {
+//        RCUserInfo *userInfo = [[RCUserInfo alloc]init];
+//        userInfo.userId = userId;
+//        userInfo.name = @"测试2用户名";
+//        userInfo.portraitUri = @"https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=3b03c837572c11dfcadcb771024e09b5/ae51f3deb48f8c54cd34cafb3a292df5e1fe7f7a.jpg";
+//        return completion(userInfo);
+//    }
+//    return completion(nil);
+//}
 /** RCIMReceiveMessageDelegate方法 */
 - (void)onRCIMReceiveMessage:(RCMessage *)message
                         left:(int)left{

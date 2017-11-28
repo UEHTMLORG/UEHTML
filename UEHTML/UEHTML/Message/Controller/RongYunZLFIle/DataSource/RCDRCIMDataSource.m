@@ -34,7 +34,12 @@
   return instance;
 }
 
-
+- (instancetype)init{
+    if (self = [super init]) {
+        [RCIM sharedRCIM].userInfoDataSource = self;
+    }
+    return self;
+}
 - (void)syncGroups {
   //开发者调用自己的服务器接口获取所属群组信息
   [RCDHTTPTOOL getMyGroupsWithBlock:^(NSMutableArray *result) {
@@ -118,8 +123,7 @@
                                              name:@"我在22群中的名片"
                                          portrait:nil]);
   } else {
-    completion(
-        nil); //融云demo中暂时没有实现，以后会添加上该功能。app也可以自己实现该功能。
+    completion(nil); //融云demo中暂时没有实现，以后会添加上该功能。app也可以自己实现该功能。
   }
 }
 

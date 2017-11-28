@@ -25,9 +25,8 @@
         NSLog(@"登陆成功。当前登录的用户ID：%@", userId);
          [kUserDefaults setObject:userId forKey:RONGYUN_USER_ID];
         dispatch_async(dispatch_get_main_queue(), ^{
-                        [[RCIM sharedRCIM] setUserInfoDataSource:self];
+            //[[RCIM sharedRCIM] setUserInfoDataSource:self];
         });
-        
     } error:^(RCConnectErrorCode status) {
         NSLog(@"登陆的错误码为:%ld", status);
     } tokenIncorrect:^{
@@ -45,6 +44,7 @@
  *3.
  *4.
  ===========ZL注释end==========*/
+
 - (void)getUserInfoWithUserId:(NSString *)userId
                    completion:(void (^)(RCUserInfo *userInfo))completion{
     NSLog(@"在APPdelegate中获取用户信息：%@",userId);

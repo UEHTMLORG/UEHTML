@@ -52,15 +52,49 @@
 
 
 - (IBAction)tijiaoButtonAction:(id)sender {
+    ///api/job/video_chat/open
+    //pictures  videos
+    if (self.photoArray.allKeys.count == 3 && self.videoArray.allKeys.count == 2) {
+        /** 提交审核 */
+        [self okButtonAction];
+    }
+    else{
+        [MBManager showBriefAlert:@"请完善资料"];
+    }
+     [self okButtonAction];
 }
-
+/** 提交资料 */
+- (void)okButtonAction{
+    NSString * picStringArr = [self.photoArray.allValues componentsJoinedByString:@","];
+    NSString * videoStringArr = [self.videoArray.allValues componentsJoinedByString:@","];
+    NSLog(@"上传图片的参数：%@",picStringArr);
+    NSString * renZhengURL = [NSString stringWithFormat:@"%@/api/job/video_chat/open",Common_URL_ZL];
+    NSDictionary * parma = @{
+                             @"pictures":picStringArr,
+                             @"videos":videoStringArr
+                             };
+    [MBManager showLoading];
+    
+    [[ZLSecondAFNetworking sharedInstance] postWithUSER_INFO_URLString:renZhengURL parameters:parma success:^(id responseObject) {
+        [MBManager hideAlert];
+       
+        NSDictionary * dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSLog(@"开通视频：%@",dic);
+        if ([dic[@"status"] isEqualToString:@"1"]) {
+            [MBManager showBriefAlert:@"上传成功"];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self.navigationController popViewControllerAnimated:YES];
+            });
+        }
+    } failure:^(NSError *error) {
+        [MBManager hideAlert];
+    }];
+    
+}
 /**
  *==========ZL注释start===========
  *1.上传照片
  *
- *2.
- *3.
- *4.
  ===========ZL注释end==========*/
 - (void)uploadImageWithImage:(UIImage *)image{
     //api/user/upload_picture
@@ -69,21 +103,9 @@
     NSData * imageData = UIImageJPEGRepresentation(image, 0.2);
     NSString *encodedImageStr = [imageData base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
     NSDictionary * parmaDic = @{
-                                @"picture_type":@"car",
+                                @"picture_type":@"avatar",
                                 @"picture":encodedImageStr
                                 };
-    //    UploadParam * uploadParamImage = [[UploadParam alloc]init];
-    //    uploadParamImage.data = UIImageJPEGRepresentation(image, 0.5);
-    //    uploadParamImage.mimeType = @"jpg";
-    //    uploadParamImage.name = @"测试测试";
-    //    uploadParamImage.filename = @"car测试";
-    //    NSLog(@"上传照片的parmaDic:%@",parmaDic);
-    //    [[ZLSecondAFNetworking sharedInstance] uploadWithURLString:upImageString parameters:[ZLSecondAFNetworking joinParamsWithDict:parmaDic] uploadParam:@[uploadParamImage] success:^(id responseObject) {
-    //        NSDictionary * dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-    //         NSLog(@"上传请求成功：%@",dic);
-    //    } failure:^(NSError *error) {
-    //        NSLog(@"上传请求失败：%@",error);
-    //    }];
     [MBManager showLoading];
     [[ZLSecondAFNetworking sharedInstance] postWithUSER_INFO_URLString:upImageString parameters:parmaDic success:^(id responseObject) {
         [MBManager hideAlert];
@@ -92,41 +114,6 @@
         if ([dic[@"status"] isEqualToString:@"1"]) {
             [self.photoArray setValue:dic[@"data"] forKey:[NSString stringWithFormat:@"%ld",_currentPhotoIndex]];
         }
-        NSString * upImageString = [NSString stringWithFormat:@"%@/api/user/upload_picture",Common_URL_ZL];
-        
-        NSString *random_str = [ZLSecondAFNetworking getNowTime];
-        NSString * app_token_string = [kUserDefaults objectForKey:USER_TOEKN_AOTU_ZL];
-        NSString *app_token = app_token_string?:@"apptest";
-        NSString *signStr = [NSString stringWithFormat:@"%@%@",app_token,random_str];
-        NSString *sign1 = [ZLSecondAFNetworking getMD5fromString:signStr];
-        NSString *sign2 = [ZLSecondAFNetworking getMD5fromString:sign1];
-        NSString *sign = [ZLSecondAFNetworking getMD5fromString:sign2];
-        NSString * userid = [kUserDefaults objectForKey:USER_ID_AOTU_ZL];
-        /*
-         @"apptype":@"ios",
-         @"appversion":@"1.0.0",
-         @"random_str":random_str,
-         @"sign":sign,
-         @"user_token":app_token,
-         @"user_id":userid
-         */
-        NSDictionary * parmaDic = @{
-                                    @"picture_type":@"car",
-                                    @"apptype":@"ios",
-                                    @"appversion":APPVERSION_AOTU_ZL,
-                                    @"random_str":random_str,
-                                    @"sign":sign,
-                                    @"user_token":app_token,
-                                    @"user_id":userid
-                                    };
-    NSLog(@"上传照片的parmaDic:%@",parmaDic);
-        [[ZLSecondAFNetworking sharedInstance] postWithURLString:upImageString parameters:parmaDic success:^(id responseObject) {
-            NSDictionary * dataJson = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-            NSLog(@"上传请求成功：%@",dataJson);
-        } failure:^(NSError *error) {
-            NSLog(@"上传请求失败：%@",error);
-        }];
-        
     } failure:^(NSError *error) {
          [MBManager hideAlert];
         NSLog(@"上传请求失败：%@",error);
@@ -139,21 +126,9 @@
     NSString * upImageString = [NSString stringWithFormat:@"%@/api/user/upload_video",Common_URL_ZL];
     NSString *encodedImageStr = [videoData base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
     NSDictionary * parmaDic = @{
-                                @"video_type":@"video",
+                                @"video_type":@"video_chat",
                                 @"video":encodedImageStr
                                 };
-    //    UploadParam * uploadParamImage = [[UploadParam alloc]init];
-    //    uploadParamImage.data = UIImageJPEGRepresentation(image, 0.5);
-    //    uploadParamImage.mimeType = @"jpg";
-    //    uploadParamImage.name = @"测试测试";
-    //    uploadParamImage.filename = @"car测试";
-    //    NSLog(@"上传照片的parmaDic:%@",parmaDic);
-    //    [[ZLSecondAFNetworking sharedInstance] uploadWithURLString:upImageString parameters:[ZLSecondAFNetworking joinParamsWithDict:parmaDic] uploadParam:@[uploadParamImage] success:^(id responseObject) {
-    //        NSDictionary * dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-    //         NSLog(@"上传请求成功：%@",dic);
-    //    } failure:^(NSError *error) {
-    //        NSLog(@"上传请求失败：%@",error);
-    //    }];
     [MBManager showLoading];
     [[ZLSecondAFNetworking sharedInstance] postWithUSER_INFO_URLString:upImageString parameters:parmaDic success:^(id responseObject) {
         [MBManager hideAlert];

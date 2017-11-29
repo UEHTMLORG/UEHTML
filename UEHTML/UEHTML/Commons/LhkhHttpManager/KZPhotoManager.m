@@ -90,7 +90,7 @@
 - (void)getVideo:(void (^)(NSURL *))vURL withData:(void (^)(NSData *))vData withFirstImage:(void (^)(UIImage *))fristImage showIn:(UIViewController *)controller AndActionTitle:(NSString *)title{
     
     saveVideoURLCallBack = [vURL copy];
-    saveImageCallBack = [vData copy];
+    saveVideoDataCallBack = [vData copy];
     saveVideoFirstImageCallBack = [fristImage copy];
     
     UIAlertController *alertVc = [UIAlertController alertControllerWithTitle:title?title:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];

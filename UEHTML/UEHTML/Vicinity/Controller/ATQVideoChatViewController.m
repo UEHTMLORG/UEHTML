@@ -158,15 +158,22 @@
         NSString *height = [NSString stringWithFormat:@"%@cm",model.height];
         NSString *attr = [NSString stringWithFormat:@"%@ %@ %@",age,height,weight];
         cell.attrLab.text = attr;
+        cell.chatClick = ^(){
+            NSLog(@"点击了立即聊天");
+            NSString *user_id = [[NSUserDefaults standardUserDefaults] objectForKey:USER_ID_AOTU_ZL];
+            if ([user_id isEqualToString:model.user_id]) {
+                [MBProgressHUD show:@"不能和自己聊天额" view:self.view];
+            }else{
+                RCConversationViewController *conversationVC = [[RCConversationViewController alloc]init];
+                conversationVC.conversationType = ConversationType_PRIVATE;
+                conversationVC.targetId = model.user_id;
+                conversationVC.title = model.nick_name;
+                [self.navigationController pushViewController:conversationVC animated:YES];
+            }
+        };
     }
     
     collectionView.scrollEnabled = NO;
-    cell.chatClick = ^(){
-        NSLog(@"点击了立即聊天");
-        JianZhiVideoViewController *vc = [[JianZhiVideoViewController alloc]init];
-        [self.navigationController pushViewController:vc animated:YES];
-    };
-    
     return cell;
     
 }
@@ -174,8 +181,9 @@
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"----->%ld",indexPath.row);
     DetailSubPublishViewController *vc = [[DetailSubPublishViewController alloc] init];
+    vc.vcStr = @"vedio";
     ATQVideoModel *model = self.videoArr[indexPath.section];
-    vc.jobId = @"2089";
+    vc.jobId = model.user_id;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

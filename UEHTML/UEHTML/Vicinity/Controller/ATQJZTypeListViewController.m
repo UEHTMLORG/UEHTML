@@ -30,13 +30,13 @@
     NSString *_age;
     NSString *_height;
     NSString *_distance;
-    NSString *audioURL;
+    AVPlayer * _avPlayer;
 }
 @property (nonatomic,strong)UITableView *tableView;
 @property (strong,nonatomic)NSMutableArray *jobListArr;
 @property (strong,nonatomic)ATQPaixuView *PaixuView;
 @property (strong,nonatomic)ATQShaixuanView *ShaixuanView;
-@property (strong,nonatomic)AVAudioPlayer *audioPlayer;
+//@property (strong,nonatomic)AVAudioPlayer *audioPlayer;
 
 @end
 static NSInteger page = 1;
@@ -99,7 +99,9 @@ static NSInteger page = 1;
         self.tableView.mj_header.automaticallyChangeAlpha = YES;
         [self.tableView.mj_header beginRefreshing];
         self.tableView.mj_footer = [self loadMoreDataFooterWith:self.tableView];
-    
+        self.tableView.estimatedRowHeight = 0;
+        self.tableView.estimatedSectionHeaderHeight = 0;
+        self.tableView.estimatedSectionFooterHeight = 0;
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.mas_equalTo(self.view);
         make.top.mas_equalTo(self.view).offset(40);
@@ -110,8 +112,8 @@ static NSInteger page = 1;
 
 -(MJRefreshAutoNormalFooter *)loadMoreDataFooterWith:(UIScrollView *)scrollView {
     MJRefreshAutoNormalFooter *loadMoreFooter = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
-        [self loadMoreDataWithmodel:_model sort:_paixuStr gender:_gender age:_age height:_height distance:_distance];
         page++;
+        [self loadMoreDataWithmodel:_model sort:_paixuStr gender:_gender age:_age height:_height distance:_distance];
         [scrollView.mj_footer endRefreshing];
     }];
     
@@ -189,7 +191,7 @@ static NSInteger page = 1;
             if(responseObject[@"data"]){
                 self.jobListArr = [ATQHomeItemListModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"]] ;
             }
-            page++;
+            page = 1;
             [self.tableView reloadData];
         }else if ([responseObject[@"status"] isEqualToString:@"302"]){
             [self.tableView.mj_header endRefreshing];
@@ -299,10 +301,12 @@ static NSInteger page = 1;
     cell.texingLab.text = texingStr;
     cell.disLab.text = model.distance;
     cell.chengLab.text = model.credit_num;
-    audioURL = model.voice;
     cell.audioblock = ^{
         NSLog(@"audio");
-        [self.audioPlayer play];
+    NSURL * url = [NSURL URLWithString:@"http://218.76.27.57:8080/chinaschool_rs02/135275/153903/160861/160867/1370744550357.mp3"];
+    _avPlayer = [[AVPlayer alloc] initWithURL:url];
+    [_avPlayer play];
+        
     };
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
@@ -354,15 +358,6 @@ static NSInteger page = 1;
         _jobListArr = [NSMutableArray array];
     }
     return _jobListArr;
-}
-
--(AVAudioPlayer *)audioPlayer
-{
-    if (_audioPlayer == nil) {
-        _audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:[NSURL URLWithString:audioURL] error:nil];
-        [self.audioPlayer prepareToPlay];
-    }
-   return _audioPlayer;
 }
 
 - (void)didReceiveMemoryWarning {

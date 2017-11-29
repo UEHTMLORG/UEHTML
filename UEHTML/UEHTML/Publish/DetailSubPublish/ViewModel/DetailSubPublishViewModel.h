@@ -17,5 +17,5 @@
 /** 请求网络数据 */
 - (void)startAFNetWorkingGetListWithJobID:(NSString *)jobId resultSuccessBlock:(void (^)(BOOL success,DetailSubPublishModel * model))successBlock withFailBlock:(void (^)(NSError * error)) failBlock;
 
-
+- (void)startAFNetWorkingGetVedioListWithJobID:(NSString *)jobId VCclass:(NSString*)vc resultSuccessBlock:(void (^)(BOOL success,DetailSubPublishModel * model))successBlock withFailBlock:(void (^)(NSError * error)) failBlock;
 @end

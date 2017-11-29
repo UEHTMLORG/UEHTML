@@ -21,4 +21,5 @@
 @property (nonatomic, strong) NSString *jobId;
 @property (nonatomic, strong) DetailSubPublishViewModel *viewModel;
 @property (nonatomic, strong) DetailSubPublishModel *currentModel;
+@property (nonatomic, copy) NSString *vcStr;
 @end

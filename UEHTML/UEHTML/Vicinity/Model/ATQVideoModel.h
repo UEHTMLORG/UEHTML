@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface ATQVideoModel : NSObject
+@property (nonatomic,copy)NSString *user_id;
 @property (nonatomic,copy)NSString *avatar;
 @property (nonatomic,copy)NSString *nick_name;
 @property (nonatomic,copy)NSString *age;

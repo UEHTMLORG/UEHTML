@@ -9,6 +9,8 @@
 #import "DetailSubPublishViewController.h"
 #import "ATQTypePeoDetailViewController.h"
 #import "ATQChaWechatViewController.h"
+#import "LhkhHttpsManager.h"
+#import "MBProgressHUD+Add.h"
 @interface DetailSubPublishViewController (){
     
     /** 当前Model的相册图片数组 */
@@ -36,7 +38,7 @@
     /** 开始请求数据并绑定数据 */
     self.viewModel = [DetailSubPublishViewModel shareInstance];
     __weak typeof(self) weakself = self;
-    [self.viewModel startAFNetWorkingGetListWithJobID:self.jobId resultSuccessBlock:^(BOOL success, DetailSubPublishModel *model) {
+    [self.viewModel startAFNetWorkingGetVedioListWithJobID:self.jobId VCclass:self.vcStr resultSuccessBlock:^(BOOL success, DetailSubPublishModel *model) {
         weakself.currentModel = model;
         [weakself.tableView reloadData];
     } withFailBlock:^(NSError *error) {
@@ -207,18 +209,63 @@
 }
 #pragma mark ===================第一行Cell按钮执行方法==================
 - (void)guanZhuButtonAction:(UIButton *)sender{
-    
+    [self typeClick:@"follow"];
 }
 - (void)shouCangButtonAction:(UIButton *)sender{
-    
+    [self typeClick:@"follow"];
 }
 - (void)rightButtonAction:(UIButton *)sender{
     
 }
 - (void)homeButtonAction:(UIButton *)sender{
     
-    
 }
+#pragma mark ===================第一行Cell按钮执行公共方法==================
+-(void)typeClick:(NSString*)typeStr{
+    NSMutableDictionary *params = [NSMutableDictionary  dictionary];
+    NSString *user_id = [[NSUserDefaults standardUserDefaults] objectForKey:USER_ID_AOTU_ZL];
+    NSString *user_token = [[NSUserDefaults standardUserDefaults] objectForKey:USER_TOEKN_AOTU_ZL];
+    NSString *baseStr = nil;
+    if ([typeStr isEqualToString:@"follow"]) {
+        params[@"follow_user_id"] = self.currentModel.job.user_id;
+        baseStr = @"api/job/user/follow";
+    }else if ([typeStr isEqualToString:@"collection"]){
+        params[@"job_id"] = self.currentModel.job.user_id;
+        baseStr = @"api/job/user/collection";
+    }
+    
+    params[@"user_id"] = user_id;
+    params[@"user_token"] = user_token;
+    params[@"apptype"] = @"ios";
+    params[@"appversion"] = APPVERSION_AOTU_ZL;
+    NSString *random_str = [LhkhHttpsManager getNowTimeTimestamp];
+    params[@"random_str"] = random_str;
+    NSString *app_token = APP_TOKEN;
+    NSString *signStr = [NSString stringWithFormat:@"%@%@",app_token,random_str];
+    NSString *sign1 = [LhkhHttpsManager md5:signStr];
+    NSString *sign2 = [LhkhHttpsManager md5:sign1];
+    NSString *sign = [LhkhHttpsManager md5:sign2];
+    params[@"sign"] = sign;
+    NSString *url = [NSString stringWithFormat:@"%@/api/job/user/follow",ATQBaseUrl];
+    
+    [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
+        NSLog(@"-----follow=%@",responseObject);
+        if ([responseObject[@"status"] isEqualToString:@"1"]) {
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+        }else if ([responseObject[@"status"] isEqualToString:@"302"]){
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self login];
+            });
+        }else{
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+        }
+        
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+}
+
 - (void)tapHeadAction:(UITapGestureRecognizer *)sender{
     NSLog(@"点击了背景图");
     UIImageView * firstImage = [_albumImageArray objectAtIndex:0];

@@ -212,7 +212,7 @@
     [self typeClick:@"follow"];
 }
 - (void)shouCangButtonAction:(UIButton *)sender{
-    [self typeClick:@"follow"];
+    [self typeClick:@"collection"];
 }
 - (void)rightButtonAction:(UIButton *)sender{
     

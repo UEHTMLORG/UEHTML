@@ -36,7 +36,6 @@
 @property (strong,nonatomic)NSMutableArray *jobListArr;
 @property (strong,nonatomic)ATQPaixuView *PaixuView;
 @property (strong,nonatomic)ATQShaixuanView *ShaixuanView;
-//@property (strong,nonatomic)AVAudioPlayer *audioPlayer;
 
 @end
 static NSInteger page = 1;
@@ -49,6 +48,11 @@ static NSInteger page = 1;
     [self setTableView];
     [self buildPaixuView];
     [self buildShaixuanView];
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    _avPlayer = nil;
 }
 
 -(void)buildPaixuView{
@@ -270,7 +274,7 @@ static NSInteger page = 1;
     return 1;
 }
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    __weak typeof(self) weakself = self;
     static NSString *CellIdentifier = @"ATQJZTypeListTableViewCell" ;
     ATQJZTypeListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
@@ -303,14 +307,17 @@ static NSInteger page = 1;
     cell.chengLab.text = model.credit_num;
     cell.audioblock = ^{
         NSLog(@"audio");
-    NSURL * url = [NSURL URLWithString:@"http://218.76.27.57:8080/chinaschool_rs02/135275/153903/160861/160867/1370744550357.mp3"];
-    _avPlayer = [[AVPlayer alloc] initWithURL:url];
-    [_avPlayer play];
-        
+        [weakself vedioClick:model.voice];
     };
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
     
+}
+
+-(void)vedioClick:(NSString*)voiceStr{
+    NSURL * url = [NSURL URLWithString:voiceStr];
+    _avPlayer = [[AVPlayer alloc] initWithURL:url];
+    [_avPlayer play];
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

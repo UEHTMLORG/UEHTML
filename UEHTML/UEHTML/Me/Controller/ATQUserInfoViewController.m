@@ -46,6 +46,9 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self setTableView];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
     [self loadData];
 }
 
@@ -80,6 +83,7 @@
             nianling = dic[@"age"];
             card_level = dic[@"card_level"];
             deposit_auth = dic[@"deposit_auth"];
+            sexstr = dic[@"gender"];
             [self.tableView reloadData];
             
         }else if ([responseObject[@"status"] isEqualToString:@"302"]){
@@ -238,13 +242,13 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         if (indexPath.row == 0) {
             cell.titleLab.text = @"身高";
-            cell.cacheLab.text = shengao;
+            cell.cacheLab.text = [NSString stringWithFormat:@"%@cm",shengao];
         }else if(indexPath.row == 1){
             cell.titleLab.text = @"体重";
-            cell.cacheLab.text = tizhong;
+            cell.cacheLab.text = [NSString stringWithFormat:@"%@kg",tizhong];
         }else if(indexPath.row == 2){
             cell.titleLab.text = @"年龄";
-            cell.cacheLab.text = nianling;
+            cell.cacheLab.text = [NSString stringWithFormat:@"%@岁",nianling];
         }else {
             cell.titleLab.text = @"性别";
             if ([sexstr isEqualToString:@"1"]) {
@@ -424,14 +428,55 @@
     }else{
         if (buttonIndex == 0) {
             sexstr = @"1";
+            [self modifyInfo:@"1" infoType:@"gender"];
         }else if (buttonIndex == 1){
             sexstr = @"2";
+            [self modifyInfo:@"2" infoType:@"gender"];
         }else{
             
         }
         [self.tableView reloadData];
     }
     
+}
+
+-(void)modifyInfo:(NSString*)infoStr infoType:(NSString*)infotype{
+    NSMutableDictionary *params = [NSMutableDictionary  dictionary];
+    NSString *user_id = [[NSUserDefaults standardUserDefaults] objectForKey:USER_ID_AOTU_ZL];
+    NSString *user_token = [[NSUserDefaults standardUserDefaults] objectForKey:USER_TOEKN_AOTU_ZL];
+    
+    params[@"param_name"] = @"gender";
+    params[@"param_value"] = infoStr;
+    params[@"user_id"] = user_id;
+    params[@"user_token"] = user_token;
+    params[@"apptype"] = @"ios";
+    params[@"appversion"] = APPVERSION_AOTU_ZL;
+    NSString *random_str = [LhkhHttpsManager getNowTimeTimestamp];
+    params[@"random_str"] = random_str;
+    NSString *app_token = APP_TOKEN;
+    NSString *signStr = [NSString stringWithFormat:@"%@%@",app_token,random_str];
+    NSString *sign1 = [LhkhHttpsManager md5:signStr];
+    NSString *sign2 = [LhkhHttpsManager md5:sign1];
+    NSString *sign = [LhkhHttpsManager md5:sign2];
+    params[@"sign"] = sign;
+    NSString *url = [NSString stringWithFormat:@"%@/api/user/profile_modify",ATQBaseUrl];
+    
+    [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
+        NSLog(@"-----profile_modify=%@",responseObject);
+        if ([responseObject[@"status"] isEqualToString:@"1"]) {
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+        }else if ([responseObject[@"status"] isEqualToString:@"302"]){
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self login];
+            });
+        }else{
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+        }
+        
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
 }
 
 #pragma mark - UIImagePickerControllerDelegate

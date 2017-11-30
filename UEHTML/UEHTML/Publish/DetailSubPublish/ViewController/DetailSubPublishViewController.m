@@ -10,12 +10,15 @@
 #import "ATQTypePeoDetailViewController.h"
 #import "ATQChaWechatViewController.h"
 #import "LhkhHttpsManager.h"
+#import "UIColor+LhkhColor.h"
 #import "MBProgressHUD+Add.h"
 @interface DetailSubPublishViewController (){
     
     /** 当前Model的相册图片数组 */
     NSMutableArray * _albumImageArray;
     AVPlayer * _avPlayer;
+    BOOL iscollection;
+    BOOL isfollow;
 }
 
 @end
@@ -135,6 +138,21 @@
                 [_albumImageArray addObject:imageView];
             }
         }
+        if ([self.currentModel.is_follow isEqualToString:@"1"]) {
+//            [cell.guanZhuButton setImage:[UIImage imageNamed:@"fabu-guanzhu"] forState:UIControlStateNormal];
+            [cell.guanZhuButton setTitle:@"+已关注" forState:UIControlStateNormal];
+            cell.guanZhuButton.backgroundColor = [UIColor colorWithHexString:UIColorStr];
+            cell.guanZhuButton.layer.cornerRadius = 4.f;
+            cell.guanZhuButton.layer.masksToBounds = YES;
+        }else{
+            [cell.guanZhuButton setImage:[UIImage imageNamed:@"fabu-guanzhu"] forState:UIControlStateNormal];
+        }
+        if ([self.currentModel.is_collection isEqualToString:@"1"]) {
+            [cell.shouCangButton setImage:[UIImage imageNamed:@"fabu-shoucang02"] forState:UIControlStateNormal];
+           
+        }else{
+            [cell.shouCangButton setImage:[UIImage imageNamed:@"fabu-shoucang"] forState:UIControlStateNormal];
+        }
         /** 相册 结束 */
         cell.juliLabel.text = [NSString stringWithFormat:@"%@",self.currentModel.distance];
         cell.ageLabel.text = [NSString stringWithFormat:@"%@岁  %@cm  %@kg",self.currentModel.user_profile.age,self.currentModel.user_profile.height,self.currentModel.user_profile.weight];
@@ -209,9 +227,11 @@
 }
 #pragma mark ===================第一行Cell按钮执行方法==================
 - (void)guanZhuButtonAction:(UIButton *)sender{
+    isfollow = !isfollow;
     [self typeClick:@"follow"];
 }
 - (void)shouCangButtonAction:(UIButton *)sender{
+    iscollection = !iscollection;
     [self typeClick:@"collection"];
 }
 - (void)rightButtonAction:(UIButton *)sender{
@@ -230,7 +250,7 @@
         params[@"follow_user_id"] = self.currentModel.job.user_id;
         baseStr = @"api/job/user/follow";
     }else if ([typeStr isEqualToString:@"collection"]){
-        params[@"job_id"] = self.currentModel.job.user_id;
+        params[@"job_id"] = self.currentModel.job.job_class_id;
         baseStr = @"api/job/user/collection";
     }
     
@@ -246,7 +266,7 @@
     NSString *sign2 = [LhkhHttpsManager md5:sign1];
     NSString *sign = [LhkhHttpsManager md5:sign2];
     params[@"sign"] = sign;
-    NSString *url = [NSString stringWithFormat:@"%@/api/job/user/follow",ATQBaseUrl];
+    NSString *url = [NSString stringWithFormat:@"%@%@",ATQBaseUrl,baseStr];
     
     [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
         NSLog(@"-----follow=%@",responseObject);

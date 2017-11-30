@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,23 +19,30 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="系统消息" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJJ-Q3-BDO">
-                        <rect key="frame" x="20" y="8" width="69.5" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="20" y="8" width="65.5" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="系统消息，恭喜您约会成功！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYh-A1-AEm">
-                        <rect key="frame" x="20" y="34" width="335" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="20" y="32.5" width="335" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017-11-03" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKM-PS-QGL">
-                        <rect key="frame" x="267" y="8" width="88" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="280.5" y="10" width="74.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bRe-xi-1TT">
+                        <rect key="frame" x="0.0" y="59" width="375" height="1"/>
+                        <color key="backgroundColor" red="0.92919379469999996" green="0.93333435060000003" blue="0.93734973669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="4dm-Vd-6iT"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="JYh-A1-AEm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="ELZ-q9-iYd"/>
@@ -47,12 +54,17 @@
                     <constraint firstItem="JYh-A1-AEm" firstAttribute="top" secondItem="mJJ-Q3-BDO" secondAttribute="bottom" constant="5" id="zJg-JD-efK"/>
                 </constraints>
             </tableViewCellContentView>
+            <constraints>
+                <constraint firstItem="bRe-xi-1TT" firstAttribute="leading" secondItem="KGk-i7-Jjw" secondAttribute="leading" id="C8R-Ag-lXs"/>
+                <constraint firstAttribute="trailing" secondItem="bRe-xi-1TT" secondAttribute="trailing" id="DVy-QD-tgK"/>
+                <constraint firstAttribute="bottom" secondItem="bRe-xi-1TT" secondAttribute="bottom" id="cSa-tD-D7h"/>
+            </constraints>
             <connections>
                 <outlet property="contentLabel" destination="JYh-A1-AEm" id="b7m-ih-SER"/>
                 <outlet property="timeLabel" destination="mKM-PS-QGL" id="gVR-je-wsz"/>
                 <outlet property="titleLabel" destination="mJJ-Q3-BDO" id="6kH-VB-4kQ"/>
             </connections>
-            <point key="canvasLocation" x="26" y="112"/>
+            <point key="canvasLocation" x="25.5" y="112"/>
         </tableViewCell>
     </objects>
 </document>

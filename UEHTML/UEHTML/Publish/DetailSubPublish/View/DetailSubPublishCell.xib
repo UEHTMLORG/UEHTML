@@ -44,7 +44,7 @@
                         </constraints>
                         <state key="normal" backgroundImage="fabu-zhuye"/>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQh-iF-g9F">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQh-iF-g9F">
                         <rect key="frame" x="325" y="25" width="30" height="30"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="30" id="bl9-Bh-PZT"/>
@@ -52,13 +52,12 @@
                         </constraints>
                         <state key="normal" backgroundImage="fabu-erweima"/>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Az4-wT-wIA">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Az4-wT-wIA">
                         <rect key="frame" x="325" y="65" width="30" height="30"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="30" id="PI3-iL-jIj"/>
                             <constraint firstAttribute="height" constant="30" id="Rtv-CZ-6nf"/>
                         </constraints>
-                        <state key="normal" backgroundImage="fabu-shoucang"/>
                     </button>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fabu-nv" translatesAutoresizingMaskIntoConstraints="NO" id="hCH-it-gy9">
                         <rect key="frame" x="20" y="144.5" width="20" height="20"/>
@@ -86,7 +85,6 @@
                             <constraint firstAttribute="width" constant="47.5" id="Xm0-z6-bOs"/>
                             <constraint firstAttribute="height" constant="22.5" id="aCZ-Ij-rB8"/>
                         </constraints>
-                        <state key="normal" image="fabu-guanzhu"/>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22岁 165cm 45kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2W5-Tn-2s8">
                         <rect key="frame" x="43" y="146" width="115" height="17"/>
@@ -604,13 +602,11 @@
         <image name="fabu-diwang" width="55" height="30"/>
         <image name="fabu-erweima" width="42" height="42"/>
         <image name="fabu-fuwu" width="44" height="40"/>
-        <image name="fabu-guanzhu" width="95" height="45"/>
         <image name="fabu-huiyuan" width="34" height="30"/>
         <image name="fabu-jieshao" width="44" height="40"/>
         <image name="fabu-jineng" width="44" height="40"/>
         <image name="fabu-liwu" width="44" height="40"/>
         <image name="fabu-nv" width="27" height="27"/>
-        <image name="fabu-shoucang" width="35" height="35"/>
         <image name="fabu-weixin" width="47" height="47"/>
         <image name="fabu-yuyin" width="16" height="21"/>
         <image name="fabu-zhuye" width="45" height="45"/>

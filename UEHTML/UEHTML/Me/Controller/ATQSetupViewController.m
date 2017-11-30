@@ -24,7 +24,8 @@
 #import "ATQAboutAQTViewController.h"
 #import "ATQUserInfoViewController.h"
 #import "AppDelegate.h"
-
+#import "LhkhHttpsManager.h"
+#import "MBProgressHUD+Add.h"
 @interface ATQSetupViewController ()<UITableViewDelegate,UITableViewDataSource,UIAlertViewDelegate>{
     BOOL isClear;
     
@@ -40,6 +41,11 @@
     self.navigationItem.title = @"设置";
     
     [self setTableView];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self loadData];
 }
 -(void)setTableView{
     _tableView = ({
@@ -65,6 +71,54 @@
         make.bottom.mas_equalTo(self.view).offset(0);
     }];
     
+}
+
+-(void)loadData{
+    NSMutableDictionary *params = [NSMutableDictionary  dictionary];
+    NSString *user_id = [[NSUserDefaults standardUserDefaults] objectForKey:USER_ID_AOTU_ZL];
+    NSString *user_token = [[NSUserDefaults standardUserDefaults] objectForKey:USER_TOEKN_AOTU_ZL];
+    params[@"user_id"] = user_id;
+    params[@"user_token"] = user_token;
+    params[@"apptype"] = @"ios";
+    params[@"appversion"] = APPVERSION_AOTU_ZL;
+    NSString *random_str = [LhkhHttpsManager getNowTimeTimestamp];
+    params[@"random_str"] = random_str;
+    NSString *app_token = APP_TOKEN;
+    NSString *signStr = [NSString stringWithFormat:@"%@%@",app_token,random_str];
+    NSString *sign1 = [LhkhHttpsManager md5:signStr];
+    NSString *sign2 = [LhkhHttpsManager md5:sign1];
+    NSString *sign = [LhkhHttpsManager md5:sign2];
+    params[@"sign"] = sign;
+    NSString *url = [NSString stringWithFormat:@"%@/api/user/base_info",ATQBaseUrl];
+    
+    [LhkhHttpsManager requestWithURLString:url parameters:params type:2 success:^(id responseObject) {
+        NSLog(@"-----base_info=%@",responseObject);
+        
+        if ([responseObject[@"status"] isEqualToString:@"1"]) {
+            self.dic = responseObject[@"data"];
+//            avatarstr = dic[@"avatar"];
+//            nicheng = dic[@"nick_name"];
+//            zhanghu = dic[@"phone"];
+//            shengao = dic[@"height"];
+//            tizhong = dic[@"weight"];
+//            nianling = dic[@"age"];
+//            card_level = dic[@"card_level"];
+//            deposit_auth = dic[@"deposit_auth"];
+//            sexstr = dic[@"gender"];
+            [self.tableView reloadData];
+            
+        }else if ([responseObject[@"status"] isEqualToString:@"302"]){
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self login];
+            });
+        } else{
+            [MBProgressHUD show:responseObject[@"message"] view:self.view];
+        }
+        
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -185,6 +239,7 @@
     }
 }
 
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
         ATQUserInfoViewController *vc = [[ATQUserInfoViewController alloc] init];
@@ -215,6 +270,7 @@
             
             UIAlertAction *sureAction=[UIAlertAction actionWithTitle:NSLocalizedString(@"确定", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 isClear = YES;
+
                 [self.tableView reloadData];
                  NSLog(@"-----");
             }];

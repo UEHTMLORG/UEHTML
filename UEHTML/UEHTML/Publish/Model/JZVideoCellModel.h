@@ -10,5 +10,12 @@
 
 @interface JZVideoCellModel : MTLModel<MTLJSONSerializing>
 
+@property (nonatomic, copy) NSString *avatar;
+@property (nonatomic, copy) NSString *nick_name;
+@property (nonatomic, copy) NSString *age;
+@property (nonatomic, copy) NSString *height;
+@property (nonatomic, copy) NSString *weight;
+@property (nonatomic, copy) NSString *start_time;
+@property (nonatomic, copy) NSString *video_time;
 
 @end

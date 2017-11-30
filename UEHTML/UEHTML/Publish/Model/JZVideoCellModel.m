@@ -11,7 +11,13 @@
 @implementation JZVideoCellModel
 + (NSDictionary *)JSONKeyPathsByPropertyKey{
     return @{
-             @"d":@"d"
+             @"avatar":@"avatar",
+             @"nick_name":@"nick_name",
+             @"age":@"age",
+             @"height":@"height",
+             @"weight":@"weight",
+             @"start_time":@"start_time",
+             @"video_time":@"video_time"
              };
     
 }

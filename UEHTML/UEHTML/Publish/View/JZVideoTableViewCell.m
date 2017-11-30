@@ -12,11 +12,17 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
     // Initialization code
 }
 
 - (void)bindWithModel:(JZVideoCellModel *)model{
-    
+    [self.avatarImage sd_setImageWithURL:[NSURL URLWithString:model.avatar] placeholderImage:[UIImage imageNamed:@"jianzhi-car"]];
+    self.nickNameLabel.text = model.nick_name;
+    self.shiJianLabel.text = model.start_time;
+    self.shiChangLabel.text = model.video_time;
+    NSString * string = [NSString stringWithFormat:@"%@岁 %@cm %@kg",model.age,model.height,model.weight];
+    self.infoLabel.text = string;
     
 }
 

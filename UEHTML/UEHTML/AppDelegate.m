@@ -115,7 +115,7 @@
         [kUserDefaults setObject:userId forKey:RONGYUN_USER_ID];
         
         dispatch_async(dispatch_get_main_queue(), ^{
-           // [[RCIM sharedRCIM] setUserInfoDataSource:self];
+//            [[RCIM sharedRCIM] setUserInfoDataSource:self];
         });
         
     } error:^(RCConnectErrorCode status) {

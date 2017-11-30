@@ -11,6 +11,13 @@
 
 @interface JZVideoTableViewCell : UITableViewCell
 
+@property (strong, nonatomic) IBOutlet UIImageView *avatarImage;
+@property (strong, nonatomic) IBOutlet UILabel *nickNameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *shiJianLabel;
+@property (strong, nonatomic) IBOutlet UILabel *infoLabel;
+@property (strong, nonatomic) IBOutlet UILabel *shiChangLabel;
+
+
 - (void)bindWithModel:(JZVideoCellModel *)model;
 
 @end

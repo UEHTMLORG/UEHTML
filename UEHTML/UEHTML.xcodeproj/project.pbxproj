@@ -11,6 +11,7 @@
 		180C18391FBF201C00BF4810 /* LiWuPublishCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180C18371FBF201C00BF4810 /* LiWuPublishCollectionViewCell.xib */; };
 		180C183D1FBF206600BF4810 /* SkillPublishCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 180C183B1FBF206600BF4810 /* SkillPublishCollectionViewCell.m */; };
 		180C183E1FBF206600BF4810 /* SkillPublishCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180C183C1FBF206600BF4810 /* SkillPublishCollectionViewCell.xib */; };
+		181918EE1FD1A87400C0746D /* JianZhiVideoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 181918ED1FD1A87400C0746D /* JianZhiVideoViewModel.m */; };
 		181D51801FCC59B1004BC592 /* XiTongZLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181D517E1FCC59B1004BC592 /* XiTongZLViewController.m */; };
 		181D51811FCC59B1004BC592 /* XiTongZLViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181D517F1FCC59B1004BC592 /* XiTongZLViewController.xib */; };
 		181D51851FCC5A1C004BC592 /* XiTongMsgTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 181D51831FCC5A1C004BC592 /* XiTongMsgTableViewCell.m */; };
@@ -834,6 +835,8 @@
 		180C183A1FBF206500BF4810 /* SkillPublishCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SkillPublishCollectionViewCell.h; sourceTree = "<group>"; };
 		180C183B1FBF206600BF4810 /* SkillPublishCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SkillPublishCollectionViewCell.m; sourceTree = "<group>"; };
 		180C183C1FBF206600BF4810 /* SkillPublishCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkillPublishCollectionViewCell.xib; sourceTree = "<group>"; };
+		181918EC1FD1A87400C0746D /* JianZhiVideoViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JianZhiVideoViewModel.h; sourceTree = "<group>"; };
+		181918ED1FD1A87400C0746D /* JianZhiVideoViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JianZhiVideoViewModel.m; sourceTree = "<group>"; };
 		181D517D1FCC59B1004BC592 /* XiTongZLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XiTongZLViewController.h; sourceTree = "<group>"; };
 		181D517E1FCC59B1004BC592 /* XiTongZLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XiTongZLViewController.m; sourceTree = "<group>"; };
 		181D517F1FCC59B1004BC592 /* XiTongZLViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XiTongZLViewController.xib; sourceTree = "<group>"; };
@@ -2657,6 +2660,8 @@
 			children = (
 				18B2D8AB1FB423E800C59550 /* PublishZLViewModel.h */,
 				18B2D8AC1FB423E800C59550 /* PublishZLViewModel.m */,
+				181918EC1FD1A87400C0746D /* JianZhiVideoViewModel.h */,
+				181918ED1FD1A87400C0746D /* JianZhiVideoViewModel.m */,
 			);
 			path = PublishViewModel;
 			sourceTree = "<group>";
@@ -5993,6 +5998,7 @@
 				18DA193D1FC935EE008B945F /* BRAddressPickerView.m in Sources */,
 				185D78611F8DF13900DA8849 /* UIColor+KSString.m in Sources */,
 				40F5E3951F91AF920077A574 /* ZJCustomScrollView.m in Sources */,
+				181918EE1FD1A87400C0746D /* JianZhiVideoViewModel.m in Sources */,
 				18D16EA21F8F150400D8DF79 /* JZVideoTableViewCell.m in Sources */,
 				407193D31F8B028E00B9F162 /* ATQSPRZViewController.m in Sources */,
 				40E0F2461F78B1D60074B064 /* ZLCustomButton.m in Sources */,

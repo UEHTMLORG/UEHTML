@@ -11,6 +11,8 @@
 #import "JZVideoTableViewCell.h"
 #import "KaiTongVideoViewController.h"
 #import "JianZhiShenHeViewController.h"
+#import "JianZhiVideoViewModel.h"
+
 
 @interface JianZhiVideoViewController : ATQBaseViewController<UITableViewDelegate,UITableViewDataSource,DZNSegmentedControlDelegate,UIScrollViewDelegate>
 

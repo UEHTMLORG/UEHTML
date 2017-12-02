@@ -59,9 +59,20 @@
 #pragma mark ===================SegmentView==================
 - (void)didChangeSegment:(DZNSegmentedControl *)control
 {
-    
-
-    
+    if (control.selectedSegmentIndex == 0) {
+        [[JianZhiVideoViewModel shareInstance] startAFNetworkingJianZhiVideoWithType:1 withSuccessBlock:^(BOOL success, NSArray<JZVideoCellModel *> *array) {
+            
+        } withFailBlock:^(BOOL fail) {
+            
+        }];
+    }
+    else{
+        [[JianZhiVideoViewModel shareInstance] startAFNetworkingJianZhiVideoWithType:2 withSuccessBlock:^(BOOL success, NSArray<JZVideoCellModel *> *array) {
+            
+        } withFailBlock:^(BOOL fail) {
+            
+        }];
+    }
 }
 
 - (DZNSegmentedControl *)segmentControl
